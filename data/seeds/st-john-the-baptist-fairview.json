@@ -1,0 +1,791 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-the-baptist-fairview",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:02Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T04:02:50Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:17Z",
+  "summary": "One church. Spanish and English Mass, Confession and first-Thursday Adoration times come from the identical page 1 schedule box of both bulletins read (Nov 8 and Nov 15, 2026), confirmed by the Mass intentions. No history stored; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b1969956b0f62c8bb0a5ed283606d7c0a4188a8c720b2caa4d9e0070c592247a",
+      "fetched_at": "2026-11-15T16:54:02Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "decda759f17baa5f15bfb3d13506473e189e4e3c00375ee01410ebf5f1f75a72",
+      "fetched_at": "2026-11-08T16:02:57Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas de Fin de Semana: Vigilia del Sábado | 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas de Fin de Semana: Vigilia del Sábado | 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Spanish Mass schedule box on page 1 of both bulletins read; the intentions list a Sat 7:00 pm Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas de Fin de Semana: Domingo | 8:00am, 12:00pm & 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas de Fin de Semana: Domingo | 8:00am, 12:00pm & 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Spanish Mass schedule box on page 1 of both bulletins read; the intentions confirm 8:00 am, 12:00 pm and 7:00 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas de Fin de Semana: Domingo | 8:00am, 12:00pm & 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas de Fin de Semana: Domingo | 8:00am, 12:00pm & 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Spanish Mass schedule box on page 1 of both bulletins read; the intentions confirm 8:00 am, 12:00 pm and 7:00 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas de Fin de Semana: Domingo | 8:00am, 12:00pm & 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas de Fin de Semana: Domingo | 8:00am, 12:00pm & 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Spanish Mass schedule box on page 1 of both bulletins read; the intentions confirm 8:00 am, 12:00 pm and 7:00 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "Mass Schedule ENGLISH ONLY ... Weekend Masses: Sunday | 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "Mass Schedule ENGLISH ONLY ... Weekend Masses: Sunday | 10:00am"
+        }
+      ],
+      "rationale": "R1: printed in the English Mass schedule box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas Diarias: Lunes a Viernes | 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas Diarias: Lunes a Viernes | 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Spanish daily Mass schedule on page 1 of both bulletins read; the intentions list 7:00 pm weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas Diarias: Lunes a Viernes | 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas Diarias: Lunes a Viernes | 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Spanish daily Mass schedule on page 1 of both bulletins read; the intentions list 7:00 pm weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas Diarias: Lunes a Viernes | 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas Diarias: Lunes a Viernes | 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Spanish daily Mass schedule on page 1 of both bulletins read; the intentions list 7:00 pm weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas Diarias: Lunes a Viernes | 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas Diarias: Lunes a Viernes | 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Spanish daily Mass schedule on page 1 of both bulletins read; the intentions list 7:00 pm weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas Diarias: Lunes a Viernes | 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas Diarias: Lunes a Viernes | 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Spanish daily Mass schedule on page 1 of both bulletins read; the intentions list 7:00 pm weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas Diarias: Sábado | 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "EN ESPAÑOL ... Misas Diarias: Sábado | 10:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Spanish daily Mass schedule on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "ENGLISH ONLY ... Weekday Masses: Monday, Wednesday & Friday | 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "ENGLISH ONLY ... Weekday Masses: Monday, Wednesday & Friday | 7:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the English schedule box on page 1 of both bulletins read; the intentions list 7:30 am Masses on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "ENGLISH ONLY ... Weekday Masses: Monday, Wednesday & Friday | 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "ENGLISH ONLY ... Weekday Masses: Monday, Wednesday & Friday | 7:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the English schedule box on page 1 of both bulletins read; the intentions list 7:30 am Masses on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "ENGLISH ONLY ... Weekday Masses: Monday, Wednesday & Friday | 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "ENGLISH ONLY ... Weekday Masses: Monday, Wednesday & Friday | 7:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the English schedule box on page 1 of both bulletins read; the intentions list 7:30 am Masses on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "Confession: Tue - Fri | 6:00 pm - 7:00 pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "Confession: Tue - Fri | 6:00 pm - 7:00 pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in both language schedule boxes on page 1 of both bulletins read; 'by appointment' adds nothing timed (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "Confession: Tue - Fri | 6:00 pm - 7:00 pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "Confession: Tue - Fri | 6:00 pm - 7:00 pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in both language schedule boxes on page 1 of both bulletins read; 'by appointment' adds nothing timed (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "Confession: Tue - Fri | 6:00 pm - 7:00 pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "Confession: Tue - Fri | 6:00 pm - 7:00 pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in both language schedule boxes on page 1 of both bulletins read; 'by appointment' adds nothing timed (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "Confession: Tue - Fri | 6:00 pm - 7:00 pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "Confession: Tue - Fri | 6:00 pm - 7:00 pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in both language schedule boxes on page 1 of both bulletins read; 'by appointment' adds nothing timed (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-fairview",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "Eucharist Adoration: 1st Thursday of the month | 8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "decda759",
+          "page": 1,
+          "said": "Eucharist Adoration: 1st Thursday of the month | 8:00 pm"
+        }
+      ],
+      "rationale": "R1: the standing schedule box on page 1 of both bulletins prints it as a first-Thursday service (POLICY, Weekly or dated rule 2). No end time is given, so end_time is null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "Rosary Sunday | 9:30 am; Rosario Domingo | 7:30am, 11:30am y 6:30pm; Chaplet of Divine Mercy Thursdays | 3:00 pm"
+        }
+      ],
+      "rationale": "R24: Rosary and Chaplet are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1969956",
+          "page": 1,
+          "said": "SACRAMENTOS y ORIENTACION ESPIRITUAL Llamar oficina para cita"
+        }
+      ],
+      "rationale": "R26: by appointment through the office; no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

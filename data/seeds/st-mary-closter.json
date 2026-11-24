@@ -1,0 +1,510 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-closter",
+  "status": "approved",
+  "as_of": "2026-11-15T16:24:49Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T16:54:31Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:20:01Z",
+  "summary": "One church, St. Mary in Closter. Both bulletins agree: Saturday 5 PM vigil, Sunday 8:30 and 11 AM, weekdays 8 AM, Saturday 4 PM Confession, and Wednesday 8:30-9 AM Adoration from September to June. The newest bulletin also names a Third Saturday noon Recovery and Healing Mass, open to all. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "40b3474b7e8799428730993359493241095aab1a0fbef5a2c1912759a9641614",
+      "fetched_at": "2026-11-15T16:24:49Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "55a52112db254b6c5eb7417943fb3d8fe3f16148d9e84237504f8bc70e433ca9",
+      "fetched_at": "2026-11-08T15:47:49Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-closter",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 5,
+          "said": "Saturday (Anticipated Sunday Mass) ---- 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 14 – 5:00 PM Catherine Conetta"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55a52112",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 14 – 5:00 PM Catherine Conetta"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of the newest bulletin; R35: the intentions of both bulletins list a 5:00 PM Saturday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-closter",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 5,
+          "said": "Sunday ---- 8:30 AM & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55a52112",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 8 – 8:30 AM Tony and Mary Neusch; 11:00 AM All Parishioners"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of the newest bulletin; the intentions of both bulletins agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-closter",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 5,
+          "said": "Sunday ---- 8:30 AM & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55a52112",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 8 – 8:30 AM Tony and Mary Neusch; 11:00 AM All Parishioners"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of the newest bulletin; the intentions of both bulletins agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-closter",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 5,
+          "said": "Weekdays (Monday through Friday) ---- 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55a52112",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 9 – 8:00 AM All Souls Novena"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of the newest bulletin; the weekday intentions of both bulletins list 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-closter",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 5,
+          "said": "Weekdays (Monday through Friday) ---- 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55a52112",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 9 – 8:00 AM All Souls Novena"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of the newest bulletin; the weekday intentions of both bulletins list 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-closter",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 5,
+          "said": "Weekdays (Monday through Friday) ---- 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55a52112",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 9 – 8:00 AM All Souls Novena"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of the newest bulletin; the weekday intentions of both bulletins list 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-closter",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 5,
+          "said": "Weekdays (Monday through Friday) ---- 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55a52112",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 9 – 8:00 AM All Souls Novena"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of the newest bulletin; the weekday intentions of both bulletins list 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-closter",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 5,
+          "said": "Weekdays (Monday through Friday) ---- 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55a52112",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 9 – 8:00 AM All Souls Novena"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of the newest bulletin; the weekday intentions of both bulletins list 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-closter",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 5,
+          "said": "Sacrament of Reconciliation Saturday, 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 3,
+          "said": "Sacrament of Reconciliation – Saturdays at 4:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "55a52112",
+          "page": 3,
+          "said": "Sacrament of Reconciliation – Saturdays at 4:00 PM."
+        }
+      ],
+      "rationale": "R1: printed on pages 3 and 5 of the newest bulletin and page 3 of the older one; no end time given, so none (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-closter",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 5,
+          "said": "Eucharistic Adoration: Wednesday, 8:30 - 9:00 AM, September to June and as scheduled."
+        },
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 4,
+          "said": "8:30 AM – 9:00 AM – Exposition of the Most Blessed Sacrament – Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55a52112",
+          "page": 4,
+          "said": "8:30 AM – 9:00 AM – Exposition of the Most Blessed Sacrament – Church"
+        }
+      ],
+      "rationale": "R1: the Devotions box gives Wednesday 8:30-9:00 AM, September to June, kept as the season (POLICY, Weekly qualifiers); both bulletins' weekly calendars show it on Wednesday. 'As scheduled' extras have no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-closter",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Recovery and Healing Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 3,
+          "said": "All are welcome to Church of St. Mary, for the Third Saturday Recovery and Healing Mass on Saturday, November 21st at 12:00 noon."
+        },
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 4,
+          "said": "Sat. – November 21st: 12:00 PM – AA Special Noon Mass – Church"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: named as the Third Saturday Mass, open to all; weekly with weeks_of_month third. R11: the older bulletin's week (Nov 8-14) holds no third Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 5,
+          "said": "Holy Days & Civic Holidays ---- As announced the Sunday before"
+        }
+      ],
+      "rationale": "R26: no time given; holy-day and holiday Masses are announced the Sunday before, and neither bulletin announces one on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b3474b",
+          "page": 5,
+          "said": "Immaculate Medal Novena: Monday, 8:30 AM. Recitation of the Rosary: Monday through Friday - following the 8:00 AM Mass"
+        }
+      ],
+      "rationale": "R24: a novena and the Rosary are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,752 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-perpetual-help-oakland",
+  "status": "approved",
+  "as_of": "2026-11-15T16:22:54Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T21:33:52Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:18Z",
+  "summary": "One church. Saturday 5 PM vigil, Sunday 8, 10 and Noon (Noon Sept.-June), Mon-Sat 8:30 AM; Saturday confession after the 8:30 Mass; Adoration 1st Saturday 9 AM and 3rd Wednesday 7 PM. Both bulletins (Nov 8, Nov 15) agree; dated Thanksgiving 9 AM and Immaculate Conception 7 PM Masses added.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "95acee0066c7b5be6de0624ec7e3ed042c2815a318223c9cf5ab26c347249657",
+      "fetched_at": "2026-11-15T16:22:54Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4c9be2bef95349f5d355a9538ffed9362d27f7d534d4088debfa91985ae4cab4",
+      "fetched_at": "2026-11-08T15:46:25Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-oakland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 1,
+          "said": "Mass Schedule Saturday 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 1,
+          "said": "Mass Schedule Saturday 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 4,
+          "said": "5:00 pm People of the Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 4,
+          "said": "5:00 pm People of the Parish"
+        }
+      ],
+      "rationale": "R1: printed in the Schedules box on p1 and the Masses for the Week on p4 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-oakland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 1,
+          "said": "Sunday 8:00 am/10:00 am/12pm (Sept. - June)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 1,
+          "said": "Sunday 8:00 am/10:00 am/12pm (Sept. - June)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 4,
+          "said": "8:00 am ... 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 4,
+          "said": "8:00 am ... 10:00 am"
+        }
+      ],
+      "rationale": "R1: Schedules box and Masses for the Week of both bulletins; the (Sept. - June) parenthesis follows the 12pm Mass only, as on the website's 'Sunday : 8am, 10am & 12pm (Sept. - June)'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-oakland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 1,
+          "said": "Sunday 8:00 am/10:00 am/12pm (Sept. - June)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 1,
+          "said": "Sunday 8:00 am/10:00 am/12pm (Sept. - June)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 4,
+          "said": "8:00 am ... 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 4,
+          "said": "8:00 am ... 10:00 am"
+        }
+      ],
+      "rationale": "R1: Schedules box and Masses for the Week of both bulletins; the (Sept. - June) parenthesis follows the 12pm Mass only, as on the website's 'Sunday : 8am, 10am & 12pm (Sept. - June)'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-oakland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 1,
+          "said": "Sunday 8:00 am/10:00 am/12pm (Sept. - June)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 1,
+          "said": "Sunday 8:00 am/10:00 am/12pm (Sept. - June)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 4,
+          "said": "12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 4,
+          "said": "12:00 pm"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers (season): the schedule box limits the 12pm Mass to Sept. - June; the website homepage says the same. Read as applying to the 12pm only, the Mass it follows.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-oakland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 1,
+          "said": "Monday to Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 1,
+          "said": "Monday to Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 4,
+          "said": "8:30 am (each weekday of the Masses for the Week)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 4,
+          "said": "8:30 am (each weekday of the Masses for the Week)"
+        }
+      ],
+      "rationale": "R1: Schedules box and the dated weekday Masses of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-oakland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 1,
+          "said": "Monday to Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 1,
+          "said": "Monday to Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 4,
+          "said": "8:30 am (each weekday of the Masses for the Week)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 4,
+          "said": "8:30 am (each weekday of the Masses for the Week)"
+        }
+      ],
+      "rationale": "R1: Schedules box and the dated weekday Masses of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-oakland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 1,
+          "said": "Monday to Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 1,
+          "said": "Monday to Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 4,
+          "said": "8:30 am (each weekday of the Masses for the Week)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 4,
+          "said": "8:30 am (each weekday of the Masses for the Week)"
+        }
+      ],
+      "rationale": "R1: Schedules box and the dated weekday Masses of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-oakland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 1,
+          "said": "Monday to Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 1,
+          "said": "Monday to Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 4,
+          "said": "8:30 am (each weekday of the Masses for the Week)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 4,
+          "said": "8:30 am (each weekday of the Masses for the Week)"
+        }
+      ],
+      "rationale": "R1: Schedules box and the dated weekday Masses of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-oakland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 1,
+          "said": "Monday to Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 1,
+          "said": "Monday to Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 4,
+          "said": "8:30 am (each weekday of the Masses for the Week)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 4,
+          "said": "8:30 am (each weekday of the Masses for the Week)"
+        }
+      ],
+      "rationale": "R1: Schedules box and the dated weekday Masses of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-oakland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 1,
+          "said": "Monday to Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 1,
+          "said": "Monday to Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 4,
+          "said": "8:30 am (each weekday of the Masses for the Week)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 4,
+          "said": "8:30 am (each weekday of the Masses for the Week)"
+        }
+      ],
+      "rationale": "R1: Schedules box and the dated weekday Masses of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-oakland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 1,
+          "said": "Reconciliation Following the 8:30 am Mass Saturday or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 1,
+          "said": "Reconciliation Following the 8:30 am Mass Saturday or by appointment."
+        }
+      ],
+      "rationale": "R10: after a weekday-morning Mass (Saturday 8:30 AM, not the vigil) POLICY starts it 30 minutes after, 9:00 AM; no end given. The website's widget also lists Saturday 9:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 1,
+          "said": "Reconciliation ... or by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-oakland",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 1,
+          "said": "Eucharistic Adoration Every month on the 1st Saturday at 9am and on the 3rd Wednesday at 7pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 1,
+          "said": "Eucharistic Adoration Every month on the 1st Saturday at 9am and on the 3rd Wednesday at 7pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 3,
+          "said": "Eucharistic Adoration first Saturday of the month at 9am ... in the church"
+        }
+      ],
+      "rationale": "R1: the schedule box names the 1st Saturday. No end time in the bulletin; the website widget's 9-10 AM is left out as its listing is garbled with a Lent line.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-oakland",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 1,
+          "said": "Eucharistic Adoration Every month on the 1st Saturday at 9am and on the 3rd Wednesday at 7pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c9be2be",
+          "page": 1,
+          "said": "Eucharistic Adoration Every month on the 1st Saturday at 9am and on the 3rd Wednesday at 7pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 4,
+          "said": "Wednesday, November 18th 7:00 pm Adoration"
+        }
+      ],
+      "rationale": "R1: the schedule box names the 3rd Wednesday and the newest bulletin's What's Happening lists it on Nov 18, a third Wednesday. No end time printed in the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-oakland",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95acee00",
+          "page": 4,
+          "said": "Please join us for Mass at 9:00am on Thanksgiving Day!"
+        }
+      ],
+      "rationale": "R1, R16: Thanksgiving Day 2026 is Thursday, November 26, after as_of. R17: no cancellation of the weekly 8:30 AM is stated, so none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-oakland",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olphoakland.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 8:30 AM ... 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-20T21:36:35Z",
+            "current_because": "Checked 2026-11-20: the homepage lists this as an upcoming holy day and streams the 11/15/26 Mass; its weekly times match both bulletins.",
+            "bulletin": "95acee00",
+            "fits_because": "The newest bulletin's schedule box says Holy Days of Obligation 7:00 pm (day of); the website gives the date. The 8:30 AM is the regular Tuesday Mass."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the bulletin gives the holy-day time, the parish website pins it to December 8; the 8:30 AM listed there is the weekly Tuesday Mass, so not duplicated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

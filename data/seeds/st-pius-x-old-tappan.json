@@ -1,0 +1,672 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-pius-x-old-tappan",
+  "status": "approved",
+  "as_of": "2026-11-15T16:25:16Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:56:08Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:20:49Z",
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) agree: Sat 4:30 PM vigil, Sun 8, 10, 12; weekday 9:00 AM Mass from two weeks of intentions (R35); Adoration Mon-Fri 9:30-10 AM; Confession Sat 3:45-4:15 PM. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e2dddb5261f37d6bf3791ec5d3cc4663c21901be0986ddbfe4b3a8bf9846a1b5",
+      "fetched_at": "2026-11-15T16:25:16Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a2476cd0acd5a43473b0185d8d28c1f6bc66f9d62620432c03cc3e4aebc8a0d3",
+      "fetched_at": "2026-11-08T15:48:04Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-old-tappan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 2,
+          "said": "Saturday: (Anticipated Mass) 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 2,
+          "said": "Saturday: (Anticipated Mass) 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 5,
+          "said": "Saturday | anticipated Mass 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 5,
+          "said": "Saturday | anticipated Mass 4:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box (p2) and intentions (p5) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-old-tappan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 2,
+          "said": "Sundays: 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 2,
+          "said": "Sundays: 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 5,
+          "said": "Sunday 8:00 am / 10:00 am / 12:00 pm intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 5,
+          "said": "Sunday 8:00 am / 10:00 am / 12:00 pm intentions"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box (p2) and intentions (p5) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-old-tappan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 2,
+          "said": "Sundays: 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 2,
+          "said": "Sundays: 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 5,
+          "said": "Sunday 8:00 am / 10:00 am / 12:00 pm intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 5,
+          "said": "Sunday 8:00 am / 10:00 am / 12:00 pm intentions"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box (p2) and intentions (p5) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-old-tappan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 2,
+          "said": "Sundays: 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 2,
+          "said": "Sundays: 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 5,
+          "said": "Sunday 8:00 am / 10:00 am / 12:00 pm intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 5,
+          "said": "Sunday 8:00 am / 10:00 am / 12:00 pm intentions"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box (p2) and intentions (p5) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-old-tappan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 5,
+          "said": "Weekday Mass 11/16-11/20, each 9:00 am with an intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 5,
+          "said": "Weekday Mass 11/09-11/13, each 9:00 am with an intention"
+        }
+      ],
+      "rationale": "R35: the same weekday 9:00 AM Mass is listed in the intentions for each weekday of two different weeks (Nov 9-13 and Nov 16-20), not marked special; the weekend-only 'Eucharistic Liturgies' box does not disprove it, and weekday Adoration 9:30-10 AM follows it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-old-tappan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 5,
+          "said": "Weekday Mass 11/16-11/20, each 9:00 am with an intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 5,
+          "said": "Weekday Mass 11/09-11/13, each 9:00 am with an intention"
+        }
+      ],
+      "rationale": "R35: the same weekday 9:00 AM Mass is listed in the intentions for each weekday of two different weeks (Nov 9-13 and Nov 16-20), not marked special; the weekend-only 'Eucharistic Liturgies' box does not disprove it, and weekday Adoration 9:30-10 AM follows it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-old-tappan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 5,
+          "said": "Weekday Mass 11/16-11/20, each 9:00 am with an intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 5,
+          "said": "Weekday Mass 11/09-11/13, each 9:00 am with an intention"
+        }
+      ],
+      "rationale": "R35: the same weekday 9:00 AM Mass is listed in the intentions for each weekday of two different weeks (Nov 9-13 and Nov 16-20), not marked special; the weekend-only 'Eucharistic Liturgies' box does not disprove it, and weekday Adoration 9:30-10 AM follows it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-old-tappan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 5,
+          "said": "Weekday Mass 11/16-11/20, each 9:00 am with an intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 5,
+          "said": "Weekday Mass 11/09-11/13, each 9:00 am with an intention"
+        }
+      ],
+      "rationale": "R35: the same weekday 9:00 AM Mass is listed in the intentions for each weekday of two different weeks (Nov 9-13 and Nov 16-20), not marked special; the weekend-only 'Eucharistic Liturgies' box does not disprove it, and weekday Adoration 9:30-10 AM follows it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-old-tappan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 5,
+          "said": "Weekday Mass 11/16-11/20, each 9:00 am with an intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 5,
+          "said": "Weekday Mass 11/09-11/13, each 9:00 am with an intention"
+        }
+      ],
+      "rationale": "R35: the same weekday 9:00 AM Mass is listed in the intentions for each weekday of two different weeks (Nov 9-13 and Nov 16-20), not marked special; the weekend-only 'Eucharistic Liturgies' box does not disprove it, and weekday Adoration 9:30-10 AM follows it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-old-tappan",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 2,
+          "said": "Adoration Monday-Friday (9:30-10AM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 2,
+          "said": "Adoration Monday-Friday (9:30-10AM)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; at the church (no other site named).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-old-tappan",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 2,
+          "said": "Adoration Monday-Friday (9:30-10AM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 2,
+          "said": "Adoration Monday-Friday (9:30-10AM)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; at the church (no other site named).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-old-tappan",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 2,
+          "said": "Adoration Monday-Friday (9:30-10AM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 2,
+          "said": "Adoration Monday-Friday (9:30-10AM)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; at the church (no other site named).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-old-tappan",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 2,
+          "said": "Adoration Monday-Friday (9:30-10AM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 2,
+          "said": "Adoration Monday-Friday (9:30-10AM)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; at the church (no other site named).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-old-tappan",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 2,
+          "said": "Adoration Monday-Friday (9:30-10AM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 2,
+          "said": "Adoration Monday-Friday (9:30-10AM)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; at the church (no other site named).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-old-tappan",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 2,
+          "said": "Reconciliation Saturdays: 3:45-4:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2476cd0",
+          "page": 2,
+          "said": "Reconciliation Saturdays: 3:45-4:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 4,
+          "said": "Saturday, 11/21 3:45 pm - Sacrament of Reconciliation"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and the weekly calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2dddb52",
+          "page": 2,
+          "said": "Reconciliation ... Other times by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

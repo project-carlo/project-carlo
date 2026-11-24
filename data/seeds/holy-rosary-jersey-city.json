@@ -1,0 +1,707 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-rosary-jersey-city",
+  "status": "approved",
+  "as_of": "2026-11-15T16:52:43Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T09:20:12Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:44Z",
+  "summary": "One church. The page 1 schedule box and page 3 calendar agree in both bulletins read (Nov 8 and Nov 15, 2026): Sat 5 PM vigil, Sun 9 and 11:30 AM, Mon-Fri 8:30 AM in the chapel, Sat 4 PM confession, Mon/Thu/Fri 9 AM-2 PM exposition, plus a Dec 8 7 PM holy-day Mass. Open: whether the Rosary Altar Society's first-Monday 7 PM Mass is public.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6ee513f09a493bbffbf5d43df8bd8fd6d7e9057198856e3cfac556837026e234",
+      "fetched_at": "2026-11-15T16:52:43Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "66ee9066c3e94f22bf6526e9dac44b1ddc6eb887595066112266db0c6b678d85",
+      "fetched_at": "2026-11-08T16:01:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 1,
+          "said": "Saturday: 5:00 pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 1,
+          "said": "Saturday: 5:00 pm (Vigil)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule of both bulletins read, and in each week's This Week calendar on page 3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Italian/English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 1,
+          "said": "Sunday: 9:00 am (Italian/English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 1,
+          "said": "Sunday: 9:00 am (Italian/English)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 1,
+          "said": "11:30 am (English) (Live Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 1,
+          "said": "11:30 am (English) (Live Streamed)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 1,
+          "said": "Monday-Friday: 8:30 am (Live Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 1,
+          "said": "Monday-Friday: 8:30 am (Live Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 3,
+          "said": "8:30am Mass (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 3,
+          "said": "8:30am Mass (Chapel)"
+        }
+      ],
+      "rationale": "R1: page 1 Mass Schedule of both bulletins; the page 3 calendar places each weekday Mass in the chapel (POLICY, Churches and chapels: a chapel of the church belongs to it).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 1,
+          "said": "Monday-Friday: 8:30 am (Live Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 1,
+          "said": "Monday-Friday: 8:30 am (Live Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 3,
+          "said": "8:30am Mass (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 3,
+          "said": "8:30am Mass (Chapel)"
+        }
+      ],
+      "rationale": "R1: page 1 Mass Schedule of both bulletins; the page 3 calendar places each weekday Mass in the chapel (POLICY, Churches and chapels: a chapel of the church belongs to it).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 1,
+          "said": "Monday-Friday: 8:30 am (Live Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 1,
+          "said": "Monday-Friday: 8:30 am (Live Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 3,
+          "said": "8:30am Mass (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 3,
+          "said": "8:30am Mass (Chapel)"
+        }
+      ],
+      "rationale": "R1: page 1 Mass Schedule of both bulletins; the page 3 calendar places each weekday Mass in the chapel (POLICY, Churches and chapels: a chapel of the church belongs to it).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 1,
+          "said": "Monday-Friday: 8:30 am (Live Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 1,
+          "said": "Monday-Friday: 8:30 am (Live Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 3,
+          "said": "8:30am Mass (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 3,
+          "said": "8:30am Mass (Chapel)"
+        }
+      ],
+      "rationale": "R1: page 1 Mass Schedule of both bulletins; the page 3 calendar places each weekday Mass in the chapel (POLICY, Churches and chapels: a chapel of the church belongs to it).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 1,
+          "said": "Monday-Friday: 8:30 am (Live Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 1,
+          "said": "Monday-Friday: 8:30 am (Live Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 3,
+          "said": "8:30am Mass (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 3,
+          "said": "8:30am Mass (Chapel)"
+        }
+      ],
+      "rationale": "R1: page 1 Mass Schedule of both bulletins; the page 3 calendar places each weekday Mass in the chapel (POLICY, Churches and chapels: a chapel of the church belongs to it).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 1,
+          "said": "Confessions: Saturday 4:00 pm or by Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 1,
+          "said": "Confessions: Saturday 4:00 pm or by Appointment"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; no end time given, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 1,
+          "said": "Confessions: ... or by Appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 1,
+          "said": "Exposition of the Blessed Sacrament Monday, Thursday & Friday 9:00am-2:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 1,
+          "said": "Exposition of the Blessed Sacrament Monday, Thursday & Friday 9:00am-2:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 3,
+          "said": "9:00am-2:00pm Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 3,
+          "said": "9:00am-2:00pm Adoration"
+        }
+      ],
+      "rationale": "R1: printed on page 1 and in the page 3 calendar of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 1,
+          "said": "Exposition of the Blessed Sacrament Monday, Thursday & Friday 9:00am-2:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 1,
+          "said": "Exposition of the Blessed Sacrament Monday, Thursday & Friday 9:00am-2:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 3,
+          "said": "9:00am-2:00pm Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 3,
+          "said": "9:00am-2:00pm Adoration"
+        }
+      ],
+      "rationale": "R1: printed on page 1 and in the page 3 calendar of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 1,
+          "said": "Exposition of the Blessed Sacrament Monday, Thursday & Friday 9:00am-2:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 1,
+          "said": "Exposition of the Blessed Sacrament Monday, Thursday & Friday 9:00am-2:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 3,
+          "said": "9:00am-2:00pm Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 3,
+          "said": "9:00am-2:00pm Adoration"
+        }
+      ],
+      "rationale": "R1: printed on page 1 and in the page 3 calendar of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception (Holy Day)"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 6,
+          "said": "Tuesday, December 8th Feast of the Immaculate Conception ... Mass Schedule: 8:30am and 7:00pm"
+        }
+      ],
+      "rationale": "R1, R16: a dated holy-day Mass outside the weekly schedule, after as_of. The 8:30am Mass is the weekly Tuesday slot and is not duplicated (POLICY, Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rosary Altar Society"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ee513f0",
+          "page": 7,
+          "said": "The Rosary Altar Society meets on the 1st Monday of the month. The Rosary is recited at 6:30pm, followed by Mass at 7:00 pm. The monthly meeting follows."
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 6,
+          "said": "The Rosary Altar Society November meeting will take place on Monday, November 9th (postponed from November 2nd). Gather in the Church at 6:30 for recitation of the Rosary followed by Mass at 7pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ee9066",
+          "page": 3,
+          "said": "7:00pm Rosarians Mass followed by Monthly Meeting"
+        }
+      ],
+      "rationale": "R30: a society's monthly Mass with its meeting, not in the parish Mass Schedule and not stated to be open to all; November's was moved to the second Monday, so the first-Monday pattern is not dependable. Neither bulletin's week holds a first Monday (R11). Leaning leave out as a group's Mass.",
+      "question": "Add the Rosary Altar Society's first-Monday 7:00 PM Mass?",
+      "options": [
+        {
+          "label": "First Mondays 7 PM",
+          "entry": {
+            "church_slug": "holy-rosary-jersey-city",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Rosary Altar Society"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:44Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,721 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-nicholas-jersey-city",
+  "status": "approved",
+  "as_of": "2026-11-15T16:22:31Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:27:34Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:20:30Z",
+  "summary": "One church, St. Nicholas, 122 Ferry Street. Both bulletins (Nov 8 and Nov 15, 2026; image-only) print the same schedule: Sat 5 PM, Sun 8 and 11 AM English and 12:30 PM Spanish, Thu Confession 6-7 PM. Open: the Mon-Fri noon Mass is 'at the convent building', not on the church list with location unclear; and a blank Thursday 7 PM intentions line.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8133db30d46ec6555016dfd227d94bb58c35089dbf933538c8b80d975e1d9bb2",
+      "fetched_at": "2026-11-15T16:22:31Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ccf63f4e04a7f9c6dd514645cd244f47d9f9b127142aaf6e604508eadd9771a2",
+      "fetched_at": "2026-11-08T15:46:35Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8133db30",
+          "page": 3,
+          "said": "Eucharist: Saturday- 5:00pm Sunday Anticipated"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ccf63f4e",
+          "page": 3,
+          "said": "Eucharist: Saturday- 5:00pm Sunday Anticipated"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule on page 3 of both bulletins read; intentions list a 5:00PM Saturday Mass each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8133db30",
+          "page": 3,
+          "said": "Sunday- 8:00am English / 11:00am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ccf63f4e",
+          "page": 3,
+          "said": "Sunday- 8:00am English / 11:00am English"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule on page 3 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8133db30",
+          "page": 3,
+          "said": "Sunday- 8:00am English / 11:00am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ccf63f4e",
+          "page": 3,
+          "said": "Sunday- 8:00am English / 11:00am English"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule on page 3 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8133db30",
+          "page": 3,
+          "said": "Sunday- 12:30pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ccf63f4e",
+          "page": 3,
+          "said": "Sunday- 12:30pm Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule on page 3 of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8133db30",
+          "page": 3,
+          "said": "CONFESSION- THURSDAY 6:00PM-7:00PM / RECONCILIACION- JUEVES 6:00PM-7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ccf63f4e",
+          "page": 3,
+          "said": "CONFESSION- THURSDAY 6:00PM-7:00PM / RECONCILIACION- JUEVES 6:00PM-7:00PM"
+        }
+      ],
+      "rationale": "R1: printed on page 3 of both bulletins read, in English and Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the convent chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8133db30",
+          "page": 3,
+          "said": "Monday/Tuesday/Wednesday/Thursday/Friday 12:00noon at the convent building."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ccf63f4e",
+          "page": 3,
+          "said": "Monday/Tuesday/Wednesday/Thursday/Friday 12:00noon at the convent building."
+        },
+        {
+          "source": "website",
+          "url": "http://stnicholaschurchorg.weebly.com/",
+          "said": "Monday through Friday (in the convent chapel) 12:00 Noon"
+        }
+      ],
+      "rationale": "R32/POLICY, Churches and chapels: the parish's only weekday Mass is held in the convent building, which data/churches.csv does not list, and neither bulletin nor website says whether the convent is on the church's grounds at 122 Ferry Street (on the same grounds it belongs to St. Nicholas; elsewhere it is left out). Time is certain: printed in both bulletins, the intentions list a 12:00PM Mass every weekday, and the website agrees. Leaning leave out because POLICY leaves out a convent chapel whose location is unclear; include if the reviewer confirms the convent adjoins the church.",
+      "question": "Include the Mon-Fri 12:00 noon Mass 'at the convent building' at St. Nicholas?",
+      "options": [
+        {
+          "label": "Mon-Fri 12:00 PM at St. Nicholas",
+          "entry": {
+            "church_slug": "st-nicholas-jersey-city",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the convent chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:30Z"
+      },
+      "group": "convent"
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the convent chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8133db30",
+          "page": 3,
+          "said": "Monday/Tuesday/Wednesday/Thursday/Friday 12:00noon at the convent building."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ccf63f4e",
+          "page": 3,
+          "said": "Monday/Tuesday/Wednesday/Thursday/Friday 12:00noon at the convent building."
+        },
+        {
+          "source": "website",
+          "url": "http://stnicholaschurchorg.weebly.com/",
+          "said": "Monday through Friday (in the convent chapel) 12:00 Noon"
+        }
+      ],
+      "rationale": "R32/POLICY, Churches and chapels: the parish's only weekday Mass is held in the convent building, which data/churches.csv does not list, and neither bulletin nor website says whether the convent is on the church's grounds at 122 Ferry Street (on the same grounds it belongs to St. Nicholas; elsewhere it is left out). Time is certain: printed in both bulletins, the intentions list a 12:00PM Mass every weekday, and the website agrees. Leaning leave out because POLICY leaves out a convent chapel whose location is unclear; include if the reviewer confirms the convent adjoins the church.",
+      "question": "Include the Mon-Fri 12:00 noon Mass 'at the convent building' at St. Nicholas?",
+      "options": [
+        {
+          "label": "Mon-Fri 12:00 PM at St. Nicholas",
+          "entry": {
+            "church_slug": "st-nicholas-jersey-city",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the convent chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:30Z"
+      },
+      "group": "convent"
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the convent chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8133db30",
+          "page": 3,
+          "said": "Monday/Tuesday/Wednesday/Thursday/Friday 12:00noon at the convent building."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ccf63f4e",
+          "page": 3,
+          "said": "Monday/Tuesday/Wednesday/Thursday/Friday 12:00noon at the convent building."
+        },
+        {
+          "source": "website",
+          "url": "http://stnicholaschurchorg.weebly.com/",
+          "said": "Monday through Friday (in the convent chapel) 12:00 Noon"
+        }
+      ],
+      "rationale": "R32/POLICY, Churches and chapels: the parish's only weekday Mass is held in the convent building, which data/churches.csv does not list, and neither bulletin nor website says whether the convent is on the church's grounds at 122 Ferry Street (on the same grounds it belongs to St. Nicholas; elsewhere it is left out). Time is certain: printed in both bulletins, the intentions list a 12:00PM Mass every weekday, and the website agrees. Leaning leave out because POLICY leaves out a convent chapel whose location is unclear; include if the reviewer confirms the convent adjoins the church.",
+      "question": "Include the Mon-Fri 12:00 noon Mass 'at the convent building' at St. Nicholas?",
+      "options": [
+        {
+          "label": "Mon-Fri 12:00 PM at St. Nicholas",
+          "entry": {
+            "church_slug": "st-nicholas-jersey-city",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the convent chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:30Z"
+      },
+      "group": "convent"
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the convent chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8133db30",
+          "page": 3,
+          "said": "Monday/Tuesday/Wednesday/Thursday/Friday 12:00noon at the convent building."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ccf63f4e",
+          "page": 3,
+          "said": "Monday/Tuesday/Wednesday/Thursday/Friday 12:00noon at the convent building."
+        },
+        {
+          "source": "website",
+          "url": "http://stnicholaschurchorg.weebly.com/",
+          "said": "Monday through Friday (in the convent chapel) 12:00 Noon"
+        }
+      ],
+      "rationale": "R32/POLICY, Churches and chapels: the parish's only weekday Mass is held in the convent building, which data/churches.csv does not list, and neither bulletin nor website says whether the convent is on the church's grounds at 122 Ferry Street (on the same grounds it belongs to St. Nicholas; elsewhere it is left out). Time is certain: printed in both bulletins, the intentions list a 12:00PM Mass every weekday, and the website agrees. Leaning leave out because POLICY leaves out a convent chapel whose location is unclear; include if the reviewer confirms the convent adjoins the church.",
+      "question": "Include the Mon-Fri 12:00 noon Mass 'at the convent building' at St. Nicholas?",
+      "options": [
+        {
+          "label": "Mon-Fri 12:00 PM at St. Nicholas",
+          "entry": {
+            "church_slug": "st-nicholas-jersey-city",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the convent chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:30Z"
+      },
+      "group": "convent"
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the convent chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8133db30",
+          "page": 3,
+          "said": "Monday/Tuesday/Wednesday/Thursday/Friday 12:00noon at the convent building."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ccf63f4e",
+          "page": 3,
+          "said": "Monday/Tuesday/Wednesday/Thursday/Friday 12:00noon at the convent building."
+        },
+        {
+          "source": "website",
+          "url": "http://stnicholaschurchorg.weebly.com/",
+          "said": "Monday through Friday (in the convent chapel) 12:00 Noon"
+        }
+      ],
+      "rationale": "R32/POLICY, Churches and chapels: the parish's only weekday Mass is held in the convent building, which data/churches.csv does not list, and neither bulletin nor website says whether the convent is on the church's grounds at 122 Ferry Street (on the same grounds it belongs to St. Nicholas; elsewhere it is left out). Time is certain: printed in both bulletins, the intentions list a 12:00PM Mass every weekday, and the website agrees. Leaning leave out because POLICY leaves out a convent chapel whose location is unclear; include if the reviewer confirms the convent adjoins the church.",
+      "question": "Include the Mon-Fri 12:00 noon Mass 'at the convent building' at St. Nicholas?",
+      "options": [
+        {
+          "label": "Mon-Fri 12:00 PM at St. Nicholas",
+          "entry": {
+            "church_slug": "st-nicholas-jersey-city",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the convent chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:30Z"
+      },
+      "group": "convent"
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8133db30",
+          "page": 2,
+          "said": "THURSDAY NOVEMBER 19 2026 ... 7:00PM ______"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ccf63f4e",
+          "page": 2,
+          "said": "THURSDAY NOVEMBER 12, 2026 ... 7:00PM (no intention)"
+        }
+      ],
+      "rationale": "R39/R35: both weeks' intentions print a 7:00PM Thursday line with no intention, right after the 6-7 PM Confession, but the Eucharist schedule on page 3 and the website give only the 12:00 noon weekday Mass. It may be a reused template line. Leaning leave out (C1: a Mass only in the intentions, absent from the stated regular schedule).",
+      "question": "Add a weekly Thursday 7:00 PM Mass from the blank intentions line?",
+      "options": [
+        {
+          "label": "Thursdays 7:00 PM",
+          "entry": {
+            "church_slug": "st-nicholas-jersey-city",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:30Z"
+      }
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Neo-Catechumenate Group"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8133db30",
+          "page": 3,
+          "said": "Neo-Catechumenate Group ... Saturday- 8:00pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ccf63f4e",
+          "page": 3,
+          "said": "Neo-Catechumenate Group ... Saturday- 8:00pm Mass"
+        }
+      ],
+      "rationale": "POLICY, What to extract: a Mass listed under the Neo-Catechumenate Group heading is limited to that group, not a public parish Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8133db30",
+          "page": 3,
+          "said": "Neo-Catechumenate Group Wednesday- 8:00pm Prayer"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ccf63f4e",
+          "page": 3,
+          "said": "Neo-Catechumenate Group Wednesday- 8:00pm Prayer"
+        }
+      ],
+      "rationale": "R24: a prayer meeting, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8133db30",
+          "page": 4,
+          "said": "Catholic Teaching Explained! (Mostly Every Monday: 7:00 PM - 8:00 PM)"
+        }
+      ],
+      "rationale": "R24/R25: an adult faith class, not a service.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

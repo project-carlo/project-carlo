@@ -1,0 +1,1248 @@
+{
+  "schema_version": 1,
+  "parish_slug": "immaculate-conception-secaucus",
+  "status": "approved",
+  "as_of": "2026-11-15T16:52:48Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T09:50:46Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:06Z",
+  "summary": "One church, Immaculate Conception, Secaucus. Both bulletins (Nov 8 and Nov 15, 2026; image-only newest read from renders) print the same schedule: Sat 5:30 PM vigil; Sun 7:30, 9 (Spanish), 10:30, 12; weekdays 7:00 and 12:05; Sat 8 AM; Confession Sat 4-5 PM; First Friday 11 AM Holy Hour and 7 PM Mass. Dated Simbang Gabi Masses Dec 15-23 at 7 PM are included. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "81fc3b144d7c2636e9152e57027ad122b0e62e84a4a35e73a61a84988d9613d4",
+      "fetched_at": "2026-11-15T16:52:48Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e6b5d5bc718eb214c29fd1ea890805710330821800022c349ea749fd5963aff8",
+      "fetched_at": "2026-11-08T16:01:53Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Saturday in Anticipation 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Saturday in Anticipation 5:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list a 5:30 pm Mass each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9 AM (Spanish), 10:30 AM, 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9 AM (Spanish), 10:30 AM, 12 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in the Sunday intentions (12:00 pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9 AM (Spanish), 10:30 AM, 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9 AM (Spanish), 10:30 AM, 12 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in the Sunday intentions (12:00 pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9 AM (Spanish), 10:30 AM, 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9 AM (Spanish), 10:30 AM, 12 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in the Sunday intentions (12:00 pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9 AM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9 AM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 2,
+          "said": "Monday, Nov. 16th ... 7:00 am - Diane Moore / 12:05 pm - Braedy Noonan"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins gives weekdays 7:00 AM and 12:05 PM; the intentions list both Masses Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 2,
+          "said": "Monday, Nov. 16th ... 7:00 am - Diane Moore / 12:05 pm - Braedy Noonan"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins gives weekdays 7:00 AM and 12:05 PM; the intentions list both Masses Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 2,
+          "said": "Monday, Nov. 16th ... 7:00 am - Diane Moore / 12:05 pm - Braedy Noonan"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins gives weekdays 7:00 AM and 12:05 PM; the intentions list both Masses Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 2,
+          "said": "Monday, Nov. 16th ... 7:00 am - Diane Moore / 12:05 pm - Braedy Noonan"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins gives weekdays 7:00 AM and 12:05 PM; the intentions list both Masses Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 2,
+          "said": "Monday, Nov. 16th ... 7:00 am - Diane Moore / 12:05 pm - Braedy Noonan"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins gives weekdays 7:00 AM and 12:05 PM; the intentions list both Masses Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 2,
+          "said": "Monday, Nov. 16th ... 7:00 am - Diane Moore / 12:05 pm - Braedy Noonan"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins gives weekdays 7:00 AM and 12:05 PM; the intentions list both Masses Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 2,
+          "said": "Monday, Nov. 16th ... 7:00 am - Diane Moore / 12:05 pm - Braedy Noonan"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins gives weekdays 7:00 AM and 12:05 PM; the intentions list both Masses Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 2,
+          "said": "Monday, Nov. 16th ... 7:00 am - Diane Moore / 12:05 pm - Braedy Noonan"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins gives weekdays 7:00 AM and 12:05 PM; the intentions list both Masses Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 2,
+          "said": "Monday, Nov. 16th ... 7:00 am - Diane Moore / 12:05 pm - Braedy Noonan"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins gives weekdays 7:00 AM and 12:05 PM; the intentions list both Masses Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Weekdays: 7:00 AM, 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 2,
+          "said": "Monday, Nov. 16th ... 7:00 am - Diane Moore / 12:05 pm - Braedy Noonan"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins gives weekdays 7:00 AM and 12:05 PM; the intentions list both Masses Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Saturday: 8 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Saturday: 8 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and the Saturday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday: 4 PM - 5 PM and by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday: 4 PM - 5 PM and by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions also list 4:00 pm Confession on Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Sacrament of Reconciliation ... and by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Eucharistic Adoration First Friday of the Month 11 AM Holy Hour 6:30 PM KofC Rosary / 7PM Mass & Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Eucharistic Adoration First Friday of the Month 11 AM Holy Hour 6:30 PM KofC Rosary / 7PM Mass & Adoration"
+        }
+      ],
+      "rationale": "R1: the standing devotions box of both bulletins names a First Friday 7 PM Mass; POLICY, Weekly or dated rule 2 makes it weekly with weeks_of_month first.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Eucharistic Adoration First Friday of the Month 11 AM Holy Hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Eucharistic Adoration First Friday of the Month 11 AM Holy Hour"
+        }
+      ],
+      "rationale": "R1: the standing devotions box of both bulletins lists a First Friday 11 AM Holy Hour under Eucharistic Adoration; POLICY counts a Holy Hour as Adoration. No end time printed, so end left null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "7PM Mass & Adoration"
+        }
+      ],
+      "rationale": "POLICY, Final source checks (former C6): Adoration attached to the First Friday 7 PM Mass has no start time of its own, so it is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "6:30 PM KofC Rosary; Novena to St.Jude and Anointing of Sick First Tuesday of the month following the Noon Mass; Our Mother of Perpetual Help & St. Joseph Wed 6 PM"
+        }
+      ],
+      "rationale": "R24: Rosary, novenas and Anointing are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 1,
+          "said": "Holy Days of Obligation 5:30 Vigil, 7AM, 12 , 7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 1,
+          "said": "Holy Days of Obligation 5:30 Vigil, 7AM, 12 , 7PM"
+        }
+      ],
+      "rationale": "R26, POLICY Dates: holy day times are given without any date, and neither bulletin dates an upcoming holy day (e.g. December 8), so no dated entry can be recorded; update mode will read the bulletin that dates it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-15",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 5,
+          "said": "Filipino Society presents 34th Simbang Gabi Schedule 2026: December 15-18 7:00 p.m., December 19 5:30 p.m., December 20-23 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 5,
+          "said": "Filipino Society presents 34th Simbang Gabi Schedule 2026: December 15-18 7:00 p.m., December 19 5:30 p.m., December 20-23 7:00 p.m."
+        }
+      ],
+      "rationale": "R1, R16: the parish's Filipino Society prints dated Simbang Gabi Masses in both bulletins, on or after as_of; the one-church parish's own event (its party is in the ICC Gym), so attached to Immaculate Conception.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-16",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 5,
+          "said": "Filipino Society presents 34th Simbang Gabi Schedule 2026: December 15-18 7:00 p.m., December 19 5:30 p.m., December 20-23 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 5,
+          "said": "Filipino Society presents 34th Simbang Gabi Schedule 2026: December 15-18 7:00 p.m., December 19 5:30 p.m., December 20-23 7:00 p.m."
+        }
+      ],
+      "rationale": "R1, R16: the parish's Filipino Society prints dated Simbang Gabi Masses in both bulletins, on or after as_of; the one-church parish's own event (its party is in the ICC Gym), so attached to Immaculate Conception.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-17",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 5,
+          "said": "Filipino Society presents 34th Simbang Gabi Schedule 2026: December 15-18 7:00 p.m., December 19 5:30 p.m., December 20-23 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 5,
+          "said": "Filipino Society presents 34th Simbang Gabi Schedule 2026: December 15-18 7:00 p.m., December 19 5:30 p.m., December 20-23 7:00 p.m."
+        }
+      ],
+      "rationale": "R1, R16: the parish's Filipino Society prints dated Simbang Gabi Masses in both bulletins, on or after as_of; the one-church parish's own event (its party is in the ICC Gym), so attached to Immaculate Conception.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-18",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 5,
+          "said": "Filipino Society presents 34th Simbang Gabi Schedule 2026: December 15-18 7:00 p.m., December 19 5:30 p.m., December 20-23 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 5,
+          "said": "Filipino Society presents 34th Simbang Gabi Schedule 2026: December 15-18 7:00 p.m., December 19 5:30 p.m., December 20-23 7:00 p.m."
+        }
+      ],
+      "rationale": "R1, R16: the parish's Filipino Society prints dated Simbang Gabi Masses in both bulletins, on or after as_of; the one-church parish's own event (its party is in the ICC Gym), so attached to Immaculate Conception.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-20",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 5,
+          "said": "Filipino Society presents 34th Simbang Gabi Schedule 2026: December 15-18 7:00 p.m., December 19 5:30 p.m., December 20-23 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 5,
+          "said": "Filipino Society presents 34th Simbang Gabi Schedule 2026: December 15-18 7:00 p.m., December 19 5:30 p.m., December 20-23 7:00 p.m."
+        }
+      ],
+      "rationale": "R1, R16: the parish's Filipino Society prints dated Simbang Gabi Masses in both bulletins, on or after as_of; the one-church parish's own event (its party is in the ICC Gym), so attached to Immaculate Conception.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-21",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 5,
+          "said": "Filipino Society presents 34th Simbang Gabi Schedule 2026: December 15-18 7:00 p.m., December 19 5:30 p.m., December 20-23 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 5,
+          "said": "Filipino Society presents 34th Simbang Gabi Schedule 2026: December 15-18 7:00 p.m., December 19 5:30 p.m., December 20-23 7:00 p.m."
+        }
+      ],
+      "rationale": "R1, R16: the parish's Filipino Society prints dated Simbang Gabi Masses in both bulletins, on or after as_of; the one-church parish's own event (its party is in the ICC Gym), so attached to Immaculate Conception.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-22",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 5,
+          "said": "Filipino Society presents 34th Simbang Gabi Schedule 2026: December 15-18 7:00 p.m., December 19 5:30 p.m., December 20-23 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 5,
+          "said": "Filipino Society presents 34th Simbang Gabi Schedule 2026: December 15-18 7:00 p.m., December 19 5:30 p.m., December 20-23 7:00 p.m."
+        }
+      ],
+      "rationale": "R1, R16: the parish's Filipino Society prints dated Simbang Gabi Masses in both bulletins, on or after as_of; the one-church parish's own event (its party is in the ICC Gym), so attached to Immaculate Conception.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-23",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 5,
+          "said": "Filipino Society presents 34th Simbang Gabi Schedule 2026: December 15-18 7:00 p.m., December 19 5:30 p.m., December 20-23 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6b5d5bc",
+          "page": 5,
+          "said": "Filipino Society presents 34th Simbang Gabi Schedule 2026: December 15-18 7:00 p.m., December 19 5:30 p.m., December 20-23 7:00 p.m."
+        }
+      ],
+      "rationale": "R1, R16: the parish's Filipino Society prints dated Simbang Gabi Masses in both bulletins, on or after as_of; the one-church parish's own event (its party is in the ICC Gym), so attached to Immaculate Conception.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-secaucus",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-19",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81fc3b14",
+          "page": 5,
+          "said": "December 19 5:30 p.m."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 6/7: the December 19 Simbang Gabi Mass is the regular Saturday 5:30 PM anticipated Mass, already a weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

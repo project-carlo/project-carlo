@@ -1,0 +1,765 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-dumont",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:19Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T16:57:10Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:20:04Z",
+  "summary": "One church. Weekend (Sat 5:30 PM; Sun 7:45, 10, 12), weekday (Mon-Fri 7:00 and 8:45; Sat 8:30), Saturday Confession 4-4:45 and First Friday Exposition 6-7 PM all come from the identical schedule box of both bulletins read (Nov 8 and Nov 15, 2026) and match the newest week's intentions. Holy-day and civil-holiday Masses are left out as they carry no date; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "cae44b536d353d15444b1779e4721e064712297bd8d91cdfd0962c6de8be2698",
+      "fetched_at": "2026-11-15T16:54:19Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "56cb090094c48a869db0023ccb49b312bb59adb870cb516969140b096c7c254d",
+      "fetched_at": "2026-11-08T16:03:15Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Saturday Eve: 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Saturday Eve: 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 2,
+          "said": "Saturday Nov. 21 ... 5:30PM John Sullivan and Karen Camporeale"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgy box of both bulletins read and in the newest week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Sunday: 7:45 am, 10:00 am, 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Sunday: 7:45 am, 10:00 am, 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgy box of both bulletins read; the newest week's intentions list 7:45AM, 10:00AM and 12 Noon.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Sunday: 7:45 am, 10:00 am, 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Sunday: 7:45 am, 10:00 am, 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgy box of both bulletins read; the newest week's intentions list 7:45AM, 10:00AM and 12 Noon.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Sunday: 7:45 am, 10:00 am, 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Sunday: 7:45 am, 10:00 am, 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgy box of both bulletins read; the newest week's intentions list 7:45AM, 10:00AM and 12 Noon.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgy box of both bulletins read; the newest week's intentions list 7:00AM and 8:45AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgy box of both bulletins read; the newest week's intentions list 7:00AM and 8:45AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgy box of both bulletins read; the newest week's intentions list 7:00AM and 8:45AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgy box of both bulletins read; the newest week's intentions list 7:00AM and 8:45AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgy box of both bulletins read; the newest week's intentions list 7:00AM and 8:45AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgy box of both bulletins read; the newest week's intentions list 7:00AM and 8:45AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgy box of both bulletins read; the newest week's intentions list 7:00AM and 8:45AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgy box of both bulletins read; the newest week's intentions list 7:00AM and 8:45AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgy box of both bulletins read; the newest week's intentions list 7:00AM and 8:45AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 7:00 am & 8:45 am"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgy box of both bulletins read; the newest week's intentions list 7:00AM and 8:45AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Saturday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Saturday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 2,
+          "said": "Saturday Nov. 21 ... 8:30AM Maryann Barone"
+        }
+      ],
+      "rationale": "R1: printed under Weekdays in the Eucharistic Liturgy box of both bulletins read and in the newest week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Sacrament of Penance Saturday: 4:00 - 4:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Sacrament of Penance Saturday: 4:00 - 4:45 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dumont",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Upper church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Exposition of the Blessed Sacrament First Friday of the month, 6:00 pm - 7:00 pm, in the upper church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56cb0900",
+          "page": 1,
+          "said": "Exposition of the Blessed Sacrament First Friday of the month, 6:00 pm - 7:00 pm, in the upper church"
+        }
+      ],
+      "rationale": "R1: the standing schedule box of the newest bulletin names it as a First Friday service (POLICY, Weekly or dated rule 2); also in the Nov. 8 issue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Private confessions at any time. Please call the parish office."
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Miraculous Medal Novena: Saturday following 8:30 am Mass"
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Holydays (except Saturday): 7:00 am, 8:45 am, & 7:30 pm"
+        }
+      ],
+      "rationale": "POLICY, Dates; R16: holy-day Masses are dated, and no read bulletin pins down a holy day on or after as_of, so there is no date to record; update mode will pick up dated holy-day notices.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cae44b53",
+          "page": 1,
+          "said": "Holiday: 9:00 am on Major Civil Holidays"
+        }
+      ],
+      "rationale": "POLICY, Dates; R17: holiday Masses are dated, and neither bulletin names a civil holiday date (e.g. Thanksgiving) on or after as_of; not a weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

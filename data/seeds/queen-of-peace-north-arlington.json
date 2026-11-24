@@ -1,0 +1,1527 @@
+{
+  "schema_version": 1,
+  "parish_slug": "queen-of-peace-north-arlington",
+  "status": "approved",
+  "as_of": "2026-11-15T16:53:24Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T22:09:32Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:36Z",
+  "summary": "One church. Both November bulletins print the same Regular Mass Schedule box (weekdays 7:30, 9:00, 5:30 PM; Sat 7:30, 9:00, 5:00 PM; Sun 7:30, 9:00 Spanish, 10:30, noon), matching the parish homepage, which also supplies Saturday 3:45-4:45 PM Confession and First Friday 6-8 PM Adoration (R6). Thanksgiving Nov 26 has the 9 AM Mass only. Open: whether the weekday 5:30 PM Mass gets the website's mid-May to mid-September summer break as a season.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a69b7537e5979e3e50504745ad259d3633a5202b95b522138c501859bb2d861c",
+      "fetched_at": "2026-11-15T16:53:24Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "df95b81ee070df84ef187b5e5e3ecf3348ccf500d5a8e11fa557709925282425",
+      "fetched_at": "2026-11-08T16:02:18Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "Mass Schedule: Monday, November 16th 7:30am ... 9:00am ... (each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Schedule box of both bulletins and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "Mass Schedule: Monday, November 16th 7:30am ... 9:00am ... (each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Schedule box of both bulletins and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "Mass Schedule: Monday, November 16th 7:30am ... 9:00am ... (each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Schedule box of both bulletins and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "Mass Schedule: Monday, November 16th 7:30am ... 9:00am ... (each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Schedule box of both bulletins and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "Mass Schedule: Monday, November 16th 7:30am ... 9:00am ... (each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Schedule box of both bulletins and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "Mass Schedule: Monday, November 16th 7:30am ... 9:00am ... (each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Schedule box of both bulletins and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "Mass Schedule: Monday, November 16th 7:30am ... 9:00am ... (each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Schedule box of both bulletins and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "Mass Schedule: Monday, November 16th 7:30am ... 9:00am ... (each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Schedule box of both bulletins and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "Mass Schedule: Monday, November 16th 7:30am ... 9:00am ... (each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Schedule box of both bulletins and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "Regular Mass Schedule: MONDAY TO FRIDAY 7:30 AM 9:00 AM 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "Mass Schedule: Monday, November 16th 7:30am ... 9:00am ... (each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Schedule box of both bulletins and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "SATURDAY 7:30 AM 9:00 AM 5:00 PM (Anticipated Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "SATURDAY 7:30 AM 9:00 AM 5:00 PM (Anticipated Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "Saturday, November 21st 7:30AM ... 9:00am GUILD MASS 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Schedule box of both bulletins and in the intentions. The 9:00 Guild Mass is the parish's regular public Saturday Mass (POLICY: a Mass 'with' a group is open).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "SATURDAY 7:30 AM 9:00 AM 5:00 PM (Anticipated Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "SATURDAY 7:30 AM 9:00 AM 5:00 PM (Anticipated Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "Saturday, November 21st 7:30AM ... 9:00am GUILD MASS 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Schedule box of both bulletins and in the intentions. The 9:00 Guild Mass is the parish's regular public Saturday Mass (POLICY: a Mass 'with' a group is open).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "SATURDAY 7:30 AM 9:00 AM 5:00 PM (Anticipated Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "SATURDAY 7:30 AM 9:00 AM 5:00 PM (Anticipated Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "Saturday, November 21st 7:30AM ... 9:00am GUILD MASS 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Schedule box of both bulletins and in the intentions. The 9:00 Guild Mass is the parish's regular public Saturday Mass (POLICY: a Mass 'with' a group is open).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "SUNDAY 7:30 AM 9:00 AM (Spanish) 10:30 AM 12 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "SUNDAY 7:30 AM 9:00 AM (Spanish) 10:30 AM 12 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "Sunday, November 22nd 7:30am ... 10:30am ... 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Schedule box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "SUNDAY 7:30 AM 9:00 AM (Spanish) 10:30 AM 12 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "SUNDAY 7:30 AM 9:00 AM (Spanish) 10:30 AM 12 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "Sunday, November 22nd 7:30am ... 10:30am ... 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Schedule box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "SUNDAY 7:30 AM 9:00 AM (Spanish) 10:30 AM 12 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "SUNDAY 7:30 AM 9:00 AM (Spanish) 10:30 AM 12 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "Sunday, November 22nd 7:30am ... 10:30am ... 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Schedule box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "SUNDAY ... 9:00 AM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "SUNDAY ... 9:00 AM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, marked Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day: 9:00 AM Mass only"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 3,
+          "said": "Thanksgiving Mass ... on November 26 at 9:00 am Only"
+        },
+        {
+          "source": "website",
+          "url": "https://qpcna.org/",
+          "said": "Memorial Day, Fourth of July, Labor Day and Thanksgiving Day and other specified days: 9:00 AM only Daily Mass"
+        }
+      ],
+      "rationale": "R16, POLICY cancellations: the bulletin says the Thanksgiving Mass is 'at 9:00 am Only', and the parish website states that on Thanksgiving Day there is the 9:00 AM daily Mass only, so the usual 7:30 AM and 5:30 PM Thursday Masses will not take place on November 26.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day: 9:00 AM Mass only"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 3,
+          "said": "Thanksgiving Mass ... on November 26 at 9:00 am Only"
+        },
+        {
+          "source": "website",
+          "url": "https://qpcna.org/",
+          "said": "Memorial Day, Fourth of July, Labor Day and Thanksgiving Day and other specified days: 9:00 AM only Daily Mass"
+        }
+      ],
+      "rationale": "R16, POLICY cancellations: the bulletin says the Thanksgiving Mass is 'at 9:00 am Only', and the parish website states that on Thanksgiving Day there is the 9:00 AM daily Mass only, so the usual 7:30 AM and 5:30 PM Thursday Masses will not take place on November 26.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://qpcna.org/",
+          "said": "RECONCILIATION Saturday: 3:45PM to 4:45PM or by appointment with the priest on duty",
+          "schedule_check": {
+            "checked_at": "2026-11-20T22:12:20Z",
+            "current_because": "The homepage schedule names the current pastor Rev. Yuvan Alvarez and vicar Rev. Jose P. Muralles, as in the November 2026 bulletins, and its Mass schedule matches the bulletin's box exactly.",
+            "bulletin": "a69b7537",
+            "fits_because": "The 2026-11-15 bulletin prints no Confession times; a Saturday 3:45-4:45 PM window before the Saturday 5:00 PM Anticipated Mass it prints fits that schedule."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Confession time; the parish's own homepage, whose Mass times match the bulletin exactly and which names the current clergy, gives Saturday 3:45-4:45 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://qpcna.org/",
+          "said": "HOLY HOUR OF EUCHARISTIC ADORATION First Friday of the Month: 6 PM – 8 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-20T22:12:20Z",
+            "current_because": "The homepage schedule names the current pastor Rev. Yuvan Alvarez and vicar Rev. Jose P. Muralles, as in the November 2026 bulletins, and its Mass schedule matches the bulletin's box exactly.",
+            "bulletin": "a69b7537",
+            "fits_because": "Neither read bulletin's week holds a first Friday (Nov 8-15 and Nov 15-22), so neither would be expected to print it; 6-8 PM follows the Friday 5:30 PM Mass the bulletin prints."
+          }
+        }
+      ],
+      "rationale": "R6, R11: a monthly service from the parish homepage; neither read bulletin covers a first Friday. Placed at the church, the parish's only listed church; the convent chapel is not yet open (latest p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 15,
+          "end_month": 5,
+          "end_day": 15
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "MONDAY TO FRIDAY ... 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "MONDAY TO FRIDAY ... 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "5:30pm (each weekday's intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://qpcna.org/",
+          "said": "5:30PM (M,W,F – English & T, Th – Spanish) (No 5:30 PM Mass from mid May to mid Sept.)"
+        }
+      ],
+      "rationale": "R30: the bulletin prints 5:30 PM every weekday with no season; the homepage, whose schedule otherwise matches, says there is none 'from mid May to mid Sept.'. 'Mid' is not a date, so 15th is an approximation. Leaning on the season so the site does not list it in summer.",
+      "question": "Weekday 5:30 PM Mass: the website says none from mid May to mid September. Record it with a season?",
+      "options": [
+        {
+          "label": "Mid-September to mid-May",
+          "entry": {
+            "church_slug": "queen-of-peace-north-arlington",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 15,
+              "end_month": 5,
+              "end_day": 15
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Every week, all year",
+          "entry": {
+            "church_slug": "queen-of-peace-north-arlington",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:36Z"
+      },
+      "group": "weekday-530"
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 15,
+          "end_month": 5,
+          "end_day": 15
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "MONDAY TO FRIDAY ... 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "MONDAY TO FRIDAY ... 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "5:30pm (each weekday's intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://qpcna.org/",
+          "said": "5:30PM (M,W,F – English & T, Th – Spanish) (No 5:30 PM Mass from mid May to mid Sept.)"
+        }
+      ],
+      "rationale": "R30: the bulletin prints 5:30 PM every weekday with no season; the homepage, whose schedule otherwise matches, says there is none 'from mid May to mid Sept.'. 'Mid' is not a date, so 15th is an approximation. Leaning on the season so the site does not list it in summer.",
+      "question": "Weekday 5:30 PM Mass: the website says none from mid May to mid September. Record it with a season?",
+      "options": [
+        {
+          "label": "Mid-September to mid-May",
+          "entry": {
+            "church_slug": "queen-of-peace-north-arlington",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 15,
+              "end_month": 5,
+              "end_day": 15
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Every week, all year",
+          "entry": {
+            "church_slug": "queen-of-peace-north-arlington",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:36Z"
+      },
+      "group": "weekday-530"
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 15,
+          "end_month": 5,
+          "end_day": 15
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "MONDAY TO FRIDAY ... 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "MONDAY TO FRIDAY ... 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "5:30pm (each weekday's intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://qpcna.org/",
+          "said": "5:30PM (M,W,F – English & T, Th – Spanish) (No 5:30 PM Mass from mid May to mid Sept.)"
+        }
+      ],
+      "rationale": "R30: the bulletin prints 5:30 PM every weekday with no season; the homepage, whose schedule otherwise matches, says there is none 'from mid May to mid Sept.'. 'Mid' is not a date, so 15th is an approximation. Leaning on the season so the site does not list it in summer.",
+      "question": "Weekday 5:30 PM Mass: the website says none from mid May to mid September. Record it with a season?",
+      "options": [
+        {
+          "label": "Mid-September to mid-May",
+          "entry": {
+            "church_slug": "queen-of-peace-north-arlington",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 15,
+              "end_month": 5,
+              "end_day": 15
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Every week, all year",
+          "entry": {
+            "church_slug": "queen-of-peace-north-arlington",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:36Z"
+      },
+      "group": "weekday-530"
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 15,
+          "end_month": 5,
+          "end_day": 15
+        },
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "MONDAY TO FRIDAY ... 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "MONDAY TO FRIDAY ... 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "5 :30pm (each weekday's intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://qpcna.org/",
+          "said": "5:30PM (M,W,F – English & T, Th – Spanish) (No 5:30 PM Mass from mid May to mid Sept.)"
+        }
+      ],
+      "rationale": "R30: as for the Mon/Wed/Fri 5:30 PM; the homepage says the Tuesday and Thursday 5:30 PM Masses are in Spanish.",
+      "question": "Weekday 5:30 PM Mass: the website says none from mid May to mid September. Record it with a season?",
+      "options": [
+        {
+          "label": "Mid-September to mid-May",
+          "entry": {
+            "church_slug": "queen-of-peace-north-arlington",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 15,
+              "end_month": 5,
+              "end_day": 15
+            },
+            "note": "Spanish"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Every week, all year",
+          "entry": {
+            "church_slug": "queen-of-peace-north-arlington",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:36Z"
+      },
+      "group": "weekday-530"
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 15,
+          "end_month": 5,
+          "end_day": 15
+        },
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "MONDAY TO FRIDAY ... 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "MONDAY TO FRIDAY ... 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 2,
+          "said": "5 :30pm (each weekday's intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://qpcna.org/",
+          "said": "5:30PM (M,W,F – English & T, Th – Spanish) (No 5:30 PM Mass from mid May to mid Sept.)"
+        }
+      ],
+      "rationale": "R30: as for the Mon/Wed/Fri 5:30 PM; the homepage says the Tuesday and Thursday 5:30 PM Masses are in Spanish.",
+      "question": "Weekday 5:30 PM Mass: the website says none from mid May to mid September. Record it with a season?",
+      "options": [
+        {
+          "label": "Mid-September to mid-May",
+          "entry": {
+            "church_slug": "queen-of-peace-north-arlington",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 15,
+              "end_month": 5,
+              "end_day": 15
+            },
+            "note": "Spanish"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Every week, all year",
+          "entry": {
+            "church_slug": "queen-of-peace-north-arlington",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:36Z"
+      },
+      "group": "weekday-530"
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 1,
+          "said": "Holy Days of Obligation: VIGIL MASS 5:30 PM (English); HOLY DAY OF OBLIGATION 7:30 AM 9:00 AM 7:00 PM (Bilingual)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 1,
+          "said": "Holy Days of Obligation: VIGIL MASS 5:30 PM (English); HOLY DAY OF OBLIGATION 7:30 AM 9:00 AM 7:00 PM (Bilingual)"
+        }
+      ],
+      "rationale": "POLICY, Dates: a general holy-day schedule with no date printed; dates are not projected from the calendar. Update mode will read the holy days when a bulletin dates them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://qpcna.org/",
+          "said": "RECITATION OF THE ROSARY Immediately following the 9am Mass"
+        }
+      ],
+      "rationale": "R24: the Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69b7537",
+          "page": 3,
+          "said": "our chapel has been lovingly remodeled into a quiet place to pray ... We will share an announcement when it opens for veneration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df95b81e",
+          "page": 5,
+          "said": "Our Convent Chapel ... began to imagine celebrating Holy Mass there and having daily exposition"
+        }
+      ],
+      "rationale": "R25, R26: the convent chapel has no times yet and is not open; the hoped-for Mass and exposition there are not scheduled.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://qpcna.org/",
+          "said": "Church Doors Open: Monday-Saturday: 7:00AM-6:00PM"
+        }
+      ],
+      "rationale": "R38: the church building being open is not an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

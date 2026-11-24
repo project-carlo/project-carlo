@@ -1,0 +1,565 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-catherine-of-siena-cedar-grove",
+  "status": "approved",
+  "as_of": "2026-11-15T16:24:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:01:10Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:18:34Z",
+  "summary": "One church. Weekend, weekday, first-Saturday Memorial Mass, Monday Adoration (September to June) and Saturday 1 PM Confession are printed identically in both bulletins (Nov 8 and Nov 15, 2026). No dated changes or cancellations on or after as_of; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c12fbd0be078cfac953ede22f1cc7171fe88c6cb38a6c7fe34a0a3fa5cd251c8",
+      "fetched_at": "2026-11-15T16:24:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a5c32cc5a3257f61edca4133d82e3b5de4ff1045237c47af4645de8e1abd8e7a",
+      "fetched_at": "2026-11-08T15:48:18Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-cedar-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 2,
+          "said": "Saturday Vigil 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5c32cc5",
+          "page": 2,
+          "said": "Saturday Vigil 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 3,
+          "said": "SATURDAY, NOVEMBER 21 5:00 PM People of the Parish"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read; intentions list it each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-cedar-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 2,
+          "said": "Sunday 8:00 AM, 10:30 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5c32cc5",
+          "page": 2,
+          "said": "Sunday 8:00 AM, 10:30 AM, 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read; the intentions on p3 list all three each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-cedar-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 2,
+          "said": "Sunday 8:00 AM, 10:30 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5c32cc5",
+          "page": 2,
+          "said": "Sunday 8:00 AM, 10:30 AM, 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read; the intentions on p3 list all three each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-cedar-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 2,
+          "said": "Sunday 8:00 AM, 10:30 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5c32cc5",
+          "page": 2,
+          "said": "Sunday 8:00 AM, 10:30 AM, 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read; the intentions on p3 list all three each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-cedar-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 2,
+          "said": "Monday through Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5c32cc5",
+          "page": 2,
+          "said": "Monday through Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 3,
+          "said": "intentions at 8:30 AM Monday Nov 16 through Friday Nov 20"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read; the intentions list an 8:30 AM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-cedar-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 2,
+          "said": "Monday through Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5c32cc5",
+          "page": 2,
+          "said": "Monday through Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 3,
+          "said": "intentions at 8:30 AM Monday Nov 16 through Friday Nov 20"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read; the intentions list an 8:30 AM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-cedar-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 2,
+          "said": "Monday through Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5c32cc5",
+          "page": 2,
+          "said": "Monday through Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 3,
+          "said": "intentions at 8:30 AM Monday Nov 16 through Friday Nov 20"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read; the intentions list an 8:30 AM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-cedar-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 2,
+          "said": "Monday through Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5c32cc5",
+          "page": 2,
+          "said": "Monday through Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 3,
+          "said": "intentions at 8:30 AM Monday Nov 16 through Friday Nov 20"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read; the intentions list an 8:30 AM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-cedar-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 2,
+          "said": "Monday through Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5c32cc5",
+          "page": 2,
+          "said": "Monday through Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 3,
+          "said": "intentions at 8:30 AM Monday Nov 16 through Friday Nov 20"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read; the intentions list an 8:30 AM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-cedar-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorial Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 2,
+          "said": "First Saturday Monthly Memorial Mass 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5c32cc5",
+          "page": 2,
+          "said": "First Saturday Monthly Memorial Mass 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5c32cc5",
+          "page": 3,
+          "said": "SATURDAY, NOVEMBER 7 8:30 AM Memorial Mass"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: the regular Masses box names it monthly on first Saturdays; the Nov 8 issue's intentions show it on Nov 7 (a first Saturday). It is the parish's monthly Mass remembering the deceased of the parish, listed in the public schedule, not a memorial Mass for one person.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-cedar-grove",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "Except holidays"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 2,
+          "said": "Eucharistic Adoration Monday 4:00 PM to 7:00 PM [September to June excluding holidays]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5c32cc5",
+          "page": 2,
+          "said": "Eucharistic Adoration Monday 4:00 PM to 7:00 PM [September to June excluding holidays]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 3,
+          "said": "MONDAY, NOVEMBER 16 4:00 PM Adoration (C)"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box with the months, kept as the season (POLICY, Weekly qualifiers); the calendar places it in the church (C).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-cedar-grove",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Saturday 1:00 PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5c32cc5",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Saturday 1:00 PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 3,
+          "said": "SATURDAY, NOVEMBER 21 1:00 PM Confessions (C)"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box and calendar; no end time is given, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c12fbd0b",
+          "page": 2,
+          "said": "Saturday 1:00 PM or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

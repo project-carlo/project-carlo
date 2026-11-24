@@ -1,0 +1,1167 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-nicholas-palisades-park",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:32Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:30:16Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:20:32Z",
+  "summary": "One church, St. Nicholas. The Mass, confession and first-Friday Adoration schedule box is identical in both bulletins (Nov 8 and Nov 15, 2026; all pages are images) and matches the intentions. Open: the Thursday 6:15 PM Holy Hour skips the eve of the first Friday, which the format can only approximate as 'except first Thursdays'.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ea7c26b43d3f334e151664bfd99da66cc5b971f8449442c19798990af072b275",
+      "fetched_at": "2026-11-15T16:54:32Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "bb032d5f2a894685a414248fa83be256066c6efadac72cb3abeff4e0e27bfa52",
+      "fetched_at": "2026-11-08T16:03:21Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Saturday: 7:00 AM & 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Saturday: 7:00 AM & 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 2,
+          "said": "Saturday, November 21 7:00AM - In honor of Our Lady of Health ... 8:00AM - In honor of O. Lady of Health"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Saturday: 7:00 AM & 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Saturday: 7:00 AM & 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 2,
+          "said": "Saturday, November 21 7:00AM - In honor of Our Lady of Health ... 8:00AM - In honor of O. Lady of Health"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "5:00 PM - Vigil Mass (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "5:00 PM - Vigil Mass (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM (English) ... 12:30 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM (English) ... 12:30 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM (English) ... 12:30 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM (English) ... 12:30 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM (English) ... 12:30 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM (English) ... 12:30 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Italian"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Sunday: 11:00 AM (Italian)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Sunday: 11:00 AM (Italian)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Sunday: 6:00 PM (Portuguese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Sunday: 6:00 PM (Portuguese)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 2,
+          "said": "Monday, November 16 7:00AM ... 8:00AM ... (same each day through Friday, November 20)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so Weekdays are Monday to Friday; the intentions list 7:00 and 8:00 AM Masses every weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 2,
+          "said": "Monday, November 16 7:00AM ... 8:00AM ... (same each day through Friday, November 20)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so Weekdays are Monday to Friday; the intentions list 7:00 and 8:00 AM Masses every weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 2,
+          "said": "Monday, November 16 7:00AM ... 8:00AM ... (same each day through Friday, November 20)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so Weekdays are Monday to Friday; the intentions list 7:00 and 8:00 AM Masses every weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 2,
+          "said": "Monday, November 16 7:00AM ... 8:00AM ... (same each day through Friday, November 20)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so Weekdays are Monday to Friday; the intentions list 7:00 and 8:00 AM Masses every weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 2,
+          "said": "Monday, November 16 7:00AM ... 8:00AM ... (same each day through Friday, November 20)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so Weekdays are Monday to Friday; the intentions list 7:00 and 8:00 AM Masses every weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 2,
+          "said": "Monday, November 16 7:00AM ... 8:00AM ... (same each day through Friday, November 20)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so Weekdays are Monday to Friday; the intentions list 7:00 and 8:00 AM Masses every weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 2,
+          "said": "Monday, November 16 7:00AM ... 8:00AM ... (same each day through Friday, November 20)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so Weekdays are Monday to Friday; the intentions list 7:00 and 8:00 AM Masses every weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 2,
+          "said": "Monday, November 16 7:00AM ... 8:00AM ... (same each day through Friday, November 20)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so Weekdays are Monday to Friday; the intentions list 7:00 and 8:00 AM Masses every weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 2,
+          "said": "Monday, November 16 7:00AM ... 8:00AM ... (same each day through Friday, November 20)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so Weekdays are Monday to Friday; the intentions list 7:00 and 8:00 AM Masses every weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Weekdays: 7:00 & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 2,
+          "said": "Monday, November 16 7:00AM ... 8:00AM ... (same each day through Friday, November 20)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so Weekdays are Monday to Friday; the intentions list 7:00 and 8:00 AM Masses every weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Confessions: Saturdays 4:00 to 4:45 PM, or during the week by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Confessions: Saturdays 4:00 to 4:45 PM, or during the week by appointment."
+        }
+      ],
+      "rationale": "R1: printed under Administration of the Sacraments in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "or during the week by appointment"
+        }
+      ],
+      "rationale": "R26: weekday confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "1st Friday 8:30 to 10:30 AM - Blessed Sac. Adoration (12/4)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "1st Friday 8:30 to 10:30 AM - Blessed Sac. Adoration (12/4)"
+        }
+      ],
+      "rationale": "R1: the newest bulletin's Other Weekly Services list names it as a 1st Friday service (POLICY, Weekly or dated rule 2); also in the November 8 issue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": "19:15",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "third",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour for Vocations"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Thursday 6:15 to 7:15 PM - Holy Hour Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Thursday 6:15 to 7:15 PM - Holy Hour Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 4,
+          "said": "We invite all for adoration of the Blessed Sacrament and prayers of the Holy Hour every Thursday from 6:15 PM to 7:15 PM, except on the eve of the first Friday."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 4,
+          "said": "We invite all for adoration of the Blessed Sacrament and prayers of the Holy Hour every Thursday from 6:15 PM to 7:15 PM, except on the eve of the first Friday."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 3,
+          "said": "Thursday, November 19 6:15 to 7:15 PM - Holy Hour for Vocations"
+        }
+      ],
+      "rationale": "R33/R30: the real pattern (skip the Thursday before the first Friday) cannot be written exactly. 'Except first Thursdays' matches it in every month except one beginning on a Friday, when the eve is the previous month's last Thursday (next: Jan 1 2027, so Dec 31 2026 is skipped and Jan 7 2027 is held). Leaning to the approximation because the weekly Holy Hour is clearly established in both bulletins and the mismatch is about one week in seven months; R33 would otherwise exclude it.",
+      "question": "Thursday Holy Hour 6:15-7:15 PM is every Thursday except the eve of the first Friday. Record it as every Thursday except the first?",
+      "options": [
+        {
+          "label": "Thursdays except first Thursdays",
+          "entry": {
+            "church_slug": "st-nicholas-palisades-park",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "18:15",
+            "end_time": "19:15",
+            "cancelled": false,
+            "weeks_of_month": [
+              "second",
+              "third",
+              "fourth",
+              "fifth"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour for Vocations"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Every Thursday",
+          "entry": {
+            "church_slug": "st-nicholas-palisades-park",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "18:15",
+            "end_time": "19:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour for Vocations"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 2,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:32Z"
+      }
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass in honor of St. Padre Pio, Italian"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 3,
+          "said": "Tuesday, November 17 7:00 PM - Mass in honor of St. Padre Pio (Italian)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 2,
+          "said": "St. Padre Pio Group invites all to celebrate together a Mass in honor of the beloved Saint this Tuesday, November 17 at 7:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 2,
+          "said": "St. Padre Pio Group invites all to celebrate together a Mass in honor of the beloved Saint this Tuesday, November 17 at 7:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Tuesdays 7:00 PM - St. Padre Pio Mass (11/17)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Tuesdays 7:00 PM - St. Padre Pio Mass (11/17)"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass open to all (POLICY, Weekly or dated rule 3), on or after as_of. Both issues give only the one date, so no recurrence is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Service with Exposition"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 2,
+          "said": "Healing Service with the Exposition of the Blessed Sacrament will be held this Saturday, December 12 at 2:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Saturday 2:00 PM - Healing Service (12/12)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 3,
+          "said": "Saturday, November 14 2:00 PM - Healing service w/ Exp. Bl. Sacrament"
+        }
+      ],
+      "rationale": "POLICY, Final source checks: the healing service includes exposition, but the bulletin gives no timing for the Adoration itself, so its start cannot be taken from the service.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Holy Days: 6:30 and 8:00 AM & 7:30 PM* *Check bulletin - Holy day schedules are subject to change"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Holy Days: 6:30 and 8:00 AM & 7:30 PM* *Check bulletin - Holy day schedules are subject to change"
+        }
+      ],
+      "rationale": "POLICY, Dates: a generic holy-day schedule pins no date; update mode reads the holy-day notices.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 2,
+          "said": "Novena of the Immaculate Conception will be held from Sunday, November 29 to Monday, December 7 at 7:00PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 2,
+          "said": "Novena of the Immaculate Conception will be held from Sunday, November 29 to Monday, December 7 at 7:00PM."
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea7c26b4",
+          "page": 1,
+          "said": "Sunday 10:30 AM - Holy Rosary in Italian; 7:00 PM - Holy Rosary by Brazilian Men; Mon to Sat 7:35 AM - Morning Prayers; 8:30 AM - Holy Rosary in English; Tuesdays 8:00 PM - Holy Rosary in Portuguese; Friday 8:00 PM - Brazilian Prayer Group"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb032d5f",
+          "page": 1,
+          "said": "Sunday 10:30 AM - Holy Rosary in Italian; 7:00 PM - Holy Rosary by Brazilian Men; Mon to Sat 7:35 AM - Morning Prayers; 8:30 AM - Holy Rosary in English; Tuesdays 8:00 PM - Holy Rosary in Portuguese; Friday 8:00 PM - Brazilian Prayer Group"
+        }
+      ],
+      "rationale": "R24: rosaries, morning prayers and a prayer group are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

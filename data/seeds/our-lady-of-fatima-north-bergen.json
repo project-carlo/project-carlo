@@ -1,0 +1,813 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-fatima-north-bergen",
+  "status": "approved",
+  "as_of": "2026-11-15T16:22:51Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T13:47:31Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:43Z",
+  "summary": "One church. Weekend Masses (Sat 5 PM; Sun 8, 9:30 Spanish, 11, 12:30 Spanish), weekday 9 AM Mass in the Divine Mercy Chapel, Saturday 4:15-4:45 Confession and Mon-Thu 9:30 AM-9 PM Exposition agree in both bulletins read (Nov 8 and Nov 15); dated Thanksgiving and Guadalupe Masses added. Open: Saturday Exposition ends 3:30 PM (English, Nov 8 Spanish) or 3:00 (newest Spanish).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c8d542839cd0c688726b2133f018ada6ecb39b9a177fcb55f21424dd29b0d77a",
+      "fetched_at": "2026-11-15T16:22:51Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "fb45eafb21f517c5dffcde9596265b8b8ca6efcf653079e255d1a668c5e7954c",
+      "fetched_at": "2026-11-08T15:47:03Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 1,
+          "said": "Saturday: 5:00pm Mass in English."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 1,
+          "said": "Saturday: 5:00pm Mass in English."
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read and in both weeks' intentions (p7); the website's homepage agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 1,
+          "said": "Sunday's Mass Schedule: 8:00 am Mass English. 11:00 am Mass in English."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 1,
+          "said": "Sunday's Mass Schedule: 8:00 am Mass English. 11:00 am Mass in English."
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read and in both weeks' intentions (p7); the website's homepage agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 1,
+          "said": "Sunday's Mass Schedule: 8:00 am Mass English. 11:00 am Mass in English."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 1,
+          "said": "Sunday's Mass Schedule: 8:00 am Mass English. 11:00 am Mass in English."
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read and in both weeks' intentions (p7); the website's homepage agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 1,
+          "said": "9:30 am Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 1,
+          "said": "9:30 am Misa en Español"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read and in the intentions; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 1,
+          "said": "12:30 pm Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 1,
+          "said": "12:30 pm Misa en Español"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read and in the intentions; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 9:00am in the Divine Mercy Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 9:00am in the Divine Mercy Chapel"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins, and the p7 intentions list a 9:00am Mass every weekday in both weeks. The Divine Mercy Chapel is a chapel of the parish's one church (POLICY, Churches and chapels), named in a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 9:00am in the Divine Mercy Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 9:00am in the Divine Mercy Chapel"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins, and the p7 intentions list a 9:00am Mass every weekday in both weeks. The Divine Mercy Chapel is a chapel of the parish's one church (POLICY, Churches and chapels), named in a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 9:00am in the Divine Mercy Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 9:00am in the Divine Mercy Chapel"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins, and the p7 intentions list a 9:00am Mass every weekday in both weeks. The Divine Mercy Chapel is a chapel of the parish's one church (POLICY, Churches and chapels), named in a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 9:00am in the Divine Mercy Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 9:00am in the Divine Mercy Chapel"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins, and the p7 intentions list a 9:00am Mass every weekday in both weeks. The Divine Mercy Chapel is a chapel of the parish's one church (POLICY, Churches and chapels), named in a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 9:00am in the Divine Mercy Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 1,
+          "said": "Weekdays: Monday - Friday: 9:00am in the Divine Mercy Chapel"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins, and the p7 intentions list a 9:00am Mass every weekday in both weeks. The Divine Mercy Chapel is a chapel of the parish's one church (POLICY, Churches and chapels), named in a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 1,
+          "said": "Reconciliation Every Saturday from 4:15 pm till 4:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 1,
+          "said": "Reconciliation Every Saturday from 4:15 pm till 4:45 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ourladyoffatimanb.org/",
+          "said": "Sacrament of reconciliation Saturday 4:00 pm-4:45pm"
+        }
+      ],
+      "rationale": "R1: both bulletins print 4:15-4:45. The homepage says 4:00-4:45; the newest bulletin is the more current source (R7 spirit), so the bulletin time stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 3,
+          "said": "We will have Exposition of the Blessed Sacrament Monday through Thursday from 9:30am to 9:00pm. There will not be Exposition on Fridays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 3,
+          "said": "desde la 9:30 am hasta la 9:00pm. No habra Exposicion los Viernes ni los dias feriados."
+        }
+      ],
+      "rationale": "R1: the newest bulletin's English and Spanish notices both give Monday-Thursday 9:30am-9:00pm, as did the Nov 8 issue. The Spanish adds no Exposition on holidays (dias feriados) but pins no date, so no dated cancellation is recorded (POLICY, Dates).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 3,
+          "said": "We will have Exposition of the Blessed Sacrament Monday through Thursday from 9:30am to 9:00pm. There will not be Exposition on Fridays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 3,
+          "said": "desde la 9:30 am hasta la 9:00pm. No habra Exposicion los Viernes ni los dias feriados."
+        }
+      ],
+      "rationale": "R1: the newest bulletin's English and Spanish notices both give Monday-Thursday 9:30am-9:00pm, as did the Nov 8 issue. The Spanish adds no Exposition on holidays (dias feriados) but pins no date, so no dated cancellation is recorded (POLICY, Dates).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 3,
+          "said": "We will have Exposition of the Blessed Sacrament Monday through Thursday from 9:30am to 9:00pm. There will not be Exposition on Fridays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 3,
+          "said": "desde la 9:30 am hasta la 9:00pm. No habra Exposicion los Viernes ni los dias feriados."
+        }
+      ],
+      "rationale": "R1: the newest bulletin's English and Spanish notices both give Monday-Thursday 9:30am-9:00pm, as did the Nov 8 issue. The Spanish adds no Exposition on holidays (dias feriados) but pins no date, so no dated cancellation is recorded (POLICY, Dates).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 3,
+          "said": "We will have Exposition of the Blessed Sacrament Monday through Thursday from 9:30am to 9:00pm. There will not be Exposition on Fridays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 3,
+          "said": "desde la 9:30 am hasta la 9:00pm. No habra Exposicion los Viernes ni los dias feriados."
+        }
+      ],
+      "rationale": "R1: the newest bulletin's English and Spanish notices both give Monday-Thursday 9:30am-9:00pm, as did the Nov 8 issue. The Spanish adds no Exposition on holidays (dias feriados) but pins no date, so no dated cancellation is recorded (POLICY, Dates).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 3,
+          "said": "On Saturday it will begin at 10:00am to 3:30pm. / Los sabados desde la 10:00am hasta la 3:00."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 3,
+          "said": "Los sabados desde la 10:00am hasta la 3:30pm."
+        }
+      ],
+      "rationale": "R28: the newest bulletin's English says 3:30pm and its Spanish says 3:00. Leaning 3:30, since the English and the Nov 8 Spanish notice both say 3:30pm and the newest Spanish '3:00' lacks am/pm and looks like a dropped digit.",
+      "question": "Saturday Exposition: ends 3:30 PM or 3:00 PM?",
+      "options": [
+        {
+          "label": "Saturdays 10:00 AM-3:30 PM",
+          "entry": {
+            "church_slug": "our-lady-of-fatima-north-bergen",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "15:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Saturdays 10:00 AM-3:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-fatima-north-bergen",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:43Z"
+      }
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 2,
+          "said": "On November 26, 2026 we will celebrate the Thanksgiving Mass at 9:30am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb45eafb",
+          "page": 2,
+          "said": "Thanksgiving Mass at 9:30am."
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass after as_of. R17: no cancellation of the 9:00am Thursday Mass is stated, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-north-bergen",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe, with Mariachis"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 6,
+          "said": "Saturday 12/12 Rosary at 6:00pm followed by mass at 7:00 pm with Mariachis"
+        }
+      ],
+      "rationale": "R1, R16: dated feast-day Mass on or after as_of; the Rosary before it is a devotion (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 6,
+          "said": "Novena 12/3-12/10 6:30pm; Sunday 12/6 Before all masses"
+        }
+      ],
+      "rationale": "R24: the Guadalupe novena is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 6,
+          "said": "Friday 12/11 10:00pm 11:30pm Las Mananitas with Mariachis"
+        }
+      ],
+      "rationale": "R24: Las Mananitas is a devotion/celebration, not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8d54283",
+          "page": 1,
+          "said": "Holy Days of Obligation: Mass at 9:00am &7:30pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: a generic holy-day line pins no date; holy-day Masses are dated and update mode reads them from the bulletins that name the day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

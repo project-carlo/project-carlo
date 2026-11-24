@@ -1,0 +1,987 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-elizabeth-wyckoff",
+  "status": "approved",
+  "as_of": "2026-11-15T16:24:23Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:19:21Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:18:46Z",
+  "summary": "One church, St. Elizabeth, Wyckoff. Both bulletins read (Nov 8 and Nov 15 weeks) print the same schedule box: Sunday 7:30, 9, 10:30, 12 and 6:15 PM; Saturday 9 AM and 5 PM; weekdays 7 and 9 AM; Saturday confession 12:30 PM, all confirmed by the Mass intentions. Also a dated Sensory Friendly Mass on Saturday Nov 28 at 4 PM; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "31e3d8dd7c7a401ce09f34c9aef191080218a62cdfc2a4af03912ca7701cc539",
+      "fetched_at": "2026-11-15T16:24:23Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c76eefa1b25e38fd7764bbe1343abc196075ca63cb9df456846f14e22e5df03a",
+      "fetched_at": "2026-11-08T15:47:17Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Masses Sunday: 7:30 am, 9:00 am, 10:30 am, 12 noon & 6:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Masses Sunday: 7:30 am, 9:00 am, 10:30 am, 12 noon & 6:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Sunday ... 7:30am ... 9:00am ... 10:30am ... 12:00pm ... 6:15pm (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Sunday ... 7:30am ... 9:00am ... 10:30am ... 12:00pm ... 6:15pm (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and every Sunday in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Masses Sunday: 7:30 am, 9:00 am, 10:30 am, 12 noon & 6:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Masses Sunday: 7:30 am, 9:00 am, 10:30 am, 12 noon & 6:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Sunday ... 7:30am ... 9:00am ... 10:30am ... 12:00pm ... 6:15pm (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Sunday ... 7:30am ... 9:00am ... 10:30am ... 12:00pm ... 6:15pm (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and every Sunday in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Masses Sunday: 7:30 am, 9:00 am, 10:30 am, 12 noon & 6:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Masses Sunday: 7:30 am, 9:00 am, 10:30 am, 12 noon & 6:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Sunday ... 7:30am ... 9:00am ... 10:30am ... 12:00pm ... 6:15pm (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Sunday ... 7:30am ... 9:00am ... 10:30am ... 12:00pm ... 6:15pm (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and every Sunday in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Masses Sunday: 7:30 am, 9:00 am, 10:30 am, 12 noon & 6:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Masses Sunday: 7:30 am, 9:00 am, 10:30 am, 12 noon & 6:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Sunday ... 7:30am ... 9:00am ... 10:30am ... 12:00pm ... 6:15pm (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Sunday ... 7:30am ... 9:00am ... 10:30am ... 12:00pm ... 6:15pm (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and every Sunday in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Masses Sunday: 7:30 am, 9:00 am, 10:30 am, 12 noon & 6:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Masses Sunday: 7:30 am, 9:00 am, 10:30 am, 12 noon & 6:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Sunday ... 7:30am ... 9:00am ... 10:30am ... 12:00pm ... 6:15pm (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Sunday ... 7:30am ... 9:00am ... 10:30am ... 12:00pm ... 6:15pm (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and every Sunday in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Saturday: 9:00 am & 5:00 pm (Anticipated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Saturday: 9:00 am & 5:00 pm (Anticipated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Saturday ... 9:00am ... 5:00pm (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Saturday ... 9:00am ... 5:00pm (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Saturday: 9:00 am & 5:00 pm (Anticipated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Saturday: 9:00 am & 5:00 pm (Anticipated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Saturday ... 9:00am ... 5:00pm (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Saturday ... 9:00am ... 5:00pm (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so 'Weekday' is Monday-Friday; both weeks' intentions show 7:00 and 9:00 AM Masses every Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so 'Weekday' is Monday-Friday; both weeks' intentions show 7:00 and 9:00 AM Masses every Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so 'Weekday' is Monday-Friday; both weeks' intentions show 7:00 and 9:00 AM Masses every Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so 'Weekday' is Monday-Friday; both weeks' intentions show 7:00 and 9:00 AM Masses every Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so 'Weekday' is Monday-Friday; both weeks' intentions show 7:00 and 9:00 AM Masses every Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so 'Weekday' is Monday-Friday; both weeks' intentions show 7:00 and 9:00 AM Masses every Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so 'Weekday' is Monday-Friday; both weeks' intentions show 7:00 and 9:00 AM Masses every Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so 'Weekday' is Monday-Friday; both weeks' intentions show 7:00 and 9:00 AM Masses every Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so 'Weekday' is Monday-Friday; both weeks' intentions show 7:00 and 9:00 AM Masses every Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Weekday: 7:00 am & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Monday ... Friday 7:00am, 9:00am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Saturday separately, so 'Weekday' is Monday-Friday; both weeks' intentions show 7:00 and 9:00 AM Masses every Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 1,
+          "said": "Reconciliation Saturday 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 1,
+          "said": "Reconciliation Saturday 12:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins; no end time is given, so end_time stays null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-28",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sensory Friendly Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31e3d8dd",
+          "page": 4,
+          "said": "SENSORY FRIENDLY MASS 'A welcoming, inclusive Mass for individuals with disabilities or sensory sensitivities and their families.' Saturday November 28 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 4,
+          "said": "SENSORY FRIENDLY MASS 'A welcoming, inclusive Mass for individuals with disabilities or sensory sensitivities and their families.' Saturday November 28 4:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass at a time outside the weekly schedule, open to all ('welcoming, inclusive'), on or after as_of. The parish's own flyer names no other venue and the parish has one church, so it is attached to St. Elizabeth Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-wyckoff",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-13",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Overnight Adoration until Benediction 8:45 AM Saturday"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c76eefa1",
+          "page": 3,
+          "said": "Overnight Adoration: On Friday, November 13, Overnight Adoration will begin with Exposition at 7:00 pm and will last throughout the night until Benediction at 8:45 am on Saturday, November 14."
+        }
+      ],
+      "rationale": "R16: a dated, one-time Adoration before as_of; the bulletin names no recurring pattern, so nothing weekly or monthly follows from it (R33).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

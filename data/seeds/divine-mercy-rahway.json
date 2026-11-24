@@ -1,0 +1,1034 @@
+{
+  "schema_version": 1,
+  "parish_slug": "divine-mercy-rahway",
+  "status": "approved",
+  "as_of": "2026-11-15T16:21:06Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T09:01:01Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:29Z",
+  "summary": "One church, Divine Mercy, Rahway. Both bulletins read (Nov 8 and Nov 15, all page images) print the same Mass, Confession and First Friday Adoration schedule; the website agrees. Open: Saturday Confession ends 3:45 (p1 box) or 4:00 (p3 Sacraments Schedule).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "11bb7d5720f066a2232a727542c1b99486cbccc6920b3493bab16b2a3486b70b",
+      "fetched_at": "2026-11-15T16:21:06Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "23e1a0c0b82bc849fd3cae583f329ea16cea9f31d16340b33e05f1c372ffa35f",
+      "fetched_at": "2026-11-08T15:44:57Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Weekdays 12:00pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Weekdays 12:00pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 2,
+          "said": "Mass Intentions Mon. Nov. 16 - Fri. Nov. 20, 12:00 PM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on p1 of both bulletins read; the intentions list a 12:00 PM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Weekdays 12:00pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Weekdays 12:00pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 2,
+          "said": "Mass Intentions Mon. Nov. 16 - Fri. Nov. 20, 12:00 PM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on p1 of both bulletins read; the intentions list a 12:00 PM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Weekdays 12:00pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Weekdays 12:00pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 2,
+          "said": "Mass Intentions Mon. Nov. 16 - Fri. Nov. 20, 12:00 PM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on p1 of both bulletins read; the intentions list a 12:00 PM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Weekdays 12:00pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Weekdays 12:00pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 2,
+          "said": "Mass Intentions Mon. Nov. 16 - Fri. Nov. 20, 12:00 PM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on p1 of both bulletins read; the intentions list a 12:00 PM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Weekdays 12:00pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Weekdays 12:00pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 2,
+          "said": "Mass Intentions Mon. Nov. 16 - Fri. Nov. 20, 12:00 PM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on p1 of both bulletins read; the intentions list a 12:00 PM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Martes 7:00pm Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Martes 7:00pm Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 2,
+          "said": "Tues. Nov. 17 7:00 PM (S)"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on p1 of both bulletins read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Saturday 9:00am, 4:00pm (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Saturday 9:00am, 4:00pm (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 2,
+          "said": "Sat. Nov. 21 9:00 AM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on p1 of both bulletins read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Saturday 9:00am, 4:00pm (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Saturday 9:00am, 4:00pm (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 2,
+          "said": "Sat. Nov. 21 4:00 PM (V)"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on p1 of both bulletins read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Sunday 8:00am, 9:30am, 11:00am, 12:30pm Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Sunday 8:00am, 9:30am, 11:00am, 12:30pm Misa en Español"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on p1 of both bulletins read; the intentions list the same Sunday times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Sunday 8:00am, 9:30am, 11:00am, 12:30pm Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Sunday 8:00am, 9:30am, 11:00am, 12:30pm Misa en Español"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on p1 of both bulletins read; the intentions list the same Sunday times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Sunday 8:00am, 9:30am, 11:00am, 12:30pm Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Sunday 8:00am, 9:30am, 11:00am, 12:30pm Misa en Español"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on p1 of both bulletins read; the intentions list the same Sunday times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Sunday 8:00am, 9:30am, 11:00am, 12:30pm Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Sunday 8:00am, 9:30am, 11:00am, 12:30pm Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 2,
+          "said": "Sun. Nov. 22 12:30 PM (SP)"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on p1 of both bulletins read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Confession 12:30pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Confession 12:30pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 3,
+          "said": "Confession: Weekdays after the 12:00pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 3,
+          "said": "Confession: Weekdays after the 12:00pm Mass"
+        }
+      ],
+      "rationale": "R1: p1 gives the clock time 12:30 PM, which p3's 'after the 12:00pm Mass' agrees with (POLICY, Times: a printed clock time wins). No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Confession 12:30pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Confession 12:30pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 3,
+          "said": "Confession: Weekdays after the 12:00pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 3,
+          "said": "Confession: Weekdays after the 12:00pm Mass"
+        }
+      ],
+      "rationale": "R1: p1 gives the clock time 12:30 PM, which p3's 'after the 12:00pm Mass' agrees with (POLICY, Times: a printed clock time wins). No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Confession 12:30pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Confession 12:30pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 3,
+          "said": "Confession: Weekdays after the 12:00pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 3,
+          "said": "Confession: Weekdays after the 12:00pm Mass"
+        }
+      ],
+      "rationale": "R1: p1 gives the clock time 12:30 PM, which p3's 'after the 12:00pm Mass' agrees with (POLICY, Times: a printed clock time wins). No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Confession 12:30pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Confession 12:30pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 3,
+          "said": "Confession: Weekdays after the 12:00pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 3,
+          "said": "Confession: Weekdays after the 12:00pm Mass"
+        }
+      ],
+      "rationale": "R1: p1 gives the clock time 12:30 PM, which p3's 'after the 12:00pm Mass' agrees with (POLICY, Times: a printed clock time wins). No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Confession 12:30pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Confession 12:30pm Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 3,
+          "said": "Confession: Weekdays after the 12:00pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 3,
+          "said": "Confession: Weekdays after the 12:00pm Mass"
+        }
+      ],
+      "rationale": "R1: p1 gives the clock time 12:30 PM, which p3's 'after the 12:00pm Mass' agrees with (POLICY, Times: a printed clock time wins). No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Confession 7:30pm Martes (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Confession 7:30pm Martes (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 3,
+          "said": "Martes 7:30pm (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 3,
+          "said": "Martes 7:30pm (Español)"
+        }
+      ],
+      "rationale": "R1: in the p1 Confession box and the p3 Sacraments Schedule of both bulletins. The website's 'Tuesday 12:30 PM Confesion en Espanol' is already covered by the weekday 12:30 slot; the bulletins' 7:30 PM after the 7:00 PM Spanish Mass is clear.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 3,
+          "said": "Eucharistic Adoration | 11:00AM Every 1st Friday of the month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 3,
+          "said": "Eucharistic Adoration | 11:00AM Every 1st Friday of the month"
+        },
+        {
+          "source": "website",
+          "url": "https://www.divinemercyrahway.church/",
+          "said": "1st Friday : 11:00 AM ... Exposition of the Blessed Sacrament followed by Mass"
+        }
+      ],
+      "rationale": "R1: the newest bulletin's standing Devotions list prints it (also the Nov 8 issue); the website confirms exposition, followed by Mass. No end time given, so none recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 1,
+          "said": "Confession 3:00pm-3:45pm Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 1,
+          "said": "Confession 3:00pm-3:45pm Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 3,
+          "said": "Confession: ... Saturdays 3:00pm to 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e1a0c0",
+          "page": 3,
+          "said": "Confession: ... Saturdays 3:00pm to 4:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.divinemercyrahway.church/",
+          "said": "Saturday 3:00 PM Or call the priest/rectory for appointment"
+        }
+      ],
+      "rationale": "R28/C8: two standing statements in the same bulletin (both issues) disagree on the end; the website gives only the start. Leaning 3:45, the Mass Schedule box, since the Vigil Mass starts at 4:00 PM.",
+      "question": "Saturday Confession: the p1 box says 3:00-3:45 PM, the p3 Sacraments Schedule says 3:00 to 4:00 PM. Which end time?",
+      "options": [
+        {
+          "label": "3:00-3:45 PM",
+          "entry": {
+            "church_slug": "divine-mercy-rahway",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "15:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "3:00-4:00 PM",
+          "entry": {
+            "church_slug": "divine-mercy-rahway",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "3:00 PM, no end time",
+          "entry": {
+            "church_slug": "divine-mercy-rahway",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:29Z"
+      }
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 3,
+          "said": "Mary Mother of God | 9:00AM Every 1st Saturday; Divine Mercy Chaplet | 3:00PM Every 4th Saturday; Novenas 12:30PM Mon, Wed, Thu, Fri after Mass"
+        }
+      ],
+      "rationale": "R24: devotions (chaplet, novenas, Marian devotion at the regular Saturday 9 AM Mass) are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11bb7d57",
+          "page": 3,
+          "said": "or call the priest for an appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

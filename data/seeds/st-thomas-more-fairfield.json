@@ -1,0 +1,510 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-thomas-more-fairfield",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:49Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T18:40:34Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:21:19Z",
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026; all pages are images) print the same page-1 schedule: Sat 5 PM vigil, Sun 8, 10 and 12, Mon-Sat 9 AM, and Saturday Reconciliation/Adoration 3:30-4:30 PM. No dated changes on or after as_of; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b5d41a330bd601a8303e4164b3fb6c9f98064f14df7d670aca30e89aef394394",
+      "fetched_at": "2026-11-15T16:54:49Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3501adfb7ea995345a629d4005fcf3d25f48c3dbbe1f2851bd43576befbe1273",
+      "fetched_at": "2026-11-08T16:03:40Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-fairfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5d41a33",
+          "page": 1,
+          "said": "SUNDAY MASS SCHEDULE: Saturday 5:00pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3501adfb",
+          "page": 1,
+          "said": "SUNDAY MASS SCHEDULE: Saturday 5:00pm (Vigil)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read (Nov 15 and Nov 8, 2026).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-fairfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5d41a33",
+          "page": 1,
+          "said": "Sunday 8:00am, 10:00am, 12:00noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3501adfb",
+          "page": 1,
+          "said": "Sunday 8:00am, 10:00am, 12:00noon"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; intentions on p2 list 8:00, 10:00 and 12:00 each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-fairfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5d41a33",
+          "page": 1,
+          "said": "Sunday 8:00am, 10:00am, 12:00noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3501adfb",
+          "page": 1,
+          "said": "Sunday 8:00am, 10:00am, 12:00noon"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; intentions on p2 list 8:00, 10:00 and 12:00 each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-fairfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5d41a33",
+          "page": 1,
+          "said": "Sunday 8:00am, 10:00am, 12:00noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3501adfb",
+          "page": 1,
+          "said": "Sunday 8:00am, 10:00am, 12:00noon"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; intentions on p2 list 8:00, 10:00 and 12:00 each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-fairfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5d41a33",
+          "page": 1,
+          "said": "DAILY MASS: Mon.-Sat. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3501adfb",
+          "page": 1,
+          "said": "DAILY MASS: Mon.-Sat. 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the p2 intentions list a 9:00 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-fairfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5d41a33",
+          "page": 1,
+          "said": "DAILY MASS: Mon.-Sat. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3501adfb",
+          "page": 1,
+          "said": "DAILY MASS: Mon.-Sat. 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the p2 intentions list a 9:00 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-fairfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5d41a33",
+          "page": 1,
+          "said": "DAILY MASS: Mon.-Sat. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3501adfb",
+          "page": 1,
+          "said": "DAILY MASS: Mon.-Sat. 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the p2 intentions list a 9:00 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-fairfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5d41a33",
+          "page": 1,
+          "said": "DAILY MASS: Mon.-Sat. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3501adfb",
+          "page": 1,
+          "said": "DAILY MASS: Mon.-Sat. 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the p2 intentions list a 9:00 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-fairfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5d41a33",
+          "page": 1,
+          "said": "DAILY MASS: Mon.-Sat. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3501adfb",
+          "page": 1,
+          "said": "DAILY MASS: Mon.-Sat. 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the p2 intentions list a 9:00 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-fairfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5d41a33",
+          "page": 1,
+          "said": "DAILY MASS: Mon.-Sat. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3501adfb",
+          "page": 1,
+          "said": "DAILY MASS: Mon.-Sat. 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the p2 intentions list a 9:00 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-fairfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5d41a33",
+          "page": 1,
+          "said": "Reconciliation/Adoration of the Blessed Sacrament: Saturday 3:30-4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3501adfb",
+          "page": 1,
+          "said": "Reconciliation/Adoration of the Blessed Sacrament: Saturday 3:30-4:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-fairfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5d41a33",
+          "page": 1,
+          "said": "Reconciliation/Adoration of the Blessed Sacrament: Saturday 3:30-4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3501adfb",
+          "page": 1,
+          "said": "Reconciliation/Adoration of the Blessed Sacrament: Saturday 3:30-4:30pm"
+        }
+      ],
+      "rationale": "R1, POLICY Times: confession is offered with Saturday Adoration, 3:30-4:30 PM, in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5d41a33",
+          "page": 1,
+          "said": "Novena to the Miraculous Medal - Every Monday following 9:00AM Mass; Divine Mercy Chaplet - Every Friday following 9:00AM Mass; 1st Friday Devotion to the Sacred Heart of Jesus following the 9:00AM Mass; 1st Saturday Devotion to the Blessed Virgin Mary following the 9:00AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3501adfb",
+          "page": 1,
+          "said": "Novena to the Miraculous Medal - Every Monday following 9:00AM Mass; Divine Mercy Chaplet - Every Friday following 9:00AM Mass; 1st Friday Devotion to the Sacred Heart of Jesus following the 9:00AM Mass; 1st Saturday Devotion to the Blessed Virgin Mary following the 9:00AM Mass"
+        }
+      ],
+      "rationale": "R24: devotions that the bulletin does not call Mass, Confession or Adoration; the First Friday devotion is not described as Adoration or exposition.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

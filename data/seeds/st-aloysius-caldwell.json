@@ -1,0 +1,1037 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-aloysius-caldwell",
+  "status": "approved",
+  "as_of": "2026-11-15T16:53:27Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:15:38Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:59Z",
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026, image-only) print the same Mass and Confession schedule; Monday Adoration moved from 12:00 to 12:30 PM in the newest issue (R40). Thanksgiving Day and the day after have only a 9:00 AM Mass, recorded with cancellations of the 8:00 and 12:00 weekday Masses. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "cd262edbbf5e9be5609368841a272b3b8c82094116a2b37295d3ebdda9cc6116",
+      "fetched_at": "2026-11-15T16:53:27Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "fa7d6b265111383b5171dc2e9df31d69ba507ce6abd8ae6d9f17fc5b8c78a63f",
+      "fetched_at": "2026-11-08T16:02:23Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Saturday Evening: 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Saturday Evening: 5:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Sunday: 7:30 am • 9:00 am • 10:30 am • 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Sunday: 7:30 am • 9:00 am • 10:30 am • 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Sunday: 7:30 am • 9:00 am • 10:30 am • 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Sunday: 7:30 am • 9:00 am • 10:30 am • 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Sunday: 7:30 am • 9:00 am • 10:30 am • 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Sunday: 7:30 am • 9:00 am • 10:30 am • 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Sunday: 7:30 am • 9:00 am • 10:30 am • 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Sunday: 7:30 am • 9:00 am • 10:30 am • 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Sunday Evening: 5:00 pm Spanish Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Sunday Evening: 5:00 pm Spanish Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in both weeks' intentions (p3); POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; both weeks' intentions (p3) list 8:00 am and 12:00 pm Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; both weeks' intentions (p3) list 8:00 am and 12:00 pm Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; both weeks' intentions (p3) list 8:00 am and 12:00 pm Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; both weeks' intentions (p3) list 8:00 am and 12:00 pm Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; both weeks' intentions (p3) list 8:00 am and 12:00 pm Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; both weeks' intentions (p3) list 8:00 am and 12:00 pm Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; both weeks' intentions (p3) list 8:00 am and 12:00 pm Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; both weeks' intentions (p3) list 8:00 am and 12:00 pm Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; both weeks' intentions (p3) list 8:00 am and 12:00 pm Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Weekdays: 8:00 am • 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; both weeks' intentions (p3) list 8:00 am and 12:00 pm Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Saturday Morning: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Saturday Morning: 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in the intentions for Saturdays November 14 and 21 (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Eucharistic Adoration Monday: 12:30 to 7:00 pm There is no Adoration during July and August."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Monday: 12:00 to 7:00 pm There is no Adoration during July and August."
+        }
+      ],
+      "rationale": "R1, R40: the newest schedule box gives 12:30 to 7:00 pm; the November 8 issue said 12:00. The newer standing schedule corrects the older start (it now follows the 12:00 pm weekday Mass). POLICY, Weekly qualifiers: no Adoration in July and August is the season September through June.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "Sacrament of Reconciliation (Penance) Saturday: 1:00 p.m. and by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa7d6b26",
+          "page": 2,
+          "said": "Sacrament of Reconciliation (Penance) Saturday: 1:00 p.m. and by appointment."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins read; no end time given, so end_time is null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 2,
+          "said": "and by appointment. Please call the rectory."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day; bilingual"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 6,
+          "said": "THURSDAY, NOVEMBER 26th and FRIDAY, NOVEMBER 27th THERE WILL BE ONLY ONE MASS AT 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 5,
+          "said": "MISA BILINGÜE JUEVES 26 DE NOVIEMBRE A LAS 9:00 A.M."
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass outside the weekly schedule (POLICY, Weekly or dated, rule 7); after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Day after Thanksgiving"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 6,
+          "said": "THURSDAY, NOVEMBER 26th and FRIDAY, NOVEMBER 27th THERE WILL BE ONLY ONE MASS AT 9:00 a.m."
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass outside the weekly schedule; after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Only one Mass, at 9:00 AM"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 6,
+          "said": "THURSDAY, NOVEMBER 26th and FRIDAY, NOVEMBER 27th THERE WILL BE ONLY ONE MASS AT 9:00 a.m."
+        }
+      ],
+      "rationale": "R16, R40: the bulletin says there will be only one Mass on these days, at 9:00 AM, so the weekday 8:00 AM and 12:00 PM Masses do not take place; this is an explicit statement, not the inference R17 forbids. Dates after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Only one Mass, at 9:00 AM"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 6,
+          "said": "THURSDAY, NOVEMBER 26th and FRIDAY, NOVEMBER 27th THERE WILL BE ONLY ONE MASS AT 9:00 a.m."
+        }
+      ],
+      "rationale": "R16, R40: the bulletin says there will be only one Mass on these days, at 9:00 AM, so the weekday 8:00 AM and 12:00 PM Masses do not take place; this is an explicit statement, not the inference R17 forbids. Dates after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Only one Mass, at 9:00 AM"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 6,
+          "said": "THURSDAY, NOVEMBER 26th and FRIDAY, NOVEMBER 27th THERE WILL BE ONLY ONE MASS AT 9:00 a.m."
+        }
+      ],
+      "rationale": "R16, R40: the bulletin says there will be only one Mass on these days, at 9:00 AM, so the weekday 8:00 AM and 12:00 PM Masses do not take place; this is an explicit statement, not the inference R17 forbids. Dates after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Only one Mass, at 9:00 AM"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 6,
+          "said": "THURSDAY, NOVEMBER 26th and FRIDAY, NOVEMBER 27th THERE WILL BE ONLY ONE MASS AT 9:00 a.m."
+        }
+      ],
+      "rationale": "R16, R40: the bulletin says there will be only one Mass on these days, at 9:00 AM, so the weekday 8:00 AM and 12:00 PM Masses do not take place; this is an explicit statement, not the inference R17 forbids. Dates after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-27",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Installation Mass for Fr. Wojciech"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 6,
+          "said": "Save the Date! for Fr. Wojciech's Installation Mass Sunday December 27 12:00 pm"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated, rule 7: a special occasion at the regular Sunday 12:00 PM Mass is not recorded separately; the weekly slot covers it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-caldwell",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Community Interfaith Thanksgiving Service"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd262edb",
+          "page": 6,
+          "said": "Community Interfaith Thanksgiving Service TUESDAY 24 NOVEMBER 2026 7:30 PM ST. ALOYSIUS CHURCH"
+        }
+      ],
+      "rationale": "R24, R25: an interfaith prayer service, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

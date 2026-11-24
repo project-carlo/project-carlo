@@ -1,0 +1,1184 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anne-garwood",
+  "status": "approved",
+  "as_of": "2026-11-15T16:24:00Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:29:52Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:18:10Z",
+  "summary": "One church. The page-1 schedule (Sat 4 PM, first Sat 9 AM, Sun 8/10/12, Mon-Fri 8 AM, Sat 2:30 PM Reconciliation & Simple Adoration, first Wed/Fri/Sat Adoration after morning Mass) is identical in both bulletins and matches the intentions. Dated: Nov 15 Healing Mass, Thanksgiving 9 AM, Simbang Gabi Dec 15-23 7 PM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7d69b27b6b4423a33f9fb7e41636f164731e7d14de7e721ad4f25ea6f1b519ca",
+      "fetched_at": "2026-11-15T16:24:00Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e5e5eb32518bb2d8c3410cfa6154716cac112c62e5b103e0a8e677ec1e08a995",
+      "fetched_at": "2026-11-08T15:48:02Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturdays: 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturdays: 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 2,
+          "said": "Saturday November 14 / 4:00 PM +Peters Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 2,
+          "said": "Saturday November 14 / 4:00 PM +Peters Family"
+        }
+      ],
+      "rationale": "R1, R35: in the page-1 Mass schedule and the Mass intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 1,
+          "said": "First Saturday of the Month 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 1,
+          "said": "First Saturday of the Month 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 2,
+          "said": "Saturday November 7 9:00 AM +Memorial Mass Intentions"
+        }
+      ],
+      "rationale": "R1: the newest bulletin's page-1 schedule prints it as a first-Saturday Mass (POLICY, Weekly or dated rule 2); the Nov 8 issue's intentions show it on Saturday Nov 7, a first Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM & 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM & 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 2,
+          "said": "8:00 AM / 10:00 AM / 12:00 Noon (Sunday intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 2,
+          "said": "8:00 AM / 10:00 AM / 12:00 Noon (Sunday intentions)"
+        }
+      ],
+      "rationale": "R1, R35: page-1 schedule and Sunday intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM & 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM & 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 2,
+          "said": "8:00 AM / 10:00 AM / 12:00 Noon (Sunday intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 2,
+          "said": "8:00 AM / 10:00 AM / 12:00 Noon (Sunday intentions)"
+        }
+      ],
+      "rationale": "R1, R35: page-1 schedule and Sunday intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM & 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM & 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 2,
+          "said": "8:00 AM / 10:00 AM / 12:00 Noon (Sunday intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 2,
+          "said": "8:00 AM / 10:00 AM / 12:00 Noon (Sunday intentions)"
+        }
+      ],
+      "rationale": "R1, R35: page-1 schedule and Sunday intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 2,
+          "said": "Monday-Friday 8:00 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 2,
+          "said": "Monday-Friday 8:00 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: 'Weekdays 8:00 AM' on page 1; both weeks' intentions list 8:00 AM Monday to Friday and no Saturday 8 AM, so weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 2,
+          "said": "Monday-Friday 8:00 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 2,
+          "said": "Monday-Friday 8:00 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: 'Weekdays 8:00 AM' on page 1; both weeks' intentions list 8:00 AM Monday to Friday and no Saturday 8 AM, so weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 2,
+          "said": "Monday-Friday 8:00 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 2,
+          "said": "Monday-Friday 8:00 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: 'Weekdays 8:00 AM' on page 1; both weeks' intentions list 8:00 AM Monday to Friday and no Saturday 8 AM, so weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 2,
+          "said": "Monday-Friday 8:00 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 2,
+          "said": "Monday-Friday 8:00 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: 'Weekdays 8:00 AM' on page 1; both weeks' intentions list 8:00 AM Monday to Friday and no Saturday 8 AM, so weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 2,
+          "said": "Monday-Friday 8:00 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 2,
+          "said": "Monday-Friday 8:00 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: 'Weekdays 8:00 AM' on page 1; both weeks' intentions list 8:00 AM Monday to Friday and no Saturday 8 AM, so weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 1,
+          "said": "RECONCILIATION & SIMPLE ADORATION Saturdays: 2:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 1,
+          "said": "RECONCILIATION & SIMPLE ADORATION Saturdays: 2:30 PM"
+        }
+      ],
+      "rationale": "R1: page-1 box in both bulletins; no end time is printed, so end_time is null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simple Adoration, with Reconciliation"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 1,
+          "said": "RECONCILIATION & SIMPLE ADORATION Saturdays: 2:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 1,
+          "said": "RECONCILIATION & SIMPLE ADORATION Saturdays: 2:30 PM"
+        }
+      ],
+      "rationale": "R1: the bulletin calls it Adoration and gives a definite start time; no end printed. Exposition is not claimed beyond the bulletin's words.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass, with Rosary"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 1,
+          "said": "ADORATION & ROSARY First Wednesday of each month after the 8:00 AM mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 1,
+          "said": "ADORATION & ROSARY First Wednesday of each month after the 8:00 AM mass"
+        }
+      ],
+      "rationale": "R1, R10: after a weekday Mass is 30 minutes after it starts, 8:30 AM; weeks_of_month first (POLICY rule 2). Printed in the newest bulletin's standing box though its week holds no first Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass, with Rosary"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 1,
+          "said": "First Friday after 8 AM mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 1,
+          "said": "First Friday after 8 AM mass"
+        }
+      ],
+      "rationale": "R1, R10: weekday Mass, so 30 minutes after it starts; first Fridays (POLICY rule 2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass, with Rosary"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 1,
+          "said": "First Saturday after 9 am mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 1,
+          "said": "First Saturday after 9 am mass"
+        }
+      ],
+      "rationale": "R1, R10: a Saturday morning Mass is not a weekend vigil or Sunday Mass under POLICY, Times, so 30 minutes after it, 9:30 AM; first Saturdays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 2,
+          "said": "Thanksgiving Day Mass on November 26 will at 9 am"
+        }
+      ],
+      "rationale": "R1, R16: dated Mass after as_of. R17: no cancellation of the weekday 8 AM Mass is stated, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-15",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi (Advent Night Mass Novena)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 3,
+          "said": "Simbang Gabi (Advent Night Mass Novena) - Dec. 15 - 23, 2026 ... every night at 7:00 pm starting on Dec. 15 ... Everyone is invited to attend. Mass will be in English."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 3,
+          "said": "Simbang Gabi ... every night at 7:00 pm starting on Dec. 15"
+        }
+      ],
+      "rationale": "R1, R16: open dated Masses Dec 15-23 at 7 PM, printed in both bulletins; refreshments in the Marian Hall after, so the Mass is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-16",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi (Advent Night Mass Novena)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 3,
+          "said": "Simbang Gabi (Advent Night Mass Novena) - Dec. 15 - 23, 2026 ... every night at 7:00 pm starting on Dec. 15 ... Everyone is invited to attend. Mass will be in English."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 3,
+          "said": "Simbang Gabi ... every night at 7:00 pm starting on Dec. 15"
+        }
+      ],
+      "rationale": "R1, R16: open dated Masses Dec 15-23 at 7 PM, printed in both bulletins; refreshments in the Marian Hall after, so the Mass is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-17",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi (Advent Night Mass Novena)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 3,
+          "said": "Simbang Gabi (Advent Night Mass Novena) - Dec. 15 - 23, 2026 ... every night at 7:00 pm starting on Dec. 15 ... Everyone is invited to attend. Mass will be in English."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 3,
+          "said": "Simbang Gabi ... every night at 7:00 pm starting on Dec. 15"
+        }
+      ],
+      "rationale": "R1, R16: open dated Masses Dec 15-23 at 7 PM, printed in both bulletins; refreshments in the Marian Hall after, so the Mass is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-18",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi (Advent Night Mass Novena)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 3,
+          "said": "Simbang Gabi (Advent Night Mass Novena) - Dec. 15 - 23, 2026 ... every night at 7:00 pm starting on Dec. 15 ... Everyone is invited to attend. Mass will be in English."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 3,
+          "said": "Simbang Gabi ... every night at 7:00 pm starting on Dec. 15"
+        }
+      ],
+      "rationale": "R1, R16: open dated Masses Dec 15-23 at 7 PM, printed in both bulletins; refreshments in the Marian Hall after, so the Mass is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-19",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi (Advent Night Mass Novena)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 3,
+          "said": "Simbang Gabi (Advent Night Mass Novena) - Dec. 15 - 23, 2026 ... every night at 7:00 pm starting on Dec. 15 ... Everyone is invited to attend. Mass will be in English."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 3,
+          "said": "Simbang Gabi ... every night at 7:00 pm starting on Dec. 15"
+        }
+      ],
+      "rationale": "R1, R16: open dated Masses Dec 15-23 at 7 PM, printed in both bulletins; refreshments in the Marian Hall after, so the Mass is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-20",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi (Advent Night Mass Novena)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 3,
+          "said": "Simbang Gabi (Advent Night Mass Novena) - Dec. 15 - 23, 2026 ... every night at 7:00 pm starting on Dec. 15 ... Everyone is invited to attend. Mass will be in English."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 3,
+          "said": "Simbang Gabi ... every night at 7:00 pm starting on Dec. 15"
+        }
+      ],
+      "rationale": "R1, R16: open dated Masses Dec 15-23 at 7 PM, printed in both bulletins; refreshments in the Marian Hall after, so the Mass is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-21",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi (Advent Night Mass Novena)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 3,
+          "said": "Simbang Gabi (Advent Night Mass Novena) - Dec. 15 - 23, 2026 ... every night at 7:00 pm starting on Dec. 15 ... Everyone is invited to attend. Mass will be in English."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 3,
+          "said": "Simbang Gabi ... every night at 7:00 pm starting on Dec. 15"
+        }
+      ],
+      "rationale": "R1, R16: open dated Masses Dec 15-23 at 7 PM, printed in both bulletins; refreshments in the Marian Hall after, so the Mass is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-22",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi (Advent Night Mass Novena)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 3,
+          "said": "Simbang Gabi (Advent Night Mass Novena) - Dec. 15 - 23, 2026 ... every night at 7:00 pm starting on Dec. 15 ... Everyone is invited to attend. Mass will be in English."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 3,
+          "said": "Simbang Gabi ... every night at 7:00 pm starting on Dec. 15"
+        }
+      ],
+      "rationale": "R1, R16: open dated Masses Dec 15-23 at 7 PM, printed in both bulletins; refreshments in the Marian Hall after, so the Mass is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-23",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi (Advent Night Mass Novena)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 3,
+          "said": "Simbang Gabi (Advent Night Mass Novena) - Dec. 15 - 23, 2026 ... every night at 7:00 pm starting on Dec. 15 ... Everyone is invited to attend. Mass will be in English."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 3,
+          "said": "Simbang Gabi ... every night at 7:00 pm starting on Dec. 15"
+        }
+      ],
+      "rationale": "R1, R16: open dated Masses Dec 15-23 at 7 PM, printed in both bulletins; refreshments in the Marian Hall after, so the Mass is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass with Our Lady of the Holy Rosary of Manaoag"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 3,
+          "said": "Healing Mass with Our Lady of the Holy Rosary of Manaoag November 15, 2026 (Sunday) Rosary at 2:30 pm Mass at 3:00 pm"
+        }
+      ],
+      "rationale": "R19, R16: announced in the Nov 8 issue for Nov 15, the as_of date; the newest issue does not repeat or contradict it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-garwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-05",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Recollection"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 3,
+          "said": "Advent Recollection will be on Dec. 5, 2026 (Saturday). The event will start with a mass at 9:00 am in the church"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: Dec 5, 2026 is a first Saturday, so this is the weekly First Saturday 9:00 AM Mass, already recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d69b27b",
+          "page": 1,
+          "said": "Holy Days of Obligation 8:00 AM and 7 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5e5eb32",
+          "page": 1,
+          "said": "Holy Days of Obligation 8:00 AM and 7 PM"
+        }
+      ],
+      "rationale": "R26, POLICY Dates: no holy day date is printed, so no dated entry can be recorded; update mode will pick up dated holy-day Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,998 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-vincent-de-paul-bayonne",
+  "status": "approved",
+  "as_of": "2026-11-15T16:26:30Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T21:00:41Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:21:24Z",
+  "summary": "One church. Weekend, daily, Saturday confession, first-Wednesday Mass and weekday morning Adoration agree in the Nov 8 and Nov 22 bulletins. Dated: Thanksgiving 8am moved to 9am, Dec 8 Spanish 7pm. Open: whether the post-Mass Adoration includes Saturday.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e239b810813b73d168a18b9ea01a21f402fd7b96f6c963d0094763f41003fbb2",
+      "fetched_at": "2026-11-15T16:26:30Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e751ad50d71a857c1d324169a868d01bbcffeeaccfb2b772f4e36dd3f3a1d34f",
+      "fetched_at": "2026-11-08T15:50:00Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Saturday: 5:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Saturday: 5:00 pm (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; the intentions list a 5pm Saturday Mass each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Sunday: (English) 8:00 am & 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Sunday: (English) 8:00 am & 10:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Sunday: (English) 8:00 am & 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Sunday: (English) 8:00 am & 10:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Sunday: (Spanish) - 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Sunday: (Spanish) - 12:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the intentions; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday: (English) 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday: (English) 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; the intentions list 8am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday: (English) 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday: (English) 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; the intentions list 8am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday: (English) 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday: (English) 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; the intentions list 8am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday: (English) 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday: (English) 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; the intentions list 8am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday: (English) 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday: (English) 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; the intentions list 8am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday: (English) 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday: (English) 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; the intentions list 8am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday—4:00pm—4:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday—4:00pm—4:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 3,
+          "said": "La confesión se ofrece todos los sábados a las 16:00."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 3,
+          "said": "La confesión se ofrece todos los sábados a las 16:00."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the Spanish page agrees on the start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Novena to Our Lady of Perpetual Help and Holy Mass every first (1st) Wednesday of the month at 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Novena to Our Lady of Perpetual Help and Holy Mass every first (1st) Wednesday of the month at 7:30pm"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: the newest bulletin's Devotions list prints a first-Wednesday Mass at the church; both bulletins agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament after 8am week day masses until 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament after 8am week day masses until 9am."
+        }
+      ],
+      "rationale": "R1, R10: after the weekday 8:00 AM Mass is 8:30 AM under POLICY, Times; the clock end 9am is printed. Saturday is asked separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament after 8am week day masses until 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament after 8am week day masses until 9am."
+        }
+      ],
+      "rationale": "R1, R10: after the weekday 8:00 AM Mass is 8:30 AM under POLICY, Times; the clock end 9am is printed. Saturday is asked separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament after 8am week day masses until 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament after 8am week day masses until 9am."
+        }
+      ],
+      "rationale": "R1, R10: after the weekday 8:00 AM Mass is 8:30 AM under POLICY, Times; the clock end 9am is printed. Saturday is asked separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament after 8am week day masses until 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament after 8am week day masses until 9am."
+        }
+      ],
+      "rationale": "R1, R10: after the weekday 8:00 AM Mass is 8:30 AM under POLICY, Times; the clock end 9am is printed. Saturday is asked separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament after 8am week day masses until 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament after 8am week day masses until 9am."
+        }
+      ],
+      "rationale": "R1, R10: after the weekday 8:00 AM Mass is 8:30 AM under POLICY, Times; the clock end 9am is printed. Saturday is asked separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament after 8am week day masses until 9am. / Novena to Our Lady of Perpetual Help after every Saturday 8am mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament after 8am week day masses until 9am. / Novena to Our Lady of Perpetual Help after every Saturday 8am mass."
+        }
+      ],
+      "rationale": "R30: the box lists Saturday 8am under Daily Mass (Monday - Saturday), so it may be a 'week day mass', but the weekend heading starts Saturday and a Novena follows the Saturday 8am Mass.",
+      "question": "Does 'Adoration after 8am week day masses until 9am' include Saturday?",
+      "options": [
+        {
+          "label": "Leave Saturday out",
+          "entry": null
+        },
+        {
+          "label": "Saturday 8:30-9:00 AM too",
+          "entry": {
+            "church_slug": "st-vincent-de-paul-bayonne",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:24Z"
+      }
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "Every first Friday of the Month, there will be Adoration of the Blessed Sacrament and Novena in the church. It starts after the 8am mass and will end with Benediction at 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 1,
+          "said": "Every first Friday of the Month, there will be Adoration of the Blessed Sacrament and Novena in the church. It starts after the 8am mass and will end with Benediction at 9am."
+        }
+      ],
+      "rationale": "R37, POLICY: the first-Friday Adoration has the same hours as the every-Friday 8:30-9:00 Adoration slot, so it is not a second slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 4,
+          "said": "November 26th, Morning mass will be celebrated at 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e751ad50",
+          "page": 4,
+          "said": "November 26th, Morning mass will be celebrated at 9am."
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin moves Thanksgiving's morning Mass to 9am, matching the box's Federal Holiday 9:00 am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Moved to 9:00 AM for Thanksgiving"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 4,
+          "said": "November 26th, Morning mass will be celebrated at 9am."
+        }
+      ],
+      "rationale": "R16, POLICY Weekly or dated: a moved Mass is a cancellation of the usual 8am plus the 9am single event.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; Immaculate Conception"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 4,
+          "said": "December 8 - ... Immaculate Conception of the Blessed Virgin Mary. Mass will be at 8:00am English and 7:00pm Spanish."
+        }
+      ],
+      "rationale": "R1, R16: a dated holy-day Mass outside the weekly schedule; the 8:00 AM is the weekly Tuesday Mass (POLICY rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "English: 8:00 am & 12pm Day of Holy Day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 4,
+          "said": "Mass will be at 8:00am English and 7:00pm Spanish."
+        }
+      ],
+      "rationale": "R40, POLICY Dates: the generic Holy Days box pins no date, and the specific Dec 8 notice lists only 8am and 7pm, so no 12pm Mass is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 1,
+          "said": "English: 7:00pm - Day before Holy Day"
+        }
+      ],
+      "rationale": "POLICY Dates: the generic Holy Days box pins no date and the Dec 8 notice names no vigil; dates are not projected from it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-23",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Interfaith Thanksgiving Service"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e239b810",
+          "page": 4,
+          "said": "Monday November 23, 2026 at 7pm Bayonne Interfaith Association Thanksgiving Service at Saint Vincent church."
+        }
+      ],
+      "rationale": "R24: an interfaith service, not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

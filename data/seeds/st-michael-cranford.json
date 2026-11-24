@@ -1,0 +1,1145 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-michael-cranford",
+  "status": "approved",
+  "as_of": "2026-11-15T16:25:49Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:13:15Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:20:16Z",
+  "summary": "One church (St. Michael, Cranford). Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule: Sat 8 AM, 12 PM, 5:30 PM; Sun 7:30, 9, 10:30 AM, 12 PM; Mon-Fri 7 AM and 12 PM; confession Mon-Sat after the 12 PM Mass (12:30 PM per POLICY). No Adoration listed; no history stored. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "260ad10450b349764c0b92f5dccf9fc15161545c1e1d0ffaecfa888073e48f78",
+      "fetched_at": "2026-11-15T16:25:49Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ab5a5f4be7b8a4416292a7507fa1f18daa05105a9d934d3511655de46a78848d",
+      "fetched_at": "2026-11-08T15:49:29Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Weekends: Saturday: 8:00AM, 12:00PM, 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Weekends: Saturday: 8:00AM, 12:00PM, 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "Saturday 8:00AM 12:00PM 5:30PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "Saturday 8:00AM 12:00PM 5:30PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and the intentions of both bulletins read (Nov 8 and Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Weekends: Saturday: 8:00AM, 12:00PM, 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Weekends: Saturday: 8:00AM, 12:00PM, 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "Saturday 8:00AM 12:00PM 5:30PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "Saturday 8:00AM 12:00PM 5:30PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and the intentions of both bulletins read (Nov 8 and Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Weekends: Saturday: 8:00AM, 12:00PM, 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Weekends: Saturday: 8:00AM, 12:00PM, 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "Saturday 8:00AM 12:00PM 5:30PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "Saturday 8:00AM 12:00PM 5:30PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and the intentions of both bulletins read (Nov 8 and Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "Sunday 7:30AM 9:00AM 10:30AM 12:00PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "Sunday 7:30AM 9:00AM 10:30AM 12:00PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "Sunday 7:30AM 9:00AM 10:30AM 12:00PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "Sunday 7:30AM 9:00AM 10:30AM 12:00PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "Sunday 7:30AM 9:00AM 10:30AM 12:00PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "Sunday 7:30AM 9:00AM 10:30AM 12:00PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "Sunday 7:30AM 9:00AM 10:30AM 12:00PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "Sunday 7:30AM 9:00AM 10:30AM 12:00PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and each weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and each weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and each weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and each weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and each weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and each weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and each weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and each weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and each weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "Weekdays: Monday-Friday 7:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 6,
+          "said": "7:00AM 12:00PM (each weekday's Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and each weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:00 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated every Monday through Saturday after the 12:00PM mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated every Monday through Saturday after the 12:00PM mass."
+        }
+      ],
+      "rationale": "R1, R10: no clock time given; POLICY, Times puts confession after a weekday (non-vigil) Mass 30 minutes after it starts, so 12:30 PM. Saturday's 12:00 PM is a daytime Mass, not the vigil, so the weekday rule applies. No end time. Same line in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:00 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated every Monday through Saturday after the 12:00PM mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated every Monday through Saturday after the 12:00PM mass."
+        }
+      ],
+      "rationale": "R1, R10: no clock time given; POLICY, Times puts confession after a weekday (non-vigil) Mass 30 minutes after it starts, so 12:30 PM. Saturday's 12:00 PM is a daytime Mass, not the vigil, so the weekday rule applies. No end time. Same line in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:00 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated every Monday through Saturday after the 12:00PM mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated every Monday through Saturday after the 12:00PM mass."
+        }
+      ],
+      "rationale": "R1, R10: no clock time given; POLICY, Times puts confession after a weekday (non-vigil) Mass 30 minutes after it starts, so 12:30 PM. Saturday's 12:00 PM is a daytime Mass, not the vigil, so the weekday rule applies. No end time. Same line in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:00 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated every Monday through Saturday after the 12:00PM mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated every Monday through Saturday after the 12:00PM mass."
+        }
+      ],
+      "rationale": "R1, R10: no clock time given; POLICY, Times puts confession after a weekday (non-vigil) Mass 30 minutes after it starts, so 12:30 PM. Saturday's 12:00 PM is a daytime Mass, not the vigil, so the weekday rule applies. No end time. Same line in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:00 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated every Monday through Saturday after the 12:00PM mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated every Monday through Saturday after the 12:00PM mass."
+        }
+      ],
+      "rationale": "R1, R10: no clock time given; POLICY, Times puts confession after a weekday (non-vigil) Mass 30 minutes after it starts, so 12:30 PM. Saturday's 12:00 PM is a daytime Mass, not the vigil, so the weekday rule applies. No end time. Same line in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cranford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:00 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated every Monday through Saturday after the 12:00PM mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab5a5f4b",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated every Monday through Saturday after the 12:00PM mass."
+        }
+      ],
+      "rationale": "R1, R10: no clock time given; POLICY, Times puts confession after a weekday (non-vigil) Mass 30 minutes after it starts, so 12:30 PM. Saturday's 12:00 PM is a daytime Mass, not the vigil, so the weekday rule applies. No end time. Same line in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 2,
+          "said": "Holy Days: See bulletin for mass times"
+        }
+      ],
+      "rationale": "R26: no holy-day times are printed in either bulletin read; update mode will read them when announced.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "260ad104",
+          "page": 6,
+          "said": "WE PRAY THE ROSARY TOGETHER Weekdays: 6:30AM Saturday: 7:30AM Sunday: 8:30AM First Saturday of Month: 11:20AM; Miraculous Medal Novena Mondays after 12:00PM Mass"
+        }
+      ],
+      "rationale": "R24: Rosary and Novena are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

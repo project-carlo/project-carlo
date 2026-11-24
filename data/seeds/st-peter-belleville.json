@@ -1,0 +1,895 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-peter-belleville",
+  "status": "approved",
+  "as_of": "2026-11-15T16:26:15Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:40:59Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:20:39Z",
+  "summary": "One church, St. Peter, Belleville. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule: Sat 6 PM vigil, five Sunday Masses (10 AM and 1 PM Spanish), Mon-Sat 8:30 AM, Sat 1-2 PM Confession, second-Saturday Holy Hour 7-8 PM, plus a dated Tue Nov 17 8 PM Spanish Mass. The Mon/Wed 7 PM Convent Chapel Masses are excluded (chapel not on the church list). Open: the unlocated First Friday Spanish Holy Hour and the Saturday NCW Eucharist.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "533bb5714edaeb63908b9e2784cdf1a56ab41a2525b23df19674094eab45d2e7",
+      "fetched_at": "2026-11-15T16:26:15Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3442e4f7950178f43de4de86a7426c65f6cc7c1e0ccc1b3df6a7d3a46e67a8e4",
+      "fetched_at": "2026-11-08T15:49:49Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "SUNDAY MASS SCHEDULE Saturday: 6:00 p.m. (Evening Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "SUNDAY MASS SCHEDULE Saturday: 6:00 p.m. (Evening Vigil Mass)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read; the calendar on p4 lists 6:00PM each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "Sunday: 7:00 a.m., 8:30 a.m., 10:00 a.m. (Spanish), 11:30 a.m and 1:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "Sunday: 7:00 a.m., 8:30 a.m., 10:00 a.m. (Spanish), 11:30 a.m and 1:00pm (Spanish)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in the p4 calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "Sunday: 7:00 a.m., 8:30 a.m., 10:00 a.m. (Spanish), 11:30 a.m and 1:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "Sunday: 7:00 a.m., 8:30 a.m., 10:00 a.m. (Spanish), 11:30 a.m and 1:00pm (Spanish)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in the p4 calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "Sunday: 7:00 a.m., 8:30 a.m., 10:00 a.m. (Spanish), 11:30 a.m and 1:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "Sunday: 7:00 a.m., 8:30 a.m., 10:00 a.m. (Spanish), 11:30 a.m and 1:00pm (Spanish)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in the p4 calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "Sunday: 7:00 a.m., 8:30 a.m., 10:00 a.m. (Spanish), 11:30 a.m and 1:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "Sunday: 7:00 a.m., 8:30 a.m., 10:00 a.m. (Spanish), 11:30 a.m and 1:00pm (Spanish)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read; the box marks it Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "Sunday: 7:00 a.m., 8:30 a.m., 10:00 a.m. (Spanish), 11:30 a.m and 1:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "Sunday: 7:00 a.m., 8:30 a.m., 10:00 a.m. (Spanish), 11:30 a.m and 1:00pm (Spanish)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read; the box marks it Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday to Saturday: 8:30 a.m. (Main Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday to Saturday: 8:30 a.m. (Main Church)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in each day of the p4 calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday to Saturday: 8:30 a.m. (Main Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday to Saturday: 8:30 a.m. (Main Church)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in each day of the p4 calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday to Saturday: 8:30 a.m. (Main Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday to Saturday: 8:30 a.m. (Main Church)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in each day of the p4 calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday to Saturday: 8:30 a.m. (Main Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday to Saturday: 8:30 a.m. (Main Church)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in each day of the p4 calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday to Saturday: 8:30 a.m. (Main Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday to Saturday: 8:30 a.m. (Main Church)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in each day of the p4 calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday to Saturday: 8:30 a.m. (Main Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday to Saturday: 8:30 a.m. (Main Church)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in each day of the p4 calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION (Penance) Saturday: 1:00 p.m. to 2:00 p.m. in the Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION (Penance) Saturday: 1:00 p.m. to 2:00 p.m. in the Church"
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "or at the Rectory upon an appointment with a priest."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "Second Saturday of the Month - 7:00pm to 8:00pm, right after the 6:00pm Mass in Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 4,
+          "said": "Saturday, November 14 ... 7:00PM - Parish Holy Hour"
+        }
+      ],
+      "rationale": "R12, POLICY Weekly qualifiers: a second-Saturday Holy Hour (Adoration per POLICY) in the Church with its own clock times; the newest bulletin's week (third week) holds no second Saturday, so cited from the Nov 8 issue, whose week holds Sat Nov 14 and whose calendar lists the Parish Holy Hour that night. The newest bulletin prints the same line on p1.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "HOLY HOUR: First Friday of the Month (Spanish) - 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "HOLY HOUR: First Friday of the Month (Spanish) - 7:30pm"
+        }
+      ],
+      "rationale": "R32 (R12 for evidence): printed in the schedule box of both bulletins, but unlike the Second Saturday Holy Hour ('in Church') it names no place, and the parish's other weekday Spanish evening service (Wednesday 7pm Mass) is at the Convent Chapel, which is not on the church list (R23). Leaning include at the church because the box is the parish schedule and the convent is named only where it applies; no end time is printed, so none is recorded. Neither bulletin's week holds a first Friday (R11).",
+      "question": "Add the First Friday 7:30 PM Spanish Holy Hour at St. Peter's church?",
+      "options": [
+        {
+          "label": "First Fridays 7:30 PM at St. Peter",
+          "entry": {
+            "church_slug": "st-peter-belleville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:39Z"
+      }
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Convent Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "Monday 7:00pm (English) Wednesday 7:00pm (Spanish) - Convent Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "Monday 7:00pm (English) Wednesday 7:00pm (Spanish) - Convent Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 2,
+          "said": "members of the Council will be attending the 7PM Mass (at the Convent Chapel)"
+        }
+      ],
+      "rationale": "R23, POLICY Churches and chapels: the Convent Chapel is not in data/churches.csv and neither the bulletins nor spbnj.org give its address, so it cannot be placed at the church; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Convent Chapel; Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "Monday 7:00pm (English) Wednesday 7:00pm (Spanish) - Convent Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 1,
+          "said": "Monday 7:00pm (English) Wednesday 7:00pm (Spanish) - Convent Chapel"
+        }
+      ],
+      "rationale": "R23, POLICY Churches and chapels: the Convent Chapel is not in data/churches.csv and its address is not given; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; Movimiento Juan XXIII"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 7,
+          "said": "Martes, 17 de noviembre a las 8pm. Este Martes tendremos la Santa Misa en español en la Iglesia, animada por el Movimiento Juan XXIII."
+        },
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 4,
+          "said": "Tuesday, November 17 ... 8:00PM - John XXIII Mass"
+        }
+      ],
+      "rationale": "R1, R16, POLICY Weekly or dated rule 3: a one-off dated Mass in the Church, open to all, on or after as_of. The Nov 8 issue's Tuesday lists only a John XXIII Meeting, so it is not weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Neocatechumenal Way"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 4,
+          "said": "Saturday, November 14 ... 7:30PM - NCW Eucharist; Saturday, November 21 ... 7:30PM - NCW Eucharist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 4,
+          "said": "Saturday, November 7 ... 7:30PM - NCW Eucharist"
+        }
+      ],
+      "rationale": "R30: listed every Saturday in both calendars' Parish Events column (R35 would make it weekly), but never in the Mass schedule box or the Mass intentions column, and no place is given. A Neocatechumenal Way Eucharist is normally the community's own celebration, which POLICY leaves out as limited to a group; the bulletin does not say so explicitly. Leaning leave out.",
+      "question": "Add the Saturday 7:30 PM 'NCW Eucharist' as a public Mass?",
+      "options": [
+        {
+          "label": "Saturdays 7:30 PM",
+          "entry": {
+            "church_slug": "st-peter-belleville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Neocatechumenal Way"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:39Z"
+      }
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-07",
+        "start_time": "19:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3442e4f7",
+          "page": 4,
+          "said": "Saturday, November 7 ... 7:15pm - Vietnamese Mass"
+        }
+      ],
+      "rationale": "R16, POLICY Weekly or dated rule 3: a dated Mass printed once, in the Nov 8 issue, before as_of; it does not appear in the newest bulletin. Recorded so a reviewer sees it (R25); not a weeks-of-the-month slot since no week is named (R13).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "533bb571",
+          "page": 1,
+          "said": "MIRACULOUS MEDAL NOVENA: Monday after the 8:30 a.m. and 7:00 p.m. Masses."
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Convent Chapel, St. Peter's parish, Belleville (address not given)",
+      "said": "Monday 7:00pm (English) Wednesday 7:00pm (Spanish) - Convent Chapel",
+      "bulletin": "533bb571",
+      "page": 1
+    }
+  ]
+}

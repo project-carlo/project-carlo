@@ -1,0 +1,438 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-agnes-clark",
+  "status": "approved",
+  "as_of": "2026-11-15T16:23:45Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:13:41Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:56Z",
+  "summary": "One church, St. Agnes, Clark. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: Sat 5:30 PM vigil, Sun 7:30/9:30/11:30 AM, Mon-Thu 8:00 AM, Confession Sat 4:30 PM; the intentions agree. No Adoration listed; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7fa1efd2861689ab42331809a6c8bbcb9441ce988d37c945e2a7a33aeb857898",
+      "fetched_at": "2026-11-15T16:23:45Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "855aa144bba56b812126a997c6e5328bcfff9befcb7b2e78067cbf4f4182ecd5",
+      "fetched_at": "2026-11-08T15:47:50Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-clark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 2,
+          "said": "Weekend Mass Saturday | Vigil 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "855aa144",
+          "page": 2,
+          "said": "Weekend Mass Saturday | Vigil 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 3,
+          "said": "Sat 11/21 5:30 pm - George Karpinski"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box (p2) of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-clark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 2,
+          "said": "Sunday | 7:30am, 9:30am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "855aa144",
+          "page": 2,
+          "said": "Sunday | 7:30am, 9:30am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 3,
+          "said": "Sun 11/22 7:30am, 9:30am, 11:30am intentions"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box (p2) of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-clark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 2,
+          "said": "Sunday | 7:30am, 9:30am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "855aa144",
+          "page": 2,
+          "said": "Sunday | 7:30am, 9:30am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 3,
+          "said": "Sun 11/22 7:30am, 9:30am, 11:30am intentions"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box (p2) of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-clark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 2,
+          "said": "Sunday | 7:30am, 9:30am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "855aa144",
+          "page": 2,
+          "said": "Sunday | 7:30am, 9:30am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 3,
+          "said": "Sun 11/22 7:30am, 9:30am, 11:30am intentions"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box (p2) of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-clark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 2,
+          "said": "Weekday Mass Monday-Thursday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "855aa144",
+          "page": 2,
+          "said": "Weekday Mass Monday-Thursday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 3,
+          "said": "Mon 11/16 - Thur 11/19 8:00am intentions"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box (p2) of both bulletins read; the intentions list 8:00am Monday to Thursday only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-clark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 2,
+          "said": "Weekday Mass Monday-Thursday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "855aa144",
+          "page": 2,
+          "said": "Weekday Mass Monday-Thursday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 3,
+          "said": "Mon 11/16 - Thur 11/19 8:00am intentions"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box (p2) of both bulletins read; the intentions list 8:00am Monday to Thursday only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-clark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 2,
+          "said": "Weekday Mass Monday-Thursday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "855aa144",
+          "page": 2,
+          "said": "Weekday Mass Monday-Thursday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 3,
+          "said": "Mon 11/16 - Thur 11/19 8:00am intentions"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box (p2) of both bulletins read; the intentions list 8:00am Monday to Thursday only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-clark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 2,
+          "said": "Weekday Mass Monday-Thursday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "855aa144",
+          "page": 2,
+          "said": "Weekday Mass Monday-Thursday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 3,
+          "said": "Mon 11/16 - Thur 11/19 8:00am intentions"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box (p2) of both bulletins read; the intentions list 8:00am Monday to Thursday only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-clark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 2,
+          "said": "Confession Saturday | 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "855aa144",
+          "page": 2,
+          "said": "Confession Saturday | 4:30pm"
+        }
+      ],
+      "rationale": "R1: printed under Confession in the p2 schedule box of both bulletins; no end time given, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7fa1efd2",
+          "page": 2,
+          "said": "individual Anointing at home by appointment. Please call the parish office."
+        }
+      ],
+      "rationale": "R24, R26: Anointing is not Mass, Confession or Adoration and has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

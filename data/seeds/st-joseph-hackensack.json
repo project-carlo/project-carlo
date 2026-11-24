@@ -1,0 +1,1227 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-hackensack",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:07Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T16:12:46Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:34Z",
+  "summary": "One church, St. Joseph's (Polish/English), Hackensack. The two bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: weekday Masses Mon/Wed/Sat 7:30 AM English and Tue/Thu/Fri 7 PM Polish, First Friday 7:30 AM, Sat 5:30 PM vigil, Sun 9:30 AM and 11 AM, and Exposition Tue/Fri 6 PM. Open: whether Confessions before and after Holy Mass should become worked-out after-Mass slots (leaning leave out). No stored history.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "143108162d63b174479d08fc4dec4556853cdc899797b40fd7b9a53bff975f5f",
+      "fetched_at": "2026-11-15T16:54:07Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "adc5c4646d44d42e98c0aff36888f8ac03d5f3404ec29b002469e1a67e6190d0",
+      "fetched_at": "2026-11-08T16:03:05Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Monday, Wednesday  7:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Monday, Wednesday  7:30 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Mass Schedule box of both bulletins read; the intentions list these Masses both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Monday, Wednesday  7:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Monday, Wednesday  7:30 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Mass Schedule box of both bulletins read; the intentions list these Masses both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Tuesday, Thursday, Friday  7:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Tuesday, Thursday, Friday  7:00 PM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Mass Schedule box of both bulletins read; the intentions list these Masses both weeks. First Friday's 7:00 PM Polish Mass is this same weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Tuesday, Thursday, Friday  7:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Tuesday, Thursday, Friday  7:00 PM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Mass Schedule box of both bulletins read; the intentions list these Masses both weeks. First Friday's 7:00 PM Polish Mass is this same weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Tuesday, Thursday, Friday  7:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Tuesday, Thursday, Friday  7:00 PM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Mass Schedule box of both bulletins read; the intentions list these Masses both weeks. First Friday's 7:00 PM Polish Mass is this same weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "First Friday  7:30 AM (English) & 7:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "First Friday  7:30 AM (English) & 7:00 PM (Polish)"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: the standing schedule box of both bulletins names First Friday 7:30 AM; neither bulletin's week holds a first Friday (R11), but the box prints it as regular schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Saturday  7:30 AM (English) & 5:30 PM Vigil Mass (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Saturday  7:30 AM (English) & 5:30 PM Vigil Mass (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Saturday  7:30 AM (English) & 5:30 PM Vigil Mass (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Saturday  7:30 AM (English) & 5:30 PM Vigil Mass (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Sunday  9:30 AM (English) & 11:00 AM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Sunday  9:30 AM (English) & 11:00 AM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Sunday  9:30 AM (English) & 11:00 AM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Sunday  9:30 AM (English) & 11:00 AM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Exposition of the Blessed Sacrament  6:00 PM (Tuesday and Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Exposition of the Blessed Sacrament  6:00 PM (Tuesday and Friday)"
+        }
+      ],
+      "rationale": "R1, POLICY Times: printed in the schedule box of both bulletins; no end time is given, so end_time stays null (not ended at the 7 PM Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Exposition of the Blessed Sacrament  6:00 PM (Tuesday and Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Exposition of the Blessed Sacrament  6:00 PM (Tuesday and Friday)"
+        }
+      ],
+      "rationale": "R1, POLICY Times: printed in the schedule box of both bulletins; no end time is given, so end_time stays null (not ended at the 7 PM Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Novena to St. Joseph"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Novena to St. Joseph  6:45 PM (Tuesday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Novena to St. Joseph  6:45 PM (Tuesday)"
+        }
+      ],
+      "rationale": "R24, R25: a novena and the Divine Mercy Chaplet are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chaplet"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Divine Mercy Chaplet  7:30 PM (Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Divine Mercy Chaplet  7:30 PM (Friday)"
+        }
+      ],
+      "rationale": "R24, R25: a novena and the Divine Mercy Chaplet are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:30 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        }
+      ],
+      "rationale": "POLICY, Times / R30: the schedule box says Confessions Before and after Holy Mass with no clock time. Before has no length, so no time; POLICY could time after (30 min after a weekday Mass, 1 hour after a weekend Mass), but this reads as general availability around Mass, not a scheduled window, and a worked-out time risks being wrong. Same line in both bulletins read. Leaning leave out.",
+      "question": "Add Confession after each Mass, at the time POLICY works out from Before and after Holy Mass?",
+      "options": [
+        {
+          "label": "After each Mass",
+          "entry": {
+            "church_slug": "st-joseph-hackensack",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:30 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:34Z"
+      },
+      "group": "confession"
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:30 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        }
+      ],
+      "rationale": "POLICY, Times / R30: the schedule box says Confessions Before and after Holy Mass with no clock time. Before has no length, so no time; POLICY could time after (30 min after a weekday Mass, 1 hour after a weekend Mass), but this reads as general availability around Mass, not a scheduled window, and a worked-out time risks being wrong. Same line in both bulletins read. Leaning leave out.",
+      "question": "Add Confession after each Mass, at the time POLICY works out from Before and after Holy Mass?",
+      "options": [
+        {
+          "label": "After each Mass",
+          "entry": {
+            "church_slug": "st-joseph-hackensack",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:30 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:34Z"
+      },
+      "group": "confession"
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 PM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        }
+      ],
+      "rationale": "POLICY, Times / R30: the schedule box says Confessions Before and after Holy Mass with no clock time. Before has no length, so no time; POLICY could time after (30 min after a weekday Mass, 1 hour after a weekend Mass), but this reads as general availability around Mass, not a scheduled window, and a worked-out time risks being wrong. Same line in both bulletins read. Leaning leave out.",
+      "question": "Add Confession after each Mass, at the time POLICY works out from Before and after Holy Mass?",
+      "options": [
+        {
+          "label": "After each Mass",
+          "entry": {
+            "church_slug": "st-joseph-hackensack",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 PM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:34Z"
+      },
+      "group": "confession"
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 PM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        }
+      ],
+      "rationale": "POLICY, Times / R30: the schedule box says Confessions Before and after Holy Mass with no clock time. Before has no length, so no time; POLICY could time after (30 min after a weekday Mass, 1 hour after a weekend Mass), but this reads as general availability around Mass, not a scheduled window, and a worked-out time risks being wrong. Same line in both bulletins read. Leaning leave out.",
+      "question": "Add Confession after each Mass, at the time POLICY works out from Before and after Holy Mass?",
+      "options": [
+        {
+          "label": "After each Mass",
+          "entry": {
+            "church_slug": "st-joseph-hackensack",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 PM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:34Z"
+      },
+      "group": "confession"
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 PM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        }
+      ],
+      "rationale": "POLICY, Times / R30: the schedule box says Confessions Before and after Holy Mass with no clock time. Before has no length, so no time; POLICY could time after (30 min after a weekday Mass, 1 hour after a weekend Mass), but this reads as general availability around Mass, not a scheduled window, and a worked-out time risks being wrong. Same line in both bulletins read. Leaning leave out.",
+      "question": "Add Confession after each Mass, at the time POLICY works out from Before and after Holy Mass?",
+      "options": [
+        {
+          "label": "After each Mass",
+          "entry": {
+            "church_slug": "st-joseph-hackensack",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 PM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:34Z"
+      },
+      "group": "confession"
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:30 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        }
+      ],
+      "rationale": "POLICY, Times / R30: the schedule box says Confessions Before and after Holy Mass with no clock time. Before has no length, so no time; POLICY could time after (30 min after a weekday Mass, 1 hour after a weekend Mass), but this reads as general availability around Mass, not a scheduled window, and a worked-out time risks being wrong. Same line in both bulletins read. Leaning leave out.",
+      "question": "Add Confession after each Mass, at the time POLICY works out from Before and after Holy Mass?",
+      "options": [
+        {
+          "label": "After each Mass",
+          "entry": {
+            "church_slug": "st-joseph-hackensack",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:30 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:34Z"
+      },
+      "group": "confession"
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:30 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        }
+      ],
+      "rationale": "POLICY, Times / R30: the schedule box says Confessions Before and after Holy Mass with no clock time. Before has no length, so no time; POLICY could time after (30 min after a weekday Mass, 1 hour after a weekend Mass), but this reads as general availability around Mass, not a scheduled window, and a worked-out time risks being wrong. Same line in both bulletins read. Leaning leave out.",
+      "question": "Add Confession after each Mass, at the time POLICY works out from Before and after Holy Mass?",
+      "options": [
+        {
+          "label": "After each Mass",
+          "entry": {
+            "church_slug": "st-joseph-hackensack",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:30 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:34Z"
+      },
+      "group": "confession"
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 5:30 PM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        }
+      ],
+      "rationale": "POLICY, Times / R30: the schedule box says Confessions Before and after Holy Mass with no clock time. Before has no length, so no time; POLICY could time after (30 min after a weekday Mass, 1 hour after a weekend Mass), but this reads as general availability around Mass, not a scheduled window, and a worked-out time risks being wrong. Same line in both bulletins read. Leaning leave out.",
+      "question": "Add Confession after each Mass, at the time POLICY works out from Before and after Holy Mass?",
+      "options": [
+        {
+          "label": "After each Mass",
+          "entry": {
+            "church_slug": "st-joseph-hackensack",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 5:30 PM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:34Z"
+      },
+      "group": "confession"
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        }
+      ],
+      "rationale": "POLICY, Times / R30: the schedule box says Confessions Before and after Holy Mass with no clock time. Before has no length, so no time; POLICY could time after (30 min after a weekday Mass, 1 hour after a weekend Mass), but this reads as general availability around Mass, not a scheduled window, and a worked-out time risks being wrong. Same line in both bulletins read. Leaning leave out.",
+      "question": "Add Confession after each Mass, at the time POLICY works out from Before and after Holy Mass?",
+      "options": [
+        {
+          "label": "After each Mass",
+          "entry": {
+            "church_slug": "st-joseph-hackensack",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 9:30 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:34Z"
+      },
+      "group": "confession"
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hackensack",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 11:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14310816",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adc5c464",
+          "page": 3,
+          "said": "Confessions  Before and after Holy Mass"
+        }
+      ],
+      "rationale": "POLICY, Times / R30: the schedule box says Confessions Before and after Holy Mass with no clock time. Before has no length, so no time; POLICY could time after (30 min after a weekday Mass, 1 hour after a weekend Mass), but this reads as general availability around Mass, not a scheduled window, and a worked-out time risks being wrong. Same line in both bulletins read. Leaning leave out.",
+      "question": "Add Confession after each Mass, at the time POLICY works out from Before and after Holy Mass?",
+      "options": [
+        {
+          "label": "After each Mass",
+          "entry": {
+            "church_slug": "st-joseph-hackensack",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 11:00 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:34Z"
+      },
+      "group": "confession"
+    }
+  ]
+}

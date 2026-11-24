@@ -1,0 +1,583 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-teresa-of-avila-summit",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:54Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T18:20:45Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:21:07Z",
+  "summary": "One church (Summit). Mass, Saturday confession and the Memorial Hall Masses (Sat 4:00 PM vigil, Sun 9:00 AM Family) agree in the Fall Mass Schedule box of both bulletins read (Nov 8 and Nov 15, 2026) and on the parish website; Memorial Hall is treated as the parish's own hall. No Adoration is printed. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "aa622b6e5f0992abd90c8ed20cdd74fbbb409114e2866d1586a68fc3172fc682",
+      "fetched_at": "2026-11-15T16:54:54Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "43289f1ca1ace4a337fb4c2d3dca70e3b963d20fbf696ef73dc390a17a11ac52",
+      "fetched_at": "2026-11-08T16:03:42Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-summit",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 1,
+          "said": "Fall Mass Schedule ... Daily 7:00 am Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 1,
+          "said": "Fall Mass Schedule ... Daily 7:00 am Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 2,
+          "said": "Monday ... Friday 7:00 AM [intentions each weekday]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 2,
+          "said": "Monday ... Friday 7:00 AM [intentions each weekday]"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Fall Mass Schedule box of both bulletins read; the intentions show the daily 7:00 AM Mass Monday to Friday only (Saturday is 8:30 AM), so Daily is Mon-Fri. 'Fall' gives no months, so no season (R15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-summit",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 1,
+          "said": "Fall Mass Schedule ... Daily 7:00 am Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 1,
+          "said": "Fall Mass Schedule ... Daily 7:00 am Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 2,
+          "said": "Monday ... Friday 7:00 AM [intentions each weekday]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 2,
+          "said": "Monday ... Friday 7:00 AM [intentions each weekday]"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Fall Mass Schedule box of both bulletins read; the intentions show the daily 7:00 AM Mass Monday to Friday only (Saturday is 8:30 AM), so Daily is Mon-Fri. 'Fall' gives no months, so no season (R15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-summit",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 1,
+          "said": "Fall Mass Schedule ... Daily 7:00 am Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 1,
+          "said": "Fall Mass Schedule ... Daily 7:00 am Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 2,
+          "said": "Monday ... Friday 7:00 AM [intentions each weekday]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 2,
+          "said": "Monday ... Friday 7:00 AM [intentions each weekday]"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Fall Mass Schedule box of both bulletins read; the intentions show the daily 7:00 AM Mass Monday to Friday only (Saturday is 8:30 AM), so Daily is Mon-Fri. 'Fall' gives no months, so no season (R15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-summit",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 1,
+          "said": "Fall Mass Schedule ... Daily 7:00 am Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 1,
+          "said": "Fall Mass Schedule ... Daily 7:00 am Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 2,
+          "said": "Monday ... Friday 7:00 AM [intentions each weekday]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 2,
+          "said": "Monday ... Friday 7:00 AM [intentions each weekday]"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Fall Mass Schedule box of both bulletins read; the intentions show the daily 7:00 AM Mass Monday to Friday only (Saturday is 8:30 AM), so Daily is Mon-Fri. 'Fall' gives no months, so no season (R15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-summit",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 1,
+          "said": "Fall Mass Schedule ... Daily 7:00 am Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 1,
+          "said": "Fall Mass Schedule ... Daily 7:00 am Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 2,
+          "said": "Monday ... Friday 7:00 AM [intentions each weekday]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 2,
+          "said": "Monday ... Friday 7:00 AM [intentions each weekday]"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Fall Mass Schedule box of both bulletins read; the intentions show the daily 7:00 AM Mass Monday to Friday only (Saturday is 8:30 AM), so Daily is Mon-Fri. 'Fall' gives no months, so no season (R15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-summit",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 1,
+          "said": "Saturday 8:30 am Church with Confessions immediately following"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 1,
+          "said": "Saturday 8:30 am Church with Confessions immediately following"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in their intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-summit",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 1,
+          "said": "Saturday 8:30 am Church with Confessions immediately following"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 1,
+          "said": "Saturday 8:30 am Church with Confessions immediately following"
+        }
+      ],
+      "rationale": "R1, R10: confessions immediately follow the Saturday 8:30 AM weekday Mass with no clock time; POLICY, Times puts it 30 minutes after a weekday Mass starts, 9:00 AM, no end time. The website says the same ('Immediately after 8:30 am Mass').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-summit",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorial Hall"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 1,
+          "said": "4:00 pm (Vigil) Memorial Hall"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 1,
+          "said": "4:00 pm (Vigil) Memorial Hall"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: Memorial Hall is the parish's own hall (parish events there; the food-drive flyer on p7, under the 306 Morris Avenue church address, says drop off at its side entrance), so the Mass is attached to the parish's one church with the hall named in a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-summit",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 1,
+          "said": "Sunday 7:30 am Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 1,
+          "said": "Sunday 7:30 am Church"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in their intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-summit",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Family Mass, Memorial Hall"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 1,
+          "said": "9:00 am (Family) Memorial Hall"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 1,
+          "said": "9:00 am (Family) Memorial Hall"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: Memorial Hall is the parish's own hall (see the Saturday 4:00 PM slot), attached to the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-summit",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 1,
+          "said": "10:30 am Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 1,
+          "said": "10:30 am Church"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in their intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-summit",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 1,
+          "said": "12:00 pm (Spanish) Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 1,
+          "said": "12:00 pm (Spanish) Church"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-summit",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aa622b6e",
+          "page": 1,
+          "said": "5:00 pm Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43289f1c",
+          "page": 1,
+          "said": "5:00 pm Church"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in their intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

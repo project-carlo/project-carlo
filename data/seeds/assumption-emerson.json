@@ -1,0 +1,832 @@
+{
+  "schema_version": 1,
+  "parish_slug": "assumption-emerson",
+  "status": "approved",
+  "as_of": "2026-11-15T16:20:47Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T08:42:44Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:12Z",
+  "summary": "One church. Weekend, daily (Mon-Sat 8:00 and 12:05) and Saturday Reconciliation times agree in both bulletins read (Oct 25 and Nov 15 issues; the Oct 25 PDF was fetched Nov 8). Adoration is announced issue by issue; only the dated Nov 19 Exposition is in scope. The 12:05 Mass drops to Mon/Wed/Fri from January 1, 2027 (R20, left for update mode). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "08516100835478d2eebcf18c2d0112dcade451d77b8275a5bdf9774c04f28cbd",
+      "fetched_at": "2026-11-15T16:20:47Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "61b5922625acc0ed770c7c923f4e00d45f24aa127bda38303b2b9c7c0a2a4c04",
+      "fetched_at": "2026-11-08T15:44:50Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Saturday (Anticipated/Vigil for Sunday): 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Saturday (Anticipated/Vigil for Sunday): 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 3,
+          "said": "+ 5:00 Frank & Patricia Ruzbarsky Vigil Mass for Sunday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the newest week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Sunday: 8:30 AM, 10:00 AM, 12:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Sunday: 8:30 AM, 10:00 AM, 12:15 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list each Sunday at these times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Sunday: 8:30 AM, 10:00 AM, 12:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Sunday: 8:30 AM, 10:00 AM, 12:15 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list each Sunday at these times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Sunday: 8:30 AM, 10:00 AM, 12:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Sunday: 8:30 AM, 10:00 AM, 12:15 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list each Sunday at these times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        }
+      ],
+      "rationale": "R1: the Mass Schedule box of both bulletins gives daily Masses including Saturday; the intentions of both weeks list 8:00 every Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        }
+      ],
+      "rationale": "R1: the Mass Schedule box of both bulletins gives daily Masses including Saturday; the intentions of both weeks list 8:00 every Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        }
+      ],
+      "rationale": "R1: the Mass Schedule box of both bulletins gives daily Masses including Saturday; the intentions of both weeks list 8:00 every Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        }
+      ],
+      "rationale": "R1: the Mass Schedule box of both bulletins gives daily Masses including Saturday; the intentions of both weeks list 8:00 every Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        }
+      ],
+      "rationale": "R1: the Mass Schedule box of both bulletins gives daily Masses including Saturday; the intentions of both weeks list 8:00 every Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        }
+      ],
+      "rationale": "R1: the Mass Schedule box of both bulletins gives daily Masses including Saturday; the intentions of both weeks list 8:00 every Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 5,
+          "said": "As of January 1, 2027, the 12:05 PM daily mass will be offered only on Mondays, Wednesdays and Fridays."
+        }
+      ],
+      "rationale": "R1: the Mass Schedule box and both weeks' intentions list 12:05 Monday to Saturday. R20: the announced change from January 1, 2027 (Mon, Wed, Fri only) is left for update mode. The box's 'National Holidays - 8:00 am ONLY' pins no date, so no holiday cancellation is projected (POLICY, Dates).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 5,
+          "said": "As of January 1, 2027, the 12:05 PM daily mass will be offered only on Mondays, Wednesdays and Fridays."
+        }
+      ],
+      "rationale": "R1: the Mass Schedule box and both weeks' intentions list 12:05 Monday to Saturday. R20: the announced change from January 1, 2027 (Mon, Wed, Fri only) is left for update mode. The box's 'National Holidays - 8:00 am ONLY' pins no date, so no holiday cancellation is projected (POLICY, Dates).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 5,
+          "said": "As of January 1, 2027, the 12:05 PM daily mass will be offered only on Mondays, Wednesdays and Fridays."
+        }
+      ],
+      "rationale": "R1: the Mass Schedule box and both weeks' intentions list 12:05 Monday to Saturday. R20: the announced change from January 1, 2027 (Mon, Wed, Fri only) is left for update mode. The box's 'National Holidays - 8:00 am ONLY' pins no date, so no holiday cancellation is projected (POLICY, Dates).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 5,
+          "said": "As of January 1, 2027, the 12:05 PM daily mass will be offered only on Mondays, Wednesdays and Fridays."
+        }
+      ],
+      "rationale": "R1: the Mass Schedule box and both weeks' intentions list 12:05 Monday to Saturday. R20: the announced change from January 1, 2027 (Mon, Wed, Fri only) is left for update mode. The box's 'National Holidays - 8:00 am ONLY' pins no date, so no holiday cancellation is projected (POLICY, Dates).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 5,
+          "said": "As of January 1, 2027, the 12:05 PM daily mass will be offered only on Mondays, Wednesdays and Fridays."
+        }
+      ],
+      "rationale": "R1: the Mass Schedule box and both weeks' intentions list 12:05 Monday to Saturday. R20: the announced change from January 1, 2027 (Mon, Wed, Fri only) is left for update mode. The box's 'National Holidays - 8:00 am ONLY' pins no date, so no holiday cancellation is projected (POLICY, Dates).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Daily (including Saturday): 8:00 AM and 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 5,
+          "said": "As of January 1, 2027, the 12:05 PM daily mass will be offered only on Mondays, Wednesdays and Fridays."
+        }
+      ],
+      "rationale": "R1: the Mass Schedule box and both weeks' intentions list 12:05 Monday to Saturday. R20: the announced change from January 1, 2027 (Mon, Wed, Fri only) is left for update mode. The box's 'National Holidays - 8:00 am ONLY' pins no date, so no holiday cancellation is projected (POLICY, Dates).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Reconciliation: Saturday: 1:00 PM - 2:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 1,
+          "said": "Reconciliation: Saturday: 1:00 PM - 2:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:05 PM Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 5,
+          "said": "Next Exposition and Adoration of the Blessed Sacrament Thursday, November 19, immediately after the 12:05 PM Mass."
+        }
+      ],
+      "rationale": "R1, R10, R16: a dated Exposition after a weekday Mass starts 30 minutes after it; on or after as_of. Not weekly: the schedule box says Adoration is 'As per Sunday Announcements' and the older issue announced Thursday, October 29, three weeks earlier.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-emerson",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-29",
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:05 PM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b59226",
+          "page": 5,
+          "said": "Next Exposition and Adoration of the Blessed Sacrament Thursday, October 29, immediately after the 12:05 PM Mass"
+        }
+      ],
+      "rationale": "R16: a dated Exposition before as_of; recorded so the irregular Thursday pattern is visible.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-closter",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Third Saturday Recovery and Healing Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 5,
+          "said": "All are welcome to Church of St. Mary, 20 Legion Place Closter for the Third Saturday Recovery and Healing Mass on Saturday, November 21st at 12:00 noon."
+        }
+      ],
+      "rationale": "R22: held at St. Mary, Closter, another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08516100",
+          "page": 1,
+          "said": "Holy Days (as announced )"
+        }
+      ],
+      "rationale": "R26: no holy-day times given; none announced in the bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

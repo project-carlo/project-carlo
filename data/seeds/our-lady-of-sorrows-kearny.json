@@ -1,0 +1,428 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-sorrows-kearny",
+  "status": "approved",
+  "as_of": "2026-11-15T16:23:04Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T21:37:25Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:21Z",
+  "summary": "One church, Our Lady of Sorrows, Kearny. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: weekday Mass Mon-Fri 7 AM, Saturday 5 PM, Sunday 9 AM, Confession Saturday 4-4:30 PM; the intentions note the new schedule has no Saturday 7 AM Mass. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "639c63a6bfe3ca76dd6f5ee5dd3c731c6455bf8e3dc55a140d4c1d6a3cbb9cd9",
+      "fetched_at": "2026-11-15T16:23:04Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1404c0aad74fdb01e657a4bef98f84b71a6b14ef969319ac8563d47beab6f8f6",
+      "fetched_at": "2026-11-08T15:47:14Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "639c63a6",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1404c0aa",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 7:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read, and each week's intentions list the 7:00 AM weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "639c63a6",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1404c0aa",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 7:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read, and each week's intentions list the 7:00 AM weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "639c63a6",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1404c0aa",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 7:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read, and each week's intentions list the 7:00 AM weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "639c63a6",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1404c0aa",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 7:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read, and each week's intentions list the 7:00 AM weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "639c63a6",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1404c0aa",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 7:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read, and each week's intentions list the 7:00 AM weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "639c63a6",
+          "page": 1,
+          "said": "Saturday evening Mass: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1404c0aa",
+          "page": 1,
+          "said": "Saturday evening Mass: 5:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "639c63a6",
+          "page": 1,
+          "said": "Sunday Mass: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1404c0aa",
+          "page": 1,
+          "said": "Sunday Mass: 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-kearny",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "639c63a6",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturday 4:00 PM - 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1404c0aa",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturday 4:00 PM - 4:30 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "639c63a6",
+          "page": 3,
+          "said": "NEW MASS SCHEDULE No Saturday 7:00 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1404c0aa",
+          "page": 3,
+          "said": "NEW MASS SCHEDULE No Saturday 7:00 a.m. Mass"
+        }
+      ],
+      "rationale": "R1: the intentions page of both bulletins states the new schedule has no Saturday 7:00 AM Mass; recorded so a former Saturday morning Mass is not restored.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "639c63a6",
+          "page": 1,
+          "said": "Holy Day Masses: 7:00 AM | 7:00 PM"
+        }
+      ],
+      "rationale": "R16, POLICY Dates: holy day Mass times are given with no date; no holy day is pinned down in the bulletin, so there is nothing weekly or dated to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "639c63a6",
+          "page": 2,
+          "said": "Christmas Vigil and Day Masses will be offered for all individuals"
+        }
+      ],
+      "rationale": "R24, R26: Christmas Masses are mentioned with no times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "639c63a6",
+          "page": 3,
+          "said": "Those who would like to receive the Sacrament of Reconciliation and/or the Sacrament of Eucharist in their homes may call the Rectory office"
+        }
+      ],
+      "rationale": "R26: homebound confession by arrangement has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

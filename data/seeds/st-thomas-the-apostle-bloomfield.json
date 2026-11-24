@@ -1,0 +1,680 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-thomas-the-apostle-bloomfield",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:50Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T18:43:03Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:21:21Z",
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026; image-only PDFs) print the same schedule box: Sat 5 PM, Sun 8/10/12, Mon-Fri 11:30 AM, First Saturday 8:30 AM, Confession Sat 1 PM. One dated Simbang Gabi Mass Dec 18 7 PM. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7378db1f8cca439d5919dbba1d20cee6eca25809898a1aaa4276166f482a980f",
+      "fetched_at": "2026-11-15T16:54:50Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6e78d2b9cd3b097708146d488ac32a971019ae8a943608b3ff1a3790149cbe5c",
+      "fetched_at": "2026-11-08T16:03:41Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 1,
+          "said": "Eucharistic Liturgy Saturday Eve: 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e78d2b9",
+          "page": 2,
+          "said": "Saturday Eve: 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 2,
+          "said": "Saturday, November 21 ... 5:00pm - Frances & Harry Scardilli"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgy schedule box of both bulletins read and in the week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00am, and 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e78d2b9",
+          "page": 2,
+          "said": "Sunday: 8:00 am, 10:00am, and 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 2,
+          "said": "Sunday, November 22nd ... 8:00am ... 10:00am ... 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions for both Sundays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00am, and 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e78d2b9",
+          "page": 2,
+          "said": "Sunday: 8:00 am, 10:00am, and 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 2,
+          "said": "Sunday, November 22nd ... 8:00am ... 10:00am ... 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions for both Sundays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00am, and 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e78d2b9",
+          "page": 2,
+          "said": "Sunday: 8:00 am, 10:00am, and 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 2,
+          "said": "Sunday, November 22nd ... 8:00am ... 10:00am ... 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions for both Sundays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 1,
+          "said": "Weekdays: M-F 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e78d2b9",
+          "page": 2,
+          "said": "Weekdays: M-F 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 2,
+          "said": "Monday, November 16th ... 11:30am - Margaret DeVincentis"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list an 11:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 1,
+          "said": "Weekdays: M-F 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e78d2b9",
+          "page": 2,
+          "said": "Weekdays: M-F 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 2,
+          "said": "Monday, November 16th ... 11:30am - Margaret DeVincentis"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list an 11:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 1,
+          "said": "Weekdays: M-F 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e78d2b9",
+          "page": 2,
+          "said": "Weekdays: M-F 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 2,
+          "said": "Monday, November 16th ... 11:30am - Margaret DeVincentis"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list an 11:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 1,
+          "said": "Weekdays: M-F 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e78d2b9",
+          "page": 2,
+          "said": "Weekdays: M-F 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 2,
+          "said": "Monday, November 16th ... 11:30am - Margaret DeVincentis"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list an 11:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 1,
+          "said": "Weekdays: M-F 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e78d2b9",
+          "page": 2,
+          "said": "Weekdays: M-F 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 2,
+          "said": "Monday, November 16th ... 11:30am - Margaret DeVincentis"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list an 11:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 1,
+          "said": "First Saturday: 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e78d2b9",
+          "page": 2,
+          "said": "First Saturday: 8:30am"
+        }
+      ],
+      "rationale": "R1: the newest bulletin's standing schedule box prints it (as does the Nov 8 issue). POLICY Weekly rule 2: a named first-week slot is weekly with weeks_of_month. The Nov 8 issue's intentions name a Nov 7 'Mass of the Anointing of the Sick' without a time (R39: no contradiction).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-bloomfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Penance/Confessions) Saturday: 1:00pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e78d2b9",
+          "page": 2,
+          "said": "Saturday: 1:00pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box; no end time is given, so end_time is null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-bloomfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-18",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 10,
+          "said": "Simbang Gabi, A Novena of Evening Masses in Preparation for Christmas, December 18 2026 7:00 PM, St. Thomas the Apostle Church, 60 Byrd Avenue"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 3,
+          "said": "Dec 18 Simbang Gabi"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e78d2b9",
+          "page": 8,
+          "said": "Simbang Gabi December 18 7:00 PM St. Thomas the Apostle Church"
+        }
+      ],
+      "rationale": "R1, R16: a dated evening Mass at the parish church, after as_of, open to all (food and raffles follow in Herron Hall).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 1,
+          "said": "Holidays: 9:00am"
+        }
+      ],
+      "rationale": "R26: the schedule box gives a holiday Mass time but no dates; POLICY Dates forbids projecting it onto holidays, and update mode will read dated holiday notices.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 1,
+          "said": "Holy Days: See the bulletin for update"
+        }
+      ],
+      "rationale": "R26: no holy-day times printed in the bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 3,
+          "said": "Dec 21 Advent Parish Penance"
+        }
+      ],
+      "rationale": "R26: the Advent penance service is listed without a time; update mode will read its time when printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 3,
+          "said": "Jan 24 Mass for Acolyte/Diaconate Formation"
+        }
+      ],
+      "rationale": "R26: listed without a time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 1,
+          "said": "Marian Devotions: Rosary before daily Mass, Angelus after daily Mass, Novena Prayer at 11:30am Mass on Mondays"
+        }
+      ],
+      "rationale": "R24: Rosary, Angelus and Novena are devotions, not Mass, Confession or Adoration; the Monday Novena is within the 11:30 Mass already recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 3,
+          "said": "Dec 16 Blue Christmas Service"
+        }
+      ],
+      "rationale": "R24: a prayer service, not Mass, Confession or Adoration (p4 describes it as a service of prayer at 7pm on December 16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7378db1f",
+          "page": 9,
+          "said": "Nov 21 Encounter & Trivia w/ Life Office for Youth & YA 7:00 PM Our Lady of Mercy, Park Ridge"
+        }
+      ],
+      "rationale": "R22, R16: Adoration at another parish (Our Lady of Mercy, Park Ridge), and dated before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

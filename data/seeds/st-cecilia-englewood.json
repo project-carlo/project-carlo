@@ -1,0 +1,597 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-cecilia-englewood",
+  "status": "approved",
+  "as_of": "2026-11-15T16:24:16Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:08:46Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:18:39Z",
+  "summary": "One church, St. Cecilia, Englewood (Carmelites). The page-1 schedule box is identical in both bulletins read (Nov 8 and Nov 15, 2026), and the intentions match it: Mon-Sat 8:30 AM, Sat 5 PM vigil, Sun 9 AM, 11 AM and 1 PM (Spanish), 6 PM; Saturday Reconciliation 4-4:45 PM; Wednesday Adoration 9 AM-7:30 PM. Plus a dated Thanksgiving Mass Nov 26 at 9 AM. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "fafac64d3a5dc1a1b629396790933a6c36c21e19d568d36c812b63c53e31277d",
+      "fetched_at": "2026-11-15T16:24:16Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "7d44f2dd5b19fbc0978eff73b292e0a7ff3d561ec64bc3e041e7e30f889c8ec7",
+      "fetched_at": "2026-11-08T15:48:27Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-englewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d44f2dd",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 2,
+          "said": "MONDAY: NOVEMBER 16 8:30 AM For the People"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the newest bulletin's intentions list that day's 8:30 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-englewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d44f2dd",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 2,
+          "said": "TUESDAY: NOVEMBER 17 8:30 AM +Clare Connolly"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the newest bulletin's intentions list that day's 8:30 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-englewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d44f2dd",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 2,
+          "said": "WEDNESDAY: NOVEMBER 18 8:30 AM +Peter White"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the newest bulletin's intentions list that day's 8:30 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-englewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d44f2dd",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 2,
+          "said": "THURSDAY: NOVEMBER 19 8:30 AM +Juana Guadalupe"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the newest bulletin's intentions list that day's 8:30 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-englewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d44f2dd",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 2,
+          "said": "FRIDAY: NOVEMBER 20 8:30 AM +Eduardo Rodolfo Trevino Martinez"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the newest bulletin's intentions list that day's 8:30 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-englewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d44f2dd",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 2,
+          "said": "SATURDAY: NOVEMBER 21 8:30 AM Lynnamary Quiroz (B) (Living Int.)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the newest bulletin's intentions list that day's 8:30 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-englewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 1,
+          "said": "Saturday 5:00 PM Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d44f2dd",
+          "page": 1,
+          "said": "Saturday 5:00 PM Vigil"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the intentions list a 5:00 PM Saturday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-englewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 1,
+          "said": "Sunday 9:00 AM ... 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d44f2dd",
+          "page": 1,
+          "said": "Sunday 9:00 AM ... 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the intentions list 9:00 AM and 6:00 PM Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-englewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 1,
+          "said": "Sunday 9:00 AM ... 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d44f2dd",
+          "page": 1,
+          "said": "Sunday 9:00 AM ... 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the intentions list 9:00 AM and 6:00 PM Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-englewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 1,
+          "said": "11:00 AM Spanish 1:00 PM Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d44f2dd",
+          "page": 1,
+          "said": "11:00 AM Spanish 1:00 PM Spanish"
+        }
+      ],
+      "rationale": "R1: printed under Sunday in the page-1 schedule box of both bulletins read; the intentions list them as Spanish Mass Intentions. POLICY, Notes: language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-englewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 1,
+          "said": "11:00 AM Spanish 1:00 PM Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d44f2dd",
+          "page": 1,
+          "said": "11:00 AM Spanish 1:00 PM Spanish"
+        }
+      ],
+      "rationale": "R1: printed under Sunday in the page-1 schedule box of both bulletins read; the intentions list them as Spanish Mass Intentions. POLICY, Notes: language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-englewood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 1,
+          "said": "RECONCILIATION Saturday 4:00 - 4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d44f2dd",
+          "page": 1,
+          "said": "RECONCILIATION Saturday 4:00 - 4:45 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-englewood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 1,
+          "said": "ADORATION Wednesday 9:00 - 7:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d44f2dd",
+          "page": 1,
+          "said": "ADORATION Wednesday 9:00 - 7:30PM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read (rendered and checked). The start '9:00' has no AM/PM, but only 9:00 AM can precede a 7:30 PM end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-englewood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fafac64d",
+          "page": 2,
+          "said": "THANKSGIVING DAY MASS Thursday November 26th 9:00AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d44f2dd",
+          "page": 2,
+          "said": "THANKSGIVING DAY MASS Thursday November 26th 9:00AM (English)"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass on or after as_of, announced in both bulletins. Per R17 no cancellation of the weekday 8:30 AM Mass is recorded, since none is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

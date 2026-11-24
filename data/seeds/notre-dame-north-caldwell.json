@@ -1,0 +1,1088 @@
+{
+  "schema_version": 1,
+  "parish_slug": "notre-dame-north-caldwell",
+  "status": "approved",
+  "as_of": "2026-11-15T16:22:31Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T13:32:46Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:30Z",
+  "summary": "One church, Notre Dame, North Caldwell. Weekend Masses, weekday Masses in the on-site Parish Center Chapel and Saturday 4:00-4:30 confession agree in both bulletins (Nov 8, Nov 15) and on the website; the newest bulletin cancels three Saturday confessions and adds Monday, December 21 4-7 PM. Open: how to record the weekday 7 AM Mass, which stops in an undated summer.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2fc5f4a54c0b09fcafd26b855e6069fc805d4232e5fe3bddc3e202b7c8f94db2",
+      "fetched_at": "2026-11-15T16:22:31Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2910e1819f518215381a035ee4b7deab2699c3eca74d1220275310d3b47cf934",
+      "fetched_at": "2026-11-08T15:46:43Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 1,
+          "said": "Saturday 5:00 pm (Anticipated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2910e181",
+          "page": 1,
+          "said": "Saturday 5:00 pm (Anticipated)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read (Nov 8 and Nov 15); the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am, and 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2910e181",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am, and 12 noon"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am, and 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2910e181",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am, and 12 noon"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am, and 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2910e181",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am, and 12 noon"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2910e181",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ndparishnc.com/mass-schedule",
+          "said": "Monday - Friday - 7:00 am / 9:00 am Parish Center Chapel"
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins' schedule box and kept year-round (the summer note keeps the 9 AM). POLICY, Churches and chapels: the chapel is the parish's own on-site chapel (the website names it the Parish Center Chapel under the 359 Central Ave. address; the bulletin calendar lists 'Chapel' with the church's other rooms), so it is attached to Notre Dame Church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2910e181",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ndparishnc.com/mass-schedule",
+          "said": "Monday - Friday - 7:00 am / 9:00 am Parish Center Chapel"
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins' schedule box and kept year-round (the summer note keeps the 9 AM). POLICY, Churches and chapels: the chapel is the parish's own on-site chapel (the website names it the Parish Center Chapel under the 359 Central Ave. address; the bulletin calendar lists 'Chapel' with the church's other rooms), so it is attached to Notre Dame Church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2910e181",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ndparishnc.com/mass-schedule",
+          "said": "Monday - Friday - 7:00 am / 9:00 am Parish Center Chapel"
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins' schedule box and kept year-round (the summer note keeps the 9 AM). POLICY, Churches and chapels: the chapel is the parish's own on-site chapel (the website names it the Parish Center Chapel under the 359 Central Ave. address; the bulletin calendar lists 'Chapel' with the church's other rooms), so it is attached to Notre Dame Church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2910e181",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ndparishnc.com/mass-schedule",
+          "said": "Monday - Friday - 7:00 am / 9:00 am Parish Center Chapel"
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins' schedule box and kept year-round (the summer note keeps the 9 AM). POLICY, Churches and chapels: the chapel is the parish's own on-site chapel (the website names it the Parish Center Chapel under the 359 Central Ave. address; the bulletin calendar lists 'Chapel' with the church's other rooms), so it is attached to Notre Dame Church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2910e181",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ndparishnc.com/mass-schedule",
+          "said": "Monday - Friday - 7:00 am / 9:00 am Parish Center Chapel"
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins' schedule box and kept year-round (the summer note keeps the 9 AM). POLICY, Churches and chapels: the chapel is the parish's own on-site chapel (the website names it the Parish Center Chapel under the 359 Central Ave. address; the bulletin calendar lists 'Chapel' with the church's other rooms), so it is attached to Notre Dame Church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2910e181",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ndparishnc.com/mass-schedule",
+          "said": "Monday - Friday - 7:00 am / 9:00 am Parish Center Chapel"
+        }
+      ],
+      "rationale": "R30/R15: the 7 AM Mass is clearly current (both bulletins' box and intentions list 7:00 am Masses Wed-Fri) but stops in an undated summer; 'summer months' gives no months, so R15 records no season. Leaning: every week without a season, since summer is months after as_of and update mode will read the bulletins that announce the summer schedule; a guessed season (option 2) would invent months.",
+      "question": "The weekday 7 AM Mass is dropped 'during the summer months', which the bulletin never dates. How should it be recorded?",
+      "options": [
+        {
+          "label": "Mon-Fri 7 AM every week, no season",
+          "entry": {
+            "church_slug": "notre-dame-north-caldwell",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Parish Center Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mon-Fri 7 AM, September through May",
+          "entry": {
+            "church_slug": "notre-dame-north-caldwell",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": "Parish Center Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:30Z"
+      },
+      "group": "weekday-7am"
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2910e181",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ndparishnc.com/mass-schedule",
+          "said": "Monday - Friday - 7:00 am / 9:00 am Parish Center Chapel"
+        }
+      ],
+      "rationale": "R30/R15: the 7 AM Mass is clearly current (both bulletins' box and intentions list 7:00 am Masses Wed-Fri) but stops in an undated summer; 'summer months' gives no months, so R15 records no season. Leaning: every week without a season, since summer is months after as_of and update mode will read the bulletins that announce the summer schedule; a guessed season (option 2) would invent months.",
+      "question": "The weekday 7 AM Mass is dropped 'during the summer months', which the bulletin never dates. How should it be recorded?",
+      "options": [
+        {
+          "label": "Mon-Fri 7 AM every week, no season",
+          "entry": {
+            "church_slug": "notre-dame-north-caldwell",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Parish Center Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mon-Fri 7 AM, September through May",
+          "entry": {
+            "church_slug": "notre-dame-north-caldwell",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": "Parish Center Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:30Z"
+      },
+      "group": "weekday-7am"
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2910e181",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ndparishnc.com/mass-schedule",
+          "said": "Monday - Friday - 7:00 am / 9:00 am Parish Center Chapel"
+        }
+      ],
+      "rationale": "R30/R15: the 7 AM Mass is clearly current (both bulletins' box and intentions list 7:00 am Masses Wed-Fri) but stops in an undated summer; 'summer months' gives no months, so R15 records no season. Leaning: every week without a season, since summer is months after as_of and update mode will read the bulletins that announce the summer schedule; a guessed season (option 2) would invent months.",
+      "question": "The weekday 7 AM Mass is dropped 'during the summer months', which the bulletin never dates. How should it be recorded?",
+      "options": [
+        {
+          "label": "Mon-Fri 7 AM every week, no season",
+          "entry": {
+            "church_slug": "notre-dame-north-caldwell",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Parish Center Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mon-Fri 7 AM, September through May",
+          "entry": {
+            "church_slug": "notre-dame-north-caldwell",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": "Parish Center Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:30Z"
+      },
+      "group": "weekday-7am"
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2910e181",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ndparishnc.com/mass-schedule",
+          "said": "Monday - Friday - 7:00 am / 9:00 am Parish Center Chapel"
+        }
+      ],
+      "rationale": "R30/R15: the 7 AM Mass is clearly current (both bulletins' box and intentions list 7:00 am Masses Wed-Fri) but stops in an undated summer; 'summer months' gives no months, so R15 records no season. Leaning: every week without a season, since summer is months after as_of and update mode will read the bulletins that announce the summer schedule; a guessed season (option 2) would invent months.",
+      "question": "The weekday 7 AM Mass is dropped 'during the summer months', which the bulletin never dates. How should it be recorded?",
+      "options": [
+        {
+          "label": "Mon-Fri 7 AM every week, no season",
+          "entry": {
+            "church_slug": "notre-dame-north-caldwell",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Parish Center Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mon-Fri 7 AM, September through May",
+          "entry": {
+            "church_slug": "notre-dame-north-caldwell",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": "Parish Center Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:30Z"
+      },
+      "group": "weekday-7am"
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2910e181",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 9:00 am - Chapel (9:00 am ONLY during the summer months)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ndparishnc.com/mass-schedule",
+          "said": "Monday - Friday - 7:00 am / 9:00 am Parish Center Chapel"
+        }
+      ],
+      "rationale": "R30/R15: the 7 AM Mass is clearly current (both bulletins' box and intentions list 7:00 am Masses Wed-Fri) but stops in an undated summer; 'summer months' gives no months, so R15 records no season. Leaning: every week without a season, since summer is months after as_of and update mode will read the bulletins that announce the summer schedule; a guessed season (option 2) would invent months.",
+      "question": "The weekday 7 AM Mass is dropped 'during the summer months', which the bulletin never dates. How should it be recorded?",
+      "options": [
+        {
+          "label": "Mon-Fri 7 AM every week, no season",
+          "entry": {
+            "church_slug": "notre-dame-north-caldwell",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Parish Center Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mon-Fri 7 AM, September through May",
+          "entry": {
+            "church_slug": "notre-dame-north-caldwell",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": "Parish Center Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:30Z"
+      },
+      "group": "weekday-7am"
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 1,
+          "said": "Reconciliation Saturday 4:00 - 4:30 pm in Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2910e181",
+          "page": 1,
+          "said": "Reconciliation Saturday 4:00 - 4:30 pm in Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 3,
+          "said": "The Sacrament of Reconciliation is offered every Saturday at 4 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Sacraments box of both bulletins; the website's Reconciliation page gives the same 4:00-4:30 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 3,
+          "said": "4 pm Saturday confessions will NOT be available on the following dates: Saturday, November 21"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin cancels this date of the weekly Saturday confession; it is after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-05",
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 3,
+          "said": "4 pm Saturday confessions will NOT be available on the following dates: Saturday, December 5"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin cancels this date of the weekly Saturday confession.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-26",
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 3,
+          "said": "4 pm Saturday confessions will NOT be available on the following dates: Saturday, December 26"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin cancels this date of the weekly Saturday confession.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-21",
+        "start_time": "16:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before Christmas"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 3,
+          "said": "An additional opportunity for Reconciliation will be offered Monday, December 21 from 4-7 pm."
+        },
+        {
+          "source": "website",
+          "url": "https://www.ndparishnc.com/reconciliation",
+          "said": "Reconciliation is also offered on Tuesday before Christmas and on the Tuesday of Holy Week, between 4:00 pm and 7:00 pm, in the church."
+        }
+      ],
+      "rationale": "R1, R16, R40: a dated special service in the newest bulletin. The website's generic 'Tuesday before Christmas' is a standing description; the bulletin's specific date (Monday, December 21, 2026) governs this year's occurrence.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ndparishnc.com/reconciliation",
+          "said": "For an appointment to celebrate the sacrament at other times, please call the Parish Office"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Infant/Toddler Liturgy of the Word, Williams Suite"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2fc5f4a5",
+          "page": 6,
+          "said": "9 am Infant/Toddler Liturgy of the Word Williams Suite; 10 am Childrens Liturgy of the Word Chapel"
+        }
+      ],
+      "rationale": "R24/R25: children's Liturgies of the Word are not Masses (the 10 am one is held during the 10:00 AM Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

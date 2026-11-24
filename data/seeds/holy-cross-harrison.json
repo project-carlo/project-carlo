@@ -1,0 +1,618 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-cross-harrison",
+  "status": "approved",
+  "as_of": "2026-11-15T16:52:41Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T09:07:46Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:35Z",
+  "summary": "Two churches, and neither bulletin names a church for any Mass. The parish website's Mass Times page places the Saturday 4:30 PM, Sunday 9 (Portuguese), 11 and 7 PM (Spanish) and weekday 12:10 Masses at Holy Cross, and the Sunday 12:30 PM Spanish Mass at St. Anthony. Both bulletins agree on these times. Confession is Saturdays 3:30–4:15 PM at Holy Cross. Open question: which church holds the 2 PM Chinese Mass (every Sunday except the second).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5d8b670b8262369915f1a96c557367ef7c9f7f5b6dcbec81e3d052349c002421",
+      "fetched_at": "2026-11-15T16:52:41Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9b2e5fe9619344673636042f7ca523953b98032ab32a8cb3bc9388b95d87592f",
+      "fetched_at": "2026-11-08T16:01:45Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d8b670b",
+          "page": 2,
+          "said": "4:30pm David Haran – Mary Valente"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b2e5fe9",
+          "page": 2,
+          "said": "4:30pm David Haran – Mary Valente"
+        },
+        {
+          "source": "website",
+          "url": "https://www.harrisoncatholic.com/mass-times",
+          "said": "Holy Cross Mass Schedule ... SATURDAY ... 4:30 PM (English)"
+        }
+      ],
+      "rationale": "R1, R35: the Saturday 4:30 PM Mass is in the intentions of both weeks read (Nov 14, Nov 21; Nov 7); the parish site's Mass Times page places it at Holy Cross, which the intentions don't name.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d8b670b",
+          "page": 2,
+          "said": "9:00am (Port.) Please refer to page 4 in the bulletin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b2e5fe9",
+          "page": 2,
+          "said": "9:00am (Port.) Please refer to page 4 in the bulletin"
+        },
+        {
+          "source": "website",
+          "url": "https://www.harrisoncatholic.com/mass-times",
+          "said": "Holy Cross ... SUNDAY ... 9:00 AM (Portuguese)"
+        }
+      ],
+      "rationale": "R1, R35: in the intentions for every Sunday of both bulletins; the site's Mass Times page places it at Holy Cross.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d8b670b",
+          "page": 2,
+          "said": "11:00am Cecilia Donna Padovano – The Mascellino Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b2e5fe9",
+          "page": 2,
+          "said": "11:00am Cecilia Donna Padovano – The Mascellino Family"
+        },
+        {
+          "source": "website",
+          "url": "https://www.harrisoncatholic.com/mass-times",
+          "said": "Holy Cross ... SUNDAY ... 11:00 AM ( English )"
+        }
+      ],
+      "rationale": "R1, R35: in the intentions for every Sunday of both bulletins; the site's Mass Times page places it at Holy Cross.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d8b670b",
+          "page": 2,
+          "said": "7:00pm (Sp.) Worthy Tenant for Holy Cross Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b2e5fe9",
+          "page": 2,
+          "said": "7:00pm (Sp.) Worthy Tenant for Holy Cross Parish"
+        },
+        {
+          "source": "website",
+          "url": "https://www.harrisoncatholic.com/mass-times",
+          "said": "Holy Cross ... SUNDAY ... 7:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1, R35: in the intentions for every Sunday of both bulletins; the site's Mass Times page places it at Holy Cross.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-east-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d8b670b",
+          "page": 2,
+          "said": "12:30pm (Sp.) Hermandad Senor de los Milagros"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b2e5fe9",
+          "page": 2,
+          "said": "12:30pm (Sp.) Hermandad Senor de los Milagros"
+        },
+        {
+          "source": "website",
+          "url": "https://www.harrisoncatholic.com/mass-times",
+          "said": "St. Anthony's Mass Schedule SUNDAYS 12:30 PM ( Spanish )"
+        }
+      ],
+      "rationale": "R1, R35: in the intentions for every Sunday of both bulletins; the site's Mass Times page lists it as St. Anthony's only Mass, and the intentions name no church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d8b670b",
+          "page": 2,
+          "said": "Monday, November 16 12:10pm Worthy Tenant for Holy Cross Parish (likewise Tue-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b2e5fe9",
+          "page": 2,
+          "said": "Monday-Friday 12:10 (Mon, Thu, Fri misprinted 12:10am)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.harrisoncatholic.com/mass-times",
+          "said": "Holy Cross ... WEEKDAYS ... 12:10 AM (Monday - Friday)"
+        }
+      ],
+      "rationale": "R1, R35: 12:10 Mass every weekday in both weeks' intentions; the site places it at Holy Cross. The 'am' in the older bulletin and on the site is a misprint: the newest prints 12:10pm for all five days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d8b670b",
+          "page": 2,
+          "said": "Monday, November 16 12:10pm Worthy Tenant for Holy Cross Parish (likewise Tue-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b2e5fe9",
+          "page": 2,
+          "said": "Monday-Friday 12:10 (Mon, Thu, Fri misprinted 12:10am)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.harrisoncatholic.com/mass-times",
+          "said": "Holy Cross ... WEEKDAYS ... 12:10 AM (Monday - Friday)"
+        }
+      ],
+      "rationale": "R1, R35: 12:10 Mass every weekday in both weeks' intentions; the site places it at Holy Cross. The 'am' in the older bulletin and on the site is a misprint: the newest prints 12:10pm for all five days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d8b670b",
+          "page": 2,
+          "said": "Monday, November 16 12:10pm Worthy Tenant for Holy Cross Parish (likewise Tue-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b2e5fe9",
+          "page": 2,
+          "said": "Monday-Friday 12:10 (Mon, Thu, Fri misprinted 12:10am)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.harrisoncatholic.com/mass-times",
+          "said": "Holy Cross ... WEEKDAYS ... 12:10 AM (Monday - Friday)"
+        }
+      ],
+      "rationale": "R1, R35: 12:10 Mass every weekday in both weeks' intentions; the site places it at Holy Cross. The 'am' in the older bulletin and on the site is a misprint: the newest prints 12:10pm for all five days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d8b670b",
+          "page": 2,
+          "said": "Monday, November 16 12:10pm Worthy Tenant for Holy Cross Parish (likewise Tue-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b2e5fe9",
+          "page": 2,
+          "said": "Monday-Friday 12:10 (Mon, Thu, Fri misprinted 12:10am)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.harrisoncatholic.com/mass-times",
+          "said": "Holy Cross ... WEEKDAYS ... 12:10 AM (Monday - Friday)"
+        }
+      ],
+      "rationale": "R1, R35: 12:10 Mass every weekday in both weeks' intentions; the site places it at Holy Cross. The 'am' in the older bulletin and on the site is a misprint: the newest prints 12:10pm for all five days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d8b670b",
+          "page": 2,
+          "said": "Monday, November 16 12:10pm Worthy Tenant for Holy Cross Parish (likewise Tue-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b2e5fe9",
+          "page": 2,
+          "said": "Monday-Friday 12:10 (Mon, Thu, Fri misprinted 12:10am)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.harrisoncatholic.com/mass-times",
+          "said": "Holy Cross ... WEEKDAYS ... 12:10 AM (Monday - Friday)"
+        }
+      ],
+      "rationale": "R1, R35: 12:10 Mass every weekday in both weeks' intentions; the site places it at Holy Cross. The 'am' in the older bulletin and on the site is a misprint: the newest prints 12:10pm for all five days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-harrison",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d8b670b",
+          "page": 1,
+          "said": "Reconciliation: Holy Cross - Saturdays 3:30pm-4:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b2e5fe9",
+          "page": 1,
+          "said": "Reconciliation: Holy Cross - Saturdays 3:30pm-4:15pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.harrisoncatholic.com/confession-times",
+          "said": "Holy Cross Confession Schedule SATURDAY 3:30 PM - 4:15 PM"
+        }
+      ],
+      "rationale": "R1: printed on page 1 of both bulletins and on the site's Confession Times page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d8b670b",
+          "page": 1,
+          "said": "St. Anthony - By Appointment or at Holy Cross"
+        }
+      ],
+      "rationale": "R26: confession at St. Anthony is by appointment only, so there is no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chinese"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d8b670b",
+          "page": 2,
+          "said": "2:00pm Chinese Mass (except the second Sunday of each month)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b2e5fe9",
+          "page": 2,
+          "said": "2:00pm Chinese Mass (except the second Sunday of each month)"
+        }
+      ],
+      "rationale": "R32: both bulletins' intentions list the 2 PM Chinese Mass every Sunday except the second, with no church. The site's Mass Times page lists neither the Mass nor its church. The bulletin's attendance report counts the 'Chinese Apostolate' alongside the Holy Cross Masses, but it also counts St. Anthony's 12:30, so that doesn't settle it. I lean Holy Cross because it is the parish's main church, where every Mass except the 12:30 is held, and St. Anthony's schedule on the site lists only the 12:30. weeks_of_month gives the 'except the second Sunday' pattern.",
+      "question": "The 2:00 PM Sunday Chinese Mass (all but the second Sunday) names no church. Which church is it at?",
+      "options": [
+        {
+          "label": "Holy Cross",
+          "entry": {
+            "church_slug": "holy-cross-harrison",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "14:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first",
+              "third",
+              "fourth",
+              "fifth"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chinese"
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Anthony",
+          "entry": {
+            "church_slug": "st-anthony-east-newark",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "14:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first",
+              "third",
+              "fourth",
+              "fifth"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chinese"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:35Z"
+      }
+    }
+  ]
+}

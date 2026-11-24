@@ -1,0 +1,996 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anthony-of-padua-jersey-city",
+  "status": "approved",
+  "as_of": "2026-11-15T16:24:04Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:39:49Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:18:19Z",
+  "summary": "One church. Both bulletins (Nov 8 and Nov 15 issues) print the identical Mass Schedule box and matching Mass intentions: Sat 4:30 PM, Sun 8/10 (Polish)/12, Mon & Thu 8 AM Polish, Tue/Wed/Fri 6 PM; Saturday confessions 3:30-4:30 and confession 15 minutes before each Mass. Dated: the Forty Hours Devotion Nov 20-22 (noon Fri and 8 AM Sat Masses, exposition each day). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f3a156a3b0c14f0c260c74911f57df4c828f66a75e5d022e733cc8fee4b52008",
+      "fetched_at": "2026-11-15T16:24:04Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a3fc94340aedbd0f841f3703179efcb3efdd7fa031f460a7dac3b463ae1f12f0",
+      "fetched_at": "2026-11-08T15:48:13Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Saturday: 4:30p.m. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "Saturday: 4:30p.m. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 2,
+          "said": "Saturday Vigil Mass 4:30PM (Eng)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 2,
+          "said": "Saturday Vigil Mass 4:30PM (Eng)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule on page 1 of both bulletins and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Sunday: 8:00a.m. English, 10:00a.m. Polish, 12:00p.m. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "Sunday: 8:00a.m. English, 10:00a.m. Polish, 12:00p.m. English"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Sunday: 8:00a.m. English, 10:00a.m. Polish, 12:00p.m. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "Sunday: 8:00a.m. English, 10:00a.m. Polish, 12:00p.m. English"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Sunday: 8:00a.m. English, 10:00a.m. Polish, 12:00p.m. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "Sunday: 8:00a.m. English, 10:00a.m. Polish, 12:00p.m. English"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Monday & Thursday: 8:00 a.m. Polish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "Monday & Thursday: 8:00 a.m. Polish"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Monday & Thursday: 8:00 a.m. Polish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "Monday & Thursday: 8:00 a.m. Polish"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Tuesday, Wednesday & Friday: 6:00p.m. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "Tuesday, Wednesday & Friday: 6:00p.m. English"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Tuesday, Wednesday & Friday: 6:00p.m. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "Tuesday, Wednesday & Friday: 6:00p.m. English"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Tuesday, Wednesday & Friday: 6:00p.m. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "Tuesday, Wednesday & Friday: 6:00p.m. English"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Saturdays 3:30p.m. – 4:30p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "Saturdays 3:30p.m. – 4:30p.m."
+        }
+      ],
+      "rationale": "R1: printed under Confessions (and in Polish, W soboty 15:30 - 16:30) in both bulletins. The '15 minutes before each Mass' window for the 4:30 PM vigil (4:15-4:30) falls inside this window, so it gets no slot of its own (POLICY, no duplicate availability).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "15 minutes before the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is offered 15 minutes before each Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is offered 15 minutes before each Mass."
+        }
+      ],
+      "rationale": "R10, POLICY Times: 'N minutes before Mass' runs from 15 minutes before to the Mass's start, one entry per regular weekly Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "15 minutes before the 10:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is offered 15 minutes before each Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is offered 15 minutes before each Mass."
+        }
+      ],
+      "rationale": "R10, POLICY Times: 15 minutes before each regular weekly Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "15 minutes before the 12:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is offered 15 minutes before each Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is offered 15 minutes before each Mass."
+        }
+      ],
+      "rationale": "R10, POLICY Times: 15 minutes before each regular weekly Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "15 minutes before the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is offered 15 minutes before each Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is offered 15 minutes before each Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Confessions: Weekday before and after Masses"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 15 minutes before each regular weekly Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "15 minutes before the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is offered 15 minutes before each Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is offered 15 minutes before each Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Confessions: Weekday before and after Masses"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 15 minutes before each regular weekly Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:45",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "15 minutes before the 6:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is offered 15 minutes before each Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is offered 15 minutes before each Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Confessions: Weekday before and after Masses"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 15 minutes before each regular weekly Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:45",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "15 minutes before the 6:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is offered 15 minutes before each Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is offered 15 minutes before each Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Confessions: Weekday before and after Masses"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 15 minutes before each regular weekly Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:45",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "15 minutes before the 6:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is offered 15 minutes before each Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is offered 15 minutes before each Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Confessions: Weekday before and after Masses"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 15 minutes before each regular weekly Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Confessions: Weekday before and after Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "Confessions: Weekday before and after Masses"
+        }
+      ],
+      "rationale": "R26: confession 'after' weekday Masses gives no clock time or duration and the bulletin gives no relative rule beyond 'after'; the 'before' part is covered by the 15-minutes-before slots. Left out rather than inventing an after-Mass window.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-20",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Forty Hours Devotion; bilingual"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 3,
+          "said": "Friday, November 20 Holy Mass at 12:00 Noon, followed by Exposition of the Blessed Sacrament and Adoration until 6:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 2,
+          "said": "12:00 Noon (Bilingual) + Deceased members and friends of our families"
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass opening the Forty Hours Devotion, on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-20",
+        "start_time": "12:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Forty Hours Devotion; after the 12:00 Noon Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 3,
+          "said": "Holy Mass at 12:00 Noon, followed by Exposition of the Blessed Sacrament and Adoration until 6:00 PM."
+        }
+      ],
+      "rationale": "R10, R16: dated Forty Hours exposition; starts 30 minutes after the weekday 12:00 Mass (POLICY, Times), ends at the printed 6:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Forty Hours Devotion; bilingual"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 3,
+          "said": "Saturday, November 21 Holy Mass at 8:00 AM, followed by Exposition of the Blessed Sacrament and Adoration until 4:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 2,
+          "said": "8:00 AM (Bilingual) + Zofia i Czesław Merchel"
+        }
+      ],
+      "rationale": "R1, R16: a dated Saturday-morning Mass for the Forty Hours Devotion; not part of the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "08:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Forty Hours Devotion; after the 8:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 3,
+          "said": "Holy Mass at 8:00 AM, followed by Exposition of the Blessed Sacrament and Adoration until 4:00 PM."
+        }
+      ],
+      "rationale": "R10, R16: a Saturday morning Mass is a weekday Mass under POLICY (weekend means the vigil or Sunday), so exposition starts 30 minutes after; ends at the printed 4:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "13:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Forty Hours Devotion; closes at 4:00 PM with Vespers, procession and Benediction"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 3,
+          "said": "Following the 12:00 PM Mass, Exposition of the Blessed Sacrament and Adoration from 1:00 PM to 4:00 PM. 4:00 PM – Solemn Closing of the Forty Hours Devotion, including Eucharistic Vespers, Litany, Eucharistic Procession, and Benediction"
+        }
+      ],
+      "rationale": "R1, R16: dated exposition with printed clock times; the 4:00 PM closing with Benediction is one Adoration event with it (POLICY, Benediction), not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "First Friday of the Month Devotions: 7:00p.m. Polish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3fc9434",
+          "page": 1,
+          "said": "First Friday of the Month Devotions: 7:00p.m. Polish"
+        }
+      ],
+      "rationale": "R24: 'Devotions' is not called a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3a156a3",
+          "page": 1,
+          "said": "Stations of the Cross: Friday 5:30p.m. English, Friday 7:00p.m. Polish; Gorzkie Zale: Sunday 9:30 a.m.; Godzinki: Sunday 9:30 AM; Novenas following the evening Masses"
+        }
+      ],
+      "rationale": "R24: Stations, Gorzkie Żale, Godzinki and novenas are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

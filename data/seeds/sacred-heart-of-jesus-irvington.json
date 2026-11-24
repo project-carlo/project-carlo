@@ -1,0 +1,933 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-of-jesus-irvington",
+  "status": "approved",
+  "as_of": "2026-11-15T15:50:29Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T22:20:37Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:45Z",
+  "summary": "One church with a Polish/English schedule; both stored bulletins (Nov 8, Nov 15) print the same schedule box and intentions. Open: whether the Friday 6:30 PM Mass happens on first Fridays, and whether 'Week Days 7:30 AM' includes Tuesday and Friday, which the intentions never show. Thanksgiving 9 AM Mass is included.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a86b6ffbc9586b2318c6e816abf86255101734c5ef7938d24486d04e666f960d",
+      "fetched_at": "2026-11-15T15:50:29Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "26de7e06b7179430de441166c0bb99196f870781b09176fe50dd602121e64a98",
+      "fetched_at": "2026-11-08T15:19:26Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English; in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 1,
+          "said": "Saturday Evening: 4:00 P.M. (English - Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 1,
+          "said": "Saturday Evening: 4:00 P.M. (English - Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 2,
+          "said": "Saturday ... 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 2,
+          "said": "Saturday ... 4:00 PM"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: schedule box and intentions of both bulletins; the parish has one church, so its chapel is a chapel of that church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 1,
+          "said": "Sundays: 9:00 A.M. and 10:30 A.M. (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 1,
+          "said": "Sundays: 9:00 A.M. and 10:30 A.M. (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 2,
+          "said": "Sunday 9:00 AM, 10:30 AM intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 2,
+          "said": "Sunday 9:00 AM, 10:30 AM intentions"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins; the box marks both morning Masses Polish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 1,
+          "said": "Sundays: 9:00 A.M. and 10:30 A.M. (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 1,
+          "said": "Sundays: 9:00 A.M. and 10:30 A.M. (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 2,
+          "said": "Sunday 9:00 AM, 10:30 AM intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 2,
+          "said": "Sunday 9:00 AM, 10:30 AM intentions"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins; the box marks both morning Masses Polish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 1,
+          "said": "12:00 P.M. (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 1,
+          "said": "12:00 P.M. (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 2,
+          "said": "12:00 PM intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 2,
+          "said": "12:00 PM intentions"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 1,
+          "said": "Week Days: 7:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 1,
+          "said": "Week Days: 7:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 2,
+          "said": "Monday/Wednesday/Thursday 7:30 AM intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 2,
+          "said": "Monday/Wednesday/Thursday 7:30 AM intentions"
+        }
+      ],
+      "rationale": "R1, R35: the box gives weekdays 7:30 AM and both weeks' intentions list 7:30 AM on Monday, Wednesday and Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 1,
+          "said": "Week Days: 7:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 1,
+          "said": "Week Days: 7:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 2,
+          "said": "Monday/Wednesday/Thursday 7:30 AM intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 2,
+          "said": "Monday/Wednesday/Thursday 7:30 AM intentions"
+        }
+      ],
+      "rationale": "R1, R35: the box gives weekdays 7:30 AM and both weeks' intentions list 7:30 AM on Monday, Wednesday and Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 1,
+          "said": "Week Days: 7:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 1,
+          "said": "Week Days: 7:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 2,
+          "said": "Monday/Wednesday/Thursday 7:30 AM intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 2,
+          "said": "Monday/Wednesday/Thursday 7:30 AM intentions"
+        }
+      ],
+      "rationale": "R1, R35: the box gives weekdays 7:30 AM and both weeks' intentions list 7:30 AM on Monday, Wednesday and Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 1,
+          "said": "Tuesdays: 6:30 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 1,
+          "said": "Tuesdays: 6:30 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 2,
+          "said": "Tuesday 6:30 PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 2,
+          "said": "Tuesday 6:30 PM intention"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 2,
+          "said": "Saturday/Sobota, November 21 ... 8:00 AM Maria Szuszkowski"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 2,
+          "said": "Saturday/Sobota, November 14 ... 8:00 AM For Parishioners"
+        }
+      ],
+      "rationale": "R35: the Saturday 8:00 AM Mass is in the intentions of both weeks, not marked special; the box lists weekend Masses and a generic weekday line, which does not disprove it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "third",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 1,
+          "said": "Fridays: 6:30 P.M. ... First Fridays: 6:30 P.M. Holy Hour and Sacred Heart of Jesus Devotion. 7:30 P.M. Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 1,
+          "said": "Fridays: 6:30 P.M. ... First Fridays: 6:30 P.M. Holy Hour and Sacred Heart of Jesus Devotion. 7:30 P.M. Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 2,
+          "said": "Friday 6:30 PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 2,
+          "said": "Friday 6:30 PM intention"
+        }
+      ],
+      "rationale": "Leaning per C4: the First Friday Holy Hour takes the 6:30 PM hour and Mass follows at 7:30 PM, so the regular 6:30 PM Mass likely gives way that week. Neither bulletin's week holds a first Friday to confirm.",
+      "question": "On first Fridays, is the regular Friday 6:30 PM Mass still held, or replaced by the 6:30 PM Holy Hour and 7:30 PM Mass?",
+      "options": [
+        {
+          "label": "Fridays 6:30 PM except first Fridays",
+          "entry": {
+            "church_slug": "sacred-heart-of-jesus-irvington",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "second",
+              "third",
+              "fourth",
+              "fifth"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Every Friday 6:30 PM",
+          "entry": {
+            "church_slug": "sacred-heart-of-jesus-irvington",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:45Z"
+      }
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 1,
+          "said": "Week Days: 7:30 A.M. / Tuesdays: 6:30 P.M. / Fridays: 6:30 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 1,
+          "said": "Week Days: 7:30 A.M. / Tuesdays: 6:30 P.M. / Fridays: 6:30 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 2,
+          "said": "Tuesday and Friday list only 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 2,
+          "said": "Tuesday and Friday list only 6:30 PM"
+        }
+      ],
+      "rationale": "R30: the box can be read either way. Leaning to leave out: two full weeks of intentions list only the evening Mass on those days, which reads as the evening Mass replacing the morning one (R39 noted: not only a blank intention, the time is absent altogether).",
+      "question": "The box says 'Week Days: 7:30 A.M.' but both weeks' intentions list only the 6:30 PM Mass on Tuesday and Friday. Add a 7:30 AM Mass on Tuesday and Friday?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Tue and Fri 7:30 AM too",
+          "entry": {
+            "church_slug": "sacred-heart-of-jesus-irvington",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:45Z"
+      },
+      "group": "tue-fri-morning"
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 1,
+          "said": "Week Days: 7:30 A.M. / Tuesdays: 6:30 P.M. / Fridays: 6:30 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 1,
+          "said": "Week Days: 7:30 A.M. / Tuesdays: 6:30 P.M. / Fridays: 6:30 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 2,
+          "said": "Tuesday and Friday list only 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 2,
+          "said": "Tuesday and Friday list only 6:30 PM"
+        }
+      ],
+      "rationale": "R30: the box can be read either way. Leaning to leave out: two full weeks of intentions list only the evening Mass on those days, which reads as the evening Mass replacing the morning one (R39 noted: not only a blank intention, the time is absent altogether).",
+      "question": "The box says 'Week Days: 7:30 A.M.' but both weeks' intentions list only the 6:30 PM Mass on Tuesday and Friday. Add a 7:30 AM Mass on Tuesday and Friday?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Tue and Fri 7:30 AM too",
+          "entry": {
+            "church_slug": "sacred-heart-of-jesus-irvington",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:45Z"
+      },
+      "group": "tue-fri-morning"
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 1,
+          "said": "First Fridays: ... 7:30 P.M. Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 1,
+          "said": "First Fridays: ... 7:30 P.M. Holy Mass"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins as a first-Friday Mass (POLICY, Weekly or dated rule 2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-irvington",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour and Sacred Heart devotion, before the 7:30 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 1,
+          "said": "First Fridays: 6:30 P.M. Holy Hour and Sacred Heart of Jesus Devotion. 7:30 P.M. Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 1,
+          "said": "First Fridays: 6:30 P.M. Holy Hour and Sacred Heart of Jesus Devotion. 7:30 P.M. Holy Mass"
+        }
+      ],
+      "rationale": "R1, POLICY What to extract: a Holy Hour is Adoration; no end time is printed, so none is given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-irvington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 1,
+          "said": "CONFESSIONS: Saturdays 3:30 PM to 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 1,
+          "said": "CONFESSIONS: Saturdays 3:30 PM to 4:00 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 1,
+          "said": "CONFESSIONS: ... Daily before each scheduled Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 1,
+          "said": "CONFESSIONS: ... Daily before each scheduled Mass"
+        }
+      ],
+      "rationale": "R26, POLICY Times: 'before each scheduled Mass' gives no clock time or number of minutes, so there is no definite start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 1,
+          "said": "May/June/Oct. Devotion Every Friday of May/June/October: 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 1,
+          "said": "May/June/Oct. Devotion Every Friday of May/June/October: 7:00 P.M."
+        }
+      ],
+      "rationale": "R24: these devotions are not called Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-irvington",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a86b6ffb",
+          "page": 3,
+          "said": "THANKSGIVING DAY MASS, 9:00 AM ... on November 26, at 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26de7e06",
+          "page": 3,
+          "said": "Mass on Thanksgiving Day will be celebrated at 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass after as_of. Per R17 the weekly Thursday 7:30 AM is left alone, since no cancellation is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

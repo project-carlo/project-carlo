@@ -1,0 +1,607 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-james-springfield",
+  "status": "approved",
+  "as_of": "2026-11-15T16:53:55Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:50:34Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:11Z",
+  "summary": "One church. Both issues read (Nov 8 and Nov 15, image-only) print the same schedule box: Sat 5 PM vigil, Sun 8/10/12, weekday 7:30 AM, Sat 8:30 AM, Saturday 4 PM confession, Wednesday 7 PM Holy Hour and second-Saturday 3 PM Adoration. The 'U.S. Holidays 8:30AM' line is left out because it gives no dates; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a3cdea56a3cd681e0eaae42323400e0b1addd77c05fabf6deb62c51ff6467e62",
+      "fetched_at": "2026-11-15T16:53:55Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d22e22c01cc9fd1d61c25feab8085b019ab8ea395613448afef89f14ebfeddc5",
+      "fetched_at": "2026-11-08T16:02:54Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 2,
+          "said": "Saturday, November 21: 5:00PM - Fr. Santos"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d22e22c0",
+          "page": 2,
+          "said": "Saturday, November 14: 5:00PM - Fr. Dennehy"
+        }
+      ],
+      "rationale": "R1, R35: the Mass schedule box of both issues prints the Saturday 5:00 PM Mass; the intentions (p9) list it each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 2,
+          "said": "Sunday, November 22: 8:00AM - Fr. Dennehy 10:00AM - Fr. Dennehy 12:00PM - Fr. Santos"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d22e22c0",
+          "page": 2,
+          "said": "Sunday, November 15: 8:00AM - Fr. Dennehy 10:00AM - Fr. Paladino 12:00PM - Fr. Santos"
+        }
+      ],
+      "rationale": "R1, R35: the Mass schedule box of both issues prints the three Sunday Masses; the intentions (p9) list them each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 2,
+          "said": "Sunday, November 22: 8:00AM - Fr. Dennehy 10:00AM - Fr. Dennehy 12:00PM - Fr. Santos"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d22e22c0",
+          "page": 2,
+          "said": "Sunday, November 15: 8:00AM - Fr. Dennehy 10:00AM - Fr. Paladino 12:00PM - Fr. Santos"
+        }
+      ],
+      "rationale": "R1, R35: the Mass schedule box of both issues prints the three Sunday Masses; the intentions (p9) list them each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 2,
+          "said": "Sunday, November 22: 8:00AM - Fr. Dennehy 10:00AM - Fr. Dennehy 12:00PM - Fr. Santos"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d22e22c0",
+          "page": 2,
+          "said": "Sunday, November 15: 8:00AM - Fr. Dennehy 10:00AM - Fr. Paladino 12:00PM - Fr. Santos"
+        }
+      ],
+      "rationale": "R1, R35: the Mass schedule box of both issues prints the three Sunday Masses; the intentions (p9) list them each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 2,
+          "said": "DAILY MASS: Mon-Fri: 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d22e22c0",
+          "page": 2,
+          "said": "DAILY MASS: Mon-Fri: 7:30AM"
+        }
+      ],
+      "rationale": "R1: the Daily Mass box of both issues; the intentions (p9) list 7:30am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 2,
+          "said": "DAILY MASS: Mon-Fri: 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d22e22c0",
+          "page": 2,
+          "said": "DAILY MASS: Mon-Fri: 7:30AM"
+        }
+      ],
+      "rationale": "R1: the Daily Mass box of both issues; the intentions (p9) list 7:30am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 2,
+          "said": "DAILY MASS: Mon-Fri: 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d22e22c0",
+          "page": 2,
+          "said": "DAILY MASS: Mon-Fri: 7:30AM"
+        }
+      ],
+      "rationale": "R1: the Daily Mass box of both issues; the intentions (p9) list 7:30am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 2,
+          "said": "DAILY MASS: Mon-Fri: 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d22e22c0",
+          "page": 2,
+          "said": "DAILY MASS: Mon-Fri: 7:30AM"
+        }
+      ],
+      "rationale": "R1: the Daily Mass box of both issues; the intentions (p9) list 7:30am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 2,
+          "said": "DAILY MASS: Mon-Fri: 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d22e22c0",
+          "page": 2,
+          "said": "DAILY MASS: Mon-Fri: 7:30AM"
+        }
+      ],
+      "rationale": "R1: the Daily Mass box of both issues; the intentions (p9) list 7:30am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 2,
+          "said": "DAILY MASS: Saturday: 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d22e22c0",
+          "page": 2,
+          "said": "DAILY MASS: Saturday: 8:30AM"
+        }
+      ],
+      "rationale": "R1: the Daily Mass box of both issues; the intentions (p9) list Saturday 8:30am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-springfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 2,
+          "said": "RECONCILIATION: Saturday at 4:00PM or by Appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 8,
+          "said": "RECONCILIATION 4:00PM on Saturdays or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d22e22c0",
+          "page": 2,
+          "said": "RECONCILIATION: Saturday at 4:00PM or by Appointment."
+        }
+      ],
+      "rationale": "R1: printed in both issues; no end time is given, so end_time stays null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-springfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 2,
+          "said": "Eucharistic Adoration*: Wednesday Holy Hour at 7PM (Third Wednesday of each month will have live music.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d22e22c0",
+          "page": 2,
+          "said": "Eucharistic Adoration*: Wednesday Holy Hour at 7PM"
+        }
+      ],
+      "rationale": "R1: weekly Wednesday Holy Hour printed in both issues; a Holy Hour is Adoration and one hour long (POLICY, What to extract; Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-springfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 2,
+          "said": "Eucharistic Adoration*: ... Second Saturdays at 3PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d22e22c0",
+          "page": 2,
+          "said": "Eucharistic Adoration*: ... Second Saturdays at 3PM"
+        }
+      ],
+      "rationale": "R1, R11: printed under the Eucharistic Adoration heading of the standing Devotions box in both issues; a named week of the month is weekly with weeks_of_month (POLICY, Weekly or dated, rule 2). No end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 2,
+          "said": "or by Appointment. Please call the Office."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rosary & Novena"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 2,
+          "said": "Rosary & Novena*: Mondays at 6:30PM in the Church and on Facebook Live"
+        }
+      ],
+      "rationale": "R24: a Rosary and Novena is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3cdea56",
+          "page": 2,
+          "said": "DAILY MASS: U.S. Holidays: 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d22e22c0",
+          "page": 9,
+          "said": "WEDNESDAY, NOVEMBER 11 ... Veteran's Day 8:30am"
+        }
+      ],
+      "rationale": "R33, POLICY Dates: 'U.S. Holidays 8:30AM' names no dates and cannot be written as a weekly slot; no holiday on or after as_of is printed with a Mass time (Veterans Day, Nov 11, is before as_of). Update mode will record dated holiday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

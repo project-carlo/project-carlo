@@ -1,0 +1,929 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-grace-and-st-joseph-hoboken",
+  "status": "approved",
+  "as_of": "2026-11-15T16:53:02Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T13:54:06Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:47Z",
+  "summary": "Two churches and the Parish Center chapel; both bulletins read (Nov 8 and Nov 15) print the same schedule box: OLG Sat 5 PM and Sun 9, 10:30, 1:30 (Spanish), 7:30; St. Joseph Sun 10 (Spanish) and noon; chapel weekdays 12:30 and Mon-Thu 7 PM; third-Friday Divino Niño Mass at St. Joseph; OLG Saturday confession 4:15-4:45. Dated: Thanksgiving 9 AM at OLG and Dec 8 7 PM at St. Joseph. Open: whether the undated Holy Days box's OLG 12:30 PM applies to Dec 8. No history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "44827929e0f2001f73339ffd75a15fdbeed4bae6d4db8ceb87c17e957f0e299e",
+      "fetched_at": "2026-11-15T16:53:02Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6d282af693b93cd2b88a8e06e2e3a344e1ac927485a2e6f62103143574b3d713",
+      "fetched_at": "2026-11-08T16:02:01Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "Saturday Vigil Mass (OLG)..5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "Saturday Vigil Mass (OLG)..5:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "Sunday (OLG)....9:00 AM, 10:30 AM, 1:30 PM (Spanish) and 7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "Sunday (OLG)....9:00 AM, 10:30 AM, 1:30 PM (Spanish) and 7:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule box of both bulletins read; the intentions list the same Sunday times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "Sunday (OLG)....9:00 AM, 10:30 AM, 1:30 PM (Spanish) and 7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "Sunday (OLG)....9:00 AM, 10:30 AM, 1:30 PM (Spanish) and 7:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule box of both bulletins read; the intentions list the same Sunday times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "Sunday (OLG)....9:00 AM, 10:30 AM, 1:30 PM (Spanish) and 7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "Sunday (OLG)....9:00 AM, 10:30 AM, 1:30 PM (Spanish) and 7:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule box of both bulletins read; the intentions list the same Sunday times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "Sunday (OLG)....9:00 AM, 10:30 AM, 1:30 PM (Spanish) and 7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "Sunday (OLG)....9:00 AM, 10:30 AM, 1:30 PM (Spanish) and 7:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule box of both bulletins read; the Spanish page also gives OLG 1:30 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "Sunday (St. Joseph)....10:00 AM (Spanish) / 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "Sunday (St. Joseph)....10:00 AM (Spanish) / 12 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule box of both bulletins read; the intentions list it under ST. JOSEPH.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "Sunday (St. Joseph)....10:00 AM (Spanish) / 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "Sunday (St. Joseph)....10:00 AM (Spanish) / 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 5,
+          "said": "ST. JOSEPH 10:00 A.M. ... 12:00 Noon"
+        }
+      ],
+      "rationale": "R1: the '12 Noon' line sits under the St. Joseph Sunday line in the box of both bulletins (rendered to check the layout), and the intentions list 12:00 Noon under ST. JOSEPH.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-parish-center-chapel-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Friday ....12:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Friday ....12:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the chapel at 411 Clinton St. is on the church list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-parish-center-chapel-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Friday ....12:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Friday ....12:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the chapel at 411 Clinton St. is on the church list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-parish-center-chapel-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Friday ....12:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Friday ....12:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the chapel at 411 Clinton St. is on the church list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-parish-center-chapel-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Friday ....12:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Friday ....12:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the chapel at 411 Clinton St. is on the church list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-parish-center-chapel-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Friday ....12:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Friday ....12:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the chapel at 411 Clinton St. is on the church list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-parish-center-chapel-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Thursday....7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Thursday....7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list 7:00 PM Masses Monday to Thursday only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-parish-center-chapel-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Thursday....7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Thursday....7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list 7:00 PM Masses Monday to Thursday only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-parish-center-chapel-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Thursday....7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Thursday....7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list 7:00 PM Masses Monday to Thursday only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-parish-center-chapel-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Thursday....7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "DAILY MASS IN CHAPEL, 411 CLINTON ST. Monday - Thursday....7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list 7:00 PM Masses Monday to Thursday only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Misa del Divino Niño"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 4,
+          "said": "Misa del Divino Nino El Tercer Viernes de cada mes a las 7pm en San Jose."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 4,
+          "said": "Misa del Divino Nino El Tercer Viernes de cada mes a las 7pm en San Jose."
+        }
+      ],
+      "rationale": "R1, R11: a named third-Friday Mass printed on the Spanish page of both bulletins; the newest week holds the third Friday (Nov 20). The mothers' group meets after it, but the Mass is not limited to them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-hoboken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "Confessions are heard OLG Saturday from 4:15 to 4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "Confessions are heard OLG Saturday from 4:15 to 4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 4,
+          "said": "OLG: Sabado, 4:15 to 4:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 4,
+          "said": "OLG: Sabado, 4:15 to 4:45 pm"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins, in English and Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "and at St. Joseph upon request."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "and at St. Joseph upon request."
+        },
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 4,
+          "said": "San Jose: antes y/o despues de misas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 4,
+          "said": "San Jose: antes y/o despues de misas"
+        }
+      ],
+      "rationale": "R26: St. Joseph confession is on request or before/after Masses with no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-hoboken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 2,
+          "said": "We invite you to our parish for Thanksgiving Mass, November 26 at 9 AM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 4,
+          "said": "Celebracion de la Misa de Accion de Gracias. Noviembre 26, 9am Iglesia principal."
+        },
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 5,
+          "said": "THURSDAY, NOVEMBER 26 Thanksgiving Day 9:00 A.M. 1. For Our Lady of Grace Church"
+        }
+      ],
+      "rationale": "R1, R16: dated Thanksgiving Mass; the Spanish page places it in the main church (OLG) and the intentions list it in the church column. The intentions show no 12:30/7 PM chapel Masses that day, but no cancellation is stated, so the weekly slots stand (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hoboken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception; bilingual"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 4,
+          "said": "Solemnidad de la Inmaculada Concepcion 8 de Diciembre 7pm San Jose."
+        },
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "HOLY DAYS ... St. Joseph....7:00 PM (Bi-lingual)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "HOLY DAYS ... St. Joseph....7:00 PM (Bi-lingual)"
+        }
+      ],
+      "rationale": "R1, R16: the Spanish page dates the holy day Mass at St. Joseph; it matches the Holy Days box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-hoboken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 1,
+          "said": "HOLY DAYS Chapel Vigil Mass....7:00 PM / OLG....12:30 PM / St. Joseph....7:00 PM (Bi-lingual)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d282af6",
+          "page": 1,
+          "said": "HOLY DAYS Chapel Vigil Mass....7:00 PM / OLG....12:30 PM / St. Joseph....7:00 PM (Bi-lingual)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44827929",
+          "page": 4,
+          "said": "Solemnidad de la Inmaculada Concepcion 8 de Diciembre 7pm San Jose."
+        }
+      ],
+      "rationale": "R30: the English Holy Days box is a standing schedule without dates; only the Spanish page dates December 8, and it names only St. Joseph 7pm. Leaning include: the box is printed every week and Dec 8 is the next holy day the bulletin announces. The chapel vigil (Mon Dec 7, 7 PM) coincides with the weekly Monday 7 PM chapel Mass, so needs no slot.",
+      "question": "Add the Holy Days box's OLG 12:30 PM Mass on December 8 (Immaculate Conception)?",
+      "options": [
+        {
+          "label": "Dec 8 12:30 PM at OLG",
+          "entry": {
+            "church_slug": "our-lady-of-grace-hoboken",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "12:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:47Z"
+      }
+    }
+  ]
+}

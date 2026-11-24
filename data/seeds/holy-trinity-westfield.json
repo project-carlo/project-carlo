@@ -1,0 +1,631 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-trinity-westfield",
+  "status": "approved",
+  "as_of": "2026-11-15T16:22:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T09:33:46Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:55Z",
+  "summary": "One church. Weekend, weekday and Saturday confession times agree in both bulletins read (Nov 8 and Nov 15) and with the website, except the website's 4:30-5:00 confession end. Open: Saturday 8:00 AM Adoration, printed only in the Nov 8 issue.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d1eca11aefdc2c8336cec065f5d9b77c7f91ade055f58ac266de049cf67110c5",
+      "fetched_at": "2026-11-15T16:22:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "0e2f8745721c9ce5dd30739a3eba7fc1b8056a5c2f6c36c93bf36c0b5557cc14",
+      "fetched_at": "2026-11-08T15:46:24Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eca11a",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e2f8745",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1eca11a",
+          "page": 3,
+          "said": "SATURDAY, November 21, 2026 8:30 am Nancy Doyle - Family"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions; the website gives Saturday 8:30 AM too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eca11a",
+          "page": 1,
+          "said": "Saturday 5:30 pm (Livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e2f8745",
+          "page": 1,
+          "said": "Saturday 5:30 pm (Livestreamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eca11a",
+          "page": 1,
+          "said": "Sunday 8:30 am | 10:00 am (Livestreamed) 12:00 pm | 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e2f8745",
+          "page": 1,
+          "said": "Sunday 8:30 am | 10:00 am (Livestreamed) 12:00 pm | 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eca11a",
+          "page": 1,
+          "said": "Sunday 8:30 am | 10:00 am (Livestreamed) 12:00 pm | 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e2f8745",
+          "page": 1,
+          "said": "Sunday 8:30 am | 10:00 am (Livestreamed) 12:00 pm | 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eca11a",
+          "page": 1,
+          "said": "Sunday 8:30 am | 10:00 am (Livestreamed) 12:00 pm | 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e2f8745",
+          "page": 1,
+          "said": "Sunday 8:30 am | 10:00 am (Livestreamed) 12:00 pm | 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eca11a",
+          "page": 1,
+          "said": "Sunday 8:30 am | 10:00 am (Livestreamed) 12:00 pm | 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e2f8745",
+          "page": 1,
+          "said": "Sunday 8:30 am | 10:00 am (Livestreamed) 12:00 pm | 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eca11a",
+          "page": 1,
+          "said": "Weekdays 8:30 am (Monday - Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e2f8745",
+          "page": 1,
+          "said": "Weekdays 8:30 am (Monday - Friday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.htrcc.org/",
+          "said": "weekday EUCHARIST (Monday - Friday): 8:30 AM IN the Chapel*"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in the newest intentions Mon-Fri; the parish homepage places it in the chapel (on site; POLICY, Churches and chapels). The Nov 8 issue's Friday Nov 13 9:00 am intention is a dated exception before as_of (R40, R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eca11a",
+          "page": 1,
+          "said": "Weekdays 8:30 am (Monday - Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e2f8745",
+          "page": 1,
+          "said": "Weekdays 8:30 am (Monday - Friday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.htrcc.org/",
+          "said": "weekday EUCHARIST (Monday - Friday): 8:30 AM IN the Chapel*"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in the newest intentions Mon-Fri; the parish homepage places it in the chapel (on site; POLICY, Churches and chapels). The Nov 8 issue's Friday Nov 13 9:00 am intention is a dated exception before as_of (R40, R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eca11a",
+          "page": 1,
+          "said": "Weekdays 8:30 am (Monday - Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e2f8745",
+          "page": 1,
+          "said": "Weekdays 8:30 am (Monday - Friday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.htrcc.org/",
+          "said": "weekday EUCHARIST (Monday - Friday): 8:30 AM IN the Chapel*"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in the newest intentions Mon-Fri; the parish homepage places it in the chapel (on site; POLICY, Churches and chapels). The Nov 8 issue's Friday Nov 13 9:00 am intention is a dated exception before as_of (R40, R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eca11a",
+          "page": 1,
+          "said": "Weekdays 8:30 am (Monday - Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e2f8745",
+          "page": 1,
+          "said": "Weekdays 8:30 am (Monday - Friday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.htrcc.org/",
+          "said": "weekday EUCHARIST (Monday - Friday): 8:30 AM IN the Chapel*"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in the newest intentions Mon-Fri; the parish homepage places it in the chapel (on site; POLICY, Churches and chapels). The Nov 8 issue's Friday Nov 13 9:00 am intention is a dated exception before as_of (R40, R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eca11a",
+          "page": 1,
+          "said": "Weekdays 8:30 am (Monday - Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e2f8745",
+          "page": 1,
+          "said": "Weekdays 8:30 am (Monday - Friday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.htrcc.org/",
+          "said": "weekday EUCHARIST (Monday - Friday): 8:30 AM IN the Chapel*"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in the newest intentions Mon-Fri; the parish homepage places it in the chapel (on site; POLICY, Churches and chapels). The Nov 8 issue's Friday Nov 13 9:00 am intention is a dated exception before as_of (R40, R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-westfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eca11a",
+          "page": 1,
+          "said": "Reconciliation Saturday 4:30-5:15 PM Also by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e2f8745",
+          "page": 1,
+          "said": "Reconciliation Saturday 4:30-5:15 PM Also by appointment"
+        },
+        {
+          "source": "website",
+          "url": "https://www.htrcc.org/reconciliation",
+          "said": "Sacrament of Reconciliation Schedule Saturdays 4:30 - 5:00 PM"
+        }
+      ],
+      "rationale": "R1: both bulletins print 4:30-5:15 PM in the schedule box; the website's 4:30-5:00 PM is an older or abbreviated statement, and the current bulletin's printed end time is used.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eca11a",
+          "page": 1,
+          "said": "Reconciliation ... Also by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-westfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 8:30 AM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e2f8745",
+          "page": 2,
+          "said": "Join us for HOLY ADORATION Saturdays at 8:00am followed by Holy Mass at 8:30am"
+        }
+      ],
+      "rationale": "R29: only the Nov 8 issue prints it, as a standing weekly invitation; the Nov 15 issue omits the whole page-2 notice box (its page 2 is a full-page Thanksgiving letter) without any cancellation, and the website does not mention Adoration. Only one older week is read, so R36 cannot apply. Leaning include: the wording is a regular schedule and the omission has a layout explanation. No end time printed, so none is given (POLICY, Times).",
+      "question": "Add Saturday 8:00 AM Adoration before the 8:30 AM Mass?",
+      "options": [
+        {
+          "label": "Saturdays 8:00 AM",
+          "entry": {
+            "church_slug": "holy-trinity-westfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 8:30 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:55Z"
+      }
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-westfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Celebration for Fr. Anthony Randazzo, Church of the Presentation, Upper Saddle River"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eca11a",
+          "page": 6,
+          "said": "SUNDAY, NOVEMBER 22, 2026 MASS AT 12:00 PM Church of the Presentation Upper Saddle River, New Jersey"
+        }
+      ],
+      "rationale": "R22: held at another parish's church (church-of-the-presentation-upper-saddle-river).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

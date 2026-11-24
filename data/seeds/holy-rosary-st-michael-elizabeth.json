@@ -1,0 +1,812 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-rosary-st-michael-elizabeth",
+  "status": "approved",
+  "as_of": "2026-11-15T16:21:56Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T09:22:07Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:46Z",
+  "summary": "One church, trilingual (English, Spanish, Creole). Weekday, weekend and Confession times agree across both bulletins read (Nov 8 and Nov 15, 2026), plus a dated Adoration day on Nov 27. Open: the newest box prints the Sunday Spanish Mass at 8:20 AM while its own intentions, the older box and the website say 8:30 AM.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6ece5aa828e68fc39559196bacd8554c2936cc05e4dc68f6436e712a4dc3a65f",
+      "fetched_at": "2026-11-15T16:21:56Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "0782205aa9c45e81aefa8e5c4a485634e3bf390348de236d05247b756c5a9246",
+      "fetched_at": "2026-11-08T15:46:12Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Creole"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "Monday 06:00 pm(Creole) / Tuesday 6:00 pm (Creole) / Friday 6:00 pm (Creole)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 3,
+          "said": "November 9, Monday 6:00 pm; November 10, Tuesday 6:00pm; November 13, Friday 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the newest Mass schedule box, and listed in both bulletins' intentions (R35). The older box omitted Tuesday 6 PM, but its own intentions list it; the website also lists 6 PM Mon., Tues., Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Creole"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "Monday 06:00 pm(Creole) / Tuesday 6:00 pm (Creole) / Friday 6:00 pm (Creole)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 3,
+          "said": "November 9, Monday 6:00 pm; November 10, Tuesday 6:00pm; November 13, Friday 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the newest Mass schedule box, and listed in both bulletins' intentions (R35). The older box omitted Tuesday 6 PM, but its own intentions list it; the website also lists 6 PM Mon., Tues., Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Creole"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "Monday 06:00 pm(Creole) / Tuesday 6:00 pm (Creole) / Friday 6:00 pm (Creole)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 3,
+          "said": "November 9, Monday 6:00 pm; November 10, Tuesday 6:00pm; November 13, Friday 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the newest Mass schedule box, and listed in both bulletins' intentions (R35). The older box omitted Tuesday 6 PM, but its own intentions list it; the website also lists 6 PM Mon., Tues., Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "Monday/Tuesday/Friday 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 1,
+          "said": "Monday/Tuesday/Friday 7:00 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "Monday/Tuesday/Friday 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 1,
+          "said": "Monday/Tuesday/Friday 7:00 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "Monday/Tuesday/Friday 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 1,
+          "said": "Monday/Tuesday/Friday 7:00 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "Wednesday 5:30 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 1,
+          "said": "Wednesday 5:30 pm (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Creole and Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "Wednesday 7:00 pm (Creole/Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 1,
+          "said": "Wednesday 7:00 pm (Creole/Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins. The newest intentions call the November 18 7 PM Mass a Healing Mass; POLICY rule 7 records only the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Creole and Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "Thursday 7:00 pm (Creole/Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 1,
+          "said": "Thursday 7:00 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the newest gives Creole/Spanish (the older box and website say Spanish only), so the note follows the newest.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "Saturday | 5:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 1,
+          "said": "Saturday | 5:00 pm (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "6:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 1,
+          "said": "6:30 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "10:00 am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 1,
+          "said": "10:00 am (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "11:30 am (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 1,
+          "said": "11:30 am (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Creole"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "1:00 pm (Creole)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 1,
+          "said": "1:00 pm (Creole)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "Sunday | 8:20 am (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 3,
+          "said": "November 15, Sunday ... 8:30am | + Evaristo Duy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 1,
+          "said": "Sunday 8:30 am (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 3,
+          "said": "November 8, Sunday 8:30am |"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holyrosarystmichael.com/",
+          "said": "SUNDAY EVENING 08:30 a.m. (Spanish)"
+        }
+      ],
+      "rationale": "R28: the newest schedule box prints 8:20 AM (zoomed, the digit is clear), but the same issue's intentions list 8:30am for that very Sunday, and the older box, older intentions and the parish website all say 8:30. Leaning 8:30: the lone 8:20 contradicts its own issue's intentions, so it looks like a typo; Sunday confession 7:30-8:15 fits either.",
+      "question": "Is the early Sunday Spanish Mass at 8:30 AM or 8:20 AM?",
+      "options": [
+        {
+          "label": "8:30 AM",
+          "entry": {
+            "church_slug": "holy-rosary-st-michael-elizabeth",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          },
+          "leaning": true
+        },
+        {
+          "label": "8:20 AM",
+          "entry": {
+            "church_slug": "holy-rosary-st-michael-elizabeth",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:20",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:46Z"
+      }
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "Confession Saturday | 4:00 pm - 4:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 1,
+          "said": "Confession Saturday | 4:00 pm - 4:45 pm"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box. The website says 4:00-5:00 p.m.; both current bulletins agree on 4:45, so the end time follows them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "Sunday | 7:30 am - 8:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 1,
+          "said": "Sunday | 7:30 am - 8:15 am"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 1,
+          "said": "Confession Other | By Appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-st-michael-elizabeth",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "09:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament November 27 9:00am - 6:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0782205a",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament November 27 9:00am - 6:45pm"
+        }
+      ],
+      "rationale": "R1, R16: a dated Adoration day after as_of, printed in both bulletins. POLICY rule 3: given only with a date and not named as a monthly service, so it stays dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6ece5aa8",
+          "page": 3,
+          "said": "Divine Mercy worship service- 3:00pm"
+        }
+      ],
+      "rationale": "R24: a Divine Mercy service during the November 27 Adoration is a devotion, not Mass or Confession; it lies inside the recorded Adoration hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

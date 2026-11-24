@@ -1,0 +1,494 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-michael-jersey-city",
+  "status": "approved",
+  "as_of": "2026-11-15T16:25:53Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:15:16Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:20:18Z",
+  "summary": "One church, St. Michael, Jersey City. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: weekdays 12:05 PM, Saturday 4:00 PM, Sunday 8:30 AM (Vietnamese), 10:30 AM and 6:30 PM, Saturday Confession 1-2 PM. No Adoration is listed; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8b74e618cb04807a267e94f068101479784b6daebf72e653ace428abef9aff7b",
+      "fetched_at": "2026-11-15T16:25:53Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "04c6089367c0d47e8f96e2e1f352b922e060af16119a287f3f1c9a0624417b14",
+      "fetched_at": "2026-11-08T15:49:32Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 1,
+          "said": "DAILY MASS: Weekdays - 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "04c60893",
+          "page": 1,
+          "said": "DAILY MASS: Weekdays - 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 2,
+          "said": "Monday ... Friday 12:05 pm intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04c60893",
+          "page": 2,
+          "said": "Monday ... Friday 12:05 pm intentions"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins read gives weekdays 12:05 PM and both weeks' intentions list Mon-Fri 12:05 PM. The Nov 8 issue lists a Thursday Nov 12 12:05 Communion Service, a date before as_of (R16), so no cancellation is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 1,
+          "said": "DAILY MASS: Weekdays - 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "04c60893",
+          "page": 1,
+          "said": "DAILY MASS: Weekdays - 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 2,
+          "said": "Monday ... Friday 12:05 pm intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04c60893",
+          "page": 2,
+          "said": "Monday ... Friday 12:05 pm intentions"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins read gives weekdays 12:05 PM and both weeks' intentions list Mon-Fri 12:05 PM. The Nov 8 issue lists a Thursday Nov 12 12:05 Communion Service, a date before as_of (R16), so no cancellation is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 1,
+          "said": "DAILY MASS: Weekdays - 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "04c60893",
+          "page": 1,
+          "said": "DAILY MASS: Weekdays - 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 2,
+          "said": "Monday ... Friday 12:05 pm intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04c60893",
+          "page": 2,
+          "said": "Monday ... Friday 12:05 pm intentions"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins read gives weekdays 12:05 PM and both weeks' intentions list Mon-Fri 12:05 PM. The Nov 8 issue lists a Thursday Nov 12 12:05 Communion Service, a date before as_of (R16), so no cancellation is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 1,
+          "said": "DAILY MASS: Weekdays - 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "04c60893",
+          "page": 1,
+          "said": "DAILY MASS: Weekdays - 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 2,
+          "said": "Monday ... Friday 12:05 pm intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04c60893",
+          "page": 2,
+          "said": "Monday ... Friday 12:05 pm intentions"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins read gives weekdays 12:05 PM and both weeks' intentions list Mon-Fri 12:05 PM. The Nov 8 issue lists a Thursday Nov 12 12:05 Communion Service, a date before as_of (R16), so no cancellation is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 1,
+          "said": "DAILY MASS: Weekdays - 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "04c60893",
+          "page": 1,
+          "said": "DAILY MASS: Weekdays - 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 2,
+          "said": "Monday ... Friday 12:05 pm intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04c60893",
+          "page": 2,
+          "said": "Monday ... Friday 12:05 pm intentions"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins read gives weekdays 12:05 PM and both weeks' intentions list Mon-Fri 12:05 PM. The Nov 8 issue lists a Thursday Nov 12 12:05 Communion Service, a date before as_of (R16), so no cancellation is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 1,
+          "said": "Saturday - 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "04c60893",
+          "page": 1,
+          "said": "Saturday - 4:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 1,
+          "said": "Sunday - 8:30 a.m. (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04c60893",
+          "page": 1,
+          "said": "Sunday - 8:30 a.m. (Vietnamese)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 1,
+          "said": "Sunday - 10:30 a.m. and 6:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "04c60893",
+          "page": 1,
+          "said": "Sunday - 10:30 a.m. and 6:30 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 1,
+          "said": "Sunday - 10:30 a.m. and 6:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "04c60893",
+          "page": 1,
+          "said": "Sunday - 10:30 a.m. and 6:30 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION (CONFESSION): Saturday 1-2 p.m. and by request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04c60893",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION (CONFESSION): Saturday 1-2 p.m. and by request"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; 'by request' has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 1,
+          "said": "NOVENA OF ST. JUDE: Tuesday following 12:05 p.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b74e618",
+          "page": 1,
+          "said": "ANNOINTING OF THE SICK: First Tuesday of the month"
+        }
+      ],
+      "rationale": "R24: a novena and Anointing of the Sick are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

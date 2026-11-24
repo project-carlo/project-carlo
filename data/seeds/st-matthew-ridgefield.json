@@ -1,0 +1,523 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-matthew-ridgefield",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:28Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:10:44Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:20:13Z",
+  "summary": "One church, St. Matthew, Ridgefield. Both bulletins read (Nov 8 and Nov 15, image-only) print the same schedule box: weekdays 7:30 AM, Saturday 9:00 AM and 4:00 PM, Sunday 8, 10 and 12, Saturday Penance 1:00-1:30 PM; the Mass intentions agree. The Thursday Holy Hour is at St. Nicholas, Palisades Park (another parish) and is excluded. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1e848878dcb1fb840851ad0b04dab0caa7caae873c312fe3d09fded73455a593",
+      "fetched_at": "2026-11-15T16:54:28Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2aab28f6925e6b243780e742d5373188e6341a3e0922a6ad30cc6e8cc9e49d6d",
+      "fetched_at": "2026-11-08T16:03:18Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-ridgefield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e848878",
+          "page": 2,
+          "said": "MASS SCHEDULE Monday—Friday 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2aab28f6",
+          "page": 2,
+          "said": "MASS SCHEDULE Monday—Friday 7:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the weekday intentions (p3) list 7:30 each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-ridgefield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e848878",
+          "page": 2,
+          "said": "MASS SCHEDULE Monday—Friday 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2aab28f6",
+          "page": 2,
+          "said": "MASS SCHEDULE Monday—Friday 7:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the weekday intentions (p3) list 7:30 each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-ridgefield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e848878",
+          "page": 2,
+          "said": "MASS SCHEDULE Monday—Friday 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2aab28f6",
+          "page": 2,
+          "said": "MASS SCHEDULE Monday—Friday 7:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the weekday intentions (p3) list 7:30 each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-ridgefield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e848878",
+          "page": 2,
+          "said": "MASS SCHEDULE Monday—Friday 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2aab28f6",
+          "page": 2,
+          "said": "MASS SCHEDULE Monday—Friday 7:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the weekday intentions (p3) list 7:30 each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-ridgefield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e848878",
+          "page": 2,
+          "said": "MASS SCHEDULE Monday—Friday 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2aab28f6",
+          "page": 2,
+          "said": "MASS SCHEDULE Monday—Friday 7:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the weekday intentions (p3) list 7:30 each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-ridgefield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e848878",
+          "page": 2,
+          "said": "Saturday Morning 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2aab28f6",
+          "page": 2,
+          "said": "Saturday Morning 9:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; intentions list Saturday 9:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-ridgefield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e848878",
+          "page": 2,
+          "said": "Saturday Mass of Anticipation 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2aab28f6",
+          "page": 2,
+          "said": "Saturday Mass of Anticipation 4:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; intentions list Saturday 4:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-ridgefield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e848878",
+          "page": 2,
+          "said": "Sunday Morning 8:00AM, 10:00AM & 12NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2aab28f6",
+          "page": 2,
+          "said": "Sunday Morning 8:00AM, 10:00AM & 12NN"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; Sunday intentions list 8:00, 10:00 and 12:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-ridgefield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e848878",
+          "page": 2,
+          "said": "Sunday Morning 8:00AM, 10:00AM & 12NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2aab28f6",
+          "page": 2,
+          "said": "Sunday Morning 8:00AM, 10:00AM & 12NN"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; Sunday intentions list 8:00, 10:00 and 12:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-ridgefield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e848878",
+          "page": 2,
+          "said": "Sunday Morning 8:00AM, 10:00AM & 12NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2aab28f6",
+          "page": 2,
+          "said": "Sunday Morning 8:00AM, 10:00AM & 12NN"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; Sunday intentions list 8:00, 10:00 and 12:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-ridgefield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "13:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e848878",
+          "page": 2,
+          "said": "Sacrament of Penance: Saturday from 1:00PM to 1:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2aab28f6",
+          "page": 2,
+          "said": "Sacrament of Penance: Saturday from 1:00PM to 1:30PM"
+        }
+      ],
+      "rationale": "R1: printed under 'We invite you to celebrate' in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-palisades-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": "19:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour at St. Nicholas Church, Palisades Park"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e848878",
+          "page": 2,
+          "said": "Thursdays/ Holy Hour of Adoration at St. Nicholas Church, Palisades Park 6:15PM - 7:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2aab28f6",
+          "page": 2,
+          "said": "Thursdays/ Holy Hour of Adoration at St. Nicholas Church, Palisades Park 6:15PM - 7:15PM"
+        }
+      ],
+      "rationale": "R22: held at St. Nicholas, Palisades Park, another parish's listed church (seed church: st-nicholas-palisades-park); its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e848878",
+          "page": 2,
+          "said": "Holy Days ... Please check Bulletin"
+        }
+      ],
+      "rationale": "R26: the schedule box gives no holy day times; neither bulletin read prints a holy day Mass on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2aab28f6",
+          "page": 5,
+          "said": "Interfaith Thanksgiving Service ... Tuesday, November 24th at 7pm ... Venue: St. Paul Lutheran Church"
+        }
+      ],
+      "rationale": "R24, R22: an interfaith prayer service, not a Mass, at a Lutheran church off the church list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

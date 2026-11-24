@@ -1,0 +1,1816 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-victories-harrington-park",
+  "status": "approved",
+  "as_of": "2026-11-15T16:23:18Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T22:02:58Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:32Z",
+  "summary": "One church. Weekend Masses from the schedule box, Mon-Sat 8:00 and 12:00 Masses from two weeks of intentions (R35), first-Friday/Saturday/Thursday specials, Tue/Thu Adoration and daily confessions all agree in the two bulletins read (Nov 8 and Nov 15, both image-only). Open: Saturday afternoon Confession ends 3:45 on page 1 but 3:40 on page 2.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "cc1cf1aabad904d3cb9e7f5191540419742c35316eaf42b9e70caf6c97d659fc",
+      "fetched_at": "2026-11-15T16:23:18Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d061355255690f07fdfc8a78595096c3d866cc43c68b23fc6fd5a0eb6ee508af",
+      "fetched_at": "2026-11-08T15:46:39Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday: 4pm & 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday: 4pm & 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 3,
+          "said": "Saturday, Nov. 21 ... 4:00 Mario Gobbetti ... 5:00 Joseph Militello"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday: 4pm & 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday: 4pm & 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 3,
+          "said": "Saturday, Nov. 21 ... 4:00 Mario Gobbetti ... 5:00 Joseph Militello"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Sunday: 7am, 8am Latin, 9:30am, 10:45am, 12pm, 1pm Spanish, 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Sunday: 7am, 8am Latin, 9:30am, 10:45am, 12pm, 1pm Spanish, 6pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Sunday: 7am, 8am Latin, 9:30am, 10:45am, 12pm, 1pm Spanish, 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Sunday: 7am, 8am Latin, 9:30am, 10:45am, 12pm, 1pm Spanish, 6pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Sunday: 7am, 8am Latin, 9:30am, 10:45am, 12pm, 1pm Spanish, 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Sunday: 7am, 8am Latin, 9:30am, 10:45am, 12pm, 1pm Spanish, 6pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Sunday: 7am, 8am Latin, 9:30am, 10:45am, 12pm, 1pm Spanish, 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Sunday: 7am, 8am Latin, 9:30am, 10:45am, 12pm, 1pm Spanish, 6pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Sunday: 7am, 8am Latin, 9:30am, 10:45am, 12pm, 1pm Spanish, 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Sunday: 7am, 8am Latin, 9:30am, 10:45am, 12pm, 1pm Spanish, 6pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Sunday: 7am, 8am Latin, 9:30am, ..."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Sunday: 7am, 8am Latin, 9:30am, ..."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the page 3 header names the Latin Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Sunday: ... 1pm Spanish, 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Sunday: ... 1pm Spanish, 6pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 3,
+          "said": "Monday, Nov. 16 ... 8:00 Vincent and Patricia Smith / 12:00 Donald Harkin (8:00 and 12:00 every day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 3,
+          "said": "Monday, November 9 ... 8:00 All Souls / John P. McCaffrey / 12:00 Holy Souls in Purgatory (8:00 and 12:00 every day through Saturday, Nov. 14)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        }
+      ],
+      "rationale": "R35: 8:00 and 12:00 Masses are listed Monday to Saturday in the intentions of two consecutive weeks, and the page 1 devotions say the Rosary follows the 8:00am and 12:00 Noon Mass Monday to Saturday; the weekend-only Mass schedule box does not disprove them. The first-Saturday 8:00am and 12:00pm special Masses fall at these same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 3,
+          "said": "Monday, Nov. 16 ... 8:00 Vincent and Patricia Smith / 12:00 Donald Harkin (8:00 and 12:00 every day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 3,
+          "said": "Monday, November 9 ... 8:00 All Souls / John P. McCaffrey / 12:00 Holy Souls in Purgatory (8:00 and 12:00 every day through Saturday, Nov. 14)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        }
+      ],
+      "rationale": "R35: 8:00 and 12:00 Masses are listed Monday to Saturday in the intentions of two consecutive weeks, and the page 1 devotions say the Rosary follows the 8:00am and 12:00 Noon Mass Monday to Saturday; the weekend-only Mass schedule box does not disprove them. The first-Saturday 8:00am and 12:00pm special Masses fall at these same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 3,
+          "said": "Monday, Nov. 16 ... 8:00 Vincent and Patricia Smith / 12:00 Donald Harkin (8:00 and 12:00 every day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 3,
+          "said": "Monday, November 9 ... 8:00 All Souls / John P. McCaffrey / 12:00 Holy Souls in Purgatory (8:00 and 12:00 every day through Saturday, Nov. 14)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        }
+      ],
+      "rationale": "R35: 8:00 and 12:00 Masses are listed Monday to Saturday in the intentions of two consecutive weeks, and the page 1 devotions say the Rosary follows the 8:00am and 12:00 Noon Mass Monday to Saturday; the weekend-only Mass schedule box does not disprove them. The first-Saturday 8:00am and 12:00pm special Masses fall at these same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 3,
+          "said": "Monday, Nov. 16 ... 8:00 Vincent and Patricia Smith / 12:00 Donald Harkin (8:00 and 12:00 every day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 3,
+          "said": "Monday, November 9 ... 8:00 All Souls / John P. McCaffrey / 12:00 Holy Souls in Purgatory (8:00 and 12:00 every day through Saturday, Nov. 14)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        }
+      ],
+      "rationale": "R35: 8:00 and 12:00 Masses are listed Monday to Saturday in the intentions of two consecutive weeks, and the page 1 devotions say the Rosary follows the 8:00am and 12:00 Noon Mass Monday to Saturday; the weekend-only Mass schedule box does not disprove them. The first-Saturday 8:00am and 12:00pm special Masses fall at these same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 3,
+          "said": "Monday, Nov. 16 ... 8:00 Vincent and Patricia Smith / 12:00 Donald Harkin (8:00 and 12:00 every day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 3,
+          "said": "Monday, November 9 ... 8:00 All Souls / John P. McCaffrey / 12:00 Holy Souls in Purgatory (8:00 and 12:00 every day through Saturday, Nov. 14)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        }
+      ],
+      "rationale": "R35: 8:00 and 12:00 Masses are listed Monday to Saturday in the intentions of two consecutive weeks, and the page 1 devotions say the Rosary follows the 8:00am and 12:00 Noon Mass Monday to Saturday; the weekend-only Mass schedule box does not disprove them. The first-Saturday 8:00am and 12:00pm special Masses fall at these same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 3,
+          "said": "Monday, Nov. 16 ... 8:00 Vincent and Patricia Smith / 12:00 Donald Harkin (8:00 and 12:00 every day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 3,
+          "said": "Monday, November 9 ... 8:00 All Souls / John P. McCaffrey / 12:00 Holy Souls in Purgatory (8:00 and 12:00 every day through Saturday, Nov. 14)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        }
+      ],
+      "rationale": "R35: 8:00 and 12:00 Masses are listed Monday to Saturday in the intentions of two consecutive weeks, and the page 1 devotions say the Rosary follows the 8:00am and 12:00 Noon Mass Monday to Saturday; the weekend-only Mass schedule box does not disprove them. The first-Saturday 8:00am and 12:00pm special Masses fall at these same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 3,
+          "said": "Monday, Nov. 16 ... 8:00 Vincent and Patricia Smith / 12:00 Donald Harkin (8:00 and 12:00 every day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 3,
+          "said": "Monday, November 9 ... 8:00 All Souls / John P. McCaffrey / 12:00 Holy Souls in Purgatory (8:00 and 12:00 every day through Saturday, Nov. 14)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        }
+      ],
+      "rationale": "R35: 8:00 and 12:00 Masses are listed Monday to Saturday in the intentions of two consecutive weeks, and the page 1 devotions say the Rosary follows the 8:00am and 12:00 Noon Mass Monday to Saturday; the weekend-only Mass schedule box does not disprove them. The first-Saturday 8:00am and 12:00pm special Masses fall at these same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 3,
+          "said": "Monday, Nov. 16 ... 8:00 Vincent and Patricia Smith / 12:00 Donald Harkin (8:00 and 12:00 every day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 3,
+          "said": "Monday, November 9 ... 8:00 All Souls / John P. McCaffrey / 12:00 Holy Souls in Purgatory (8:00 and 12:00 every day through Saturday, Nov. 14)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        }
+      ],
+      "rationale": "R35: 8:00 and 12:00 Masses are listed Monday to Saturday in the intentions of two consecutive weeks, and the page 1 devotions say the Rosary follows the 8:00am and 12:00 Noon Mass Monday to Saturday; the weekend-only Mass schedule box does not disprove them. The first-Saturday 8:00am and 12:00pm special Masses fall at these same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 3,
+          "said": "Monday, Nov. 16 ... 8:00 Vincent and Patricia Smith / 12:00 Donald Harkin (8:00 and 12:00 every day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 3,
+          "said": "Monday, November 9 ... 8:00 All Souls / John P. McCaffrey / 12:00 Holy Souls in Purgatory (8:00 and 12:00 every day through Saturday, Nov. 14)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        }
+      ],
+      "rationale": "R35: 8:00 and 12:00 Masses are listed Monday to Saturday in the intentions of two consecutive weeks, and the page 1 devotions say the Rosary follows the 8:00am and 12:00 Noon Mass Monday to Saturday; the weekend-only Mass schedule box does not disprove them. The first-Saturday 8:00am and 12:00pm special Masses fall at these same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 3,
+          "said": "Monday, Nov. 16 ... 8:00 Vincent and Patricia Smith / 12:00 Donald Harkin (8:00 and 12:00 every day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 3,
+          "said": "Monday, November 9 ... 8:00 All Souls / John P. McCaffrey / 12:00 Holy Souls in Purgatory (8:00 and 12:00 every day through Saturday, Nov. 14)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        }
+      ],
+      "rationale": "R35: 8:00 and 12:00 Masses are listed Monday to Saturday in the intentions of two consecutive weeks, and the page 1 devotions say the Rosary follows the 8:00am and 12:00 Noon Mass Monday to Saturday; the weekend-only Mass schedule box does not disprove them. The first-Saturday 8:00am and 12:00pm special Masses fall at these same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 3,
+          "said": "Monday, Nov. 16 ... 8:00 Vincent and Patricia Smith / 12:00 Donald Harkin (8:00 and 12:00 every day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 3,
+          "said": "Monday, November 9 ... 8:00 All Souls / John P. McCaffrey / 12:00 Holy Souls in Purgatory (8:00 and 12:00 every day through Saturday, Nov. 14)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        }
+      ],
+      "rationale": "R35: 8:00 and 12:00 Masses are listed Monday to Saturday in the intentions of two consecutive weeks, and the page 1 devotions say the Rosary follows the 8:00am and 12:00 Noon Mass Monday to Saturday; the weekend-only Mass schedule box does not disprove them. The first-Saturday 8:00am and 12:00pm special Masses fall at these same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 3,
+          "said": "Monday, Nov. 16 ... 8:00 Vincent and Patricia Smith / 12:00 Donald Harkin (8:00 and 12:00 every day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 3,
+          "said": "Monday, November 9 ... 8:00 All Souls / John P. McCaffrey / 12:00 Holy Souls in Purgatory (8:00 and 12:00 every day through Saturday, Nov. 14)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        }
+      ],
+      "rationale": "R35: 8:00 and 12:00 Masses are listed Monday to Saturday in the intentions of two consecutive weeks, and the page 1 devotions say the Rosary follows the 8:00am and 12:00 Noon Mass Monday to Saturday; the weekend-only Mass schedule box does not disprove them. The first-Saturday 8:00am and 12:00pm special Masses fall at these same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "SPECIAL MASSES & DEVOTIONS: First Friday: 12:30 Adoration, 6pm Confessions, 7pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "SPECIAL MASSES & DEVOTIONS: First Friday: 12:30 Adoration, 6pm Confessions, 7pm Mass"
+        }
+      ],
+      "rationale": "R1: a standing first-Friday Mass printed in the special Masses list of both bulletins (R11: neither week holds a first Friday).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Family Mass in the gym"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 3,
+          "said": "9:30 (Gym) People of the Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 2,
+          "said": "CCD Classes ... Family Mass 9:30 in the gym"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 3,
+          "said": "9:30 (Gym) All Souls / People of the Parish"
+        }
+      ],
+      "rationale": "R22: a Family Mass in the gym during CCD; the gym's location is not given (Religious Ed is at 155 Parkway, the church at 150 Harriot Avenue), so POLICY leaves it out. The church's own 9:30 Sunday Mass is already included, so no time is lost.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "THE SACRAMENT OF CONFESSION: Mon.-Sat.: 7:30-7:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "THE SACRAMENT OF CONFESSION: Mon.-Sat.: 7:30-7:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 2,
+          "said": "offered every weekday at 7:30am-7:50am, Saturdays from 7:30am-7:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 2,
+          "said": "offered every weekday at 7:30am-7:50am, Saturdays from 7:30am-7:50am"
+        }
+      ],
+      "rationale": "R1: printed in both confession notices of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "THE SACRAMENT OF CONFESSION: Mon.-Sat.: 7:30-7:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "THE SACRAMENT OF CONFESSION: Mon.-Sat.: 7:30-7:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 2,
+          "said": "offered every weekday at 7:30am-7:50am, Saturdays from 7:30am-7:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 2,
+          "said": "offered every weekday at 7:30am-7:50am, Saturdays from 7:30am-7:50am"
+        }
+      ],
+      "rationale": "R1: printed in both confession notices of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "THE SACRAMENT OF CONFESSION: Mon.-Sat.: 7:30-7:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "THE SACRAMENT OF CONFESSION: Mon.-Sat.: 7:30-7:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 2,
+          "said": "offered every weekday at 7:30am-7:50am, Saturdays from 7:30am-7:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 2,
+          "said": "offered every weekday at 7:30am-7:50am, Saturdays from 7:30am-7:50am"
+        }
+      ],
+      "rationale": "R1: printed in both confession notices of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "THE SACRAMENT OF CONFESSION: Mon.-Sat.: 7:30-7:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "THE SACRAMENT OF CONFESSION: Mon.-Sat.: 7:30-7:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 2,
+          "said": "offered every weekday at 7:30am-7:50am, Saturdays from 7:30am-7:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 2,
+          "said": "offered every weekday at 7:30am-7:50am, Saturdays from 7:30am-7:50am"
+        }
+      ],
+      "rationale": "R1: printed in both confession notices of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "THE SACRAMENT OF CONFESSION: Mon.-Sat.: 7:30-7:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "THE SACRAMENT OF CONFESSION: Mon.-Sat.: 7:30-7:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 2,
+          "said": "offered every weekday at 7:30am-7:50am, Saturdays from 7:30am-7:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 2,
+          "said": "offered every weekday at 7:30am-7:50am, Saturdays from 7:30am-7:50am"
+        }
+      ],
+      "rationale": "R1: printed in both confession notices of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "THE SACRAMENT OF CONFESSION: Mon.-Sat.: 7:30-7:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "THE SACRAMENT OF CONFESSION: Mon.-Sat.: 7:30-7:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 2,
+          "said": "offered every weekday at 7:30am-7:50am, Saturdays from 7:30am-7:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 2,
+          "said": "offered every weekday at 7:30am-7:50am, Saturdays from 7:30am-7:50am"
+        }
+      ],
+      "rationale": "R1: printed in both confession notices of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "11:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Saturday: 11:00-11:50am; 3:00-3:45pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Saturday: 11:00-11:50am; 3:00-3:45pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 2,
+          "said": "Saturdays from 7:30am-7:50am, 11:00am-11:50am, and 3:00pm-3:40pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 2,
+          "said": "Saturdays from 7:30am-7:50am, 11:00am-11:50am, and 3:00pm-3:40pm"
+        }
+      ],
+      "rationale": "R1: printed in both confession notices of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Saturday: 11:00-11:50am; 3:00-3:45pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Saturday: 11:00-11:50am; 3:00-3:45pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 2,
+          "said": "Saturdays from ... 3:00pm-3:40pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 2,
+          "said": "Saturdays from ... 3:00pm-3:40pm"
+        }
+      ],
+      "rationale": "R28/C8: both bulletins print 3:00-3:45pm in the front-page sacrament box and 3:00pm-3:40pm in the page 2 Confession notice; nothing explains the difference. Leaning to the front-page sacrament schedule, the parish's headline listing; the start time is the same either way.",
+      "question": "Saturday afternoon Confession ends at 3:45 (page 1) or 3:40 (page 2)?",
+      "options": [
+        {
+          "label": "Sat 3:00-3:45 PM",
+          "entry": {
+            "church_slug": "our-lady-of-victories-harrington-park",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "15:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Sat 3:00-3:40 PM",
+          "entry": {
+            "church_slug": "our-lady-of-victories-harrington-park",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "15:40",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:32Z"
+      }
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "First Friday: 12:30 Adoration, 6pm Confessions, 7pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "First Friday: 12:30 Adoration, 6pm Confessions, 7pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 2,
+          "said": "First Friday at 6pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 2,
+          "said": "First Friday at 6pm."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; no end time is given, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 2,
+          "said": "A priest is also available to hear confession by appointment."
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Adoration/Exposition of the Blessed Sacrament Tuesdays & Thursdays 8:30AM until 12Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 2,
+          "said": "ADORATION Tuesdays & Thursdays adoration 8:30AM till 12Noon."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Adoration/Exposition of the Blessed Sacrament Tuesdays & Thursdays 8:30AM until 12Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 2,
+          "said": "ADORATION Tuesdays & Thursdays adoration 8:30AM till 12Noon."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Adoration/Exposition of the Blessed Sacrament ... First Thursday: 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Adoration/Exposition schedule; no end time is given. R11: neither bulletin's week holds a first Thursday; the older issue's page 1 had no Adoration box at all, only the Tue/Thu line on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "First Friday: 12:30pm until 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "First Friday: 12:30 Adoration, 6pm Confessions, 7pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "First Friday: 12:30 Adoration, 6pm Confessions, 7pm Mass"
+        }
+      ],
+      "rationale": "R1: the newest bulletin's Adoration/Exposition schedule gives the hours; both bulletins' special-Masses list gives the 12:30 start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Adoration/Exposition of the Blessed Sacrament ... First Saturday: 8:30am until 12Noon"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Adoration/Exposition schedule (R11: neither week holds a first Saturday).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 1,
+          "said": "Devotions prayed after 8:00am Mass ... Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0613552",
+          "page": 1,
+          "said": "Devotions prayed after 8:00am Mass ... Rosary: M - Sat after 8:00am & after 12:00 Noon Mass"
+        }
+      ],
+      "rationale": "R24: novena devotions and the Rosary are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc1cf1aa",
+          "page": 2,
+          "said": "Churches of Harrington Park Thanksgiving Service Monday, November 23, at 7:00PM St. Andrew's Episcopal Church"
+        }
+      ],
+      "rationale": "R22/R24: an ecumenical service at another denomination's church, not a Mass at the parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

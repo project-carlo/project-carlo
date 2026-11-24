@@ -1,0 +1,633 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-helen-westfield",
+  "status": "approved",
+  "as_of": "2026-11-15T16:53:59Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:43:08Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:04Z",
+  "summary": "One church. Both issues read (Nov 1 and Nov 15, 2026) print the same schedule: Sat 5pm vigil, Sun 8, 10, 12 and 6pm, Mon-Sat 9am, Reconciliation Sat 4pm (no end). Plus a dated Anointing of the Sick Mass Sat Nov 21 11:30am. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8403d3aa497147d51b567bbeb416d206bf90aab34777f72c1591c6bf02b6accd",
+      "fetched_at": "2026-11-15T16:53:59Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e4c7a7864ae570c10177fde85274c3860e211723f460f72e571fb346fc30a247",
+      "fetched_at": "2026-11-08T16:02:52Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helen-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 1,
+          "said": "Saturday Vigil 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 1,
+          "said": "Saturday Vigil 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Schedule and Weekend Mass boxes of both issues read (Nov 1 and Nov 15); the intentions list a 5:00pm Mass each weekend.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helen-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 1,
+          "said": "Sunday 8, 10, 12 & 6"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 1,
+          "said": "Sunday 8, 10, 12 & 6"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 2,
+          "said": "8:00am ... 10:00am ... 12:00pm ... 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 2,
+          "said": "8:00am ... 10:00am ... 12:00pm ... 6:00pm"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues gives Sunday 8, 10, 12 & 6; the weekend Mass intentions on p2 give the AM/PM (8:00am, 10:00am, 12:00pm, 6:00pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helen-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 1,
+          "said": "Sunday 8, 10, 12 & 6"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 1,
+          "said": "Sunday 8, 10, 12 & 6"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 2,
+          "said": "8:00am ... 10:00am ... 12:00pm ... 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 2,
+          "said": "8:00am ... 10:00am ... 12:00pm ... 6:00pm"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues gives Sunday 8, 10, 12 & 6; the weekend Mass intentions on p2 give the AM/PM (8:00am, 10:00am, 12:00pm, 6:00pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helen-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 1,
+          "said": "Sunday 8, 10, 12 & 6"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 1,
+          "said": "Sunday 8, 10, 12 & 6"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 2,
+          "said": "8:00am ... 10:00am ... 12:00pm ... 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 2,
+          "said": "8:00am ... 10:00am ... 12:00pm ... 6:00pm"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues gives Sunday 8, 10, 12 & 6; the weekend Mass intentions on p2 give the AM/PM (8:00am, 10:00am, 12:00pm, 6:00pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helen-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 1,
+          "said": "Sunday 8, 10, 12 & 6"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 1,
+          "said": "Sunday 8, 10, 12 & 6"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 2,
+          "said": "8:00am ... 10:00am ... 12:00pm ... 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 2,
+          "said": "8:00am ... 10:00am ... 12:00pm ... 6:00pm"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues gives Sunday 8, 10, 12 & 6; the weekend Mass intentions on p2 give the AM/PM (8:00am, 10:00am, 12:00pm, 6:00pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helen-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 1,
+          "said": "Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 1,
+          "said": "Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 2,
+          "said": "Daily Mass Nov 16 - Nov 21 intentions"
+        }
+      ],
+      "rationale": "R1: printed as Mon-Sat 9:00am in the schedule boxes of both issues; daily intentions run Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helen-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 1,
+          "said": "Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 1,
+          "said": "Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 2,
+          "said": "Daily Mass Nov 16 - Nov 21 intentions"
+        }
+      ],
+      "rationale": "R1: printed as Mon-Sat 9:00am in the schedule boxes of both issues; daily intentions run Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helen-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 1,
+          "said": "Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 1,
+          "said": "Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 2,
+          "said": "Daily Mass Nov 16 - Nov 21 intentions"
+        }
+      ],
+      "rationale": "R1: printed as Mon-Sat 9:00am in the schedule boxes of both issues; daily intentions run Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helen-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 1,
+          "said": "Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 1,
+          "said": "Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 2,
+          "said": "Daily Mass Nov 16 - Nov 21 intentions"
+        }
+      ],
+      "rationale": "R1: printed as Mon-Sat 9:00am in the schedule boxes of both issues; daily intentions run Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helen-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 1,
+          "said": "Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 1,
+          "said": "Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 2,
+          "said": "Daily Mass Nov 16 - Nov 21 intentions"
+        }
+      ],
+      "rationale": "R1: printed as Mon-Sat 9:00am in the schedule boxes of both issues; daily intentions run Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helen-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 1,
+          "said": "Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 1,
+          "said": "Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 2,
+          "said": "Daily Mass Nov 16 - Nov 21 intentions"
+        }
+      ],
+      "rationale": "R1: printed as Mon-Sat 9:00am in the schedule boxes of both issues; daily intentions run Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helen-westfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 1,
+          "said": "Reconciliation Sat 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 1,
+          "said": "Reconciliation Sat 4:00pm"
+        }
+      ],
+      "rationale": "R1: printed in both issues; no end time given, so end_time is left null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helen-westfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Anointing of the Sick Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8403d3aa",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21, 11:30AM IN THE CHURCH Anointing of the Sick Mass"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass in the church on or after as_of, open to anyone facing illness, aging or surgery (not limited to a closed group), outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helen-westfield",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-01",
+        "start_time": "19:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4c7a786",
+          "page": 2,
+          "said": "ADORATION Sunday, November 1 at 7:10pm in the church"
+        }
+      ],
+      "rationale": "R16: a one-time dated Adoration before as_of; out of seed scope. Recorded so a reviewer sees it was considered.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

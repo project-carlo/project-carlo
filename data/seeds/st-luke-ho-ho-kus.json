@@ -1,0 +1,487 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-luke-ho-ho-kus",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:17Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T16:52:30Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:59Z",
+  "summary": "One church, St. Luke, Ho-Ho-Kus. The page-1 schedule box (Sat 5 PM; Sun 8, 10, 12; Mon-Fri 9 AM; Confession Sat 1-2 PM) is identical in the Nov 8 and Nov 15 bulletins and matches each week's Mass intentions. No Adoration, holy-day or cancellation notices printed; no history stored; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "50ccb149014133da86851e6c3ab0a716a1dc930c423b46cdd5b984d7a3f57848",
+      "fetched_at": "2026-11-15T16:54:17Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d57492aaaf5ad77d01442ffc7e875e907b09c3308b1c630ad90a2befacc64d63",
+      "fetched_at": "2026-11-08T22:05:18Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-ho-ho-kus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 1,
+          "said": "Mass Schedule: Saturday.....................5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d57492aa",
+          "page": 1,
+          "said": "Mass Schedule: Saturday.....................5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 2,
+          "said": "Mass Intentions: Saturday 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d57492aa",
+          "page": 2,
+          "said": "Mass Intentions: Saturday 5pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins read (Nov 8 and Nov 15), and the 5pm Saturday intentions in both weeks agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-ho-ho-kus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 1,
+          "said": "Mass Schedule: Sunday...................... 8:00 AM 10:00 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d57492aa",
+          "page": 1,
+          "said": "Mass Schedule: Sunday...................... 8:00 AM 10:00 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 2,
+          "said": "Mass Intentions: Sunday 8am 10am 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d57492aa",
+          "page": 2,
+          "said": "Mass Intentions: Sunday 8am 10am 12pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins read, and matched by the Sunday intentions in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-ho-ho-kus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 1,
+          "said": "Mass Schedule: Sunday...................... 8:00 AM 10:00 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d57492aa",
+          "page": 1,
+          "said": "Mass Schedule: Sunday...................... 8:00 AM 10:00 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 2,
+          "said": "Mass Intentions: Sunday 8am 10am 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d57492aa",
+          "page": 2,
+          "said": "Mass Intentions: Sunday 8am 10am 12pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins read, and matched by the Sunday intentions in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-ho-ho-kus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 1,
+          "said": "Mass Schedule: Sunday...................... 8:00 AM 10:00 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d57492aa",
+          "page": 1,
+          "said": "Mass Schedule: Sunday...................... 8:00 AM 10:00 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 2,
+          "said": "Mass Intentions: Sunday 8am 10am 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d57492aa",
+          "page": 2,
+          "said": "Mass Intentions: Sunday 8am 10am 12pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins read, and matched by the Sunday intentions in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-ho-ho-kus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 1,
+          "said": "Mass Schedule: Daily M-F.....................9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d57492aa",
+          "page": 1,
+          "said": "Mass Schedule: Daily M-F.....................9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 2,
+          "said": "Mass Intentions: Monday-Friday, Nov 16-20, 9am"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily M-F 9:00AM' in the page-1 Mass Schedule box of both bulletins read; the newest week's intentions list a 9am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-ho-ho-kus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 1,
+          "said": "Mass Schedule: Daily M-F.....................9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d57492aa",
+          "page": 1,
+          "said": "Mass Schedule: Daily M-F.....................9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 2,
+          "said": "Mass Intentions: Monday-Friday, Nov 16-20, 9am"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily M-F 9:00AM' in the page-1 Mass Schedule box of both bulletins read; the newest week's intentions list a 9am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-ho-ho-kus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 1,
+          "said": "Mass Schedule: Daily M-F.....................9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d57492aa",
+          "page": 1,
+          "said": "Mass Schedule: Daily M-F.....................9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 2,
+          "said": "Mass Intentions: Monday-Friday, Nov 16-20, 9am"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily M-F 9:00AM' in the page-1 Mass Schedule box of both bulletins read; the newest week's intentions list a 9am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-ho-ho-kus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 1,
+          "said": "Mass Schedule: Daily M-F.....................9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d57492aa",
+          "page": 1,
+          "said": "Mass Schedule: Daily M-F.....................9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 2,
+          "said": "Mass Intentions: Monday-Friday, Nov 16-20, 9am"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily M-F 9:00AM' in the page-1 Mass Schedule box of both bulletins read; the newest week's intentions list a 9am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-ho-ho-kus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 1,
+          "said": "Mass Schedule: Daily M-F.....................9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d57492aa",
+          "page": 1,
+          "said": "Mass Schedule: Daily M-F.....................9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 2,
+          "said": "Mass Intentions: Monday-Friday, Nov 16-20, 9am"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily M-F 9:00AM' in the page-1 Mass Schedule box of both bulletins read; the newest week's intentions list a 9am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-ho-ho-kus",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50ccb149",
+          "page": 1,
+          "said": "Confessions Saturdays from 1:00 - 2:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d57492aa",
+          "page": 1,
+          "said": "Confessions Saturdays from 1:00 - 2:00pm"
+        }
+      ],
+      "rationale": "R1, R35: printed on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

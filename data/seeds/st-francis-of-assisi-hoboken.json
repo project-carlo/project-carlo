@@ -1,0 +1,767 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-francis-of-assisi-hoboken",
+  "status": "approved",
+  "as_of": "2026-11-15T16:53:46Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:30:49Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:18:52Z",
+  "summary": "One church. Both November bulletins print the same schedule box: daily Mass 8 AM Mon-Sat, Sat 5 PM vigil, Sunday 7:30, 9:30, 11:00 (Italian), 12:15 and 6 PM, Thursday Adoration 8 AM-7 PM with a 7 PM Novena Mass, and Saturday confession at 4 PM. Open: whether the Nov. 24 7 PM memorial Mass for the pastor's sister is public.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c5c6195c4779c9ee63a4225f73760deab2c0041001ee4df099807d2d39a3da73",
+      "fetched_at": "2026-11-15T16:53:46Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "da1afcbb8dba23e5c4ec8510f236d196f515834b545910379582dc736f67b93e",
+      "fetched_at": "2026-11-08T16:02:50Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 1,
+          "said": "Daily Mass: 8AM Monday—Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 1,
+          "said": "Daily Mass: 8AM Monday—Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 2,
+          "said": "8:00 AM intention listed each day Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 2,
+          "said": "8:00 AM intention listed each day Monday-Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the Mass schedule box of both bulletins read prints daily Mass at 8 AM Monday to Saturday; each week's intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 1,
+          "said": "Daily Mass: 8AM Monday—Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 1,
+          "said": "Daily Mass: 8AM Monday—Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 2,
+          "said": "8:00 AM intention listed each day Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 2,
+          "said": "8:00 AM intention listed each day Monday-Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the Mass schedule box of both bulletins read prints daily Mass at 8 AM Monday to Saturday; each week's intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 1,
+          "said": "Daily Mass: 8AM Monday—Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 1,
+          "said": "Daily Mass: 8AM Monday—Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 2,
+          "said": "8:00 AM intention listed each day Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 2,
+          "said": "8:00 AM intention listed each day Monday-Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the Mass schedule box of both bulletins read prints daily Mass at 8 AM Monday to Saturday; each week's intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 1,
+          "said": "Daily Mass: 8AM Monday—Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 1,
+          "said": "Daily Mass: 8AM Monday—Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 2,
+          "said": "8:00 AM intention listed each day Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 2,
+          "said": "8:00 AM intention listed each day Monday-Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the Mass schedule box of both bulletins read prints daily Mass at 8 AM Monday to Saturday; each week's intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 1,
+          "said": "Daily Mass: 8AM Monday—Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 1,
+          "said": "Daily Mass: 8AM Monday—Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 2,
+          "said": "8:00 AM intention listed each day Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 2,
+          "said": "8:00 AM intention listed each day Monday-Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the Mass schedule box of both bulletins read prints daily Mass at 8 AM Monday to Saturday; each week's intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 1,
+          "said": "Daily Mass: 8AM Monday—Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 1,
+          "said": "Daily Mass: 8AM Monday—Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 2,
+          "said": "8:00 AM intention listed each day Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 2,
+          "said": "8:00 AM intention listed each day Monday-Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the Mass schedule box of both bulletins read prints daily Mass at 8 AM Monday to Saturday; each week's intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 1,
+          "said": "Saturday Vigil at 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 1,
+          "said": "Saturday Vigil at 5:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 1,
+          "said": "Sunday Mass at 7:30 AM; 9:30 AM; 11:00 (Italian); 12:15 PM and 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 1,
+          "said": "Sunday Mass at 7:30 AM; 9:30 AM; 11:00 (Italian); 12:15 PM and 6:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 1,
+          "said": "Sunday Mass at 7:30 AM; 9:30 AM; 11:00 (Italian); 12:15 PM and 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 1,
+          "said": "Sunday Mass at 7:30 AM; 9:30 AM; 11:00 (Italian); 12:15 PM and 6:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 1,
+          "said": "Sunday Mass at 7:30 AM; 9:30 AM; 11:00 (Italian); 12:15 PM and 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 1,
+          "said": "Sunday Mass at 7:30 AM; 9:30 AM; 11:00 (Italian); 12:15 PM and 6:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 1,
+          "said": "Sunday Mass at 7:30 AM; 9:30 AM; 11:00 (Italian); 12:15 PM and 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 1,
+          "said": "Sunday Mass at 7:30 AM; 9:30 AM; 11:00 (Italian); 12:15 PM and 6:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Italian"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 1,
+          "said": "Sunday Mass at 7:30 AM; 9:30 AM; 11:00 (Italian); 12:15 PM and 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 1,
+          "said": "Sunday Mass at 7:30 AM; 9:30 AM; 11:00 (Italian); 12:15 PM and 6:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Novena Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament and Novena Mass: Thursdays 8 AM—7 PM with Mass at 7 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament and Novena Mass: Thursdays 8 AM—7 PM with Mass at 7 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 2,
+          "said": "THURSDAY 7:00 PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 2,
+          "said": "THURSDAY 7:00 PM intention"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins prints the Thursday 7 PM Mass; both weeks' intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament and Novena Mass: Thursdays 8 AM—7 PM with Mass at 7 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament and Novena Mass: Thursdays 8 AM—7 PM with Mass at 7 PM."
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 1,
+          "said": "CONFESSION Saturdays 4:00 PM and by request."
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 1,
+          "said": "CONFESSION Saturdays 4:00 PM and by request."
+        }
+      ],
+      "rationale": "R1, R35: in both bulletins' schedule box; no end time is given, so POLICY, Times leaves end_time null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 1,
+          "said": "CONFESSION Saturdays 4:00 PM and by request."
+        }
+      ],
+      "rationale": "R26: confession by request has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In memory of Fr. Chris' sister"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5c6195c",
+          "page": 2,
+          "said": "PRAYERS FOR FR. CHRIS & FAMILY — A reminder that the parish will host a special mass on Tuesday, Nov. 24 at 7PM in memory of Fr. Chris' sister, Maisonette Lao Panlilio Mangio."
+        },
+        {
+          "source": "agent",
+          "bulletin": "da1afcbb",
+          "page": 2,
+          "said": "the parish will host a mass on Tuesday, Nov. 24 at 7PM in memory of Fr. Chris' sister"
+        }
+      ],
+      "rationale": "R30: POLICY treats a memorial Mass for one person as closed unless the bulletin invites everyone; the notice announces it to the parish under 'Prayers for Fr. Chris & Family' but issues no explicit invitation. Leaning leave out per POLICY's default; including it is reasonable if the announcement is read as an invitation.",
+      "question": "Include the Tuesday, Nov. 24, 7 PM Mass the parish hosts in memory of Fr. Chris's sister?",
+      "options": [
+        {
+          "label": "Include it",
+          "entry": {
+            "church_slug": "st-francis-of-assisi-hoboken",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-24",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In memory of Fr. Chris' sister"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:18:52Z"
+      }
+    }
+  ]
+}

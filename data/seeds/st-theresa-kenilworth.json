@@ -1,0 +1,1922 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-theresa-kenilworth",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:48Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T18:29:07Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:21:12Z",
+  "summary": "One church. Mass and Saturday Confession times agree in both bulletins read (Nov 8, Nov 15) and on the website. Open: weekday Confession 'after all Masses, upon request' (C5), Monday Adoration's end (6:15 in the weekly listing vs 6:30 in the box), and a website-only Spanish Mass on third Sundays.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "eeb91a16ed78a37321a84ba48e0bbb2b46334322886514e5df3b3a6dcfee1254",
+      "fetched_at": "2026-11-15T16:54:48Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a1b3d3b0dbc33069afa2522a9b6cea1706e52c6c20ef61e9687e365aa2b7d263",
+      "fetched_at": "2026-11-08T22:05:21Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Sat urday: 9:00 am / 5:30 pm - Sunday Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Sat urday: 9:00 am / 5:30 pm - Sunday Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "5:30 PM (Saturday intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "5:30 PM (Saturday intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and the Saturday intentions of both bulletins read; the website gives Saturday Vigil 5:30 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Sat urday: 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Sat urday: 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "9:00 AM (Saturday intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "9:00 AM (Saturday intentions)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Sunday: 9:00 am, 10:30 am, 12:00 pm (Noon), 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Sunday: 9:00 am, 10:30 am, 12:00 pm (Noon), 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "Sunday intentions 9:00 AM, 10:30 AM, 12:00 PM, 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "Sunday intentions 9:00 AM, 10:30 AM, 12:00 PM, 5:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and Sunday intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Sunday: 9:00 am, 10:30 am, 12:00 pm (Noon), 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Sunday: 9:00 am, 10:30 am, 12:00 pm (Noon), 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "Sunday intentions 9:00 AM, 10:30 AM, 12:00 PM, 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "Sunday intentions 9:00 AM, 10:30 AM, 12:00 PM, 5:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and Sunday intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Sunday: 9:00 am, 10:30 am, 12:00 pm (Noon), 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Sunday: 9:00 am, 10:30 am, 12:00 pm (Noon), 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "Sunday intentions 9:00 AM, 10:30 AM, 12:00 PM, 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "Sunday intentions 9:00 AM, 10:30 AM, 12:00 PM, 5:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and Sunday intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Sunday: 9:00 am, 10:30 am, 12:00 pm (Noon), 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Sunday: 9:00 am, 10:30 am, 12:00 pm (Noon), 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "Sunday intentions 9:00 AM, 10:30 AM, 12:00 PM, 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "Sunday intentions 9:00 AM, 10:30 AM, 12:00 PM, 5:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and Sunday intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        }
+      ],
+      "rationale": "R1, R35: 'Weekday' is Monday to Friday, Saturday being listed separately; the intentions list both Masses each weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        }
+      ],
+      "rationale": "R1, R35: 'Weekday' is Monday to Friday, Saturday being listed separately; the intentions list both Masses each weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        }
+      ],
+      "rationale": "R1, R35: 'Weekday' is Monday to Friday, Saturday being listed separately; the intentions list both Masses each weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        }
+      ],
+      "rationale": "R1, R35: 'Weekday' is Monday to Friday, Saturday being listed separately; the intentions list both Masses each weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        }
+      ],
+      "rationale": "R1, R35: 'Weekday' is Monday to Friday, Saturday being listed separately; the intentions list both Masses each weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        }
+      ],
+      "rationale": "R1, R35: 'Weekday' is Monday to Friday, Saturday being listed separately; the intentions list both Masses each weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        }
+      ],
+      "rationale": "R1, R35: 'Weekday' is Monday to Friday, Saturday being listed separately; the intentions list both Masses each weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        }
+      ],
+      "rationale": "R1, R35: 'Weekday' is Monday to Friday, Saturday being listed separately; the intentions list both Masses each weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        }
+      ],
+      "rationale": "R1, R35: 'Weekday' is Monday to Friday, Saturday being listed separately; the intentions list both Masses each weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weekday: 7:00 am, 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "7:00 AM and 9:00 AM intentions Monday to Friday"
+        }
+      ],
+      "rationale": "R1, R35: 'Weekday' is Monday to Friday, Saturday being listed separately; the intentions list both Masses each weekday in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Monday, also at 6:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Monday, also at 6:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "Monday 6:30 PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "Monday 6:30 PM intention"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and Monday intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Italian"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "First Friday of the Month: 6:30 pm (Italian Masses)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "First Friday of the Month: 6:30 pm (Italian Masses)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "ITALIAN MASSES First Friday of every month at 6:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "ITALIAN MASSES First Friday of every month at 6:30PM"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: a named first-Friday Mass is weekly with weeks_of_month; printed in both bulletins and on the website (Italian Memorial Mass, First Friday - 6:30 pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Reconciliation Saturday: 4:00 pm—5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Reconciliation Saturday: 4:00 pm—5:30 pm"
+        }
+      ],
+      "rationale": "R1: Reconciliation box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 AM Mass, on request"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request is included at POLICY's time (R10: 30 minutes after a weekday Mass starts). 'Upon request' is not 'by appointment', but no clock time is printed.",
+      "question": "Add weekday Confession after each weekday Mass ('After All Masses. Always Upon Request')?",
+      "options": [
+        {
+          "label": "After each weekday Mass (30 min after it starts)",
+          "entry": {
+            "church_slug": "st-theresa-kenilworth",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 AM Mass, on request"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:12Z"
+      },
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 AM Mass, on request"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request is included at POLICY's time (R10: 30 minutes after a weekday Mass starts). 'Upon request' is not 'by appointment', but no clock time is printed.",
+      "question": "Add weekday Confession after each weekday Mass ('After All Masses. Always Upon Request')?",
+      "options": [
+        {
+          "label": "After each weekday Mass (30 min after it starts)",
+          "entry": {
+            "church_slug": "st-theresa-kenilworth",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 AM Mass, on request"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:12Z"
+      },
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 AM Mass, on request"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request is included at POLICY's time (R10: 30 minutes after a weekday Mass starts). 'Upon request' is not 'by appointment', but no clock time is printed.",
+      "question": "Add weekday Confession after each weekday Mass ('After All Masses. Always Upon Request')?",
+      "options": [
+        {
+          "label": "After each weekday Mass (30 min after it starts)",
+          "entry": {
+            "church_slug": "st-theresa-kenilworth",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 AM Mass, on request"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:12Z"
+      },
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 AM Mass, on request"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request is included at POLICY's time (R10: 30 minutes after a weekday Mass starts). 'Upon request' is not 'by appointment', but no clock time is printed.",
+      "question": "Add weekday Confession after each weekday Mass ('After All Masses. Always Upon Request')?",
+      "options": [
+        {
+          "label": "After each weekday Mass (30 min after it starts)",
+          "entry": {
+            "church_slug": "st-theresa-kenilworth",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 AM Mass, on request"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:12Z"
+      },
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 AM Mass, on request"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request is included at POLICY's time (R10: 30 minutes after a weekday Mass starts). 'Upon request' is not 'by appointment', but no clock time is printed.",
+      "question": "Add weekday Confession after each weekday Mass ('After All Masses. Always Upon Request')?",
+      "options": [
+        {
+          "label": "After each weekday Mass (30 min after it starts)",
+          "entry": {
+            "church_slug": "st-theresa-kenilworth",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 AM Mass, on request"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:12Z"
+      },
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass, on request"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request is included at POLICY's time (R10: 30 minutes after a weekday Mass starts). 'Upon request' is not 'by appointment', but no clock time is printed.",
+      "question": "Add weekday Confession after each weekday Mass ('After All Masses. Always Upon Request')?",
+      "options": [
+        {
+          "label": "After each weekday Mass (30 min after it starts)",
+          "entry": {
+            "church_slug": "st-theresa-kenilworth",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 9:00 AM Mass, on request"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:12Z"
+      },
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass, on request"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request is included at POLICY's time (R10: 30 minutes after a weekday Mass starts). 'Upon request' is not 'by appointment', but no clock time is printed.",
+      "question": "Add weekday Confession after each weekday Mass ('After All Masses. Always Upon Request')?",
+      "options": [
+        {
+          "label": "After each weekday Mass (30 min after it starts)",
+          "entry": {
+            "church_slug": "st-theresa-kenilworth",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 9:00 AM Mass, on request"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:12Z"
+      },
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass, on request"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request is included at POLICY's time (R10: 30 minutes after a weekday Mass starts). 'Upon request' is not 'by appointment', but no clock time is printed.",
+      "question": "Add weekday Confession after each weekday Mass ('After All Masses. Always Upon Request')?",
+      "options": [
+        {
+          "label": "After each weekday Mass (30 min after it starts)",
+          "entry": {
+            "church_slug": "st-theresa-kenilworth",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 9:00 AM Mass, on request"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:12Z"
+      },
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass, on request"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request is included at POLICY's time (R10: 30 minutes after a weekday Mass starts). 'Upon request' is not 'by appointment', but no clock time is printed.",
+      "question": "Add weekday Confession after each weekday Mass ('After All Masses. Always Upon Request')?",
+      "options": [
+        {
+          "label": "After each weekday Mass (30 min after it starts)",
+          "entry": {
+            "church_slug": "st-theresa-kenilworth",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 9:00 AM Mass, on request"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:12Z"
+      },
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass, on request"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request is included at POLICY's time (R10: 30 minutes after a weekday Mass starts). 'Upon request' is not 'by appointment', but no clock time is printed.",
+      "question": "Add weekday Confession after each weekday Mass ('After All Masses. Always Upon Request')?",
+      "options": [
+        {
+          "label": "After each weekday Mass (30 min after it starts)",
+          "entry": {
+            "church_slug": "st-theresa-kenilworth",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 9:00 AM Mass, on request"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:12Z"
+      },
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 6:30 PM Mass, on request"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Weeksday's: After All Masses. Always Upon Request"
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request is included at POLICY's time (R10: 30 minutes after a weekday Mass starts). 'Upon request' is not 'by appointment', but no clock time is printed.",
+      "question": "Add weekday Confession after each weekday Mass ('After All Masses. Always Upon Request')?",
+      "options": [
+        {
+          "label": "After each weekday Mass (30 min after it starts)",
+          "entry": {
+            "church_slug": "st-theresa-kenilworth",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 6:30 PM Mass, on request"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:12Z"
+      },
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "18:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Eucharistic Adoration Mondays—12:30 pm—6:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "Eucharistic Adoration Mondays—12:30 pm—6:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 3,
+          "said": "Eucharistic Adoration 12:30 – 6:15 PM – In the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 3,
+          "said": "Eucharistic Adoration 12:30 – 6:15 PM – In the Chapel"
+        }
+      ],
+      "rationale": "C8: the standing Devotions box says 6:30 pm and the dated Monday listing of both weeks says 6:15 PM; the website gives no Adoration time. Leaning 6:15 because the weekly listing is re-edited each week, repeats it in both issues, and Adoration must end before the 6:30 PM Mass. The chapel is taken to be in the church (same listing as the church's Masses).",
+      "question": "Monday Adoration ends at 6:15 PM (weekly calendar) or 6:30 PM (schedule box)?",
+      "options": [
+        {
+          "label": "Mondays 12:30-6:15 PM in the Chapel",
+          "entry": {
+            "church_slug": "st-theresa-kenilworth",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": "18:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mondays 12:30-6:30 PM",
+          "entry": {
+            "church_slug": "st-theresa-kenilworth",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": "18:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:12Z"
+      }
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.thechurchofsttheresa.org/",
+          "said": "Spanish Mass, Third Sunday each month 3:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Sunday: 9:00 am, 10:30 am, 12:00 pm (Noon), 5:00 pm"
+        }
+      ],
+      "rationale": "R6, R29: the parish website (homepage and mass.html, checked 2026-11-22, carrying this week's Presentation reflection and (c) 2026) lists it with the Italian First Friday Mass. Neither bulletin prints it, though the bulletins print the Italian Mass, and the newest covers a third Sunday (Nov 15) whose intentions list only 9, 10:30, 12 and 5. A missing mention is not a conflict, and a Spanish Mass may carry no intention, so leaning include; but whether it continues is in doubt.",
+      "question": "Add the website's Spanish Mass, third Sundays 3:00 PM, which the bulletins never print?",
+      "options": [
+        {
+          "label": "Third Sundays 3:00 PM (Spanish)",
+          "entry": {
+            "church_slug": "st-theresa-kenilworth",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "third"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:12Z"
+      }
+    },
+    {
+      "id": "s33",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-kenilworth",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "First Friday Exposition and Devotion including the Litany of the Sacred Heart of Jesus on First Friday of every month at 9:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1b3d3b0",
+          "page": 1,
+          "said": "First Friday Exposition and Devotion including the Litany of the Sacred Heart of Jesus on First Friday of every month at 9:00 am Mass"
+        }
+      ],
+      "rationale": "POLICY Final source checks, R24/R26 (as former C6): exposition tied to the 9:00 AM Mass has no start or end time of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 1,
+          "said": "Miraculous Medal Novena every Monday at the 9:00 am and the 6:30 pm Masses; St. Theresa Novena every Thursday at the 9:00 am Mass; Divine Mercy every First Sunday of the Month, after the 12:00 pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeb91a16",
+          "page": 4,
+          "said": "Recitation of the Holy Rosary and Divine Mercy Chaplet after the 9:00am Mass"
+        }
+      ],
+      "rationale": "R24: novenas, Rosary and Divine Mercy devotions are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

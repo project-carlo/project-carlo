@@ -1,0 +1,2237 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-stanislaus-kostka-garfield",
+  "status": "approved",
+  "as_of": "2026-11-15T16:26:26Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T18:09:18Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:21:00Z",
+  "summary": "One church (St. Stanislaus Kostka, Garfield; Polish/English). Masses and Confession are printed identically in the schedule box of both bulletins read (Nov 8 and Nov 15) and on the website; intentions confirm Saturday 7 and 8 AM. Open: the convent Adoration Chapel (Mon-Sat 7 AM-7 PM, address not given) and whether first Thursday/Friday 6:30-7:30 PM Confession replaces the regular 6:30-6:55 PM window.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1830d45e36692f5c6dcbb7a5f4da77d8188a6ed815b952982ba17c18a874d143",
+      "fetched_at": "2026-11-15T16:26:26Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e8154ef48b8d712bae2b986c56af969127283b68cbcb5418a32e644927b2bfc2",
+      "fetched_at": "2026-11-08T15:49:56Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Saturday Evening: 5:30 PM (EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Saturday Evening: 5:30 PM (EN), 7:00 PM (PL)"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Masses box of both bulletins read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Saturday Evening: 5:30 PM (EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Saturday Evening: 5:30 PM (EN), 7:00 PM (PL)"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Masses box of both bulletins read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Sunday: 7:00AM(PL),8:30AM(EN), 10:30 AM (PL), 12:00 PM (EN),7:00PM(PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Sunday: 7:00AM(PL),8:30AM(EN), 10:30 AM (PL), 12:00 PM (EN),7:00PM(PL)"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Masses box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Sunday: 7:00AM(PL),8:30AM(EN), 10:30 AM (PL), 12:00 PM (EN),7:00PM(PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Sunday: 7:00AM(PL),8:30AM(EN), 10:30 AM (PL), 12:00 PM (EN),7:00PM(PL)"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Masses box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Sunday: 7:00AM(PL),8:30AM(EN), 10:30 AM (PL), 12:00 PM (EN),7:00PM(PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Sunday: 7:00AM(PL),8:30AM(EN), 10:30 AM (PL), 12:00 PM (EN),7:00PM(PL)"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Masses box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Sunday: 7:00AM(PL),8:30AM(EN), 10:30 AM (PL), 12:00 PM (EN),7:00PM(PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Sunday: 7:00AM(PL),8:30AM(EN), 10:30 AM (PL), 12:00 PM (EN),7:00PM(PL)"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Masses box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Sunday: 7:00AM(PL),8:30AM(EN), 10:30 AM (PL), 12:00 PM (EN),7:00PM(PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Sunday: 7:00AM(PL),8:30AM(EN), 10:30 AM (PL), 12:00 PM (EN),7:00PM(PL)"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Masses box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/21 Saturday/Sobota 7:00AM ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 2,
+          "said": "11/14 Saturday/Sobota 7:00AM ... 8:00AM"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list 7:00 AM Mass Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/21 Saturday/Sobota 7:00AM ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 2,
+          "said": "11/14 Saturday/Sobota 7:00AM ... 8:00AM"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list 7:00 AM Mass Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/21 Saturday/Sobota 7:00AM ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 2,
+          "said": "11/14 Saturday/Sobota 7:00AM ... 8:00AM"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list 7:00 AM Mass Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/21 Saturday/Sobota 7:00AM ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 2,
+          "said": "11/14 Saturday/Sobota 7:00AM ... 8:00AM"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list 7:00 AM Mass Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/21 Saturday/Sobota 7:00AM ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 2,
+          "said": "11/14 Saturday/Sobota 7:00AM ... 8:00AM"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list 7:00 AM Mass Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/21 Saturday/Sobota 7:00AM ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 2,
+          "said": "11/14 Saturday/Sobota 7:00AM ... 8:00AM"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list 7:00 AM Mass Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/21 Saturday/Sobota 7:00AM ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 2,
+          "said": "11/14 Saturday/Sobota 7:00AM ... 8:00AM"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list 8:00 AM Mass Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/21 Saturday/Sobota 7:00AM ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 2,
+          "said": "11/14 Saturday/Sobota 7:00AM ... 8:00AM"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list 8:00 AM Mass Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/21 Saturday/Sobota 7:00AM ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 2,
+          "said": "11/14 Saturday/Sobota 7:00AM ... 8:00AM"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list 8:00 AM Mass Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/21 Saturday/Sobota 7:00AM ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 2,
+          "said": "11/14 Saturday/Sobota 7:00AM ... 8:00AM"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list 8:00 AM Mass Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/21 Saturday/Sobota 7:00AM ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 2,
+          "said": "11/14 Saturday/Sobota 7:00AM ... 8:00AM"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list 8:00 AM Mass Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/21 Saturday/Sobota 7:00AM ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 2,
+          "said": "11/14 Saturday/Sobota 7:00AM ... 8:00AM"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list 8:00 AM Mass Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/16-11/20 Monday-Friday 7:00PM intentions"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list a 7:00 PM Mass Monday to Friday (the website notes the Mon/Wed/Fri devotions start at 7 PM with Mass after; Saturday's 7 PM is the Polish vigil, its own slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/16-11/20 Monday-Friday 7:00PM intentions"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list a 7:00 PM Mass Monday to Friday (the website notes the Mon/Wed/Fri devotions start at 7 PM with Mass after; Saturday's 7 PM is the Polish vigil, its own slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/16-11/20 Monday-Friday 7:00PM intentions"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list a 7:00 PM Mass Monday to Friday (the website notes the Mon/Wed/Fri devotions start at 7 PM with Mass after; Saturday's 7 PM is the Polish vigil, its own slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/16-11/20 Monday-Friday 7:00PM intentions"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list a 7:00 PM Mass Monday to Friday (the website notes the Mon/Wed/Fri devotions start at 7 PM with Mass after; Saturday's 7 PM is the Polish vigil, its own slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Weekdays: 7:00AM(PL),8:00AM(EN), 7:00 PM (PL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 2,
+          "said": "11/16-11/20 Monday-Friday 7:00PM intentions"
+        }
+      ],
+      "rationale": "R1: Weekdays line of the Holy Masses box in both bulletins; both weeks' intentions list a 7:00 PM Mass Monday to Friday (the website notes the Mon/Wed/Fri devotions start at 7 PM with Mass after; Saturday's 7 PM is the Polish vigil, its own slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 7:30 AM - 7:55 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 7:30 AM - 7:55 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Penance box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 7:30 AM - 7:55 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 7:30 AM - 7:55 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Penance box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 7:30 AM - 7:55 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 7:30 AM - 7:55 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Penance box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 7:30 AM - 7:55 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 7:30 AM - 7:55 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Penance box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 7:30 AM - 7:55 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 7:30 AM - 7:55 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Penance box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 7:30 AM - 7:55 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 7:30 AM - 7:55 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Penance box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "18:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 6:30 PM - 6:55 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 6:30 PM - 6:55 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Penance box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "18:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 6:30 PM - 6:55 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 6:30 PM - 6:55 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Penance box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "18:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 6:30 PM - 6:55 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 6:30 PM - 6:55 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Penance box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "18:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 6:30 PM - 6:55 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Penance / Spowiedź Monday - Saturday: 6:30 PM - 6:55 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Penance box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "18:55",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": true,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Monday - Saturday: 6:30 PM - 6:55 PM; First Thursday and First Friday: 6:30 PM - 7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Monday - Saturday: 6:30 PM - 6:55 PM; First Thursday and First Friday: 6:30 PM - 7:30 PM"
+        }
+      ],
+      "rationale": "R30, leaning per C4: both windows start at 6:30 PM, so on first Thursdays/Fridays the longer one covers the regular one; keeping both would list overlapping confessions. The first-week slots are settled separately.",
+      "question": "On first Thursdays and Fridays, does the 6:30-7:30 PM Confession replace the regular 6:30-6:55 PM one?",
+      "options": [
+        {
+          "label": "Yes: regular 6:30-6:55 PM on other weeks only",
+          "entry": {
+            "church_slug": "st-stanislaus-kostka-garfield",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": "18:55",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": true,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "No: regular 6:30-6:55 PM every week as well",
+          "entry": {
+            "church_slug": "st-stanislaus-kostka-garfield",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": "18:55",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:00Z"
+      },
+      "group": "firstconf"
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "18:55",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": true,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Monday - Saturday: 6:30 PM - 6:55 PM; First Thursday and First Friday: 6:30 PM - 7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Monday - Saturday: 6:30 PM - 6:55 PM; First Thursday and First Friday: 6:30 PM - 7:30 PM"
+        }
+      ],
+      "rationale": "R30, leaning per C4: both windows start at 6:30 PM, so on first Thursdays/Fridays the longer one covers the regular one; keeping both would list overlapping confessions. The first-week slots are settled separately.",
+      "question": "On first Thursdays and Fridays, does the 6:30-7:30 PM Confession replace the regular 6:30-6:55 PM one?",
+      "options": [
+        {
+          "label": "Yes: regular 6:30-6:55 PM on other weeks only",
+          "entry": {
+            "church_slug": "st-stanislaus-kostka-garfield",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": "18:55",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": true,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "No: regular 6:30-6:55 PM every week as well",
+          "entry": {
+            "church_slug": "st-stanislaus-kostka-garfield",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": "18:55",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:00Z"
+      },
+      "group": "firstconf"
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "First Thursday and First Friday: 6:30 PM - 7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "First Thursday and First Friday: 6:30 PM - 7:30 PM"
+        }
+      ],
+      "rationale": "R1, R11: printed in the Penance box of both bulletins read; named by week of the month, so weekly with weeks_of_month first.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "First Thursday and First Friday: 6:30 PM - 7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "First Thursday and First Friday: 6:30 PM - 7:30 PM"
+        }
+      ],
+      "rationale": "R1, R11: printed in the Penance box of both bulletins read; named by week of the month, so weekly with weeks_of_month first.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (Convent)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel(Convent) PON-SOB / MON-SAT, 7AM-7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel(Convent) PON-SOB / MON-SAT, 7AM-7PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ststangarfield.org/",
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel (Convent) PON – SOB / MON- SAT, 7AM -7PM"
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the parish lists its own Adoration Chapel in the convent in the schedule box of both bulletins and on its website (R38), but no source gives the convent's address, so whether it is on the church grounds at 184 Ray Street is unclear. Leaning include: it is the parish's own convent (parish Bible meetings are held 'w konwencie') with no other address given.",
+      "question": "Include the convent Adoration Chapel's Mon-Sat 7 AM-7 PM hours at St. Stanislaus Kostka Church?",
+      "options": [
+        {
+          "label": "Include at the church, noted as the convent chapel",
+          "entry": {
+            "church_slug": "st-stanislaus-kostka-garfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel (Convent)"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:00Z"
+      },
+      "group": "convent"
+    },
+    {
+      "id": "s40",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (Convent)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel(Convent) PON-SOB / MON-SAT, 7AM-7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel(Convent) PON-SOB / MON-SAT, 7AM-7PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ststangarfield.org/",
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel (Convent) PON – SOB / MON- SAT, 7AM -7PM"
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the parish lists its own Adoration Chapel in the convent in the schedule box of both bulletins and on its website (R38), but no source gives the convent's address, so whether it is on the church grounds at 184 Ray Street is unclear. Leaning include: it is the parish's own convent (parish Bible meetings are held 'w konwencie') with no other address given.",
+      "question": "Include the convent Adoration Chapel's Mon-Sat 7 AM-7 PM hours at St. Stanislaus Kostka Church?",
+      "options": [
+        {
+          "label": "Include at the church, noted as the convent chapel",
+          "entry": {
+            "church_slug": "st-stanislaus-kostka-garfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel (Convent)"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:00Z"
+      },
+      "group": "convent"
+    },
+    {
+      "id": "s41",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (Convent)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel(Convent) PON-SOB / MON-SAT, 7AM-7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel(Convent) PON-SOB / MON-SAT, 7AM-7PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ststangarfield.org/",
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel (Convent) PON – SOB / MON- SAT, 7AM -7PM"
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the parish lists its own Adoration Chapel in the convent in the schedule box of both bulletins and on its website (R38), but no source gives the convent's address, so whether it is on the church grounds at 184 Ray Street is unclear. Leaning include: it is the parish's own convent (parish Bible meetings are held 'w konwencie') with no other address given.",
+      "question": "Include the convent Adoration Chapel's Mon-Sat 7 AM-7 PM hours at St. Stanislaus Kostka Church?",
+      "options": [
+        {
+          "label": "Include at the church, noted as the convent chapel",
+          "entry": {
+            "church_slug": "st-stanislaus-kostka-garfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel (Convent)"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:00Z"
+      },
+      "group": "convent"
+    },
+    {
+      "id": "s42",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (Convent)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel(Convent) PON-SOB / MON-SAT, 7AM-7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel(Convent) PON-SOB / MON-SAT, 7AM-7PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ststangarfield.org/",
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel (Convent) PON – SOB / MON- SAT, 7AM -7PM"
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the parish lists its own Adoration Chapel in the convent in the schedule box of both bulletins and on its website (R38), but no source gives the convent's address, so whether it is on the church grounds at 184 Ray Street is unclear. Leaning include: it is the parish's own convent (parish Bible meetings are held 'w konwencie') with no other address given.",
+      "question": "Include the convent Adoration Chapel's Mon-Sat 7 AM-7 PM hours at St. Stanislaus Kostka Church?",
+      "options": [
+        {
+          "label": "Include at the church, noted as the convent chapel",
+          "entry": {
+            "church_slug": "st-stanislaus-kostka-garfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel (Convent)"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:00Z"
+      },
+      "group": "convent"
+    },
+    {
+      "id": "s43",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (Convent)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel(Convent) PON-SOB / MON-SAT, 7AM-7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel(Convent) PON-SOB / MON-SAT, 7AM-7PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ststangarfield.org/",
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel (Convent) PON – SOB / MON- SAT, 7AM -7PM"
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the parish lists its own Adoration Chapel in the convent in the schedule box of both bulletins and on its website (R38), but no source gives the convent's address, so whether it is on the church grounds at 184 Ray Street is unclear. Leaning include: it is the parish's own convent (parish Bible meetings are held 'w konwencie') with no other address given.",
+      "question": "Include the convent Adoration Chapel's Mon-Sat 7 AM-7 PM hours at St. Stanislaus Kostka Church?",
+      "options": [
+        {
+          "label": "Include at the church, noted as the convent chapel",
+          "entry": {
+            "church_slug": "st-stanislaus-kostka-garfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel (Convent)"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:00Z"
+      },
+      "group": "convent"
+    },
+    {
+      "id": "s44",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (Convent)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 1,
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel(Convent) PON-SOB / MON-SAT, 7AM-7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8154ef4",
+          "page": 1,
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel(Convent) PON-SOB / MON-SAT, 7AM-7PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ststangarfield.org/",
+          "said": "Kaplica Adoracji Najświętszego Sakramentu (Konwent) Adoration Chapel (Convent) PON – SOB / MON- SAT, 7AM -7PM"
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the parish lists its own Adoration Chapel in the convent in the schedule box of both bulletins and on its website (R38), but no source gives the convent's address, so whether it is on the church grounds at 184 Ray Street is unclear. Leaning include: it is the parish's own convent (parish Bible meetings are held 'w konwencie') with no other address given.",
+      "question": "Include the convent Adoration Chapel's Mon-Sat 7 AM-7 PM hours at St. Stanislaus Kostka Church?",
+      "options": [
+        {
+          "label": "Include at the church, noted as the convent chapel",
+          "entry": {
+            "church_slug": "st-stanislaus-kostka-garfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel (Convent)"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:00Z"
+      },
+      "group": "convent"
+    },
+    {
+      "id": "s45",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "13:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christ the King; after the 12:00 PM Mass, ending with devotions in Polish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 3,
+          "said": "Next Sunday, November 22 Solemnity of Christ the King After the 12:00 PM Mass, the Blessed Sacrament will be placed on our altar. Adoration will end with devotions in Polish at 3:00 PM."
+        }
+      ],
+      "rationale": "R1, R10, R16: dated Adoration on or after as_of; POLICY times 'after' a Sunday Mass one hour after it starts (1:00 PM); the bulletin gives the 3:00 PM end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s46",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 3,
+          "said": "We will again be collecting non-perishable food items at our annual Thanksgiving Day Mass."
+        }
+      ],
+      "rationale": "R26: no time is printed for the Thanksgiving Day Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s47",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1830d45e",
+          "page": 3,
+          "said": "recitation of the Rosary at 6:30AM from Monday through Saturday in Polish"
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

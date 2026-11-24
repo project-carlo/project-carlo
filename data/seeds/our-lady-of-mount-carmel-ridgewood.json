@@ -1,0 +1,1367 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-mount-carmel-ridgewood",
+  "status": "approved",
+  "as_of": "2026-11-15T16:53:22Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T21:23:35Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:10Z",
+  "summary": "One church. Weekend (Sat 5:30 PM; Sun 8, 9:30, 11, 12:30, 3 PM Spanish, 6:30 PM), weekday (Mon-Fri 6:30, 8:30, noon; Sat 8:30 AM), Saturday 1-2 PM Confession and 24/7 perpetual Adoration agree in both bulletins read (Nov 8 and Nov 15, 2026). No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e375fecd05e0a80369277260f4d59fa6ee4aa72f140c555f020ac966e0cf684e",
+      "fetched_at": "2026-11-15T16:53:22Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c7886b8796f9757b40d074c8a523040cc6df40e71ae86a21337596138b5de1a5",
+      "fetched_at": "2026-11-08T16:02:16Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "COME WORSHIP WITH US WEEKENDS Saturday: 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "COME WORSHIP WITH US WEEKENDS Saturday: 5:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read; the intentions list the Saturday 5:30PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "Sunday: 8:00am, 9:30am, 11:00am, 12:30pm, 3:00pm (Spanish) and 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "Sunday: 8:00am, 9:30am, 11:00am, 12:30pm, 3:00pm (Spanish) and 6:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read; the presiders list and intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "Sunday: 8:00am, 9:30am, 11:00am, 12:30pm, 3:00pm (Spanish) and 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "Sunday: 8:00am, 9:30am, 11:00am, 12:30pm, 3:00pm (Spanish) and 6:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read; the presiders list and intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "Sunday: 8:00am, 9:30am, 11:00am, 12:30pm, 3:00pm (Spanish) and 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "Sunday: 8:00am, 9:30am, 11:00am, 12:30pm, 3:00pm (Spanish) and 6:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read; the presiders list and intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "Sunday: 8:00am, 9:30am, 11:00am, 12:30pm, 3:00pm (Spanish) and 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "Sunday: 8:00am, 9:30am, 11:00am, 12:30pm, 3:00pm (Spanish) and 6:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read; the presiders list and intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "Sunday: 8:00am, 9:30am, 11:00am, 12:30pm, 3:00pm (Spanish) and 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "Sunday: 8:00am, 9:30am, 11:00am, 12:30pm, 3:00pm (Spanish) and 6:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read; the presiders list and intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "Sunday: ... 3:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "Sunday: ... 3:00pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 6,
+          "said": "intentions Mon-Fri +6:30AM, +8:30AM, +12:00NN"
+        }
+      ],
+      "rationale": "R1: weekday schedule in the p1 box of both bulletins; the p6 intentions list all three Masses Monday to Friday (Friday's '8:30PM' is a typo for the 8:30AM line).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 6,
+          "said": "intentions Mon-Fri +6:30AM, +8:30AM, +12:00NN"
+        }
+      ],
+      "rationale": "R1: weekday schedule in the p1 box of both bulletins; the p6 intentions list all three Masses Monday to Friday (Friday's '8:30PM' is a typo for the 8:30AM line).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 6,
+          "said": "intentions Mon-Fri +6:30AM, +8:30AM, +12:00NN"
+        }
+      ],
+      "rationale": "R1: weekday schedule in the p1 box of both bulletins; the p6 intentions list all three Masses Monday to Friday (Friday's '8:30PM' is a typo for the 8:30AM line).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 6,
+          "said": "intentions Mon-Fri +6:30AM, +8:30AM, +12:00NN"
+        }
+      ],
+      "rationale": "R1: weekday schedule in the p1 box of both bulletins; the p6 intentions list all three Masses Monday to Friday (Friday's '8:30PM' is a typo for the 8:30AM line).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 6,
+          "said": "intentions Mon-Fri +6:30AM, +8:30AM, +12:00NN"
+        }
+      ],
+      "rationale": "R1: weekday schedule in the p1 box of both bulletins; the p6 intentions list all three Masses Monday to Friday (Friday's '8:30PM' is a typo for the 8:30AM line).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 6,
+          "said": "intentions Mon-Fri +6:30AM, +8:30AM, +12:00NN"
+        }
+      ],
+      "rationale": "R1: weekday schedule in the p1 box of both bulletins; the p6 intentions list all three Masses Monday to Friday (Friday's '8:30PM' is a typo for the 8:30AM line).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 6,
+          "said": "intentions Mon-Fri +6:30AM, +8:30AM, +12:00NN"
+        }
+      ],
+      "rationale": "R1: weekday schedule in the p1 box of both bulletins; the p6 intentions list all three Masses Monday to Friday (Friday's '8:30PM' is a typo for the 8:30AM line).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 6,
+          "said": "intentions Mon-Fri +6:30AM, +8:30AM, +12:00NN"
+        }
+      ],
+      "rationale": "R1: weekday schedule in the p1 box of both bulletins; the p6 intentions list all three Masses Monday to Friday (Friday's '8:30PM' is a typo for the 8:30AM line).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 6,
+          "said": "intentions Mon-Fri +6:30AM, +8:30AM, +12:00NN"
+        }
+      ],
+      "rationale": "R1: weekday schedule in the p1 box of both bulletins; the p6 intentions list all three Masses Monday to Friday (Friday's '8:30PM' is a typo for the 8:30AM line).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 6,
+          "said": "intentions Mon-Fri +6:30AM, +8:30AM, +12:00NN"
+        }
+      ],
+      "rationale": "R1: weekday schedule in the p1 box of both bulletins; the p6 intentions list all three Masses Monday to Friday (Friday's '8:30PM' is a typo for the 8:30AM line).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 6,
+          "said": "intentions Mon-Fri +6:30AM, +8:30AM, +12:00NN"
+        }
+      ],
+      "rationale": "R1: weekday schedule in the p1 box of both bulletins; the p6 intentions list all three Masses Monday to Friday (Friday's '8:30PM' is a typo for the 8:30AM line).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 6,
+          "said": "intentions Mon-Fri +6:30AM, +8:30AM, +12:00NN"
+        }
+      ],
+      "rationale": "R1: weekday schedule in the p1 box of both bulletins; the p6 intentions list all three Masses Monday to Friday (Friday's '8:30PM' is a typo for the 8:30AM line).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 6,
+          "said": "intentions Mon-Fri +6:30AM, +8:30AM, +12:00NN"
+        }
+      ],
+      "rationale": "R1: weekday schedule in the p1 box of both bulletins; the p6 intentions list all three Masses Monday to Friday (Friday's '8:30PM' is a typo for the 8:30AM line).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 6,
+          "said": "intentions Mon-Fri +6:30AM, +8:30AM, +12:00NN"
+        }
+      ],
+      "rationale": "R1: weekday schedule in the p1 box of both bulletins; the p6 intentions list all three Masses Monday to Friday (Friday's '8:30PM' is a typo for the 8:30AM line).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "WEEKDAYS 6:30am, 8:30am and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 6,
+          "said": "intentions Mon-Fri +6:30AM, +8:30AM, +12:00NN"
+        }
+      ],
+      "rationale": "R1: weekday schedule in the p1 box of both bulletins; the p6 intentions list all three Masses Monday to Friday (Friday's '8:30PM' is a typo for the 8:30AM line).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "Saturdays: 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "Saturdays: 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read; the intentions list Saturday 8:30AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION (Confessions) Saturday 1:00pm-2:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION (Confessions) Saturday 1:00pm-2:00pm"
+        }
+      ],
+      "rationale": "R1: printed on p1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Eucharistic Adoration Chapel, open 24/7"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 4,
+          "said": "PERPETUAL EUCHARISTIC ADORATION (PEA) CHAPEL IS OPEN 24/7 ... the Blessed Sacrament is exposed for quiet prayer 24 hours a day, 7 days a week"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 4,
+          "said": "Perpetual Eucharistic Adoration keeps the light shining in our church ... 24 hours a day, 7 days a week, our chapel is open"
+        }
+      ],
+      "rationale": "R1, R38: both bulletins say the Blessed Sacrament is exposed in the parish's perpetual adoration chapel 24/7; the older issue places it 'in our church'. Recorded as 00:00-23:59 each day, as other 24/7 chapels are.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Eucharistic Adoration Chapel, open 24/7"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 4,
+          "said": "PERPETUAL EUCHARISTIC ADORATION (PEA) CHAPEL IS OPEN 24/7 ... the Blessed Sacrament is exposed for quiet prayer 24 hours a day, 7 days a week"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 4,
+          "said": "Perpetual Eucharistic Adoration keeps the light shining in our church ... 24 hours a day, 7 days a week, our chapel is open"
+        }
+      ],
+      "rationale": "R1, R38: both bulletins say the Blessed Sacrament is exposed in the parish's perpetual adoration chapel 24/7; the older issue places it 'in our church'. Recorded as 00:00-23:59 each day, as other 24/7 chapels are.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Eucharistic Adoration Chapel, open 24/7"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 4,
+          "said": "PERPETUAL EUCHARISTIC ADORATION (PEA) CHAPEL IS OPEN 24/7 ... the Blessed Sacrament is exposed for quiet prayer 24 hours a day, 7 days a week"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 4,
+          "said": "Perpetual Eucharistic Adoration keeps the light shining in our church ... 24 hours a day, 7 days a week, our chapel is open"
+        }
+      ],
+      "rationale": "R1, R38: both bulletins say the Blessed Sacrament is exposed in the parish's perpetual adoration chapel 24/7; the older issue places it 'in our church'. Recorded as 00:00-23:59 each day, as other 24/7 chapels are.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Eucharistic Adoration Chapel, open 24/7"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 4,
+          "said": "PERPETUAL EUCHARISTIC ADORATION (PEA) CHAPEL IS OPEN 24/7 ... the Blessed Sacrament is exposed for quiet prayer 24 hours a day, 7 days a week"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 4,
+          "said": "Perpetual Eucharistic Adoration keeps the light shining in our church ... 24 hours a day, 7 days a week, our chapel is open"
+        }
+      ],
+      "rationale": "R1, R38: both bulletins say the Blessed Sacrament is exposed in the parish's perpetual adoration chapel 24/7; the older issue places it 'in our church'. Recorded as 00:00-23:59 each day, as other 24/7 chapels are.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Eucharistic Adoration Chapel, open 24/7"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 4,
+          "said": "PERPETUAL EUCHARISTIC ADORATION (PEA) CHAPEL IS OPEN 24/7 ... the Blessed Sacrament is exposed for quiet prayer 24 hours a day, 7 days a week"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 4,
+          "said": "Perpetual Eucharistic Adoration keeps the light shining in our church ... 24 hours a day, 7 days a week, our chapel is open"
+        }
+      ],
+      "rationale": "R1, R38: both bulletins say the Blessed Sacrament is exposed in the parish's perpetual adoration chapel 24/7; the older issue places it 'in our church'. Recorded as 00:00-23:59 each day, as other 24/7 chapels are.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Eucharistic Adoration Chapel, open 24/7"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 4,
+          "said": "PERPETUAL EUCHARISTIC ADORATION (PEA) CHAPEL IS OPEN 24/7 ... the Blessed Sacrament is exposed for quiet prayer 24 hours a day, 7 days a week"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 4,
+          "said": "Perpetual Eucharistic Adoration keeps the light shining in our church ... 24 hours a day, 7 days a week, our chapel is open"
+        }
+      ],
+      "rationale": "R1, R38: both bulletins say the Blessed Sacrament is exposed in the parish's perpetual adoration chapel 24/7; the older issue places it 'in our church'. Recorded as 00:00-23:59 each day, as other 24/7 chapels are.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Eucharistic Adoration Chapel, open 24/7"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 4,
+          "said": "PERPETUAL EUCHARISTIC ADORATION (PEA) CHAPEL IS OPEN 24/7 ... the Blessed Sacrament is exposed for quiet prayer 24 hours a day, 7 days a week"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7886b87",
+          "page": 4,
+          "said": "Perpetual Eucharistic Adoration keeps the light shining in our church ... 24 hours a day, 7 days a week, our chapel is open"
+        }
+      ],
+      "rationale": "R1, R38: both bulletins say the Blessed Sacrament is exposed in the parish's perpetual adoration chapel 24/7; the older issue places it 'in our church'. Recorded as 00:00-23:59 each day, as other 24/7 chapels are.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-ridgewood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Recovery and Healing Mass, Church of St. Mary, Closter"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 3,
+          "said": "Mass for Recovery and Healing Saturday, November 21st | 12:00 noon Church of St. Mary | 20 Legion Place, Closter, NJ"
+        }
+      ],
+      "rationale": "R22: held at another parish's church in Closter, not at OLMC.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "Other times by pre-arranged appt. with a priest. Communal Penance celebrations ... in Advent and Lent and will be announced."
+        }
+      ],
+      "rationale": "R26: by appointment or yet to be announced; no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e375fecd",
+          "page": 1,
+          "said": "HOLY DAYS Eve: 7:30pm (anticipated) 6:30am, 8:30am, and 12:00 noon"
+        }
+      ],
+      "rationale": "POLICY, Dates; R16: a generic holy-day pattern with no holy day dated in either bulletin; no date may be projected. Update mode will pick up dated holy-day Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

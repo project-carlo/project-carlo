@@ -1,0 +1,867 @@
+{
+  "schema_version": 1,
+  "parish_slug": "immaculate-heart-of-mary-mahwah",
+  "status": "approved",
+  "as_of": "2026-11-15T16:22:06Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T09:53:55Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:08Z",
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule: Mass Mon-Sat 8am, Sat 5pm vigil, Sun 7:30, 9 (Polish), 10:30 and noon, plus a First Saturday 9am Mass; confession Sat 4-4:45 and after daily Masses (8:30 per POLICY); Friday Exposition noon-7pm. One dated Mass, Dec 8 noon (Immaculate Conception). No history stored; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6c0833a5df4fb43174365c5798a76d893bf124731694fd5b0c686f16080c530b",
+      "fetched_at": "2026-11-15T16:22:06Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "694ead16df0cf4a388f4730c54a083fbc38d77c5a2fd2ef9f5f89b12c0bb3741",
+      "fetched_at": "2026-11-08T15:45:35Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "MASS SCHEDULE Weekdays and Saturday: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "MASS SCHEDULE Weekdays and Saturday: 8am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the Mass intentions list an 8am Mass every weekday and Saturday in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "MASS SCHEDULE Weekdays and Saturday: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "MASS SCHEDULE Weekdays and Saturday: 8am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the Mass intentions list an 8am Mass every weekday and Saturday in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "MASS SCHEDULE Weekdays and Saturday: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "MASS SCHEDULE Weekdays and Saturday: 8am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the Mass intentions list an 8am Mass every weekday and Saturday in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "MASS SCHEDULE Weekdays and Saturday: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "MASS SCHEDULE Weekdays and Saturday: 8am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the Mass intentions list an 8am Mass every weekday and Saturday in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "MASS SCHEDULE Weekdays and Saturday: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "MASS SCHEDULE Weekdays and Saturday: 8am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the Mass intentions list an 8am Mass every weekday and Saturday in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "MASS SCHEDULE Weekdays and Saturday: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "MASS SCHEDULE Weekdays and Saturday: 8am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the Mass intentions list an 8am Mass every weekday and Saturday in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "Saturday Vigil: 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "Saturday Vigil: 5pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, with a 5pm intention each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9am (Polish), 10:30am, 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9am (Polish), 10:30am, 12 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, with intentions at each time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9am (Polish), 10:30am, 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9am (Polish), 10:30am, 12 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, with intentions at each time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9am (Polish), 10:30am, 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9am (Polish), 10:30am, 12 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, with intentions at each time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9am (Polish), 10:30am, 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9am (Polish), 10:30am, 12 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 2,
+          "said": "There will be a 9am Mass celebrated on the First Saturday of each month for last minute Mass Intentions or for those not included in our weekly Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 2,
+          "said": "There will be a 9am Mass celebrated on the First Saturday of each month for last minute Mass Intentions or for those not included in our weekly Masses."
+        }
+      ],
+      "rationale": "R1: the regular 'Unscheduled Mass Intentions' notice in both bulletins names the first Saturday; POLICY, Weekly or dated rule 2 makes it weekly with weeks_of_month first. Open to all; the intentions are announced at the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "RECONCILIATION ... Saturday, 4pm to 4:45pm, or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "RECONCILIATION ... Saturday, 4pm to 4:45pm, or by appointment."
+        }
+      ],
+      "rationale": "R1: printed under Sacraments in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "RECONCILIATION After daily Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "RECONCILIATION After daily Masses"
+        }
+      ],
+      "rationale": "R10: 'After daily Masses' with no clock time; the daily Mass is 8am on weekdays and Saturday ('Weekdays and Saturday: 8am'), so POLICY, Times starts it 30 minutes after, at 8:30 AM, with no end time. Printed in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "RECONCILIATION After daily Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "RECONCILIATION After daily Masses"
+        }
+      ],
+      "rationale": "R10: 'After daily Masses' with no clock time; the daily Mass is 8am on weekdays and Saturday ('Weekdays and Saturday: 8am'), so POLICY, Times starts it 30 minutes after, at 8:30 AM, with no end time. Printed in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "RECONCILIATION After daily Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "RECONCILIATION After daily Masses"
+        }
+      ],
+      "rationale": "R10: 'After daily Masses' with no clock time; the daily Mass is 8am on weekdays and Saturday ('Weekdays and Saturday: 8am'), so POLICY, Times starts it 30 minutes after, at 8:30 AM, with no end time. Printed in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "RECONCILIATION After daily Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "RECONCILIATION After daily Masses"
+        }
+      ],
+      "rationale": "R10: 'After daily Masses' with no clock time; the daily Mass is 8am on weekdays and Saturday ('Weekdays and Saturday: 8am'), so POLICY, Times starts it 30 minutes after, at 8:30 AM, with no end time. Printed in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "RECONCILIATION After daily Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "RECONCILIATION After daily Masses"
+        }
+      ],
+      "rationale": "R10: 'After daily Masses' with no clock time; the daily Mass is 8am on weekdays and Saturday ('Weekdays and Saturday: 8am'), so POLICY, Times starts it 30 minutes after, at 8:30 AM, with no end time. Printed in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "RECONCILIATION After daily Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 1,
+          "said": "RECONCILIATION After daily Masses"
+        }
+      ],
+      "rationale": "R10: 'After daily Masses' with no clock time; the daily Mass is 8am on weekdays and Saturday ('Weekdays and Saturday: 8am'), so POLICY, Times starts it 30 minutes after, at 8:30 AM, with no end time. Printed in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament Every Friday - Noon to 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "694ead16",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament Every Friday - Noon to 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 5,
+          "said": "Spend time with Jesus in the Blessed Sacrament in the Church, every Friday, 12 noon - 7pm"
+        }
+      ],
+      "rationale": "R1: printed under Devotions in both bulletins read; the November notice on p5 gives the same hours in the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-mahwah",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception; with the Sacrament of Anointing"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 4,
+          "said": "MARK THE DATE: TUESDAY, DECEMBER 8 - 12 Noon MASS AND SACRAMENT OF ANOINTING THE SOLEMNITY OF THE IMMACULATE CONCEPTION OF THE BLESSED VIRGIN MARY"
+        }
+      ],
+      "rationale": "R1, R16: a holy-day Mass announced to the whole parish at a time outside the weekly schedule, after as_of; POLICY, Weekly or dated rule 7 makes it dated. Other Dec 8 Masses are not printed, so none are added (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 1,
+          "said": "RECONCILIATION ... or by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c0833a5",
+          "page": 2,
+          "said": "Immaculate Heart of Mary Novena Every Monday following the 8am Mass; Divine Mercy Chaplet Every Friday following the 8am Mass; Rosary Every Saturday following the 8am Mass"
+        }
+      ],
+      "rationale": "R24: novena, chaplet and rosary are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

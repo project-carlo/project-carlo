@@ -1,0 +1,1458 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-the-evangelist-bergenfield",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:04Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T04:11:13Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:24Z",
+  "summary": "One church, St. John the Evangelist, Bergenfield. Weekend, weekday, Saturday confession, Tue-Thu and First Friday overnight Adoration agree across the Nov 8 and Nov 15, 2026 bulletins (the newest is all images, read by render); the monthly Inclusive Family Mass and last-Tuesday Spanish Holy Hour come from the parish website (R6). Open: the monthly Tagalog Mass, whose Sunday the website gives two ways.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d8b362174c45870f06fade20393fe957a894f1146e1066db0931162f989e62a1",
+      "fetched_at": "2026-11-15T16:54:04Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "8db80ca201bcdb06a51d2c7a3e70dd421f0fe265dff3da9f4e22a499adfd70cf",
+      "fetched_at": "2026-11-08T16:03:01Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Sat Vigil: 5:30 , 7:00 PM (Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Sat Vigil: 5:30 , 7:00 PM (Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21 ... 5:30 PM William E. Nicodemus"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the newest's intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Sat Vigil: 5:30 , 7:00 PM (Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Sat Vigil: 5:30 , 7:00 PM (Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 2,
+          "said": "7:00 PM (Spa) Esmaylin & Hadassah"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; (Sp) marks it Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Sun Masses: 7:30 AM, 9:00 AM, 10:30 AM, 12:00 PM, 1:15 PM (Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Sun Masses: 7:30 AM, 9:00 AM, 10:30 AM, 12:00 PM, 1:15 PM (Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the newest's intentions for Nov 15 and 22.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Sun Masses: 7:30 AM, 9:00 AM, 10:30 AM, 12:00 PM, 1:15 PM (Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Sun Masses: 7:30 AM, 9:00 AM, 10:30 AM, 12:00 PM, 1:15 PM (Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the newest's intentions for Nov 15 and 22.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Sun Masses: 7:30 AM, 9:00 AM, 10:30 AM, 12:00 PM, 1:15 PM (Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Sun Masses: 7:30 AM, 9:00 AM, 10:30 AM, 12:00 PM, 1:15 PM (Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the newest's intentions for Nov 15 and 22.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Sun Masses: 7:30 AM, 9:00 AM, 10:30 AM, 12:00 PM, 1:15 PM (Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Sun Masses: 7:30 AM, 9:00 AM, 10:30 AM, 12:00 PM, 1:15 PM (Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 5,
+          "said": "Sun, Nov 22 | 10:30 AM Mass with Bishop Gregory Studeras"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins. The Nov 22 Mass with Bishop Studerus is this regular Mass (POLICY, Weekly or dated, rule 7), so it gets no slot of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Sun Masses: ... 1:15 PM (Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Sun Masses: ... 1:15 PM (Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; (Sp) marks it Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in every weekday of the newest's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in every weekday of the newest's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in every weekday of the newest's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in every weekday of the newest's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in every weekday of the newest's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in every weekday of the newest's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in every weekday of the newest's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in every weekday of the newest's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in every weekday of the newest's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in every weekday of the newest's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the newest's intentions for each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the newest's intentions for each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the newest's intentions for each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Daily (Mon-Fri): 7:00 AM, 9:00 AM, 6:30 PM (Tues: 6:30 PM Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the newest's intentions for each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "6:30 PM (Tues: 6:30 PM Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "6:30 PM (Tues: 6:30 PM Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 2,
+          "said": "TUESDAY, NOVEMBER 17 ... 6:30 PM (Spa) Morgan Klark"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins marks the Tuesday 6:30 PM Mass Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Sat Masses: 7:00 AM, 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Sat Masses: 7:00 AM, 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read. (The website says the first-Saturday 7:00 AM Mass is the Spanish Misa del Aurora; that is the same slot, not a new one.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Sat Masses: 7:00 AM, 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Sat Masses: 7:00 AM, 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read. (The website says the first-Saturday 7:00 AM Mass is the Spanish Misa del Aurora; that is the same slot, not a new one.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 1,
+          "said": "Penance (Sat): 1:00 PM-2:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 1,
+          "said": "Penance (Sat): 1:00 PM-2:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Main Church"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 5,
+          "said": "Join us Tue–Thu, 12:00–6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 5,
+          "said": "Eucharistic Adoration takes place in the Main Church every Tuesday, Wednesday, and Thursday from 12:00 PM to 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; the older names the Main Church. The website's 6:15 PM Benediction is outside the bulletin's stated hours, so the bulletin's 6:00 PM end stands (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Main Church"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 5,
+          "said": "Join us Tue–Thu, 12:00–6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 5,
+          "said": "Eucharistic Adoration takes place in the Main Church every Tuesday, Wednesday, and Thursday from 12:00 PM to 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; the older names the Main Church. The website's 6:15 PM Benediction is outside the bulletin's stated hours, so the bulletin's 6:00 PM end stands (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Main Church"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 5,
+          "said": "Join us Tue–Thu, 12:00–6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 5,
+          "said": "Eucharistic Adoration takes place in the Main Church every Tuesday, Wednesday, and Thursday from 12:00 PM to 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; the older names the Main Church. The website's 6:15 PM Benediction is outside the bulletin's stated hours, so the bulletin's 6:00 PM end stands (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "06:15",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Overnight in the Main Church, with a Holy Hour 7:00-8:00 PM"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 5,
+          "said": "First Fridays, 8:00 PM–6:15 AM (Holy Hour at 7:00 PM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8db80ca2",
+          "page": 5,
+          "said": "every First Friday from 8:00 PM to 6:15 AM (with a Holy Hour from 7:00 PM to 8:00 PM)"
+        },
+        {
+          "source": "website",
+          "url": "https://sjrc.org/weekly-liturgy-schedule/",
+          "said": "Monthly Overnight Adoration First Friday of each month , beginning at 7:00 PM in the Main Church"
+        }
+      ],
+      "rationale": "R1, R11/R12: printed in both bulletins. The Holy Hour (Adoration under POLICY) runs 7-8 PM straight into the overnight exposition, so this is one Adoration period from 7:00 PM to 6:15 AM Saturday; the website also says it begins at 7:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "22:00",
+        "end_time": "06:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Anointing Fire Ministry, Parish Life Center Chapel"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 5,
+          "said": "Anointing Fire Ministry Mondays, 7:00–10 PM, Parish Life Center Chapel 2nd Fri., 10:00 PM–6:30 AM, LC (Adoration)."
+        }
+      ],
+      "rationale": "R23: a prayer group's overnight Adoration in the Parish Life Center chapel, which data/churches.csv lacks; nothing places the Parish Life Center on the church's grounds.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-04",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Deanery Penance Service, St. Joseph Church, Oradell"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 5,
+          "said": "Fri, Dec 4 | 7:00 PM Advent Deanery Penance Service (St. Joseph Church, 305 Elm St., Oradell)"
+        }
+      ],
+      "rationale": "R22: held at St. Joseph Church, Oradell, another parish's church (its Advent Holy Hour poster on p4 is the same event).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sjrc.org/weekly-liturgy-schedule/",
+          "said": "Neo-Catechumenal Way ... For times and participation details, please contact the parish office."
+        }
+      ],
+      "rationale": "R24/R26: Neo-Catechumenal community Eucharists have no published time and are for the communities.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sjrc.org/weekly-liturgy-schedule/",
+          "said": "Holy Days & Holidays Mass schedule announced in the bulletin the Sunday before."
+        }
+      ],
+      "rationale": "R26: the website's holiday list (Thanksgiving, Christmas, New Year) carries no year, and the site itself says holiday times are announced in the bulletin the Sunday before; update mode will read those bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 10,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "Inclusive Family (Special Needs) Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sjrc.org/weekly-liturgy-schedule/",
+          "said": "Our Special Needs Mass is celebrated on the first Sunday of the month at 3:00 PM to welcome all families with members of differing abilities.",
+          "schedule_check": {
+            "checked_at": "2026-11-21T04:15:32Z",
+            "current_because": "Checked 2026-11-20: the same page's Mass times, Saturday 1-2 PM confessions, Tue-Thu noon exposition and 7 PM First Friday overnight adoration all match the Nov 8 and Nov 15, 2026 bulletins; nothing on it names a past date or former clergy.",
+            "bulletin": "d8b36217",
+            "fits_because": "Neither read bulletin's week (Nov 8-14, Nov 15-22) holds a first Sunday, so their silence is expected; a 3 PM Sunday Mass does not clash with the bulletin's Sunday schedule."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://sjrc.org/weekly-liturgy-schedule/",
+          "said": "Inclusive Family Mass Monthly on 1st Sunday of October through June 3:00pm",
+          "schedule_check": {
+            "checked_at": "2026-11-21T04:15:32Z",
+            "current_because": "Checked 2026-11-20: the same page's Mass times, Saturday 1-2 PM confessions, Tue-Thu noon exposition and 7 PM First Friday overnight adoration all match the Nov 8 and Nov 15, 2026 bulletins; nothing on it names a past date or former clergy.",
+            "bulletin": "d8b36217",
+            "fits_because": "Neither read bulletin's week (Nov 8-14, Nov 15-22) holds a first Sunday, so their silence is expected; a 3 PM Sunday Mass does not clash with the bulletin's Sunday schedule."
+          }
+        }
+      ],
+      "rationale": "R6, R12: the parish site gives it twice, first Sundays at 3:00 PM, open to all families; the Mass Times panel limits it to October through June, kept as the season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish Holy Hour, after the 6:30 PM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sjrc.org/weekly-liturgy-schedule/",
+          "said": "The Spanish-speaking community gathers for a Holy Hour of Adoration on the last Tuesday of each month after the 6:30 PM Mass (7:00–8:00 PM).",
+          "schedule_check": {
+            "checked_at": "2026-11-21T04:15:37Z",
+            "current_because": "Checked 2026-11-20: the same page's Mass times, Saturday 1-2 PM confessions, Tue-Thu noon exposition and 7 PM First Friday overnight adoration all match the Nov 8 and Nov 15, 2026 bulletins; nothing on it names a past date or former clergy.",
+            "bulletin": "d8b36217",
+            "fits_because": "It follows the Tuesday 6:30 PM Spanish Mass both bulletins print; neither bulletin's week (Nov 8-14, Nov 15-22) holds a last Tuesday, so their silence is expected."
+          }
+        }
+      ],
+      "rationale": "R6, R12: the parish site states a monthly Spanish Holy Hour with clock times, attached to the Spanish Tuesday Mass the bulletins confirm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Tagalog"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sjrc.org/weekly-liturgy-schedule/",
+          "said": "The Filipino community gathers for a Tagalog Mass every third Sunday of the month at 5:30 PM ."
+        },
+        {
+          "source": "website",
+          "url": "https://sjrc.org/weekly-liturgy-schedule/",
+          "said": "Misang Filipino Mass in Tagalog Monthly on 1st Sunday of each month 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d8b36217",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 15 7:30 AM ... 1:15 PM (Spa) Alfonso F. Cunanan"
+        }
+      ],
+      "rationale": "R28/C8: the parish website contradicts itself (third Sunday in the schedule text, first Sunday in its Mass Times panel), and neither bulletin prints a Tagalog Mass. The newest covers the third Sunday, Nov 15, and its intentions list no 5:30 PM Sunday Mass, which weighs against 'third'. Leaning leave out, since a wrong time is worse than a missing one; update mode can add it when a bulletin prints it.",
+      "question": "Add the monthly Tagalog Mass at 5:30 PM, and on which Sunday?",
+      "options": [
+        {
+          "label": "First Sundays 5:30 PM",
+          "entry": {
+            "church_slug": "st-john-the-evangelist-bergenfield",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Tagalog"
+          }
+        },
+        {
+          "label": "Third Sundays 5:30 PM",
+          "entry": {
+            "church_slug": "st-john-the-evangelist-bergenfield",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "third"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Tagalog"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 2,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:24Z"
+      }
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Parish Life Center Chapel (St. John the Evangelist, Bergenfield)",
+      "said": "Anointing Fire Ministry ... Parish Life Center Chapel 2nd Fri., 10:00 PM–6:30 AM, LC (Adoration).",
+      "bulletin": "d8b36217",
+      "page": 5
+    }
+  ]
+}

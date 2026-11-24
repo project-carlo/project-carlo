@@ -1,0 +1,872 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-lyndhurst",
+  "status": "approved",
+  "as_of": "2026-11-15T16:53:29Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T22:15:59Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:41Z",
+  "summary": "One church. Mass and Saturday confession times are identical in the schedule box of both bulletins read (Nov 8 and Nov 15, 2026) and match each week's intentions; no history stored. Open: weekday confession 'upon request following the 12:00pm Mass' (leaning include at 12:30 PM per C5).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ac05620af30fffd8040df797fae6df67f30d0e96cddc35ac6301cab6c161a251",
+      "fetched_at": "2026-11-15T16:53:29Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a6baae4bf019821b3af92d0bf4f53658f6029a1f87ebe9745552095b5b8aa670",
+      "fetched_at": "2026-11-08T16:02:22Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:00am, 10:30am, 12:00pm, 1:30pm(Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:00am, 10:30am, 12:00pm, 1:30pm(Spanish)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read, and in both weeks' intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:00am, 10:30am, 12:00pm, 1:30pm(Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:00am, 10:30am, 12:00pm, 1:30pm(Spanish)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read, and in both weeks' intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:00am, 10:30am, 12:00pm, 1:30pm(Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:00am, 10:30am, 12:00pm, 1:30pm(Spanish)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read, and in both weeks' intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:00am, 10:30am, 12:00pm, 1:30pm(Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:00am, 10:30am, 12:00pm, 1:30pm(Spanish)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read, and in both weeks' intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:00am, 10:30am, 12:00pm, 1:30pm(Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:00am, 10:30am, 12:00pm, 1:30pm(Spanish)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Monday - Friday: 12:00pm in the church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Monday - Friday: 12:00pm in the church"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in each weekday's intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Monday - Friday: 12:00pm in the church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Monday - Friday: 12:00pm in the church"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in each weekday's intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Monday - Friday: 12:00pm in the church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Monday - Friday: 12:00pm in the church"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in each weekday's intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Monday - Friday: 12:00pm in the church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Monday - Friday: 12:00pm in the church"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in each weekday's intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Monday - Friday: 12:00pm in the church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Monday - Friday: 12:00pm in the church"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in each weekday's intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Saturday: 9:00am in the church, 5:00pm in church (Anticipated Mass of Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Saturday: 9:00am in the church, 5:00pm in church (Anticipated Mass of Sunday)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in the intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Saturday: 9:00am in the church, 5:00pm in church (Anticipated Mass of Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Saturday: 9:00am in the church, 5:00pm in church (Anticipated Mass of Sunday)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in the intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturday: 4:00pm - 4:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturday: 4:00pm - 4:45pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Upon request, after the 12:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Daily: Upon request following the 12:00pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Daily: Upon request following the 12:00pm Mass"
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request; POLICY, Times (R10) puts it 30 minutes after a weekday Mass starts. 'Daily' read as Mon-Fri, the days with a 12:00 PM weekday Mass (Saturday has none; Sunday's 12:00 PM is a weekend Mass).",
+      "question": "Include weekday confession after the 12:00 PM Mass, offered upon request, at 12:30 PM?",
+      "options": [
+        {
+          "label": "Mon-Fri 12:30 PM, upon request",
+          "entry": {
+            "church_slug": "sacred-heart-lyndhurst",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Upon request, after the 12:00 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:41Z"
+      },
+      "group": "daily-confession"
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Upon request, after the 12:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Daily: Upon request following the 12:00pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Daily: Upon request following the 12:00pm Mass"
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request; POLICY, Times (R10) puts it 30 minutes after a weekday Mass starts. 'Daily' read as Mon-Fri, the days with a 12:00 PM weekday Mass (Saturday has none; Sunday's 12:00 PM is a weekend Mass).",
+      "question": "Include weekday confession after the 12:00 PM Mass, offered upon request, at 12:30 PM?",
+      "options": [
+        {
+          "label": "Mon-Fri 12:30 PM, upon request",
+          "entry": {
+            "church_slug": "sacred-heart-lyndhurst",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Upon request, after the 12:00 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:41Z"
+      },
+      "group": "daily-confession"
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Upon request, after the 12:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Daily: Upon request following the 12:00pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Daily: Upon request following the 12:00pm Mass"
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request; POLICY, Times (R10) puts it 30 minutes after a weekday Mass starts. 'Daily' read as Mon-Fri, the days with a 12:00 PM weekday Mass (Saturday has none; Sunday's 12:00 PM is a weekend Mass).",
+      "question": "Include weekday confession after the 12:00 PM Mass, offered upon request, at 12:30 PM?",
+      "options": [
+        {
+          "label": "Mon-Fri 12:30 PM, upon request",
+          "entry": {
+            "church_slug": "sacred-heart-lyndhurst",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Upon request, after the 12:00 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:41Z"
+      },
+      "group": "daily-confession"
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Upon request, after the 12:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Daily: Upon request following the 12:00pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Daily: Upon request following the 12:00pm Mass"
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request; POLICY, Times (R10) puts it 30 minutes after a weekday Mass starts. 'Daily' read as Mon-Fri, the days with a 12:00 PM weekday Mass (Saturday has none; Sunday's 12:00 PM is a weekend Mass).",
+      "question": "Include weekday confession after the 12:00 PM Mass, offered upon request, at 12:30 PM?",
+      "options": [
+        {
+          "label": "Mon-Fri 12:30 PM, upon request",
+          "entry": {
+            "church_slug": "sacred-heart-lyndhurst",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Upon request, after the 12:00 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:41Z"
+      },
+      "group": "daily-confession"
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lyndhurst",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Upon request, after the 12:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Daily: Upon request following the 12:00pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a6baae4b",
+          "page": 1,
+          "said": "Daily: Upon request following the 12:00pm Mass"
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request; POLICY, Times (R10) puts it 30 minutes after a weekday Mass starts. 'Daily' read as Mon-Fri, the days with a 12:00 PM weekday Mass (Saturday has none; Sunday's 12:00 PM is a weekend Mass).",
+      "question": "Include weekday confession after the 12:00 PM Mass, offered upon request, at 12:30 PM?",
+      "options": [
+        {
+          "label": "Mon-Fri 12:30 PM, upon request",
+          "entry": {
+            "church_slug": "sacred-heart-lyndhurst",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Upon request, after the 12:00 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:41Z"
+      },
+      "group": "daily-confession"
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac05620a",
+          "page": 1,
+          "said": "Holy Days & Holidays: As announced in Bulletin"
+        }
+      ],
+      "rationale": "R26: no time given; no holy day or holiday Mass is announced in the bulletins read for a date on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

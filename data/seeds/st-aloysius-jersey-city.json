@@ -1,0 +1,1127 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-aloysius-jersey-city",
+  "status": "approved",
+  "as_of": "2026-11-15T16:53:28Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:18:54Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:18:01Z",
+  "summary": "One church. Weekday (7:00, 8:30), Saturday 8:30 and 5:00 PM (from intentions and website), Sunday (incl. 10 AM Spanish, 2nd-Sunday 2:30 Filipino), Saturday 9-10 Confession and first-Saturday 9-10 Exposition agree in both bulletins. Open: whether Thanksgiving's single 9 AM Mass cancels the 7:00 and 8:30, and the website's every-Saturday Holy Hour.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5c5a4be7b146f656b5c8e4d6e61fcbfeaf44489e945a4f34ba7c944d48ba047f",
+      "fetched_at": "2026-11-15T16:53:28Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f392e093e1c878fc0ea002877a93bcaba7c4bda3dbe0e6e906c3e6fd8bf98ef5",
+      "fetched_at": "2026-11-08T16:02:24Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 3,
+          "said": "Monday, November 16 7:00 am Paul Gamutan 8:30 am In Thanksgiving Arbee Tanaquin"
+        }
+      ],
+      "rationale": "R1: the front-page schedule of both bulletins gives daily Mass at 7:00 and 8:30 am; the intentions list both times Monday to Friday in both weeks, and Saturday separately at 8:30 only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 3,
+          "said": "Monday, November 16 7:00 am Paul Gamutan 8:30 am In Thanksgiving Arbee Tanaquin"
+        }
+      ],
+      "rationale": "R1: the front-page schedule of both bulletins gives daily Mass at 7:00 and 8:30 am; the intentions list both times Monday to Friday in both weeks, and Saturday separately at 8:30 only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 3,
+          "said": "Monday, November 16 7:00 am Paul Gamutan 8:30 am In Thanksgiving Arbee Tanaquin"
+        }
+      ],
+      "rationale": "R1: the front-page schedule of both bulletins gives daily Mass at 7:00 and 8:30 am; the intentions list both times Monday to Friday in both weeks, and Saturday separately at 8:30 only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 3,
+          "said": "Monday, November 16 7:00 am Paul Gamutan 8:30 am In Thanksgiving Arbee Tanaquin"
+        }
+      ],
+      "rationale": "R1: the front-page schedule of both bulletins gives daily Mass at 7:00 and 8:30 am; the intentions list both times Monday to Friday in both weeks, and Saturday separately at 8:30 only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 3,
+          "said": "Monday, November 16 7:00 am Paul Gamutan 8:30 am In Thanksgiving Arbee Tanaquin"
+        }
+      ],
+      "rationale": "R1: the front-page schedule of both bulletins gives daily Mass at 7:00 and 8:30 am; the intentions list both times Monday to Friday in both weeks, and Saturday separately at 8:30 only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 3,
+          "said": "Monday, November 16 7:00 am Paul Gamutan 8:30 am In Thanksgiving Arbee Tanaquin"
+        }
+      ],
+      "rationale": "R1: the front-page schedule of both bulletins gives daily Mass at 7:00 and 8:30 am; the intentions list both times Monday to Friday in both weeks, and Saturday separately at 8:30 only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 3,
+          "said": "Monday, November 16 7:00 am Paul Gamutan 8:30 am In Thanksgiving Arbee Tanaquin"
+        }
+      ],
+      "rationale": "R1: the front-page schedule of both bulletins gives daily Mass at 7:00 and 8:30 am; the intentions list both times Monday to Friday in both weeks, and Saturday separately at 8:30 only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 3,
+          "said": "Monday, November 16 7:00 am Paul Gamutan 8:30 am In Thanksgiving Arbee Tanaquin"
+        }
+      ],
+      "rationale": "R1: the front-page schedule of both bulletins gives daily Mass at 7:00 and 8:30 am; the intentions list both times Monday to Friday in both weeks, and Saturday separately at 8:30 only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 3,
+          "said": "Monday, November 16 7:00 am Paul Gamutan 8:30 am In Thanksgiving Arbee Tanaquin"
+        }
+      ],
+      "rationale": "R1: the front-page schedule of both bulletins gives daily Mass at 7:00 and 8:30 am; the intentions list both times Monday to Friday in both weeks, and Saturday separately at 8:30 only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Daily Mass Schedule – 7:00 am * 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 3,
+          "said": "Monday, November 16 7:00 am Paul Gamutan 8:30 am In Thanksgiving Arbee Tanaquin"
+        }
+      ],
+      "rationale": "R1: the front-page schedule of both bulletins gives daily Mass at 7:00 and 8:30 am; the intentions list both times Monday to Friday in both weeks, and Saturday separately at 8:30 only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Saturdays 8:30 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Saturdays 8:30 am Mass"
+        }
+      ],
+      "rationale": "R1: printed under Saturdays in the front-page schedule of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 3,
+          "said": "Saturday, November 21 ... 5:00 pm Bridget C. Juskiewicz"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 3,
+          "said": "Saturday, November 14 ... 5:00 pm Emilia Torrejon"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staloysiuschurch.com/",
+          "said": "Weekend Mass Schedule Saturday - Anticipated Mass : 5:00 pm"
+        }
+      ],
+      "rationale": "R35, R6: the front-page box lists only the Saturday 8:30 am Mass, but both weeks' intentions list a Saturday 5:00 pm Mass and the parish website's schedule names it the Saturday Anticipated Mass. C1 does not apply: the website removes the doubt rather than conflicting; the box simply omits the vigil.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Sundays 7:30 am, 8:45 am, 10 am Spanish, 11:30 am & 1:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Sundays 7:30 am, 8:45 am, 10 am Spanish, 11:30 am & 1:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule of both bulletins and in both weeks' Sunday intentions; the website gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Sundays 7:30 am, 8:45 am, 10 am Spanish, 11:30 am & 1:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Sundays 7:30 am, 8:45 am, 10 am Spanish, 11:30 am & 1:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule of both bulletins and in both weeks' Sunday intentions; the website gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Sundays 7:30 am, 8:45 am, 10 am Spanish, 11:30 am & 1:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Sundays 7:30 am, 8:45 am, 10 am Spanish, 11:30 am & 1:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule of both bulletins and in both weeks' Sunday intentions; the website gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Sundays 7:30 am, 8:45 am, 10 am Spanish, 11:30 am & 1:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Sundays 7:30 am, 8:45 am, 10 am Spanish, 11:30 am & 1:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule of both bulletins and in both weeks' Sunday intentions; the website gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Sundays 7:30 am, 8:45 am, 10 am Spanish, 11:30 am & 1:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Sundays 7:30 am, 8:45 am, 10 am Spanish, 11:30 am & 1:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule of both bulletins; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Filipino"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Filipino Mass every 2nd Sunday of the month at 2:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 5,
+          "said": "Misang Pilipino TODAY, Sunday, October 8, 2026, at 2:30 pm"
+        }
+      ],
+      "rationale": "R1, POLICY rule 2: the newest front page names the 2nd Sunday. The November 8 issue (a 2nd Sunday) also announces a 2:30 pm Misang Pilipino 'today', though with a stale October 8 date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Saturdays 8:30 am Mass 9 am – 10 am Sacrament of Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Saturdays 8:30 am Mass 9 am – 10 am Sacrament of Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 2,
+          "said": "Sacrament of Reconciliation: Saturday 9 am – 10 am"
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule and page 2 of both bulletins; the website agrees (Holy Hour and Confession 9-10am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 5,
+          "said": "every 1st Saturday of the month ... 8:30 am Mass 9 am – 10 am Confession / Exposition of the Blessed Sacrament with Divine Mercy Novena"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 5,
+          "said": "every 1st Saturday of the month ... 8:30 am Mass 9 am – 10 am Confession / Exposition of the Blessed Sacrament with Divine Mercy Novena"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Eucharistic Adoration: 1st Saturday of the month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f392e093",
+          "page": 1,
+          "said": "Eucharistic Adoration: 1st Saturday of the month"
+        }
+      ],
+      "rationale": "R1, POLICY rule 2: the front page names first-Saturday Adoration without a time; page 5's parish invitation (all are welcome) times the Exposition 9-10 am. Printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "third",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.staloysiuschurch.com/",
+          "said": "Saturday : 8:30 Mass followed by Holy Hour and Confession (9-10am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Eucharistic Adoration: 1st Saturday of the month"
+        }
+      ],
+      "rationale": "R6, R28: the website lists a Holy Hour every Saturday 9-10 am; both bulletins limit Eucharistic Adoration to the 1st Saturday. Leaning to follow the newer, specific bulletin.",
+      "question": "Add Adoration 9-10 AM on the other Saturdays, as the website says?",
+      "options": [
+        {
+          "label": "Every Saturday except the first",
+          "entry": {
+            "church_slug": "st-aloysius-jersey-city",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "10:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "second",
+              "third",
+              "fourth",
+              "fifth"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out (bulletin says 1st Saturday only)",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:18:01Z"
+      }
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 5,
+          "said": "THANKSGIVING MASS SCHEDULE On Thursday, November 26, one Mass will be celebrated at 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 3,
+          "said": "our Thanksgiving Mass on Thursday, November 26th at 9 AM"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 5,
+          "said": "On Thursday, November 26, one Mass will be celebrated at 9:00 a.m."
+        }
+      ],
+      "rationale": "R17, R30: the bulletin does not say 'cancelled', but 'one Mass will be celebrated' says the usual two Thursday Masses will not take place. Leaning to cancel, since a wrong time is worse than a missing one.",
+      "question": "Cancel the 7:00 and 8:30 AM Masses on Thanksgiving, November 26?",
+      "options": [
+        {
+          "label": "Cancel (only one Mass that day)",
+          "entry": {
+            "church_slug": "st-aloysius-jersey-city",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave the weekly Mass",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:18:01Z"
+      },
+      "group": "thanksgiving"
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 5,
+          "said": "On Thursday, November 26, one Mass will be celebrated at 9:00 a.m."
+        }
+      ],
+      "rationale": "R17, R30: the bulletin does not say 'cancelled', but 'one Mass will be celebrated' says the usual two Thursday Masses will not take place. Leaning to cancel, since a wrong time is worse than a missing one.",
+      "question": "Cancel the 7:00 and 8:30 AM Masses on Thanksgiving, November 26?",
+      "options": [
+        {
+          "label": "Cancel (only one Mass that day)",
+          "entry": {
+            "church_slug": "st-aloysius-jersey-city",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave the weekly Mass",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:18:01Z"
+      },
+      "group": "thanksgiving"
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c5a4be7",
+          "page": 1,
+          "said": "Daily Rosary before 8:30 am Mass; Mother of Perpetual Help Novena Wednesdays after the 8:30 am Mass; Sacred Heart Novena First Friday after the 8:30 am Mass"
+        }
+      ],
+      "rationale": "R24: Rosary and novenas are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

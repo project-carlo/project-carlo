@@ -1,0 +1,535 @@
+{
+  "schema_version": 1,
+  "parish_slug": "nativity-midland-park",
+  "status": "approved",
+  "as_of": "2026-11-15T16:52:58Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T13:30:33Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:28Z",
+  "summary": "One church, Church of the Nativity, Midland Park. Both bulletins read (Nov 8 and Nov 15, 2026; image-only PDFs, read from renders) print the same schedule box: Sat 5 PM vigil, Sun 8, 10:15 and 12 noon, Mon-Sat 12:10 PM and Mon 7:30 PM in the chapel, Friday Adoration 11-12 in the chapel, Saturday Confession 4:10 PM. A one-off Nov 8 9:00 AM 'Inclusive' Mass in the older intentions is dated before as_of and left out (R16). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9406c7fac8a4c7fee5f9b69a8b36e65555a25561cae2446b30eb481702b89fc5",
+      "fetched_at": "2026-11-15T16:52:58Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "cdeb1717927c386fc0ea4a20958755369f2f4a0d1898e6faf9b2526fa376cf5b",
+      "fetched_at": "2026-11-08T16:01:59Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-midland-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9406c7fa",
+          "page": 1,
+          "said": "Sunday Mass Schedule Saturday: 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdeb1717",
+          "page": 1,
+          "said": "Sunday Mass Schedule Saturday: 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and in both issues' Mass intentions (Saturday at 5:00PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-midland-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9406c7fa",
+          "page": 1,
+          "said": "Sunday: 8:00am,10:15am, 12Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdeb1717",
+          "page": 1,
+          "said": "Sunday: 8:00am,10:15am, 12Noon"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read and matched by the Sunday Mass intentions on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-midland-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9406c7fa",
+          "page": 1,
+          "said": "Sunday: 8:00am,10:15am, 12Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdeb1717",
+          "page": 1,
+          "said": "Sunday: 8:00am,10:15am, 12Noon"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read and matched by the Sunday Mass intentions on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-midland-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9406c7fa",
+          "page": 1,
+          "said": "Sunday: 8:00am,10:15am, 12Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdeb1717",
+          "page": 1,
+          "said": "Sunday: 8:00am,10:15am, 12Noon"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read and matched by the Sunday Mass intentions on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-midland-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9406c7fa",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday to Saturday 12:10pm in Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdeb1717",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday to Saturday 12:10pm in Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins and in each weekday's Mass intentions on page 2; POLICY, Churches and chapels: the chapel is part of the church (the Bread & Wine notice offers them in 'the Church & Chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-midland-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9406c7fa",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday to Saturday 12:10pm in Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdeb1717",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday to Saturday 12:10pm in Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins and in each weekday's Mass intentions on page 2; POLICY, Churches and chapels: the chapel is part of the church (the Bread & Wine notice offers them in 'the Church & Chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-midland-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9406c7fa",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday to Saturday 12:10pm in Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdeb1717",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday to Saturday 12:10pm in Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins and in each weekday's Mass intentions on page 2; POLICY, Churches and chapels: the chapel is part of the church (the Bread & Wine notice offers them in 'the Church & Chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-midland-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9406c7fa",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday to Saturday 12:10pm in Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdeb1717",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday to Saturday 12:10pm in Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins and in each weekday's Mass intentions on page 2; POLICY, Churches and chapels: the chapel is part of the church (the Bread & Wine notice offers them in 'the Church & Chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-midland-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9406c7fa",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday to Saturday 12:10pm in Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdeb1717",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday to Saturday 12:10pm in Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins and in each weekday's Mass intentions on page 2; POLICY, Churches and chapels: the chapel is part of the church (the Bread & Wine notice offers them in 'the Church & Chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-midland-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9406c7fa",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday to Saturday 12:10pm in Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdeb1717",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday to Saturday 12:10pm in Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins and in each weekday's Mass intentions on page 2; POLICY, Churches and chapels: the chapel is part of the church (the Bread & Wine notice offers them in 'the Church & Chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-midland-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9406c7fa",
+          "page": 1,
+          "said": "Monday Evening: 7:30pm in Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdeb1717",
+          "page": 1,
+          "said": "Monday Evening: 7:30pm in Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins and in both issues' intentions (Monday 7:30PM); chapel belongs to the church (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-midland-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9406c7fa",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament Fridays: 11:00am to 12noon in Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdeb1717",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament Fridays: 11:00am to 12noon in Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9406c7fa",
+          "page": 2,
+          "said": "Every Friday 11:00AM to 12Noon in the Chapel Eucharistic Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdeb1717",
+          "page": 2,
+          "said": "Every Friday 11:00AM to 12Noon in the Chapel Eucharistic Adoration"
+        }
+      ],
+      "rationale": "R1: printed on pages 1 and 2 of both bulletins; the chapel is part of the church (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-midland-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9406c7fa",
+          "page": 1,
+          "said": "Penance / Reconciliation Saturdays at 4:10pm in the church, or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdeb1717",
+          "page": 1,
+          "said": "Penance / Reconciliation Saturdays at 4:10pm in the church, or by appointment."
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins. No end time is given, so end_time stays null (POLICY, Times); 'by appointment' has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

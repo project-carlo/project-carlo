@@ -1,0 +1,788 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-good-counsel-washington-township",
+  "status": "approved",
+  "as_of": "2026-11-15T16:53:02Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T13:50:41Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:45Z",
+  "summary": "One church. Weekend (Sat 5 PM; Sun 8, 10:30, 12, 6 PM) and Mon-Sat 8:45 AM Masses agree in both bulletins read (Nov 8 and 15, all-image PDFs); the website's Sunday 11 AM schedule looks stale. Open: Sunday Confession is 5:30 PM in the front box but 5:00 PM in the weekly calendar.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "cf476bb1ddf7f96a3aa14f41564e642c83bc0c57f24295012bcfcd8dd92f6357",
+      "fetched_at": "2026-11-15T16:53:02Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6cbf855a46c364c2ac5941cc02b4828b5b6547f2ea3870dd2c2e4b2c9c3bdf72",
+      "fetched_at": "2026-11-08T16:02:00Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-washington-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 4,
+          "said": "SATURDAY: 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 4,
+          "said": "SATURDAY: 5:00 pm"
+        }
+      ],
+      "rationale": "R1: in the front-page Mass schedule and the Masses-for-the-week list of both bulletins read; the website also gives Saturday 5pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-washington-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 1,
+          "said": "Sunday 8:00am, 10:30am, 12:00pm, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 1,
+          "said": "Sunday 8:00am, 10:30am, 12:00pm, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 4,
+          "said": "SUNDAY: 8:00 am / 10:30 am / 12:00 am / 6:00 pm (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 4,
+          "said": "SUNDAY: 8:00 am / 10:30 am / 12:00 am / 6:00 pm (intentions)"
+        }
+      ],
+      "rationale": "R1: front-page Mass schedule of both bulletins, matched by both weeks' intentions (the '12:00 am' there is a typo for noon, as the box and the 12:00 pm line of Nov 22 show). R7: the website's 'Sunday: 8am, 11am, 6pm' / '8am & 11am' looks like an old summer schedule and conflicts with both current bulletins, which win.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-washington-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 1,
+          "said": "Sunday 8:00am, 10:30am, 12:00pm, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 1,
+          "said": "Sunday 8:00am, 10:30am, 12:00pm, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 4,
+          "said": "SUNDAY: 8:00 am / 10:30 am / 12:00 am / 6:00 pm (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 4,
+          "said": "SUNDAY: 8:00 am / 10:30 am / 12:00 am / 6:00 pm (intentions)"
+        }
+      ],
+      "rationale": "R1: front-page Mass schedule of both bulletins, matched by both weeks' intentions (the '12:00 am' there is a typo for noon, as the box and the 12:00 pm line of Nov 22 show). R7: the website's 'Sunday: 8am, 11am, 6pm' / '8am & 11am' looks like an old summer schedule and conflicts with both current bulletins, which win.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-washington-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 1,
+          "said": "Sunday 8:00am, 10:30am, 12:00pm, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 1,
+          "said": "Sunday 8:00am, 10:30am, 12:00pm, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 4,
+          "said": "SUNDAY: 8:00 am / 10:30 am / 12:00 am / 6:00 pm (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 4,
+          "said": "SUNDAY: 8:00 am / 10:30 am / 12:00 am / 6:00 pm (intentions)"
+        }
+      ],
+      "rationale": "R1: front-page Mass schedule of both bulletins, matched by both weeks' intentions (the '12:00 am' there is a typo for noon, as the box and the 12:00 pm line of Nov 22 show). R7: the website's 'Sunday: 8am, 11am, 6pm' / '8am & 11am' looks like an old summer schedule and conflicts with both current bulletins, which win.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-washington-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 1,
+          "said": "Sunday 8:00am, 10:30am, 12:00pm, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 1,
+          "said": "Sunday 8:00am, 10:30am, 12:00pm, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 4,
+          "said": "SUNDAY: 8:00 am / 10:30 am / 12:00 am / 6:00 pm (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 4,
+          "said": "SUNDAY: 8:00 am / 10:30 am / 12:00 am / 6:00 pm (intentions)"
+        }
+      ],
+      "rationale": "R1: front-page Mass schedule of both bulletins, matched by both weeks' intentions (the '12:00 am' there is a typo for noon, as the box and the 12:00 pm line of Nov 22 show). R7: the website's 'Sunday: 8am, 11am, 6pm' / '8am & 11am' looks like an old summer schedule and conflicts with both current bulletins, which win.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-washington-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 1,
+          "said": "Daily 8:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 1,
+          "said": "Daily 8:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 4,
+          "said": "MONDAY ... SATURDAY: 8:45 am (intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 4,
+          "said": "MONDAY ... SATURDAY: 8:45 am (intentions each day)"
+        }
+      ],
+      "rationale": "R1: front-page 'Daily 8:45am' and an 8:45 am intention every Monday to Saturday in both weeks; the website agrees: 'Monday-Friday: 8:45am / Saturday: 8:45am, 5pm'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-washington-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 1,
+          "said": "Daily 8:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 1,
+          "said": "Daily 8:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 4,
+          "said": "MONDAY ... SATURDAY: 8:45 am (intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 4,
+          "said": "MONDAY ... SATURDAY: 8:45 am (intentions each day)"
+        }
+      ],
+      "rationale": "R1: front-page 'Daily 8:45am' and an 8:45 am intention every Monday to Saturday in both weeks; the website agrees: 'Monday-Friday: 8:45am / Saturday: 8:45am, 5pm'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-washington-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 1,
+          "said": "Daily 8:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 1,
+          "said": "Daily 8:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 4,
+          "said": "MONDAY ... SATURDAY: 8:45 am (intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 4,
+          "said": "MONDAY ... SATURDAY: 8:45 am (intentions each day)"
+        }
+      ],
+      "rationale": "R1: front-page 'Daily 8:45am' and an 8:45 am intention every Monday to Saturday in both weeks; the website agrees: 'Monday-Friday: 8:45am / Saturday: 8:45am, 5pm'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-washington-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 1,
+          "said": "Daily 8:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 1,
+          "said": "Daily 8:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 4,
+          "said": "MONDAY ... SATURDAY: 8:45 am (intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 4,
+          "said": "MONDAY ... SATURDAY: 8:45 am (intentions each day)"
+        }
+      ],
+      "rationale": "R1: front-page 'Daily 8:45am' and an 8:45 am intention every Monday to Saturday in both weeks; the website agrees: 'Monday-Friday: 8:45am / Saturday: 8:45am, 5pm'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-washington-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 1,
+          "said": "Daily 8:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 1,
+          "said": "Daily 8:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 4,
+          "said": "MONDAY ... SATURDAY: 8:45 am (intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 4,
+          "said": "MONDAY ... SATURDAY: 8:45 am (intentions each day)"
+        }
+      ],
+      "rationale": "R1: front-page 'Daily 8:45am' and an 8:45 am intention every Monday to Saturday in both weeks; the website agrees: 'Monday-Friday: 8:45am / Saturday: 8:45am, 5pm'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-washington-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 1,
+          "said": "Daily 8:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 1,
+          "said": "Daily 8:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 4,
+          "said": "MONDAY ... SATURDAY: 8:45 am (intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 4,
+          "said": "MONDAY ... SATURDAY: 8:45 am (intentions each day)"
+        }
+      ],
+      "rationale": "R1: front-page 'Daily 8:45am' and an 8:45 am intention every Monday to Saturday in both weeks; the website agrees: 'Monday-Friday: 8:45am / Saturday: 8:45am, 5pm'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-washington-township",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 6:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 1,
+          "said": "Confessions: Sunday 5:30pm or by Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 1,
+          "said": "Confessions: Sunday 5:30pm or by Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 4,
+          "said": "THIS WEEK AT OLGC SUNDAY: 5:00 pm Confessions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cbf855a",
+          "page": 4,
+          "said": "THIS WEEK AT OLGC SUNDAY: 5:00 pm Confessions"
+        }
+      ],
+      "rationale": "R28/C8: both bulletins read print 'Confessions: Sunday 5:30pm' on the front page but '5:00 pm Confessions' for every Sunday in the This Week at OLGC calendar; the website gives no Confession time. Leaning 5:00 PM: the weekly calendar is re-edited every issue (its other entries change) while the front box is a fixed template, and a 5:00 start is safe for visitors either way.",
+      "question": "Sunday Confession at 5:00 PM (weekly calendar) or 5:30 PM (front-page box)?",
+      "options": [
+        {
+          "label": "Sundays 5:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-washington-township",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 6:00 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Sundays 5:30 PM",
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-washington-township",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 6:00 PM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:45Z"
+      }
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 1,
+          "said": "Confessions: ... or by Appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-closter",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Third Saturday Recovery Mass, St. Mary, Closter"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 3,
+          "said": "THIRD SATURDAY RECOVERY MASS - All are welcome to the Church of St. Mary, 20 Legion Place, Closter ... Saturday November 21st, at 12:00 noon"
+        }
+      ],
+      "rationale": "R22: held at St. Mary, Closter (st-mary-closter), another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Misa en Español, St. Andrew's, Westwood"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 4,
+          "said": "MISA EN ESPANOL, DOMINGO 2:00 pm - St. Andrew's Church, Washington Avenue in Westwood"
+        }
+      ],
+      "rationale": "R22: St. Andrew, Westwood (st-andrew-westwood) is another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-washington-township",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorial Prayer Service"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf476bb1",
+          "page": 3,
+          "said": "MEMORIAL PRAYER SERVICE ... Wednesday, November 18, 2026, at 7:00 pm in the Church"
+        }
+      ],
+      "rationale": "R24/R25: a prayer service, not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

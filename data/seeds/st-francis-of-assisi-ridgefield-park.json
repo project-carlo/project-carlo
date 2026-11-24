@@ -1,0 +1,665 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-francis-of-assisi-ridgefield-park",
+  "status": "approved",
+  "as_of": "2026-11-15T16:53:54Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:32:37Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:18:55Z",
+  "summary": "One church. Weekend (Sat 5 PM; Sun 8, 10, 12 noon Spanish), weekday (Mon-Fri 7:30, Sat 8 AM) and Saturday 8:30 AM / 4 PM confession agree in the schedule box and intentions of both bulletins read (Nov 8 and Nov 15). Thanksgiving: 9 AM bilingual Mass Nov 26, and Friday Nov 27 Mass moved from 7:30 to 9 AM. Open: whether Thanksgiving's 7:30 AM Mass is cancelled. A one-off Adoration on Nov 8 (2:30-3:30 PM) is before as_of and left out (R16).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9f70e5dc0d37e48ca8e6eb88c50eff17f3488d9a43b432bd2add8fea68b67cde",
+      "fetched_at": "2026-11-15T16:53:54Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9c4d09fcf67ce94d8b2497bc59fdae44fc3558db6c679e2d01e44274650fd9f1",
+      "fetched_at": "2026-11-08T22:05:32Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 2,
+          "said": "Saturday Mass of Anticipation at 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c4d09fc",
+          "page": 2,
+          "said": "Saturday Mass of Anticipation at 5:00pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Mass box of both bulletins read and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 2,
+          "said": "Sunday Morning at 8:00am & 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c4d09fc",
+          "page": 2,
+          "said": "Sunday Morning at 8:00am & 10:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Mass box of both bulletins read and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 2,
+          "said": "Sunday Morning at 8:00am & 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c4d09fc",
+          "page": 2,
+          "said": "Sunday Morning at 8:00am & 10:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Mass box of both bulletins read and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 2,
+          "said": "Misa en Español a las 12 del mediodía"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c4d09fc",
+          "page": 2,
+          "said": "Misa en Español a las 12 del mediodía"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Mass box of both bulletins; intentions list it as 12 Noon (SPA).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 2,
+          "said": "Monday to Friday at 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c4d09fc",
+          "page": 2,
+          "said": "Monday to Friday at 7:30am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Mass box of both bulletins and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 2,
+          "said": "Monday to Friday at 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c4d09fc",
+          "page": 2,
+          "said": "Monday to Friday at 7:30am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Mass box of both bulletins and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 2,
+          "said": "Monday to Friday at 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c4d09fc",
+          "page": 2,
+          "said": "Monday to Friday at 7:30am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Mass box of both bulletins and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 2,
+          "said": "Monday to Friday at 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c4d09fc",
+          "page": 2,
+          "said": "Monday to Friday at 7:30am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Mass box of both bulletins and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 2,
+          "said": "Monday to Friday at 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c4d09fc",
+          "page": 2,
+          "said": "Monday to Friday at 7:30am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Mass box of both bulletins and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 2,
+          "said": "Saturday Morning at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c4d09fc",
+          "page": 2,
+          "said": "Saturday Morning at 8:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Mass box of both bulletins and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 2,
+          "said": "Saturdays at 8:30am and 4:00pm, or by appointment. Confessions end once the last person in line is heard."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c4d09fc",
+          "page": 2,
+          "said": "Saturdays at 8:30am and 4:00pm, or by appointment. Confessions end once the last person in line is heard."
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins' schedule box and celebrant schedule (p3); no end time (POLICY, Times: until all are heard).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 2,
+          "said": "Saturdays at 8:30am and 4:00pm, or by appointment. Confessions end once the last person in line is heard."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c4d09fc",
+          "page": 2,
+          "said": "Saturdays at 8:30am and 4:00pm, or by appointment. Confessions end once the last person in line is heard."
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins' schedule box and celebrant schedule (p3); no end time (POLICY, Times: until all are heard).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 2,
+          "said": "or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day, bilingual"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 4,
+          "said": "Thanksgiving Day Bilingual Mass • 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c4d09fc",
+          "page": 4,
+          "said": "Thanksgiving Day Bilingual Mass • 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass on or after as_of (Thanksgiving is Thursday, November 26, 2026); also on the Spanish page p9.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Friday after Thanksgiving; at 9:00 AM instead"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 4,
+          "said": "Mass on Friday after Thanksgiving will also be at 9:00 AM and not at 7:30 AM."
+        }
+      ],
+      "rationale": "R1, R16, POLICY (moved = cancellation plus new time): the bulletin says the Friday 7:30 AM Mass is not held on November 27.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Friday after Thanksgiving"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 4,
+          "said": "Mass on Friday after Thanksgiving will also be at 9:00 AM and not at 7:30 AM."
+        }
+      ],
+      "rationale": "R1, R16: the Friday 7:30 AM Mass moves to 9:00 AM on November 27, 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day; 9:00 AM bilingual Mass instead"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f70e5dc",
+          "page": 4,
+          "said": "Thanksgiving Day Bilingual Mass • 9:00 AM ... Mass on Friday after Thanksgiving will also be at 9:00 AM and not at 7:30 AM."
+        }
+      ],
+      "rationale": "R17 vs R30: the bulletin never says Thursday's 7:30 AM Mass is cancelled, but 'Friday ... will ALSO be at 9:00 AM and not at 7:30 AM' implies Thanksgiving's Mass is likewise at 9:00 instead of 7:30. Leaning cancel, since one Mass replacing the other is what the wording says; R17 alone would leave the weekly slot untouched.",
+      "question": "Cancel the 7:30 AM weekday Mass on Thanksgiving Day, Thursday Nov 26, 2026?",
+      "options": [
+        {
+          "label": "Cancel Nov 26 7:30 AM",
+          "entry": {
+            "church_slug": "st-francis-of-assisi-ridgefield-park",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving Day; 9:00 AM bilingual Mass instead"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave the weekly Thursday 7:30 AM alone",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:18:55Z"
+      }
+    }
+  ]
+}

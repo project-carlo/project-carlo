@@ -1,0 +1,968 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-genevieve-elizabeth",
+  "status": "approved",
+  "as_of": "2026-11-15T16:24:44Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:41:12Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:02Z",
+  "summary": "One church. Masses (Sun 7:30/9/10:30/12; Sat 8 AM, 5:30 PM; Mon 7, 8 AM and 7 PM; Tue-Fri 7, 8 AM) and Saturday 1 PM confession are identical in the schedule box and intentions of both bulletins read (Nov 8 and Nov 15, 2026). One dated Thanksgiving Day 9 AM Mass. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3e07b3e3e6e598c7d01f779a63d216ec6a8d1f4b763be09459367e7f9cc8bee7",
+      "fetched_at": "2026-11-15T16:24:44Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4a6eb255bd41a6bdd457c713747dbcb214efd4f1215df02d766e0ed7369bdcad",
+      "fetched_at": "2026-11-08T15:48:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "MASSES: Sundays 7:30, 9:00, 10:30, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "MASSES: Sundays 7:30, 9:00, 10:30, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "SUNDAY ... 7:30 ... 9:00 ... 10:30 ... 12:00 (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "SUNDAY ... 7:30 ... 9:00 ... 10:30 ... 12:00 (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "MASSES: Sundays 7:30, 9:00, 10:30, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "MASSES: Sundays 7:30, 9:00, 10:30, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "SUNDAY ... 7:30 ... 9:00 ... 10:30 ... 12:00 (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "SUNDAY ... 7:30 ... 9:00 ... 10:30 ... 12:00 (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "MASSES: Sundays 7:30, 9:00, 10:30, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "MASSES: Sundays 7:30, 9:00, 10:30, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "SUNDAY ... 7:30 ... 9:00 ... 10:30 ... 12:00 (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "SUNDAY ... 7:30 ... 9:00 ... 10:30 ... 12:00 (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "MASSES: Sundays 7:30, 9:00, 10:30, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "MASSES: Sundays 7:30, 9:00, 10:30, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "SUNDAY ... 7:30 ... 9:00 ... 10:30 ... 12:00 (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "SUNDAY ... 7:30 ... 9:00 ... 10:30 ... 12:00 (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "Saturdays 8AM, 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "Saturdays 8AM, 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "SATURDAY ... 8:00 ... 5:30pm (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "SATURDAY ... 8:00 ... 5:30pm (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "Saturdays 8AM, 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "Saturdays 8AM, 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "SATURDAY ... 8:00 ... 5:30pm (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "SATURDAY ... 8:00 ... 5:30pm (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "Monday 7:00AM, 8AM, 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "Monday 7:00AM, 8AM, 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "MONDAY ... 7:00 ... 8:00 ... 7pm (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "MONDAY ... 7:00 ... 8:00 ... 7pm (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in both weeks' Monday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "Monday 7:00AM, 8AM, 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "Monday 7:00AM, 8AM, 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "MONDAY ... 7:00 ... 8:00 ... 7pm (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "MONDAY ... 7:00 ... 8:00 ... 7pm (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in both weeks' Monday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "Monday 7:00AM, 8AM, 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "Monday 7:00AM, 8AM, 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "MONDAY ... 7:00 ... 8:00 ... 7pm (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "MONDAY ... 7:00 ... 8:00 ... 7pm (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in both weeks' Monday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "Tuesday-Friday 7:00AM, 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "Tuesday-Friday 7:00AM, 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "7:00 ... 8:00 (Mass intentions, Tuesday to Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "7:00 ... 8:00 (Mass intentions, Tuesday to Friday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "Tuesday-Friday 7:00AM, 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "Tuesday-Friday 7:00AM, 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "7:00 ... 8:00 (Mass intentions, Tuesday to Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "7:00 ... 8:00 (Mass intentions, Tuesday to Friday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "Tuesday-Friday 7:00AM, 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "Tuesday-Friday 7:00AM, 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "7:00 ... 8:00 (Mass intentions, Tuesday to Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "7:00 ... 8:00 (Mass intentions, Tuesday to Friday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "Tuesday-Friday 7:00AM, 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "Tuesday-Friday 7:00AM, 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "7:00 ... 8:00 (Mass intentions, Tuesday to Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "7:00 ... 8:00 (Mass intentions, Tuesday to Friday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "Tuesday-Friday 7:00AM, 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "Tuesday-Friday 7:00AM, 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "7:00 ... 8:00 (Mass intentions, Tuesday to Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "7:00 ... 8:00 (Mass intentions, Tuesday to Friday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "Tuesday-Friday 7:00AM, 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "Tuesday-Friday 7:00AM, 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "7:00 ... 8:00 (Mass intentions, Tuesday to Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "7:00 ... 8:00 (Mass intentions, Tuesday to Friday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "Tuesday-Friday 7:00AM, 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "Tuesday-Friday 7:00AM, 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "7:00 ... 8:00 (Mass intentions, Tuesday to Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "7:00 ... 8:00 (Mass intentions, Tuesday to Friday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "Tuesday-Friday 7:00AM, 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "Tuesday-Friday 7:00AM, 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 4,
+          "said": "7:00 ... 8:00 (Mass intentions, Tuesday to Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 4,
+          "said": "7:00 ... 8:00 (Mass intentions, Tuesday to Friday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Masses box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "CONFESSIONS: Saturday: 1:00 PM until all are heard"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a6eb255",
+          "page": 1,
+          "said": "CONFESSIONS: Saturday: 1:00 PM until all are heard"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; POLICY, Times: 'until all are heard' has no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-elizabeth",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 2,
+          "said": "on Thanksgiving Day we will celebrate Mass at 9:00 am"
+        }
+      ],
+      "rationale": "R1, R16, R17: a dated holiday Mass on or after as_of; the bulletin states no cancellation of the weekday 7:00 and 8:00 AM Masses, so the weekly Thursday slots stay as they are.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e07b3e3",
+          "page": 1,
+          "said": "BAPTISMS ... Anointing of the Sick ... Please call the rectory"
+        }
+      ],
+      "rationale": "R24: baptisms, marriages and Anointing of the Sick are not Mass, Confession or Adoration; no time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

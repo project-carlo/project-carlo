@@ -1,0 +1,636 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-jersey-city",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T16:15:39Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:36Z",
+  "summary": "One church, St. Joseph, Jersey City. The schedule box and intentions agree in both bulletins read (Nov 8 and Nov 15, 2026; the newest is all images, read from renders): weekday 8 AM, Sat 5:30 PM vigil, Sun 9, 10:30 (Spanish) and 12, Wed 7 PM Spanish, Sat 5 PM Confession, First Friday Holy Hour after the 8 AM Mass, plus a dated bilingual Thanksgiving Mass Nov 26 10 AM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "21367211f65fa1ca06879a20f355660ef5e9552f871b003c92d73ea2e2e3f321",
+      "fetched_at": "2026-11-15T16:54:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "fb5c22ec594d664a5d31a92cbf5055d7846955e6b1cdd83882a669925a001c08",
+      "fetched_at": "2026-11-08T16:03:05Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 1,
+          "said": "Masses in English: Weekdays 8.00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 1,
+          "said": "Masses in English: Weekdays 8.00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 2,
+          "said": "Mass intentions list 8.00am each Monday to Friday, none on Saturday morning"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 2,
+          "said": "Mass intentions list 8.00am each Monday to Friday, none on Saturday morning"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins gives weekday 8:00 AM Mass; both weeks' intentions list it Monday to Friday only, so weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 1,
+          "said": "Masses in English: Weekdays 8.00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 1,
+          "said": "Masses in English: Weekdays 8.00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 2,
+          "said": "Mass intentions list 8.00am each Monday to Friday, none on Saturday morning"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 2,
+          "said": "Mass intentions list 8.00am each Monday to Friday, none on Saturday morning"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins gives weekday 8:00 AM Mass; both weeks' intentions list it Monday to Friday only, so weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 1,
+          "said": "Masses in English: Weekdays 8.00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 1,
+          "said": "Masses in English: Weekdays 8.00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 2,
+          "said": "Mass intentions list 8.00am each Monday to Friday, none on Saturday morning"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 2,
+          "said": "Mass intentions list 8.00am each Monday to Friday, none on Saturday morning"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins gives weekday 8:00 AM Mass; both weeks' intentions list it Monday to Friday only, so weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 1,
+          "said": "Masses in English: Weekdays 8.00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 1,
+          "said": "Masses in English: Weekdays 8.00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 2,
+          "said": "Mass intentions list 8.00am each Monday to Friday, none on Saturday morning"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 2,
+          "said": "Mass intentions list 8.00am each Monday to Friday, none on Saturday morning"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins gives weekday 8:00 AM Mass; both weeks' intentions list it Monday to Friday only, so weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 1,
+          "said": "Masses in English: Weekdays 8.00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 1,
+          "said": "Masses in English: Weekdays 8.00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 2,
+          "said": "Mass intentions list 8.00am each Monday to Friday, none on Saturday morning"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 2,
+          "said": "Mass intentions list 8.00am each Monday to Friday, none on Saturday morning"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins gives weekday 8:00 AM Mass; both weeks' intentions list it Monday to Friday only, so weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 1,
+          "said": "Sat vigil 5.30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 1,
+          "said": "Sat vigil 5.30pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 1,
+          "said": "Sunday 9.00am & 12.00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 1,
+          "said": "Sunday 9.00am & 12.00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 1,
+          "said": "Sunday 9.00am & 12.00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 1,
+          "said": "Sunday 9.00am & 12.00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 1,
+          "said": "Misas en español: Domingo 10.30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 1,
+          "said": "Misas en español: Domingo 10.30am"
+        }
+      ],
+      "rationale": "R1: Spanish Mass in the schedule box of both bulletins and both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 1,
+          "said": "Misas en español: Miércoles 7.00pm (Santo Rosario 6.30pm)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 1,
+          "said": "Misas en español: Miércoles 7.00pm (Santo Rosario 6.30pm)"
+        }
+      ],
+      "rationale": "R1: Spanish Wednesday Mass in the schedule box of both bulletins and both weeks' intentions (Nov 11, Nov 18 7.00pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 1,
+          "said": "Confession: Sat 5.00pm or call office"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 1,
+          "said": "Confession: Sat 5.00pm or call office"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; no end time given, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour with Exposition, after the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 1,
+          "said": "Devotions after the 8.00am Mass ... First Fri: Holy Hour (Exposition and Adoration)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb5c22ec",
+          "page": 1,
+          "said": "Devotions after the 8.00am Mass ... First Fri: Holy Hour (Exposition and Adoration)"
+        }
+      ],
+      "rationale": "R1, R10: the standing schedule box of both bulletins names a First Friday Holy Hour with Exposition after the weekday 8:00 AM Mass; POLICY times it 30 minutes after that Mass. No clock end is printed, so end left null. Neither bulletin's week holds a first Friday (R11), but the standing box prints it every week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bilingual Thanksgiving Day Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 2,
+          "said": "Join Us! Bilingual THANKSGIVING DAY MASS Thursday, 26 Nov 10.00am"
+        }
+      ],
+      "rationale": "R1, R16: a dated Thanksgiving Mass after as_of. R17: the bulletin does not say the 8:00 AM Thursday Mass is cancelled, so no cancellation is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 1,
+          "said": "Misas en español: Miércoles 7.00pm (Santo Rosario 6.30pm)"
+        }
+      ],
+      "rationale": "R24: the Wednesday 6:30 PM Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 1,
+          "said": "Devotions after the 8.00am Mass: Mon: Miraculous Medal; Wed: Perpetual Help"
+        }
+      ],
+      "rationale": "R24: Miraculous Medal and Perpetual Help novenas are devotions, not Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21367211",
+          "page": 1,
+          "said": "Baptism | Anointing of the Sick | Funeral ... Call office; Llame a la oficina para: ... Confesión"
+        }
+      ],
+      "rationale": "R26: confession 'or call office' / by request has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

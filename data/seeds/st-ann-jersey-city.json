@@ -1,0 +1,613 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-ann-jersey-city",
+  "status": "approved",
+  "as_of": "2026-11-15T15:50:38Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:24:00Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:18:05Z",
+  "summary": "One church, St. Ann (Polish), Jersey City, sharing a bulletin with Our Lady of Mount Carmel (which prints no OLMC times). Both bulletins read (Nov 8 and 15, 2026) print the same schedule: Sunday 10:00 AM Polish and 12:30 PM English, Mon-Sat 7:00 AM, and confessions after the 7:00 AM weekday Masses (settled Mon-Fri 7:30 AM). Open: whether Saturday's 7 AM Mass counts as a weekday Mass for confession.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d6f7c9fc88b67cb8c48f0a5ea96ba25ada56e0753bbe2a36e8138b5d0bfb6c25",
+      "fetched_at": "2026-11-15T15:50:38Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "40e52559abad58f772324ef2f411904dbd4f5f98640000be47318ad0b42cec29",
+      "fetched_at": "2026-11-08T15:20:36Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6f7c9fc",
+          "page": 1,
+          "said": "Sunday: 10:00 AM (Polish) | 12:30 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e52559",
+          "page": 1,
+          "said": "Sunday: 10:00 AM (Polish) | 12:30 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read (Nov 8 and Nov 15), and in each week's dated Mass list on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6f7c9fc",
+          "page": 1,
+          "said": "Sunday: 10:00 AM (Polish) | 12:30 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e52559",
+          "page": 1,
+          "said": "Sunday: 10:00 AM (Polish) | 12:30 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read, and in each week's dated Mass list on page 2. English is the default language, so no note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6f7c9fc",
+          "page": 1,
+          "said": "Daily Mass – Monday thru Saturday - 7 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e52559",
+          "page": 1,
+          "said": "Daily Mass – Monday thru Saturday - 7 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read, and at 7:00 AM each weekday in the dated Mass lists on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6f7c9fc",
+          "page": 1,
+          "said": "Daily Mass – Monday thru Saturday - 7 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e52559",
+          "page": 1,
+          "said": "Daily Mass – Monday thru Saturday - 7 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read, and at 7:00 AM each weekday in the dated Mass lists on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6f7c9fc",
+          "page": 1,
+          "said": "Daily Mass – Monday thru Saturday - 7 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e52559",
+          "page": 1,
+          "said": "Daily Mass – Monday thru Saturday - 7 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read, and at 7:00 AM each weekday in the dated Mass lists on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6f7c9fc",
+          "page": 1,
+          "said": "Daily Mass – Monday thru Saturday - 7 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e52559",
+          "page": 1,
+          "said": "Daily Mass – Monday thru Saturday - 7 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read, and at 7:00 AM each weekday in the dated Mass lists on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6f7c9fc",
+          "page": 1,
+          "said": "Daily Mass – Monday thru Saturday - 7 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e52559",
+          "page": 1,
+          "said": "Daily Mass – Monday thru Saturday - 7 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read, and at 7:00 AM each weekday in the dated Mass lists on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6f7c9fc",
+          "page": 1,
+          "said": "Daily Mass – Monday thru Saturday - 7 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e52559",
+          "page": 1,
+          "said": "Daily Mass – Monday thru Saturday - 7 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read, and at 7:00 AM each weekday in the dated Mass lists on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6f7c9fc",
+          "page": 3,
+          "said": "Confessions: After 7:00 AM Weekday Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e52559",
+          "page": 3,
+          "said": "Confessions: After 7:00 AM Weekday Masses"
+        }
+      ],
+      "rationale": "R10, POLICY Times: confession after a weekday Mass with no clock time starts 30 minutes after the 7:00 AM Mass starts, with no end time. Printed in Parish News on page 3 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6f7c9fc",
+          "page": 3,
+          "said": "Confessions: After 7:00 AM Weekday Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e52559",
+          "page": 3,
+          "said": "Confessions: After 7:00 AM Weekday Masses"
+        }
+      ],
+      "rationale": "R10, POLICY Times: confession after a weekday Mass with no clock time starts 30 minutes after the 7:00 AM Mass starts, with no end time. Printed in Parish News on page 3 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6f7c9fc",
+          "page": 3,
+          "said": "Confessions: After 7:00 AM Weekday Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e52559",
+          "page": 3,
+          "said": "Confessions: After 7:00 AM Weekday Masses"
+        }
+      ],
+      "rationale": "R10, POLICY Times: confession after a weekday Mass with no clock time starts 30 minutes after the 7:00 AM Mass starts, with no end time. Printed in Parish News on page 3 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6f7c9fc",
+          "page": 3,
+          "said": "Confessions: After 7:00 AM Weekday Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e52559",
+          "page": 3,
+          "said": "Confessions: After 7:00 AM Weekday Masses"
+        }
+      ],
+      "rationale": "R10, POLICY Times: confession after a weekday Mass with no clock time starts 30 minutes after the 7:00 AM Mass starts, with no end time. Printed in Parish News on page 3 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6f7c9fc",
+          "page": 3,
+          "said": "Confessions: After 7:00 AM Weekday Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e52559",
+          "page": 3,
+          "said": "Confessions: After 7:00 AM Weekday Masses"
+        }
+      ],
+      "rationale": "R10, POLICY Times: confession after a weekday Mass with no clock time starts 30 minutes after the 7:00 AM Mass starts, with no end time. Printed in Parish News on page 3 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6f7c9fc",
+          "page": 3,
+          "said": "Confessions: After 7:00 AM Weekday Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e52559",
+          "page": 3,
+          "said": "Confessions: After 7:00 AM Weekday Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6f7c9fc",
+          "page": 1,
+          "said": "Daily Mass – Monday thru Saturday - 7 AM (English)"
+        }
+      ],
+      "rationale": "R30: the bulletin says 'after 7:00 AM Weekday Masses'. Saturday 7 AM is part of the parish's Monday-Saturday daily Mass and is a weekday Mass under POLICY (weekend means the Saturday evening vigil or Sunday), but in everyday usage 'weekday' may mean Monday-Friday. Leaning include because the bulletin groups Saturday with the daily Masses. The parish's only listed website is its bulletin host, which has no schedule.",
+      "question": "Are confessions also heard after the Saturday 7:00 AM Mass?",
+      "options": [
+        {
+          "label": "Saturdays 7:30 AM",
+          "entry": {
+            "church_slug": "st-ann-jersey-city",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:18:05Z"
+      }
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6f7c9fc",
+          "page": 3,
+          "said": "Sick calls - Call the rectory"
+        }
+      ],
+      "rationale": "R26: sick calls and baptisms (during Sunday Mass) have no separate Mass, Confession or Adoration time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

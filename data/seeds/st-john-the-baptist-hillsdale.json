@@ -1,0 +1,712 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-the-baptist-hillsdale",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:02Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T04:04:52Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:20Z",
+  "summary": "One church. Weekend (Sat 5 PM; Sun 8, 10, 12), Mon-Sat 8 AM Masses and Saturday 2-3 PM confession agree in both bulletins (Nov 8 and Nov 15, 2026). Weekday confession after the 8 AM Mass is timed 8:30 by POLICY; Thursday 3-6 PM Adoration is in the newest bulletin and on the homepage. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6cdfd19c2dd08426c8753c973e2939b95036ac312c032b680baedb2dc534adae",
+      "fetched_at": "2026-11-15T16:54:02Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ff59f333d818412ac9542b3ce66db085db2779bde1f742c6fbf469439d8a265e",
+      "fetched_at": "2026-11-08T16:02:59Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "SATURDAY VIGIL 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff59f333",
+          "page": 1,
+          "said": "SATURDAY VIGIL 5:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list the 5:00 PM Saturday Mass each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "SUNDAY, THE LORD'S DAY 8:00 AM, 10:00 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff59f333",
+          "page": 1,
+          "said": "SUNDAY, THE LORD'S DAY 8:00 AM, 10:00 AM, 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list all three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "SUNDAY, THE LORD'S DAY 8:00 AM, 10:00 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff59f333",
+          "page": 1,
+          "said": "SUNDAY, THE LORD'S DAY 8:00 AM, 10:00 AM, 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list all three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "SUNDAY, THE LORD'S DAY 8:00 AM, 10:00 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff59f333",
+          "page": 1,
+          "said": "SUNDAY, THE LORD'S DAY 8:00 AM, 10:00 AM, 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list all three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "WEEKDAYS & SATURDAY 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff59f333",
+          "page": 1,
+          "said": "WEEKDAYS & SATURDAY 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list an 8:00 AM Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "WEEKDAYS & SATURDAY 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff59f333",
+          "page": 1,
+          "said": "WEEKDAYS & SATURDAY 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list an 8:00 AM Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "WEEKDAYS & SATURDAY 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff59f333",
+          "page": 1,
+          "said": "WEEKDAYS & SATURDAY 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list an 8:00 AM Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "WEEKDAYS & SATURDAY 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff59f333",
+          "page": 1,
+          "said": "WEEKDAYS & SATURDAY 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list an 8:00 AM Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "WEEKDAYS & SATURDAY 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff59f333",
+          "page": 1,
+          "said": "WEEKDAYS & SATURDAY 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list an 8:00 AM Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "WEEKDAYS & SATURDAY 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff59f333",
+          "page": 1,
+          "said": "WEEKDAYS & SATURDAY 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list an 8:00 AM Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "CONFESSIONS - Saturdays 2:00 - 3:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff59f333",
+          "page": 1,
+          "said": "CONFESSIONS - Saturdays 2:00 - 3:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "CONFESSIONS - After 8:00 AM Mass—Weekdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff59f333",
+          "page": 1,
+          "said": "CONFESSIONS - After 8:00 AM Mass—Weekdays"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins with no clock time; POLICY times confession after a weekday Mass 30 minutes after it starts, with no end. 'Weekdays' is read as Monday-Friday, since the box heads the Saturday Mass separately ('Weekdays & Saturday') and Saturday has its own 2-3 PM confession.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "CONFESSIONS - After 8:00 AM Mass—Weekdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff59f333",
+          "page": 1,
+          "said": "CONFESSIONS - After 8:00 AM Mass—Weekdays"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins with no clock time; POLICY times confession after a weekday Mass 30 minutes after it starts, with no end. 'Weekdays' is read as Monday-Friday, since the box heads the Saturday Mass separately ('Weekdays & Saturday') and Saturday has its own 2-3 PM confession.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "CONFESSIONS - After 8:00 AM Mass—Weekdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff59f333",
+          "page": 1,
+          "said": "CONFESSIONS - After 8:00 AM Mass—Weekdays"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins with no clock time; POLICY times confession after a weekday Mass 30 minutes after it starts, with no end. 'Weekdays' is read as Monday-Friday, since the box heads the Saturday Mass separately ('Weekdays & Saturday') and Saturday has its own 2-3 PM confession.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "CONFESSIONS - After 8:00 AM Mass—Weekdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff59f333",
+          "page": 1,
+          "said": "CONFESSIONS - After 8:00 AM Mass—Weekdays"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins with no clock time; POLICY times confession after a weekday Mass 30 minutes after it starts, with no end. 'Weekdays' is read as Monday-Friday, since the box heads the Saturday Mass separately ('Weekdays & Saturday') and Saturday has its own 2-3 PM confession.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "CONFESSIONS - After 8:00 AM Mass—Weekdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff59f333",
+          "page": 1,
+          "said": "CONFESSIONS - After 8:00 AM Mass—Weekdays"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins with no clock time; POLICY times confession after a weekday Mass 30 minutes after it starts, with no end. 'Weekdays' is read as Monday-Friday, since the box heads the Saturday Mass separately ('Weekdays & Saturday') and Saturday has its own 2-3 PM confession.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-hillsdale",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 3,
+          "said": "EUCHARISTIC ADORATION Thursdays 3:00 - 6:00 PM Benediction & Prayer just before 6pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohnhillsdale.org/",
+          "said": "EUCHARISTIC ADORATION Thursdays 3:00 pm - 6:00 pm"
+        }
+      ],
+      "rationale": "R1: the newest bulletin's p3 box prints it as the regular schedule beside the daily Mass, at the parish's one church; the older bulletin (Nov 8) has no such box but does not contradict it, and the parish homepage's Mass schedule gives the same hours (R5, checked 2026-11-21). POLICY: Benediction is noted on the Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "HOLY DAYS 8:00 AM, 12:00 PM, 7:00 PM"
+        }
+      ],
+      "rationale": "R26, POLICY Dates: holy-day times with no dated holy day in either bulletin; dates are not projected, so update mode records them when a bulletin names the day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cdfd19c",
+          "page": 1,
+          "said": "CONFESSIONS - Any time by appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

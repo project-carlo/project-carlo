@@ -1,0 +1,453 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sts-peter-and-paul-hoboken",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:53Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T21:03:14Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:21:26Z",
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026; image-only PDFs) print the same schedule box: Saturday 5:00 PM vigil, Sunday 8:30, 10:00 and 12:00, weekday Mass 12:10 PM Monday to Friday, and Friday Confession 12:30-1:00 PM. No Adoration is listed; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "db49c92dd879d43578abdb3c76f5c67b5b7fc116c08da01c15a3d06a2a5967d0",
+      "fetched_at": "2026-11-15T16:54:53Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d7405aadccb92171fcd88f33787a7ddcc0a1400fbe4c16b18f0d837feefd20a2",
+      "fetched_at": "2026-11-08T16:03:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db49c92d",
+          "page": 2,
+          "said": "WEEKEND MASS SCHEDULE SATURDAY 5:00 pm Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7405aad",
+          "page": 2,
+          "said": "WEEKEND MASS SCHEDULE SATURDAY 5:00 pm Vigil Mass"
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass schedule box on page 2 of both bulletins read; the intentions list 5:00 pm each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db49c92d",
+          "page": 2,
+          "said": "SUNDAY 8:30 am | 10:00 am | 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7405aad",
+          "page": 2,
+          "said": "SUNDAY 8:30 am | 10:00 am | 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass schedule box on page 2 of both bulletins read; the intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db49c92d",
+          "page": 2,
+          "said": "SUNDAY 8:30 am | 10:00 am | 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7405aad",
+          "page": 2,
+          "said": "SUNDAY 8:30 am | 10:00 am | 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass schedule box on page 2 of both bulletins read; the intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db49c92d",
+          "page": 2,
+          "said": "SUNDAY 8:30 am | 10:00 am | 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7405aad",
+          "page": 2,
+          "said": "SUNDAY 8:30 am | 10:00 am | 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass schedule box on page 2 of both bulletins read; the intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db49c92d",
+          "page": 2,
+          "said": "DAILY LITURGIES Monday ▶ Friday Mass 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7405aad",
+          "page": 2,
+          "said": "DAILY LITURGIES Monday ▶ Friday Mass 12:10 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 2 of both bulletins read; each weekday's intention is at 12:10 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db49c92d",
+          "page": 2,
+          "said": "DAILY LITURGIES Monday ▶ Friday Mass 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7405aad",
+          "page": 2,
+          "said": "DAILY LITURGIES Monday ▶ Friday Mass 12:10 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 2 of both bulletins read; each weekday's intention is at 12:10 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db49c92d",
+          "page": 2,
+          "said": "DAILY LITURGIES Monday ▶ Friday Mass 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7405aad",
+          "page": 2,
+          "said": "DAILY LITURGIES Monday ▶ Friday Mass 12:10 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 2 of both bulletins read; each weekday's intention is at 12:10 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db49c92d",
+          "page": 2,
+          "said": "DAILY LITURGIES Monday ▶ Friday Mass 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7405aad",
+          "page": 2,
+          "said": "DAILY LITURGIES Monday ▶ Friday Mass 12:10 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 2 of both bulletins read; each weekday's intention is at 12:10 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-hoboken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db49c92d",
+          "page": 2,
+          "said": "DAILY LITURGIES Monday ▶ Friday Mass 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7405aad",
+          "page": 2,
+          "said": "DAILY LITURGIES Monday ▶ Friday Mass 12:10 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 2 of both bulletins read; each weekday's intention is at 12:10 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-hoboken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db49c92d",
+          "page": 2,
+          "said": "CONFESSION Friday 12:30 pm - 1:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7405aad",
+          "page": 2,
+          "said": "CONFESSION Friday 12:30 pm - 1:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box on page 2 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db49c92d",
+          "page": 2,
+          "said": "Or contact the Parish Office to make an appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7405aad",
+          "page": 2,
+          "said": "Or contact the Parish Office to make an appointment."
+        }
+      ],
+      "rationale": "R26: Confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d7405aad",
+          "page": 4,
+          "said": "Monthly Family Mass. Our Family Mass on November 1st was a beautiful, joy-filled celebration!"
+        }
+      ],
+      "rationale": "R25, R26: a past Family Mass held at a regular Sunday Mass; no separate time or week of the month is given, so nothing to record (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

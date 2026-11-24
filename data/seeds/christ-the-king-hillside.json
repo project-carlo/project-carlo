@@ -1,0 +1,1008 @@
+{
+  "schema_version": 1,
+  "parish_slug": "christ-the-king-hillside",
+  "status": "approved",
+  "as_of": "2026-11-15T16:52:38Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T08:53:48Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:22Z",
+  "summary": "One church. Weekend (Sat 5:30 PM; Sun 8, 9:30 Vietnamese, 11), weekday Mon-Sat 8:30 AM and Saturday confessions agree in both bulletins (Nov 8, Nov 15). Open: the Portuguese Sunday Mass time (box/website 7 PM vs intentions 6 PM), First Friday Adoration with no clock time, and whether the Nov 22 installation cancels the evening Portuguese Mass; the 8:00 and 9:30 Nov 22 cancellations are settled.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a56ef3efdda5ccc474098e3f34510539e4bf71020e6cacbd6a52758c9dcdb69e",
+      "fetched_at": "2026-11-15T16:52:38Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d9912d45d5e5a53bd013e713eb4350a560f6551cd88da9c754990ab61a0893bc",
+      "fetched_at": "2026-11-08T16:01:39Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 1,
+          "said": "SUNDAY MASSES: Saturday evening: 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 1,
+          "said": "SUNDAY MASSES: Saturday evening: 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 3,
+          "said": "Saturday - November 21 ... 5:30pm - In Thanksgiving for the Harlley Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 3,
+          "said": "Saturday - November 21 ... 5:30pm - In Thanksgiving for the Harlley Family"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 1,
+          "said": "Sunday: 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 1,
+          "said": "Sunday: 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 3,
+          "said": "8:00am - People of the Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 3,
+          "said": "8:00am - People of the Parish"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 1,
+          "said": "9:30 AM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 1,
+          "said": "9:30 AM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 3,
+          "said": "9:30am - Vietnamese Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 3,
+          "said": "9:30am - Vietnamese Mass"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 1,
+          "said": "11:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 1,
+          "said": "11:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 3,
+          "said": "11:00am - In Memory of Bernard Nwosu Sr. By Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 3,
+          "said": "11:00am - In Memory of Bernard Nwosu Sr. By Family"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 1,
+          "said": "WEEKDAY MASSES: Monday - Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 1,
+          "said": "WEEKDAY MASSES: Monday - Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 3,
+          "said": "8:30am intentions listed Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 3,
+          "said": "8:30am intentions listed Monday through Saturday"
+        },
+        {
+          "source": "website",
+          "url": "https://christthekinghillsidenj.org/",
+          "said": "Weekday Masses Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: schedule box and every weekday's intentions in both bulletins give 8:30 AM. R7/R6: the website's 8:00 AM is an older schedule the bulletins have replaced.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 1,
+          "said": "WEEKDAY MASSES: Monday - Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 1,
+          "said": "WEEKDAY MASSES: Monday - Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 3,
+          "said": "8:30am intentions listed Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 3,
+          "said": "8:30am intentions listed Monday through Saturday"
+        },
+        {
+          "source": "website",
+          "url": "https://christthekinghillsidenj.org/",
+          "said": "Weekday Masses Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: schedule box and every weekday's intentions in both bulletins give 8:30 AM. R7/R6: the website's 8:00 AM is an older schedule the bulletins have replaced.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 1,
+          "said": "WEEKDAY MASSES: Monday - Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 1,
+          "said": "WEEKDAY MASSES: Monday - Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 3,
+          "said": "8:30am intentions listed Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 3,
+          "said": "8:30am intentions listed Monday through Saturday"
+        },
+        {
+          "source": "website",
+          "url": "https://christthekinghillsidenj.org/",
+          "said": "Weekday Masses Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: schedule box and every weekday's intentions in both bulletins give 8:30 AM. R7/R6: the website's 8:00 AM is an older schedule the bulletins have replaced.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 1,
+          "said": "WEEKDAY MASSES: Monday - Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 1,
+          "said": "WEEKDAY MASSES: Monday - Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 3,
+          "said": "8:30am intentions listed Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 3,
+          "said": "8:30am intentions listed Monday through Saturday"
+        },
+        {
+          "source": "website",
+          "url": "https://christthekinghillsidenj.org/",
+          "said": "Weekday Masses Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: schedule box and every weekday's intentions in both bulletins give 8:30 AM. R7/R6: the website's 8:00 AM is an older schedule the bulletins have replaced.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 1,
+          "said": "WEEKDAY MASSES: Monday - Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 1,
+          "said": "WEEKDAY MASSES: Monday - Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 3,
+          "said": "8:30am intentions listed Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 3,
+          "said": "8:30am intentions listed Monday through Saturday"
+        },
+        {
+          "source": "website",
+          "url": "https://christthekinghillsidenj.org/",
+          "said": "Weekday Masses Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: schedule box and every weekday's intentions in both bulletins give 8:30 AM. R7/R6: the website's 8:00 AM is an older schedule the bulletins have replaced.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 1,
+          "said": "WEEKDAY MASSES: Monday - Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 1,
+          "said": "WEEKDAY MASSES: Monday - Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 3,
+          "said": "8:30am intentions listed Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 3,
+          "said": "8:30am intentions listed Monday through Saturday"
+        },
+        {
+          "source": "website",
+          "url": "https://christthekinghillsidenj.org/",
+          "said": "Weekday Masses Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: schedule box and every weekday's intentions in both bulletins give 8:30 AM. R7/R6: the website's 8:00 AM is an older schedule the bulletins have replaced.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-hillside",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:45",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 1,
+          "said": "CONFESSIONS Every Saturday: 4:45 - 5:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 1,
+          "said": "CONFESSIONS Every Saturday: 4:45 - 5:15 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://christthekinghillsidenj.org/",
+          "said": "Every Saturday 4:45 - 5:15 PM"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 1,
+          "said": "11:00 AM (English), 7:00 PM (Portuguese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 1,
+          "said": "11:00 AM (English), 7:00 PM (Portuguese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 3,
+          "said": "6:00pm - Portuguese Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 3,
+          "said": "6:00pm - Portuguese Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://christthekinghillsidenj.org/",
+          "said": "7:00 PM (Portuguese)"
+        }
+      ],
+      "rationale": "R28/C8: the schedule box (both issues) and the homepage say 7:00 PM; the dated intentions for Nov 8 and Nov 15 both say 6:00 PM. Leaning 6:00 PM: the intentions are re-dated each week, while the box and website look less maintained (the website still gives the weekday Mass as 8:00 AM, which the bulletins have changed to 8:30). A seasonal change after daylight saving is possible but not stated.",
+      "question": "The Sunday Portuguese Mass: 6:00 PM (weekly intentions) or 7:00 PM (schedule box and website)?",
+      "options": [
+        {
+          "label": "Sundays 6:00 PM",
+          "entry": {
+            "church_slug": "christ-the-king-hillside",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Portuguese"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Sundays 7:00 PM",
+          "entry": {
+            "church_slug": "christ-the-king-hillside",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Portuguese"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:22Z"
+      }
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-hillside",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "With the Sacred Heart Devotion, after the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 1,
+          "said": "FIRST FRIDAY: The Sacred Heart Devotion every First Friday after the 8:30 AM Mass and Adoration of the Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 1,
+          "said": "FIRST FRIDAY: The Sacred Heart Devotion every First Friday after the 8:30 AM Mass and Adoration of the Blessed Sacrament"
+        },
+        {
+          "source": "website",
+          "url": "https://christthekinghillsidenj.org/",
+          "said": "First Friday 8:00 AM Mass and Adoration of the Blessed Sacrament"
+        }
+      ],
+      "rationale": "R30: the box puts the devotion and Adoration after the First Friday 8:30 AM Mass, but the sentence could also mean the devotion follows Mass and Adoration; no clock time. If after Mass, R10 times it 30 minutes after the weekday Mass starts (9:00 AM), no end time. Neither read week holds a first Friday (R11); the standing box prints it in both.",
+      "question": "Add First Friday Adoration after the 8:30 AM Mass?",
+      "options": [
+        {
+          "label": "First Fridays 9:00 AM",
+          "entry": {
+            "church_slug": "christ-the-king-hillside",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "With the Sacred Heart Devotion, after the 8:30 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:22Z"
+      }
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-hillside",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pastor's installation; only one Mass, at 11:00 AM"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 3,
+          "said": "The installation of Father Gabriel J. Curtis as Pastor of Christ the King Parish is Sunday, November 22nd at the 11am Mass. Only ONE Mass will be celebrated that day."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 2,
+          "said": "There will only be ONE Mass in the morning on that day."
+        }
+      ],
+      "rationale": "R1, R16: both bulletins say only the 11:00 AM Mass is celebrated on the morning of Nov 22.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-hillside",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pastor's installation; only one Mass, at 11:00 AM"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 3,
+          "said": "Only ONE Mass will be celebrated that day."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 2,
+          "said": "There will only be ONE Mass in the morning on that day."
+        }
+      ],
+      "rationale": "R1, R16: both bulletins say only the 11:00 AM Mass is celebrated on the morning of Nov 22.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-hillside",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pastor's installation; only one Mass, at 11:00 AM"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 3,
+          "said": "Only ONE Mass will be celebrated that day."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9912d45",
+          "page": 2,
+          "said": "There will only be ONE Mass in the morning on that day."
+        }
+      ],
+      "rationale": "R28: the newest issue says only one Mass that day, the Nov 8 issue only one Mass in the morning. Leaning cancel per the newer, broader wording, at the time the Portuguese Mass question leans to (6:00 PM); pick the option matching that answer.",
+      "question": "Is the Nov 22 evening Portuguese Mass cancelled for the installation?",
+      "options": [
+        {
+          "label": "Cancel Nov 22 6:00 PM",
+          "entry": {
+            "church_slug": "christ-the-king-hillside",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-22",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Pastor's installation; only one Mass, at 11:00 AM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Cancel Nov 22 7:00 PM",
+          "entry": {
+            "church_slug": "christ-the-king-hillside",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-22",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Pastor's installation; only one Mass, at 11:00 AM"
+          }
+        },
+        {
+          "label": "No cancellation",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:22Z"
+      }
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 1,
+          "said": "HOLY DAY OF OBLIGATION MASSES: 8:30 AM and 7:00 PM (English)"
+        }
+      ],
+      "rationale": "R16/POLICY, Dates: holy-day times with no dated holy day printed; nothing to record until a bulletin names the date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 1,
+          "said": "NOVENAS: Our Lady of the Miraculous Medal every Monday after the 8:30 AM Mass. Our Mother of Perpetual Help every Wednesday after the 8:30 AM Mass."
+        }
+      ],
+      "rationale": "R24: novenas are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a56ef3ef",
+          "page": 1,
+          "said": "For confessions at other times, please call the rectory and make an appointment with the priest."
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://christthekinghillsidenj.org/",
+          "said": "Rosary Every Day 7:30 PM May 1 - May 31"
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

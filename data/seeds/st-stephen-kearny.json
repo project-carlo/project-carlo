@@ -1,0 +1,1053 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-stephen-kearny",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:42Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T18:16:11Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:21:05Z",
+  "summary": "One church. Both bulletins (Nov 8 and Nov 15, 2026, image-only) print the same Liturgy Schedule box, confirmed by the intentions and the parish website: weekend, weekday (incl. Spanish Wed 7 PM and Sat 8:30 AM), Saturday and Monday confession, Monday and First Friday adoration. Saturday confession's 4:55 PM end and the December 8 holy-day Masses come from the website, which the bulletin cites for holy days. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f1f87b1b13a5f4e418e3c2e2a3fe1bfad3a41707fbc7e927f8733d8a1a6a2b37",
+      "fetched_at": "2026-11-15T16:54:42Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "0687d296001d429418a7cfac9ad04911fc770a19bf737006ca011be7445dce5d",
+      "fetched_at": "2026-11-08T16:03:31Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Saturday Vigil: 5:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Saturday Vigil: 5:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 3,
+          "said": "Saturday, November 21 ... 5:00 pm + The Maffettone Family"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgy Schedule box and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12:00 pm (English) 1:30 pm (Español); 7:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12:00 pm (English) 1:30 pm (Español); 7:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 3,
+          "said": "Sunday, November 22: 8:00 am, 10:00 am, 12:00 pm, 1:30 pm (Español), 7:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgy Schedule box and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12:00 pm (English) 1:30 pm (Español); 7:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12:00 pm (English) 1:30 pm (Español); 7:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 3,
+          "said": "Sunday, November 22: 8:00 am, 10:00 am, 12:00 pm, 1:30 pm (Español), 7:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgy Schedule box and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12:00 pm (English) 1:30 pm (Español); 7:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12:00 pm (English) 1:30 pm (Español); 7:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 3,
+          "said": "Sunday, November 22: 8:00 am, 10:00 am, 12:00 pm, 1:30 pm (Español), 7:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgy Schedule box and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12:00 pm (English) 1:30 pm (Español); 7:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12:00 pm (English) 1:30 pm (Español); 7:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 3,
+          "said": "Sunday, November 22: 8:00 am, 10:00 am, 12:00 pm, 1:30 pm (Español), 7:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgy Schedule box and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Sunday: ... 1:30 pm (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Sunday: ... 1:30 pm (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 3,
+          "said": "1:30 pm (Español) + Jose Dosil"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgy Schedule box and intentions of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Monday—Friday: 9:00 am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Monday—Friday: 9:00 am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 3,
+          "said": "Monday, November 16 ... Friday, November 20: 9:00 am each day"
+        }
+      ],
+      "rationale": "R1: weekday schedule box of both bulletins, confirmed by each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Monday—Friday: 9:00 am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Monday—Friday: 9:00 am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 3,
+          "said": "Monday, November 16 ... Friday, November 20: 9:00 am each day"
+        }
+      ],
+      "rationale": "R1: weekday schedule box of both bulletins, confirmed by each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Monday—Friday: 9:00 am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Monday—Friday: 9:00 am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 3,
+          "said": "Monday, November 16 ... Friday, November 20: 9:00 am each day"
+        }
+      ],
+      "rationale": "R1: weekday schedule box of both bulletins, confirmed by each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Monday—Friday: 9:00 am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Monday—Friday: 9:00 am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 3,
+          "said": "Monday, November 16 ... Friday, November 20: 9:00 am each day"
+        }
+      ],
+      "rationale": "R1: weekday schedule box of both bulletins, confirmed by each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Monday—Friday: 9:00 am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Monday—Friday: 9:00 am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 3,
+          "said": "Monday, November 16 ... Friday, November 20: 9:00 am each day"
+        }
+      ],
+      "rationale": "R1: weekday schedule box of both bulletins, confirmed by each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Wednesday: 7:00 pm (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Wednesday: 7:00 pm (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 3,
+          "said": "Wednesday, November 18 ... 7:00 pm (Español) + Bonita Cusate"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Saturday: 8:30 am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Saturday: 8:30 am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 3,
+          "said": "Saturday, November 21 8:30 am + Clarence Finch"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Confessions / Confesiones Saturday: 4:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Confessions / Confesiones Saturday: 4:15 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://ststephenkearny.com/confession-times",
+          "said": "Saturday : 4:15 PM to 4:55 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:19:23Z",
+            "current_because": "Homepage lists upcoming Thanksgiving Day November 26 and Immaculate Conception December 8 Masses plus November-December 2026 calendar events; current pastor-era parish",
+            "bulletin": "f1f87b1b",
+            "fits_because": "Its weekly Mass, confession and adoration times match the f1f87b1b13a5 (Nov 15, 2026) schedule box exactly, and that box refers readers to the website for holy days and Sunday confession"
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box gives Saturday 4:15 pm with no end; the parish's current confession page gives the same start and ends it at 4:55 PM, before the 5:00 PM vigil.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Monday: 6:00 pm to 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Monday: 6:00 pm to 7:00 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the website adds a holiday exception (major holidays), none of which falls before the next bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Sunday: see the bulletin / website"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Sunday: see the bulletin / website"
+        }
+      ],
+      "rationale": "R26: the box gives no Sunday confession time; neither bulletin's other pages nor the website's confession page give a standing Sunday time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 3,
+          "said": "CONFESSIONS WILL BE AT 9:30 AM ON Nov. 15"
+        }
+      ],
+      "rationale": "R19, R16: the Nov 8 bulletin announces a dated Sunday confession on Nov 15, as_of's date; the newest issue does not contradict it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "Eucharistic Adoration / Adoracion de la Eucaristia ... Mondays: 5:30 pm to 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "Eucharistic Adoration / Adoracion de la Eucaristia ... Mondays: 5:30 pm to 7:00 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the website gives the same hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 1,
+          "said": "First Friday / Primero Viernes: 9:30 am to 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0687d296",
+          "page": 1,
+          "said": "First Friday / Primero Viernes: 9:30 am to 10:30 am"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the standing schedule box of both bulletins names First Friday Adoration; the website says 'First Friday only'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 8,
+          "said": "Join us for Mass on Thanksgiving Day Thursday, November 26, 2026 9:00 am"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rules 6-7: the Thanksgiving Mass is the regular Thursday 9:00 AM weekly Mass; not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ststephenkearny.com/",
+          "said": "Upcoming Holy Days & Special Masses ... Immaculate Conception December 8 : 7:00 AM English, 9:00 AM English, 3:30 PM English, 5:00 PM English, 7:00 PM Spanish",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:19:23Z",
+            "current_because": "Homepage lists upcoming Thanksgiving Day November 26 and Immaculate Conception December 8 Masses plus November-December 2026 calendar events; current pastor-era parish",
+            "bulletin": "f1f87b1b",
+            "fits_because": "Its weekly Mass, confession and adoration times match the f1f87b1b13a5 (Nov 15, 2026) schedule box exactly, and that box refers readers to the website for holy days and Sunday confession"
+          }
+        }
+      ],
+      "rationale": "R6, R16: the bulletin's box sends readers to the website for holy days; the site's current holy-day list gives these December 8 Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ststephenkearny.com/",
+          "said": "Upcoming Holy Days & Special Masses ... Immaculate Conception December 8 : 7:00 AM English, 9:00 AM English, 3:30 PM English, 5:00 PM English, 7:00 PM Spanish",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:19:23Z",
+            "current_because": "Homepage lists upcoming Thanksgiving Day November 26 and Immaculate Conception December 8 Masses plus November-December 2026 calendar events; current pastor-era parish",
+            "bulletin": "f1f87b1b",
+            "fits_because": "Its weekly Mass, confession and adoration times match the f1f87b1b13a5 (Nov 15, 2026) schedule box exactly, and that box refers readers to the website for holy days and Sunday confession"
+          }
+        }
+      ],
+      "rationale": "R6, R16: the bulletin's box sends readers to the website for holy days; the site's current holy-day list gives these December 8 Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ststephenkearny.com/",
+          "said": "Upcoming Holy Days & Special Masses ... Immaculate Conception December 8 : 7:00 AM English, 9:00 AM English, 3:30 PM English, 5:00 PM English, 7:00 PM Spanish",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:19:23Z",
+            "current_because": "Homepage lists upcoming Thanksgiving Day November 26 and Immaculate Conception December 8 Masses plus November-December 2026 calendar events; current pastor-era parish",
+            "bulletin": "f1f87b1b",
+            "fits_because": "Its weekly Mass, confession and adoration times match the f1f87b1b13a5 (Nov 15, 2026) schedule box exactly, and that box refers readers to the website for holy days and Sunday confession"
+          }
+        }
+      ],
+      "rationale": "R6, R16: the bulletin's box sends readers to the website for holy days; the site's current holy-day list gives these December 8 Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception; Spanish"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ststephenkearny.com/",
+          "said": "Immaculate Conception December 8 : ... 7:00 PM Spanish",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:19:23Z",
+            "current_because": "Homepage lists upcoming Thanksgiving Day November 26 and Immaculate Conception December 8 Masses plus November-December 2026 calendar events; current pastor-era parish",
+            "bulletin": "f1f87b1b",
+            "fits_because": "Its weekly Mass, confession and adoration times match the f1f87b1b13a5 (Nov 15, 2026) schedule box exactly, and that box refers readers to the website for holy days and Sunday confession"
+          }
+        }
+      ],
+      "rationale": "R6, R16: as the other December 8 Masses; Spanish per the site.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-kearny",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ststephenkearny.com/",
+          "said": "Immaculate Conception December 8 : ... 9:00 AM English"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the 9:00 AM holy-day Mass is the regular Tuesday 9:00 AM weekly Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1f87b1b",
+          "page": 8,
+          "said": "Fiesta in Honor of Our Lady of Guadalupe, Sunday December 13, Procession at the end of the Spanish Mass, Hedges Hall 2:30pm to 4:00pm"
+        }
+      ],
+      "rationale": "R24: a procession and parish fiesta, not Mass, Confession or Adoration; the Spanish Mass is the weekly Sunday 1:30 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

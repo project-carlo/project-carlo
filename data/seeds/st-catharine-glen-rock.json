@@ -1,0 +1,615 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-catharine-glen-rock",
+  "status": "approved",
+  "as_of": "2026-11-15T16:24:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:58:17Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:18:32Z",
+  "summary": "Two listed churches at 905 S. Maple Ave: weekend Masses (Sat 5 PM; Sun 8, 10, 12) and Saturday 4-4:30 PM Confession at the church; daily Mass Mon-Fri 8 AM and Sat 9 AM and First Friday Adoration 8:30-9:30 AM (Sept-June) in the Ministry Center Chapel. Both bulletins (Nov 1 and Nov 8 issues, image-only) agree; no history stored. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6d86a5bbe2a258feeca1db688074433935d2cd868dbd1ddb6f1c1ada15a9b4d7",
+      "fetched_at": "2026-11-15T16:24:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3fdd8ad6864fdf2d3de6efa1ebe33da56f4352598a8250d1011b90c6a5a14775",
+      "fetched_at": "2026-11-08T15:47:09Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catharine-glen-rock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 1,
+          "said": "Eucharist - Weekend Masses Saturday 5 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fdd8ad6",
+          "page": 1,
+          "said": "Eucharist - Weekend Masses Saturday 5 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 3,
+          "said": "Saturday, November 14 ... 5pm Lynn & Ollie Neggia"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the Mass intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catharine-glen-rock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 1,
+          "said": "Eucharist - Weekend Masses ... Sunday 8 am 10am 12 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fdd8ad6",
+          "page": 1,
+          "said": "Eucharist - Weekend Masses ... Sunday 8 am 10am 12 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 3,
+          "said": "Sunday, November 8: 8am ... 10am ... 12pm"
+        }
+      ],
+      "rationale": "R1: printed in the weekend schedule box and the Mass intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catharine-glen-rock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 1,
+          "said": "Eucharist - Weekend Masses ... Sunday 8 am 10am 12 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fdd8ad6",
+          "page": 1,
+          "said": "Eucharist - Weekend Masses ... Sunday 8 am 10am 12 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 3,
+          "said": "Sunday, November 8: 8am ... 10am ... 12pm"
+        }
+      ],
+      "rationale": "R1: printed in the weekend schedule box and the Mass intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catharine-glen-rock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 1,
+          "said": "Eucharist - Weekend Masses ... Sunday 8 am 10am 12 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fdd8ad6",
+          "page": 1,
+          "said": "Eucharist - Weekend Masses ... Sunday 8 am 10am 12 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 3,
+          "said": "Sunday, November 8: 8am ... 10am ... 12pm"
+        }
+      ],
+      "rationale": "R1: printed in the weekend schedule box and the Mass intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ministry-center-chapel-glen-rock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday 8 am in the Ministry Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fdd8ad6",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday 8 am in the Ministry Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 2,
+          "said": "Join us for Daily Mass in the Ministry Center Chapel: Monday - Friday at 8am"
+        }
+      ],
+      "rationale": "R1: the Daily Mass schedule in both bulletins places it in the Ministry Center Chapel, a listed church; the intentions list 8am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ministry-center-chapel-glen-rock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday 8 am in the Ministry Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fdd8ad6",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday 8 am in the Ministry Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 2,
+          "said": "Join us for Daily Mass in the Ministry Center Chapel: Monday - Friday at 8am"
+        }
+      ],
+      "rationale": "R1: the Daily Mass schedule in both bulletins places it in the Ministry Center Chapel, a listed church; the intentions list 8am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ministry-center-chapel-glen-rock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday 8 am in the Ministry Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fdd8ad6",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday 8 am in the Ministry Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 2,
+          "said": "Join us for Daily Mass in the Ministry Center Chapel: Monday - Friday at 8am"
+        }
+      ],
+      "rationale": "R1: the Daily Mass schedule in both bulletins places it in the Ministry Center Chapel, a listed church; the intentions list 8am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ministry-center-chapel-glen-rock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday 8 am in the Ministry Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fdd8ad6",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday 8 am in the Ministry Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 2,
+          "said": "Join us for Daily Mass in the Ministry Center Chapel: Monday - Friday at 8am"
+        }
+      ],
+      "rationale": "R1: the Daily Mass schedule in both bulletins places it in the Ministry Center Chapel, a listed church; the intentions list 8am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ministry-center-chapel-glen-rock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday 8 am in the Ministry Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fdd8ad6",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday 8 am in the Ministry Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 2,
+          "said": "Join us for Daily Mass in the Ministry Center Chapel: Monday - Friday at 8am"
+        }
+      ],
+      "rationale": "R1: the Daily Mass schedule in both bulletins places it in the Ministry Center Chapel, a listed church; the intentions list 8am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ministry-center-chapel-glen-rock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 1,
+          "said": "Daily Mass ... Saturday 9 am in the Ministry Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fdd8ad6",
+          "page": 1,
+          "said": "Daily Mass ... Saturday 9 am in the Ministry Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 3,
+          "said": "Saturday, November 14 9am All parishioners"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass schedule and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catharine-glen-rock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Charity Room"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 1,
+          "said": "Confession / Reconciliation Saturdays from 4 - 4:30 pm in the Charity Room (enter Church and turn right, through doors by elevator) or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fdd8ad6",
+          "page": 1,
+          "said": "Confession / Reconciliation Saturdays from 4 - 4:30 pm in the Charity Room (enter Church and turn right, through doors by elevator) or by appointment."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the Charity Room is inside the church (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ministry-center-chapel-glen-rock",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 1,
+          "said": "Every First Friday - Exposition of the Blessed Sacrament is in the Ministry Center Chapel following 8 am Mass until Benediction at 9:30 am (except July & August)."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fdd8ad6",
+          "page": 1,
+          "said": "Every First Friday - Exposition of the Blessed Sacrament is in the Ministry Center Chapel following 8 am Mass until Benediction at 9:30 am (except July & August)."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fdd8ad6",
+          "page": 3,
+          "said": "First Friday Holy Hour Adoration ... following 8 am Mass. Exposition at 8:30am and concluding with Benediction at 9:30am."
+        }
+      ],
+      "rationale": "R1: the newest bulletin's standing schedule box prints it as every First Friday; the Nov 1 issue gives the clock time 8:30am (POLICY, Times), and 'except July & August' is the season September-June.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 1,
+          "said": "Confession ... or by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 1,
+          "said": "Holiday / Holy Day Schedule 9 am Mass on Holidays. Consult Bulletin for Holy Days."
+        }
+      ],
+      "rationale": "R24, POLICY Dates: no holiday is dated and no church is given; a date cannot be projected from the generic line. Update mode will read dated holiday listings.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d86a5bb",
+          "page": 6,
+          "said": "Recovery Mass At St. Mary's ... celebrated monthly at the Church of St. Mary in Closter ... Mass begins at 12 noon"
+        }
+      ],
+      "rationale": "R22: held at another parish's church in Closter, not at St. Catharine's.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,879 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-lake-verona",
+  "status": "approved",
+  "as_of": "2026-11-15T16:23:15Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T21:44:05Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:27Z",
+  "summary": "One church. The Mass schedule box (Sat 5:30 PM vigil; Sun 7:30, 9, 10:30, 12; Mon-Fri 7 AM and noon; Sat 9 AM) and Saturday noon-1 PM Reconciliation match in both bulletins and in the Mass intentions. The First Friday Holy Hour (listed 12/04 without a time) is timed 7-8 PM from the parish website. No extract-mode history is stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5a88110c6c433d612d9ba81bae931c3eabef3a17866a7de8dc76bf35743a73a6",
+      "fetched_at": "2026-11-15T16:23:15Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "328b45741d2746088ec9ef80fe97a9981bc194457ab2df48980fade3117ad14d",
+      "fetched_at": "2026-11-08T15:47:20Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Weekend Masses Sat. 5:30pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Weekend Masses Sat. 5:30pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 2,
+          "said": "Sat: November 21 ... 5:30pm Robert Pritchard"
+        }
+      ],
+      "rationale": "R1, R35: in the Mass Schedule box of both bulletins read and in the newest's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Sun. 7:30am, 9:00am, 10:30am,12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Sun. 7:30am, 9:00am, 10:30am,12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 2,
+          "said": "Sun: November 22 7:30am, 9:00am, 10:30am, 12:00pm (intentions)"
+        }
+      ],
+      "rationale": "R1, R35: in the Mass Schedule box of both bulletins read and in the newest's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Sun. 7:30am, 9:00am, 10:30am,12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Sun. 7:30am, 9:00am, 10:30am,12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 2,
+          "said": "Sun: November 22 7:30am, 9:00am, 10:30am, 12:00pm (intentions)"
+        }
+      ],
+      "rationale": "R1, R35: in the Mass Schedule box of both bulletins read and in the newest's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Sun. 7:30am, 9:00am, 10:30am,12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Sun. 7:30am, 9:00am, 10:30am,12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 2,
+          "said": "Sun: November 22 7:30am, 9:00am, 10:30am, 12:00pm (intentions)"
+        }
+      ],
+      "rationale": "R1, R35: in the Mass Schedule box of both bulletins read and in the newest's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Sun. 7:30am, 9:00am, 10:30am,12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Sun. 7:30am, 9:00am, 10:30am,12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 2,
+          "said": "Sun: November 22 7:30am, 9:00am, 10:30am, 12:00pm (intentions)"
+        }
+      ],
+      "rationale": "R1, R35: in the Mass Schedule box of both bulletins read and in the newest's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 2,
+          "said": "Mass intentions list 7:00am and 12:00pm each day Mon Nov 16 - Fri Nov 20"
+        }
+      ],
+      "rationale": "R1, R35: in the Mass Schedule box of both bulletins read and in the newest's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 2,
+          "said": "Mass intentions list 7:00am and 12:00pm each day Mon Nov 16 - Fri Nov 20"
+        }
+      ],
+      "rationale": "R1, R35: in the Mass Schedule box of both bulletins read and in the newest's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 2,
+          "said": "Mass intentions list 7:00am and 12:00pm each day Mon Nov 16 - Fri Nov 20"
+        }
+      ],
+      "rationale": "R1, R35: in the Mass Schedule box of both bulletins read and in the newest's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 2,
+          "said": "Mass intentions list 7:00am and 12:00pm each day Mon Nov 16 - Fri Nov 20"
+        }
+      ],
+      "rationale": "R1, R35: in the Mass Schedule box of both bulletins read and in the newest's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 2,
+          "said": "Mass intentions list 7:00am and 12:00pm each day Mon Nov 16 - Fri Nov 20"
+        }
+      ],
+      "rationale": "R1, R35: in the Mass Schedule box of both bulletins read and in the newest's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 2,
+          "said": "Mass intentions list 7:00am and 12:00pm each day Mon Nov 16 - Fri Nov 20"
+        }
+      ],
+      "rationale": "R1, R35: in the Mass Schedule box of both bulletins read and in the newest's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 2,
+          "said": "Mass intentions list 7:00am and 12:00pm each day Mon Nov 16 - Fri Nov 20"
+        }
+      ],
+      "rationale": "R1, R35: in the Mass Schedule box of both bulletins read and in the newest's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 2,
+          "said": "Mass intentions list 7:00am and 12:00pm each day Mon Nov 16 - Fri Nov 20"
+        }
+      ],
+      "rationale": "R1, R35: in the Mass Schedule box of both bulletins read and in the newest's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 2,
+          "said": "Mass intentions list 7:00am and 12:00pm each day Mon Nov 16 - Fri Nov 20"
+        }
+      ],
+      "rationale": "R1, R35: in the Mass Schedule box of both bulletins read and in the newest's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Weekday Masses Mon-Fri 7:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 2,
+          "said": "Mass intentions list 7:00am and 12:00pm each day Mon Nov 16 - Fri Nov 20"
+        }
+      ],
+      "rationale": "R1, R35: in the Mass Schedule box of both bulletins read and in the newest's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Weekday Masses ... Sat. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Weekday Masses ... Sat. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 2,
+          "said": "Sat: November 21 9:00am Serafina and Antonia Manna"
+        }
+      ],
+      "rationale": "R1, R35: in the Mass Schedule box of both bulletins read and in the newest's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Reconciliation Sat. 12:00pm - 1:00pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "328b4574",
+          "page": 1,
+          "said": "Reconciliation Sat. 12:00pm - 1:00pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 5,
+          "said": "Sat. 11/21 12:00pm Confessions Church"
+        }
+      ],
+      "rationale": "R1: the Sacraments box of both bulletins read; the newest's calendar lists it in the Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 1,
+          "said": "Reconciliation ... or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 5,
+          "said": "UPCOMING... 11/30 Advent Holy Hour"
+        }
+      ],
+      "rationale": "R24, R26: a dated Holy Hour with no time printed; POLICY skips events without a definite start time. Update mode will read the bulletin that times it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 4,
+          "said": "Interfaith Thanksgiving Prayer Service ... 3:00pm next Sunday, 11/22 ... Temple B'nai Shalom ... West Orange"
+        }
+      ],
+      "rationale": "R22, R24: a prayer service, not a Mass, held at a temple in West Orange.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-verona",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ollverona.org/",
+          "said": "Adoration Schedule First Friday of the month 7:00pm - 8:00pm",
+          "schedule_check": {
+            "checked_at": "2026-11-20T21:46:17Z",
+            "current_because": "The homepage's Mass, daily Mass and Reconciliation times match the November 15, 2026 bulletin exactly, and its news posts are from November 2026 (All Souls Nov 2, School Gala Nov 20).",
+            "bulletin": "5a88110c",
+            "fits_because": "The newest bulletin's Upcoming list announces a '1st Friday Holy Hour' on 12/04 without a time; the site's First Friday 7-8 PM Adoration is that monthly service."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a88110c",
+          "page": 5,
+          "said": "UPCOMING... 12/04 1st Friday Holy Hour"
+        }
+      ],
+      "rationale": "R6, R12: the website times the First Friday Adoration that the newest bulletin names without a time; neither bulletin's week holds a first Friday. One-hour Holy Hour at the parish's only church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

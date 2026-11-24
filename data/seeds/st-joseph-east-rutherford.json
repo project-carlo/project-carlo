@@ -1,0 +1,925 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-east-rutherford",
+  "status": "approved",
+  "as_of": "2026-11-15T16:24:58Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T16:09:36Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:31Z",
+  "summary": "One church. Weekend (Sat 5 PM; Sun 8, 10, noon, Spanish 1:30 PM) and weekday Masses, Thursday Exposition 12:30-1 PM and Thursday/Saturday Confession agree across both bulletins and the website. Open: the Friday 7 AM Adoration and Confession end times, which the front page and page 2 print differently (7:25 vs 7:30).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "aaf66e3faed0825cb5cacf84251a387d9dfd93c6c222a439ae04f1326ab2846c",
+      "fetched_at": "2026-11-15T16:24:58Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "df28eab342aafd941d8bb4b74b1e7a73d7f9485ec149206bad8a1ad4354a58cd",
+      "fetched_at": "2026-11-08T15:48:54Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "MASS SCHEDULE: Saturday 5 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 1,
+          "said": "MASS SCHEDULE: Saturday 5 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 3,
+          "said": "Saturday, November ..., Vigil Mass 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 3,
+          "said": "Saturday, November ..., Vigil Mass 5:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the front-page schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "Sunday 8, 10 & Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 1,
+          "said": "Sunday 8, 10 & Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 3,
+          "said": "Sunday ... 8:00 am / 10:00 am / 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 3,
+          "said": "Sunday ... 8:00 am / 10:00 am / 12:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the front-page schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "Sunday 8, 10 & Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 1,
+          "said": "Sunday 8, 10 & Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 3,
+          "said": "Sunday ... 8:00 am / 10:00 am / 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 3,
+          "said": "Sunday ... 8:00 am / 10:00 am / 12:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the front-page schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "Sunday 8, 10 & Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 1,
+          "said": "Sunday 8, 10 & Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 3,
+          "said": "Sunday ... 8:00 am / 10:00 am / 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 3,
+          "said": "Sunday ... 8:00 am / 10:00 am / 12:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the front-page schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "Sunday 8, 10 & Noon / Spanish 1:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 1,
+          "said": "Sunday 8, 10 & Noon / Spanish 1:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 3,
+          "said": "Sunday ... 1:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 3,
+          "said": "Sunday ... 1:30 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosepher.com/",
+          "said": "Spanish Mass: 1:30 PM"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box lists the Spanish 1:30 PM Mass with the Sunday Masses, and the intentions list 1:30 pm under each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "Weekday Masses: 7:30 AM (Tue, Wed & Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 1,
+          "said": "Weekday Masses: 7:30 AM (Tue, Wed & Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 3,
+          "said": "7:30 am intentions on Tuesday, Wednesday and Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 3,
+          "said": "7:30 am intentions on Tuesday, Wednesday and Friday"
+        }
+      ],
+      "rationale": "R1, R35: front-page schedule box and the weekday intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "Weekday Masses: 7:30 AM (Tue, Wed & Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 1,
+          "said": "Weekday Masses: 7:30 AM (Tue, Wed & Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 3,
+          "said": "7:30 am intentions on Tuesday, Wednesday and Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 3,
+          "said": "7:30 am intentions on Tuesday, Wednesday and Friday"
+        }
+      ],
+      "rationale": "R1, R35: front-page schedule box and the weekday intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "Weekday Masses: 7:30 AM (Tue, Wed & Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 1,
+          "said": "Weekday Masses: 7:30 AM (Tue, Wed & Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 3,
+          "said": "7:30 am intentions on Tuesday, Wednesday and Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 3,
+          "said": "7:30 am intentions on Tuesday, Wednesday and Friday"
+        }
+      ],
+      "rationale": "R1, R35: front-page schedule box and the weekday intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "and 12:05 PM (Mon & Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 1,
+          "said": "and 12:05 PM (Mon & Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 3,
+          "said": "12:05 pm intentions on Monday and Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 3,
+          "said": "12:05 pm intentions on Monday and Thursday"
+        }
+      ],
+      "rationale": "R1, R35: front-page schedule box and the weekday intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "and 12:05 PM (Mon & Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 1,
+          "said": "and 12:05 PM (Mon & Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 3,
+          "said": "12:05 pm intentions on Monday and Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 3,
+          "said": "12:05 pm intentions on Monday and Thursday"
+        }
+      ],
+      "rationale": "R1, R35: front-page schedule box and the weekday intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "Thursday: Blessed Sacrament Exposition at 12:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 1,
+          "said": "Thursday: Blessed Sacrament Exposition at 12:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 2,
+          "said": "ADORATION: Thursdays after the Noon Mass for half hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 2,
+          "said": "ADORATION: Thursdays after the Noon Mass for half hour."
+        }
+      ],
+      "rationale": "R1, POLICY Times: the front page gives the clock time 12:30 PM and page 2 the duration (half hour), so 12:30-1:00 PM. Both bulletins agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE: THURSDAYS at 12:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE: THURSDAYS at 12:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 2,
+          "said": "Reconciliation is offered ... Thursdays at 12:30-1 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 2,
+          "said": "Reconciliation is offered ... Thursdays at 12:30-1 pm."
+        },
+        {
+          "source": "website",
+          "url": "https://stjosepher.com/",
+          "said": "Thursday: 12:30 PM - 1:00 PM"
+        }
+      ],
+      "rationale": "R1: page 2 gives the end time the front page omits; both bulletins and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "SAT 11 - Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 1,
+          "said": "SAT 11 - Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 2,
+          "said": "every Saturday from 11 AM-Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 2,
+          "said": "every Saturday from 11 AM-Noon"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosepher.com/",
+          "said": "Saturday: 11:00 AM - 12:00 PM"
+        }
+      ],
+      "rationale": "R1: front page, page 2 and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "Thursday: Blessed Sacrament Exposition at 12:30 PM, Fridays 7–7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 1,
+          "said": "Thursday: Blessed Sacrament Exposition at 12:30 PM, Fridays 7–7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 2,
+          "said": "ADORATION: ... Fridays at 7 am till 7:25 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 2,
+          "said": "ADORATION: ... Fridays at 7 am till 7:25 am."
+        }
+      ],
+      "rationale": "R28: the same bulletin (both issues read) prints two end times. Leaning 7:25: page 2's Adoration notice is the specific one, and Exposition must close before the 7:30 AM Mass.",
+      "question": "Friday morning Adoration ends at 7:25 or 7:30 AM?",
+      "options": [
+        {
+          "label": "Fridays 7:00-7:25 AM",
+          "entry": {
+            "church_slug": "st-joseph-east-rutherford",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "07:25",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Fridays 7:00-7:30 AM",
+          "entry": {
+            "church_slug": "st-joseph-east-rutherford",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "07:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:31Z"
+      }
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE: ... FRIDAYS 7-7:25 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE: ... FRIDAYS 7-7:25 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 2,
+          "said": "Reconciliation is offered ... Fridays 7- 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df28eab3",
+          "page": 2,
+          "said": "Reconciliation is offered ... Fridays 7- 7:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosepher.com/",
+          "said": "Friday: 7:00 AM - 8:30 AM"
+        }
+      ],
+      "rationale": "R28: the front page says 7-7:25, page 2 says 7-7:30 (both issues), and the website says 7:00-8:30 AM, which overlaps the 7:30 Mass and looks wrong. Leaning 7:25 per the front-page schedule box, since the priest says the 7:30 AM Mass.",
+      "question": "Friday morning Confession ends at 7:25 or 7:30 AM?",
+      "options": [
+        {
+          "label": "Fridays 7:00-7:25 AM",
+          "entry": {
+            "church_slug": "st-joseph-east-rutherford",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "07:25",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Fridays 7:00-7:30 AM",
+          "entry": {
+            "church_slug": "st-joseph-east-rutherford",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "07:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:31Z"
+      }
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "Mondays: Novena to St. Anthony"
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not Mass, Confession or Adoration; no time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaf66e3f",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE: ... or by appointment."
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-czestochowa-jersey-city",
+  "status": "approved",
+  "as_of": "2026-11-15T16:53:00Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T13:40:05Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:36Z",
+  "summary": "One church (Our Lady of Czestochowa, 120 Sussex St). Neither bulletin has a schedule box; the Masses come from the intentions of the Nov 8 and Nov 15 issues (R35), which agree with the parish website: Sat 5 PM, Sun 10 AM and 12:30 PM, Tue-Fri 12:30 PM, plus Friday 7 PM Adoration. No Confession time is printed in the bulletins or on the website. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e1dc7ec611a67285034ff3250b52424bcecb29ce9ab6c2fe748ddd465656e8ba",
+      "fetched_at": "2026-11-15T16:53:00Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "cee59797eeec62bb0735c5ed9c5dd41d12e0f28af6de92c426f22543bbb79f72",
+      "fetched_at": "2026-11-08T16:01:59Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1dc7ec6",
+          "page": 3,
+          "said": "Saturday Nov 14 5 pm Fiorello Salvo; Saturday Nov 21 5 pm Walter Rzaski, Jr."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cee59797",
+          "page": 3,
+          "said": "Saturday Nov 7 5 pm People of the Parish"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olcjc.org/contact",
+          "said": "Saturday 5:00 PM"
+        }
+      ],
+      "rationale": "R35: the 5 PM Saturday Mass is in the intentions of both bulletins read, covering three Saturdays (Nov 7, 14, 21), never marked special; the parish website's Mass Times agree. Neither bulletin prints a schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1dc7ec6",
+          "page": 3,
+          "said": "Sunday Nov 15 10 am People of the Parish, 12:30 pm Gabriela & Manuel Alemon; Sunday Nov 22 10 am People of the Parish, 12:30 pm Christopher Englese"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cee59797",
+          "page": 3,
+          "said": "Sunday Nov 8 10 am Deceased Members of the Kalinowski Family, 12:30 pm Amina Afolabi"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olcjc.org/contact",
+          "said": "Sunday 10:00 AM & 12:30 PM"
+        }
+      ],
+      "rationale": "R35: both Sunday Masses are in the intentions of both bulletins, covering Nov 8, 15 and 22; the parish website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1dc7ec6",
+          "page": 3,
+          "said": "Sunday Nov 15 10 am People of the Parish, 12:30 pm Gabriela & Manuel Alemon; Sunday Nov 22 10 am People of the Parish, 12:30 pm Christopher Englese"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cee59797",
+          "page": 3,
+          "said": "Sunday Nov 8 10 am Deceased Members of the Kalinowski Family, 12:30 pm Amina Afolabi"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olcjc.org/contact",
+          "said": "Sunday 10:00 AM & 12:30 PM"
+        }
+      ],
+      "rationale": "R35: both Sunday Masses are in the intentions of both bulletins, covering Nov 8, 15 and 22; the parish website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1dc7ec6",
+          "page": 3,
+          "said": "Tuesday Nov 17 12:30 pm; Wednesday Nov 18 12:30 pm; Thursday Nov 19 12:30 pm; Friday Nov 20 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cee59797",
+          "page": 3,
+          "said": "Tuesday Nov 10 12:30 pm; Wednesday Nov 11 12:30 pm; Thursday Nov 12 12:30 pm; Friday Nov 13 12:30 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olcjc.org/contact",
+          "said": "Tuesday - Friday 12:30 PM"
+        }
+      ],
+      "rationale": "R35: a 12:30 PM Mass is in the intentions on each of Tuesday to Friday in both bulletins' weeks; the website gives Tuesday - Friday 12:30 PM. Neither bulletin lists a Monday Mass, and the website has none.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1dc7ec6",
+          "page": 3,
+          "said": "Tuesday Nov 17 12:30 pm; Wednesday Nov 18 12:30 pm; Thursday Nov 19 12:30 pm; Friday Nov 20 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cee59797",
+          "page": 3,
+          "said": "Tuesday Nov 10 12:30 pm; Wednesday Nov 11 12:30 pm; Thursday Nov 12 12:30 pm; Friday Nov 13 12:30 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olcjc.org/contact",
+          "said": "Tuesday - Friday 12:30 PM"
+        }
+      ],
+      "rationale": "R35: a 12:30 PM Mass is in the intentions on each of Tuesday to Friday in both bulletins' weeks; the website gives Tuesday - Friday 12:30 PM. Neither bulletin lists a Monday Mass, and the website has none.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1dc7ec6",
+          "page": 3,
+          "said": "Tuesday Nov 17 12:30 pm; Wednesday Nov 18 12:30 pm; Thursday Nov 19 12:30 pm; Friday Nov 20 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cee59797",
+          "page": 3,
+          "said": "Tuesday Nov 10 12:30 pm; Wednesday Nov 11 12:30 pm; Thursday Nov 12 12:30 pm; Friday Nov 13 12:30 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olcjc.org/contact",
+          "said": "Tuesday - Friday 12:30 PM"
+        }
+      ],
+      "rationale": "R35: a 12:30 PM Mass is in the intentions on each of Tuesday to Friday in both bulletins' weeks; the website gives Tuesday - Friday 12:30 PM. Neither bulletin lists a Monday Mass, and the website has none.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1dc7ec6",
+          "page": 3,
+          "said": "Tuesday Nov 17 12:30 pm; Wednesday Nov 18 12:30 pm; Thursday Nov 19 12:30 pm; Friday Nov 20 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cee59797",
+          "page": 3,
+          "said": "Tuesday Nov 10 12:30 pm; Wednesday Nov 11 12:30 pm; Thursday Nov 12 12:30 pm; Friday Nov 13 12:30 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olcjc.org/contact",
+          "said": "Tuesday - Friday 12:30 PM"
+        }
+      ],
+      "rationale": "R35: a 12:30 PM Mass is in the intentions on each of Tuesday to Friday in both bulletins' weeks; the website gives Tuesday - Friday 12:30 PM. Neither bulletin lists a Monday Mass, and the website has none.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1dc7ec6",
+          "page": 5,
+          "said": "Eucharistic Adoration every Friday at 7 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cee59797",
+          "page": 5,
+          "said": "Eucharistic Adoration every Friday at 7 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olcjc.org/contact",
+          "said": "Adoration on Fridays at 7:00 PM"
+        }
+      ],
+      "rationale": "R1: both bulletins print 'every Friday at 7 p.m.' on p5; no end time is given, so end_time stays null (POLICY, Times). No location is given; the parish has one church, and the website lists it with the Mass times at 120 Sussex Street.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cee59797",
+          "page": 5,
+          "said": "Women's Group Rosary and Prayer Hour 4PM Before the Saturday Vigil Mass, Saturday, November 14th, Saturday, December 12th"
+        }
+      ],
+      "rationale": "R24: a Rosary and prayer hour is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

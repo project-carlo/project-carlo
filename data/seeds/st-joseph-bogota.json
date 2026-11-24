@@ -1,0 +1,1625 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-bogota",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:06Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T16:05:12Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:29Z",
+  "summary": "One church, St. Joseph, Bogota; two all-image bulletins (Nov 8 and 15) print the same schedule: Mon-Sat 8 AM, Sat 5 PM, Sun 8, 10 and Spanish 11:30, Saturday Confession 3:30-4:15 and first-Sunday Confessions; Thanksgiving Masses Nov 26 are dated. Open: which weekday Adoration hours (Exposition 8:30-9:30 vs Adoration Chapel 8:30-2), the Advent Mon/Tue 7 PM Mass as a season, and a first-Sunday 11:30 Confession that now overlaps the moved Spanish Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8486006d54eae32c52a3b1dfe0aa50ef0c46a68716066e5b4710c055fddeb4f7",
+      "fetched_at": "2026-11-15T16:54:06Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "5ad2823f8372f9efd43b1308e1dcdb8107fef49528146929cdf5e664331a54c3",
+      "fetched_at": "2026-11-08T16:03:03Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE MONDAY—SATURDAY 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE MONDAY—SATURDAY 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 1,
+          "said": "Weekdays: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 1,
+          "said": "Weekdays: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 7,
+          "said": "Mass intentions list 8:00am Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box (p2) and front page (p1) of both bulletins read; the intentions list an 8:00am Mass each weekday and Saturday. The website homepage agrees (Weekday: 8am (Mon-Sat)).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE MONDAY—SATURDAY 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE MONDAY—SATURDAY 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 1,
+          "said": "Weekdays: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 1,
+          "said": "Weekdays: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 7,
+          "said": "Mass intentions list 8:00am Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box (p2) and front page (p1) of both bulletins read; the intentions list an 8:00am Mass each weekday and Saturday. The website homepage agrees (Weekday: 8am (Mon-Sat)).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE MONDAY—SATURDAY 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE MONDAY—SATURDAY 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 1,
+          "said": "Weekdays: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 1,
+          "said": "Weekdays: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 7,
+          "said": "Mass intentions list 8:00am Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box (p2) and front page (p1) of both bulletins read; the intentions list an 8:00am Mass each weekday and Saturday. The website homepage agrees (Weekday: 8am (Mon-Sat)).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE MONDAY—SATURDAY 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE MONDAY—SATURDAY 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 1,
+          "said": "Weekdays: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 1,
+          "said": "Weekdays: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 7,
+          "said": "Mass intentions list 8:00am Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box (p2) and front page (p1) of both bulletins read; the intentions list an 8:00am Mass each weekday and Saturday. The website homepage agrees (Weekday: 8am (Mon-Sat)).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE MONDAY—SATURDAY 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE MONDAY—SATURDAY 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 1,
+          "said": "Weekdays: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 1,
+          "said": "Weekdays: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 7,
+          "said": "Mass intentions list 8:00am Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box (p2) and front page (p1) of both bulletins read; the intentions list an 8:00am Mass each weekday and Saturday. The website homepage agrees (Weekday: 8am (Mon-Sat)).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE MONDAY—SATURDAY 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE MONDAY—SATURDAY 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 1,
+          "said": "Weekdays: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 1,
+          "said": "Weekdays: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 7,
+          "said": "Mass intentions list 8:00am Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box (p2) and front page (p1) of both bulletins read; the intentions list an 8:00am Mass each weekday and Saturday. The website homepage agrees (Weekday: 8am (Mon-Sat)).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "SATURDAY VIGIL MASS 5PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "SATURDAY VIGIL MASS 5PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 1,
+          "said": "Saturday Eve: 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 1,
+          "said": "Saturday Eve: 5pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and front page of both bulletins read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "SUNDAY MASS 8AM, 10AM, & SPANISH 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "SUNDAY MASS 8AM, 10AM, & SPANISH 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 1,
+          "said": "Sunday: 8am, 10am, & Spanish 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 1,
+          "said": "Sunday: 8am, 10am, & Spanish 11:30am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and front page of both bulletins read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "SUNDAY MASS 8AM, 10AM, & SPANISH 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "SUNDAY MASS 8AM, 10AM, & SPANISH 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 1,
+          "said": "Sunday: 8am, 10am, & Spanish 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 1,
+          "said": "Sunday: 8am, 10am, & Spanish 11:30am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and front page of both bulletins read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "SUNDAY MASS 8AM, 10AM, & SPANISH 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "SUNDAY MASS 8AM, 10AM, & SPANISH 11:30AM"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephbogota.org/nuevo-horario-de-la-misa-en-espanol-new-spanish-mass-time/",
+          "said": "Starting on Sunday, July 5, 2026 , our Mass in Spanish will begin at 11:30 a.m."
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins; the website's June 2026 notice explains the move from 12:00 to 11:30.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "CONFESSION SATURDAY 3:30PM—4:15PM IN CHURCH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "CONFESSION SATURDAY 3:30PM—4:15PM IN CHURCH"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "FIRST SUNDAY CONFESSIONS 7:30AM—7:50AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "FIRST SUNDAY CONFESSIONS 7:30AM—7:50AM"
+        }
+      ],
+      "rationale": "R1, R12: a named first-Sunday service printed in the standing schedule box of both bulletins (neither week holds a first Sunday; it is the standing schedule, not a dated notice).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "09:50",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "FIRST SUNDAY CONFESSIONS 9:30AM—9:50AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "FIRST SUNDAY CONFESSIONS 9:30AM—9:50AM"
+        }
+      ],
+      "rationale": "R1, R12: a named first-Sunday service printed in the standing schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "11:50",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "FIRST SUNDAY CONFESSIONS 11:30AM—11:50AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "FIRST SUNDAY CONFESSIONS 11:30AM—11:50AM"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephbogota.org/nuevo-horario-de-la-misa-en-espanol-new-spanish-mass-time/",
+          "said": "Starting on Sunday, July 5, 2026 , our Mass in Spanish will begin at 11:30 a.m."
+        }
+      ],
+      "rationale": "R30: the other two first-Sunday windows end ten minutes before the 8 and 10 AM Masses; this one matched the former 12:00 Spanish Mass, which moved to 11:30 in July 2026, so it now overlaps the Mass itself and looks like a stale line. Leaning leave out.",
+      "question": "Keep the first-Sunday 11:30-11:50 AM Confession, which now coincides with the 11:30 AM Spanish Mass?",
+      "options": [
+        {
+          "label": "First Sundays 11:30-11:50 AM",
+          "entry": {
+            "church_slug": "st-joseph-bogota",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": "11:50",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:29Z"
+      }
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition and Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT & ROSARY MONDAY—SATURDAY 8:30AM—9:30AM (OPEN TO PUBLIC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT & ROSARY MONDAY—SATURDAY 8:30AM—9:30AM (OPEN TO PUBLIC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 1,
+          "said": "Adoration Chapel: Mon-Sat 8:30am - 2pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 1,
+          "said": "Adoration Chapel: Mon-Sat 8:30am - 2pm"
+        }
+      ],
+      "rationale": "R28/R32: the front page gives the Adoration Chapel Mon-Sat 8:30am-2pm, while the detailed schedule box gives Exposition Mon-Sat 8:30-9:30 'open to public'; neither bulletin says where the Adoration Chapel is, and the website does not mention Adoration. Leaning to the hour both pages support and that is stated as public; the 8:30-2 hours (R38) need the chapel confirmed on site and open to all.",
+      "question": "Which weekday Adoration hours at St. Joseph?",
+      "options": [
+        {
+          "label": "Exposition 8:30-9:30 AM",
+          "entry": {
+            "church_slug": "st-joseph-bogota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Exposition and Rosary"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Adoration Chapel 8:30 AM-2 PM",
+          "entry": {
+            "church_slug": "st-joseph-bogota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "14:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:29Z"
+      },
+      "group": "adoration"
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition and Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT & ROSARY MONDAY—SATURDAY 8:30AM—9:30AM (OPEN TO PUBLIC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT & ROSARY MONDAY—SATURDAY 8:30AM—9:30AM (OPEN TO PUBLIC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 1,
+          "said": "Adoration Chapel: Mon-Sat 8:30am - 2pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 1,
+          "said": "Adoration Chapel: Mon-Sat 8:30am - 2pm"
+        }
+      ],
+      "rationale": "R28/R32: the front page gives the Adoration Chapel Mon-Sat 8:30am-2pm, while the detailed schedule box gives Exposition Mon-Sat 8:30-9:30 'open to public'; neither bulletin says where the Adoration Chapel is, and the website does not mention Adoration. Leaning to the hour both pages support and that is stated as public; the 8:30-2 hours (R38) need the chapel confirmed on site and open to all.",
+      "question": "Which weekday Adoration hours at St. Joseph?",
+      "options": [
+        {
+          "label": "Exposition 8:30-9:30 AM",
+          "entry": {
+            "church_slug": "st-joseph-bogota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Exposition and Rosary"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Adoration Chapel 8:30 AM-2 PM",
+          "entry": {
+            "church_slug": "st-joseph-bogota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "14:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:29Z"
+      },
+      "group": "adoration"
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition and Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT & ROSARY MONDAY—SATURDAY 8:30AM—9:30AM (OPEN TO PUBLIC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT & ROSARY MONDAY—SATURDAY 8:30AM—9:30AM (OPEN TO PUBLIC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 1,
+          "said": "Adoration Chapel: Mon-Sat 8:30am - 2pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 1,
+          "said": "Adoration Chapel: Mon-Sat 8:30am - 2pm"
+        }
+      ],
+      "rationale": "R28/R32: the front page gives the Adoration Chapel Mon-Sat 8:30am-2pm, while the detailed schedule box gives Exposition Mon-Sat 8:30-9:30 'open to public'; neither bulletin says where the Adoration Chapel is, and the website does not mention Adoration. Leaning to the hour both pages support and that is stated as public; the 8:30-2 hours (R38) need the chapel confirmed on site and open to all.",
+      "question": "Which weekday Adoration hours at St. Joseph?",
+      "options": [
+        {
+          "label": "Exposition 8:30-9:30 AM",
+          "entry": {
+            "church_slug": "st-joseph-bogota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Exposition and Rosary"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Adoration Chapel 8:30 AM-2 PM",
+          "entry": {
+            "church_slug": "st-joseph-bogota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "14:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:29Z"
+      },
+      "group": "adoration"
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition and Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT & ROSARY MONDAY—SATURDAY 8:30AM—9:30AM (OPEN TO PUBLIC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT & ROSARY MONDAY—SATURDAY 8:30AM—9:30AM (OPEN TO PUBLIC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 1,
+          "said": "Adoration Chapel: Mon-Sat 8:30am - 2pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 1,
+          "said": "Adoration Chapel: Mon-Sat 8:30am - 2pm"
+        }
+      ],
+      "rationale": "R28/R32: the front page gives the Adoration Chapel Mon-Sat 8:30am-2pm, while the detailed schedule box gives Exposition Mon-Sat 8:30-9:30 'open to public'; neither bulletin says where the Adoration Chapel is, and the website does not mention Adoration. Leaning to the hour both pages support and that is stated as public; the 8:30-2 hours (R38) need the chapel confirmed on site and open to all.",
+      "question": "Which weekday Adoration hours at St. Joseph?",
+      "options": [
+        {
+          "label": "Exposition 8:30-9:30 AM",
+          "entry": {
+            "church_slug": "st-joseph-bogota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Exposition and Rosary"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Adoration Chapel 8:30 AM-2 PM",
+          "entry": {
+            "church_slug": "st-joseph-bogota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "14:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:29Z"
+      },
+      "group": "adoration"
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition and Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT & ROSARY MONDAY—SATURDAY 8:30AM—9:30AM (OPEN TO PUBLIC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT & ROSARY MONDAY—SATURDAY 8:30AM—9:30AM (OPEN TO PUBLIC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 1,
+          "said": "Adoration Chapel: Mon-Sat 8:30am - 2pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 1,
+          "said": "Adoration Chapel: Mon-Sat 8:30am - 2pm"
+        }
+      ],
+      "rationale": "R28/R32: the front page gives the Adoration Chapel Mon-Sat 8:30am-2pm, while the detailed schedule box gives Exposition Mon-Sat 8:30-9:30 'open to public'; neither bulletin says where the Adoration Chapel is, and the website does not mention Adoration. Leaning to the hour both pages support and that is stated as public; the 8:30-2 hours (R38) need the chapel confirmed on site and open to all.",
+      "question": "Which weekday Adoration hours at St. Joseph?",
+      "options": [
+        {
+          "label": "Exposition 8:30-9:30 AM",
+          "entry": {
+            "church_slug": "st-joseph-bogota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Exposition and Rosary"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Adoration Chapel 8:30 AM-2 PM",
+          "entry": {
+            "church_slug": "st-joseph-bogota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "14:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:29Z"
+      },
+      "group": "adoration"
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition and Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT & ROSARY MONDAY—SATURDAY 8:30AM—9:30AM (OPEN TO PUBLIC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT & ROSARY MONDAY—SATURDAY 8:30AM—9:30AM (OPEN TO PUBLIC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 1,
+          "said": "Adoration Chapel: Mon-Sat 8:30am - 2pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 1,
+          "said": "Adoration Chapel: Mon-Sat 8:30am - 2pm"
+        }
+      ],
+      "rationale": "R28/R32: the front page gives the Adoration Chapel Mon-Sat 8:30am-2pm, while the detailed schedule box gives Exposition Mon-Sat 8:30-9:30 'open to public'; neither bulletin says where the Adoration Chapel is, and the website does not mention Adoration. Leaning to the hour both pages support and that is stated as public; the 8:30-2 hours (R38) need the chapel confirmed on site and open to all.",
+      "question": "Which weekday Adoration hours at St. Joseph?",
+      "options": [
+        {
+          "label": "Exposition 8:30-9:30 AM",
+          "entry": {
+            "church_slug": "st-joseph-bogota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Exposition and Rosary"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Adoration Chapel 8:30 AM-2 PM",
+          "entry": {
+            "church_slug": "st-joseph-bogota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "14:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:29Z"
+      },
+      "group": "adoration"
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 11,
+          "start_day": 30,
+          "end_month": 12,
+          "end_day": 24
+        },
+        "note": "Advent Evening Mass in English"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 6,
+          "said": "During the Season of Advent we will be having an Evening Mass Mondays and Tuesday's at 7pm in English. The Advent Evening Mass will begin on Monday, November 30th."
+        }
+      ],
+      "rationale": "R30, R15: the start date is printed and the end is the end of Advent (not printed; Christmas Eve). A season slot keeps it to Advent; the dates repeat each year, which may not hold. Leaning include with season 11/30-12/24.",
+      "question": "Add the Advent evening Mass, Mondays and Tuesdays 7 PM from November 30 through Advent?",
+      "options": [
+        {
+          "label": "Mon & Tue 7 PM, Nov 30-Dec 24",
+          "entry": {
+            "church_slug": "st-joseph-bogota",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 11,
+              "start_day": 30,
+              "end_month": 12,
+              "end_day": 24
+            },
+            "note": "Advent Evening Mass in English"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:29Z"
+      },
+      "group": "advent"
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 11,
+          "start_day": 30,
+          "end_month": 12,
+          "end_day": 24
+        },
+        "note": "Advent Evening Mass in English"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 6,
+          "said": "During the Season of Advent we will be having an Evening Mass Mondays and Tuesday's at 7pm in English. The Advent Evening Mass will begin on Monday, November 30th."
+        }
+      ],
+      "rationale": "R30, R15: the start date is printed and the end is the end of Advent (not printed; Christmas Eve). A season slot keeps it to Advent; the dates repeat each year, which may not hold. Leaning include with season 11/30-12/24.",
+      "question": "Add the Advent evening Mass, Mondays and Tuesdays 7 PM from November 30 through Advent?",
+      "options": [
+        {
+          "label": "Mon & Tue 7 PM, Nov 30-Dec 24",
+          "entry": {
+            "church_slug": "st-joseph-bogota",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 11,
+              "start_day": 30,
+              "end_month": 12,
+              "end_day": 24
+            },
+            "note": "Advent Evening Mass in English"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:29Z"
+      },
+      "group": "advent"
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 8,
+          "said": "On Thanksgiving Day, November 26th we will have Masses at 9am in English and at 11am in Spanish."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 8,
+          "said": "On Thanksgiving Day, November 26th we will have Masses at 9am in English and at 11am in Spanish."
+        }
+      ],
+      "rationale": "R1, R16, R17: dated holiday Masses on or after as_of; the weekly 8 AM Thursday Mass is left alone since no cancellation is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day, Spanish"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 8,
+          "said": "On Thanksgiving Day, November 26th we will have Masses at 9am in English and at 11am in Spanish."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 8,
+          "said": "On Thanksgiving Day, November 26th we will have Masses at 9am in English and at 11am in Spanish."
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 8,
+          "said": "St. Padre Pio Prayer Group meeting is held on the 3rd Wednesday of every month from1:00pm to 3:00pm in the church. Meetings will include St. Padre Pio Prayers, rosary recitation and Mass."
+        }
+      ],
+      "rationale": "R24, POLICY Final source checks: the Mass inside the prayer group's 1-3 PM meeting has no time of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486006d",
+          "page": 10,
+          "said": "Confirmation Classes 3rd Sunday of each month— 3:00 pm - 6:00 pm 11/15/2026— Class Session + Mass"
+        }
+      ],
+      "rationale": "R24: a Confirmation class session Mass, no Mass time of its own, and dated before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 6,
+          "said": "Feast of Virgen de Guadalupe: Mass led by Cardinal Tobin on December 12, 2026."
+        }
+      ],
+      "rationale": "R26: Pastoral Council minutes give no time or place; update mode will read the bulletin that announces it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-bogota",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-14",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Anointing of the Sick"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ad2823f",
+          "page": 6,
+          "said": "On Saturday, November 14th at 11am, there will be a Parish Mass of the Anointing of the Sick."
+        }
+      ],
+      "rationale": "R16: dated before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,527 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-michael-the-archangel-lyndhurst",
+  "status": "approved",
+  "as_of": "2026-11-15T16:26:05Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:22:02Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:20:25Z",
+  "summary": "One church, St. Michael the Archangel, Lyndhurst. The schedule box is identical in both bulletins (Nov 8 and Nov 15, 2026): weekday 8:30 AM Mass, Saturday 5 PM vigil, Sunday 8:30, 10:15 (Polish) and 11:30, Saturday Confession 3-4 PM, and a First Friday noon Mass followed by Adoration (settled at 12:30 PM per R10). The Nov 14 Healing Mass is before as_of and left out (R16). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "165e775a787c6b5ca29a6785d717fa2f2edaf7129e5366a21fb60c69463bf929",
+      "fetched_at": "2026-11-15T16:26:05Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "bf91a29c51720cd2af3279b5e02a50fc60cf42c0de616874ad1c9fb64659dd29",
+      "fetched_at": "2026-11-08T15:49:39Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "165e775a",
+          "page": 1,
+          "said": "Weekdays – 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf91a29c",
+          "page": 1,
+          "said": "Weekdays – 8:30am"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both bulletins read; the week's intentions list 8:30 Masses Monday to Thursday and none on Saturday morning, so weekdays are Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "165e775a",
+          "page": 1,
+          "said": "Weekdays – 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf91a29c",
+          "page": 1,
+          "said": "Weekdays – 8:30am"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both bulletins read; the week's intentions list 8:30 Masses Monday to Thursday and none on Saturday morning, so weekdays are Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "165e775a",
+          "page": 1,
+          "said": "Weekdays – 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf91a29c",
+          "page": 1,
+          "said": "Weekdays – 8:30am"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both bulletins read; the week's intentions list 8:30 Masses Monday to Thursday and none on Saturday morning, so weekdays are Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "165e775a",
+          "page": 1,
+          "said": "Weekdays – 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf91a29c",
+          "page": 1,
+          "said": "Weekdays – 8:30am"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both bulletins read; the week's intentions list 8:30 Masses Monday to Thursday and none on Saturday morning, so weekdays are Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "165e775a",
+          "page": 1,
+          "said": "Weekdays – 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf91a29c",
+          "page": 1,
+          "said": "Weekdays – 8:30am"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both bulletins read; the week's intentions list 8:30 Masses Monday to Thursday and none on Saturday morning, so weekdays are Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "165e775a",
+          "page": 1,
+          "said": "Saturday Vigil - 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf91a29c",
+          "page": 1,
+          "said": "Saturday Vigil - 5:00pm"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both bulletins read; intentions list Saturday 5:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "165e775a",
+          "page": 1,
+          "said": "Sunday - 8:30am, 10:15amPolish, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf91a29c",
+          "page": 1,
+          "said": "Sunday - 8:30am, 10:15amPolish, 11:30am"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both bulletins read; intentions list these Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "165e775a",
+          "page": 1,
+          "said": "Sunday - 8:30am, 10:15amPolish, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf91a29c",
+          "page": 1,
+          "said": "Sunday - 8:30am, 10:15amPolish, 11:30am"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both bulletins read; intentions list these Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "165e775a",
+          "page": 1,
+          "said": "Sunday - 8:30am, 10:15amPolish, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf91a29c",
+          "page": 1,
+          "said": "Sunday - 8:30am, 10:15amPolish, 11:30am"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "165e775a",
+          "page": 1,
+          "said": "First Friday – 8:30am, 12:00noon followed by Adoration of the Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf91a29c",
+          "page": 1,
+          "said": "First Friday – 8:30am, 12:00noon followed by Adoration of the Blessed Sacrament."
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; POLICY, Weekly or dated rule 2 makes it a first-week slot. The 8:30 First Friday Mass is the weekday Friday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-lyndhurst",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "165e775a",
+          "page": 1,
+          "said": "First Friday – 8:30am, 12:00noon followed by Adoration of the Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf91a29c",
+          "page": 1,
+          "said": "First Friday – 8:30am, 12:00noon followed by Adoration of the Blessed Sacrament."
+        }
+      ],
+      "rationale": "R10: Adoration follows the First Friday noon weekday Mass with no clock time, so it starts 30 minutes after it, with no end time. Read as following the 12:00 noon Mass, the item it is attached to.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-lyndhurst",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "165e775a",
+          "page": 1,
+          "said": "Every Saturday from 3:00pm–4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf91a29c",
+          "page": 1,
+          "said": "Every Saturday from 3:00pm–4:00pm"
+        }
+      ],
+      "rationale": "R1: Reconciliation box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "165e775a",
+          "page": 1,
+          "said": "Holy Days - Announced in bulletin"
+        }
+      ],
+      "rationale": "R26: holy-day Masses have no time in the schedule box; update mode reads them from the bulletins that announce them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "165e775a",
+          "page": 1,
+          "said": "The Anointing of the Sick is available anytime; please contact the rectory"
+        }
+      ],
+      "rationale": "R24, R26: Anointing is not Mass, Confession or Adoration, and has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

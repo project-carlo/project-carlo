@@ -1,0 +1,614 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-blessed-sacrament-roseland",
+  "status": "approved",
+  "as_of": "2026-11-15T16:53:21Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T21:41:16Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:25Z",
+  "summary": "One church, Our Lady of the Blessed Sacrament, Roseland. Both bulletins (Nov 8 and Nov 15, 2026; pages are images) print the same schedule box: daily Mass Mon-Sat 8:45 AM, Saturday vigil 5 PM, Sunday 8, 10 and 12, and confession after the Saturday 8:45 Mass (9:15 AM by R10). Open: whether to add first-Saturday Exposition, which has no clock time of its own.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9c3a920f654243517081f83cf9b0235c4e73705fc939064faab0f46c8d30d7cc",
+      "fetched_at": "2026-11-15T16:53:21Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "87d02d688c1a08221a974a643e1ed13543d8005535b6f45039f6a8b685d17d22",
+      "fetched_at": "2026-11-08T16:02:14Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-blessed-sacrament-roseland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 6,
+          "said": "HOLY MASS SCHEDULE DAILY MASS 8:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 6,
+          "said": "HOLY MASS SCHEDULE DAILY MASS 8:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 2,
+          "said": "Mass Intentions list 8:45 AM Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 2,
+          "said": "Mass Intentions list 8:45 AM Monday through Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Mass Schedule box of both bulletins read, and each weekday's intentions list 8:45 AM; 'Daily Mass, Monday-Friday' on the same page confirms the days (Saturday is listed separately).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-blessed-sacrament-roseland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 6,
+          "said": "HOLY MASS SCHEDULE DAILY MASS 8:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 6,
+          "said": "HOLY MASS SCHEDULE DAILY MASS 8:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 2,
+          "said": "Mass Intentions list 8:45 AM Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 2,
+          "said": "Mass Intentions list 8:45 AM Monday through Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Mass Schedule box of both bulletins read, and each weekday's intentions list 8:45 AM; 'Daily Mass, Monday-Friday' on the same page confirms the days (Saturday is listed separately).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-blessed-sacrament-roseland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 6,
+          "said": "HOLY MASS SCHEDULE DAILY MASS 8:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 6,
+          "said": "HOLY MASS SCHEDULE DAILY MASS 8:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 2,
+          "said": "Mass Intentions list 8:45 AM Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 2,
+          "said": "Mass Intentions list 8:45 AM Monday through Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Mass Schedule box of both bulletins read, and each weekday's intentions list 8:45 AM; 'Daily Mass, Monday-Friday' on the same page confirms the days (Saturday is listed separately).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-blessed-sacrament-roseland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 6,
+          "said": "HOLY MASS SCHEDULE DAILY MASS 8:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 6,
+          "said": "HOLY MASS SCHEDULE DAILY MASS 8:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 2,
+          "said": "Mass Intentions list 8:45 AM Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 2,
+          "said": "Mass Intentions list 8:45 AM Monday through Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Mass Schedule box of both bulletins read, and each weekday's intentions list 8:45 AM; 'Daily Mass, Monday-Friday' on the same page confirms the days (Saturday is listed separately).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-blessed-sacrament-roseland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 6,
+          "said": "HOLY MASS SCHEDULE DAILY MASS 8:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 6,
+          "said": "HOLY MASS SCHEDULE DAILY MASS 8:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 2,
+          "said": "Mass Intentions list 8:45 AM Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 2,
+          "said": "Mass Intentions list 8:45 AM Monday through Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Mass Schedule box of both bulletins read, and each weekday's intentions list 8:45 AM; 'Daily Mass, Monday-Friday' on the same page confirms the days (Saturday is listed separately).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-blessed-sacrament-roseland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 6,
+          "said": "SATURDAY 8:45 AM 5:00 PM (VIGIL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 6,
+          "said": "SATURDAY 8:45 AM 5:00 PM (VIGIL)"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Mass Schedule box of both bulletins read; intentions list Saturday 8:45 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-blessed-sacrament-roseland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 6,
+          "said": "SATURDAY 8:45 AM 5:00 PM (VIGIL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 6,
+          "said": "SATURDAY 8:45 AM 5:00 PM (VIGIL)"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Mass Schedule box of both bulletins read; intentions list Saturday 5:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-blessed-sacrament-roseland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 6,
+          "said": "SUNDAY 8:00 AM 10:00 AM 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 6,
+          "said": "SUNDAY 8:00 AM 10:00 AM 12:00 NOON"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Mass Schedule box of both bulletins read; intentions list Sunday 8:00, 10:00 and 12:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-blessed-sacrament-roseland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 6,
+          "said": "SUNDAY 8:00 AM 10:00 AM 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 6,
+          "said": "SUNDAY 8:00 AM 10:00 AM 12:00 NOON"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Mass Schedule box of both bulletins read; intentions list Sunday 8:00, 10:00 and 12:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-blessed-sacrament-roseland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 6,
+          "said": "SUNDAY 8:00 AM 10:00 AM 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 6,
+          "said": "SUNDAY 8:00 AM 10:00 AM 12:00 NOON"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Mass Schedule box of both bulletins read; intentions list Sunday 8:00, 10:00 and 12:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-blessed-sacrament-roseland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:45 AM Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 6,
+          "said": "CONFESSIONS: Following the SATURDAY 8:45 AM MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 6,
+          "said": "CONFESSIONS: Following the SATURDAY 8:45 AM MASS"
+        }
+      ],
+      "rationale": "R10, POLICY Times: no clock time; the Saturday 8:45 AM Mass is a weekday (not vigil or Sunday) Mass, so confession starts 30 minutes after it, 9:15 AM, with no end. Same line in both bulletins; the First Saturday notice's 'Confession is offered after Mass' is this same slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-blessed-sacrament-roseland",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Saturday Devotion, after the 8:45 AM Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 6,
+          "said": "First Saturday Devotion following the 8:45 AM Mass on: December 5, 2026 ... We will say the Fatima prayer, Divine Mercy Chaplet, the Rosary and have Exposition of the Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d02d68",
+          "page": 6,
+          "said": "First Saturday Devotion following the 8:45 AM Mass on: November 7, 2026"
+        }
+      ],
+      "rationale": "R30, R11/R12: a named First Saturday devotion (weekly with weeks_of_month first under POLICY rule 2), printed in both bulletins (Nov 7 and Dec 5). Exposition is one component of the devotion, listed after the Fatima prayer, Chaplet and Rosary; POLICY Final source checks says a larger event's anchor does not set its components' times, so a 9:15 AM start (R10) may be wrong. Leaning leave out; the Saturday confession after Mass is already its own slot.",
+      "question": "Add first-Saturday Exposition of the Blessed Sacrament after the 8:45 AM Mass (no clock time given)?",
+      "options": [
+        {
+          "label": "First Saturdays 9:15 AM",
+          "entry": {
+            "church_slug": "our-lady-of-the-blessed-sacrament-roseland",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "First Saturday Devotion, after the 8:45 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:25Z"
+      }
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 6,
+          "said": "Please join us after Daily Mass, Monday-Friday, as we pray the Rosary and the Divine Mercy Chaplet."
+        }
+      ],
+      "rationale": "R24: Rosary and Chaplet are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c3a920f",
+          "page": 6,
+          "said": "For BAPTISM and WEDDING please contact the Parish Office."
+        }
+      ],
+      "rationale": "R26: by arrangement, no time. Church hours (Mon-Fri 8-1, Sat 8-6, Sun 7-1) are building access, not Adoration (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

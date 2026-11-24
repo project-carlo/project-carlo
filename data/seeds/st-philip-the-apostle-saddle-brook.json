@@ -1,0 +1,858 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-philip-the-apostle-saddle-brook",
+  "status": "approved",
+  "as_of": "2026-11-15T16:54:35Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:49:32Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:20:44Z",
+  "summary": "One church. Both November issues (Nov 8, Nov 15) print the same schedule box: Sat 5:30 PM vigil; Sun 7, 8:30, 10, 12; weekdays 7 and 8:30; Sat 8:30; plus a Thanksgiving 9 AM Mass. Saturday 4:30 PM Confession comes from the Nov 8 issue and the parish's Reconciliation page (R6); no Adoration is printed. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5860c303886758554799ecc57d6d66a0dadfd52675fa2545fb49953285e6c54d",
+      "fetched_at": "2026-11-15T16:54:35Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1633de9125c211cce9854cced3c275bacbb7284226a670424336f1795e73353f",
+      "fetched_at": "2026-11-08T16:03:24Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Sunday Mass Schedule 5:30 PM (Saturday Evening)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Sunday Mass Schedule 5:30 PM (Saturday Evening)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 3,
+          "said": "Saturday, November 21st ... 5:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p9 schedule box of both bulletins read and in the weekly Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Sunday Mass Schedule ... 7:00 AM, 8:30 AM, 10:00 AM & 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Sunday Mass Schedule ... 7:00 AM, 8:30 AM, 10:00 AM & 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 3,
+          "said": "Sunday, November 22nd 7:00 am ... 8:30 am ... 10:00 am ... 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p9 schedule box of both bulletins read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Sunday Mass Schedule ... 7:00 AM, 8:30 AM, 10:00 AM & 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Sunday Mass Schedule ... 7:00 AM, 8:30 AM, 10:00 AM & 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 3,
+          "said": "Sunday, November 22nd 7:00 am ... 8:30 am ... 10:00 am ... 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p9 schedule box of both bulletins read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Sunday Mass Schedule ... 7:00 AM, 8:30 AM, 10:00 AM & 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Sunday Mass Schedule ... 7:00 AM, 8:30 AM, 10:00 AM & 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 3,
+          "said": "Sunday, November 22nd 7:00 am ... 8:30 am ... 10:00 am ... 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p9 schedule box of both bulletins read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Sunday Mass Schedule ... 7:00 AM, 8:30 AM, 10:00 AM & 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Sunday Mass Schedule ... 7:00 AM, 8:30 AM, 10:00 AM & 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 3,
+          "said": "Sunday, November 22nd 7:00 am ... 8:30 am ... 10:00 am ... 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p9 schedule box of both bulletins read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 3,
+          "said": "Monday, November 16th 7:00 am ... 8:30 am (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the p9 schedule box of both bulletins read; the intentions list both Masses every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 3,
+          "said": "Monday, November 16th 7:00 am ... 8:30 am (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the p9 schedule box of both bulletins read; the intentions list both Masses every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 3,
+          "said": "Monday, November 16th 7:00 am ... 8:30 am (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the p9 schedule box of both bulletins read; the intentions list both Masses every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 3,
+          "said": "Monday, November 16th 7:00 am ... 8:30 am (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the p9 schedule box of both bulletins read; the intentions list both Masses every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 3,
+          "said": "Monday, November 16th 7:00 am ... 8:30 am (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the p9 schedule box of both bulletins read; the intentions list both Masses every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 3,
+          "said": "Monday, November 16th 7:00 am ... 8:30 am (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the p9 schedule box of both bulletins read; the intentions list both Masses every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 3,
+          "said": "Monday, November 16th 7:00 am ... 8:30 am (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the p9 schedule box of both bulletins read; the intentions list both Masses every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 3,
+          "said": "Monday, November 16th 7:00 am ... 8:30 am (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the p9 schedule box of both bulletins read; the intentions list both Masses every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 3,
+          "said": "Monday, November 16th 7:00 am ... 8:30 am (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the p9 schedule box of both bulletins read; the intentions list both Masses every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Weekdays 7:00 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 3,
+          "said": "Monday, November 16th 7:00 am ... 8:30 am (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the p9 schedule box of both bulletins read; the intentions list both Masses every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Saturdays 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Saturdays 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 3,
+          "said": "Saturday, November 21st 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the p9 schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "*Nov 26 - Thanksgiving Mass - 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 2,
+          "said": "our Thanksgiving Mass at 9 AM on Thanksgiving Day"
+        }
+      ],
+      "rationale": "R1, R16: dated Thanksgiving Mass on or after as_of, printed in both bulletins; the weekday Masses that day are left alone (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "Holy Days 5:30 PM (Eve) 7:00 AM, 8:30 AM, 12:10 PM & 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 9,
+          "said": "Holy Days 5:30 PM (Eve) 7:00 AM, 8:30 AM, 12:10 PM & 7:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: a generic holy-day schedule with no dates pins down no day; not projected onto Dec 8 (listed only as 'Immaculate Conception - Offices Closed'). Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5860c303",
+          "page": 9,
+          "said": "*Dec 5th - 1st Reconciliation for the 2nd Graders"
+        }
+      ],
+      "rationale": "R24/R26: first Reconciliation for a class of children, no time given; not a public Confession time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-saddle-brook",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 5:30 PM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stphilipsb.org/reconciliation",
+          "said": "Saturday afternoons at 4:30 p.m. before Mass or on request by contacting the Rectory Office 201-843-1888.",
+          "schedule_check": {
+            "checked_at": "2026-11-22T17:52:29Z",
+            "current_because": "Checked 2026-11-22: the Nov 8, 2026 bulletin (1633de91 p8) prints the same time, and the site's Mass Times page matches the current bulletin schedule exactly (Sat 5:30 PM; Sun 7, 8:30, 10, 12).",
+            "bulletin": "5860c303",
+            "fits_because": "The newest bulletin (5860c303, Nov 15) keeps the Saturday 5:30 PM Mass this Confession precedes; it prints no Confession time at all, so nothing contradicts it."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "1633de91",
+          "page": 8,
+          "said": "We celebrate the Sacrament of Reconciliation every Saturday at 4:30pm before the 5:30pm Mass"
+        }
+      ],
+      "rationale": "R6: the parish's Reconciliation page gives Saturday 4:30 PM before Mass, confirmed by the Nov 8 bulletin; the newest issue simply has no confession notice (R36 can't apply with only one older week). POLICY, Times: clock time before a Mass has no end_time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,730 @@
+{
+  "schema_version": 1,
+  "parish_slug": "immaculate-heart-of-mary-st-patrick-elizabeth",
+  "status": "approved",
+  "as_of": "2026-11-15T16:52:52Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T10:04:03Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:14Z",
+  "summary": "One church (St. Patrick, 215 Court St). Weekend, weekday and confession times agree in the schedule box of the Nov 8 and Nov 15 bulletins and on the website; a dated Thanksgiving Mass Nov 26 10:00 AM is included. Open: the start time of first-Friday Adoration, which 'begins with' the 7:00 PM Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "85c66028e793d49e23e01352548495106aba3404a16e43e1fe273adb71864732",
+      "fetched_at": "2026-11-15T16:52:52Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6504816a1219fac0d86d7842ed6c0e43deab58e756fd9ec987a8b60ad6511aa1",
+      "fetched_at": "2026-11-08T16:01:56Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 PM Spanish/español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6504816a",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 PM Spanish/español"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Celebrations box of both bulletins read (Nov 8, Nov 15); the website gives the same; weekday 7:00 PM intentions on p2 of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 PM Spanish/español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6504816a",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 PM Spanish/español"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Celebrations box of both bulletins read (Nov 8, Nov 15); the website gives the same; weekday 7:00 PM intentions on p2 of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 PM Spanish/español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6504816a",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 PM Spanish/español"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Celebrations box of both bulletins read (Nov 8, Nov 15); the website gives the same; weekday 7:00 PM intentions on p2 of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 PM Spanish/español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6504816a",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 PM Spanish/español"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Celebrations box of both bulletins read (Nov 8, Nov 15); the website gives the same; weekday 7:00 PM intentions on p2 of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 PM Spanish/español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6504816a",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 PM Spanish/español"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Celebrations box of both bulletins read (Nov 8, Nov 15); the website gives the same; weekday 7:00 PM intentions on p2 of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 1,
+          "said": "Saturday Vigil: 6:00 PM Spanish/español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6504816a",
+          "page": 1,
+          "said": "Saturday Vigil: 6:00 PM Spanish/español"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 1,
+          "said": "Sunday: 8:30 AM Spanish/español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6504816a",
+          "page": 1,
+          "said": "Sunday: 8:30 AM Spanish/español"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 1,
+          "said": "10:00 AM English/inglés"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6504816a",
+          "page": 1,
+          "said": "10:00 AM English/inglés"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 1,
+          "said": "12:30 PM Spanish/español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6504816a",
+          "page": 1,
+          "said": "12:30 PM Spanish/español"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 1,
+          "said": "Confessions: Monday - Friday- 6:30 PM (or by appointment)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6504816a",
+          "page": 1,
+          "said": "Confessions: Monday - Friday- 6:30 PM (or by appointment)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 2,
+          "said": "Confesiones: de lunes a viernes en la iglesia a las 6:30pm y por cita."
+        }
+      ],
+      "rationale": "R1, POLICY Times: printed in both bulletins' schedule box with no end time, so end_time is null; the note names the 7:00 PM Mass it precedes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 1,
+          "said": "Confessions: Monday - Friday- 6:30 PM (or by appointment)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6504816a",
+          "page": 1,
+          "said": "Confessions: Monday - Friday- 6:30 PM (or by appointment)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 2,
+          "said": "Confesiones: de lunes a viernes en la iglesia a las 6:30pm y por cita."
+        }
+      ],
+      "rationale": "R1, POLICY Times: printed in both bulletins' schedule box with no end time, so end_time is null; the note names the 7:00 PM Mass it precedes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 1,
+          "said": "Confessions: Monday - Friday- 6:30 PM (or by appointment)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6504816a",
+          "page": 1,
+          "said": "Confessions: Monday - Friday- 6:30 PM (or by appointment)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 2,
+          "said": "Confesiones: de lunes a viernes en la iglesia a las 6:30pm y por cita."
+        }
+      ],
+      "rationale": "R1, POLICY Times: printed in both bulletins' schedule box with no end time, so end_time is null; the note names the 7:00 PM Mass it precedes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 1,
+          "said": "Confessions: Monday - Friday- 6:30 PM (or by appointment)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6504816a",
+          "page": 1,
+          "said": "Confessions: Monday - Friday- 6:30 PM (or by appointment)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 2,
+          "said": "Confesiones: de lunes a viernes en la iglesia a las 6:30pm y por cita."
+        }
+      ],
+      "rationale": "R1, POLICY Times: printed in both bulletins' schedule box with no end time, so end_time is null; the note names the 7:00 PM Mass it precedes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 1,
+          "said": "Confessions: Monday - Friday- 6:30 PM (or by appointment)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6504816a",
+          "page": 1,
+          "said": "Confessions: Monday - Friday- 6:30 PM (or by appointment)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 2,
+          "said": "Confesiones: de lunes a viernes en la iglesia a las 6:30pm y por cita."
+        }
+      ],
+      "rationale": "R1, POLICY Times: printed in both bulletins' schedule box with no end time, so end_time is null; the note names the 7:00 PM Mass it precedes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 1,
+          "said": "Confessions ... (or by appointment)"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day Mass (Misa de Acción de Gracias)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 3,
+          "said": "MISA DE ACCION DE GRACIAS jueves, 26 de noviembre hora: 10:00am"
+        }
+      ],
+      "rationale": "R1, R16: a dated Thanksgiving Mass after as_of at the parish's one church, outside the weekly schedule (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "85c66028",
+          "page": 2,
+          "said": "Adoración al Santísimo Sacramento: todos los primer viernes de mes, comenzando con la santa misa a las 7:00pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6504816a",
+          "page": 2,
+          "said": "Adoración al Santísimo Sacramento: todos los primer viernes de mes, comenzando con la santa misa a las 7:00pm."
+        }
+      ],
+      "rationale": "R30: the first-Friday service is printed in both bulletins (R12: neither week holds a first Friday, so the newest cannot show it in its intentions). It 'begins with Holy Mass at 7:00 PM', so exposition presumably follows the Mass, but no clock time or end is given and POLICY (Final source checks) says the larger event's start does not set the component's. Leaning per R10's after-a-weekday-Mass rule (30 minutes after) to 7:30 PM; the website (ihmsp.org, 2026-11-20) does not mention Adoration.",
+      "question": "First-Friday Adoration 'comenzando con la santa misa a las 7:00pm': at what time should it be listed?",
+      "options": [
+        {
+          "label": "First Fridays 7:30 PM (after the 7:00 PM Mass)",
+          "entry": {
+            "church_slug": "st-patrick-elizabeth",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "First Fridays 7:00 PM",
+          "entry": {
+            "church_slug": "st-patrick-elizabeth",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Begins with the 7:00 PM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:14Z"
+      }
+    }
+  ]
+}

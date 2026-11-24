@@ -1,0 +1,1244 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-mercy-park-ridge",
+  "status": "approved",
+  "as_of": "2026-11-15T16:22:24Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T21:04:47Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:54Z",
+  "summary": "One church. The schedule box is identical in the Nov 8 and Nov 15 bulletins (image-only PDFs, read as renders); Tue/Thu 12:15 PM Masses come from both weeks' intentions and the parish homepage. Open: whether the second-Friday 3 PM Divine Mercy Chaplet listed under Adoration counts as Adoration (leaning leave out).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "02c8033622cc09009b2228d4a7966ee18dbe03b57fe8be52c964c7e1fc1edff6",
+      "fetched_at": "2026-11-15T16:22:24Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "eeeb667c2fb46d546b983654c5d897a0fb74b5f48b7deec63ede3f94cc90dcb6",
+      "fetched_at": "2026-11-08T15:45:58Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; both weeks' intentions list 6:30 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; both weeks' intentions list 6:30 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; both weeks' intentions list 6:30 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; both weeks' intentions list 6:30 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; both weeks' intentions list 6:30 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; both weeks' intentions list 6:30 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; both weeks' intentions list 6:30 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; both weeks' intentions list 6:30 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; both weeks' intentions list 6:30 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Daily: Monday—Friday 6:30am, 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; both weeks' intentions list 6:30 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Saturday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Saturday 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Saturday Vigil: 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Saturday Vigil: 5:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:30am, 11:00am, 12:30pm Spanish, 6:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:30am, 11:00am, 12:30pm Spanish, 6:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:30am, 11:00am, 12:30pm Spanish, 6:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:30am, 11:00am, 12:30pm Spanish, 6:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:30am, 11:00am, 12:30pm Spanish, 6:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:30am, 11:00am, 12:30pm Spanish, 6:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:30am, 11:00am, 12:30pm Spanish, 6:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:30am, 11:00am, 12:30pm Spanish, 6:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:30am, 11:00am, 12:30pm Spanish, 6:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:30am, 11:00am, 12:30pm Spanish, 6:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 2,
+          "said": "TUESDAY, NOVEMBER 17 ... 12:15 Caroline McDermott; THURSDAY, NOVEMBER 19 ... 12:15 Liam Meaney"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 2,
+          "said": "TUESDAY, NOVEMBER 10 ... 12:15 Michael Roberts Sr.; THURSDAY, NOVEMBER 12 ... 12:15 Suzanne Naylor"
+        },
+        {
+          "source": "website",
+          "url": "https://www.urolm.org/",
+          "said": "DAILY MASS SCHEDULE Monday thru Friday: 6:30 AM & 8:30 AM Tuesday & Thursday: 12:15 PM"
+        }
+      ],
+      "rationale": "R35: the Mass intentions of both weeks read list a 12:15 Mass on Tuesday and Thursday (not marked special), and the parish homepage's Daily Mass Schedule gives Tuesday & Thursday 12:15 PM. The bulletin's schedule box omits it, but a missing header line is not a conflict (C1 does not apply).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 2,
+          "said": "TUESDAY, NOVEMBER 17 ... 12:15 Caroline McDermott; THURSDAY, NOVEMBER 19 ... 12:15 Liam Meaney"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 2,
+          "said": "TUESDAY, NOVEMBER 10 ... 12:15 Michael Roberts Sr.; THURSDAY, NOVEMBER 12 ... 12:15 Suzanne Naylor"
+        },
+        {
+          "source": "website",
+          "url": "https://www.urolm.org/",
+          "said": "DAILY MASS SCHEDULE Monday thru Friday: 6:30 AM & 8:30 AM Tuesday & Thursday: 12:15 PM"
+        }
+      ],
+      "rationale": "R35: the Mass intentions of both weeks read list a 12:15 Mass on Tuesday and Thursday (not marked special), and the parish homepage's Daily Mass Schedule gives Tuesday & Thursday 12:15 PM. The bulletin's schedule box omits it, but a missing header line is not a conflict (C1 does not apply).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Every Thursday from 9:00am-10:00am in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Every Thursday from 9:00am-10:00am in the Chapel"
+        }
+      ],
+      "rationale": "R1: printed under Eucharistic Adoration in both bulletins; POLICY, Churches and chapels puts the parish chapel at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Every Thursday from 7:30pm-9:00pm in the Church with the opportunity for the Sacrament of Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Every Thursday from 7:30pm-9:00pm in the Church with the opportunity for the Sacrament of Reconciliation"
+        }
+      ],
+      "rationale": "R1: printed under Eucharistic Adoration in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "22:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "First Friday from 7:00pm—10:00pm in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "First Friday from 7:00pm—10:00pm in the Chapel"
+        }
+      ],
+      "rationale": "R1, R12: printed in the Adoration box of both bulletins; POLICY, Weekly qualifiers makes it a first-week slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "RECONCILIATION Monday: 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "RECONCILIATION Monday: 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins; no end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "RECONCILIATION Thursday: 7:30pm; Every Thursday from 7:30pm-9:00pm in the Church with the opportunity for the Sacrament of Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "RECONCILIATION Thursday: 7:30pm; Every Thursday from 7:30pm-9:00pm in the Church with the opportunity for the Sacrament of Reconciliation"
+        }
+      ],
+      "rationale": "R1, R10: the Reconciliation box gives Thursday 7:30pm and the Adoration box offers Reconciliation during the 7:30-9:00 PM Thursday Adoration; POLICY, Times gives Confession during Adoration the Adoration's hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "13:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Saturday: 1:00-1:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "Saturday: 1:00-1:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chaplet"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION ... Second Friday 3:00pm Divine Mercy Chaplet"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eeeb667c",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION ... Second Friday 3:00pm Divine Mercy Chaplet"
+        },
+        {
+          "source": "website",
+          "url": "https://www.urolm.org/",
+          "said": "1st Friday 7:00 PM to 10:00 PM"
+        }
+      ],
+      "rationale": "R30: the line sits under the Eucharistic Adoration heading but names only a Chaplet, a devotion POLICY leaves out unless called Adoration, and gives no end. The website's Adoration times list Thursday 9-10 AM and 1st Friday 7-10 PM but not this. Leaning leave out (R24).",
+      "question": "Record the second-Friday 3:00 PM Divine Mercy Chaplet, listed under Eucharistic Adoration, as Adoration?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Second Fridays 3:00 PM Adoration",
+          "entry": {
+            "church_slug": "our-lady-of-mercy-park-ridge",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "second"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Chaplet"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:54Z"
+      }
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "19:00",
+        "end_time": "22:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Encounter Night"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 4,
+          "said": "ENCOUNTER Night PRAISE & WORSHIP Holy Hour - Fellowship 07:00 pm - 10:00 pm ... Saturday, Novemver 21, 2026 ... Activity after adoration: Taco & Trivia Night"
+        }
+      ],
+      "rationale": "POLICY, Final source checks: a young-adult evening of praise, Holy Hour and fellowship; 7-10 PM is the whole event's span, and the Holy Hour has no time of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-30",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Retreat"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 6,
+          "said": "OLM ADVENT RETREAT ... MONDAY, NOVEMBER 30TH THRU WEDNESDAY, DECEMBER 2ND 7 PM IN THE CHURCH EACH NIGHT CONFESSIONS AND ADORATION"
+        }
+      ],
+      "rationale": "POLICY, Final source checks: the retreat includes Confession and Adoration but gives them no times of their own; 7 PM is the retreat's start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-01",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Retreat"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 6,
+          "said": "OLM ADVENT RETREAT ... MONDAY, NOVEMBER 30TH THRU WEDNESDAY, DECEMBER 2ND 7 PM IN THE CHURCH EACH NIGHT CONFESSIONS AND ADORATION"
+        }
+      ],
+      "rationale": "POLICY, Final source checks: the retreat includes Confession and Adoration but gives them no times of their own; 7 PM is the retreat's start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Retreat"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 6,
+          "said": "OLM ADVENT RETREAT ... MONDAY, NOVEMBER 30TH THRU WEDNESDAY, DECEMBER 2ND 7 PM IN THE CHURCH EACH NIGHT CONFESSIONS AND ADORATION"
+        }
+      ],
+      "rationale": "POLICY, Final source checks: the retreat includes Confession and Adoration but gives them no times of their own; 7 PM is the retreat's start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-park-ridge",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-14",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Penance Service at St. Andrew's, Westwood"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 6,
+          "said": "ADVENT PENANCE SERVICE MONDAY, DECEMBER 14TH AT SAINT ANDREW'S IN WESTWOOD 7 PM"
+        }
+      ],
+      "rationale": "R22: held at St. Andrew's in Westwood, another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02c80336",
+          "page": 1,
+          "said": "Anointing of the Sick ... Please call the Rectory Office."
+        }
+      ],
+      "rationale": "R24, R26: Anointing is not Mass, Confession or Adoration, and has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

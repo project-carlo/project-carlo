@@ -1,0 +1,1051 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-francis-of-assisi-hackensack",
+  "status": "approved",
+  "as_of": "2026-11-15T16:24:39Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:26:18Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:18:50Z",
+  "summary": "One church, St. Francis of Assisi, Hackensack. Weekend, weekday (English, Spanish, Italian), monthly Masses, Saturday Confession and second-Tuesday Adoration agree in both bulletins read (Nov 8 and Nov 15). Dated: Filipino Mass Nov 22 4 PM, Thanksgiving's only Mass 9 AM with the 8 AM and 7 PM cancelled, and Nov 15 Adoration. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "56076b8d49b9e02827df22aded28ac3df3061664fc923f0db1b609f6635b5973",
+      "fetched_at": "2026-11-15T16:24:39Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6759c4933c02b4a71330664e0a3d5409dfdaa251527ecbe1d873b3add69d8435",
+      "fetched_at": "2026-11-08T15:48:42Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "Saturday | 8AM, 5:30PM (EN- Ingles) 7PM (SP- Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "Saturday | 8AM, 5:30PM (EN- Ingles) 7PM (SP- Español)"
+        }
+      ],
+      "rationale": "R1: Weekend Mass in the schedule box of both bulletins; the intentions list Saturday 05:30pm both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "Saturday | 8AM, 5:30PM (EN- Ingles) 7PM (SP- Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "Saturday | 8AM, 5:30PM (EN- Ingles) 7PM (SP- Español)"
+        }
+      ],
+      "rationale": "R1: Weekend Mass in the schedule box of both bulletins; the intentions list Saturday 07:00pm both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English/Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "Sunday | 8AM (EN/SP), 9:30AM (IT) & 11AM (EN-Ingles) 12:30PM (SP-Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "Sunday | 8AM (EN/SP), 9:30AM (IT) & 11AM (EN-Ingles) 12:30PM (SP-Español)"
+        }
+      ],
+      "rationale": "R1: Weekend Mass in the schedule box of both bulletins, matching the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Italian"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "Sunday | 8AM (EN/SP), 9:30AM (IT) & 11AM (EN-Ingles) 12:30PM (SP-Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "Sunday | 8AM (EN/SP), 9:30AM (IT) & 11AM (EN-Ingles) 12:30PM (SP-Español)"
+        }
+      ],
+      "rationale": "R1: Weekend Mass in the schedule box of both bulletins, matching the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "Sunday | 8AM (EN/SP), 9:30AM (IT) & 11AM (EN-Ingles) 12:30PM (SP-Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "Sunday | 8AM (EN/SP), 9:30AM (IT) & 11AM (EN-Ingles) 12:30PM (SP-Español)"
+        }
+      ],
+      "rationale": "R1: Weekend Mass in the schedule box of both bulletins, matching the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "Sunday | 8AM (EN/SP), 9:30AM (IT) & 11AM (EN-Ingles) 12:30PM (SP-Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "Sunday | 8AM (EN/SP), 9:30AM (IT) & 11AM (EN-Ingles) 12:30PM (SP-Español)"
+        }
+      ],
+      "rationale": "R1: Weekend Mass in the schedule box of both bulletins; the intentions misprint it as 12:30am, read as the box's 12:30 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "Monday - Saturday | 8AM (EN)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "Monday - Saturday | 8AM (EN)"
+        }
+      ],
+      "rationale": "R1: Weekday Mass in the schedule box of both bulletins (Saturday 8AM also under Weekend Mass); the intentions list 08:00am every day both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "Monday - Saturday | 8AM (EN)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "Monday - Saturday | 8AM (EN)"
+        }
+      ],
+      "rationale": "R1: Weekday Mass in the schedule box of both bulletins (Saturday 8AM also under Weekend Mass); the intentions list 08:00am every day both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "Monday - Saturday | 8AM (EN)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "Monday - Saturday | 8AM (EN)"
+        }
+      ],
+      "rationale": "R1: Weekday Mass in the schedule box of both bulletins (Saturday 8AM also under Weekend Mass); the intentions list 08:00am every day both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "Monday - Saturday | 8AM (EN)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "Monday - Saturday | 8AM (EN)"
+        }
+      ],
+      "rationale": "R1: Weekday Mass in the schedule box of both bulletins (Saturday 8AM also under Weekend Mass); the intentions list 08:00am every day both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "Monday - Saturday | 8AM (EN)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "Monday - Saturday | 8AM (EN)"
+        }
+      ],
+      "rationale": "R1: Weekday Mass in the schedule box of both bulletins (Saturday 8AM also under Weekend Mass); the intentions list 08:00am every day both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "Monday - Saturday | 8AM (EN)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "Monday - Saturday | 8AM (EN)"
+        }
+      ],
+      "rationale": "R1: Weekday Mass in the schedule box of both bulletins (Saturday 8AM also under Weekend Mass); the intentions list 08:00am every day both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "Mon, Wed, Thurs | 7PM (SP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "Mon, Wed, Thurs | 7PM (SP)"
+        }
+      ],
+      "rationale": "R1: Weekday Mass in the schedule box of both bulletins; the intentions list 07:00pm on these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "Mon, Wed, Thurs | 7PM (SP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "Mon, Wed, Thurs | 7PM (SP)"
+        }
+      ],
+      "rationale": "R1: Weekday Mass in the schedule box of both bulletins; the intentions list 07:00pm on these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "Mon, Wed, Thurs | 7PM (SP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "Mon, Wed, Thurs | 7PM (SP)"
+        }
+      ],
+      "rationale": "R1: Weekday Mass in the schedule box of both bulletins; the intentions list 07:00pm on these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "1st Friday & 4th Tuesday | 7PM (SP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "1st Friday & 4th Tuesday | 7PM (SP)"
+        }
+      ],
+      "rationale": "R1: weeks-of-the-month Mass printed in the schedule box of both bulletins (POLICY, Weekly or dated rule 2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "1st Friday & 4th Tuesday | 7PM (SP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "1st Friday & 4th Tuesday | 7PM (SP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 5,
+          "said": "Cuarto martes de cada mes: Santa Misa a las 7:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 5,
+          "said": "Cuarto martes de cada mes: Santa Misa a las 7:00 PM."
+        }
+      ],
+      "rationale": "R1: weeks-of-the-month Mass printed in the schedule box and the Grupo de Oración flyer of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Italian"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "4th Friday | 7PM (IT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "4th Friday | 7PM (IT)"
+        }
+      ],
+      "rationale": "R1: weeks-of-the-month Mass printed in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "RECONCILIATION Saturdays | 4 - 5PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 1,
+          "said": "RECONCILIATION Saturdays | 4 - 5PM or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 5,
+          "said": "Segundo martes de cada mes: Adoración al Santísimo Sacramento de 6:30 PM a 8:00 PM en la iglesia."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 5,
+          "said": "Segundo martes de cada mes: Adoración al Santísimo Sacramento de 6:30 PM a 8:00 PM en la iglesia."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 4,
+          "said": "TUESDAY, NOVEMBER 10TH- 6:30PM GRUPO DE ORACION-ADORACIÓN PROLONGADA EN LA IGLESIA"
+        }
+      ],
+      "rationale": "R1: the Grupo de Oración flyer in both bulletins names a second-Tuesday Adoration in the church; the Nov 8 issue's calendar shows it on Nov 10, the second Tuesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Filipino Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 2,
+          "said": "SUNDAY- NOVEMBER 22ND- ... 4:00 PM Filipino Mass"
+        }
+      ],
+      "rationale": "R1, R16, POLICY Weekly or dated rule 3: a dated Mass in the intentions, outside the weekly schedule and not limited to a group; Nov 22 is after as_of. Not in the Nov 15 intentions, so not weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving; bilingual"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 7,
+          "said": "THURSDAY, NOVEMBER 26 THE ONLY MASS FOR THE DAY IS AT 9:00 AM BILINGUAL"
+        }
+      ],
+      "rationale": "R1, R16: dated Thanksgiving Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 7,
+          "said": "THE ONLY MASS FOR THE DAY IS AT 9:00 AM BILINGUAL"
+        }
+      ],
+      "rationale": "R1, R16: 'the only Mass for the day' says the weekly Thursday 8 AM Mass will not take place on Nov 26 (POLICY, cancellations).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 7,
+          "said": "THE ONLY MASS FOR THE DAY IS AT 9:00 AM BILINGUAL"
+        }
+      ],
+      "rationale": "R1, R16: 'the only Mass for the day' says the weekly Thursday 7 PM Spanish Mass will not take place on Nov 26 (POLICY, cancellations).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 4,
+          "said": "SUNDAY, NOVEMBER 15TH- 7:00 PM FAMILY EVENT- ADORATION"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 6,
+          "said": "EUCHARISTIC ADORATION ... Sunday, Nov. 15 7:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: dated Adoration on as_of's date; no end time printed. The Nov 13 and 14 dates of the same flyer are before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hackensack",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6759c493",
+          "page": 6,
+          "said": "SACRAMENT OF RECONCILIATION Our priests will be available for the Sacrament of Confession."
+        }
+      ],
+      "rationale": "R19, POLICY Times: the Nov 8 issue's Eucharistic Adoration flyer (Nov 13, 14, 15) offers Confession in its box; Confession during Adoration takes the Adoration's times (Nov 15 7:00 PM, no end).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "ROSARY Monday- Saturday | 6:30PM (SP) First Saturday | 5:30AM (Trilingual)"
+        }
+      ],
+      "rationale": "R24: the Rosary is not Mass, Confession or Adoration; also the first-Saturday 5:30 AM trilingual Rosary.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56076b8d",
+          "page": 1,
+          "said": "Reconciliation ... or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

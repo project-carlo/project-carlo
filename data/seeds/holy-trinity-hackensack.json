@@ -1,0 +1,1211 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-trinity-hackensack",
+  "status": "approved",
+  "as_of": "2026-11-15T16:52:44Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T09:30:14Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:53Z",
+  "summary": "Two places: Holy Trinity Church and the Parish Center Chapel (20 Pangborn Pl), where the bulletin puts morning daily Masses. Both image-only bulletins (Nov 8, Nov 15) print the same schedule box: vigil 5:00/6:30 (Sp), Sunday 7/8 Sp/9:30 Sp/11 and 2nd-Sunday Tagalog 4 PM, weekday 7 AM & 12:10, Sat 8 AM, Mon/Wed/Fri 7 PM Spanish, Adoration Mon–Fri 12:45–6:30 with Benediction, Confession Sat 1–2. Nov 21 6:30 PM vigil cancelled. Open: whether to include the young men's Nov 18 Holy Hour at the convent chapel.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d2dca8a3037369348219ee3ade3b8471fcea9bab3bde216e0a3601404a03b47d",
+      "fetched_at": "2026-11-15T16:52:44Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9bf30b18464769393878a1efb7bbf0365dcc861207f57effa8c659a7fce38828",
+      "fetched_at": "2026-11-08T16:01:47Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Saturday Evening Vigil 5:00 PM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Saturday Evening Vigil 5:00 PM English"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Sunday Mass box of both bulletins read; intentions list it both weeks. Not in the 'Morning Masses in the Parish Center Chapel' line, so at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Saturday Evening Vigil 6:30 PM Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Saturday Evening Vigil 6:30 PM Español"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Sunday Mass box of both bulletins read; the Nov 21 cancellation is a separate dated slot (R18).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Sunday 7:00 AM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Sunday 7:00 AM English"
+        }
+      ],
+      "rationale": "R1, R35: Sunday Mass box of both bulletins. The 'Morning Masses in the Parish Center Chapel' note sits under Daily Mass, so Sunday Masses are at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Sunday 8:00 AM Español – Misa Solemne"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Sunday 8:00 AM Español – Misa Solemne"
+        }
+      ],
+      "rationale": "R1, R35: Sunday Mass box of both bulletins; chapel note applies to Daily Mass only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Sunday 9:30 AM Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Sunday 9:30 AM Español"
+        }
+      ],
+      "rationale": "R1, R35: Sunday Mass box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Sunday 11:00 AM English – Solemn Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Sunday 11:00 AM English – Solemn Mass"
+        }
+      ],
+      "rationale": "R1, R35: Sunday Mass box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Tagalog"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "4:00 PM Tagalog (2nd Sunday of the month)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "4:00 PM Tagalog (2nd Sunday of the month)"
+        }
+      ],
+      "rationale": "R1: the newest bulletin's standing schedule box names it as 2nd Sunday of the month (POLICY rule 2: weeks_of_month); same in the Nov 8 issue. The Nov 8 intentions omit it, which R39 says proves nothing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-parish-center-chapel-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM; Morning Masses in the Parish Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM; Morning Masses in the Parish Center Chapel"
+        }
+      ],
+      "rationale": "R1, R35: Daily Mass box of both bulletins, intentions list 7:00 AM each weekday; the box puts morning Masses in the Parish Center Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-parish-center-chapel-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM; Morning Masses in the Parish Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM; Morning Masses in the Parish Center Chapel"
+        }
+      ],
+      "rationale": "R1, R35: Daily Mass box of both bulletins, intentions list 7:00 AM each weekday; the box puts morning Masses in the Parish Center Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-parish-center-chapel-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM; Morning Masses in the Parish Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM; Morning Masses in the Parish Center Chapel"
+        }
+      ],
+      "rationale": "R1, R35: Daily Mass box of both bulletins, intentions list 7:00 AM each weekday; the box puts morning Masses in the Parish Center Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-parish-center-chapel-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM; Morning Masses in the Parish Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM; Morning Masses in the Parish Center Chapel"
+        }
+      ],
+      "rationale": "R1, R35: Daily Mass box of both bulletins, intentions list 7:00 AM each weekday; the box puts morning Masses in the Parish Center Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-parish-center-chapel-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM; Morning Masses in the Parish Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM; Morning Masses in the Parish Center Chapel"
+        }
+      ],
+      "rationale": "R1, R35: Daily Mass box of both bulletins, intentions list 7:00 AM each weekday; the box puts morning Masses in the Parish Center Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM"
+        }
+      ],
+      "rationale": "R1, R35: Daily Mass box of both bulletins and every weekday's intentions; only morning Masses are in the chapel, so this one is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM"
+        }
+      ],
+      "rationale": "R1, R35: Daily Mass box of both bulletins and every weekday's intentions; only morning Masses are in the chapel, so this one is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM"
+        }
+      ],
+      "rationale": "R1, R35: Daily Mass box of both bulletins and every weekday's intentions; only morning Masses are in the chapel, so this one is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM"
+        }
+      ],
+      "rationale": "R1, R35: Daily Mass box of both bulletins and every weekday's intentions; only morning Masses are in the chapel, so this one is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Daily Mass Monday – Friday 7:00 AM & 12:10 PM"
+        }
+      ],
+      "rationale": "R1, R35: Daily Mass box of both bulletins and every weekday's intentions; only morning Masses are in the chapel, so this one is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-parish-center-chapel-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Daily Mass Saturday 8:00 AM; Morning Masses in the Parish Center Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Daily Mass Saturday 8:00 AM; Morning Masses in the Parish Center Chapel"
+        }
+      ],
+      "rationale": "R1, R35: Daily Mass box of both bulletins; a morning Mass, so in the Parish Center Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Lun., Miér., Vie. 7:00 PM en español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Lun., Miér., Vie. 7:00 PM en español"
+        }
+      ],
+      "rationale": "R1, R35: Daily Mass box of both bulletins; intentions list 7:00 PM Mon, Wed, Fri. Evening, so at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Lun., Miér., Vie. 7:00 PM en español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Lun., Miér., Vie. 7:00 PM en español"
+        }
+      ],
+      "rationale": "R1, R35: Daily Mass box of both bulletins; intentions list 7:00 PM Mon, Wed, Fri. Evening, so at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Lun., Miér., Vie. 7:00 PM en español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Lun., Miér., Vie. 7:00 PM en español"
+        }
+      ],
+      "rationale": "R1, R35: Daily Mass box of both bulletins; intentions list 7:00 PM Mon, Wed, Fri. Evening, so at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday – Friday, 12:45 – 6:30 PM · Concludes with Benediction at 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday – Friday, 12:45 – 6:30 PM · Concludes with Benediction at 6:30 PM"
+        }
+      ],
+      "rationale": "R1, R35: front-page banner in both bulletins. At the church: 'Church open for prayer Mon–Fri 8:00 AM until after the last Mass or Benediction'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday – Friday, 12:45 – 6:30 PM · Concludes with Benediction at 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday – Friday, 12:45 – 6:30 PM · Concludes with Benediction at 6:30 PM"
+        }
+      ],
+      "rationale": "R1, R35: front-page banner in both bulletins. At the church: 'Church open for prayer Mon–Fri 8:00 AM until after the last Mass or Benediction'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday – Friday, 12:45 – 6:30 PM · Concludes with Benediction at 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday – Friday, 12:45 – 6:30 PM · Concludes with Benediction at 6:30 PM"
+        }
+      ],
+      "rationale": "R1, R35: front-page banner in both bulletins. At the church: 'Church open for prayer Mon–Fri 8:00 AM until after the last Mass or Benediction'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday – Friday, 12:45 – 6:30 PM · Concludes with Benediction at 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday – Friday, 12:45 – 6:30 PM · Concludes with Benediction at 6:30 PM"
+        }
+      ],
+      "rationale": "R1, R35: front-page banner in both bulletins. At the church: 'Church open for prayer Mon–Fri 8:00 AM until after the last Mass or Benediction'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday – Friday, 12:45 – 6:30 PM · Concludes with Benediction at 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday – Friday, 12:45 – 6:30 PM · Concludes with Benediction at 6:30 PM"
+        }
+      ],
+      "rationale": "R1, R35: front-page banner in both bulletins. At the church: 'Church open for prayer Mon–Fri 8:00 AM until after the last Mass or Benediction'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English and Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 2,
+          "said": "Confessions ... Saturdays, 1:00 – 2:00 PM, in English & Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 2,
+          "said": "Confessions ... Saturdays, 1:00 – 2:00 PM, in English & Spanish"
+        }
+      ],
+      "rationale": "R1, R35: Sacramental Information in both bulletins; no venue given, so the parish church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is offered ... by appointment, and at any reasonable time upon request."
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Confirmation at the 5:00 PM Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 4,
+          "said": "Only one Vigil Mass that evening: no 6:30 PM Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 3,
+          "said": "Saturday, November 21 6:30 PM NO MISA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf30b18",
+          "page": 4,
+          "said": "Only one Vigil Mass that evening: no 6:30 PM Mass."
+        }
+      ],
+      "rationale": "R1, R16: Nov 21 is after as_of; the bulletin cancels the 6:30 PM Vigil that day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-parish-center-chapel-hackensack",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Trinity Convent Chapel; Benediction"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 7,
+          "said": "St. Michael Brotherhood, Young Men's Group · all young men welcome. Holy Hour Wednesday November 18, 7 – 8 PM at the Holy Trinity Convent Chapel, 20 Pangborn Pl ... Benediction"
+        }
+      ],
+      "rationale": "R30: a dated Holy Hour with Benediction (POLICY: Adoration) at 20 Pangborn Place, the Parish Center Chapel's address. POLICY closes only group-limited Masses; this is billed to young men ('all young men welcome'). Leaning include: Adoration, not a Mass, and the chapel is the parish's own.",
+      "question": "Include the St. Michael Brotherhood Holy Hour (Wed Nov 18, 7–8 PM, Convent Chapel, 20 Pangborn Pl), billed for young men?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "holy-trinity-parish-center-chapel-hackensack",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-18",
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Trinity Convent Chapel; Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:53Z"
+      }
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-hackensack",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-20",
+        "start_time": "11:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Young Women's Day Retreat ADORE"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d2dca8a3",
+          "page": 7,
+          "said": "Young Women's Day Retreat ADORE Sunday, December 20 11 AM – 7 PM · meals included"
+        }
+      ],
+      "rationale": "R24: a retreat for young adult women (ages 18–35), not an Adoration schedule; the bulletin gives no time for any exposition within it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

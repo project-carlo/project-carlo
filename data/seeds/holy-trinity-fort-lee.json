@@ -1,0 +1,753 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-trinity-fort-lee",
+  "status": "approved",
+  "as_of": "2026-11-15T16:22:05Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T09:27:34Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:50Z",
+  "summary": "One church. Weekend, weekday (Tue-Fri), first-Sunday Tagalog Mass and Saturday confession are printed identically in the schedule box of both bulletins (Nov 8, Nov 15); Friday 8:30 AM-12 PM Adoration is listed in both weeks' activities. A dated Simbang Gabi Mass on Dec 13 is included. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6eecc697e0ed868368739b1af75590bb67c60c15ab9b284341f45f20eaf215f1",
+      "fetched_at": "2026-11-15T16:22:05Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "182670c92fa1408599965fe53acc4e2dd8974da92957ba74c7e6addb3a88e446",
+      "fetched_at": "2026-11-08T15:46:19Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 1,
+          "said": "Saturday | 8:00am, 5:00pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 1,
+          "said": "Saturday | 8:00am, 5:00pm Vigil"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box (Weekend Mass) of both bulletins read; the intentions list Saturday 8:00am and 5:00pm too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 1,
+          "said": "Saturday | 8:00am, 5:00pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 1,
+          "said": "Saturday | 8:00am, 5:00pm Vigil"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box (Weekend Mass) of both bulletins read; the intentions list Saturday 8:00am and 5:00pm too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:00am, 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list the same Sunday times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:00am, 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list the same Sunday times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:00am, 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list the same Sunday times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Tagalog"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 1,
+          "said": "First Sunday of the Month 5:00pm (Tagalog)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 1,
+          "said": "First Sunday of the Month 5:00pm (Tagalog)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; POLICY, Weekly or dated rule 2 makes it a first-Sunday weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 1,
+          "said": "Tuesday to Friday | 8:00am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 1,
+          "said": "Tuesday to Friday | 8:00am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of both bulletins; the intentions list 8:00am and 12:10pm Tuesday to Friday. Monday has no Mass (intentions: 'Church closed for cleaning (No Masses, unless otherwise noted)'). The Brotherhood of St. Joseph's 'Mass every 3rd Friday @ 8am' (p2) is the regular Friday 8:00 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 1,
+          "said": "Tuesday to Friday | 8:00am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 1,
+          "said": "Tuesday to Friday | 8:00am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of both bulletins; the intentions list 8:00am and 12:10pm Tuesday to Friday. Monday has no Mass (intentions: 'Church closed for cleaning (No Masses, unless otherwise noted)'). The Brotherhood of St. Joseph's 'Mass every 3rd Friday @ 8am' (p2) is the regular Friday 8:00 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 1,
+          "said": "Tuesday to Friday | 8:00am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 1,
+          "said": "Tuesday to Friday | 8:00am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of both bulletins; the intentions list 8:00am and 12:10pm Tuesday to Friday. Monday has no Mass (intentions: 'Church closed for cleaning (No Masses, unless otherwise noted)'). The Brotherhood of St. Joseph's 'Mass every 3rd Friday @ 8am' (p2) is the regular Friday 8:00 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 1,
+          "said": "Tuesday to Friday | 8:00am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 1,
+          "said": "Tuesday to Friday | 8:00am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of both bulletins; the intentions list 8:00am and 12:10pm Tuesday to Friday. Monday has no Mass (intentions: 'Church closed for cleaning (No Masses, unless otherwise noted)'). The Brotherhood of St. Joseph's 'Mass every 3rd Friday @ 8am' (p2) is the regular Friday 8:00 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 1,
+          "said": "Tuesday to Friday | 8:00am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 1,
+          "said": "Tuesday to Friday | 8:00am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of both bulletins; the intentions list 8:00am and 12:10pm Tuesday to Friday. Monday has no Mass (intentions: 'Church closed for cleaning (No Masses, unless otherwise noted)'). The Brotherhood of St. Joseph's 'Mass every 3rd Friday @ 8am' (p2) is the regular Friday 8:00 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 1,
+          "said": "Tuesday to Friday | 8:00am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 1,
+          "said": "Tuesday to Friday | 8:00am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of both bulletins; the intentions list 8:00am and 12:10pm Tuesday to Friday. Monday has no Mass (intentions: 'Church closed for cleaning (No Masses, unless otherwise noted)'). The Brotherhood of St. Joseph's 'Mass every 3rd Friday @ 8am' (p2) is the regular Friday 8:00 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 1,
+          "said": "Tuesday to Friday | 8:00am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 1,
+          "said": "Tuesday to Friday | 8:00am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of both bulletins; the intentions list 8:00am and 12:10pm Tuesday to Friday. Monday has no Mass (intentions: 'Church closed for cleaning (No Masses, unless otherwise noted)'). The Brotherhood of St. Joseph's 'Mass every 3rd Friday @ 8am' (p2) is the regular Friday 8:00 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 1,
+          "said": "Tuesday to Friday | 8:00am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 1,
+          "said": "Tuesday to Friday | 8:00am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of both bulletins; the intentions list 8:00am and 12:10pm Tuesday to Friday. Monday has no Mass (intentions: 'Church closed for cleaning (No Masses, unless otherwise noted)'). The Brotherhood of St. Joseph's 'Mass every 3rd Friday @ 8am' (p2) is the regular Friday 8:00 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 1,
+          "said": "Reconciliation |Saturday | 12:00pm - 1:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 1,
+          "said": "Reconciliation |Saturday | 12:00pm - 1:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 1,
+          "said": "Reconciliation Other | By Appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 3,
+          "said": "Friday, November 20 Friday's Adoration 8:30am -12pm & Rosary: 8:30am & 11:30 am in the Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 3,
+          "said": "Friday, November13 Friday's Adoration 8:30am -12pm & Rosary: 8:30am & 11:30 am in the Church"
+        }
+      ],
+      "rationale": "R35: the same Friday 8:30 AM-12:00 PM Adoration in the church is listed under 'This week's activities' in both issues (Nov 13 and Nov 20 weeks), called 'Friday's Adoration', not marked special.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fort-lee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-13",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi (Filipino Mass)"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 5,
+          "said": "Simbang Gabi 2026 A traditional Filipino Mass that commemorates the birth of Jesus Christ Sunday December 13, 2026 @ 5 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 5,
+          "said": "Simbang Gabi 2026 A traditional Filipino Mass that commemorates the birth of Jesus Christ Sunday December 13, 2026 @ 5 pm"
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass at Holy Trinity Church (the Filipino Ministry, Holy Trinity Church - Fort Lee) on or after as_of; December 13 is not a first Sunday, so the weekly Tagalog slot does not cover it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 5,
+          "said": "Advent Retreat Saturday, December 5th, 2026 9:00 AM to 5:00 PM ... Adoration, Confession, Concludes with Sunday Vigil Mass ... National Shrine of Mary Help of Christians, 174 Filors Lane, Stony Point, NY"
+        }
+      ],
+      "rationale": "R22: held at a shrine in Stony Point, NY, not at a parish church; its components also lack their own times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "182670c9",
+          "page": 5,
+          "said": "Our Lady of Mt. Carmel Parish three-day master schedule, Nov 15-17, 2026, 120 Prospect St, Nutley"
+        }
+      ],
+      "rationale": "R22: another parish's events (Our Lady of Mt. Carmel, Nutley), printed only as a flyer in the older bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eecc697",
+          "page": 2,
+          "said": "Evangelization Ministry Meets every 1st Friday @ 6:30pm in the Church: Stations of the Cross"
+        }
+      ],
+      "rationale": "R24: Stations of the Cross, Rosary and the Children's Nativity Service are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

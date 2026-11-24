@@ -1,0 +1,499 @@
+{
+  "schema_version": 1,
+  "parish_slug": "good-shepherd-irvington",
+  "status": "approved",
+  "as_of": "2026-11-15T15:48:29Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T09:05:34Z",
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:33Z",
+  "summary": "One church. No schedule box: Mass times come from the intentions of both bulletins (Nov 7-14 and Nov 14-21) and the newest's ministry schedule, confirmed by the parish website's Masses list (Mon-Fri 7:30 AM, Sat 5:30 PM, Sun 9 and 11 AM). Saturday 8:30 AM Mass is in both weeks' intentions but not on the website; settled by R35. Confession Sat 4:45-5:15 PM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "58a63136e8c1f80db55d5a6504746275d83bc933181664eb077c8d018c18e8da",
+      "fetched_at": "2026-11-15T15:48:29Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a956354b6359ac3438bc15e2af72e0edf3f6b942b156448622d3649cb36a01ac",
+      "fetched_at": "2026-11-08T15:18:50Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "58a63136",
+          "page": 3,
+          "said": "Saturday Nov 14 5:30pm For the repose of the Soul of Luis Sanchez Esq"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58a63136",
+          "page": 4,
+          "said": "11/21 5:30pm Al Papp ... Fr. Val"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a956354b",
+          "page": 3,
+          "said": "Nov 07 5:30pm For the Souls of All the Faithfully Departed"
+        },
+        {
+          "source": "website",
+          "url": "https://www.goodshepherdnj.com",
+          "said": "Masses ... Saturday 5:30 PM"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: no schedule box, but the Saturday 5:30 PM Mass is in the intentions of both bulletins and the newest's ministry schedule (three weeks); the parish website's Masses list gives Saturday 5:30 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "58a63136",
+          "page": 3,
+          "said": "Sunday Nov 15 9:00am ... Sunday Nov 15 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58a63136",
+          "page": 4,
+          "said": "11/22 9:00am TBD ... 11/22 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a956354b",
+          "page": 3,
+          "said": "Nov 08 9:00am ... Nov 08 11:00am For the Souls of All the Faithfully Departed"
+        },
+        {
+          "source": "website",
+          "url": "https://www.goodshepherdnj.com",
+          "said": "Masses ... Sunday 9:00 AM and 11:00 AM"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: Sunday 9:00 and 11:00 AM in the intentions of both bulletins and the newest's ministry schedule; the parish website's Masses list agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "58a63136",
+          "page": 3,
+          "said": "Sunday Nov 15 9:00am ... Sunday Nov 15 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58a63136",
+          "page": 4,
+          "said": "11/22 9:00am TBD ... 11/22 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a956354b",
+          "page": 3,
+          "said": "Nov 08 9:00am ... Nov 08 11:00am For the Souls of All the Faithfully Departed"
+        },
+        {
+          "source": "website",
+          "url": "https://www.goodshepherdnj.com",
+          "said": "Masses ... Sunday 9:00 AM and 11:00 AM"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: Sunday 9:00 and 11:00 AM in the intentions of both bulletins and the newest's ministry schedule; the parish website's Masses list agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "58a63136",
+          "page": 3,
+          "said": "Nov 16 7:30am ... Nov 17 7:30am ... Nov 19 7:30am ... Nov 20 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a956354b",
+          "page": 3,
+          "said": "Nov 09 7:30am ... Nov 10 7:30am ... Nov 12 7:30am ... Nov 13 7:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.goodshepherdnj.com",
+          "said": "Masses Monday thru Friday 7:30 AM"
+        }
+      ],
+      "rationale": "R35: the 7:30 AM weekday Mass is in the intentions of both bulletins (two weeks); the parish website's Masses list gives Monday thru Friday 7:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "58a63136",
+          "page": 3,
+          "said": "Nov 16 7:30am ... Nov 17 7:30am ... Nov 19 7:30am ... Nov 20 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a956354b",
+          "page": 3,
+          "said": "Nov 09 7:30am ... Nov 10 7:30am ... Nov 12 7:30am ... Nov 13 7:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.goodshepherdnj.com",
+          "said": "Masses Monday thru Friday 7:30 AM"
+        }
+      ],
+      "rationale": "R35: the 7:30 AM weekday Mass is in the intentions of both bulletins (two weeks); the parish website's Masses list gives Monday thru Friday 7:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "58a63136",
+          "page": 3,
+          "said": "Nov 16 7:30am ... Nov 17 7:30am ... Nov 19 7:30am ... Nov 20 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a956354b",
+          "page": 3,
+          "said": "Nov 09 7:30am ... Nov 10 7:30am ... Nov 12 7:30am ... Nov 13 7:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.goodshepherdnj.com",
+          "said": "Masses Monday thru Friday 7:30 AM"
+        }
+      ],
+      "rationale": "R35: the 7:30 AM weekday Mass is in the intentions of both bulletins (two weeks); the parish website's Masses list gives Monday thru Friday 7:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "58a63136",
+          "page": 3,
+          "said": "Nov 16 7:30am ... Nov 17 7:30am ... Nov 19 7:30am ... Nov 20 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a956354b",
+          "page": 3,
+          "said": "Nov 09 7:30am ... Nov 10 7:30am ... Nov 12 7:30am ... Nov 13 7:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.goodshepherdnj.com",
+          "said": "Masses Monday thru Friday 7:30 AM"
+        }
+      ],
+      "rationale": "R35: the 7:30 AM weekday Mass is in the intentions of both bulletins (two weeks); the parish website's Masses list gives Monday thru Friday 7:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "58a63136",
+          "page": 3,
+          "said": "Wednesday Nov 18 7:30am For the Repose of the Soul of Kelchi Jacinta Ugwuanya"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a956354b",
+          "page": 4,
+          "said": "Wednesday Nov 11 Veterans Day Mass 9:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.goodshepherdnj.com",
+          "said": "Masses Monday thru Friday 7:30 AM"
+        }
+      ],
+      "rationale": "R1, R6, R35: the newest intentions list Wednesday 7:30 AM and the parish website (current pastor Fr. Valentine Ugwuanya named) gives Monday thru Friday 7:30 AM. The older week's Wednesday was the dated Veterans Day 9:00 AM Mass, a holiday exception (R40), not a different standing time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-irvington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "58a63136",
+          "page": 3,
+          "said": "Saturday Nov 21 8:30am For Restoration of Health for Cardinal Joseph Tobin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a956354b",
+          "page": 3,
+          "said": "Nov 14 8:30am For God's Guidance and Protection of Veroica Gonzaga"
+        }
+      ],
+      "rationale": "R35: a Saturday 8:30 AM Mass is in the intentions of both bulletins, for two different Saturdays (Nov 14, Nov 21), not marked special. The website's Masses list omits it, but a missing website mention is not a conflict (R6, C1 'When'); it does not conflict with the 5:30 PM vigil.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-irvington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:45",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "58a63136",
+          "page": 3,
+          "said": "The Sacrament of Reconciliation Saturday 4:45PM - 5:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a956354b",
+          "page": 3,
+          "said": "The Sacrament of Reconciliation Saturday 4:45PM - 5:15PM"
+        }
+      ],
+      "rationale": "R1: printed in the Parish Information box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-irvington",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-11",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Veterans Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a956354b",
+          "page": 4,
+          "said": "Wednesday Nov 11 Veterans Day Mass 9:00am"
+        }
+      ],
+      "rationale": "R16: a dated Mass before as_of (2026-11-15) is out of seed scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
