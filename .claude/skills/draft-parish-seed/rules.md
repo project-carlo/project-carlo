@@ -274,14 +274,32 @@ venue from it. Ask when it is unclear which listed church is intended (R32).
   reason can share one rationale.
 
 **R26. Nothing to record.**
-- When: something you leave out has no time (a chapel open only by arrangement,
-  confession by appointment).
+- When: something you leave out has no time (confession by appointment, a chapel open
+  only by appointment for set hours). A chapel open around the clock is R46, not this.
 - Do: `"entry": null`. Never make up a time to fill it.
 
 **R37. A Holy Hour inside an Adoration period already recorded.**
 - When: the Holy Hour is entirely inside Adoration at the same church on the same days.
 - Do: keep the longer Adoration period. Mention the Holy Hour in a note when useful;
   do not add a second overlapping Adoration slot for the same availability.
+- Not for a chapel open 24 hours (R46): a scheduled Holy Hour or Benediction at that
+  church keeps its own weekly slot.
+
+**R46. A chapel open 24 hours.**
+- When: the parish has a standing Adoration chapel open every day around the clock
+  ("Perpetual Adoration Chapel, open 24 hours", "24/7 Adoration"), at a listed church
+  under the chapel rules (R38, R22, R23).
+- Do: one `include` slot, `adoration 24h`, never seven 00:00–23:59 weekly slots. Set
+  `access` from what the source says: `not-stated` when it says nothing (never assume no
+  code is needed); `code-after-hours` when a code is needed at some hours only, with
+  `open=HH:MM-HH:MM` for the unlocked hours when given ("access code needed 9:00 PM-6:00
+  AM" is `open=06:00-21:00`); `code` when a code is needed at every hour; `arrangement`
+  when it is open only to those who arrange it with the parish ("for access contact the
+  Rectory Office"). A note names the chapel or a short exception ("closed during Mass"),
+  never a person, phone number, email address or code.
+- Not this: Adoration around the clock on some days only is weekly slots; a one-off
+  24-hour or Forty Hours devotion is dated; a chapel only "open for prayer" is R38's.
+  Don't write "Perpetual Adoration" in a note unless the source does.
 
 **R38. A parish's Eucharistic chapel hours can be Adoration.**
 - When: the parish identifies prayer before the Blessed Sacrament in an on-site chapel
@@ -301,8 +319,8 @@ venue from it. Ask when it is unclear which listed church is intended (R32).
 ## Asking
 
 **R27. One decision, one question.**
-- When: one answer decides several slots (the seven days of a chapel, a confession window
-  before every Mass).
+- When: one answer decides several slots (the days of a weekday Adoration schedule, a
+  confession window before every Mass).
 - Do: give the slots one `group`, with the same question and the same options in the
   same order, leaning the same way. Do not group uncertain weekly recurrence with an
   explicit dated cancellation: rejecting the weekly pattern must not discard that

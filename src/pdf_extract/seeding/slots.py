@@ -21,7 +21,14 @@ import shlex
 from dataclasses import dataclass, field
 from typing import Any
 
-from pdf_extract.model import DAYS, WEEKS_OF_MONTH, normalize_as_of
+from pdf_extract.model import (
+    ACCESS_KINDS,
+    CONTINUOUS,
+    CONTINUOUS_KEYS,
+    DAYS,
+    WEEKS_OF_MONTH,
+    normalize_as_of,
+)
 from pdf_extract.schedule.entries import Entry, parse_entry
 from pdf_extract.seeding.checks import entry_problem
 from pdf_extract.seeding.files import (
@@ -69,6 +76,10 @@ ENTRY: words in any order
   weeks      first | 2nd,4th | last; except=last for the weeks it skips
   season     season=9-5 | season=9/15-5/31 | season=sep-may
   cancelled  the dated entry is called off
+  24h        an Adoration chapel open every day around the clock (R46): no day or
+             time; access=not-stated (default) | code-after-hours | code |
+             arrangement, and open=06:00-21:00 for a code-after-hours chapel's
+             unlocked hours (implies code-after-hours)
   note=...   last: the rest of the spec is the note
   Several days or times make one slot each (in `ask`, one grouped slot each).
   `edit --entry` changes only what it names (`17:00`, `note=` clears the note,
@@ -102,6 +113,8 @@ Examples (P is the parish):
   slot include P "mass Mon-Fri 08:00 @st-marys" --src "latest p2: Mon-Fri 8 AM" --why "R1: ..."
   slot include P "mass 2026-10-12 08:00 cancelled note=Columbus Day" \\
       --src "latest p3: No 8 AM Mass on Monday, October 12" --why "R1, R16: ..."
+  slot include P "adoration 24h open=06:00-21:00 note=Adoration Chapel" \
+      --src "latest p2: Chapel open 24/7; access code needed 9:00 PM-6:00 AM" --why "R46: ..."
   slot exclude P "mass Mon-Thu 12:15 @destiny-chapel" --src "latest p2: ..." --why "R23: ..."
   slot exclude P - --src "latest p3: Confession by appointment" --why "R26: no time"
   slot ask P "Add a first-Friday 9:45 AM Holy Hour?" \\
@@ -114,7 +127,9 @@ Examples (P is the parish):
 
 ENTRY_HELP = (
     "an entry is `TYPE DAYS|DATES TIMES [@church] [first|2nd,4th|except=last] "
-    "[season=9-5] [cancelled] [note=rest of text]`, e.g. `mass Sat 16:00 note=Vigil`"
+    "[season=9-5] [cancelled] [note=rest of text]`, e.g. `mass Sat 16:00 note=Vigil`, "
+    "or `adoration 24h [access=code-after-hours] [open=06:00-21:00] [@church]` for a "
+    "chapel open around the clock"
 )
 SOURCE_HELP = (
     "a source is `HEAD: what it said`, the head `latest p2`, `9f2c41d0,1ab3e7c2 p3`, "
@@ -147,7 +162,8 @@ class EntrySpec:
     text: str
     fields: dict[str, Any] = field(default_factory=dict)
     church: str | None = None
-    whens: list[tuple[str, str]] | None = None  # ("weekly", day) or ("dated", date)
+    # ("weekly", day), ("dated", date) or ("continuous", "")
+    whens: list[tuple[str, str]] | None = None
     times: list[tuple[str, str | None]] | None = None
     patch: bool = False
 
@@ -262,8 +278,24 @@ def parse_entry_spec(text: str) -> EntrySpec:
             spec.fields.update(weeks_of_month=weeks, exclude_weeks=True)
         elif eq and key.lower() == "season":
             spec.fields["season"] = _season(value, text)
+        elif eq and key.lower() == "access":
+            access = value.lower().replace("-", "_")
+            if access not in ACCESS_KINDS:
+                raise _bad(text, f"access must be one of {', '.join(ACCESS_KINDS)}")
+            spec.fields["access"] = access
+        elif eq and key.lower() == "open":
+            if not value:
+                spec.fields.update(open_from=None, open_until=None)
+            else:
+                (start, end), = _times(value, text)
+                if end is None:
+                    raise _bad(text, "open= gives the unlocked hours, `open=06:00-21:00`")
+                spec.fields.update(open_from=start, open_until=end)
+                spec.fields.setdefault("access", "code_after_hours")
         elif eq:
             raise _bad(text, f"unknown field {key!r}")
+        elif low in ("24h", "24/7", "continuous"):
+            spec.whens = (spec.whens or []) + [("continuous", "")]
         elif all(_DATE.match(d) for d in token.split(",")):
             spec.whens = (spec.whens or []) + [("dated", d) for d in token.split(",")]
         elif (days := _days(token, text)) is not None:
@@ -299,12 +331,17 @@ def build_entries(
     if spec.church is not None:
         start["church_slug"] = resolve_church(spec.church, churches, spec.text)
     start.update(copy.deepcopy(spec.fields))
+    continuous = any(when[0] == CONTINUOUS for when in spec.whens or []) or (
+        not spec.whens and start.get("event_kind") == CONTINUOUS
+    )
+    if continuous and (spec.times or len(spec.whens or []) > 1):
+        raise _bad(spec.text, "a 24h chapel has no day or time of its own")
     if base is None:
         if "event_type" not in start:
             raise _bad(spec.text, "name its type: mass, confession or adoration")
         if not spec.whens:
-            raise _bad(spec.text, "name its day (Sat, Mon-Fri) or date (2026-10-12)")
-        if not spec.times:
+            raise _bad(spec.text, "name its day (Sat, Mon-Fri) or date (2026-10-12), or 24h")
+        if not spec.times and not continuous:
             raise _bad(spec.text, "give its time (16:00 or 15:00-15:45)")
         if "church_slug" not in start:
             if len(churches) != 1:
@@ -317,11 +354,22 @@ def build_entries(
     for when in whens:
         for time in times:
             entry = copy.deepcopy(start)
-            if when is not None and when[0] == "weekly":
+            if when is not None and when[0] == CONTINUOUS:
+                entry.update(event_kind=CONTINUOUS, day_of_week=None, date=None,
+                             start_time=None, end_time=None, cancelled=False,
+                             weeks_of_month=[], exclude_weeks=False, season=None)
+                entry.setdefault("access", "not_stated")
+                entry.setdefault("open_from", None)
+                entry.setdefault("open_until", None)
+            elif when is not None and when[0] == "weekly":
                 entry.update(event_kind="weekly", day_of_week=when[1], date=None)
             elif when is not None:
                 entry.update(event_kind="specific_date", date=when[1], day_of_week=None,
                              weeks_of_month=[], exclude_weeks=False, season=None)
+            if when is not None and when[0] != CONTINUOUS:
+                # A chapel's fields go when an entry stops being one.
+                for key in CONTINUOUS_KEYS:
+                    entry.pop(key, None)
             if time is not None:
                 entry.update(start_time=time[0], end_time=time[1])
             entries.append(entry)
@@ -332,6 +380,16 @@ def format_entry(entry: Any) -> str:
     """An entry as the spec that writes it: `mass Sat 16:00 @st-marys-oswego note=Vigil`."""
     if not isinstance(entry, dict):
         return "(no entry)"
+    if entry.get("event_kind") == CONTINUOUS:
+        parts = [str(entry.get("event_type") or "?"), "24h"]
+        if entry.get("church_slug"):
+            parts.append(f"@{entry['church_slug']}")
+        parts.append(f"access={str(entry.get('access') or '?').replace('_', '-')}")
+        if entry.get("open_from") or entry.get("open_until"):
+            parts.append(f"open={entry.get('open_from') or '?'}-{entry.get('open_until') or '?'}")
+        if entry.get("note"):
+            parts.append(f"note={entry['note']}")
+        return " ".join(parts)
     parts = [str(entry.get("event_type") or "?"),
              entry.get("date") or str(entry.get("day_of_week") or "?")[:3],
              str(entry.get("start_time") or "?")

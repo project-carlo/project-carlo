@@ -3,7 +3,12 @@
 export const EVENT_TYPES = ["mass", "confession", "adoration"] as const;
 export type EventType = (typeof EVENT_TYPES)[number];
 
-export type EventKind = "weekly" | "specific_date";
+/** `continuous`: an Adoration chapel open every day around the clock, with no day or time. */
+export type EventKind = "weekly" | "specific_date" | "continuous";
+
+/** How a visitor gets into a chapel open 24 hours (`model.ACCESS_KINDS`). */
+export const ACCESS_KINDS = ["not_stated", "code_after_hours", "code", "arrangement"] as const;
+export type ChapelAccess = (typeof ACCESS_KINDS)[number];
 
 export const DAYS = [
   "Monday",
@@ -47,7 +52,8 @@ export interface LabelEvent {
   event_kind: EventKind;
   day_of_week: Day | null;
   date: string | null;
-  start_time: string;
+  /** Null for a continuous chapel only. */
+  start_time: string | null;
   end_time: string | null;
   cancelled: boolean;
   weeks_of_month: WeekOfMonth[];
@@ -59,6 +65,10 @@ export interface LabelEvent {
   season: Season | null;
   page_number: number | null;
   note: string | null;
+  /** A continuous chapel's access and unlocked hours (`HH:MM`); absent on every other event. */
+  access?: ChapelAccess | null;
+  open_from?: string | null;
+  open_until?: string | null;
   origin: Origin;
   /** Null for a required event. Labels saved before this existed lack it. */
   optional: OptionalPreference | null;
@@ -83,6 +93,7 @@ export interface Label {
 export interface EditorRow extends Omit<LabelEvent, "church_slug" | "start_time" | "exclude_weeks"> {
   id: string;
   church_slug: string;
+  /** Empty while being typed, and for a continuous chapel. */
   start_time: string;
   exclude_weeks: boolean;
   /** The Gemini row this came from, while this browser remembers it. */
@@ -110,6 +121,9 @@ export interface GeminiRow {
   season: Season | null;
   page_number: number | null;
   note: string | null;
+  access?: ChapelAccess | null;
+  open_from?: string | null;
+  open_until?: string | null;
   raw: Record<string, string>;
   problems: string[];
 }

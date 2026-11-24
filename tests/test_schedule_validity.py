@@ -14,7 +14,13 @@ from pdf_extract.db import migrate
 from pdf_extract.extract_frontend_db import extract, read_snapshot
 from pdf_extract.runs import start_run
 from pdf_extract.schedule.edits import edit_entry
-from pdf_extract.schedule.entries import ENTRY_COLUMNS, Entry, EntryError, parse_entry
+from pdf_extract.schedule.entries import (
+    ACCESS_COLUMNS,
+    ENTRY_COLUMNS,
+    Entry,
+    EntryError,
+    parse_entry,
+)
 from pdf_extract.schedule.policy import PAST_DATE
 from pdf_extract.schedule.store import live_entries, rebuild_current_schedule, render_view
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db
@@ -38,7 +44,7 @@ CHURCHES = {'test-church': 1}
 
 def _labels(columns: dict) -> dict:
     """A frozen 0012 entry as a hand edit gives one."""
-    values = {c: columns[c] for c in ENTRY_COLUMNS if c != 'church_id'}
+    values = {c: columns.get(c) for c in ENTRY_COLUMNS if c != 'church_id'}
     return Entry(church_id=0, **values).labels_form(columns['church_slug'])
 
 
@@ -105,7 +111,7 @@ def test_bounded_variants_conflict_only_when_dates_overlap():
     assert not old.conflicts_with(new)
     assert old.conflicts_with(parse_entry({**SUN_9, 'valid_from': '2026-10-31'}, CHURCHES))
     legacy = parse_entry(SUN_9, CHURCHES)
-    assert legacy.hash == sha256(json.dumps(astuple(legacy)[:-2]).encode()).hexdigest()
+    assert legacy.hash == sha256(json.dumps(astuple(legacy)[:-5]).encode()).hexdigest()
 
 
 @pytest.mark.parametrize('day', ['2026-10-25', '2026-11-01'])
@@ -199,7 +205,8 @@ def test_frozen_oct25_repairs_are_valid_entries():
             for columns in repair['before'] + repair['after']:
                 entry = parse_entry(_labels(columns), {columns['church_slug']: 0})
                 assert columns == {'church_slug': columns['church_slug'], **{
-                    c: getattr(entry, c) for c in ENTRY_COLUMNS if c != 'church_id'}}
+                    c: getattr(entry, c) for c in ENTRY_COLUMNS
+                    if c != 'church_id' and c not in ACCESS_COLUMNS}}
 
 
 @pytest.mark.parametrize('case', SPEC['parishes'], ids=lambda case: case['parish'])

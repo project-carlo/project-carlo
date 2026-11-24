@@ -17,9 +17,12 @@ A whole new diocese is mapped by the onboarding factory (`docs/factory.md`): add
 1. **One parish row = one bulletin.** Families, clusters, canonical mergers and decrees
    don't decide rows: the bulletin does. Several canonical parishes sharing one bulletin are
    one row; family members that each publish their own are separate rows.
-2. **One church row = one place with public Mass now.** Oratories, chapels, shrines and
-   campus chapels count. A closed building goes in `excluded/` with `reason: closed`; an
-   open place that publishes nothing goes in with `reason: no-bulletin`, never `closed`.
+2. **One church row = one place with public Mass now, or a parish's Adoration chapel at
+   its own address.** Oratories, chapels, shrines and campus chapels count. An Adoration
+   chapel with an address of its own is a church row with `kind: adoration_chapel` (README,
+   "One church row"); one inside or on the grounds of a listed church belongs to that
+   church. A closed building goes in `excluded/` with `reason: closed`; an open place that
+   publishes nothing goes in with `reason: no-bulletin`, never `closed`.
 3. **Every call is written down for an auditor.** A record's explanation and `evidence` let
    someone a year from now re-check it in minutes: a URL, the date you read it, the exact
    words, and what you inferred rather than read. Disagreements between sources are recorded,

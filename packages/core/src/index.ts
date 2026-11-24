@@ -1,5 +1,6 @@
 export * from "./constants/days";
 export * from "./constants/eventTypes";
+export * from "./continuous";
 export * from "./eventRollup";
 export * from "./schedule";
 export * from "./schedulePattern";

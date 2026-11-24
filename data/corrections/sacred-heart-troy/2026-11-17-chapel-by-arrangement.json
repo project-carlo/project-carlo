@@ -1,0 +1,20 @@
+{
+  "parish": "sacred-heart-troy",
+  "actor": "lyonsl2 (via Claude)",
+  "note": "Chapel open 24 hours (#111), re-checked. The 15 November 2026 bulletin, p. 1, lists among the church's own times: \"Perpetual Adoration Chapel - For access contact the Rectory Office.\" The seed (s11) left it out only because it had no public start time; a chapel open by arrangement is now recorded with access `arrangement`, and the site says \"By arrangement. Contact the parish office for details.\" The bulletin gives no other address for the chapel; this one-church parish lists it with the church's Mass, Confession and Thursday Adoration times, so it is recorded at the church. Re-checked 24 November 2026: the 22 November bulletin says the same, and the parish website's chapel page (sacredhearttroy.com/adoration-chapel-2, behind Cloudflare; read in a browser with parish-site-access visit.py) says: \"Our Perpetual Adoration Chapel is available around the clock ... For access, please contact the Rectory to request a key fob.\" It gives no address but the church's, 310 Spring Ave.",
+  "as_of": "2026-11-15T17:04:58Z",
+  "operations": [
+    {
+      "op": "add",
+      "after": {
+        "church_slug": "sacred-heart-troy",
+        "event_type": "adoration",
+        "event_kind": "continuous",
+        "access": "arrangement",
+        "open_from": null,
+        "open_until": null,
+        "note": "Perpetual Adoration Chapel"
+      }
+    }
+  ]
+}

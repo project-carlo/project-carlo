@@ -49,6 +49,8 @@ def describe_event(key: EventKey) -> str:
 
 def describe_entry(entry: Entry) -> str:
     """`describe_event` with the weeks of the month, season and note an entry carries."""
+    if entry.continuous:
+        return _describe_continuous(entry)
     text = describe_event((
         "", entry.event_type, entry.event_kind, entry.day_of_week, entry.date,
         minutes_to_time(entry.start_time), minutes_to_time(entry.end_time),
@@ -66,10 +68,25 @@ def describe_entry(entry: Entry) -> str:
     return text + (f" ({'; '.join(qualifiers)})" if qualifiers else "")
 
 
+def _describe_continuous(entry: Entry) -> str:
+    """"Adoration · every day, 24 hours (code_after_hours 9:00 PM–6:00 AM; Adoration Chapel)"."""
+    label = EVENT_TYPE_LABELS.get(entry.event_type, entry.event_type)
+    access = entry.access or "?"
+    if entry.open_from is not None:
+        access += f", unlocked {minutes_to_time(entry.open_from)}–{minutes_to_time(entry.open_until)}"
+    qualifiers = [part for part in (
+        access, entry.note,
+        f"from {entry.valid_from}" if entry.valid_from else None,
+        f"through {entry.valid_until}" if entry.valid_until else None,
+    ) if part]
+    return f"{label} · every day, 24 hours ({'; '.join(qualifiers)})"
+
+
 def _unseen_weekly(
     conn: sqlite3.Connection, parish_id: int, places: list[CallPlace],
 ) -> list[int]:
-    """Live weekly entries none of the last UNSEEN_BULLETINS bulletins since they went live printed."""
+    """Live weekly (and continuous) entries none of the last UNSEEN_BULLETINS bulletins since
+    they went live printed."""
     counted = {p.llm_call_id: p for p in places if not p.wrong_bulletin and not p.stale}
     calls = conn.execute(
         """SELECT id, bulletin_id, base_revision FROM llm_call
@@ -83,7 +100,7 @@ def _unseen_weekly(
     ).fetchall())
     out = []
     for entry_id, entry in live_entries(conn, parish_id).items():
-        if not entry.weekly:
+        if not entry.recurring:
             continue
         shown = [c for c in calls if c["base_revision"] >= since[entry_id]]
         if len(shown) < UNSEEN_BULLETINS:

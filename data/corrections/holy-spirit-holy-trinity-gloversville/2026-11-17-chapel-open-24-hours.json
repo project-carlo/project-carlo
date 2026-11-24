@@ -1,0 +1,117 @@
+{
+  "parish": "holy-spirit-holy-trinity-gloversville",
+  "actor": "lyonsl2 (via Claude)",
+  "note": "Chapel open 24 hours (#111): the seven 12:00 AM–11:59 PM weekly entries become one continuous entry. The 15 November 2026 bulletin, p. 2: \"PERPETUAL ADORATION CHAPEL: At The Church of the Holy Spirit.\" The seed read \"24 hours ... except during Mass, funerals and weddings\" from the parish website. The same page: \"THURSDAY DEVOTIONS: 3:00 P.M. –3:30 P.M. In November the Thursday Devotions will be at Holy Spirit Church ... the Divine Mercy Chaplet in the presence of the exposed Blessed Sacrament ... Benediction\". The model had put this in the Thursday chapel entry's note; it is its own entry now, through November, as a Holy Hour beside a 24-hour chapel keeps its own slot.",
+  "as_of": "2026-11-15T17:21:42Z",
+  "operations": [
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Perpetual Adoration Chapel, 24 hours except during Mass, funerals and weddings",
+        "day_of_week": "Friday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Perpetual Adoration Chapel, 24 hours except during Mass, funerals and weddings",
+        "day_of_week": "Monday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Perpetual Adoration Chapel, 24 hours except during Mass, funerals and weddings",
+        "day_of_week": "Saturday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Perpetual Adoration Chapel, 24 hours except during Mass, funerals and weddings",
+        "day_of_week": "Sunday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Perpetual Adoration Chapel, 24 hours except during Mass, funerals and weddings",
+        "day_of_week": "Tuesday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Perpetual Adoration Chapel, 24 hours except during Mass, funerals and weddings",
+        "day_of_week": "Wednesday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Perpetual Adoration Chapel, 24 hours except during Mass, funerals and weddings; November Thursday Devotions with Divine Mercy Chaplet and Benediction, 3:00–3:30 PM",
+        "day_of_week": "Thursday"
+      }
+    },
+    {
+      "op": "add",
+      "after": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "adoration",
+        "event_kind": "continuous",
+        "open_from": null,
+        "open_until": null,
+        "access": "not_stated",
+        "note": "Perpetual Adoration Chapel; closed during Mass, funerals and weddings"
+      }
+    },
+    {
+      "op": "add",
+      "after": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "valid_until": "2026-11-30",
+        "note": "Divine Mercy Chaplet and Benediction"
+      }
+    }
+  ]
+}

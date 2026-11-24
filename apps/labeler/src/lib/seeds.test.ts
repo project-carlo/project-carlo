@@ -278,3 +278,33 @@ describe("questions about dates that have passed", () => {
     expect(expiredQuestions(file, "2026-10-13").map((s) => s.id)).toEqual(["s5"]);
   });
 });
+
+describe("a chapel open 24 hours", () => {
+  const chapel: SeedEntry = {
+    church_slug: "st-gregory",
+    event_type: "adoration",
+    event_kind: "continuous",
+    day_of_week: null,
+    date: null,
+    start_time: null,
+    end_time: null,
+    cancelled: false,
+    weeks_of_month: [],
+    exclude_weeks: false,
+    season: null,
+    note: "Adoration Chapel",
+    access: "code_after_hours",
+    open_from: "06:00",
+    open_until: "21:00",
+  };
+
+  it("is described by its access, not a day and time", () => {
+    expect(describeEntry(chapel)).toBe(
+      "Adoration · every day, 24 hours · code after hours (unlocked 6:00 AM–9:00 PM) · Adoration Chapel",
+    );
+  });
+
+  it("survives a round trip through the row editor", () => {
+    expect(fromEditorRow(toEditorRow(chapel, 2))).toEqual({ entry: chapel, page: 2 });
+  });
+});

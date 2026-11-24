@@ -6,6 +6,8 @@ entry id names its content. Its `identity_key` says which slot it is:
 
 - weekly: church, event type, weekday, start time, weeks and season
 - specific_date: church, event type, date, start time
+- continuous: church and event type (Adoration), and its valid_from/valid_until
+  when it has them: a church has at most one 24-hour chapel at a time
 
 End time, cancelled and note are not part of identity. `slot_key` groups
 recurrence variants at the same weekday and time; `conflicts_with` checks
@@ -27,7 +29,15 @@ from hashlib import sha256
 from typing import Any
 
 from pdf_extract.bulletin_week import parse_iso_date
-from pdf_extract.model import DAYS, EVENT_KINDS, EVENT_TYPES
+from pdf_extract.model import (
+    ACCESS_KINDS,
+    CONTINUOUS,
+    DAYS,
+    ENTRY_KINDS,
+    EVENT_TYPES,
+    continuous_access_errors,
+    private_detail,
+)
 from pdf_extract.model import ENTRY_KEYS as LABEL_ENTRY_KEYS
 from pdf_extract.schedule.qualifiers import (
     QualifierError,
@@ -57,7 +67,7 @@ class Entry:
     event_kind: str
     day_of_week: str | None
     date: str | None
-    start_time: int
+    start_time: int | None  # null for a continuous chapel only
     end_time: int | None
     cancelled: int
     weeks_of_month: int  # the mask, exclusion bit and all (`qualifiers.weeks_to_mask`)
@@ -68,12 +78,18 @@ class Entry:
     note: str | None
     valid_from: str | None = None
     valid_until: str | None = None
+    # A continuous chapel's access (`model.ACCESS_KINDS`) and unlocked hours; null otherwise.
+    access: str | None = None
+    open_from: int | None = None
+    open_until: int | None = None
 
     @property
     def hash(self) -> str:
-        # Unset bounds are left out, so entries written before they existed keep their hashes.
+        # Unset bounds and access are left out, so entries written before they
+        # existed keep their hashes.
         content = [getattr(self, name) for name in ENTRY_COLUMNS
-                   if self.bounded or name not in BOUND_COLUMNS]
+                   if (self.bounded or name not in BOUND_COLUMNS)
+                   and (self.access is not None or name not in ACCESS_COLUMNS)]
         return sha256(json.dumps(content).encode("utf-8")).hexdigest()
 
     @property
@@ -83,11 +99,17 @@ class Entry:
     @property
     def slot_key(self) -> str:
         """The unqualified slot, shared by disjoint recurrence variants."""
+        if self.continuous:
+            return f"{self.church_id}|{self.event_type}|{self.event_kind}"
         anchor = self.day_of_week if self.event_kind == "weekly" else self.date
         return f"{self.church_id}|{self.event_type}|{self.event_kind}|{anchor}|{self.start_time}"
 
     @property
     def identity_key(self) -> str:
+        if self.continuous:
+            if not self.bounded:
+                return self.slot_key
+            return f"{self.slot_key}|{self.valid_from or ''}|{self.valid_until or ''}"
         if not self.weekly:
             return self.slot_key
         qualifiers = (self.weeks_of_month, self.season_start_month, self.season_start_day,
@@ -105,13 +127,14 @@ class Entry:
         """
         if self.slot_key != other.slot_key:
             return False
-        if not self.weekly or self.identity_key == other.identity_key:
+        if not self.recurring or self.identity_key == other.identity_key:
             return True
         if max(self.valid_from or '0001-01-01', other.valid_from or '0001-01-01') > min(
             self.valid_until or '9999-12-31', other.valid_until or '9999-12-31',
         ):
             return False
-        return bool(self._recurrence_mask() & other._recurrence_mask())
+        # A church's chapel is one chapel: two versions overlapping in time conflict.
+        return self.continuous or bool(self._recurrence_mask() & other._recurrence_mask())
 
     def _recurrence_mask(self) -> int:
         return recurrence_mask(
@@ -123,14 +146,23 @@ class Entry:
     def weekly(self) -> bool:
         return self.event_kind == "weekly"
 
+    @property
+    def continuous(self) -> bool:
+        return self.event_kind == CONTINUOUS
+
+    @property
+    def recurring(self) -> bool:
+        """Weekly or continuous: an entry that repeats, and may hold valid_from/valid_until."""
+        return self.weekly or self.continuous
+
     def dated_before(self, day: date) -> bool:
         """Whether this is a dated entry for a day before `day`."""
         return not self.weekly and self.date is not None and self.date < day.isoformat()
 
     def expired_before(self, day: date) -> bool:
-        """Whether this is a dated entry before `day` or a weekly one that ended before it."""
+        """Whether this is a dated entry before `day` or a recurring one that ended before it."""
         return self.dated_before(day) or (
-            self.weekly and self.valid_until is not None and self.valid_until < day.isoformat()
+            self.recurring and self.valid_until is not None and self.valid_until < day.isoformat()
         )
 
     def season(self) -> dict[str, int | None] | None:
@@ -149,7 +181,15 @@ class Entry:
             "end_time": minutes_to_time(self.end_time),
             "note": self.note,
         }
-        if self.weekly:
+        if self.continuous:
+            out.update(
+                access=self.access,
+                open_from=minutes_to_time(self.open_from),
+                open_until=minutes_to_time(self.open_until),
+            )
+            if self.bounded:
+                out.update(valid_from=self.valid_from, valid_until=self.valid_until)
+        elif self.weekly:
             out.update(
                 day_of_week=self.day_of_week,
                 weeks_of_month=mask_to_weeks(self.weeks_of_month),
@@ -171,6 +211,7 @@ class Entry:
 
 ENTRY_COLUMNS = tuple(f.name for f in fields(Entry))
 BOUND_COLUMNS = ("valid_from", "valid_until")
+ACCESS_COLUMNS = ("access", "open_from", "open_until")
 
 
 def entry_from_row(row: Any) -> Entry:
@@ -226,8 +267,20 @@ def parse_entry(raw: Any, churches: dict[str, int]) -> Entry:
     if event_type not in EVENT_TYPES:
         raise EntryError(INVALID_ENTRY, f"event_type must be one of {', '.join(EVENT_TYPES)}")
     kind = raw.get("event_kind")
-    if kind not in EVENT_KINDS:
-        raise EntryError(INVALID_ENTRY, f"event_kind must be one of {', '.join(EVENT_KINDS)}")
+    if kind not in ENTRY_KINDS:
+        raise EntryError(INVALID_ENTRY, f"event_kind must be one of {', '.join(ENTRY_KINDS)}")
+    note = raw.get("note")
+    if note is not None and not isinstance(note, str):
+        raise EntryError(INVALID_ENTRY, "note must be text or null")
+    private = private_detail(note) if isinstance(note, str) else None
+    if private:
+        raise EntryError(INVALID_ENTRY, f"note {private}")
+    bounds = _bounds(raw, kind)
+    if kind == CONTINUOUS:
+        return _parse_continuous(raw, churches[slug], note, bounds)
+    for name in ("access", "open_from", "open_until"):
+        if raw.get(name) is not None:
+            raise EntryError(INVALID_ENTRY, f"{name} is for a continuous chapel only")
 
     day_of_week = _day_of_week(raw.get("day_of_week"))
     cancelled = raw.get("cancelled") or False
@@ -263,20 +316,6 @@ def parse_entry(raw: Any, churches: dict[str, int]) -> Entry:
             )
         entry_date, day_of_week = parsed.isoformat(), None
 
-    note = raw.get("note")
-    if note is not None and not isinstance(note, str):
-        raise EntryError(INVALID_ENTRY, "note must be text or null")
-    bounds = {}
-    for name in ("valid_from", "valid_until"):
-        value = raw.get(name)
-        parsed = parse_iso_date(value) if isinstance(value, str) else None
-        if value is not None and (kind != "weekly" or parsed is None):
-            raise EntryError(INVALID_ENTRY, f"{name} must be a weekly YYYY-MM-DD date or null")
-        bounds[name] = parsed.isoformat() if parsed else None
-    if bounds['valid_from'] and bounds['valid_until'] and (
-        bounds['valid_from'] > bounds['valid_until']
-    ):
-        raise EntryError(INVALID_ENTRY, "valid_until must not precede valid_from")
     return Entry(
         church_id=churches[slug],
         event_type=event_type,
@@ -291,6 +330,72 @@ def parse_entry(raw: Any, churches: dict[str, int]) -> Entry:
         season_start_day=season[1],
         season_end_month=season[2],
         season_end_day=season[3],
-        note=note.strip() or None if isinstance(note, str) else None,
+        note=_note(note),
+        **bounds,
+    )
+
+
+def _note(note: str | None) -> str | None:
+    return note.strip() or None if isinstance(note, str) else None
+
+
+def _bounds(raw: dict[str, Any], kind: str) -> dict[str, str | None]:
+    bounds = {}
+    for name in ("valid_from", "valid_until"):
+        value = raw.get(name)
+        parsed = parse_iso_date(value) if isinstance(value, str) else None
+        if value is not None and (kind == "specific_date" or parsed is None):
+            raise EntryError(
+                INVALID_ENTRY, f"{name} must be a weekly or continuous YYYY-MM-DD date or null",
+            )
+        bounds[name] = parsed.isoformat() if parsed else None
+    if bounds['valid_from'] and bounds['valid_until'] and (
+        bounds['valid_from'] > bounds['valid_until']
+    ):
+        raise EntryError(INVALID_ENTRY, "valid_until must not precede valid_from")
+    return bounds
+
+
+def _parse_continuous(
+    raw: dict[str, Any], church_id: int, note: str | None, bounds: dict[str, str | None],
+) -> Entry:
+    """A `continuous` entry: an Adoration chapel open every day, around the clock."""
+    if raw.get("event_type") != "adoration":
+        raise EntryError(INVALID_ENTRY, "a continuous entry is Adoration only")
+    for name in ("day_of_week", "date", "start_time", "end_time", "season"):
+        value = raw.get(name)
+        if value is not None and not (isinstance(value, str) and not value.strip()):
+            raise EntryError(INVALID_ENTRY, f"a continuous entry has no {name}")
+    if raw.get("cancelled") or raw.get("weeks_of_month") or raw.get("exclude_weeks"):
+        raise EntryError(
+            INVALID_ENTRY, "a continuous entry has no cancellation or weeks of the month",
+        )
+    access = raw.get("access")
+    if access not in ACCESS_KINDS:
+        raise EntryError(INVALID_ENTRY, f"access must be one of {', '.join(ACCESS_KINDS)}")
+    open_from = _time(raw.get("open_from"), "open_from", required=False)
+    open_until = _time(raw.get("open_until"), "open_until", required=False)
+    hours = [None if m is None else f"{m // 60:02d}:{m % 60:02d}" for m in (open_from, open_until)]
+    problems = continuous_access_errors(access, *hours, "entry")
+    if problems:
+        raise EntryError(INVALID_ENTRY, problems[0].removeprefix("entry: ").removeprefix("entry."))
+    return Entry(
+        church_id=church_id,
+        event_type="adoration",
+        event_kind=CONTINUOUS,
+        day_of_week=None,
+        date=None,
+        start_time=None,
+        end_time=None,
+        cancelled=0,
+        weeks_of_month=0,
+        season_start_month=None,
+        season_start_day=None,
+        season_end_month=None,
+        season_end_day=None,
+        note=_note(note),
+        access=access,
+        open_from=open_from,
+        open_until=open_until,
         **bounds,
     )

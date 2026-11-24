@@ -1,5 +1,13 @@
 import { memo } from "react";
-import type { Church, EditorRow, EventType, OptionalPreference, WeekOfMonth } from "../types";
+import {
+  ACCESS_KINDS,
+  type ChapelAccess,
+  type Church,
+  type EditorRow,
+  type EventType,
+  type OptionalPreference,
+  type WeekOfMonth,
+} from "../types";
 import { describeDays, formatDate, parseDates, parseDays, shortDay } from "../lib/dates";
 import {
   NUMBERED_WEEKS,
@@ -45,6 +53,71 @@ const TYPES: { value: EventType; key: string; label: string }[] = [
   { value: "confession", key: "C", label: "Confession" },
   { value: "adoration", key: "A", label: "Adoration" },
 ];
+
+const ACCESS_LABELS: Record<ChapelAccess, string> = {
+  not_stated: "Access not stated",
+  code_after_hours: "Code after hours",
+  code: "Code at all hours",
+  arrangement: "By arrangement",
+};
+
+/** A chapel open 24 hours: how a visitor gets in, and its unlocked hours when a code is needed at others. */
+function ContinuousFields({
+  row,
+  missing,
+  patch,
+}: {
+  row: EditorRow;
+  missing: Set<string>;
+  patch: (p: Patch) => void;
+}) {
+  const time = (key: "open_from" | "open_until", placeholder: string) => (
+    <CommitInput
+      display={formatTime(row[key] ?? null)}
+      placeholder={placeholder}
+      title={key === "open_from" ? "Unlocked from (code needed before)" : "Unlocked until (code needed after)"}
+      className="w-[4.5rem]"
+      missing={missing.has("unlocked hours")}
+      onCommit={(text) => {
+        if (!text.trim()) {
+          patch({ [key]: null });
+          return true;
+        }
+        const t = parseLooseTime(text);
+        if (!t) return false;
+        patch({ [key]: t });
+        return true;
+      }}
+    />
+  );
+  return (
+    <>
+      <span className="text-xs font-semibold text-slate-500" title="Open every day, around the clock">
+        Every day, 24h
+      </span>
+      <select
+        value={row.access ?? "not_stated"}
+        onChange={(e) => patch({ access: e.target.value as ChapelAccess })}
+        className="rounded border border-slate-300 bg-white px-0.5 py-0.5 text-sm"
+        title="How a visitor gets in, as the source says"
+        data-testid="access-select"
+      >
+        {ACCESS_KINDS.map((kind) => (
+          <option key={kind} value={kind}>
+            {ACCESS_LABELS[kind]}
+          </option>
+        ))}
+      </select>
+      {row.access === "code_after_hours" && (
+        <>
+          {time("open_from", "open")}
+          <span className="text-slate-400">–</span>
+          {time("open_until", "close")}
+        </>
+      )}
+    </>
+  );
+}
 
 const OPTIONAL_CHOICES: { value: OptionalPreference | null; label: string; title: string }[] = [
   { value: null, label: "Required", title: "Required: scored as usual" },
@@ -201,6 +274,7 @@ export const RowEditor = memo(function RowEditor({
 }: Props) {
   const missing = new Set(rowProblems(row));
   const weekly = row.event_kind === "weekly";
+  const continuous = row.event_kind === "continuous";
   const pendingCount = (weekly ? row.pending_split?.days : row.pending_split?.dates)?.length ?? 0;
   const summary = [
     describeOptional(row.optional),
@@ -264,10 +338,18 @@ export const RowEditor = memo(function RowEditor({
               label: "Dated",
               title: "Dated (d): place a weekly row on that weekday of the bulletin's week",
             },
+            {
+              value: "continuous",
+              key: "24",
+              label: "24 hours",
+              title: "An Adoration chapel open every day, around the clock: no day or time",
+            },
           ]}
           onChange={(v) => (v === "specific_date" ? onMakeDated(row.id) : patch({ event_kind: v }))}
         />
-        {weekly ? (
+        {continuous ? (
+          <ContinuousFields row={row} missing={missing} patch={patch} />
+        ) : weekly ? (
           <CommitInput
             display={row.pending_split?.days ? describeDays(row.pending_split.days) : shortDay(row.day_of_week)}
             placeholder="Sun"
@@ -311,52 +393,56 @@ export const RowEditor = memo(function RowEditor({
             ×{pendingCount}
           </span>
         )}
-        <CommitInput
-          display={formatTime(row.start_time)}
-          placeholder="start"
-          title="Start: 530p, 5:30, 17:30, noon"
-          className="w-[4.5rem]"
-          missing={missing.has("start time")}
-          autoFocus={focusField === "start"}
-          onFocused={onFocusDone}
-          testId="start-input"
-          onCommit={(text) => {
-            const t = parseLooseTime(text);
-            if (!t) return false;
-            patch({ start_time: t });
-            return true;
-          }}
-        />
-        <span className="text-slate-400">–</span>
-        <CommitInput
-          display={formatTime(row.end_time)}
-          placeholder="end"
-          title="End (optional)"
-          className="w-[4.5rem]"
-          testId="end-input"
-          onCommit={(text) => {
-            if (!text.trim()) {
-              patch({ end_time: null });
-              return true;
-            }
-            const t = parseLooseTime(text);
-            if (!t) return false;
-            patch({ end_time: t });
-            return true;
-          }}
-        />
-        <button
-          type="button"
-          tabIndex={-1}
-          onClick={() => patch({ cancelled: !row.cancelled })}
-          title={row.cancelled ? "Cancelled; click or press x to undo" : "Mark cancelled (x)"}
-          data-testid="cancelled-toggle"
-          className={`rounded border px-1.5 py-0.5 text-xs font-semibold ${
-            row.cancelled ? "border-red-600 bg-red-600 text-white" : "border-slate-300 bg-white text-slate-400 hover:bg-slate-100"
-          }`}
-        >
-          X
-        </button>
+        {!continuous && (
+          <>
+            <CommitInput
+              display={formatTime(row.start_time)}
+              placeholder="start"
+              title="Start: 530p, 5:30, 17:30, noon"
+              className="w-[4.5rem]"
+              missing={missing.has("start time")}
+              autoFocus={focusField === "start"}
+              onFocused={onFocusDone}
+              testId="start-input"
+              onCommit={(text) => {
+                const t = parseLooseTime(text);
+                if (!t) return false;
+                patch({ start_time: t });
+                return true;
+              }}
+            />
+            <span className="text-slate-400">–</span>
+            <CommitInput
+              display={formatTime(row.end_time)}
+              placeholder="end"
+              title="End (optional)"
+              className="w-[4.5rem]"
+              testId="end-input"
+              onCommit={(text) => {
+                if (!text.trim()) {
+                  patch({ end_time: null });
+                  return true;
+                }
+                const t = parseLooseTime(text);
+                if (!t) return false;
+                patch({ end_time: t });
+                return true;
+              }}
+            />
+            <button
+              type="button"
+              tabIndex={-1}
+              onClick={() => patch({ cancelled: !row.cancelled })}
+              title={row.cancelled ? "Cancelled; click or press x to undo" : "Mark cancelled (x)"}
+              data-testid="cancelled-toggle"
+              className={`rounded border px-1.5 py-0.5 text-xs font-semibold ${
+                row.cancelled ? "border-red-600 bg-red-600 text-white" : "border-slate-300 bg-white text-slate-400 hover:bg-slate-100"
+              }`}
+            >
+              X
+            </button>
+          </>
+        )}
         <label className="flex items-center" title="PDF page">
           <CommitInput
             display={row.page_number ? String(row.page_number) : ""}

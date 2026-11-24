@@ -95,3 +95,13 @@ export function formatAddress(church: {
   if (cityStateZip) parts.push(cityStateZip);
   return parts.length > 0 ? parts.join(", ") : null;
 }
+
+/** An Adoration chapel at its own address: listed and mapped, but not counted as a church. */
+export function isAdorationChapel(place: { kind?: string | null }): boolean {
+  return place.kind === "adoration_chapel";
+}
+
+/** How many of `places` are churches, leaving out Adoration chapels at their own address. */
+export function countChurches(places: readonly { kind?: string | null }[]): number {
+  return places.filter((place) => !isAdorationChapel(place)).length;
+}

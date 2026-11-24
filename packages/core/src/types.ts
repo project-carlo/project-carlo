@@ -42,11 +42,48 @@ export interface EventSummary {
   valid_until?: string | null;
 }
 
+/**
+ * What a church row is: a place of public Mass, or a parish's Adoration
+ * chapel at an address of its own, which has no Mass or Confession.
+ */
+export type ChurchKind = "church" | "adoration_chapel";
+
+/**
+ * How a visitor gets into a chapel open 24 hours: the source says nothing; a
+ * door code is needed outside its unlocked hours; a code is needed at every
+ * hour; or only by arrangement with the parish. The site words each itself, so
+ * nothing stored ever carries a contact or a code.
+ */
+export type ChapelAccess = "not_stated" | "code_after_hours" | "code" | "arrangement";
+
+/**
+ * A standing Adoration chapel open every day around the clock: one per church
+ * (two only when a closure ends one and another starts later). It has no day
+ * or time, so it is kept apart from the timed events, which all have a
+ * numeric `start_time`.
+ */
+export interface ContinuousAdoration {
+  id: number;
+  church_id: number;
+  access: ChapelAccess;
+  /** `code_after_hours` only: the hours it is unlocked, minutes after midnight. */
+  open_from: number | null;
+  open_until: number | null;
+  /** A short location or exception ("Adoration Chapel"), never a contact. */
+  note: string | null;
+  page_number: number | null;
+  /** Inclusive absolute dates, as on a weekly slot (a closure, a reopening). */
+  valid_from: string | null;
+  valid_until: string | null;
+}
+
 /** The church fields every view reads. */
 export interface ChurchBase {
   id: number;
   parish_id: number;
   slug: string;
+  /** A church, or an Adoration chapel at its own address. */
+  kind: ChurchKind;
   name: string | null;
   address_line1: string | null;
   address_line2: string | null;
@@ -65,6 +102,8 @@ export interface ChurchBase {
 export interface ChurchMapItem extends ChurchBase {
   event_types: EventType[];
   upcoming_events: EventSummary[];
+  /** The church's chapel open 24 hours, when Adoration is shown and it has one. */
+  continuous: ContinuousAdoration | null;
 }
 
 export interface ChurchDetail extends ChurchBase {

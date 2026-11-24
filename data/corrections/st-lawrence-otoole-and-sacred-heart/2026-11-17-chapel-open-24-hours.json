@@ -1,0 +1,104 @@
+{
+  "parish": "st-lawrence-otoole-and-sacred-heart",
+  "actor": "lyonsl2 (via Claude)",
+  "note": "Chapel open 24 hours (#111): the seven 12:00 AM–11:59 PM weekly entries become one continuous entry. The seed read the parish website: \"Divine Mercy Adoration Chapel, Perpetual Adoration, St Lawrence O'Toole Church, 31 Prospect St, Brewster, NY. Weekend and overnight adoration is available\". No access details are given.",
+  "as_of": "2026-10-25T13:22:31Z",
+  "operations": [
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Divine Mercy Chapel, perpetual adoration",
+        "day_of_week": "Friday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Divine Mercy Chapel, perpetual adoration",
+        "day_of_week": "Monday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Divine Mercy Chapel, perpetual adoration",
+        "day_of_week": "Saturday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Divine Mercy Chapel, perpetual adoration",
+        "day_of_week": "Sunday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Divine Mercy Chapel, perpetual adoration",
+        "day_of_week": "Thursday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Divine Mercy Chapel, perpetual adoration",
+        "day_of_week": "Tuesday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Divine Mercy Chapel, perpetual adoration",
+        "day_of_week": "Wednesday"
+      }
+    },
+    {
+      "op": "add",
+      "after": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "adoration",
+        "event_kind": "continuous",
+        "open_from": null,
+        "open_until": null,
+        "access": "not_stated",
+        "note": "Divine Mercy Chapel"
+      }
+    }
+  ]
+}

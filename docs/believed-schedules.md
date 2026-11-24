@@ -62,6 +62,43 @@ pnpm schedule seed --parish st-mary-albany --file entries.json --actor you
 
 These change only your local database, which is never published.
 
+## Chapels open 24 hours
+
+A standing Adoration chapel open every day around the clock is one entry of kind
+`continuous` for its church ([issue #111](https://github.com/project-carlo/project-carlo/issues/111)),
+not seven 00:00–23:59 weekly entries. It has no day, date, start or end time, and a
+church has at most one (a closure ends it with `valid_until`; a reopening is a new
+one with `valid_from`). It carries:
+
+| field | |
+|---|---|
+| `access` | `not_stated` (the source says nothing), `code_after_hours`, `code` (at every hour) or `arrangement` |
+| `open_from`, `open_until` | the unlocked hours of a `code_after_hours` chapel, when the source gives them |
+| `note` | a short location or exception ("Adoration Chapel", "closed during Mass") |
+
+The site words the access itself ("Open 24 hours", "Door code needed 9 p.m. – 6 a.m.
+Contact the parish office for details."), so nothing stored ever holds a contact or a
+code, and it never says that no code is needed. It shows the chapel as an "Every
+day" row in the Adoration schedule, first in the map popup, and matches every
+Adoration search whatever the day or time. Snapshot format 4 carries these rows;
+the web reader keeps them in their own per-church list, so every timed event keeps
+a numeric start time.
+
+Only a chapel open every day, all day, is continuous: Adoration around the clock on
+some days stays weekly, and a one-off 24-hour devotion stays dated. A scheduled Holy
+Hour or Benediction at the same church keeps its own weekly entry. A parish's
+Adoration chapel at an address of its own is a church row with `kind:
+adoration_chapel` in `data/churches.csv` (`data/dioceses/README.md`, "One church
+row"), so it gets its own pin and page.
+
+## Notes
+
+A note, on any entry, never holds a person's name, a phone number, an email
+address or a door code. Seed checks refuse a note that looks like one of the last
+three (`model.private_detail`), the update policy drops it from the proposed entry
+(the rest of the change still applies), and the snapshot build leaves it out. Names can't be told apart from a chapel's
+or a saint's, so seed review is their check.
+
 ## Corrections
 
 A correction to a live schedule reaches the published database as a committed

@@ -8,6 +8,7 @@ import { createElement } from "react";
 import {
   churchCity,
   churchMapData,
+  churchContinuous,
   churchSchedule,
   cityIndex,
   cityPageData,
@@ -342,6 +343,7 @@ async function main() {
         renderToStaticMarkup(
           createElement(StaticChurchPage, {
             church,
+            continuous: churchContinuous(snapshot, church.id),
             city: churchCity(snapshot, church),
             map: churchMapData(snapshot, church),
             events,

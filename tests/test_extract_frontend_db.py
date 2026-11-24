@@ -51,12 +51,13 @@ SNAPSHOT_FIXTURE = Path(__file__).resolve().parents[1] / "packages/core/src/snap
 # Nulls, strings that repeat, and a gap in the event ids.
 CHURCH_ROWS = [
     (7, 1, "b", "B", None, None, "Rochester", "NY", None, 43.1, -77.6, None, None, "2026-09-20",
-     None, None, None, "rochester"),
+     None, None, None, "adoration_chapel", "rochester"),
     (3, 1, "a", "A", "1 Main St", None, None, "NY", "14620", None, None, "https://a", None, None,
-     "facebook", "https://www.facebook.com/a", "2026-11-16", None),
+     "facebook", "https://www.facebook.com/a", "2026-11-16", "church", None),
 ]
 # A negative id (an update-mode entry), weeks of the month, weeks excluded, a
-# season that wraps the new year, and a cancellation naming a weekly row.
+# season that wraps the new year, a cancellation naming a weekly row, and a
+# chapel open 24 hours (no day or times; a door code outside 6 a.m. to 9 p.m.).
 EVENT_ROWS = [
     (-118, 3, "mass", "weekly", "Friday", None, 0, None, 0, None, None, ["fourth", "last"],
      10, None, 6, 15, None, False),
@@ -67,7 +68,10 @@ EVENT_ROWS = [
     (15, 7, "adoration", "weekly", "Friday", None, 1140, 1200, 0, 3, "Midnight", [], None, None,
      None, None, None, False),
 ]
-EVENT_ROWS = [(*row, None, None) for row in EVENT_ROWS]
+EVENT_ROWS = [(*row, None, None, None, None, None) for row in EVENT_ROWS] + [
+    (20, 7, "adoration", "continuous", None, None, None, None, 0, 1, "Adoration Chapel", [], None,
+     None, None, None, None, False, None, None, "code_after_hours", 360, 1260),
+]
 
 
 def _add_bulletin(url: str, published_date: str) -> None:
@@ -300,7 +304,7 @@ def test_a_version_1_snapshot_reads_as_every_week_with_no_cancellations() -> Non
 
     events = read_snapshot(data)["events"]
 
-    assert [e["weeks_of_month"] for e in events] == [[], [], [], []]
+    assert [e["weeks_of_month"] for e in events] == [[]] * len(EVENT_ROWS)
     assert {e["season_start_month"] for e in events} == {None}
     assert {e["cancels_event_id"] for e in events} == {None}
 
@@ -321,17 +325,21 @@ def test_a_parish_with_no_processed_bulletin_has_no_bulletin(
 def test_a_snapshot_written_before_an_added_column_reads_it_as_null() -> None:
     document = json.loads(gzip.decompress(encode_snapshot(CHURCH_ROWS, EVENT_ROWS)))
     del document["churches"]["bulletin_week"]
+    del document["churches"]["kind"]
     del document["churches"]["diocese"]
     del document["events"]["exclude_weeks"]
+    del document["events"]["access"]
     data = gzip.compress(json.dumps(document).encode())
 
     tables = read_snapshot(data)
     churches = tables["churches"]
 
     assert [church["bulletin_week"] for church in churches] == [None, None]
+    assert [church["kind"] for church in churches] == ["church", "church"]
     assert [church["diocese"] for church in churches] == [None, None]
+    assert {event["access"] for event in tables["events"]} == {None}
     assert [church["slug"] for church in churches] == ["b", "a"]
-    assert [event["exclude_weeks"] for event in tables["events"]] == [None] * 4
+    assert [event["exclude_weeks"] for event in tables["events"]] == [None] * len(EVENT_ROWS)
 
 
 def test_a_churchs_diocese_is_its_parishs_in_the_csv(db: Path, tmp_path: Path) -> None:
@@ -438,11 +446,11 @@ def test_verify_passes_for_the_same_data(db: Path, tmp_path: Path) -> None:
 
 
 def test_verify_fails_when_weekly_events_and_churches_change(tmp_path: Path) -> None:
-    church = (1, 1, "a", "A", *[None] * 14)
-    other = (2, 1, "b", "B", *[None] * 14)
+    church = (1, 1, "a", "A", *[None] * 13, "church", None)
+    other = (2, 1, "b", "B", *[None] * 13, "church", None)
     weekly = [
         (i, 1, "mass", "weekly", "Sunday", None, 480 + 60 * i, None, 0, None, None,
-         [], None, None, None, None, None, False, None, None)
+         [], None, None, None, None, None, False, None, None, None, None, None)
         for i in range(1, 11)
     ]
     moved = [(*row[:6], row[6] + 15, *row[7:]) for row in weekly]

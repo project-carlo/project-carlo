@@ -65,6 +65,17 @@ version 1 snapshot.
 `["last"]` excluded). A snapshot written before it reads as null there, which
 the app takes as false.
 
+Version 4 adds chapels open 24 hours (`continuous` rows, docs/believed-schedules.md,
+"Chapels open 24 hours"): Adoration rows with no day, date, start or end time, and
+`access` (`not_stated`, `code_after_hours`, `code` or `arrangement`) with the
+unlocked hours `open_from`/`open_until` (minutes after midnight, or null), all three
+null on every other row. A version 3 reader would take such a row's null
+`start_time` for a time, so it must refuse version 4. Churches gain `kind`
+(`church`, or `adoration_chapel` for a parish's Adoration chapel at its own
+address); `read_snapshot` takes an older snapshot's churches as `church` there.
+Notes holding what looks like a phone number, email address or door code
+(`model.private_detail`) are left out of every row.
+
 Bump SNAPSHOT_VERSION (and the app's) on any change the app would misread.
 Version 3 adds inclusive absolute valid_from/valid_until dates for weekly
 entries. They do not repeat annually. Older web readers must refuse version 3
@@ -91,7 +102,7 @@ from zoneinfo import ZoneInfo
 
 from pdf_extract import storage
 from pdf_extract.bulletin_week import parse_iso_date, week_order_sql
-from pdf_extract.model import DAYS, WEBSITE_SCHEDULE
+from pdf_extract.model import DAYS, WEBSITE_SCHEDULE, private_detail
 from pdf_extract.schedule.qualifiers import (
     mask_excludes_weeks,
     mask_to_weeks,
@@ -110,22 +121,22 @@ ROOT = Path(__file__).resolve().parents[2]
 SOURCE_DB = DEFAULT_DB_PATH
 SNAPSHOT_NAME = "frontend.json.gz"
 DEST_SNAPSHOT = ROOT / "apps" / "web" / "public" / SNAPSHOT_NAME
-SNAPSHOT_VERSION = 3
-# Versions `read_snapshot` reads. The app accepts 2 and 3.
-READABLE_VERSIONS = (1, 2, 3)
+SNAPSHOT_VERSION = 4
+# Versions `read_snapshot` reads. The app accepts 2 to 4.
+READABLE_VERSIONS = (1, 2, 3, 4)
 
 # The columns the SELECTs below produce, in order.
 CHURCH_COLUMNS = (
     "id", "parish_id", "slug", "name", "address_line1", "address_line2", "city", "state",
     "postal_code", "latitude", "longitude", "homepage_url", "bulletin_url", "bulletin_week",
-    "schedule_source", "source_url", "checked_on", "diocese",
+    "schedule_source", "source_url", "checked_on", "kind", "diocese",
 )
 EVENT_COLUMNS = (
     "id", "church_id", "event_type", "event_kind", "day_of_week", "date", "start_time",
     "end_time", "cancelled", "page_number", "note",
     "weeks_of_month", "season_start_month", "season_start_day", "season_end_month",
     "season_end_day", "cancels_event_id", "exclude_weeks",
-    "valid_from", "valid_until",
+    "valid_from", "valid_until", "access", "open_from", "open_until",
 )
 # The columns version 2 added. A version 1 snapshot's rows read as every
 # week ([]), no season and no cancellation (None) in them.
@@ -136,14 +147,17 @@ _V2_DEFAULTS = frozenset({
 # Columns added since version 1 shipped. A snapshot written before one was
 # added lacks it; readers take it as all nulls.
 ADDED_COLUMNS = {
-    "churches": {"bulletin_week", "schedule_source", "source_url", "checked_on", "diocese"},
-    "events": {"exclude_weeks", "valid_from", "valid_until"},
+    "churches": {"bulletin_week", "schedule_source", "source_url", "checked_on", "kind",
+                 "diocese"},
+    "events": {"exclude_weeks", "valid_from", "valid_until", "access", "open_from",
+               "open_until"},
 }
 # Strings that repeat across rows: a table of distinct values plus small
 # integers is smaller and faster for the browser to parse than the strings.
 _CODED_COLUMNS = {
-    "churches": {"city", "state", "bulletin_week", "schedule_source", "checked_on", "diocese"},
-    "events": {"event_type", "event_kind", "day_of_week", "date", "note"},
+    "churches": {"city", "state", "bulletin_week", "schedule_source", "checked_on", "kind",
+                 "diocese"},
+    "events": {"event_type", "event_kind", "day_of_week", "date", "note", "access"},
 }
 # Event ids mostly go up by one, so their differences compress far better.
 _DELTA_COLUMNS = {"churches": set(), "events": {"id"}}
@@ -229,7 +243,9 @@ def read_snapshot(data: bytes) -> dict[str, list[dict[str, Any]]]:
         stored = document[table]
         rows = len(_decode_column(stored["id"]))
         columns = [
-            [None] * rows
+            ["church"] * rows
+            if table == "churches" and name == "kind" and name not in stored
+            else [None] * rows
             if name not in stored and name in ADDED_COLUMNS[table]
             else [[] if name == "weeks_of_month" else None for _ in range(rows)]
             if version == 1 and table == "events" and name in _V2_DEFAULTS
@@ -290,7 +306,8 @@ def _schedule_events(conn: sqlite3.Connection) -> list[tuple]:
     """
     columns = {row[1] for row in conn.execute('PRAGMA table_info(schedule_entry)')}
     bounds = ', '.join(f'e.{name}' if name in columns else 'NULL'
-                       for name in ('valid_from', 'valid_until'))
+                       for name in ('valid_from', 'valid_until', 'access', 'open_from',
+                                    'open_until'))
     rows = conn.execute(
         f"""
         SELECT e.id, e.church_id, e.event_type, e.event_kind, e.day_of_week, e.date,
@@ -310,12 +327,24 @@ def _schedule_events(conn: sqlite3.Connection) -> list[tuple]:
     ).fetchall()
     return [
         (
-            -row[0], *row[1:11], mask_to_weeks(row[11]), *row[12:16], None,
-            mask_excludes_weeks(row[11]),
-            *row[16:18],
+            -row[0], *row[1:10], public_note(row[10], -row[0]), mask_to_weeks(row[11]),
+            *row[12:16], None, mask_excludes_weeks(row[11]),
+            *row[16:21],
         )
         for row in rows
     ]
+
+
+def public_note(note: str | None, event_id: int) -> str | None:
+    """A note as the site may show it: none at all when it looks like it holds a person's
+    contact or a door code (`model.private_detail`), which no check let through on purpose."""
+    if note is None:
+        return None
+    private = private_detail(note)
+    if private:
+        LOGGER.warning("event %d: note %s; leaving it out of the snapshot", event_id, private)
+        return None
+    return note
 
 
 _ID, _CHURCH, _TYPE, _KIND, _DAY, _DATE, _START = range(7)
@@ -431,7 +460,7 @@ def extract(
                    -- once published.
                    CASE WHEN sourced.parish_id IS NULL THEN latest.source_url END,
                    CASE WHEN sourced.parish_id IS NULL THEN latest.week END,
-                   sourced.schedule_source, sourced.schedule_source_url, sourced.as_of,
+                   sourced.schedule_source, sourced.schedule_source_url, c.kind, sourced.as_of,
                    p.slug
             FROM church c
             LEFT JOIN parish p ON c.parish_id = p.id
@@ -453,7 +482,7 @@ def extract(
         )
         # Only parishes with an approved seed are on the site.
         churches = [
-            (*row[:-2], checked_on(row[-2]), dioceses.get(row[-1]))
+            (*row[:-3], checked_on(row[-2]), row[-3] or "church", dioceses.get(row[-1]))
             for row in churches if row[1] in seeded
         ]
         shown = {row[0] for row in churches}
