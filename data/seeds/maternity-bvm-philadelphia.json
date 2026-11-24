@@ -1,0 +1,1435 @@
+{
+  "schema_version": 1,
+  "parish_slug": "maternity-bvm-philadelphia",
+  "status": "ready",
+  "as_of": "2026-11-15T15:58:18Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-24T00:04:10Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The schedule box is identical in both bulletins read (Nov 8 and Nov 15, 2026): Sat 4:30 PM vigil, five Sunday Masses, weekday Masses, Saturday confession, and Monday/Saturday Adoration in the Lower Chapel (weekend Masses and confessions return to the Upper Church from Nov 21 after roof work). Dated: Thanksgiving Nov 26 9 AM, a K of C Memorial Mass Nov 18, and confessions after the morning Masses on the four Sundays of Advent. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ee114f48c320f5a5f3c1ada9d98e0c5c15932b29370e7f6f8a699c50b4138563",
+      "fetched_at": "2026-11-15T15:58:18Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "0c2428b2b074e1911911514ab0f4333a514ed9aedb8e8ae4f41525697ca15864",
+      "fetched_at": "2026-11-08T15:27:22Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Saturday Vigil Mass: (Lower Chapel) 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Saturday Vigil Mass: (Lower Chapel) 4:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; p2 intentions list 4:30 PM each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Sunday Masses: (Lower Chapel) 8:00 AM, 9:30 AM, 11:00 AM, 12:30 PM & 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Sunday Masses: (Lower Chapel) 8:00 AM, 9:30 AM, 11:00 AM, 12:30 PM & 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the p2 intentions. The Nov 22 9:30 AM New Ministers Installation Mass is this regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Sunday Masses: (Lower Chapel) 8:00 AM, 9:30 AM, 11:00 AM, 12:30 PM & 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Sunday Masses: (Lower Chapel) 8:00 AM, 9:30 AM, 11:00 AM, 12:30 PM & 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the p2 intentions. The Nov 22 9:30 AM New Ministers Installation Mass is this regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Sunday Masses: (Lower Chapel) 8:00 AM, 9:30 AM, 11:00 AM, 12:30 PM & 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Sunday Masses: (Lower Chapel) 8:00 AM, 9:30 AM, 11:00 AM, 12:30 PM & 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the p2 intentions. The Nov 22 9:30 AM New Ministers Installation Mass is this regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Sunday Masses: (Lower Chapel) 8:00 AM, 9:30 AM, 11:00 AM, 12:30 PM & 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Sunday Masses: (Lower Chapel) 8:00 AM, 9:30 AM, 11:00 AM, 12:30 PM & 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the p2 intentions. The Nov 22 9:30 AM New Ministers Installation Mass is this regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Sunday Masses: (Lower Chapel) 8:00 AM, 9:30 AM, 11:00 AM, 12:30 PM & 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Sunday Masses: (Lower Chapel) 8:00 AM, 9:30 AM, 11:00 AM, 12:30 PM & 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the p2 intentions. The Nov 22 9:30 AM New Ministers Installation Mass is this regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Weekday Masses: (Lower Chapel) Mon-Thurs: 6:30 AM, 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Weekday Masses: (Lower Chapel) Mon-Thurs: 6:30 AM, 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the p2 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Weekday Masses: (Lower Chapel) Mon-Thurs: 6:30 AM, 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Weekday Masses: (Lower Chapel) Mon-Thurs: 6:30 AM, 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the p2 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Weekday Masses: (Lower Chapel) Mon-Thurs: 6:30 AM, 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Weekday Masses: (Lower Chapel) Mon-Thurs: 6:30 AM, 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the p2 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Weekday Masses: (Lower Chapel) Mon-Thurs: 6:30 AM, 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Weekday Masses: (Lower Chapel) Mon-Thurs: 6:30 AM, 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the p2 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Weekday Masses: (Lower Chapel) Mon-Thurs: 6:30 AM, 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Weekday Masses: (Lower Chapel) Mon-Thurs: 6:30 AM, 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the p2 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Weekday Masses: (Lower Chapel) Mon-Thurs: 6:30 AM, 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Weekday Masses: (Lower Chapel) Mon-Thurs: 6:30 AM, 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the p2 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Weekday Masses: (Lower Chapel) Mon-Thurs: 6:30 AM, 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Weekday Masses: (Lower Chapel) Mon-Thurs: 6:30 AM, 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the p2 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Weekday Masses: (Lower Chapel) Mon-Thurs: 6:30 AM, 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Weekday Masses: (Lower Chapel) Mon-Thurs: 6:30 AM, 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the p2 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Friday: 6:30 AM, 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Friday: 6:30 AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the p2 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Friday: 6:30 AM, 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Friday: 6:30 AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the p2 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Sat: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Sat: 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the p2 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Confession: (Lower Chapel) Sat: 3:00 PM-4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Confession: (Lower Chapel) Sat: 3:00 PM-4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 4,
+          "said": "3:00-4:00 PM: Confessions, Lower Chapel"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins and the calendar. No location note: from November 21 weekend Masses and confessions return to the Upper Church (newest p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Chapel; Benediction after the 6:30 PM Rosary"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: (Lower Chapel) Mon: 8:30 AM - 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: (Lower Chapel) Mon: 8:30 AM - 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 4,
+          "said": "8:30 AM: Adoration with Benediction after 6:30 PM Rosary, Lower Chapel"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins gives the clock times; the calendar adds Benediction after the Rosary (POLICY, Adoration: one event with the note).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Chapel; Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 1,
+          "said": "Sat: 8:30 AM - 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 1,
+          "said": "Sat: 8:30 AM - 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 4,
+          "said": "8:30 AM: Adoration until 4 PM Benediction, Lower Chapel"
+        }
+      ],
+      "rationale": "R1: schedule box and calendar of both bulletins; ends with Benediction at 4 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-16",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Chapel; Benediction at 4:00 PM after the 3:30 PM Rosary"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 4,
+          "said": "8:30 AM: Adoration with Benediction after 3:30 PM Rosary, Lower Chapel (see p. 3)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 3,
+          "said": "Benediction will be at 4:00 PM instead of 7:00 PM, with the Rosary at 3:30 PM"
+        }
+      ],
+      "rationale": "R40, R17: a one-date change on Nov 16 (after as_of): Benediction and the Rosary move earlier, so that day's Adoration ends early. Adoration itself is not cancelled and starts at the usual 8:30 AM; the file cannot hold a dated entry at the weekly slot's day and time, and no end time is printed for the shortened exposition, so the weekly Monday slot stands unchanged and this one-date variation is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day; Upper Church"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 4,
+          "said": "Thanksgiving Mass Time NOVEMBER 26, 2026 (Thursday) at 9 AM Upper Church"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass after as_of. R17: the weekday Thursday slots are left alone since no cancellation is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 4,
+          "said": "Thanksgiving Mass Time NOVEMBER 24, 2026 at 9am"
+        }
+      ],
+      "rationale": "R40: the older bulletin's date was a misprint; the newest corrects it to November 26, 2026 (Thursday) at 9 AM, recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Knights of Columbus Memorial Mass, Lower Chapel"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 4,
+          "said": "7:00 PM: Knights of Columbus Memorial Mass, Lower Chapel"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass in the parish calendar at the church, after as_of. POLICY, What to extract: not limited to a group by the bulletin and not a memorial for one person, so it is open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Nursing-home Mass (Oakwood / Chapel Manor)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 4,
+          "said": "2:00 PM: Oakwood Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 4,
+          "said": "2:00 PM: Chapel Manor Mass"
+        }
+      ],
+      "rationale": "R22: Wednesday 2 PM Masses at nursing homes (Oakwood, Chapel Manor), not at the parish church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-29",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting November 29"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting Nov 29"
+        }
+      ],
+      "rationale": "R10, R16: dated Advent Sundays printed (NOV 29, DEC 06, DEC 13, DEC 20); morning Masses are 8:00, 9:30 and 11:00 AM; after a weekend Mass is one hour after it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-29",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting November 29"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting Nov 29"
+        }
+      ],
+      "rationale": "R10, R16: dated Advent Sundays printed (NOV 29, DEC 06, DEC 13, DEC 20); morning Masses are 8:00, 9:30 and 11:00 AM; after a weekend Mass is one hour after it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-29",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 11:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting November 29"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting Nov 29"
+        }
+      ],
+      "rationale": "R10, R16: dated Advent Sundays printed (NOV 29, DEC 06, DEC 13, DEC 20); morning Masses are 8:00, 9:30 and 11:00 AM; after a weekend Mass is one hour after it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-06",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting November 29"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting Nov 29"
+        }
+      ],
+      "rationale": "R10, R16: dated Advent Sundays printed (NOV 29, DEC 06, DEC 13, DEC 20); morning Masses are 8:00, 9:30 and 11:00 AM; after a weekend Mass is one hour after it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-06",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting November 29"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting Nov 29"
+        }
+      ],
+      "rationale": "R10, R16: dated Advent Sundays printed (NOV 29, DEC 06, DEC 13, DEC 20); morning Masses are 8:00, 9:30 and 11:00 AM; after a weekend Mass is one hour after it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-06",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 11:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting November 29"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting Nov 29"
+        }
+      ],
+      "rationale": "R10, R16: dated Advent Sundays printed (NOV 29, DEC 06, DEC 13, DEC 20); morning Masses are 8:00, 9:30 and 11:00 AM; after a weekend Mass is one hour after it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-13",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting November 29"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting Nov 29"
+        }
+      ],
+      "rationale": "R10, R16: dated Advent Sundays printed (NOV 29, DEC 06, DEC 13, DEC 20); morning Masses are 8:00, 9:30 and 11:00 AM; after a weekend Mass is one hour after it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-13",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting November 29"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting Nov 29"
+        }
+      ],
+      "rationale": "R10, R16: dated Advent Sundays printed (NOV 29, DEC 06, DEC 13, DEC 20); morning Masses are 8:00, 9:30 and 11:00 AM; after a weekend Mass is one hour after it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-13",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 11:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting November 29"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting Nov 29"
+        }
+      ],
+      "rationale": "R10, R16: dated Advent Sundays printed (NOV 29, DEC 06, DEC 13, DEC 20); morning Masses are 8:00, 9:30 and 11:00 AM; after a weekend Mass is one hour after it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-20",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting November 29"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting Nov 29"
+        }
+      ],
+      "rationale": "R10, R16: dated Advent Sundays printed (NOV 29, DEC 06, DEC 13, DEC 20); morning Masses are 8:00, 9:30 and 11:00 AM; after a weekend Mass is one hour after it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-20",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting November 29"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting Nov 29"
+        }
+      ],
+      "rationale": "R10, R16: dated Advent Sundays printed (NOV 29, DEC 06, DEC 13, DEC 20); morning Masses are 8:00, 9:30 and 11:00 AM; after a weekend Mass is one hour after it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maternity-bvm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-20",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 11:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee114f48",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting November 29"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c2428b2",
+          "page": 3,
+          "said": "There will be Confessions after all morning masses on the Sundays of Advent starting Nov 29"
+        }
+      ],
+      "rationale": "R10, R16: dated Advent Sundays printed (NOV 29, DEC 06, DEC 13, DEC 20); morning Masses are 8:00, 9:30 and 11:00 AM; after a weekend Mass is one hour after it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
