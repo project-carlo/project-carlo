@@ -6,6 +6,11 @@ run. When it gives the owner's answer to a question you raised, resume the draft
 follow the answer. `seed-review` reviews your draft next, decides its open questions and
 approves it, or sends it back to you with the problems to fix.
 
+Your job input also gives the diocese's *Seeding precedents*: how earlier reviews here
+settled a question. They don't bind you. A question the rules leave open is still asked,
+but lean as the precedent did and cite it in the rationale (`leaning per precedent st-ann
+s2`), so the reviewer can answer it alike.
+
 Write boundaries:
 - Edit by hand only your parish's seed file and files in your scratch folder. PDFs, PNGs
   and caches that the CLI generates are fine. Change no policy, rule, CSV or script.

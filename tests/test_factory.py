@@ -1300,6 +1300,12 @@ def test_seed_run_reviews_approves_and_records_decisions(env: Env) -> None:
     precedents = playbook.bullets(wt / "data" / "dioceses" / D / "diocese.md",
                                   playbook.PRECEDENTS)
     assert len(precedents) == 2 and "Leave out" in precedents[0]
+    # A drafter is shown the precedents earlier reviews in the diocese set.
+    clare, ann_first = (env.ledger.all("SELECT prompt FROM attempt WHERE job_id = ? ORDER BY n",
+                                       j["id"])[0]["prompt"]
+                        for j in env.ledger.jobs(run["id"], "seed"))
+    assert "*Seeding precedents*):\n(none yet)" in clare
+    assert precedents[0].removeprefix("- ") in ann_first
     # Seed lessons stay in the ledger, out of diocese.md.
     assert not playbook.bullets(wt / "data" / "dioceses" / D / "diocese.md",
                                 playbook.NEW_LESSONS)

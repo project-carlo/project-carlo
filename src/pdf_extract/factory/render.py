@@ -224,6 +224,9 @@ Parked parishes (an issue waits for the owner; leave their records alone):
 ## Your job: seed `{inputs['parish']}`
 
 Draft `data/seeds/{inputs['parish']}.json`.
+
+This diocese's seeding precedents (`diocese.md`, *Seeding precedents*):
+{_precedents(Path(run['worktree']), run['diocese']) or '(none yet)'}
 """
     if stage == "seed-review":
         return _seed_review_input(ledger, run, inputs, values)
@@ -362,11 +365,16 @@ when you need one.
 {_playbook(worktree, diocese)}"""
 
 
+def _precedents(worktree: Path, diocese: str) -> str:
+    """`diocese.md`'s *Seeding precedents*: how this diocese's reviews settled questions."""
+    meta = diocese_dir(worktree, diocese) / "diocese.md"
+    return playbook.section(meta, playbook.PRECEDENTS) if meta.exists() else ""
+
+
 def _seed_review_input(ledger: Ledger, run: Any, inputs: dict[str, Any],
                        values: dict[str, str]) -> str:
     worktree, diocese, run_id = Path(run["worktree"]), run["diocese"], run["id"]
-    meta = diocese_dir(worktree, diocese) / "diocese.md"
-    precedents = playbook.section(meta, playbook.PRECEDENTS) if meta.exists() else ""
+    precedents = _precedents(worktree, diocese)
     redrafted = []
     for parish in inputs.get("redrafted") or []:
         row = ledger.one("SELECT v.problems FROM verdict v JOIN job j ON j.id = v.job_id "

@@ -66,7 +66,8 @@ seed Run  seed × each parish, a batch at a time ─▶ seed-review of a chunk �
   questions together (`pnpm seed status`'s count; a ready seed adds none but is still
   reviewed); one of them is a redraft after a send-back; or nothing is left to draft.
   A review's fixed cost buys few answers from one small batch, and a whole diocese is
-  too many questions for one session. A parish is ready once the database has
+  too many questions for one session. Each drafter's input carries the diocese's
+  *Seeding precedents* so far, to lean on and cite. A parish is ready once the database has
   `seed_ready_bulletins` of its bulletins (counted daily after `pnpm data:pull`);
   `no_bulletin` and `unsupported` parishes and any with a `fetch_gap` aren't counted. The
   first seed Run starts once `seed_first_run_share` of the diocese is ready, or
