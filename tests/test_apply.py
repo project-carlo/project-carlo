@@ -98,6 +98,24 @@ class TestApplyDetectResults:
         assert rows[0]["name"] == "Parish A"
         assert rows[0]["website"] == "https://a.org"
 
+    def test_keeps_a_column_it_does_not_know(
+        self, parishes_csv: Path, detect_json: Path,
+    ) -> None:
+        parishes_csv.write_text(
+            "slug,name,website,diocese,future\n"
+            "parish-a,Parish A,https://a.org,rochester,kept\n",
+            encoding="utf-8",
+        )
+        detect_json.write_text(json.dumps({
+            "parish-a": {"bulletin_provider": "ecatholic", "provider_id": None},
+        }), encoding="utf-8")
+
+        apply_detect_results()
+        [row] = _read_csv(parishes_csv)
+        assert row["diocese"] == "rochester"
+        assert row["future"] == "kept"
+        assert row["bulletin_provider"] == "ecatholic"
+
 
 @pytest.fixture()
 def geocode_churches_csv(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:

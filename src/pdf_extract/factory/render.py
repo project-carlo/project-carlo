@@ -27,6 +27,7 @@ from pdf_extract.factory.ledger import LISTED, MAP, Ledger
 from pdf_extract.factory.plan import describe_entry, diocese_dir, ordered_batches
 from pdf_extract.factory.spec import StageSpec, fill
 from pdf_extract.factory.workers import strip_frontmatter
+from pdf_extract.seeding.second_opinion import explain
 
 SKILLS_DIR = Path(".claude") / "skills"
 
@@ -399,6 +400,49 @@ def job_input(ledger: Ledger, run: Any, job: Any, spec: StageSpec,
 def send_back_prompt(problems: list[str], handoff: str) -> str:
     return ("The dispatcher sent your work back. Fix these problems, then write your handoff "
             f"again at `{handoff}`:\n\n" + _lines(problems))
+
+
+def opinion_prompt(parish: str, sec: dict[str, Any], differences: list[dict[str, Any]],
+                   stats: dict[str, Any] | None, handoff: str) -> str:
+    """A seed's differences from the second opinion, after its gates passed: its own
+    attempt, not a send-back (docs/seed-second-opinion-plan.md)."""
+    model = sec.get("model") or "The second reader"
+    read = "; ".join(f"{b.get('label')} = {str(b.get('content_hash'))[:8]} (issue "
+                     f"{b.get('published_date') or 'undated'})" for b in sec.get("bulletins") or [])
+    agree = (f" {stats['agree']} of its {stats['entries']} entries agree with your slots."
+             if stats else "")
+    items = "\n\n".join("\n".join(explain(sec, d)) for d in differences)
+    return f"""\
+Your draft of `{parish}` passed its gates. Before it goes to review, the dispatcher
+compared it with a second opinion: {model} read the parish's newest bulletins on its own
+({read}) and wrote down the schedule they show. It saw no draft, history, website or
+precedents. Its reading is now in your seed file as `second_opinion`.{agree}
+These {len(differences)} differences need your answer (pages are of each bulletin's own
+PDF, as `seed pdf` writes it):
+
+{items}
+
+For each one, re-read the page it quotes and your own source for the slot, then do one:
+
+- **Change** the seed (`seed slot edit`, `slot include`, `slot exclude`, `slot rm`) when the
+  bulletin shows your slot is wrong. The difference is then gone; nothing more to record.
+- **Ask**: make it a `needs_human` question (`seed slot edit <id> --ask "..." --option ...`)
+  with {model}'s reading as one option, when the bulletins leave it open (R27-R32).
+- **Keep** the draft as it is (the slot, or its absence) when the page supports it:
+  `pnpm seed opinion keep {parish} <id> --src "HASH pN: the words there" --why "R...: why
+  it stands"`. The source is a bulletin page, and `seed-review` checks every kept
+  difference against it.
+
+{model} is a second reader, not an authority. It has no history, website or precedents, so
+it is often wrong exactly where rules.md settles things: a time from the website (R6), a
+chapel the church list lacks (R23), a pattern the file can't express (R33). Those are
+quick keeps, citing the rule. Two mistakes to avoid: changing a slot only because it
+disagrees, and keeping one without re-reading the page. Either way, what the bulletin
+prints decides.
+
+`pnpm seed opinion show {parish}` lists the differences and where each stands. Don't edit
+`second_opinion` yourself; `seed opinion keep` writes its resolutions. Then run `pnpm seed
+finalize {parish}` until it says OK, and write your handoff again at `{handoff}`."""
 
 
 def continue_prompt(handoff: str) -> str:

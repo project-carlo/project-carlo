@@ -183,7 +183,7 @@ def test_stage_secrets_never_pass_publishing_or_login_keys() -> None:
             check_patterns(bad, "spec")
     check_patterns(["R2_*", "GEMINI_API_KEY", "OPENAI_API_KEY"], "spec")
     seed = load_stage("seed", ROOT)
-    assert seed.secrets == ["R2_*", "GEMINI_API_KEY", "OPENAI_API_KEY"]
+    assert seed.secrets == ["R2_*"]  # no model keys: the dispatcher asks for the opinion
     assert seed.gate_secrets == ["R2_*"]
     for stage in ("survey", "survey-review", "map", "reconcile", "integrate"):
         assert load_stage(stage, ROOT).secrets == []

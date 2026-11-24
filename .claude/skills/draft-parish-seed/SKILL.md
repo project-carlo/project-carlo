@@ -70,10 +70,9 @@ puts there for quotes read from a picture). Then steps 7 and 8 as for any parish
    a day. Under R6 a real, current parish schedule that fits the bulletin may supply a
    missing time. Quote it and record why it appears current and fits the newest read
    bulletin using `--website-current` and `--website-context`. Keep its slot page null.
-6. **Model calls (R4).** `seed ask <parish> <hash> --model gemini-3-flash-preview "Page 2:
-   when are Saturday confessions at St. Mary's?"` asks one question. `seed extract
-   <parish> <hash> --model gpt-6.1-sol` runs a full extraction. Both are cached and
-   recorded in the file's `calls`. Run them one at a time; each parish gets 4 paid calls.
+6. **No model calls.** Decide from your own reading of the bulletins, history and the
+   website. The one model call a seed gets is the dispatcher's second opinion, after
+   you finish (step 9, R4).
 7. **Decide each slot** by [rules.md](rules.md). Apply active rules and POLICY exceptions
    first, cite the rule in the rationale, then ask about what remains unclear. Do not
    offer a false weekly pattern when the format cannot express the real one (R33).
@@ -92,3 +91,13 @@ puts there for quotes read from a picture). Then steps 7 and 8 as for any parish
    every `!` warning (R9). `seed diff <parish>` lists those warnings, history events that
    read a slot at another time (R8), and included slots that history never had. If a
    problem can't be resolved, block the parish (R34).
+9. **The second opinion (R4).** In the factory, once your draft passes its gates, the
+   dispatcher compares it with gpt-6-luna's blind reading of the newest bulletins and
+   writes that reading into the file as `second_opinion`. If they differ, it sends you
+   the differences, with luna's quotes and pages, in the same session. `seed opinion show
+   <parish>` lists them and where each stands. For each, re-read the page it quotes, then
+   change the slot (`slot edit`...; the difference goes away), ask (a question with
+   luna's reading as an option), or keep the draft: `seed opinion keep <parish> d3 --src
+   "1ab3e7c2 p2: Sat 4:00 PM Vigil" --why "R1: printed in the schedule box of all three
+   issues"`. Then finalize again; `seed check` fails while any difference is open, or if
+   `second_opinion` was edited. A parish you block still answers it.

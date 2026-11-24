@@ -59,7 +59,8 @@ type AddedChurchColumns =
   | "schedule_source"
   | "source_url"
   | "checked_on"
-  | "kind";
+  | "kind"
+  | "diocese";
 
 /** Older snapshots have no exclusions, absolute date bounds or chapels. */
 type AddedEventColumns =
@@ -230,6 +231,7 @@ export function parseSnapshot(json: string): Snapshot {
   > &
     Partial<Columns<Pick<ChurchDetail, AddedChurchColumns>>>;
   const kinds = c.kind;
+  const dioceses = c.diocese;
   const churches: ChurchBase[] = c.id.map((id, row) => ({
     id,
     parish_id: c.parish_id[row],
@@ -243,6 +245,7 @@ export function parseSnapshot(json: string): Snapshot {
     postal_code: c.postal_code[row],
     latitude: c.latitude[row],
     longitude: c.longitude[row],
+    diocese: dioceses?.[row] ?? null,
   }));
   const rowBySlug = new Map(c.slug.map((slug, row) => [slug, row]));
   const {

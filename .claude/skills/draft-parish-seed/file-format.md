@@ -5,9 +5,12 @@
 `seed start` creates the complete top-level object. Keep its `schema_version`,
 `parish_slug`, `drafted_by`, `drafted_at`, `bulletins` and `calls`, and add your `summary`
 (two or three sentences a reviewer reads first) and `slots` with the write commands
-("Writing slots", below). `calls` is the audit trail and
-the paid-call counter. Each entry of `bulletins` has `read`, which `seed mark-read` and
-`finalize` set. `as_of` is the newest read bulletin's fetch time, and `finalize` sets it.
+("Writing slots", below). `calls` is the audit trail of model
+calls: the dispatcher's second opinion (`kind: "opinion"`), or in older files the `ask` and
+`extract` calls drafters used to make. Each entry of `bulletins` has `read`, which `seed
+mark-read` and `finalize` set. `as_of` is the newest read bulletin's fetch time, and
+`finalize` sets it. `second_opinion` (below) is the dispatcher's, written after your
+gates pass.
 
 ## Parish status
 
@@ -148,6 +151,62 @@ one, a dated cancellation, and an open question, each rationale citing its rule:
 - `reviewer`, `approved_at` and every `answer` are the reviewer's: null in a new draft,
   and left as they are in a repair.
 
+## The second opinion
+
+The dispatcher writes `second_opinion` (top level) once your draft passes its gates: a
+blind reading of the newest bulletins by another model, and how it differs from your
+slots (rules.md R4). Only `seed opinion keep` changes it, and only a difference's
+`resolution`; `seed check` fails if `entries` change.
+
+```json
+"second_opinion": {
+  "model": "gpt-6-luna", "version": "gpt-6-luna+seed-opinion-a926f746480c+{...}",
+  "call": "c1", "request_key": "3f0c…", "today": "2026-11-13",
+  "revealed_at": "2026-11-14T15:02:11Z", "cost_usd": 0.0029,
+  "bulletins": [{"label": "B1", "content_hash": "9f2c41d0…", "fetched_at": "…",
+                 "published_date": "2026-11-15"}, {"label": "B2", "…": "…"}],
+  "reads": [{"bulletin": "B1", "published_date": "2026-11-15", "wrong_bulletin": false}],
+  "church_list_needs_review": false,
+  "entries": [{"id": "o1", "entry": {"church_slug": "st-marys-oswego", "event_type": "mass",
+                                     "day_of_week": "Saturday", "start_time": "16:00", "…": "…"},
+               "evidence": [{"bulletin": "B1", "page": 2, "quote": "Sat 4:00 PM Vigil"}],
+               "problems": []}],
+  "entries_sha256": "…",
+  "differences": [
+    {"id": "d1", "kind": "differs", "fields": ["start time"], "opinion": ["o5", "o6"],
+     "slots": ["s4", "s5"], "opinion_said": "mass Mon,Tue 08:30 @st-marys-oswego",
+     "seed_said": "mass Mon,Tue 08:00 @st-marys-oswego",
+     "resolution": {"how": "kept", "src": [{"source": "agent", "bulletin": "9f2c41d0",
+                    "page": 2, "said": "Daily Mass Mon-Fri 8:00 AM"}],
+                    "why": "R1: the schedule box of all three issues prints 8:00.",
+                    "at": "2026-11-14T15:20:40Z"}}
+  ]
+}
+```
+
+- `call` names its entry in `calls` (`kind: "opinion"`). Slots it agrees with get a source
+  citing that call, `"gpt-6-luna read the same: B1 p2 “Sat 4:00 PM Vigil”"`; the
+  dispatcher makes these again on every comparison.
+- `bulletins` are what it read, B1 newest; `today` is B1's fetch date. Its `evidence`
+  pages count from 1 in each bulletin's own PDF, as `seed pdf` writes it.
+- A difference's `kind`: `missing` (it has an entry no slot or option covers), `extra`
+  (a settled inclusion it lacks), `differs` (same church, type and day; another start,
+  end, weeks or season: `fields` says which), `excluded` (a slot left out that it has),
+  `question` (it matches an option of a question other than the leaning). Days that
+  differ alike are one difference. Notes aren't compared.
+- The comparison runs again on every check, `finalize` and `seed opinion keep`. A
+  difference keeps its id while both sides' readings stay the same.
+- `resolution` is null while it needs your answer, then:
+  - `{"how": "changed"}`: the seed no longer has it (a kept one whose slot then changed
+    becomes this too, and a new difference may open);
+  - `{"how": "asked"}`: a `needs_human` question has its reading as an option;
+  - `{"how": "kept", "src", "why", "at"}`: `seed opinion keep <parish> <id> --src "HASH pN:
+    said" --why "R…: …"`, the source a bulletin page, the reason citing a rule or POLICY;
+  - `{"how": "answered"}`: a reviewer answered its slot's question;
+  - `{"how": "auto", "reason"}`: it couldn't see what settled it: `website` (an R6
+    website-backed slot), `policy-exclusion` (a settled exclusion citing R22–R26),
+    `unseen-bulletins` (a slot resting only on bulletins it wasn't given).
+
 ## Writing slots
 
 Write slots with `pnpm seed slot ...`, never by editing the JSON or with a script. Each
@@ -224,7 +283,7 @@ them all. Then:
   ...` (a question settled by `--include` takes its leaning option's entry), `--page`,
   `--src` (adds), `--drop-src N`, `--why`, `--group`.
 - `seed slot rm <parish> s3` removes a slot you added. A slot a reviewer answered keeps
-  its decision, and a call's evidence stays.
+  its decision, and an old `ask` or `extract` call's evidence stays.
 - `seed summary`, `seed church-issue <parish> "church" "HEAD: said"` (`--rm` takes one
   off) and `seed block <parish> "reason"` (`--clear` undoes it) set the file's fields.
 

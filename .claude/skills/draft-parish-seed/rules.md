@@ -49,11 +49,20 @@ questions` lists answered questions, their leanings and what they cite.
   or the newest bulletin looks like an old issue or another parish's.
 - Do: read the older bulletins on that point and cite each in an `agent` source.
 
-**R4. Model calls are a last resort.**
-- When: your reading and history still leave doubt.
-- Do: ask a targeted question (`seed ask`). Use a full extraction (`seed extract`) only for
-  a bulletin you can't make sense of. Cite the call by its id. A clear parish needs no
-  call.
+**R4. The second opinion: answer each difference from the bulletin.**
+- When: your draft passed its checks and the dispatcher's second opinion differs from it.
+  A model of another family (gpt-6-luna) read the newest few bulletins with POLICY, on its
+  own: without your draft, history, the website or precedents. Model calls are the
+  dispatcher's; you make none.
+- Do: re-read the page the difference quotes, and your own source, then change the slot,
+  ask (a `needs_human` question with its reading as an option, when R28–R32 apply), or
+  keep the draft with `seed opinion keep`, citing the bulletin page that supports it and
+  the rule. It is a second reader, not an authority: it is often wrong where these rules
+  settle a case (R6 website times, R12 and R19 older evidence, R23 unlisted chapels, R33
+  patterns the file can't express), and those are quick keeps. Never change a slot only
+  because it disagrees, and never keep one without re-reading the page. Don't edit
+  `second_opinion`: only `seed opinion keep` writes there, and the dispatcher's sources
+  on slots it agrees with ("gpt-6-luna read the same") are its own.
 
 **R5. The website: when to look.**
 - When: a slot needs it: the bulletins disagree, or a slot's location or regularity is

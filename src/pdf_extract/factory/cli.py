@@ -251,8 +251,11 @@ def _run(args: argparse.Namespace) -> Result:
         if not ok:
             raise FactoryError(f"pnpm data:pull failed: {out[-500:]}")
 
+    opinions = None
+    if not stub:
+        opinions = _opinions(ledger, config, secrets)
     dispatcher = Dispatcher(
-        ledger, config, repo=_repo(), worker=worker, forge=the_forge,
+        ledger, config, repo=_repo(), worker=worker, forge=the_forge, opinions=opinions,
         runs_dir=STUB_DATA / RUNS_DIR.name if stub else RUNS_DIR,
         pull_data=None if stub else pull,
         backup=None if stub else (lambda: backup_ledger(LEDGER_PATH, config.backup_prefix,
@@ -267,6 +270,23 @@ def _run(args: argparse.Namespace) -> Result:
                 "wait_until": outcome.wait_until.isoformat() if outcome.wait_until else None}
     dispatcher.run_forever()
     return {}
+
+
+def _opinions(ledger: Ledger, config: Any, secrets: dict[str, str]) -> Any:
+    """The seed Runs' second opinions (docs/seed-second-opinion-plan.md): gpt-6-luna with
+    the .env's OpenAI key, reading bulletins from R2 with its read keys. Only the
+    dispatcher makes these calls; seed workers hold no model keys."""
+    from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, remote_from_env, set_store
+    from pdf_extract.classifiers.seed_opinion import SeedOpinionCaller
+    from pdf_extract.factory.opinions import Opinions
+    from pdf_extract.paths import DATA_DIR
+
+    # The dispatcher's own environment has no keys (secrets.py): its blob store reads R2
+    # with the .env's, and never writes there.
+    set_store(CachedBlobStore(LocalBlobStore(DATA_DIR), remote_from_env(pick(secrets, ["R2_*"]))))
+    caller = SeedOpinionCaller(api_key=secrets.get("OPENAI_API_KEY"))
+    return Opinions(ledger, config, db_path=Path("data") / "parish_events.db",
+                    caller=lambda: caller)
 
 
 def _text(r: Result) -> str:

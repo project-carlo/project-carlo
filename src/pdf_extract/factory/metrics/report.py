@@ -105,19 +105,55 @@ def recent(ledger: Ledger, stage: str, last: int,
     for j in rows:
         ids = [a["id"] for a in ledger.all("SELECT id FROM attempt WHERE job_id = ?", j["id"])]
         ms = measures(an, spans, ids)
+        opinion = ledger.one("SELECT stats FROM seed_opinion WHERE job_id = ? ORDER BY id DESC "
+                             "LIMIT 1", j["id"])
         out.append({
             "job": j["id"], "name": f"{j['run_id']}/{j['name']}", "status": j["status"],
             "send_backs": j["send_backs"], "cost_usd": j["cost_usd"], "turns": j["turns"],
-            "finished": j["finished_at"], **{w: combine(ms[w]) for w in WINDOWS}})
-    return {"stage": stage, "jobs": out}
+            "finished": j["finished_at"], **{w: combine(ms[w]) for w in WINDOWS},
+            "opinion": json.loads(opinion["stats"] or "null") if opinion else None})
+    return {"stage": stage, "jobs": out, "opinion": opinion_totals(
+        [j["opinion"] for j in out if j["opinion"]])}
+
+
+OPINION_COUNTS = ("differences", "changed", "asked", "kept", "answered", "unresolved", "auto")
+
+
+def opinion_totals(stats: list[dict[str, Any]]) -> dict[str, Any] | None:
+    """The second opinion over a stage's jobs: its differences, and the share of them the
+    drafters changed, asked about and kept (docs/seed-second-opinion-plan.md), to track
+    whether they defer to it or wave it through."""
+    if not stats:
+        return None
+    totals = {k: sum(s.get(k) or 0 for s in stats) for k in OPINION_COUNTS}
+    n = totals["differences"]
+    return {"jobs": len(stats), **totals,
+            "per_job": round(n / len(stats), 2),
+            **{f"{k}_share": round(totals[k] / n, 2) if n else None
+               for k in ("changed", "asked", "kept")}}
+
+
+def _opinion_text(o: dict[str, Any] | None) -> str:
+    if not o:
+        return ""
+    return f"  opinion {o['differences']}: {o['changed']}ch {o['asked']}ask {o['kept']}kept"
 
 
 def text_recent(r: dict[str, Any]) -> str:
-    return "\n".join(f"{j['job']:5} {j['name']:40} {j['status']:13} {j['send_backs']} sb  "
-                     f"5h {j['five_hour']['label']} {j['five_hour']['text']:8} "
-                     f"week {j['seven_day']['label']} {j['seven_day']['text']:6}  "
-                     f"{j['turns']} turns  ${j['cost_usd']:.2f}"
-                     for j in r["jobs"]) or "No jobs."
+    lines = [f"{j['job']:5} {j['name']:40} {j['status']:13} {j['send_backs']} sb  "
+             f"5h {j['five_hour']['label']} {j['five_hour']['text']:8} "
+             f"week {j['seven_day']['label']} {j['seven_day']['text']:6}  "
+             f"{j['turns']} turns  ${j['cost_usd']:.2f}" + _opinion_text(j.get("opinion"))
+             for j in r["jobs"]]
+    o = r.get("opinion")
+    if o:
+        def share(k: str) -> str:
+            return "-" if o[f"{k}_share"] is None else f"{o[f'{k}_share']:.0%}"
+        lines.append(f"second opinion over {o['jobs']} jobs: {o['differences']} differences "
+                     f"({o['per_job']:g} a job): changed {share('changed')}, asked "
+                     f"{share('asked')}, kept {share('kept')}; {o['unresolved']} still open, "
+                     f"{o['auto']} needed no answer")
+    return "\n".join(lines) or "No jobs."
 
 
 BY = ("stage", "model", "effort", "mode", "account", "plan", "date", "hour")

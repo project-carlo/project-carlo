@@ -116,6 +116,10 @@ data/dioceses/<diocese>/
   rosters/<name>.json   outside lists the diocese is measured against (written by tools)
 ```
 
+`promote` writes each parish's diocese (this folder's name) into the `diocese`
+column of `data/parishes.csv`. The site's embed (docs/embed.md) filters on it,
+so a parish's record has to live in the folder of the diocese it belongs to.
+
 Every record is YAML frontmatter plus a Markdown body. The slug is the file name. Prefer
 `uv run python -m pdf_extract diocese write <d> <kind> <slug> --file record.json` for
 structured updates (example below), rather than scratch `fill_record` scripts or hand-built

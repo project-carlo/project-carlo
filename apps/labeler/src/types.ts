@@ -293,7 +293,8 @@ export interface SeedChurchIssue {
 
 export interface SeedCall {
   id: string;
-  kind: "extract" | "ask";
+  /** `opinion`: the factory's blind second reading; `extract` and `ask`: older files'. */
+  kind: "opinion" | "extract" | "ask";
   model: string;
   bulletin: string;
   cached: boolean;

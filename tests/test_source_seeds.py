@@ -493,7 +493,7 @@ def test_an_approved_source_seed_loads_with_its_page_and_reaches_the_snapshot(en
                for line in render_seeds(result))
 
     dest = env["root"] / "frontend.json.gz"
-    extract(env["db"], dest, keep_previous=False)
+    extract(env["db"], dest, keep_previous=False, parishes_csv=env["root"] / "parishes.csv")
     churches = {c["slug"]: c for c in read_snapshot(dest.read_bytes())["churches"]}
     assert churches[CHURCH]["schedule_source"] == "website"
     assert churches[CHURCH]["source_url"] == PAGE
@@ -512,7 +512,7 @@ def test_an_approved_source_seed_loads_with_its_page_and_reaches_the_snapshot(en
                  "SELECT ?, entry_id, 2 FROM current_schedule WHERE parish_id = ?",
                  (bulletin_id, parish_id))
     conn.commit()
-    extract(env["db"], dest, keep_previous=False)
+    extract(env["db"], dest, keep_previous=False, parishes_csv=env["root"] / "parishes.csv")
     snapshot = read_snapshot(dest.read_bytes())
     churches = {c["slug"]: c for c in snapshot["churches"]}
     assert churches[CHURCH]["schedule_source"] == "website"
@@ -526,7 +526,7 @@ def test_an_approved_source_seed_loads_with_its_page_and_reaches_the_snapshot(en
     conn.execute("UPDATE parish SET bulletin_provider = 'parishes_online' WHERE slug = ?",
                  (PARISH,))
     conn.commit()
-    extract(env["db"], dest, keep_previous=False)
+    extract(env["db"], dest, keep_previous=False, parishes_csv=env["root"] / "parishes.csv")
     churches = {c["slug"]: c for c in read_snapshot(dest.read_bytes())["churches"]}
     assert churches[CHURCH]["schedule_source"] is None
     assert churches[CHURCH]["bulletin_url"] == old

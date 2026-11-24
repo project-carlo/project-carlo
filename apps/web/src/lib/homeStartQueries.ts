@@ -1,18 +1,28 @@
-import type { QueryClient } from "@tanstack/react-query";
+import { queryOptions, type QueryClient } from "@tanstack/react-query";
 import { fetchAllChurchesForSearch } from "../api";
 import { fetchApproximateLocation } from "./approximateLocation";
 import { decodeMapViewFromParams } from "./mapView";
+import { EMBED_PATH, embedDiocese } from "./embed";
 
 /**
  * The two queries the home map waits on before it mounts on a first visit:
  * every church, and the IP-location estimate. HomePage reads them with these
  * same options; main.tsx starts them before the HomePage chunk has loaded.
  */
-export const churchSearchIndexQuery = {
-  queryKey: ["church-search-index"],
-  queryFn: fetchAllChurchesForSearch,
-  staleTime: 5 * 60 * 1000,
-} as const;
+export const churchSearchIndexQuery = churchSearchIndexQueryFor(null);
+
+/**
+ * The search index for one diocese's churches (the embed's `diocese=`), or
+ * for every church when `diocese` is null. The embed waits on it before its
+ * map mounts, to frame those churches or say the diocese isn't covered.
+ */
+export function churchSearchIndexQueryFor(diocese: string | null) {
+  return queryOptions({
+    queryKey: diocese ? ["church-search-index", diocese] : ["church-search-index"],
+    queryFn: () => fetchAllChurchesForSearch(diocese),
+    staleTime: 5 * 60 * 1000,
+  });
+}
 
 export const approximateLocationQuery = {
   queryKey: ["approximate-location"],
@@ -55,6 +65,10 @@ export function prefetchHomeStart(queryClient: QueryClient): void {
   } else if (pathname === "/map") {
     // The old map path redirects to a bare "/", dropping any query or state.
     firstVisit = true;
+  } else if (pathname === EMBED_PATH) {
+    // The embed always waits on its churches, and never on the IP estimate.
+    void queryClient.prefetchQuery(churchSearchIndexQueryFor(embedDiocese(search)));
+    return;
   } else {
     return;
   }
