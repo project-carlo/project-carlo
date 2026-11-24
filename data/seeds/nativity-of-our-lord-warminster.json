@@ -1,0 +1,822 @@
+{
+  "schema_version": 1,
+  "parish_slug": "nativity-of-our-lord-warminster",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:42:00Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-24T00:19:31Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 5 PM, Sun 8/10/12), Mon-Sat 8 AM and Saturday Confession times agree in both bulletins (all-image newest) and on the website; First Friday 9 AM Mass Oct-June is settled. Open: whether the 8 AM Mass runs on first Fridays, and the website-only Tuesday Exposition 8:30 AM-7 PM.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a58aee3a54a817c9b435cdccb4755fe52823c7c508140b6c4452402a417b9f2f",
+      "fetched_at": "2026-11-15T16:42:00Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "01e89df5df6fdce4cb788d4366f495f5417bd950d0268bd6210d5c94e80e230d",
+      "fetched_at": "2026-11-08T15:52:54Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-warminster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "Sundays: 5:00PM Vigil, 8:00AM, 10:00AM & 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "Sundays: 5:00PM Vigil, 8:00AM, 10:00AM & 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 3,
+          "said": "Saturday ~ November 21, 2026 5:00 PM For the People of Our Parish"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-warminster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "Sundays: 5:00PM Vigil, 8:00AM, 10:00AM & 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "Sundays: 5:00PM Vigil, 8:00AM, 10:00AM & 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 3,
+          "said": "Sunday ~ November 15, 2026 8:00 AM ... 10:00 AM ... 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-warminster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "Sundays: 5:00PM Vigil, 8:00AM, 10:00AM & 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "Sundays: 5:00PM Vigil, 8:00AM, 10:00AM & 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 3,
+          "said": "Sunday ~ November 15, 2026 8:00 AM ... 10:00 AM ... 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-warminster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "Sundays: 5:00PM Vigil, 8:00AM, 10:00AM & 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "Sundays: 5:00PM Vigil, 8:00AM, 10:00AM & 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 3,
+          "said": "Sunday ~ November 15, 2026 8:00 AM ... 10:00 AM ... 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-warminster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "Weekdays: 8:00AM (M-S)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "Weekdays: 8:00AM (M-S)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 3,
+          "said": "8:00 AM intention listed Monday through Saturday, November 16-21"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 8:00 AM every day Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-warminster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "Weekdays: 8:00AM (M-S)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "Weekdays: 8:00AM (M-S)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 3,
+          "said": "8:00 AM intention listed Monday through Saturday, November 16-21"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 8:00 AM every day Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-warminster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "Weekdays: 8:00AM (M-S)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "Weekdays: 8:00AM (M-S)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 3,
+          "said": "8:00 AM intention listed Monday through Saturday, November 16-21"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 8:00 AM every day Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-warminster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "Weekdays: 8:00AM (M-S)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "Weekdays: 8:00AM (M-S)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 3,
+          "said": "8:00 AM intention listed Monday through Saturday, November 16-21"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 8:00 AM every day Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-warminster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "Weekdays: 8:00AM (M-S)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "Weekdays: 8:00AM (M-S)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 3,
+          "said": "8:00 AM intention listed Monday through Saturday, November 16-21"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 8:00 AM every day Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-warminster",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturdays: 7:30AM - 7:50AM 3:30PM - 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturdays: 7:30AM - 7:50AM 3:30PM - 4:30PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-warminster",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturdays: 7:30AM - 7:50AM 3:30PM - 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturdays: 7:30AM - 7:50AM 3:30PM - 4:30PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-warminster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 10,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "First Fridays: 9:00AM (October thru June)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "First Fridays: 9:00AM (October thru June)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.noolp.org/parish-information/mass-sacraments/",
+          "said": "First Friday: 9:00 A.M. (October thru June)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read (the newest's week holds no first Friday, but the box names it); POLICY keeps October-June as the season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-warminster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "third",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "Weekdays: 8:00AM (M-S)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "Weekdays: 8:00AM (M-S)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 3,
+          "said": "Friday ~ November 20, 2026 8:00 AM Michael O'Brien"
+        }
+      ],
+      "rationale": "R1: Mon-Sat 8 AM in the schedule box of both bulletins read and in the intentions. Written without first Fridays so the open question on first Fridays (October-June) stands alone; the July-September first Fridays are a separate settled slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-warminster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 7,
+          "start_day": null,
+          "end_month": 9,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "Weekdays: 8:00AM (M-S) / First Fridays: 9:00AM (October thru June)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "Weekdays: 8:00AM (M-S) / First Fridays: 9:00AM (October thru June)"
+        }
+      ],
+      "rationale": "R1: the Mon-Sat 8 AM Mass on first Fridays outside October-June, when there is no 9 AM First Friday Mass that could replace it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "Weekdays: 8:00AM (M-S) / First Fridays: 9:00AM (October thru June)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "Weekdays: 8:00AM (M-S) / First Fridays: 9:00AM (October thru June)"
+        }
+      ],
+      "rationale": "Leaning per C4 (a weeks-of-the-month Mass replacing the weekday one). Box and website list Mon-Sat 8 AM and a First Friday 9 AM Mass October-June without saying whether 8 AM also runs; neither read bulletin covers a first Friday and there is no history.",
+      "question": "Is there also an 8 AM Mass on first Fridays October-June, besides the 9 AM First Friday Mass?",
+      "options": [
+        {
+          "label": "Yes, 8 AM too",
+          "entry": {
+            "church_slug": "nativity-of-our-lord-warminster",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 10,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": null
+          }
+        },
+        {
+          "label": "No, the 9 AM replaces it",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.noolp.org/parish-information/mass-sacraments/",
+          "said": "Devotions Exposition of the Blessed Sacrament: Tuesday 8:30 AM – 7:00 PM With praying of the Litany and then quiet repose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": null,
+          "said": "neither bulletin mentions Adoration or Exposition"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": null,
+          "said": "neither bulletin mentions Adoration or Exposition"
+        }
+      ],
+      "rationale": "R6/R29: the website's Mass and Confession times match both bulletins exactly, and the homepage links Adoration tips, so the page looks maintained; but neither bulletin prints any Adoration, and the same page gives Baptism at 1:15 PM where the bulletin says after the 12:00 Mass, a sign parts of it lag. Leaning include because the page otherwise fits current bulletins.",
+      "question": "Add the website's Tuesday Exposition, 8:30 AM - 7:00 PM?",
+      "options": [
+        {
+          "label": "Tuesdays 8:30 AM - 7:00 PM",
+          "entry": {
+            "church_slug": "nativity-of-our-lord-warminster",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "Holy Days: 5:00PM Vigil, 8:00AM, 10:00AM & 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "Holy Days: 5:00PM Vigil, 8:00AM, 10:00AM & 7:00PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: holy-day Masses are dated, and neither bulletin names a holy day date; update mode will read the issue that announces the next one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 1,
+          "said": "ARCHDIOCESAN SHRINE OF ST. GIANNA BERETTA MOLLA: Shrine Hours ~Veneration of the Unsealed Relics Saturday: 3:30 pm to 5:00 pm and Sunday: 1:00 pm to 2:00 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "01e89df5",
+          "page": 1,
+          "said": "ARCHDIOCESAN SHRINE OF ST. GIANNA BERETTA MOLLA: Shrine Hours ~Veneration of the Unsealed Relics Saturday: 3:30 pm to 5:00 pm and Sunday: 1:00 pm to 2:00 pm."
+        }
+      ],
+      "rationale": "R24: veneration of relics is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a58aee3a",
+          "page": 7,
+          "said": "FiatFest ... DECEMBER 11th, at Archbishop Wood High School, starting at 6:30 pm ... Eucharistic Adoration with celebrant"
+        }
+      ],
+      "rationale": "R22, R24: a youth event at another address, and its Adoration has no time of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
