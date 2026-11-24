@@ -98,6 +98,9 @@ class Config:
     seed_ready_bulletins: int = 2
     seed_first_run_share: float = 0.8
     seed_follow_up_weeks: int = 6
+    # A seed-review once the parishes drafted since the last one hold this many open
+    # questions (plan.py; after the first batch, a redraft or the last batch, sooner).
+    seed_review_questions: int = 20
     # The second opinion on each seed (docs/seed-second-opinion-plan.md): calls at once,
     # how long a seed job waits for one at its reveal before going on without it, and how
     # many of the newest bulletins it reads.

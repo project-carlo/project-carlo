@@ -48,3 +48,6 @@ Before you end, write `scratch/testd-seed-1/001-seed/handoff.json`, about 300 to
 ## Your job: seed `st-ann`
 
 Draft `data/seeds/st-ann.json`.
+
+This diocese's seeding precedents (`diocese.md`, *Seeding precedents*):
+- Is a summer-only Mass weekly? → Leave it out. Seasonal. (st-ann s2; 004-seed-review, 2026-10-01)

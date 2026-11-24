@@ -41,7 +41,9 @@ prompts, the queue and settings are in `factory/`. How quota is measured is in
 map Run   survey ─▶ survey-review ─▶ map × each batch ─▶ reconcile ─▶ promote ─▶ pr ─▶ you merge
                                     integrate when New lessons passes lessons_before_integrate,
                                     and once more before reconcile if any wait
-seed Run  for each batch: seed × each parish ─▶ seed-review ─▶ pr ─▶ you merge
+seed Run  seed × each parish, a batch at a time ─▶ seed-review of a chunk ─▶ … ─▶ pr ─▶ you merge
+          after the first batch, then once the chunk holds seed_review_questions open
+          questions, at once after a redraft, and after the last batch
 ```
 
 - **One job at a time.** When nothing runs, the dispatcher picks the active Run's next
@@ -56,7 +58,16 @@ seed Run  for each batch: seed × each parish ─▶ seed-review ─▶ pr ─�
   reworded, which the PR shows. Fixes across batches are advisory flags for `reconcile`.
 - **Promote and pr are code**: promote runs `factory/stages/promote.yaml`'s commands;
   pr pushes, opens the PR and writes its summary from the ledger.
-- **Seed Runs** use the map Run's batches. A parish is ready once the database has
+- **Seed Runs** use the map Run's batches: a parish's batch is the first one holding one
+  of its churches' roster refs. Parishes are drafted a batch at a time, in plan order.
+  At the end of a batch, `seed-review` takes every parish drafted and not reviewed since
+  its last job (a chunk of one batch or a few in a row) when: the batch is the first (so
+  the diocese has precedents early); the chunk's seeds hold `seed_review_questions` open
+  questions together (`pnpm seed status`'s count; a ready seed adds none but is still
+  reviewed); one of them is a redraft after a send-back; or nothing is left to draft.
+  A review's fixed cost buys few answers from one small batch, and a whole diocese is
+  too many questions for one session. Each drafter's input carries the diocese's
+  *Seeding precedents* so far, to lean on and cite. A parish is ready once the database has
   `seed_ready_bulletins` of its bulletins (counted daily after `pnpm data:pull`);
   `no_bulletin` and `unsupported` parishes and any with a `fetch_gap` aren't counted. The
   first seed Run starts once `seed_first_run_share` of the diocese is ready, or
