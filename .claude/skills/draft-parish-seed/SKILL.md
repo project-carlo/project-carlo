@@ -16,6 +16,16 @@ command, and `--json` gives a command's full output.
 
 Do one parish at a time. Finish and finalize each before starting the next.
 
+**A parish with no bulletin** (`bulletin_provider: website_schedule`) gets a source seed
+instead, and steps 2–6 don't apply. `seed start` says so. Capture each page of the
+parish's own website or Facebook page you rely on with `seed capture <parish> [path or
+address]` (run it under `xvfb-run -a`, like `seed site`); it prints the page's text and
+the paths of its screenshot tiles, which you Read for what only a picture shows. Cite
+captures as `cap <capture>: <its words>` (rules.md R42–R45; file-format.md, "Source
+seeds"), say why the schedule looks current with `seed current <parish> "…"`, and commit
+`data/seeds/captures/<parish>/` with the file (its texts, and the screenshots `finalize`
+puts there for quotes read from a picture). Then steps 7 and 8 as for any parish.
+
 1. **Start.** `pnpm seed start <parish>` creates the draft, or resumes it if it exists, and
    prints the brief: the website, the churches, the bulletins newest first, a summary of
    history, and the newest PDF's path. `seed brief <parish>` prints the brief again. If
@@ -25,17 +35,19 @@ Do one parish at a time. Finish and finalize each before starting the next.
    commands (step 7), not by editing the JSON or writing scripts. `seed slot list <parish>`
    shows the draft's slots and their ids.
 2. **Read the newest bulletin in full** (R2). `seed text <parish> <hash>` is the cheapest
-   read, and it marks each page that is only an image. Render a page that is only an
-   image, or whose layout matters (a schedule box, a table, a calendar, where the text
-   can detach a time from its heading), with `seed pages <parish> <hash> --page N`: 100
-   dpi, which reads ordinary schedule boxes and intentions as well as 150. **Zoom when
-   print is small or you are unsure of any digit** of a time you cite: `seed pages
-   <parish> <hash> --page N --region bottom-right` (halves, quarters, or `x0,y0,x1,y1`
-   fractions from the top left) renders that part sharp, and one zoom can take a whole
-   schedule box. Each render prints its token cost; Read shrinks anything over 2000 px,
-   so a whole page above about 180 dpi buys nothing. `seed pdf <parish> <hash>` writes a
-   bulletin's PDF, with the pipeline's page numbers. Draft its slots, then run `seed
-   mark-read <parish> <hash>`.
+   read, and it marks each page that is only an image. It lacks the print of images on
+   text pages that have no text layer (a schedule can be set as a picture): `seed pages
+   <parish> <hash> --images` packs those into one image, so look at it once. Render a page
+   that is only an image, or whose layout matters (a schedule box, a table, a calendar,
+   where the text can detach a time from its heading), with `seed pages <parish> <hash>
+   --page N`: 100 dpi, which reads ordinary schedule boxes and intentions as well as 150.
+   **Zoom when print is small or you are unsure of any digit** of a time you cite: `seed
+   pages <parish> <hash> --page N --region bottom-right` (halves, quarters, or
+   `x0,y0,x1,y1` fractions from the top left) renders that part sharp, and one zoom can
+   take a whole schedule box. Each render prints its token cost; Read shrinks anything
+   over 2000 px, so a whole page above about 180 dpi buys nothing. `seed pdf <parish>
+   <hash>` writes a bulletin's PDF, with the pipeline's page numbers. Draft its slots,
+   then run `seed mark-read <parish> <hash>`.
 3. **Compare with history.** `seed history <parish> [--bulletins N]` prints one table per
    bulletin, and it is free. Apply R7–R9. Use your own readings across bulletins to
    establish recurrence (R35); one silent issue does not erase a repeated schedule

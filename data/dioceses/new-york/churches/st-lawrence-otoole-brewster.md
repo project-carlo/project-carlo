@@ -11,7 +11,7 @@ longitude: -73.6168125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster: []
+roster: ['gcatholic:16352', 'directory:4710']
 evidence:
 - url: https://stlawrence-sacredheart.org/wp-content/uploads/2026/09/146c_2026_09_27.pdf
   seen: 2026-09-26

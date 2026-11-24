@@ -2,7 +2,7 @@
 name: St. Lawrence O'Toole and Sacred Heart Parishes
 website: https://stlawrence-sacredheart.org
 bulletin_provider: other
-provider_id: ''
+provider_id: dated-post https://stlawrence-sacredheart.org/category/bulletin/
 publication: ['url:https://stlawrence-sacredheart.org/category/bulletin/']
 group: St. Lawrence O'Toole & Sacred Heart
 evidence:
@@ -28,7 +28,33 @@ evidence:
     NY 12563. On 2026-09-26 the newest post was "September 27-Twenty-Sixth Sunday in Ordinary Time", and
     that post embeds the PDF above through the DFlip viewer. The issue title changes every week; the footer
     addresses do not.
+- url: https://stlawrence-sacredheart.org/wp-content/uploads/2026/10/146c_2026_10_25.pdf
+  seen: 2026-10-31
+  quote: October 25, 2026 thirtieth sunday in ordinary time
+  note: Page 1 of the issue fetch:check picked on 2026-10-31 with dated-post; same schedule for St. Lawrence
+    O'Toole (31 Prospect Street) and Sacred Heart (414 Haviland Drive).
+- url: https://stlawrence-sacredheart.org/category/bulletin/
+  seen: 2026-10-31
+  quote: October 25-Thirtieth Sunday in Ordinary Time
+  note: Newest post on the bulletin archive on 2026-10-31; the posts above it are not yet there for November
+    1.
+- url: https://stlawrence-sacredheart.org/wp-content/uploads/2026/11/146c_2026_11_08.pdf
+  seen: 2026-11-08
+  quote: thirty second sunday in ordinary time
+  note: Page 1 of the 8 November 2026 issue, picked by the pinned dated-post recipe on 2026-11-08 (fetch:check,
+    identity 'lawrence' matched, fresh); masthead lists St. Lawrence O'Toole, 31 Prospect Street, Brewster.
 promoted: 2026-09-26
+research:
+- method: PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm fetch:check --diocese new-york --parish st-lawrence-otoole-and-sacred-heart
+  url: https://stlawrence-sacredheart.org/category/bulletin/
+  checked: '2026-10-31'
+  outcome: found
+- method: fetch:check --diocese new-york --parish st-lawrence-otoole-and-sacred-heart with the pinned
+    dated-post recipe
+  url: https://stlawrence-sacredheart.org/category/bulletin/
+  checked: '2026-11-08'
+  outcome: found
+bulletin_status: available
 ---
 
 ## Publisher
@@ -70,7 +96,22 @@ https://stlawrence-sacredheart.org/category/bulletin/, a WordPress archive of on
 week. The current post does not link a PDF directly; it embeds one in a DFlip viewer. `probe url`
 found no ParishesOnline, eCatholic or DiscoverMass id. Fetch treats `other` as "start at the
 homepage and follow the bulletin link", which is this archive, so `bulletin_provider` is `other`
-and `provider_id` is empty. The publication id is the archive page.
+and the publication id is the archive page.
+
+On 2026-10-31 `fetch:check --diocese new-york` (no recipe pinned) resolved this archive with
+`dated-post on https://stlawrence-sacredheart.org/category/bulletin/: first-listed` and
+downloaded https://stlawrence-sacredheart.org/wp-content/uploads/2026/10/146c_2026_10_25.pdf
+(3.9 MB PDF). The newest post on the archive that day was "October 25-Thirtieth Sunday in
+Ordinary Time" (the November 1 issue was not yet posted), and page 1 of the PDF reads "October
+25, 2026 thirtieth sunday in ordinary time" over the same two-church schedule. So the pick was
+this week's issue, and the recipe it printed, `dated-post https://stlawrence-sacredheart.org/category/bulletin/`,
+is now pinned in `provider_id`. This settles the connector question raised on October 8 (then
+the September 27 post was eleven days old, outside dated-post's seven-day window for posts whose
+title doesn't say "bulletin", and the replay found nothing). If the parish posts a week late
+again, the pick can still fail for the same reason; that is a fetch failure to watch for, not
+a wrong issue.
+
+Rechecked 2026-11-08 with the pinned recipe: it picked https://stlawrence-sacredheart.org/wp-content/uploads/2026/11/146c_2026_11_08.pdf (`dated-post ...: current`), the 8 November 2026 issue, whose first page names St. Lawrence O'Toole at 31 Prospect Street.
 
 ## Not yet confirmed
 

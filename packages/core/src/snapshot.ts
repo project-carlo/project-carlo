@@ -39,7 +39,12 @@ type Columns<Row> = { [K in keyof Row]: Row[K][] };
  * ADDED_COLUMNS). A snapshot written before one was added lacks it, and it
  * reads as null: such a snapshot is still served while a deploy is pending.
  */
-type AddedChurchColumns = "bulletin_week" | "diocese";
+type AddedChurchColumns =
+  | "bulletin_week"
+  | "schedule_source"
+  | "source_url"
+  | "checked_on"
+  | "diocese";
 
 /** Older snapshots have no exclusions or absolute date bounds. */
 type AddedEventColumns = "exclude_weeks" | "valid_from" | "valid_until";
@@ -219,6 +224,9 @@ export function parseSnapshot(json: string): Snapshot {
     homepage_url: homepageUrls,
     bulletin_url: bulletinUrls,
     bulletin_week: bulletinWeeks,
+    schedule_source: scheduleSources,
+    source_url: sourceUrls,
+    checked_on: checkedOn,
   } = c;
 
   const e = decodeTable(document.events) as EventColumns;
@@ -240,6 +248,9 @@ export function parseSnapshot(json: string): Snapshot {
         homepage_url: homepageUrls[row],
         bulletin_url: bulletinUrls[row],
         bulletin_week: bulletinWeeks?.[row] ?? null,
+        schedule_source: scheduleSources?.[row] ?? null,
+        source_url: sourceUrls?.[row] ?? null,
+        checked_on: checkedOn?.[row] ?? null,
       };
     },
     eventsOf(churchId) {

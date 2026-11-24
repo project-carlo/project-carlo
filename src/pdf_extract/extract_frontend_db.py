@@ -27,7 +27,14 @@ boolean, times are minutes after midnight, and `date` is an ISO date. A
 church's `bulletin_url` and `bulletin_week` describe its parish's current
 bulletin, the one its events come from: `bulletin_week` is the ISO date of
 the Sunday of the week that bulletin is for (`bulletin_week.bulletin_week`),
-or null when the bulletin has no date at all. A church's `diocese` is its
+or null when the bulletin has no date at all. A `website_schedule` parish has
+no bulletin (docs/source-schedules-plan.md): its churches' `schedule_source`
+(`website` or `facebook`), `source_url` and `checked_on` (the ISO date of its
+latest seed's `as_of` in the parishes' Eastern time zone) say where its times
+were read and when, and it has no `bulletin_url` or `bulletin_week`, whatever
+it once published; the three are null for every other church, which the app
+reads as a bulletin's times.
+`schedule_source` and `checked_on` are coded. A church's `diocese` is its
 parish's in data/parishes.csv (the folder under data/dioceses/ the parish's
 record is in), or for a parish no longer in the CSV the folder its record is
 still in, or else null. It is read from the files, not the database: a
@@ -77,13 +84,14 @@ import logging
 import sqlite3
 import zlib
 from collections.abc import Sequence
-from datetime import date
+from datetime import UTC, date, datetime
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo
 
 from pdf_extract import storage
 from pdf_extract.bulletin_week import parse_iso_date, week_order_sql
-from pdf_extract.model import DAYS
+from pdf_extract.model import DAYS, WEBSITE_SCHEDULE
 from pdf_extract.schedule.qualifiers import (
     mask_excludes_weeks,
     mask_to_weeks,
@@ -110,7 +118,7 @@ READABLE_VERSIONS = (1, 2, 3)
 CHURCH_COLUMNS = (
     "id", "parish_id", "slug", "name", "address_line1", "address_line2", "city", "state",
     "postal_code", "latitude", "longitude", "homepage_url", "bulletin_url", "bulletin_week",
-    "diocese",
+    "schedule_source", "source_url", "checked_on", "diocese",
 )
 EVENT_COLUMNS = (
     "id", "church_id", "event_type", "event_kind", "day_of_week", "date", "start_time",
@@ -128,12 +136,13 @@ _V2_DEFAULTS = frozenset({
 # Columns added since version 1 shipped. A snapshot written before one was
 # added lacks it; readers take it as all nulls.
 ADDED_COLUMNS = {
-    "churches": {"bulletin_week", "diocese"}, "events": {"exclude_weeks", "valid_from", "valid_until"},
+    "churches": {"bulletin_week", "schedule_source", "source_url", "checked_on", "diocese"},
+    "events": {"exclude_weeks", "valid_from", "valid_until"},
 }
 # Strings that repeat across rows: a table of distinct values plus small
 # integers is smaller and faster for the browser to parse than the strings.
 _CODED_COLUMNS = {
-    "churches": {"city", "state", "bulletin_week", "diocese"},
+    "churches": {"city", "state", "bulletin_week", "schedule_source", "checked_on", "diocese"},
     "events": {"event_type", "event_kind", "day_of_week", "date", "note"},
 }
 # Event ids mostly go up by one, so their differences compress far better.
@@ -231,6 +240,39 @@ def read_snapshot(data: bytes) -> dict[str, list[dict[str, Any]]]:
     return tables
 
 
+# Each parish's latest seed revision, when it was loaded from a source seed. A later
+# bulletin seed (the parish found a bulletin) hides it, as does a provider that isn't
+# `website_schedule` (the joins in `extract` and `_SOURCED_PARISHES`).
+_LATEST_SOURCE_SEED = """
+    SELECT * FROM (
+        SELECT parish_id, schedule_source, schedule_source_url, as_of,
+               ROW_NUMBER() OVER (PARTITION BY parish_id ORDER BY revision DESC) AS rn
+        FROM schedule_revision WHERE source_kind = 'seed'
+    ) WHERE schedule_source IS NOT NULL
+"""
+# The parishes shown with a source: their churches have no current bulletin.
+_SOURCED_PARISHES = f"""
+    SELECT sourced.parish_id FROM ({_LATEST_SOURCE_SEED}) sourced
+    JOIN parish p ON p.id = sourced.parish_id
+    WHERE sourced.rn = 1 AND p.bulletin_provider = '{WEBSITE_SCHEDULE}'
+"""
+
+# The parishes on the site are all in the Eastern time zone (Delaware to New York), so
+# a source's `checked_on` is the date there, not UTC's: a page captured on an evening
+# was checked that day.
+SITE_TIMEZONE = ZoneInfo("America/New_York")
+
+
+def checked_on(as_of: str | None) -> str | None:
+    """The ISO date a source seed's `as_of` (an ISO time) falls on in SITE_TIMEZONE."""
+    if not as_of:
+        return None
+    moment = datetime.fromisoformat(as_of.replace("Z", "+00:00"))
+    if moment.tzinfo is None:
+        moment = moment.replace(tzinfo=UTC)
+    return moment.astimezone(SITE_TIMEZONE).date().isoformat()
+
+
 _LATEST_BULLETIN = f"""
     SELECT parish_id, id, source_url, NULLIF({week_order_sql()}, '') AS week,
            ROW_NUMBER() OVER (PARTITION BY parish_id ORDER BY {latest_bulletin_order()}) AS rn
@@ -243,7 +285,8 @@ def _schedule_events(conn: sqlite3.Connection) -> list[tuple]:
     """Each seeded parish's believed schedule, entry ids negated.
 
     The page is the entry's sighting in its parish's current bulletin, the one
-    the church's `bulletin_url` opens.
+    the church's `bulletin_url` opens. A parish shown with a source has none, so
+    an entry its old bulletin printed has no page.
     """
     columns = {row[1] for row in conn.execute('PRAGMA table_info(schedule_entry)')}
     bounds = ', '.join(f'e.{name}' if name in columns else 'NULL'
@@ -257,6 +300,7 @@ def _schedule_events(conn: sqlite3.Connection) -> list[tuple]:
         FROM current_schedule s
         JOIN schedule_entry e ON e.id = s.entry_id
         LEFT JOIN ({_LATEST_BULLETIN}) latest ON latest.parish_id = s.parish_id AND latest.rn = 1
+            AND s.parish_id NOT IN ({_SOURCED_PARISHES})
         LEFT JOIN entry_sighting sighting
             ON sighting.bulletin_id = latest.id AND sighting.entry_id = e.id
         WHERE s.parish_id IN (
@@ -379,13 +423,21 @@ def extract(
     try:
         churches = src.execute(
             f"""
-            WITH latest AS ({_LATEST_BULLETIN})
+            WITH latest AS ({_LATEST_BULLETIN}), sourced AS ({_LATEST_SOURCE_SEED})
             SELECT c.id, c.parish_id, c.slug, c.name, c.address_line1, c.address_line2,
                    c.city, c.state, c.postal_code, c.latitude, c.longitude,
-                   p.homepage_url, latest.source_url, latest.week, p.slug
+                   p.homepage_url,
+                   -- A parish shown with a source has no current bulletin, whatever it
+                   -- once published.
+                   CASE WHEN sourced.parish_id IS NULL THEN latest.source_url END,
+                   CASE WHEN sourced.parish_id IS NULL THEN latest.week END,
+                   sourced.schedule_source, sourced.schedule_source_url, sourced.as_of,
+                   p.slug
             FROM church c
             LEFT JOIN parish p ON c.parish_id = p.id
             LEFT JOIN latest ON latest.parish_id = c.parish_id AND latest.rn = 1
+            LEFT JOIN sourced ON sourced.parish_id = c.parish_id AND sourced.rn = 1
+                AND p.bulletin_provider = '{WEBSITE_SCHEDULE}'
             WHERE c.retired_at IS NULL
             ORDER BY c.name, c.id
             """
@@ -400,7 +452,10 @@ def extract(
             storage.DIOCESES_DIR if dioceses_dir is None else dioceses_dir,
         )
         # Only parishes with an approved seed are on the site.
-        churches = [(*row[:-1], dioceses.get(row[-1])) for row in churches if row[1] in seeded]
+        churches = [
+            (*row[:-2], checked_on(row[-2]), dioceses.get(row[-1]))
+            for row in churches if row[1] in seeded
+        ]
         shown = {row[0] for row in churches}
         if without := sum(row[-1] is None for row in churches):
             LOGGER.warning("%d churches have no diocese; the embed leaves them out", without)

@@ -22,7 +22,7 @@ from typing import Any
 from pdf_extract.blobstore import get_store
 from pdf_extract.classifiers import get_classifier, pricing
 from pdf_extract.classifiers.seed_ask import GEMINI_MODEL, MODELS, OPENAI_MODEL, SeedAsker
-from pdf_extract.model import gemini_rows
+from pdf_extract.model import WEBSITE_SCHEDULE, gemini_rows
 from pdf_extract.runner import (
     _cache_version_component,
     load_cached_result,
@@ -32,7 +32,9 @@ from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
 from pdf_extract.seeding.files import (
     ASK,
     EXTRACT,
+    is_source_seed,
     new_seed,
+    new_source_seed,
     next_call_id,
     paid_calls,
     read_seed,
@@ -78,15 +80,28 @@ def extraction_classifier(model: str):
 def load_or_start(
     conn: sqlite3.Connection, ctx: SeedContext, parish_slug: str,
 ) -> dict[str, Any]:
-    """The parish's seed file, or a new draft listing its bulletins (not yet written)."""
+    """The parish's seed file, or a new draft listing its bulletins (not yet written).
+
+    A `website_schedule` parish has no bulletins: its new draft is a source seed.
+    """
     seed = read_seed(parish_slug, ctx.seeds_dir)
     if seed is not None:
         return seed
+    row = conn.execute("SELECT bulletin_provider FROM parish WHERE slug = ?",
+                       (parish_slug,)).fetchone()
+    if row is not None and row[0] == WEBSITE_SCHEDULE:
+        return new_source_seed(parish_slug)
     bulletins = [
         b for b in parish_bulletins(conn, parish_slug)
         if b["duplicate_of"] is None
     ]
     return new_seed(parish_slug, bulletins)
+
+
+def _refuse_source(seed: dict[str, Any]) -> None:
+    if is_source_seed(seed):
+        raise SeedError("A source seed makes no paid calls: they read bulletins, and it has "
+                        "none. Read its captures (`seed capture-text`, the screenshot tiles)")
 
 
 def _list_bulletin(seed: dict[str, Any], bulletin: dict[str, Any]) -> None:
@@ -143,6 +158,7 @@ def run_extract(
     classifier = extraction_classifier(model)
     bulletin = resolve_bulletin(conn, parish_slug, ref)
     seed = load_or_start(conn, ctx, parish_slug)
+    _refuse_source(seed)
     churches = churches_for_parish(conn, parish_slug)
     result = load_cached_result(
         classifier.name, classifier.version, bulletin["content_hash"], churches,
@@ -203,6 +219,7 @@ def run_ask(
     asker = SeedAsker(model)
     bulletin = resolve_bulletin(conn, parish_slug, ref)
     seed = load_or_start(conn, ctx, parish_slug)
+    _refuse_source(seed)
     churches = churches_for_parish(conn, parish_slug)
     today = _today(bulletin)
     key = ask_cache_key(asker, bulletin["content_hash"], churches, today, question)

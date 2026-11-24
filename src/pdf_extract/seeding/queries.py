@@ -20,11 +20,13 @@ from pypdf import PdfReader
 from pdf_extract.blobstore import CachedBlobStore, bulletin_pdf_key, get_store
 from pdf_extract.bulletin_week import bulletin_week
 from pdf_extract.model import DAYS, WEEKS_OF_MONTH, is_valid_hash, normalize_as_of
-from pdf_extract.seeding import page_images
+from pdf_extract.seeding import page_images, textless
 from pdf_extract.seeding.checks import COVERED_DAYS, covered_weeks
 from pdf_extract.seeding.files import (
     SEEDS_DIR,
+    SOURCE_SEED,
     WORK_DIR,
+    captures,
 )
 from pdf_extract.storage import (
     list_churches,
@@ -36,7 +38,7 @@ from pdf_extract.timeparse import time_to_minutes
 # Shortest hash prefix a command accepts for a bulletin.
 MIN_REF_CHARS = 6
 # Fewer characters than this on a page: it is only an image (`seed text`).
-MIN_PAGE_TEXT_CHARS = 40
+MIN_PAGE_TEXT_CHARS = textless.MIN_PAGE_TEXT_CHARS
 # How many bulletins `seed history` shows, and `seed diff` compares when the
 # blob store can't say which PDFs it holds.
 HISTORY_BULLETINS = 4
@@ -59,7 +61,8 @@ class SeedContext:
 # ── Parishes and bulletins ──────────────────────────────────────────────────
 def parish_row(conn: sqlite3.Connection, parish_slug: str) -> sqlite3.Row:
     row = conn.execute(
-        "SELECT id, slug, name, homepage_url FROM parish WHERE slug = ?", (parish_slug,),
+        "SELECT id, slug, name, homepage_url, bulletin_provider FROM parish WHERE slug = ?",
+        (parish_slug,),
     ).fetchone()
     if row is None:
         raise SeedError(f"Parish not found: {parish_slug} (is it in data/parishes.csv?)")
@@ -227,15 +230,17 @@ def export_pdf(
 def render_pages(
     conn: sqlite3.Connection, parish_slug: str, ref: str, *,
     page: str | int | None = None, dpi: int | None = None,
-    region: str | None = None, sheet: bool = False,
+    region: str | None = None, sheet: bool = False, images: bool = False,
     work_dir: Path = WORK_DIR,
 ) -> dict[str, Any]:
-    """`seed pages`: pages, a region of them or sheets of them as PNGs (`page_images`)."""
+    """`seed pages`: pages, a region of them, sheets of them, or the images on them with
+    no text layer, as PNGs (`page_images`)."""
     bulletin = resolve_bulletin(conn, parish_slug, ref)
     data = bulletin_pdf(parish_slug, bulletin["content_hash"])
     try:
         result = page_images.render(data, work_dir / parish_slug, bulletin["short"],
-                                    page=page, dpi=dpi, region=region, sheet=sheet)
+                                    page=page, dpi=dpi, region=region, sheet=sheet,
+                                    images=images)
     except page_images.PageImageError as e:
         raise SeedError(str(e)) from None
     return {"parish": parish_slug, "bulletin": bulletin["content_hash"], **result}
@@ -270,13 +275,13 @@ def _pdf_texts(data: bytes, page: int | None = None) -> tuple[int, list[dict[str
             try:
                 textpage = pdf_page.get_textpage()
                 try:
-                    text = textpage.get_text_range().replace("\r\n", "\n").strip()
+                    text = textless.page_text(textpage)
                 finally:
                     textpage.close()
             finally:
                 pdf_page.close()
             pages.append({"page": number, "text": text,
-                          "image_only": len(text) < MIN_PAGE_TEXT_CHARS})
+                          "image_only": textless.is_image_only(text)})
     finally:
         pdf.close()
     return total, pages
@@ -550,6 +555,26 @@ def brief(
         "history_events": len(summary),
         "history": summary if len(summary) <= BRIEF_HISTORY_ROWS else None,
         "pdf": pdf,
+    }
+
+
+def source_brief(
+    conn: sqlite3.Connection, parish_slug: str, seed: dict[str, Any] | None,
+) -> dict[str, Any]:
+    """`seed brief` for a `website_schedule` parish: no bulletins, PDF or history, so its
+    website and churches, and the pages its source seed has captured so far."""
+    parish = parish_row(conn, parish_slug)
+    seed = seed or {}
+    return {
+        "kind": SOURCE_SEED,
+        "parish": parish_slug,
+        "name": parish["name"],
+        "website": parish["homepage_url"],
+        "churches": [{"church": c["slug"], "name": c["name"], "address": _address(c)}
+                     for c in list_churches(conn, parish["id"])],
+        "captures": captures(seed),
+        "current_because": seed.get("current_because"),
+        "recheck_after": seed.get("recheck_after"),
     }
 
 

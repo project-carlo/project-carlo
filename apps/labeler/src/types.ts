@@ -213,12 +213,22 @@ export interface SeedBulletin {
 }
 
 export interface SeedSource {
-  /** "agent", "history", "website" (with its `url`), or the id of one of the file's calls. */
+  /**
+   * "agent", "history", "website" (with its `url`), or the id of one of the file's calls.
+   * A source seed's sources are "website" or "facebook", each naming its `capture`.
+   */
   source: string;
   bulletin?: string | null;
   page?: number | null;
   url?: string | null;
   said: string;
+  /** A source seed's: the capture it quotes (a prefix of its hash). */
+  capture?: string;
+  /**
+   * Read from the capture's screenshot (this is its hash), so its text can't confirm
+   * it: check it against the screenshot.
+   */
+  from_image?: string;
   schedule_check?: {
     checked_at: string;
     current_because: string;
@@ -296,6 +306,23 @@ export interface SeedFile {
   calls: SeedCall[];
   slots: SeedSlot[];
   church_list_issues?: SeedChurchIssue[];
+  /** "source": a parish with no bulletin, drafted from its own pages. Absent: a bulletin seed. */
+  kind?: "bulletin" | "source";
+  /** A source seed's pages, as `seed capture` stored them. */
+  captures?: SeedCapture[];
+  current_because?: string | null;
+  recheck_after?: string | null;
+}
+
+/** One page of a parish's website or Facebook page, named by its text's hash. */
+export interface SeedCapture {
+  content_hash: string;
+  url: string;
+  final_url: string | null;
+  platform: "website" | "facebook";
+  captured_at: string;
+  screenshot_hash: string | null;
+  primary: boolean;
 }
 
 export interface SeedQueueRow {

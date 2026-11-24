@@ -44,24 +44,29 @@ from pdf_extract.dioceses.publications import (
     supported_review,
 )
 from pdf_extract.fetch import PROVIDERS_TAKING_RECIPE
+from pdf_extract.model import WEBSITE_SCHEDULE
 from pdf_extract.parish_sites import Recipe
 
 META_FILE = "diocese.md"
 ROSTERS_DIR = "rosters"
 LIVE = "live"  # how `search` labels rows of data/parishes.csv and data/churches.csv
 
-# Every value a parish record may use. `fetch` reads the first five. The last two keep a
-# parish and its churches in the records but out of data/parishes.csv (see `unpublished`):
-# `no_bulletin`, no bulletin was found; `unsupported`, a bulletin is published but no
-# collector reads it yet (its `fetch_gap` says what fails). Setting a real provider puts
-# the row back; nothing does that by itself when a collector lands.
+# Every value a parish record may use. `fetch` reads the first five. `website_schedule`
+# has no bulletin: it goes live with a source seed drafted from its `website` (its own
+# site or Facebook page; docs/source-schedules-plan.md), and fetch skips it. The last two
+# keep a parish and its churches in the records but out of data/parishes.csv (see
+# `unpublished`): `no_bulletin`, no bulletin was found; `unsupported`, a bulletin is
+# published but no collector reads it yet (its `fetch_gap` says what fails). Setting a
+# real provider puts the row back; nothing does that by itself when a collector lands.
 NO_BULLETIN = "no_bulletin"
 UNSUPPORTED = "unsupported"
 OFF_SITE_PROVIDERS = frozenset({NO_BULLETIN, UNSUPPORTED})
 KNOWN_BULLETIN_PROVIDERS = frozenset(
     {"parishes_online", "ecatholic", "discover_mass", "other", "google_drive",
-     *OFF_SITE_PROVIDERS}
+     WEBSITE_SCHEDULE, *OFF_SITE_PROVIDERS}
 )
+# Providers with no bulletin: nothing to fetch, and no publication id to record.
+NO_BULLETIN_PROVIDERS = frozenset({NO_BULLETIN, WEBSITE_SCHEDULE})
 # Providers `fetch` looks up by account id rather than by the parish website.
 PROVIDERS_NEEDING_ID = frozenset({"parishes_online", "discover_mass"})
 
@@ -716,6 +721,14 @@ def _check_parish(label: str, r: Mapping[str, Any], p: Problems) -> None:
         p.warnings.append(f"{label}: no_bulletin with a fetch_gap: a published bulletin that "
                           "fetch can't collect is bulletin_provider unsupported (off the site "
                           "the same way, and listed as waiting on a collector)")
+    elif provider == WEBSITE_SCHEDULE:
+        if gap is not None:
+            p.errors.append(f"{label}: website_schedule has no bulletin, so no fetch_gap: a "
+                            "published bulletin that fetch can't collect is unsupported, which "
+                            "never uses a source schedule")
+        if r.get("bulletin_status") in ("available", "unsupported-format", "access-blocked"):
+            p.warnings.append(f"{label}: website_schedule is for a parish with no bulletin; "
+                              f"bulletin_status {r['bulletin_status']} says one is published")
     elif provider and gap is not None:
         p.warnings.append(f"{label}: fetch_gap on a {provider} row, which goes live although "
                           "fetch can't collect its bulletin; bulletin_provider unsupported "
@@ -731,7 +744,8 @@ def _check_parish(label: str, r: Mapping[str, Any], p: Problems) -> None:
         problem = publication_problem(str(pub))
         if problem:
             p.errors.append(f"{label}: publication {pub!r}: {problem}")
-    if not r.get("publication") and provider != NO_BULLETIN:  # unsupported keeps its ids
+    # unsupported keeps its ids
+    if not r.get("publication") and provider not in NO_BULLETIN_PROVIDERS:
         p.warnings.append(
             f"{label}: no publication id recorded, so nothing can check that no other "
             "row publishes the same bulletin"

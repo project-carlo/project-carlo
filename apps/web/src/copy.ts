@@ -7,12 +7,36 @@
  * docs/ui-copy-audit.md has the terminology these follow.
  */
 
-/** Where the times come from, as the end of a sentence: "…times, from each parish’s weekly bulletin." */
-export const SOURCE_PHRASE = "from each parish’s weekly bulletin";
+import type { ChurchDetail, ScheduleSource } from "@carlo/core";
 
-/** The accuracy note at the foot of church and city pages. */
+/**
+ * Where the times come from, as the end of a sentence: "…times, from each
+ * parish’s bulletin or website." Most come from the weekly bulletin; a parish
+ * with none posts them on its own website or Facebook page.
+ */
+export const SOURCE_PHRASE = "from each parish’s bulletin or website";
+
+/** The accuracy note at the foot of city pages, whose churches' sources vary. */
 export const DISCLAIMER =
-  "Times are read from each parish’s bulletin by AI and can contain mistakes. Please check with the parish before you go.";
+  "Times are read from each parish’s bulletin or website by AI and can contain mistakes. Please check with the parish before you go.";
+
+/** A parish's page its times are read from, when it has no bulletin. */
+export const SOURCE_NAMES: Record<ScheduleSource, string> = {
+  website: "the parish website",
+  facebook: "the parish’s Facebook page",
+};
+
+/**
+ * The accuracy note at the foot of a church page, naming that church's source.
+ * A bulletin church's is the wording every church page has always had, so its
+ * page (and sitemap date) doesn't change.
+ */
+export function churchDisclaimer(church: ChurchDetail): string {
+  if (church.schedule_source) {
+    return `Times are read from ${SOURCE_NAMES[church.schedule_source]} by AI and can contain mistakes, and the parish may have changed them since. Please check with the parish before you go.`;
+  }
+  return "Times are read from each parish’s bulletin by AI and can contain mistakes. Please check with the parish before you go.";
+}
 
 /** The name shown for a church the data has no name for. */
 export const UNNAMED_CHURCH = "Unnamed church";
