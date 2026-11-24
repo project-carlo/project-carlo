@@ -1,0 +1,1952 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-fatima-chapel-pequannock",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:27Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:00:08Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:41:51Z",
+  "summary": "One FSSP chapel (Latin Mass). No schedule box for Masses: the times come from two weeks of Mass intentions in each of the two bulletins (Nov 8 and Nov 15, 2026), which agree exactly with the parish website's schedule; the website also supplies the first-Friday 7 PM Mass the bulletin's adoration box refers to. Confessions before each Mass are worked out per POLICY. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2cd2d9f4dfd6cf68c7a6b3eab98a35e3e7e07771fb3992db41a6af29fa29b03a",
+      "fetched_at": "2026-11-15T16:51:27Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1d10650c04a14745a2128f9dfc8088d76a77db190d5b85d9667d04fda884ee36",
+      "fetched_at": "2026-11-08T16:00:05Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Sunday November 15 and Sunday November 22: 7:00 a.m., 9:00 a.m., 11:00 a.m., 1:30 p.m., 5:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Sunday November 8: 7:00 a.m., 9:00 a.m., 11:00 a.m., 1:30 p.m., 5:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "SUNDAYS 7am: Low Mass 9am: Low Mass 11am: Sung Mass 1:30pm: Low Mass 5pm: Low Mass"
+        }
+      ],
+      "rationale": "R35 and POLICY, Weekly or dated rule 4: the Mass-intentions calendar prints these Sunday times in all three Sunday listings across both bulletins; the parish website's Mass schedule gives the same times and says Masses are offered in Latin (FSSP).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Sunday November 15 and Sunday November 22: 7:00 a.m., 9:00 a.m., 11:00 a.m., 1:30 p.m., 5:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Sunday November 8: 7:00 a.m., 9:00 a.m., 11:00 a.m., 1:30 p.m., 5:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "SUNDAYS 7am: Low Mass 9am: Low Mass 11am: Sung Mass 1:30pm: Low Mass 5pm: Low Mass"
+        }
+      ],
+      "rationale": "R35 and POLICY, Weekly or dated rule 4: the Mass-intentions calendar prints these Sunday times in all three Sunday listings across both bulletins; the parish website's Mass schedule gives the same times and says Masses are offered in Latin (FSSP).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Sunday November 15 and Sunday November 22: 7:00 a.m., 9:00 a.m., 11:00 a.m., 1:30 p.m., 5:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Sunday November 8: 7:00 a.m., 9:00 a.m., 11:00 a.m., 1:30 p.m., 5:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "SUNDAYS 7am: Low Mass 9am: Low Mass 11am: Sung Mass 1:30pm: Low Mass 5pm: Low Mass"
+        }
+      ],
+      "rationale": "R35 and POLICY, Weekly or dated rule 4: the Mass-intentions calendar prints these Sunday times in all three Sunday listings across both bulletins; the parish website's Mass schedule gives the same times and says Masses are offered in Latin (FSSP).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Sunday November 15 and Sunday November 22: 7:00 a.m., 9:00 a.m., 11:00 a.m., 1:30 p.m., 5:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Sunday November 8: 7:00 a.m., 9:00 a.m., 11:00 a.m., 1:30 p.m., 5:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "SUNDAYS 7am: Low Mass 9am: Low Mass 11am: Sung Mass 1:30pm: Low Mass 5pm: Low Mass"
+        }
+      ],
+      "rationale": "R35 and POLICY, Weekly or dated rule 4: the Mass-intentions calendar prints these Sunday times in all three Sunday listings across both bulletins; the parish website's Mass schedule gives the same times and says Masses are offered in Latin (FSSP).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Sunday November 15 and Sunday November 22: 7:00 a.m., 9:00 a.m., 11:00 a.m., 1:30 p.m., 5:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Sunday November 8: 7:00 a.m., 9:00 a.m., 11:00 a.m., 1:30 p.m., 5:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "SUNDAYS 7am: Low Mass 9am: Low Mass 11am: Sung Mass 1:30pm: Low Mass 5pm: Low Mass"
+        }
+      ],
+      "rationale": "R35 and POLICY, Weekly or dated rule 4: the Mass-intentions calendar prints these Sunday times in all three Sunday listings across both bulletins; the parish website's Mass schedule gives the same times and says Masses are offered in Latin (FSSP).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Monday-Saturday November 16-21: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Monday-Saturday November 9-14: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "Low Masses: Monday - Saturday 7am & 9am"
+        }
+      ],
+      "rationale": "R35: printed every weekday in both weeks of intentions read; the website's schedule matches. 'Private Intention' is the Mass's intention, not a closed Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Monday-Saturday November 16-21: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Monday-Saturday November 9-14: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "Low Masses: Monday - Saturday 7am & 9am"
+        }
+      ],
+      "rationale": "R35: printed every weekday in both weeks of intentions read; the website's schedule matches. 'Private Intention' is the Mass's intention, not a closed Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Monday-Saturday November 16-21: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Monday-Saturday November 9-14: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "Low Masses: Monday - Saturday 7am & 9am"
+        }
+      ],
+      "rationale": "R35: printed every weekday in both weeks of intentions read; the website's schedule matches. 'Private Intention' is the Mass's intention, not a closed Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Monday-Saturday November 16-21: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Monday-Saturday November 9-14: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "Low Masses: Monday - Saturday 7am & 9am"
+        }
+      ],
+      "rationale": "R35: printed every weekday in both weeks of intentions read; the website's schedule matches. 'Private Intention' is the Mass's intention, not a closed Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Monday-Saturday November 16-21: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Monday-Saturday November 9-14: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "Low Masses: Monday - Saturday 7am & 9am"
+        }
+      ],
+      "rationale": "R35: printed every weekday in both weeks of intentions read; the website's schedule matches. 'Private Intention' is the Mass's intention, not a closed Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Monday-Saturday November 16-21: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Monday-Saturday November 9-14: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "Low Masses: Monday - Saturday 7am & 9am"
+        }
+      ],
+      "rationale": "R35: printed every weekday in both weeks of intentions read; the website's schedule matches. 'Private Intention' is the Mass's intention, not a closed Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Monday-Saturday November 16-21: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Monday-Saturday November 9-14: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "Low Masses: Monday - Saturday 7am & 9am"
+        }
+      ],
+      "rationale": "R35: printed every weekday in both weeks of intentions read; the website's schedule matches. 'Private Intention' is the Mass's intention, not a closed Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Monday-Saturday November 16-21: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Monday-Saturday November 9-14: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "Low Masses: Monday - Saturday 7am & 9am"
+        }
+      ],
+      "rationale": "R35: printed every weekday in both weeks of intentions read; the website's schedule matches. 'Private Intention' is the Mass's intention, not a closed Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Monday-Saturday November 16-21: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Monday-Saturday November 9-14: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "Low Masses: Monday - Saturday 7am & 9am"
+        }
+      ],
+      "rationale": "R35: printed every weekday in both weeks of intentions read; the website's schedule matches. 'Private Intention' is the Mass's intention, not a closed Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Monday-Saturday November 16-21: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Monday-Saturday November 9-14: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "Low Masses: Monday - Saturday 7am & 9am"
+        }
+      ],
+      "rationale": "R35: printed every weekday in both weeks of intentions read; the website's schedule matches. 'Private Intention' is the Mass's intention, not a closed Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Monday-Saturday November 16-21: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Monday-Saturday November 9-14: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "Low Masses: Monday - Saturday 7am & 9am"
+        }
+      ],
+      "rationale": "R35: printed every weekday in both weeks of intentions read; the website's schedule matches. 'Private Intention' is the Mass's intention, not a closed Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Monday-Saturday November 16-21: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Monday-Saturday November 9-14: 7:00 a.m. Private Intention; 9:00 a.m. (named intention)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "Low Masses: Monday - Saturday 7am & 9am"
+        }
+      ],
+      "rationale": "R35: printed every weekday in both weeks of intentions read; the website's schedule matches. 'Private Intention' is the Mass's intention, not a closed Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Tuesday November 17 and Thursday November 19: 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Tuesday November 10 and Thursday November 12: 7:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "Tuesday & Thursday evenings - 7pm"
+        }
+      ],
+      "rationale": "R35: the Tuesday and Thursday 7 PM Masses are in both weeks of intentions; the website's schedule matches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Tuesday November 17 and Thursday November 19: 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Tuesday November 10 and Thursday November 12: 7:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "Tuesday & Thursday evenings - 7pm"
+        }
+      ],
+      "rationale": "R35: the Tuesday and Thursday 7 PM Masses are in both weeks of intentions; the website's schedule matches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "FIRST FRIDAYS Mass at 7pm, followed by Exposition, with Benediction at 8:15pm",
+          "schedule_check": {
+            "checked_at": "2026-11-23T13:01:58Z",
+            "current_because": "Checked 2026-11-23: the page's whole weekly schedule (Sunday 7/9/11/1:30/5, Mon-Sat 7 & 9, Tue & Thu 7pm, Thursday adoration 3-9, Saturday confessions 12:30-1:30) matches the November 8 and 15, 2026 bulletins exactly.",
+            "bulletin": "2cd2d9f4",
+            "fits_because": "The newest bulletin's adoration box refers to the first-Friday 'evening Mass' without giving its time; neither bulletin's week holds a first Friday, so its intentions cannot show it. The website gives that Mass as 7pm, matching the box's 8:15 Benediction."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "First Friday Adoration Exposition: after evening Mass Benediction: 8:15 p.m."
+        }
+      ],
+      "rationale": "R6, R11: the bulletin names a first-Friday evening Mass but neither read week holds a first Friday; the current, matching website gives it at 7 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Weekly Thursday Adoration Exposition: 3 p.m. Benediction: 9 p.m,"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Weekly Thursday Adoration Exposition: 3 p.m. Benediction: 9 p.m,"
+        }
+      ],
+      "rationale": "R1: printed in the adoration box of both bulletins; the website gives Thursdays 3pm - 9pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "20:15",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction; after the 7:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "First Friday Adoration Exposition: after evening Mass Benediction: 8:15 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "First Friday Adoration Exposition: after evening Mass Benediction: 8:15 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfchapel.org/mass-schedule",
+          "said": "FIRST FRIDAYS Mass at 7pm, followed by Exposition, with Benediction at 8:15pm"
+        }
+      ],
+      "rationale": "R1, R10, R12: printed in the newest bulletin's box; exposition follows the 7 PM first-Friday Mass (website, R6), so POLICY's weekday rule starts it 30 minutes after, until the 8:15 Benediction.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:15",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction; after the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "First Saturday Adoration Exposition: after 9 a.m. Mass Benediction: 10:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "First Saturday Adoration Exposition: after 9 a.m. Mass Benediction: 10:15 a.m."
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins' box; exposition after the 9 AM weekday Mass starts 30 minutes after it (POLICY, Times), until the 10:15 Benediction.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "13:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Confessions: Saturdays: 12:30 to 1:30 p.m. & 15 minutes prior to Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Confessions: Saturdays: 12:30 to 1:30 p.m. & 15 minutes prior to Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Sacraments box of both bulletins; the website agrees (Saturday: 12:30-1:30pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": "07:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 7:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Sundays: 30 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Sundays: 30 minutes before each Mass"
+        }
+      ],
+      "rationale": "R10: 'Sundays: 30 minutes before each Mass' gives one window before each regular Sunday Mass (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Sundays: 30 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Sundays: 30 minutes before each Mass"
+        }
+      ],
+      "rationale": "R10: 'Sundays: 30 minutes before each Mass' gives one window before each regular Sunday Mass (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 11:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Sundays: 30 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Sundays: 30 minutes before each Mass"
+        }
+      ],
+      "rationale": "R10: 'Sundays: 30 minutes before each Mass' gives one window before each regular Sunday Mass (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "13:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 1:30 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Sundays: 30 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Sundays: 30 minutes before each Mass"
+        }
+      ],
+      "rationale": "R10: 'Sundays: 30 minutes before each Mass' gives one window before each regular Sunday Mass (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 5:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Sundays: 30 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Sundays: 30 minutes before each Mass"
+        }
+      ],
+      "rationale": "R10: 'Sundays: 30 minutes before each Mass' gives one window before each regular Sunday Mass (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": "07:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 7:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        }
+      ],
+      "rationale": "R10: 'Weekdays: 15 minutes before each Mass' (and for Saturday, '15 minutes prior to Mass') gives one window before each regular weekday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": "07:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 7:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        }
+      ],
+      "rationale": "R10: 'Weekdays: 15 minutes before each Mass' (and for Saturday, '15 minutes prior to Mass') gives one window before each regular weekday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": "07:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 7:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        }
+      ],
+      "rationale": "R10: 'Weekdays: 15 minutes before each Mass' (and for Saturday, '15 minutes prior to Mass') gives one window before each regular weekday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": "07:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 7:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        }
+      ],
+      "rationale": "R10: 'Weekdays: 15 minutes before each Mass' (and for Saturday, '15 minutes prior to Mass') gives one window before each regular weekday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": "07:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 7:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        }
+      ],
+      "rationale": "R10: 'Weekdays: 15 minutes before each Mass' (and for Saturday, '15 minutes prior to Mass') gives one window before each regular weekday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": "07:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 7:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        }
+      ],
+      "rationale": "R10: 'Weekdays: 15 minutes before each Mass' (and for Saturday, '15 minutes prior to Mass') gives one window before each regular weekday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        }
+      ],
+      "rationale": "R10: 'Weekdays: 15 minutes before each Mass' (and for Saturday, '15 minutes prior to Mass') gives one window before each regular weekday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        }
+      ],
+      "rationale": "R10: 'Weekdays: 15 minutes before each Mass' (and for Saturday, '15 minutes prior to Mass') gives one window before each regular weekday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        }
+      ],
+      "rationale": "R10: 'Weekdays: 15 minutes before each Mass' (and for Saturday, '15 minutes prior to Mass') gives one window before each regular weekday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        }
+      ],
+      "rationale": "R10: 'Weekdays: 15 minutes before each Mass' (and for Saturday, '15 minutes prior to Mass') gives one window before each regular weekday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        }
+      ],
+      "rationale": "R10: 'Weekdays: 15 minutes before each Mass' (and for Saturday, '15 minutes prior to Mass') gives one window before each regular weekday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Saturdays: ... & 15 minutes prior to Mass"
+        }
+      ],
+      "rationale": "R10: 'Weekdays: 15 minutes before each Mass' (and for Saturday, '15 minutes prior to Mass') gives one window before each regular weekday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s42",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:45",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 7:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        }
+      ],
+      "rationale": "R10: 'Weekdays: 15 minutes before each Mass' gives one window before the regular Tuesday and Thursday 7 PM Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s43",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:45",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 7:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d10650c",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        }
+      ],
+      "rationale": "R10: 'Weekdays: 15 minutes before each Mass' gives one window before the regular Tuesday and Thursday 7 PM Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s44",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-chapel-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:45",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 7:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2cd2d9f4",
+          "page": 1,
+          "said": "Weekdays: 15 minutes before each Mass"
+        }
+      ],
+      "rationale": "POLICY, Times: a general 'before each Mass' line covers the regular weekly Masses, not a once-a-month Mass, unless the bulletin gives it a Confession of its own; none is printed for the first-Friday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

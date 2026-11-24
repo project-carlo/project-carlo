@@ -1,0 +1,571 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-andrew-the-apostle-clifton",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:37Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:58:42Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:34Z",
+  "summary": "One church, St. Andrew the Apostle, Clifton. Both image-only bulletins read (Nov 8 and Nov 15, 2026) print the same schedule: Sat 5 PM; Sun 8, 10:30, 12:30 (Spanish); weekdays noon (Tue-Fri in the chapel); Saturday confession 4-4:45. Thanksgiving: 9 AM Mass and the noon Mass cancelled. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5681fa1fceebdd9da301b6884c619036b2e133584ae2348ab980ba088d0ceb7e",
+      "fetched_at": "2026-11-15T16:51:37Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ec66488d9d73d3fa5c1b0d67d1c18211efed23686f1053b92a07bcafe3274cc8",
+      "fetched_at": "2026-11-08T16:00:16Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 1,
+          "said": "Saturday at 5:00 P.M. in Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec66488d",
+          "page": 1,
+          "said": "Saturday at 5:00 P.M. in Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 3,
+          "said": "Saturday Vigil Mass – 5:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec66488d",
+          "page": 3,
+          "said": "Saturday Vigil Mass – 5:00 P.M."
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule boxes (pp1, 3) of both bulletins read; the intentions list a 5:00 Saturday Mass each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 1,
+          "said": "Sunday at 8:00 A.M. and 10:30 A.M.in Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec66488d",
+          "page": 1,
+          "said": "Sunday at 8:00 A.M. and 10:30 A.M.in Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 3,
+          "said": "Sunday Masses – 8:00 A.M. & 10:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec66488d",
+          "page": 3,
+          "said": "Sunday Masses – 8:00 A.M. & 10:30 A.M."
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule boxes of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 1,
+          "said": "Sunday at 8:00 A.M. and 10:30 A.M.in Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec66488d",
+          "page": 1,
+          "said": "Sunday at 8:00 A.M. and 10:30 A.M.in Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 3,
+          "said": "Sunday Masses – 8:00 A.M. & 10:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec66488d",
+          "page": 3,
+          "said": "Sunday Masses – 8:00 A.M. & 10:30 A.M."
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule boxes of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 1,
+          "said": "Sunday at 12:30 P.M. – Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec66488d",
+          "page": 1,
+          "said": "Sunday at 12:30 P.M. – Misa en Español"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule boxes of both bulletins read and each week's intentions (12:30 Misa en Español).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 1,
+          "said": "Monday at 12:00 Noon in Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec66488d",
+          "page": 1,
+          "said": "Monday at 12:00 Noon in Church"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule boxes of both bulletins read; intentions list Monday 12:00 (Church).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 1,
+          "said": "Tuesday thru Friday at 12:00 Noon in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec66488d",
+          "page": 1,
+          "said": "Tuesday thru Friday at 12:00 Noon in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 2,
+          "said": "Tuesday, November 17 (Chapel) 12:00"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule boxes of both bulletins read. POLICY, Churches and chapels: the parish has one church, and the intentions alternate (Church)/(Chapel) as two rooms of the same parish, so the chapel is taken as part of St. Andrew's with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 1,
+          "said": "Tuesday thru Friday at 12:00 Noon in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec66488d",
+          "page": 1,
+          "said": "Tuesday thru Friday at 12:00 Noon in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 2,
+          "said": "Tuesday, November 17 (Chapel) 12:00"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule boxes of both bulletins read. POLICY, Churches and chapels: the parish has one church, and the intentions alternate (Church)/(Chapel) as two rooms of the same parish, so the chapel is taken as part of St. Andrew's with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 1,
+          "said": "Tuesday thru Friday at 12:00 Noon in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec66488d",
+          "page": 1,
+          "said": "Tuesday thru Friday at 12:00 Noon in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 2,
+          "said": "Tuesday, November 17 (Chapel) 12:00"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule boxes of both bulletins read. POLICY, Churches and chapels: the parish has one church, and the intentions alternate (Church)/(Chapel) as two rooms of the same parish, so the chapel is taken as part of St. Andrew's with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 1,
+          "said": "Tuesday thru Friday at 12:00 Noon in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec66488d",
+          "page": 1,
+          "said": "Tuesday thru Friday at 12:00 Noon in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 2,
+          "said": "Tuesday, November 17 (Chapel) 12:00"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule boxes of both bulletins read. POLICY, Churches and chapels: the parish has one church, and the intentions alternate (Church)/(Chapel) as two rooms of the same parish, so the chapel is taken as part of St. Andrew's with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-clifton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 1,
+          "said": "The priest will be available for Confessions before the 12:00 Noon Mass, Saturday from 4:00-4:45 or by calling the Parish Office for an appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec66488d",
+          "page": 1,
+          "said": "The priest will be available for Confessions before the 12:00 Noon Mass, Saturday from 4:00-4:45 or by calling the Parish Office for an appointment."
+        }
+      ],
+      "rationale": "R1: the Confessions box of both bulletins read gives Saturday 4:00-4:45.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 1,
+          "said": "The priest will be available for Confessions before the 12:00 Noon Mass"
+        }
+      ],
+      "rationale": "R26, POLICY Times: 'before the 12:00 Noon Mass' gives no clock time or duration, so no start time can be worked out; appointments have no time either.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 4,
+          "said": "Please note that Thanksgiving Day Mass on November 26th will be celebrated at 9:00 A.M."
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass after as_of, printed in both bulletins read (also ec66488d p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 4,
+          "said": "The 12:00 Noon Mass will NOT be celebrated on that day."
+        }
+      ],
+      "rationale": "R1, R16: the bulletin explicitly cancels the Thursday noon Mass on November 26 (also ec66488d p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5681fa1f",
+          "page": 4,
+          "said": "The Perpetual Miraculous Medal Novena meets on Mondays after 12:00 Noon Mass."
+        }
+      ],
+      "rationale": "R24: a novena is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

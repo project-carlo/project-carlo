@@ -1,0 +1,664 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-mount-carmel-boonton",
+  "status": "approved",
+  "as_of": "2026-11-15T16:20:43Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:21:18Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:04Z",
+  "summary": "One church, Our Lady of Mount Carmel, Boonton. The Nov 8 and Nov 15 bulletins print the same schedule: Saturday Vigil 5:15 PM and 7:00 PM (Spanish), Sunday 7:30/9:00/11:00 AM, Mon-Sat 8:00 AM, Saturday Confessions 8:30-9:30 AM and 4:00-5:00 PM, and Adoration from Friday 8:30 AM to Saturday 8:00 AM (one slot crossing midnight). No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "15561e52d51e323f77e9a1006d5b4bf45520cafb1e3db549e66fe0d0ba514078",
+      "fetched_at": "2026-11-15T16:20:43Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4ab5f7421d7dd60aecca8274498bb7adf4429b1af8026abfd43718e77a1dc20d",
+      "fetched_at": "2026-11-08T15:45:05Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-boonton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 2,
+          "said": "Saturday Vigil: 5:15pm & 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ab5f742",
+          "page": 2,
+          "said": "Saturday Vigil: 5:15pm & 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 5,
+          "said": "Vigil Mass: 5:15pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read (Nov 8, Nov 15) and in the Nov 15 calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-boonton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 2,
+          "said": "Saturday Vigil: 5:15pm & 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ab5f742",
+          "page": 2,
+          "said": "Saturday Vigil: 5:15pm & 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 5,
+          "said": "Mass 7:00pm (Spanish)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-boonton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 2,
+          "said": "Sunday Morning: 7:30am, 9:00am, & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ab5f742",
+          "page": 2,
+          "said": "Sunday Morning: 7:30am, 9:00am, & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 5,
+          "said": "Masses: 7:30am, 9:00am, & 11:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read and in the Nov 15 calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-boonton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 2,
+          "said": "Sunday Morning: 7:30am, 9:00am, & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ab5f742",
+          "page": 2,
+          "said": "Sunday Morning: 7:30am, 9:00am, & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 5,
+          "said": "Masses: 7:30am, 9:00am, & 11:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read and in the Nov 15 calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-boonton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 2,
+          "said": "Sunday Morning: 7:30am, 9:00am, & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ab5f742",
+          "page": 2,
+          "said": "Sunday Morning: 7:30am, 9:00am, & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 5,
+          "said": "Masses: 7:30am, 9:00am, & 11:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read and in the Nov 15 calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-boonton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 2,
+          "said": "WEEKDAY MASSES 8:00am - Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ab5f742",
+          "page": 2,
+          "said": "WEEKDAY MASSES 8:00am - Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 5,
+          "said": "Mass- 8:00am Followed by the Rosary"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the Nov 15 calendar lists an 8:00am Mass each day Mon-Sat. Friday's 'School in attendance' does not limit it (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-boonton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 2,
+          "said": "WEEKDAY MASSES 8:00am - Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ab5f742",
+          "page": 2,
+          "said": "WEEKDAY MASSES 8:00am - Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 5,
+          "said": "Mass- 8:00am Followed by the Rosary"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the Nov 15 calendar lists an 8:00am Mass each day Mon-Sat. Friday's 'School in attendance' does not limit it (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-boonton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 2,
+          "said": "WEEKDAY MASSES 8:00am - Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ab5f742",
+          "page": 2,
+          "said": "WEEKDAY MASSES 8:00am - Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 5,
+          "said": "Mass- 8:00am Followed by the Rosary"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the Nov 15 calendar lists an 8:00am Mass each day Mon-Sat. Friday's 'School in attendance' does not limit it (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-boonton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 2,
+          "said": "WEEKDAY MASSES 8:00am - Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ab5f742",
+          "page": 2,
+          "said": "WEEKDAY MASSES 8:00am - Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 5,
+          "said": "Mass- 8:00am Followed by the Rosary"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the Nov 15 calendar lists an 8:00am Mass each day Mon-Sat. Friday's 'School in attendance' does not limit it (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-boonton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 2,
+          "said": "WEEKDAY MASSES 8:00am - Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ab5f742",
+          "page": 2,
+          "said": "WEEKDAY MASSES 8:00am - Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 5,
+          "said": "Mass- 8:00am Followed by the Rosary"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the Nov 15 calendar lists an 8:00am Mass each day Mon-Sat. Friday's 'School in attendance' does not limit it (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-boonton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 2,
+          "said": "WEEKDAY MASSES 8:00am - Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ab5f742",
+          "page": 2,
+          "said": "WEEKDAY MASSES 8:00am - Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 5,
+          "said": "Mass- 8:00am Followed by the Rosary"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the Nov 15 calendar lists an 8:00am Mass each day Mon-Sat. Friday's 'School in attendance' does not limit it (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-boonton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 2,
+          "said": "CONFESSIONS: IN THE CHURCH Saturday 8:30am-9:30am & 4:00pm-5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ab5f742",
+          "page": 2,
+          "said": "CONFESSIONS: IN THE CHURCH Saturday 8:30am-9:30am & 4:00pm-5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 5,
+          "said": "Confessions: 8:30am-9:30am & 4:00pm-5:00pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in the Nov 15 calendar under Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-boonton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 2,
+          "said": "CONFESSIONS: IN THE CHURCH Saturday 8:30am-9:30am & 4:00pm-5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ab5f742",
+          "page": 2,
+          "said": "CONFESSIONS: IN THE CHURCH Saturday 8:30am-9:30am & 4:00pm-5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 5,
+          "said": "Confessions: 8:30am-9:30am & 4:00pm-5:00pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in the Nov 15 calendar under Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-boonton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 2,
+          "said": "ADORATION: Friday 8:30am-Saturday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ab5f742",
+          "page": 2,
+          "said": "ADORATION: Friday 8:30am-Saturday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 5,
+          "said": "Eucharistic Adoration: Exposition 8:30am Adoration continues until just prior to 8:00am Mass on Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins read. One period from Friday 8:30 AM to Saturday 8:00 AM, recorded on its start day with the end crossing midnight (as in st-joseph-the-worker-west-winfield's Wednesday 12:45-09:00 slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15561e52",
+          "page": 2,
+          "said": "OR BY APPOINTMENT Call the parish office or email pastor@olmcboonton.org"
+        }
+      ],
+      "rationale": "R26: Confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

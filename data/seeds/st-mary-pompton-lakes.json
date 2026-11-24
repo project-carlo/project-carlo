@@ -1,0 +1,772 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-pompton-lakes",
+  "status": "approved",
+  "as_of": "2026-11-15T16:21:18Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T18:04:31Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:47Z",
+  "summary": "Two listed churches: St. Mary's and the Carnevale Center. The Mass, Confession and Adoration schedule box is identical in both bulletins read (Nov 8 and Nov 15, 2026), and the intentions match; no open questions. Saturday 9 AM Communion Service is excluded; the two Inclusive Sensory Mass dates are kept as dated entries.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b82a23af484da933d6cb291bcde98a638eb78b76fa5e5016afc72cc40efc7844",
+      "fetched_at": "2026-11-15T16:21:18Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "17b064eb94eba8fc4c76121db8049b0e06fad903a1e181a68f28d1072c6f813c",
+      "fetched_at": "2026-11-08T15:45:43Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pompton-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "Vigil Masses: 5:00 PM—English 7:00 PM—English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "Vigil Masses: 5:00 PM—English 7:00 PM—English"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read (Nov 8 and Nov 15), and the intentions list both times each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pompton-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "Vigil Masses: 5:00 PM—English 7:00 PM—English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "Vigil Masses: 5:00 PM—English 7:00 PM—English"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read (Nov 8 and Nov 15), and the intentions list both times each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pompton-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "SUNDAY 7:30 AM—English ... 10:30 AM—English (livestreamed) 12:00 PM—English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "SUNDAY 7:30 AM—English ... 10:30 AM—English (livestreamed) 12:00 PM—English"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pompton-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "SUNDAY 7:30 AM—English ... 10:30 AM—English (livestreamed) 12:00 PM—English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "SUNDAY 7:30 AM—English ... 10:30 AM—English (livestreamed) 12:00 PM—English"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pompton-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "SUNDAY 7:30 AM—English ... 10:30 AM—English (livestreamed) 12:00 PM—English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "SUNDAY 7:30 AM—English ... 10:30 AM—English (livestreamed) 12:00 PM—English"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pompton-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "8:45 AM—Español (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "8:45 AM—Español (livestreamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "carnevale-center-pompton-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "9:00 AM—English (Carnevale Center)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "9:00 AM—English (Carnevale Center)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the Carnevale Center is a listed church of the parish (intentions: 9:00 a.m. (CC)).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pompton-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "WEEKDAYS 8:00 AM—Monday-Friday in English (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "WEEKDAYS 8:00 AM—Monday-Friday in English (livestreamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the weekday intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pompton-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "WEEKDAYS 8:00 AM—Monday-Friday in English (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "WEEKDAYS 8:00 AM—Monday-Friday in English (livestreamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the weekday intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pompton-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "WEEKDAYS 8:00 AM—Monday-Friday in English (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "WEEKDAYS 8:00 AM—Monday-Friday in English (livestreamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the weekday intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pompton-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "WEEKDAYS 8:00 AM—Monday-Friday in English (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "WEEKDAYS 8:00 AM—Monday-Friday in English (livestreamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the weekday intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pompton-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "WEEKDAYS 8:00 AM—Monday-Friday in English (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "WEEKDAYS 8:00 AM—Monday-Friday in English (livestreamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the weekday intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pompton-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "7:00 PM—Wednesday en Español (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "7:00 PM—Wednesday en Español (livestreamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pompton-lakes",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "CONFESSION: Thursdays from 4:00 p.m. to 5:00 p.m. or call for an appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "CONFESSION: Thursdays from 4:00 p.m. to 5:00 p.m. or call for an appointment."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pompton-lakes",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "The Blessed Sacrament is exposed for Adoration on Thursday from 4:00 p.m. to 5:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "The Blessed Sacrament is exposed for Adoration on Thursday from 4:00 p.m. to 5:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pompton-lakes",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "and for one hour after morning Mass on the first Friday of each month."
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "and for one hour after morning Mass on the first Friday of each month."
+        }
+      ],
+      "rationale": "R1, R10: the standing Adoration line of both bulletins names first Fridays; no clock time, so POLICY, Times starts it 30 minutes after the 8:00 AM weekday Mass, for the one hour stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "carnevale-center-pompton-lakes",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Inclusive Sensory Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "INCLUSIVE SENSORY MASS ... Upcoming dates are: 11/15 and 12/13 at 11:00am in the Carnevale Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "INCLUSIVE SENSORY MASS ... Upcoming dates are: 11/15 and 12/13 at 11:00am in the Carnevale Center."
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass outside the weekly schedule on as_of's date; it invites individuals with sensory sensitivities with their families and is not limited to them, so POLICY keeps it as open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "carnevale-center-pompton-lakes",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-13",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Inclusive Sensory Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "INCLUSIVE SENSORY MASS ... Upcoming dates are: 11/15 and 12/13 at 11:00am in the Carnevale Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "INCLUSIVE SENSORY MASS ... Upcoming dates are: 11/15 and 12/13 at 11:00am in the Carnevale Center."
+        }
+      ],
+      "rationale": "R1, R16: dated Mass after as_of, printed in both bulletins; open to all (not limited by the bulletin). Only two dates given, so not weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pompton-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Liturgy of the Word with Communion, Prayer Room"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "SATURDAY 9:00 AM—Liturgy of the Word w/Communion (Prayer Rm.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17b064eb",
+          "page": 2,
+          "said": "SATURDAY 9:00 AM—Liturgy of the Word w/Communion (Prayer Rm.)"
+        }
+      ],
+      "rationale": "R24, R25: POLICY never records a Communion Service as a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82a23af",
+          "page": 2,
+          "said": "CONFESSION: ... or call for an appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

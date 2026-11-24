@@ -1,0 +1,706 @@
+{
+  "schema_version": 1,
+  "parish_slug": "padre-pio-paterson",
+  "status": "approved",
+  "as_of": "2026-11-15T16:13:24Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:45:06Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:23Z",
+  "summary": "Two churches (St. Bonaventure, Our Lady of Pompei). Weekend, weekday, First Saturday Mass, Thursday Adoration and Saturday Confession agree in the schedule boxes of both bulletins read (Nov 8 and Nov 15 issues) and in the Nov 8 issue's intentions; the only change is the Tuesday 11:30 Mass now noted 'with St Anthony Novena'. No open questions; no holy-day or Thanksgiving times announced.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a93029f2f80dac874cfb9ca649bce50e986235fcd4c612a40f8bf0d4cfcda693",
+      "fetched_at": "2026-11-15T16:13:24Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "0a532a8fad47f9dc1bc50470e78a923e2177457c5c4d6ec799063b28aed59233",
+      "fetched_at": "2026-11-08T15:39:03Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "Saturday Vigil 4:00 pm (St. Bonaventure)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 1,
+          "said": "Saturday Vigil 4:00 pm (St. Bonaventure)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 2,
+          "said": "4:00 pm - St. Bonaventure Church (English)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read; the Nov 8-14 intentions list it on Nov 7 and 14.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "Sunday 7:30 am (Our Lady of Pompei)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 1,
+          "said": "7:30 am (Our Lady of Pompei)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 2,
+          "said": "7:30 am - Our Lady of Pompei Church (English)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read and in the older issue's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "9:00 am (St. Bonaventure)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 1,
+          "said": "9:00 am (St. Bonaventure)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 2,
+          "said": "9:00 am - St. Bonaventure Church (English)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read and in the older issue's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "10:30 am (Our Lady of Pompei)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 1,
+          "said": "10:30 am (Our Lady of Pompei)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 2,
+          "said": "10:30 am- Our Lady of Pompei Church (English)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read and in the older issue's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "12:00 pm Español (Our Lady of Pompei)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 1,
+          "said": "12:00 pm Español (Our Lady of Pompei)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 2,
+          "said": "12:00 pm - Our Lady of Pompei Church español"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "5:30 pm Español (St. Bonaventure)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 1,
+          "said": "5:30 pm Español (St. Bonaventure)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 2,
+          "said": "5:30 pm – St. Bonaventure (español)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "Mon & Fri: 11:30 am (St. Bonaventure)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 1,
+          "said": "Mon, Tues & Fri: 11:30 am (St. Bonaventure)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read; the older issue's intentions list Nov 9 and 13 at 11:30 St. Bonaventure.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "Mon & Fri: 11:30 am (St. Bonaventure)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 1,
+          "said": "Mon, Tues & Fri: 11:30 am (St. Bonaventure)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read; the older issue's intentions list Nov 9 and 13 at 11:30 St. Bonaventure.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "Tues 11:30 am: Mass with St Anthony Novena (St. Bonaventure)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 1,
+          "said": "Mon, Tues & Fri: 11:30 am (St. Bonaventure)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read. The St. Anthony Novena that goes with it is a devotion (R24) and gets no slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "Weds 8:00 am (Our Lady of Pompei) / Thurs 8:00 am Mass with Adoration (Our Lady of Pompei)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 1,
+          "said": "Weds & Thurs: 8:00 am (Our Lady of Pompei)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read; the older issue's intentions list Nov 11 and 12 at 8:00 Our Lady of Pompei.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "Weds 8:00 am (Our Lady of Pompei) / Thurs 8:00 am Mass with Adoration (Our Lady of Pompei)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 1,
+          "said": "Weds & Thurs: 8:00 am (Our Lady of Pompei)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read; the older issue's intentions list Nov 11 and 12 at 8:00 Our Lady of Pompei.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "Miércoles: 7:00 pm Español (Our Lady of Pompei)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 1,
+          "said": "Miércoles: 7:00 pm Español (Our Lady of Pompei)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 2,
+          "said": "7:00 pm - Our Lady of Pompei Church (español)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "First Saturday/Primer sábado 11:30 am Mass & Adoration (St. Bonaventure)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 1,
+          "said": "First Saturday 11:30 am Mass & Adoration (St. Bonaventure)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 2,
+          "said": "Saturday, November 7, 2026 11:30 am – St. Bonaventure Church (English)"
+        }
+      ],
+      "rationale": "R1: the newest schedule box names it as a First Saturday Mass (POLICY, Weekly or dated rule 2); the older issue's intentions show it on Saturday Nov 7, a first Saturday. The anointing Mass on the first Saturday of Mar/Jun/Sep/Dec (p10) is this same Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-paterson",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "Eucharistic Adoration: Thursdays after 8:00 am Mass from 8:30 - 9:30 am; Thurs 8:00 am Mass with Adoration (Our Lady of Pompei)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 1,
+          "said": "Eucharistic Adoration: Thursdays after 8:00 am Mass from 8:30 - 9:30 am"
+        }
+      ],
+      "rationale": "R1: the devotions box gives the clock times (POLICY, Times) and the schedule box places the Thursday 8 AM Mass with Adoration at Our Lady of Pompei.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-paterson",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 10,
+          "said": "Confessions: Every Saturday 3:00 – 4:00 pm or by appointment (St. Bonaventure)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a532a8f",
+          "page": 3,
+          "said": "Confessions: Every Saturday 3:00 – 4:00 pm or by appointment (St. Bonaventure)"
+        }
+      ],
+      "rationale": "R1: in the Sacraments box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "First Saturday 11:30 am Mass & Adoration (St. Bonaventure)"
+        }
+      ],
+      "rationale": "R24/R26 (POLICY, Final source checks; former C6): the Adoration attached to the First Saturday Mass has no start or end time of its own, so it gets no slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "Rosary: Half hour before daily Mass; Miraculous Medal Novena: Mondays after the 11:30 am Mass; St. Anthony Novena: Tuesdays after the 11:30 am"
+        }
+      ],
+      "rationale": "R24: Rosary and novenas are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a93029f2",
+          "page": 1,
+          "said": "Holy Days: As announced; latest p10: Confessions ... or by appointment"
+        }
+      ],
+      "rationale": "R26: holy-day Masses are 'as announced' and none is announced in either bulletin; confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

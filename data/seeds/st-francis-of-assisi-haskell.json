@@ -1,0 +1,604 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-francis-of-assisi-haskell",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:42Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:07:38Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:05Z",
+  "summary": "One church. Weekend Masses (Sat 5:30 PM; Sun 7:30, 10, noon) and Saturday 4:30-5:00 Confession are in the page-1 box of both bulletins; the box sends weekdays to the intentions list, which gives Mon/Tue/Thu/Fri 8:00 AM and Wed noon in both weeks (R35). Friday Adoration 'after Mass' is set at 8:30 AM (R10), and the Faith Renewal Holy Hour moved from Nov 21 to Nov 28. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "73a7f8c5ca9864a7f30abeaab98b978d25a4acdc16cc25bd3c9026e912ac0c7c",
+      "fetched_at": "2026-11-15T16:51:42Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "efc543f0dda7735bdc3e49adb1880cdaa94339cd4f6ec0081c96c153d46eb698",
+      "fetched_at": "2026-11-08T16:00:34Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-haskell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 1,
+          "said": "MASS SCHEDULE Weekends Saturday: 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efc543f0",
+          "page": 1,
+          "said": "MASS SCHEDULE Weekends Saturday: 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21, 2026 5:30 P.M."
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read, and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-haskell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 10:00 am & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efc543f0",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 10:00 am & 12:00 noon"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read, and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-haskell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 10:00 am & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efc543f0",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 10:00 am & 12:00 noon"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read, and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-haskell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 10:00 am & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efc543f0",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 10:00 am & 12:00 noon"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read, and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-haskell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... 8:00 A.M.; TUESDAY, NOVEMBER 17 8:00 A.M.; THURSDAY, NOVEMBER 19 8:00 A.M.; FRIDAY, NOVEMBER 20 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "efc543f0",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 9 8:00 A.M; TUESDAY, NOVEMBER 10 8:00 A.M.; THURSDAY, NOVEMBER 12 8:00 A.M.; FRIDAY, NOVEMBER 13 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 1,
+          "said": "Weekdays & Holy Days See schedule in bulletin. ... every Tuesday after 8:00 am Mass"
+        }
+      ],
+      "rationale": "R35: the schedule box refers weekdays to the bulletin's Mass list, which gives 8:00 AM Monday, Tuesday, Thursday and Friday in both weeks read (Nov 9-13 and Nov 16-20); page 1's devotions also name the Monday and Tuesday 8:00 am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-haskell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... 8:00 A.M.; TUESDAY, NOVEMBER 17 8:00 A.M.; THURSDAY, NOVEMBER 19 8:00 A.M.; FRIDAY, NOVEMBER 20 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "efc543f0",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 9 8:00 A.M; TUESDAY, NOVEMBER 10 8:00 A.M.; THURSDAY, NOVEMBER 12 8:00 A.M.; FRIDAY, NOVEMBER 13 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 1,
+          "said": "Weekdays & Holy Days See schedule in bulletin. ... every Tuesday after 8:00 am Mass"
+        }
+      ],
+      "rationale": "R35: the schedule box refers weekdays to the bulletin's Mass list, which gives 8:00 AM Monday, Tuesday, Thursday and Friday in both weeks read (Nov 9-13 and Nov 16-20); page 1's devotions also name the Monday and Tuesday 8:00 am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-haskell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... 8:00 A.M.; TUESDAY, NOVEMBER 17 8:00 A.M.; THURSDAY, NOVEMBER 19 8:00 A.M.; FRIDAY, NOVEMBER 20 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "efc543f0",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 9 8:00 A.M; TUESDAY, NOVEMBER 10 8:00 A.M.; THURSDAY, NOVEMBER 12 8:00 A.M.; FRIDAY, NOVEMBER 13 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 1,
+          "said": "Weekdays & Holy Days See schedule in bulletin. ... every Tuesday after 8:00 am Mass"
+        }
+      ],
+      "rationale": "R35: the schedule box refers weekdays to the bulletin's Mass list, which gives 8:00 AM Monday, Tuesday, Thursday and Friday in both weeks read (Nov 9-13 and Nov 16-20); page 1's devotions also name the Monday and Tuesday 8:00 am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-haskell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... 8:00 A.M.; TUESDAY, NOVEMBER 17 8:00 A.M.; THURSDAY, NOVEMBER 19 8:00 A.M.; FRIDAY, NOVEMBER 20 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "efc543f0",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 9 8:00 A.M; TUESDAY, NOVEMBER 10 8:00 A.M.; THURSDAY, NOVEMBER 12 8:00 A.M.; FRIDAY, NOVEMBER 13 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 1,
+          "said": "Weekdays & Holy Days See schedule in bulletin. ... every Tuesday after 8:00 am Mass"
+        }
+      ],
+      "rationale": "R35: the schedule box refers weekdays to the bulletin's Mass list, which gives 8:00 AM Monday, Tuesday, Thursday and Friday in both weeks read (Nov 9-13 and Nov 16-20); page 1's devotions also name the Monday and Tuesday 8:00 am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-haskell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 2,
+          "said": "WEDNESDAY, NOVEMBER 18, 2026 12 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efc543f0",
+          "page": 2,
+          "said": "WEDNESDAY, NOVEMBER 11, 2026 12 NOON"
+        }
+      ],
+      "rationale": "R35: the weekday Mass list gives Wednesday at noon in both weeks read (Nov 11 and Nov 18), not marked special; the schedule box refers weekdays to this list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-haskell",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE: Saturday: 4:30-5:00 pm or at other times upon request."
+        },
+        {
+          "source": "agent",
+          "bulletin": "efc543f0",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE: Saturday: 4:30-5:00 pm or at other times upon request."
+        }
+      ],
+      "rationale": "R1: printed on page 1 of both bulletins read; 'other times upon request' has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-haskell",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 1,
+          "said": "Adoration: Every Friday after Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efc543f0",
+          "page": 1,
+          "said": "Adoration: Every Friday after Mass"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 'every Friday after Mass' with no clock time; the Friday Mass is 8:00 AM (page 2 in both weeks), so it starts 30 minutes later with no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-haskell",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-28",
+        "start_time": "16:30",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Faith Renewal Holy Hour"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 4,
+          "said": "Please join us on Saturday, November 28th for a Holy Hour filled with adoration, music, meditation and prayer at 4:30pm followed by Mass at 5:30om."
+        },
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 3,
+          "said": "11/28 Holy Hour – 4:30pm"
+        }
+      ],
+      "rationale": "R1, R16: a dated Holy Hour (Adoration under POLICY) after as_of; it runs the hour until the 5:30 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-haskell",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "16:30",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Faith Renewal Holy Hour"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efc543f0",
+          "page": 4,
+          "said": "Please join us on Saturday, November 21 for a Holy Hour ... at 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 3,
+          "said": "11/28 Holy Hour – 4:30pm"
+        }
+      ],
+      "rationale": "R40: the Nov 8 issue announced the Faith Renewal Holy Hour for Nov 21; the newest issue prints the same notice for Nov 28 and no longer lists Nov 21, so the newer date replaces it (R19 needs nothing newer to contradict).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73a7f8c5",
+          "page": 1,
+          "said": "Our Lady of Perpetual Help Novena is on Monday after 8:00 am Mass; Novena Prayers ... every Tuesday after 8:00 am Mass; Divine Mercy: Daily recitation of Chaplet after Mass"
+        }
+      ],
+      "rationale": "R24: novenas and the Divine Mercy Chaplet are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-haskell",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-14",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efc543f0",
+          "page": 4,
+          "said": "11/14 Healing Mass 11AM – Fr. Bogie"
+        }
+      ],
+      "rationale": "R16: a dated Mass before as_of (Nov 15), out of seed scope; recorded so a reviewer sees it was considered.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

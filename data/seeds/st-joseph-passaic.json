@@ -1,0 +1,1280 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-passaic",
+  "status": "approved",
+  "as_of": "2026-11-15T16:17:02Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:27:35Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:20Z",
+  "summary": "One church (Polish parish; English Mass Sunday 9 AM). Both November bulletins print the same schedule box: Sat 7 AM and 5 PM, Sun 7:30, 9, 11 AM and 6 PM, weekdays 6:30 AM, 1st/3rd Friday 6 PM with first-Friday exposition and confession. Open: whether 'daily' 15-minutes-before confession covers the Saturday 7 AM and third-Friday Masses, and whether the 6:30 PM Healing Mass is monthly on second Wednesdays.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "37466dde48d330df7e45683daa7b8ef39ecccea4a781d966e146d9883168684a",
+      "fetched_at": "2026-11-15T16:17:02Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "32de027768487d3c6dc52ef6589658513b56c83200ef215ecc1a35b3594d99f7",
+      "fetched_at": "2026-11-08T15:42:28Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Saturday: 7:00 AM (Polish), 5:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Saturday: 7:00 AM (Polish), 5:00 PM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in both weeks' intentions (Sat 7:00 am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Saturday: 7:00 AM (Polish), 5:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Saturday: 7:00 AM (Polish), 5:00 PM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in both weeks' intentions (Sat 5:00 pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Sunday: 7:30 AM (Polish), 9:0AM(English) 11:00 AM (Polish), 6:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Sunday: 7:30 AM (Polish), 9:0AM(English) 11:00 AM (Polish), 6:00 PM (Polish)"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins and the Sunday intentions on p3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Sunday: 7:30 AM (Polish), 9:0AM(English) 11:00 AM (Polish), 6:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Sunday: 7:30 AM (Polish), 9:0AM(English) 11:00 AM (Polish), 6:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 3,
+          "said": "9:00 am † John Halupka (1yr. death ann.) - from wife"
+        }
+      ],
+      "rationale": "R1: the box misprints '9:0AM'; the intentions in both bulletins confirm 9:00 am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Sunday: 7:30 AM (Polish), 9:0AM(English) 11:00 AM (Polish), 6:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Sunday: 7:30 AM (Polish), 9:0AM(English) 11:00 AM (Polish), 6:00 PM (Polish)"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins and the Sunday intentions on p3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Sunday: 7:30 AM (Polish), 9:0AM(English) 11:00 AM (Polish), 6:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Sunday: 7:30 AM (Polish), 9:0AM(English) 11:00 AM (Polish), 6:00 PM (Polish)"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins and the Sunday intentions on p3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Weekday: 6:30 AM (Polish) + Special occasions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Weekday: 6:30 AM (Polish) + Special occasions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 3,
+          "said": "MONDAY ... FRIDAY 6:30 am"
+        }
+      ],
+      "rationale": "R1: weekday Mass in the schedule box; both weeks' intentions list 6:30 am Monday to Friday (Saturday is 7:00 AM). The 2nd-Wednesday 6:30 AM Mass with the St. John Paul II novena and the Thanksgiving (Nov 26) 6:30 AM Mass are this same weekly Mass (POLICY, Weekly or dated rule 7), so they get no slot of their own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Weekday: 6:30 AM (Polish) + Special occasions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Weekday: 6:30 AM (Polish) + Special occasions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 3,
+          "said": "MONDAY ... FRIDAY 6:30 am"
+        }
+      ],
+      "rationale": "R1: weekday Mass in the schedule box; both weeks' intentions list 6:30 am Monday to Friday (Saturday is 7:00 AM). The 2nd-Wednesday 6:30 AM Mass with the St. John Paul II novena and the Thanksgiving (Nov 26) 6:30 AM Mass are this same weekly Mass (POLICY, Weekly or dated rule 7), so they get no slot of their own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Weekday: 6:30 AM (Polish) + Special occasions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Weekday: 6:30 AM (Polish) + Special occasions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 3,
+          "said": "MONDAY ... FRIDAY 6:30 am"
+        }
+      ],
+      "rationale": "R1: weekday Mass in the schedule box; both weeks' intentions list 6:30 am Monday to Friday (Saturday is 7:00 AM). The 2nd-Wednesday 6:30 AM Mass with the St. John Paul II novena and the Thanksgiving (Nov 26) 6:30 AM Mass are this same weekly Mass (POLICY, Weekly or dated rule 7), so they get no slot of their own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Weekday: 6:30 AM (Polish) + Special occasions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Weekday: 6:30 AM (Polish) + Special occasions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 3,
+          "said": "MONDAY ... FRIDAY 6:30 am"
+        }
+      ],
+      "rationale": "R1: weekday Mass in the schedule box; both weeks' intentions list 6:30 am Monday to Friday (Saturday is 7:00 AM). The 2nd-Wednesday 6:30 AM Mass with the St. John Paul II novena and the Thanksgiving (Nov 26) 6:30 AM Mass are this same weekly Mass (POLICY, Weekly or dated rule 7), so they get no slot of their own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Weekday: 6:30 AM (Polish) + Special occasions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Weekday: 6:30 AM (Polish) + Special occasions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 3,
+          "said": "MONDAY ... FRIDAY 6:30 am"
+        }
+      ],
+      "rationale": "R1: weekday Mass in the schedule box; both weeks' intentions list 6:30 am Monday to Friday (Saturday is 7:00 AM). The 2nd-Wednesday 6:30 AM Mass with the St. John Paul II novena and the Thanksgiving (Nov 26) 6:30 AM Mass are this same weekly Mass (POLICY, Weekly or dated rule 7), so they get no slot of their own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "1st Friday: 6:00 PM (&Adoration) 3rd Friday: 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "1st Friday: 6:00 PM (&Adoration) 3rd Friday: 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 3,
+          "said": "FRIDAY PIĄTEK NOVEMBER 20 ... 6:00 pm Za dzieci objęte modlitwą Rodziców Róży"
+        }
+      ],
+      "rationale": "R1: the schedule box names the first and third Fridays; the newest week's third Friday (Nov 20) lists the 6:00 pm Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 3,
+          "said": "FRIDAY PIĄTEK NOVEMBER 13 6:30 am 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Chaplet of the Divine Mercy Fridays before Mass at 6 PM"
+        }
+      ],
+      "rationale": "R39: the Nov 13 (second Friday) intentions print a blank '6:00 pm' line and the Chaplet line says 'Fridays before Mass at 6 PM', but the schedule box in both bulletins limits the Friday 6 PM Mass to the 1st and 3rd Fridays; a blank template line does not establish an every-Friday Mass. Recorded so a reviewer sees it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition after the 6:00 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament 1st Friday after Mass at 6 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament 1st Friday after Mass at 6 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "1st Friday: 6:00 PM (&Adoration)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "1st Friday: 6:00 PM (&Adoration)"
+        }
+      ],
+      "rationale": "R10, POLICY Times: exposition after a weekday 6:00 PM Mass starts 30 minutes after it, no end given. Printed in the box every week, so R1 at p2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "CONFESSIONS/ SPOWIEDŹ: Saturday: 4:15 PM - 4:55 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "CONFESSIONS/ SPOWIEDŹ: Saturday: 4:15 PM - 4:55 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:15",
+        "end_time": "06:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 6:30 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Daily: 15 minutes before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Daily: 15 minutes before Mass"
+        }
+      ],
+      "rationale": "R10: 'Daily: 15 minutes before Mass' runs from 15 minutes before the weekday 6:30 AM Mass to its start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:15",
+        "end_time": "06:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 6:30 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Daily: 15 minutes before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Daily: 15 minutes before Mass"
+        }
+      ],
+      "rationale": "R10: 'Daily: 15 minutes before Mass' runs from 15 minutes before the weekday 6:30 AM Mass to its start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:15",
+        "end_time": "06:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 6:30 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Daily: 15 minutes before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Daily: 15 minutes before Mass"
+        }
+      ],
+      "rationale": "R10: 'Daily: 15 minutes before Mass' runs from 15 minutes before the weekday 6:30 AM Mass to its start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:15",
+        "end_time": "06:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 6:30 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Daily: 15 minutes before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Daily: 15 minutes before Mass"
+        }
+      ],
+      "rationale": "R10: 'Daily: 15 minutes before Mass' runs from 15 minutes before the weekday 6:30 AM Mass to its start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:15",
+        "end_time": "06:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 6:30 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Daily: 15 minutes before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "Daily: 15 minutes before Mass"
+        }
+      ],
+      "rationale": "R10: 'Daily: 15 minutes before Mass' runs from 15 minutes before the weekday 6:30 AM Mass to its start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "17:55",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "First Friday: 5:30 to 5:55 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 2,
+          "said": "First Friday: 5:30 to 5:55 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": "07:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Daily: 15 minutes before Mass"
+        }
+      ],
+      "rationale": "R30: 'Daily' plainly covers the weekday 6:30 AM Mass; the Saturday 7:00 AM Mass is also a morning daily Mass (the box lists it apart from the weekend vigil), so I lean to include it, but the box does not say which Masses 'daily' means.",
+      "question": "Does 'Daily: 15 minutes before Mass' confession include the Saturday 7:00 AM Mass (6:45-7:00 AM)?",
+      "options": [
+        {
+          "label": "Saturdays 6:45-7:00 AM",
+          "entry": {
+            "church_slug": "st-joseph-passaic",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "06:45",
+            "end_time": "07:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 7:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:20Z"
+      }
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:45",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 6:00 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Daily: 15 minutes before Mass; First Friday: 5:30 to 5:55 PM"
+        }
+      ],
+      "rationale": "R30: the first-Friday evening Mass gets its own confession window, which suggests 'Daily' means the regular 6:30 AM weekday Mass; the third Friday gets none, so I lean to leave it out.",
+      "question": "Does 'Daily: 15 minutes before Mass' confession include the third-Friday 6:00 PM Mass (5:45-6:00 PM)?",
+      "options": [
+        {
+          "label": "Third Fridays 5:45-6:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-passaic",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "17:45",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "third"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 6:00 PM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:20Z"
+      }
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass with prayers for healing"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 5,
+          "said": "Msza święta z modlitwami o łaskę uzdrowienia odbędzie się w środę 9 Grudnia 2026 o godzinie 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Prayers for healing 2nd Wednesday of month 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 3,
+          "said": "WEDNESDAY ŚRODA NOVEMBER 11 ... 6:30 pm Healing Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 5,
+          "said": "Msza święta z modlitwami o łaskę uzdrowienia odbędzie się w środę 11 Listopada 2026 o godzinie 6:30 PM"
+        }
+      ],
+      "rationale": "R30: the devotions box lists 'Prayers for healing 2nd Wednesday of month 6:30 PM' (not called a Mass), while dated notices for Nov 11 and Dec 9 (both second Wednesdays) announce a Mass with healing prayers at 6:30 PM. Two consecutive months point to a monthly Mass, so I lean to second Wednesdays; the fallback keeps the announced Dec 9 date (R16).",
+      "question": "Is the 6:30 PM Healing Mass a monthly second-Wednesday Mass, or record only the announced December 9 one?",
+      "options": [
+        {
+          "label": "Second Wednesdays 6:30 PM",
+          "entry": {
+            "church_slug": "st-joseph-passaic",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "second"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mass with prayers for healing"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Only Dec 9, 2026",
+          "entry": {
+            "church_slug": "st-joseph-passaic",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-09",
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mass with prayers for healing"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:20Z"
+      }
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass in honor of St. Francis"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 5,
+          "said": "Msza Święta ku czci Świętego Franciszka w Środa 2 Grudnia 2026 o godzinie 7 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32de0277",
+          "page": 5,
+          "said": "Msza Święta ku czci Świętego Franciszka w Środa 2 Grudnia 2026 o godzinie 7 pm"
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass after as_of, announced in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Roraty (Advent, Polish)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 4,
+          "said": "Roraty ... będą odprawiane w języku polskim w czasie Adwentu, w poniedziałki, wtorki i środy o godzinie 6:00 rano."
+        }
+      ],
+      "rationale": "R20, R15: Advent Roraty Masses Mon-Wed at 6:00 AM begin after as_of (Advent starts Nov 29) and the bulletin gives no dates; keep the current 6:30 AM schedule and let update mode read the Advent bulletins, which will show whether Roraty replaces the 6:30 Mass on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Roraty (Advent, Polish)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 4,
+          "said": "Roraty ... będą odprawiane w języku polskim w czasie Adwentu, w poniedziałki, wtorki i środy o godzinie 6:00 rano."
+        }
+      ],
+      "rationale": "R20, R15: Advent Roraty Masses Mon-Wed at 6:00 AM begin after as_of (Advent starts Nov 29) and the bulletin gives no dates; keep the current 6:30 AM schedule and let update mode read the Advent bulletins, which will show whether Roraty replaces the 6:30 Mass on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Roraty (Advent, Polish)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 4,
+          "said": "Roraty ... będą odprawiane w języku polskim w czasie Adwentu, w poniedziałki, wtorki i środy o godzinie 6:00 rano."
+        }
+      ],
+      "rationale": "R20, R15: Advent Roraty Masses Mon-Wed at 6:00 AM begin after as_of (Advent starts Nov 29) and the bulletin gives no dates; keep the current 6:30 AM schedule and let update mode read the Advent bulletins, which will show whether Roraty replaces the 6:30 Mass on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Holy Day : 7:30 (Polish), 11:00 AM (Polish) 6:00 PM (Polish); Holy Days: During Mass"
+        }
+      ],
+      "rationale": "POLICY Dates: the holy-day Mass times name no date, so none can be projected (next is Dec 8); update mode will read the bulletin that dates it. Holy-day confession 'during Mass' has no time of its own (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37466dde",
+          "page": 2,
+          "said": "Rosary Monday-Friday after Mass at 6:30 AM; Novena to Our Lady of Częstochowa Saturdays after Mass at 7 AM; Chaplet of the Divine Mercy Fridays before Mass at 6 PM"
+        }
+      ],
+      "rationale": "R24: Rosary, novenas and the Chaplet are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

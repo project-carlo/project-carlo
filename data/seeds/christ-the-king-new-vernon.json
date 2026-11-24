@@ -1,0 +1,623 @@
+{
+  "schema_version": 1,
+  "parish_slug": "christ-the-king-new-vernon",
+  "status": "approved",
+  "as_of": "2026-11-15T16:09:11Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T12:32:55Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:41:31Z",
+  "summary": "One church. Both bulletins read (Nov 1 and Nov 8, 2026 issues) print the same schedule: Sat 5pm vigil, Sun 7/9/11am and 5:30pm (Sept-May), Mon-Sat 9am, Sat 9:30-10 Confession and Adoration. Adds the dated Nov 17 7pm Mass of Remembrance; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "90813b47d6baffe54df4b859d65e526333a43f1870a6e62112066633acd26b51",
+      "fetched_at": "2026-11-15T16:09:11Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c2ab02e8d20c4ee8dc70eacba635e7652e342ac31c501fe5f74578ffdc2a43a4",
+      "fetched_at": "2026-11-08T15:35:16Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-new-vernon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90813b47",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday (Vigil) 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2ab02e8",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday (Vigil) 5pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass schedule box of both bulletins read (Nov 1 and Nov 8 issues); the intentions list a 5pm Saturday Mass both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-new-vernon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90813b47",
+          "page": 1,
+          "said": "Sunday 7, 9, 11am, 5:30pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2ab02e8",
+          "page": 1,
+          "said": "Sunday 7, 9, 11am, 5:30pm*"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass schedule box of both bulletins read; the intentions list 7am, 9am and 11am Sunday Masses both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-new-vernon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90813b47",
+          "page": 1,
+          "said": "Sunday 7, 9, 11am, 5:30pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2ab02e8",
+          "page": 1,
+          "said": "Sunday 7, 9, 11am, 5:30pm*"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass schedule box of both bulletins read; the intentions list 7am, 9am and 11am Sunday Masses both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-new-vernon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90813b47",
+          "page": 1,
+          "said": "Sunday 7, 9, 11am, 5:30pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2ab02e8",
+          "page": 1,
+          "said": "Sunday 7, 9, 11am, 5:30pm*"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass schedule box of both bulletins read; the intentions list 7am, 9am and 11am Sunday Masses both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-new-vernon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90813b47",
+          "page": 1,
+          "said": "Sunday 7, 9, 11am, 5:30pm* / *September - May"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2ab02e8",
+          "page": 1,
+          "said": "Sunday 7, 9, 11am, 5:30pm* / *September - May"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins with the asterisk *September - May; POLICY, Weekly qualifiers keeps the months as the season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-new-vernon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90813b47",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2ab02e8",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 9am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule box of both bulletins; the intentions list a 9am Mass every weekday and Saturday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-new-vernon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90813b47",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2ab02e8",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 9am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule box of both bulletins; the intentions list a 9am Mass every weekday and Saturday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-new-vernon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90813b47",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2ab02e8",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 9am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule box of both bulletins; the intentions list a 9am Mass every weekday and Saturday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-new-vernon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90813b47",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2ab02e8",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 9am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule box of both bulletins; the intentions list a 9am Mass every weekday and Saturday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-new-vernon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90813b47",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2ab02e8",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 9am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule box of both bulletins; the intentions list a 9am Mass every weekday and Saturday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-new-vernon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90813b47",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2ab02e8",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 9am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule box of both bulletins; the intentions list a 9am Mass every weekday and Saturday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-new-vernon",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90813b47",
+          "page": 2,
+          "said": "Reconciliation (Individual Confession) Every Saturday, 9:30-10:00AM and by Appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2ab02e8",
+          "page": 2,
+          "said": "Reconciliation (Individual Confession) Every Saturday, 9:30-10:00AM and by Appointment."
+        }
+      ],
+      "rationale": "R1: printed under Devotions on page 2 of both bulletins; 'by Appointment' has no time and adds nothing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-new-vernon",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90813b47",
+          "page": 2,
+          "said": "Eucharistic Adoration Every Saturday, 9:30-10:00AM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2ab02e8",
+          "page": 2,
+          "said": "Eucharistic Adoration Every Saturday, 9:30-10:00AM."
+        }
+      ],
+      "rationale": "R1: printed under Devotions on page 2 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-new-vernon",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2ab02e8",
+          "page": 5,
+          "said": "Mass of Remembrance November 17 | 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90813b47",
+          "page": 4,
+          "said": "Mass of Remembrance November 17 | 7pm All are invited to pray and remember our deceased family members"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass open to all ('All are invited'), on or after as_of; printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90813b47",
+          "page": 5,
+          "said": "Your prayers will be offered as intentions during the Thanksgiving Day Mass."
+        }
+      ],
+      "rationale": "R26: the Thanksgiving Day Mass is mentioned with no time in either bulletin; nothing to record. Update mode can pick it up if a later issue times it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2ab02e8",
+          "page": 4,
+          "said": "HOLY HOUR, HAPPY HOUR Wednesday, November 4th 5:30-7:30pm ... Our next Holy Hour will be dedicated to vocations"
+        }
+      ],
+      "rationale": "R16, R26: the November 4 Holy Hour is before as_of, and 'our next Holy Hour' has no date or time; nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90813b47",
+          "page": 2,
+          "said": "Rosary Monday, Wednesday, and Friday after the 9:00am Mass"
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,514 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-queen-of-peace-hewitt",
+  "status": "approved",
+  "as_of": "2026-11-15T16:12:47Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:39:42Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:19Z",
+  "summary": "One church, Our Lady Queen of Peace in Hewitt. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule: Sat 5 PM vigil; Sun 8, 9 (Polish) and 11 AM; daily Mass 9 AM Monday-Saturday; confession Saturday 4-4:45 PM. No Adoration is printed; no history is stored. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f2f951b8aa6dab2b164e2acb7d9350285c41bb5ce2f37deae24ef8372a888a0d",
+      "fetched_at": "2026-11-15T16:12:47Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "595ef08155d6540c4464b3b718dd11076868f0184d8a9f6e4fe97cba6c996ba2",
+      "fetched_at": "2026-11-08T15:38:33Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-hewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 3,
+          "said": "Saturday Evening Mass 5:00PM (Mass in the Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "595ef081",
+          "page": 3,
+          "said": "Saturday Evening Mass 5:00PM (Mass in the Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 2,
+          "said": "Saturday ... 5:00 PM [intention]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "595ef081",
+          "page": 2,
+          "said": "Saturday ... 5:00 PM [intention]"
+        }
+      ],
+      "rationale": "R1: in the Worship Schedule box and the Mass intentions of both bulletins read (Nov 8 and Nov 15, 2026).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-hewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 3,
+          "said": "Sunday Masses: 8:00AM (Mass in the Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "595ef081",
+          "page": 3,
+          "said": "Sunday Masses: 8:00AM (Mass in the Church)"
+        }
+      ],
+      "rationale": "R1: in the Worship Schedule box and the Mass intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-hewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 3,
+          "said": "9:00AM (Polish Mass in the Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "595ef081",
+          "page": 3,
+          "said": "9:00AM (Polish Mass in the Church)"
+        }
+      ],
+      "rationale": "R1: in the Worship Schedule box and the Mass intentions of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-hewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 3,
+          "said": "11:00AM (Mass in the Church) (11:00 AM Mass will continue to be LiveStream on Facebook)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "595ef081",
+          "page": 3,
+          "said": "11:00AM (Mass in the Church) (11:00 AM Mass will continue to be LiveStream on Facebook)"
+        }
+      ],
+      "rationale": "R1: in the Worship Schedule box and the Mass intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-hewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 3,
+          "said": "Regular 9:00 AM Daily Mass from Monday to Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "595ef081",
+          "page": 3,
+          "said": "Regular 9:00 AM Daily Mass from Monday to Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 2,
+          "said": "Monday, November 16th 9:00 AM ... Saturday, November 21st 9:00 AM"
+        }
+      ],
+      "rationale": "R1: the schedule box gives 9:00 AM daily Mass Monday to Saturday in both bulletins, and each week's intentions list 9:00 AM Mass every day Monday-Saturday (Saturday's line has no intention, which R39 says proves nothing against the box).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-hewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 3,
+          "said": "Regular 9:00 AM Daily Mass from Monday to Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "595ef081",
+          "page": 3,
+          "said": "Regular 9:00 AM Daily Mass from Monday to Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 2,
+          "said": "Monday, November 16th 9:00 AM ... Saturday, November 21st 9:00 AM"
+        }
+      ],
+      "rationale": "R1: the schedule box gives 9:00 AM daily Mass Monday to Saturday in both bulletins, and each week's intentions list 9:00 AM Mass every day Monday-Saturday (Saturday's line has no intention, which R39 says proves nothing against the box).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-hewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 3,
+          "said": "Regular 9:00 AM Daily Mass from Monday to Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "595ef081",
+          "page": 3,
+          "said": "Regular 9:00 AM Daily Mass from Monday to Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 2,
+          "said": "Monday, November 16th 9:00 AM ... Saturday, November 21st 9:00 AM"
+        }
+      ],
+      "rationale": "R1: the schedule box gives 9:00 AM daily Mass Monday to Saturday in both bulletins, and each week's intentions list 9:00 AM Mass every day Monday-Saturday (Saturday's line has no intention, which R39 says proves nothing against the box).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-hewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 3,
+          "said": "Regular 9:00 AM Daily Mass from Monday to Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "595ef081",
+          "page": 3,
+          "said": "Regular 9:00 AM Daily Mass from Monday to Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 2,
+          "said": "Monday, November 16th 9:00 AM ... Saturday, November 21st 9:00 AM"
+        }
+      ],
+      "rationale": "R1: the schedule box gives 9:00 AM daily Mass Monday to Saturday in both bulletins, and each week's intentions list 9:00 AM Mass every day Monday-Saturday (Saturday's line has no intention, which R39 says proves nothing against the box).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-hewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 3,
+          "said": "Regular 9:00 AM Daily Mass from Monday to Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "595ef081",
+          "page": 3,
+          "said": "Regular 9:00 AM Daily Mass from Monday to Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 2,
+          "said": "Monday, November 16th 9:00 AM ... Saturday, November 21st 9:00 AM"
+        }
+      ],
+      "rationale": "R1: the schedule box gives 9:00 AM daily Mass Monday to Saturday in both bulletins, and each week's intentions list 9:00 AM Mass every day Monday-Saturday (Saturday's line has no intention, which R39 says proves nothing against the box).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-hewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 3,
+          "said": "Regular 9:00 AM Daily Mass from Monday to Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "595ef081",
+          "page": 3,
+          "said": "Regular 9:00 AM Daily Mass from Monday to Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 2,
+          "said": "Monday, November 16th 9:00 AM ... Saturday, November 21st 9:00 AM"
+        }
+      ],
+      "rationale": "R1: the schedule box gives 9:00 AM daily Mass Monday to Saturday in both bulletins, and each week's intentions list 9:00 AM Mass every day Monday-Saturday (Saturday's line has no intention, which R39 says proves nothing against the box).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-hewitt",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 4,
+          "said": "SACRAMENT OF RECONCILIATION Saturday 4:00 - 4:45 PM (or by appointment with Fr. Kamil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "595ef081",
+          "page": 4,
+          "said": "SACRAMENT OF RECONCILIATION Saturday 4:00 - 4:45 PM (or by appointment with Fr. Kamil)"
+        }
+      ],
+      "rationale": "R1: printed under Sacraments in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2f951b8",
+          "page": 4,
+          "said": "(or by appointment with Fr. Kamil)"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

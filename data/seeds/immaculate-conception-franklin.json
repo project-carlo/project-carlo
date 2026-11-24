@@ -1,0 +1,915 @@
+{
+  "schema_version": 1,
+  "parish_slug": "immaculate-conception-franklin",
+  "status": "approved",
+  "as_of": "2026-11-15T16:10:21Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T12:54:20Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:41:46Z",
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026; image-only pages, rendered) print the same schedule box and matching intentions: Sat 5 PM vigil, Sun 7:30/9:30/11:30, Mon-Wed 7:30 AM, Fri 7 PM, Sat 8 AM; Friday 6-7 PM Exposition with Confession; Confession Mon-Wed 7:15 AM, Sat 4:30 PM, Sunday 15 minutes before each Mass. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ce5591728b34f512d15bb33133ffa6013eb1c1ffcc23361db3eebf14b99c3f67",
+      "fetched_at": "2026-11-15T16:10:21Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "88e844d2653c100b59e378782fee25dc528003676ab807857e783d2e4ba54329",
+      "fetched_at": "2026-11-08T15:35:50Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "SUNDAY MASS SCHEDULE Saturday: 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "SUNDAY MASS SCHEDULE Saturday: 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 2,
+          "said": "SATURDAY ... 5:00pm (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 2,
+          "said": "SATURDAY ... 5:00pm (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and the intentions of both bulletins read (Nov 8 and Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:30am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:30am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 2,
+          "said": "SUNDAY ... 7:30am / 9:30am / 11:30am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 2,
+          "said": "SUNDAY ... 7:30am / 9:30am / 11:30am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:30am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:30am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 2,
+          "said": "SUNDAY ... 7:30am / 9:30am / 11:30am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 2,
+          "said": "SUNDAY ... 7:30am / 9:30am / 11:30am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:30am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "Sunday: 7:30am, 9:30am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 2,
+          "said": "SUNDAY ... 7:30am / 9:30am / 11:30am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 2,
+          "said": "SUNDAY ... 7:30am / 9:30am / 11:30am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "DAILY MASSES Monday, Tuesday, Wednesday: 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "DAILY MASSES Monday, Tuesday, Wednesday: 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 2,
+          "said": "MONDAY/TUESDAY/WEDNESDAY ... 7:30am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 2,
+          "said": "MONDAY/TUESDAY/WEDNESDAY ... 7:30am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and intentions of both bulletins. Thursday: 'No Daily Mass'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "DAILY MASSES Monday, Tuesday, Wednesday: 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "DAILY MASSES Monday, Tuesday, Wednesday: 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 2,
+          "said": "MONDAY/TUESDAY/WEDNESDAY ... 7:30am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 2,
+          "said": "MONDAY/TUESDAY/WEDNESDAY ... 7:30am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and intentions of both bulletins. Thursday: 'No Daily Mass'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "DAILY MASSES Monday, Tuesday, Wednesday: 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "DAILY MASSES Monday, Tuesday, Wednesday: 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 2,
+          "said": "MONDAY/TUESDAY/WEDNESDAY ... 7:30am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 2,
+          "said": "MONDAY/TUESDAY/WEDNESDAY ... 7:30am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and intentions of both bulletins. Thursday: 'No Daily Mass'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "Friday: 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "Friday: 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 2,
+          "said": "FRIDAY November 20 - Please Note New Mass Time 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 2,
+          "said": "FRIDAY November 20 - Please Note New Mass Time 7:00pm"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and intentions of both bulletins give Friday 7:00 PM; the 'new Mass time' note confirms the change has already taken effect.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "Saturday: 8:00am Mass, Novena & Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "Saturday: 8:00am Mass, Novena & Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 2,
+          "said": "SATURDAY ... 8:00am (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 2,
+          "said": "SATURDAY ... 8:00am (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT Every Friday 6:00pm to 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT Every Friday 6:00pm to 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament every Friday 6pm to 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament every Friday 6pm to 7pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and on the intentions page of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION ... Friday: 6:00pm - 7:00pm (During Adoration)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION ... Friday: 6:00pm - 7:00pm (During Adoration)"
+        }
+      ],
+      "rationale": "R1, R10: clock times printed; Confession during Adoration takes the Adoration's hours with the note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Monday, Tuesday, Wednesday: 7:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Monday, Tuesday, Wednesday: 7:15am"
+        }
+      ],
+      "rationale": "R1, POLICY Times: a start time with no end; left without end_time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Monday, Tuesday, Wednesday: 7:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Monday, Tuesday, Wednesday: 7:15am"
+        }
+      ],
+      "rationale": "R1, POLICY Times: a start time with no end; left without end_time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Monday, Tuesday, Wednesday: 7:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Monday, Tuesday, Wednesday: 7:15am"
+        }
+      ],
+      "rationale": "R1, POLICY Times: a start time with no end; left without end_time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "Saturday: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "Saturday: 4:30pm"
+        }
+      ],
+      "rationale": "R1, POLICY Times: a start time with no end; left without end_time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "07:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "Sunday: 15 Minutes Before Every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "Sunday: 15 Minutes Before Every Mass"
+        }
+      ],
+      "rationale": "R1, R10: '15 minutes before every Mass' is one entry per Sunday Mass, from 15 minutes before to its start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "Sunday: 15 Minutes Before Every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "Sunday: 15 Minutes Before Every Mass"
+        }
+      ],
+      "rationale": "R1, R10: '15 minutes before every Mass' is one entry per Sunday Mass, from 15 minutes before to its start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": "11:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 11:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "Sunday: 15 Minutes Before Every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "Sunday: 15 Minutes Before Every Mass"
+        }
+      ],
+      "rationale": "R1, R10: '15 minutes before every Mass' is one entry per Sunday Mass, from 15 minutes before to its start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 2,
+          "said": "Novena and Benediction every Saturday Morning ... attending 8 am Mass on Saturday morning, followed by Novena, recitation of the Rosary, and Benediction."
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 2,
+          "said": "Novena and Benediction every Saturday Morning ... attending 8 am Mass on Saturday morning, followed by Novena, recitation of the Rosary, and Benediction."
+        }
+      ],
+      "rationale": "R24, R26: Benediction follows the Mass, the Novena and the Rosary, so it has no definite start time; the Novena and Rosary are devotions POLICY leaves out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 1,
+          "said": "HOLY DAYS OF OBLIGATION: 7:00am & 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88e844d2",
+          "page": 1,
+          "said": "HOLY DAYS OF OBLIGATION: 7:00am & 7:00pm"
+        }
+      ],
+      "rationale": "R16, POLICY Dates: a generic holy-day line with no date; no holy day is dated in either bulletin, and dates are not projected from the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-franklin",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-06",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Installation Mass of Fr. Lukasz Iwanczuk"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce559172",
+          "page": 3,
+          "said": "SAVE THE DATE Sunday, December 6 at the 9:30am Mass Installation Mass of Fr. Lukasz Iwanczuk"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: a special occasion at the regular Sunday 9:30 AM Mass is covered by the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

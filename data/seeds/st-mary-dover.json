@@ -1,0 +1,479 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-dover",
+  "status": "approved",
+  "as_of": "2026-11-15T16:21:13Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T18:00:56Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:43Z",
+  "summary": "One church, St. Mary's, Wharton (mailing address Dover). The Nov 8 and Nov 15, 2026 bulletins print the same schedule box: Sat 5 PM vigil, Sun 7:30/9:30/11:30 AM, Mon-Fri 7 AM, Saturday Confession 4-4:30 PM. No Adoration is listed; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a4fb7e51182e336c37b0516e4d7809bfc22f85ad2d85488d64ccb4084606083f",
+      "fetched_at": "2026-11-15T16:21:13Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "5330679e861b6ed00bff0d7d59b61a828327228612fc57530b65e4451d03eacd",
+      "fetched_at": "2026-11-08T15:45:35Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4fb7e51",
+          "page": 1,
+          "said": "Saturday | 5:00 PM Vigil*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5330679e",
+          "page": 1,
+          "said": "Saturday | 5:00 PM Vigil*"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read (Nov 8 and Nov 15); the intentions list a 5:00 PM Saturday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4fb7e51",
+          "page": 1,
+          "said": "Sunday | 7:30 AM, 9:30 AM, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5330679e",
+          "page": 1,
+          "said": "Sunday | 7:30 AM, 9:30 AM, 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read; the p2 intentions list all three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4fb7e51",
+          "page": 1,
+          "said": "Sunday | 7:30 AM, 9:30 AM, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5330679e",
+          "page": 1,
+          "said": "Sunday | 7:30 AM, 9:30 AM, 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read; the p2 intentions list all three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4fb7e51",
+          "page": 1,
+          "said": "Sunday | 7:30 AM, 9:30 AM, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5330679e",
+          "page": 1,
+          "said": "Sunday | 7:30 AM, 9:30 AM, 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read; the p2 intentions list all three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4fb7e51",
+          "page": 1,
+          "said": "Monday - Friday | 7:00 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5330679e",
+          "page": 1,
+          "said": "Monday - Friday | 7:00 AM*"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read; the p2 intentions list a 7:00 AM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4fb7e51",
+          "page": 1,
+          "said": "Monday - Friday | 7:00 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5330679e",
+          "page": 1,
+          "said": "Monday - Friday | 7:00 AM*"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read; the p2 intentions list a 7:00 AM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4fb7e51",
+          "page": 1,
+          "said": "Monday - Friday | 7:00 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5330679e",
+          "page": 1,
+          "said": "Monday - Friday | 7:00 AM*"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read; the p2 intentions list a 7:00 AM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4fb7e51",
+          "page": 1,
+          "said": "Monday - Friday | 7:00 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5330679e",
+          "page": 1,
+          "said": "Monday - Friday | 7:00 AM*"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read; the p2 intentions list a 7:00 AM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4fb7e51",
+          "page": 1,
+          "said": "Monday - Friday | 7:00 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5330679e",
+          "page": 1,
+          "said": "Monday - Friday | 7:00 AM*"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read; the p2 intentions list a 7:00 AM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dover",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4fb7e51",
+          "page": 1,
+          "said": "Confession Saturday | 4:00 PM - 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5330679e",
+          "page": 1,
+          "said": "Confession Saturday | 4:00 PM - 4:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4fb7e51",
+          "page": 1,
+          "said": "Confession Other | By Appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4fb7e51",
+          "page": 7,
+          "said": "Missionary image of Our Lady of Guadalupe, St. Mary's Church November 24 7:00 pm ... followed by a special Rosary prayer at 7:30 pm"
+        }
+      ],
+      "rationale": "R24: a visit of the Guadalupe image with Rosary, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dover",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-14",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5330679e",
+          "page": 4,
+          "said": "St. Mary's Mass of Remembrance Saturday, November 14th 10:30 a.m."
+        }
+      ],
+      "rationale": "R16: a dated Mass before as_of (Nov 15), out of seed scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

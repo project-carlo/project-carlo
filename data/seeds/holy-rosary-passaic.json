@@ -1,0 +1,1365 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-rosary-passaic",
+  "status": "approved",
+  "as_of": "2026-11-15T16:09:36Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T12:46:17Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:41:40Z",
+  "summary": "One church, Holy Rosary (Diocesan Shrine of St. John Paul II), Passaic; bilingual Polish/English bulletin. Both bulletins (Nov 8 and Nov 15) print the same schedule box, matched by the intentions and the parish website: Sat 7 AM, 5 PM (English) and 7 PM vigils; Sun 7, 8:30, 10:30, 12:30 (English), 7 PM; Mon-Fri 8 AM and 7 PM; Confession Sat 4-5 PM and Mon-Fri 6:30-7 PM. Monthly expositions during Friday evening Mass have no time of their own and are left out, as is a past website first-Friday calendar entry. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0a4dd58b384ff861ca2c29b03d98a26435eab954dbe1536c61f1472c16d9af51",
+      "fetched_at": "2026-11-15T16:09:36Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "754d23efab7227aafaf8fb5a690b018dad48b8139ecfbd64e52cd393027c4564",
+      "fetched_at": "2026-11-08T15:35:32Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Saturday: 5:00 P.M. & 7:00P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Saturday: 5:00 P.M. & 7:00P.M."
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "Saturday : 7:00 AM Polish 5:00 PM 7:00 PM Polish"
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "SOBOTA: 7:00 AM | 5:00 PM po angielsku | 7:00 PM po polsku"
+        }
+      ],
+      "rationale": "R1: schedule box on page 1 of both bulletins; intentions on page 2 list it each Saturday. The website's Mass times page gives its language (po angielsku).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Saturday: 5:00 P.M. & 7:00P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Saturday: 5:00 P.M. & 7:00P.M."
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "Saturday : 7:00 AM Polish 5:00 PM 7:00 PM Polish"
+        }
+      ],
+      "rationale": "R1: schedule box on page 1 of both bulletins; intentions list it each Saturday. Language from the website's Mass times page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Sunday: 7:00, 8:30, & 10:30 A.M., 12:30 & 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Sunday: 7:00, 8:30, & 10:30 A.M., 12:30 & 7:00 P.M."
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "Sunday : 7:00 AM Polish 8:30 AM Polish 10:30 AM POLISH"
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "12:30 PM English | 7:00 PM Polish"
+        }
+      ],
+      "rationale": "R1: schedule box on page 1 of both bulletins; the intentions list each Sunday time. Language from the website's Mass times page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Sunday: 7:00, 8:30, & 10:30 A.M., 12:30 & 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Sunday: 7:00, 8:30, & 10:30 A.M., 12:30 & 7:00 P.M."
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "Sunday : 7:00 AM Polish 8:30 AM Polish 10:30 AM POLISH"
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "12:30 PM English | 7:00 PM Polish"
+        }
+      ],
+      "rationale": "R1: schedule box on page 1 of both bulletins; the intentions list each Sunday time. Language from the website's Mass times page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Sunday: 7:00, 8:30, & 10:30 A.M., 12:30 & 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Sunday: 7:00, 8:30, & 10:30 A.M., 12:30 & 7:00 P.M."
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "Sunday : 7:00 AM Polish 8:30 AM Polish 10:30 AM POLISH"
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "12:30 PM English | 7:00 PM Polish"
+        }
+      ],
+      "rationale": "R1: schedule box on page 1 of both bulletins; the intentions list each Sunday time. Language from the website's Mass times page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Sunday: 7:00, 8:30, & 10:30 A.M., 12:30 & 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Sunday: 7:00, 8:30, & 10:30 A.M., 12:30 & 7:00 P.M."
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "Sunday : 7:00 AM Polish 8:30 AM Polish 10:30 AM POLISH"
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "12:30 PM English | 7:00 PM Polish"
+        }
+      ],
+      "rationale": "R1: schedule box on page 1 of both bulletins; the intentions list each Sunday time. Language from the website's Mass times page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Sunday: 7:00, 8:30, & 10:30 A.M., 12:30 & 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Sunday: 7:00, 8:30, & 10:30 A.M., 12:30 & 7:00 P.M."
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "12:30 PM English | 7:00 PM Polish"
+        }
+      ],
+      "rationale": "R1: schedule box on page 1 of both bulletins. Language from the website's Mass times page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 2,
+          "said": "MONDAY November 16 ... 8:00am ... 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "MON - FRI: 8:00 AM | 7:00 PM"
+        }
+      ],
+      "rationale": "R1: 'Weekday Masses 8:00 A.M., 7:00 P.M.' in the page 1 schedule box of both bulletins; both weeks' intentions list 8:00am and 7:00pm Monday to Friday, and the website says MON - FRI. Saturday's morning Mass is 7:00 AM, not 8 (next slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 2,
+          "said": "MONDAY November 16 ... 8:00am ... 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "MON - FRI: 8:00 AM | 7:00 PM"
+        }
+      ],
+      "rationale": "R1: 'Weekday Masses 8:00 A.M., 7:00 P.M.' in the page 1 schedule box of both bulletins; both weeks' intentions list 8:00am and 7:00pm Monday to Friday, and the website says MON - FRI. Saturday's morning Mass is 7:00 AM, not 8 (next slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 2,
+          "said": "MONDAY November 16 ... 8:00am ... 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "MON - FRI: 8:00 AM | 7:00 PM"
+        }
+      ],
+      "rationale": "R1: 'Weekday Masses 8:00 A.M., 7:00 P.M.' in the page 1 schedule box of both bulletins; both weeks' intentions list 8:00am and 7:00pm Monday to Friday, and the website says MON - FRI. Saturday's morning Mass is 7:00 AM, not 8 (next slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 2,
+          "said": "MONDAY November 16 ... 8:00am ... 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "MON - FRI: 8:00 AM | 7:00 PM"
+        }
+      ],
+      "rationale": "R1: 'Weekday Masses 8:00 A.M., 7:00 P.M.' in the page 1 schedule box of both bulletins; both weeks' intentions list 8:00am and 7:00pm Monday to Friday, and the website says MON - FRI. Saturday's morning Mass is 7:00 AM, not 8 (next slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 2,
+          "said": "MONDAY November 16 ... 8:00am ... 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "MON - FRI: 8:00 AM | 7:00 PM"
+        }
+      ],
+      "rationale": "R1: 'Weekday Masses 8:00 A.M., 7:00 P.M.' in the page 1 schedule box of both bulletins; both weeks' intentions list 8:00am and 7:00pm Monday to Friday, and the website says MON - FRI. Saturday's morning Mass is 7:00 AM, not 8 (next slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 2,
+          "said": "MONDAY November 16 ... 8:00am ... 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "MON - FRI: 8:00 AM | 7:00 PM"
+        }
+      ],
+      "rationale": "R1: 'Weekday Masses 8:00 A.M., 7:00 P.M.' in the page 1 schedule box of both bulletins; both weeks' intentions list 8:00am and 7:00pm Monday to Friday, and the website says MON - FRI. Saturday's morning Mass is 7:00 AM, not 8 (next slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 2,
+          "said": "MONDAY November 16 ... 8:00am ... 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "MON - FRI: 8:00 AM | 7:00 PM"
+        }
+      ],
+      "rationale": "R1: 'Weekday Masses 8:00 A.M., 7:00 P.M.' in the page 1 schedule box of both bulletins; both weeks' intentions list 8:00am and 7:00pm Monday to Friday, and the website says MON - FRI. Saturday's morning Mass is 7:00 AM, not 8 (next slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 2,
+          "said": "MONDAY November 16 ... 8:00am ... 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "MON - FRI: 8:00 AM | 7:00 PM"
+        }
+      ],
+      "rationale": "R1: 'Weekday Masses 8:00 A.M., 7:00 P.M.' in the page 1 schedule box of both bulletins; both weeks' intentions list 8:00am and 7:00pm Monday to Friday, and the website says MON - FRI. Saturday's morning Mass is 7:00 AM, not 8 (next slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 2,
+          "said": "MONDAY November 16 ... 8:00am ... 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "MON - FRI: 8:00 AM | 7:00 PM"
+        }
+      ],
+      "rationale": "R1: 'Weekday Masses 8:00 A.M., 7:00 P.M.' in the page 1 schedule box of both bulletins; both weeks' intentions list 8:00am and 7:00pm Monday to Friday, and the website says MON - FRI. Saturday's morning Mass is 7:00 AM, not 8 (next slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 A.M. 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 2,
+          "said": "MONDAY November 16 ... 8:00am ... 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "MON - FRI: 8:00 AM | 7:00 PM"
+        }
+      ],
+      "rationale": "R1: 'Weekday Masses 8:00 A.M., 7:00 P.M.' in the page 1 schedule box of both bulletins; both weeks' intentions list 8:00am and 7:00pm Monday to Friday, and the website says MON - FRI. Saturday's morning Mass is 7:00 AM, not 8 (next slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 2,
+          "said": "SATURDAY November 21 sobota 7:00am Za parafian"
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 2,
+          "said": "SATURDAY November 7 sobota 7:00am Za parafian; SATURDAY November 14 sobota 7:00am Za parafian"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 5,
+          "said": "First Saturday of each month: 7:00am Mass ... Second Saturday of each month: 7:00am Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/mass-times",
+          "said": "Saturday : 7:00 AM Polish 5:00 PM 7:00 PM Polish"
+        }
+      ],
+      "rationale": "R35 and POLICY, Weekly or dated rule 4: the intentions of both bulletins list a 7:00am Saturday Mass on November 7, 14 and 21 (three weeks); the devotions list ties first and second Saturdays to 7:00am Mass and the website lists Saturday 7:00 AM. The page 1 box's generic 'Weekday Masses 8:00 A.M.' does not apply to Saturday: no 8:00am Saturday Mass appears in any intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Confessions: Saturdays: 4:00 - 5:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Confessions: Saturdays: 4:00 - 5:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 3,
+          "said": "Confession: 4:00pm-5:00pm."
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/confession",
+          "said": "Saturday 4:00 PM - 5:00 PM"
+        }
+      ],
+      "rationale": "R1: schedule box on page 1 of both bulletins, repeated in this week's announcements.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Confessions: ... Daily: 6:30 - 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Confessions: ... Daily: 6:30 - 7:00 P.M."
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/confession",
+          "said": "Monday - Friday 6:30 PM - 7:00 PM"
+        }
+      ],
+      "rationale": "R1: 'Daily: 6:30 - 7:00 P.M.' in the page 1 box of both bulletins. R6: the parish's own confession page says Monday - Friday 6:30-7:00 PM, which fits the box (Saturday and Sunday have their own lines), so 'Daily' means Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Confessions: ... Daily: 6:30 - 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Confessions: ... Daily: 6:30 - 7:00 P.M."
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/confession",
+          "said": "Monday - Friday 6:30 PM - 7:00 PM"
+        }
+      ],
+      "rationale": "R1: 'Daily: 6:30 - 7:00 P.M.' in the page 1 box of both bulletins. R6: the parish's own confession page says Monday - Friday 6:30-7:00 PM, which fits the box (Saturday and Sunday have their own lines), so 'Daily' means Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Confessions: ... Daily: 6:30 - 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Confessions: ... Daily: 6:30 - 7:00 P.M."
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/confession",
+          "said": "Monday - Friday 6:30 PM - 7:00 PM"
+        }
+      ],
+      "rationale": "R1: 'Daily: 6:30 - 7:00 P.M.' in the page 1 box of both bulletins. R6: the parish's own confession page says Monday - Friday 6:30-7:00 PM, which fits the box (Saturday and Sunday have their own lines), so 'Daily' means Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Confessions: ... Daily: 6:30 - 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Confessions: ... Daily: 6:30 - 7:00 P.M."
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/confession",
+          "said": "Monday - Friday 6:30 PM - 7:00 PM"
+        }
+      ],
+      "rationale": "R1: 'Daily: 6:30 - 7:00 P.M.' in the page 1 box of both bulletins. R6: the parish's own confession page says Monday - Friday 6:30-7:00 PM, which fits the box (Saturday and Sunday have their own lines), so 'Daily' means Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Confessions: ... Daily: 6:30 - 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Confessions: ... Daily: 6:30 - 7:00 P.M."
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/confession",
+          "said": "Monday - Friday 6:30 PM - 7:00 PM"
+        }
+      ],
+      "rationale": "R1: 'Daily: 6:30 - 7:00 P.M.' in the page 1 box of both bulletins. R6: the parish's own confession page says Monday - Friday 6:30-7:00 PM, which fits the box (Saturday and Sunday have their own lines), so 'Daily' means Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Daily: 6:30 - 7:00 P.M."
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/confession",
+          "said": "Monday - Friday 6:30 PM - 7:00 PM Saturday 4:00 PM - 5:00 PM"
+        }
+      ],
+      "rationale": "R6: the bulletin box's 'Daily' line could be read as every day, but the parish's confession page limits the 6:30-7:00 PM time to Monday - Friday and gives Saturday 4-5 PM only; Sunday has its own 'before each Mass' line.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Daily: 6:30 - 7:00 P.M."
+        },
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/confession",
+          "said": "Monday - Friday 6:30 PM - 7:00 PM Saturday 4:00 PM - 5:00 PM"
+        }
+      ],
+      "rationale": "R6: the bulletin box's 'Daily' line could be read as every day, but the parish's confession page limits the 6:30-7:00 PM time to Monday - Friday and gives Saturday 4-5 PM only; Sunday has its own 'before each Mass' line.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 1,
+          "said": "Sundays: before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 1,
+          "said": "Sundays: before each Mass"
+        }
+      ],
+      "rationale": "R26, POLICY Times: 'before each Mass' gives no clock time or duration, so there is no definite start time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 5,
+          "said": "Third Friday of each month: 7:00pm Mass, exposition Blessed Sacrament, and devotion to God's Mercy."
+        },
+        {
+          "source": "agent",
+          "bulletin": "754d23ef",
+          "page": 3,
+          "said": "Friday, November 20, 7:00pm Mass, exposition Blessed Sacrament, and devotion to God's Mercy."
+        }
+      ],
+      "rationale": "POLICY, Final source checks; R26 (former C6): the exposition is part of the 7:00pm Mass and devotion and has no start or end time of its own, and the bulletin does not say it follows the Mass, so no Adoration time can be recorded. The 7:00pm Friday Mass is in the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 4,
+          "said": "w każdy ostatni piątek miesiąca o godz. 7:00pm podczas Mszy św. i nabożeństwa z Wystawionym Najświętszym Sakramentem"
+        }
+      ],
+      "rationale": "POLICY, Final source checks; R26: last-Friday exposition happens during the 7:00pm Mass and devotion and has no time of its own. The Mass is in the weekly Friday 7:00pm slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-passaic",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Friday"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holyrosarypassaic.org/",
+          "said": "Friday , November 6 Spowiedź św. od 6:30 rano. Msza św. o 7:00 rano. Po mszy św. wystawienie i adoracja Najświętszego Sakramentu do 8:00 rano. Wystawienie Najświętszego Sakramentu o 5:00 po południu."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 5,
+          "said": "First Friday of each month: Chaplet to Divine Mercy and Holy Rosary at 6:00pm."
+        }
+      ],
+      "rationale": "R16, R35: the only source is one dated entry in the website's calendar for November 6, before as_of; one dated occurrence does not establish a monthly schedule, and the bulletins' standing first-Friday line gives only a Chaplet and Rosary (R24). The same entry's 7:00 AM Mass, 6:30 AM confession and 7:00-8:00 AM adoration are likewise left out; update mode can pick up a first-Friday schedule if a bulletin prints one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 5,
+          "said": "Sundays 10:00am reciting of the rosary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a4dd58b",
+          "page": 5,
+          "said": "First Friday of each month: Chaplet to Divine Mercy and Holy Rosary at 6:00pm."
+        }
+      ],
+      "rationale": "R24: the Rosary and Chaplet are devotions, not Mass, Confession or Adoration. The devotions attached to the 7:00pm weekday Masses (St. Joseph, St. John Paul II, Padre Pio, St. Charbel, the deceased) and to the 7:00am first/second Saturday Masses fall on the weekly Mass slots and need no slots of their own; the dated ones (Nov 24, 25, 27, Dec 2, Dec 8 at 7:00pm) are at regular weekly Masses (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

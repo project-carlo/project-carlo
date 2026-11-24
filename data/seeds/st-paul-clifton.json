@@ -1,0 +1,1181 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-paul-clifton",
+  "status": "approved",
+  "as_of": "2026-11-15T16:52:03Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T18:15:00Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:56Z",
+  "summary": "One church, St. Paul, Clifton; weekday Masses and First Friday Adoration are in the St. Mother Teresa of Calcutta Chapel in its Parish House. The weekend, weekday, Wed/Thu 7 PM and Saturday Confession times agree in both bulletins (Nov 8, Nov 15) and the website; dated Thanksgiving, Immaculate Conception and Guadalupe Masses and two cancellations are recorded. Open: which months 'except during the Summer months' covers for First Friday Adoration, and whether the Dec 12 5 AM Mañanitas is a Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "76da230aa857d8e07d4ffc98fb1f8eea236b8e209f34f89bed6722fb7a34cb26",
+      "fetched_at": "2026-11-15T16:52:03Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ec391b6f091a167fbb72e092a7bae9267c6664a5ca9f6ced22e1aa8b00685d19",
+      "fetched_at": "2026-11-08T22:04:05Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Saturday: 5:00 pm (English), 6:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 2,
+          "said": "Saturday: 5:00 pm (English), 6:30 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list it both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Saturday: 5:00 pm (English), 6:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 2,
+          "said": "Saturday: 5:00 pm (English), 6:30 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Sunday: 7:30 am, 9:00 am, 11:00 am (English) and 1:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 2,
+          "said": "Sunday: 7:30 am, 9:00 am, 11:00 am (English) and 1:00 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins. The Nov 22 11:00 Mass of Nations and the last-Sunday Family Mass are occasions at the regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Sunday: 7:30 am, 9:00 am, 11:00 am (English) and 1:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 2,
+          "said": "Sunday: 7:30 am, 9:00 am, 11:00 am (English) and 1:00 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins. The Nov 22 11:00 Mass of Nations and the last-Sunday Family Mass are occasions at the regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Sunday: 7:30 am, 9:00 am, 11:00 am (English) and 1:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 2,
+          "said": "Sunday: 7:30 am, 9:00 am, 11:00 am (English) and 1:00 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins. The Nov 22 11:00 Mass of Nations and the last-Sunday Family Mass are occasions at the regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Sunday: 7:30 am, 9:00 am, 11:00 am (English) and 1:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 2,
+          "said": "Sunday: 7:30 am, 9:00 am, 11:00 am (English) and 1:00 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the Nov 22 omission is recorded as its own dated cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Weekdays: 8:00 am Mass is celebrated in the St. Mother Teresa of Calcutta Chapel in the Parish House."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 2,
+          "said": "Weekdays: 8:00 am Mass is celebrated in the St. Mother Teresa of Calcutta Chapel in the Parish House."
+        },
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 4,
+          "said": "MONDAY, November 16, 2026 (Church) 8:00 am: Dario Lantigua"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 4,
+          "said": "MONDAY, November 9, 2026 (Church) 8:00 am: Ronaldo Biason"
+        }
+      ],
+      "rationale": "R1: weekday 8 AM Mass in both schedule boxes. No chapel note because both weeks' intentions head Monday '(Church)'; the chapel is in the parish's own Parish House at the church (rectory, 124 Union Ave, is the church's address), so the slot is at st-paul-clifton either way.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Mother Teresa of Calcutta Chapel, Parish House"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Weekdays: 8:00 am Mass is celebrated in the St. Mother Teresa of Calcutta Chapel in the Parish House."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 2,
+          "said": "Weekdays: 8:00 am Mass is celebrated in the St. Mother Teresa of Calcutta Chapel in the Parish House."
+        },
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 4,
+          "said": "(Chapel) 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 4,
+          "said": "(Chapel) 8:00 am"
+        }
+      ],
+      "rationale": "R1: weekday 8 AM Mass in both schedule boxes and both weeks' intentions. POLICY, Churches and chapels: the chapel is in the parish's Parish House at the church (bulletin lists the rectory at 124 Union Ave, the church's own address), so it belongs to st-paul-clifton with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Mother Teresa of Calcutta Chapel, Parish House"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Weekdays: 8:00 am Mass is celebrated in the St. Mother Teresa of Calcutta Chapel in the Parish House."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 2,
+          "said": "Weekdays: 8:00 am Mass is celebrated in the St. Mother Teresa of Calcutta Chapel in the Parish House."
+        },
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 4,
+          "said": "(Chapel) 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 4,
+          "said": "(Chapel) 8:00 am"
+        }
+      ],
+      "rationale": "R1: weekday 8 AM Mass in both schedule boxes and both weeks' intentions. POLICY, Churches and chapels: the chapel is in the parish's Parish House at the church (bulletin lists the rectory at 124 Union Ave, the church's own address), so it belongs to st-paul-clifton with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Mother Teresa of Calcutta Chapel, Parish House"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Weekdays: 8:00 am Mass is celebrated in the St. Mother Teresa of Calcutta Chapel in the Parish House."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 2,
+          "said": "Weekdays: 8:00 am Mass is celebrated in the St. Mother Teresa of Calcutta Chapel in the Parish House."
+        },
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 4,
+          "said": "(Chapel) 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 4,
+          "said": "(Chapel) 8:00 am"
+        }
+      ],
+      "rationale": "R1: weekday 8 AM Mass in both schedule boxes and both weeks' intentions. POLICY, Churches and chapels: the chapel is in the parish's Parish House at the church (bulletin lists the rectory at 124 Union Ave, the church's own address), so it belongs to st-paul-clifton with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Mother Teresa of Calcutta Chapel, Parish House"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Weekdays: 8:00 am Mass is celebrated in the St. Mother Teresa of Calcutta Chapel in the Parish House."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 2,
+          "said": "Weekdays: 8:00 am Mass is celebrated in the St. Mother Teresa of Calcutta Chapel in the Parish House."
+        },
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 4,
+          "said": "(Chapel) 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 4,
+          "said": "(Chapel) 8:00 am"
+        }
+      ],
+      "rationale": "R1: weekday 8 AM Mass in both schedule boxes and both weeks' intentions. POLICY, Churches and chapels: the chapel is in the parish's Parish House at the church (bulletin lists the rectory at 124 Union Ave, the church's own address), so it belongs to st-paul-clifton with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 4,
+          "said": "SATURDAY, November 21, 2026 ... 8:00 am: Saint Paul Parishioners"
+        },
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 4,
+          "said": "SATURDAY, November 14, 2026 8:00 am: *In thanksgiving for Virginia Beuder's ... Birthday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 4,
+          "said": "SATURDAY, November 14, 2026 8:00 am: *In thanksgiving for Virginia Beuder's ... Birthday"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stpaulcnj.org/about-us/mass-schedules",
+          "said": "Monday to Saturday 8:00am (English)"
+        }
+      ],
+      "rationale": "R35: the 'Weekdays: 8:00 am' Mass appears on Saturday in the intentions of Nov 14 and Nov 21 (two weeks), and the parish site says 'Monday to Saturday 8:00am'; the Dec 12 flyer also lists an 8:00 am Saturday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel; with Novena to Our Mother of Perpetual Help"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Mass and Novena (English) in honor of Our Mother of Perpetual Help: Wednesday at 7:00 pm in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 2,
+          "said": "Mass and Novena (English) in honor of Our Mother of Perpetual Help: Wednesday at 7:00 pm in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 4,
+          "said": "WEDNESDAY ... (Chapel) 7:00 pm: St. Paul Parishioners"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 4,
+          "said": "WEDNESDAY ... (Chapel) 7:00 pm: St. Paul Parishioners"
+        }
+      ],
+      "rationale": "R1: printed in both schedule boxes and both weeks' intentions; website also lists 'Wednesday at 7:00pm (English)'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; in the chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Mass and Novena (Spanish) in honor of the Divine Child Jesus: Thursday at 7:00 pm in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 2,
+          "said": "Mass and Novena (Spanish) in honor of the Divine Child Jesus: Thursday at 7:00 pm in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 4,
+          "said": "THURSDAY ... (Chapel) 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 4,
+          "said": "THURSDAY ... (Chapel) 7:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in both schedule boxes and both weeks' intentions; the Nov 26 (Thanksgiving) omission is its own dated cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Confessions: Saturdays from 4:15 pm-4:55 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 2,
+          "said": "Confessions: Saturdays from 4:15 pm-4:55 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 3,
+          "said": "celebrated every Saturday from 4:15 pm to 4:55 pm in the Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 3,
+          "said": "celebrated every Saturday from 4:15 pm to 4:55 pm in the Church"
+        }
+      ],
+      "rationale": "R1: both bulletins, twice each. The website's '4:15pm-5:00pm' is the older wording; the bulletins' printed end time wins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "St. Mother Teresa of Calcutta Chapel, Parish House"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Eucharistic Adoration: First Friday of the month from 8:30 am to 7:00 pm in the St. Mother Teresa of Calcutta Chapel in the Parish House. (Except during the Summer months)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 2,
+          "said": "Eucharistic Adoration: First Friday of the month from 8:30 am to 7:00 pm in the St. Mother Teresa of Calcutta Chapel in the Parish House. (Except during the Summer months)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 9,
+          "said": "Exposition of the Blessed Sacrament Friday, December 4th, 2026 8:30 am to 7:00 pm (In the Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec391b6f",
+          "page": 9,
+          "said": "Exposition of the Blessed Sacrament Friday, December 4th, 2026 8:30 am to 7:00 pm (In the Chapel)"
+        }
+      ],
+      "rationale": "R30, R33: the slot itself is settled by R1 (both schedule boxes, plus the Dec 4 flyer), but the bulletin names no months for the summer break, and a season can't be invented. Leaning July-August, the usual parish summer break; the Dec 4 date confirms it runs now. Neither bulletin's week holds a first Friday (R11), so page is the schedule box.",
+      "question": "First Friday Adoration 8:30 AM-7 PM is 'Except during the Summer months'. Which months count as summer?",
+      "options": [
+        {
+          "label": "September through June (no July, August)",
+          "entry": {
+            "church_slug": "st-paul-clifton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": "St. Mother Teresa of Calcutta Chapel, Parish House"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Every first Friday, no season",
+          "entry": {
+            "church_slug": "st-paul-clifton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Mother Teresa of Calcutta Chapel, Parish House"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:56Z"
+      }
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; Mass of Nations at 11:00 instead"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 4,
+          "said": "11:00 am – Mass of Nations (Trilingual) ... 1:00 pm NO SPANISH MASSS"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin cancels the Sunday 1 PM Spanish Mass on Nov 22 (Christ the King, trilingual Mass of Nations at 11).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving; bilingual"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 8,
+          "said": "THANKSGIVING EUCHARISTIC CELEBRATION AT SAINT PAUL CHURCH ON THURSDAY, NOVEMBER 26th, 2026 AT 9:00 am (Bilingual)"
+        }
+      ],
+      "rationale": "R1, R16: dated Thanksgiving Mass outside the weekly schedule; also in the Nov 8 bulletin. The 8 AM weekday Mass that day is left alone (R17: not stated as cancelled).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; Thanksgiving"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 8,
+          "said": "(There will be NO 7:00 pm Spanish Mass)"
+        }
+      ],
+      "rationale": "R1, R16: the bulletin cancels the Thursday 7 PM Spanish Mass on Thanksgiving.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Night of Candles, Immaculate Conception vigil; bilingual"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 10,
+          "said": "Night of Candles Monday, December 7th, 2026 at 7:00 pm (Bilingual Mass) ... All Masses in Church"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day vigil Mass outside the weekly schedule; also in the Nov 8 bulletin p9.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 10,
+          "said": "Tuesday, December 8th, 2026 Masses at 8:00 am (English), 5:00 pm (English), and 7:00 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1, R16: holy-day Mass outside the weekly schedule. The 8:00 am is the weekly Tuesday 8 AM Mass, so it is not duplicated (POLICY, Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception; Spanish; Bishop Kevin Sweeney presides"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 10,
+          "said": "Masses at 8:00 am (English), 5:00 pm (English), and 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 9,
+          "said": "Martes, 8 de diciembre, 2026 7:00 pm Santa Misa ... Presidida por Su Excelencia, el Obispo Kevin Sweeney"
+        }
+      ],
+      "rationale": "R1, R16: holy-day Mass outside the weekly schedule, printed on two pages.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe; Spanish"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 10,
+          "said": "Feast of Our Lady of Guadalupe Saturday, December 12th, 2026 Masses In Church 5:00 am Mañanitas, 7:00 am (Spanish), 8:00 am (English), 5:00 pm (English), and 6:30 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1, R16: feast-day Mass outside the weekly schedule; the 8 AM, 5 PM and 6:30 PM are the weekly Saturday Masses and are not duplicated (POLICY rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "05:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe; Mañanitas"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 10,
+          "said": "Saturday, December 12th, 2026 Masses ... 5:00 am Mañanitas, 7:00 am (Spanish)"
+        }
+      ],
+      "rationale": "R30: it sits under a 'Masses' heading, but 'Mañanitas' is the traditional sung serenade to Our Lady, and a Spanish Mass follows at 7:00; a wrong Mass time is worse than a missing one.",
+      "question": "Dec 12 lists '5:00 am Mañanitas' among the Guadalupe feast Masses. Is it a Mass?",
+      "options": [
+        {
+          "label": "Leave out (Mañanitas is the dawn serenade, not a Mass)",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include a 5:00 AM Mass on Dec 12",
+          "entry": {
+            "church_slug": "st-paul-clifton",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-12",
+            "start_time": "05:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Guadalupe; Mañanitas"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:56Z"
+      }
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Holy Days: 8:00 am and 7:00 pm"
+        }
+      ],
+      "rationale": "R16, POLICY Dates: a generic holy-day line pins no dates; the dated Dec 7-8 Masses are recorded from the flyer.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 2,
+          "said": "Novena in Honor of the Immaculate Conception: Monday after the 8:00 am Mass. Chaplet of Divine Mercy ... Prayer for Vocations ..."
+        }
+      ],
+      "rationale": "R24: devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 7,
+          "said": "THE HEALING MASS AND ANOINTING OF THE SICK Will be held on the first weekend of each month, during all Masses"
+        }
+      ],
+      "rationale": "R24, POLICY rule 7: anointing at the regular weekend Masses; no separate Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76da230a",
+          "page": 3,
+          "said": "Personal appointments may be made by contacting the parish office."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

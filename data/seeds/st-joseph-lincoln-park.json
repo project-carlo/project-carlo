@@ -1,0 +1,774 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-lincoln-park",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:42Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:17:57Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:14Z",
+  "summary": "One church. Weekend, weekday, Saturday confession and Tuesday all-day Adoration agree in both bulletins and the website; Wed-Fri 8:30-9:30 AM Adoration is in both bulletins' Adoration box, and Monday 7:30 PM Benediction comes from the current website (R6). Open: the day of the 'Spanish: 7:00 pm' Mass in the schedule box.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d027577d3a35d17bc5748d1f3e0cc67d10229722e58bf403784efcd9f15cc09e",
+      "fetched_at": "2026-11-15T16:51:42Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "0c4b12f30bcb0eeb99f4aaa77e1261ae8169da67d2f2213f7487ccb47a4c926c",
+      "fetched_at": "2026-11-08T16:00:36Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 2,
+          "said": "Weekend Masses: Saturday, 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 2,
+          "said": "Weekend Masses: Saturday, 5:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both bulletins read, with intentions; the website agrees (Saturday Eve : 5:30 PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 2,
+          "said": "Sunday, 8:00 am, 10:15 am & 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 2,
+          "said": "Sunday, 8:00 am, 10:15 am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both bulletins read, with intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 2,
+          "said": "Sunday, 8:00 am, 10:15 am & 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 2,
+          "said": "Sunday, 8:00 am, 10:15 am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both bulletins read, with intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 2,
+          "said": "Sunday, 8:00 am, 10:15 am & 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 2,
+          "said": "Sunday, 8:00 am, 10:15 am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both bulletins read, with intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 2,
+          "said": "Polish: 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 2,
+          "said": "Polish: 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 2,
+          "said": "Sunday ... 9:00 AM O zycie Wieczne dla intencja od Beata Rostek"
+        }
+      ],
+      "rationale": "R1: the schedule box lists Polish: 9:00 am under Weekend Masses and the intentions place it on Sunday; the website says Sunday 9:00AM (Polish Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 2,
+          "said": "Daily Masses: Monday, 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 2,
+          "said": "Daily Masses: Monday, 7:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both bulletins read; intentions list Monday 7:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 2,
+          "said": "Tuesday—Friday, 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 2,
+          "said": "Tuesday—Friday, 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both bulletins read; intentions list each weekday 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 2,
+          "said": "Tuesday—Friday, 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 2,
+          "said": "Tuesday—Friday, 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both bulletins read; intentions list each weekday 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 2,
+          "said": "Tuesday—Friday, 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 2,
+          "said": "Tuesday—Friday, 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both bulletins read; intentions list each weekday 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 2,
+          "said": "Tuesday—Friday, 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 2,
+          "said": "Tuesday—Friday, 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both bulletins read; intentions list each weekday 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "17:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 2,
+          "said": "Reconciliation: Saturday, 5:00—5:20 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 2,
+          "said": "Reconciliation: Saturday, 5:00—5:20 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 2,
+          "said": "Adoration: Tuesday, 8:30 am—8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 2,
+          "said": "Adoration: Tuesday, 8:30 am—8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 3,
+          "said": "Eucharistic Adoration Every Tuesday: 8:30 AM – 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 3,
+          "said": "Eucharistic Adoration Every Tuesday: 8:30 AM – 8:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box and the p3 Eucharistic Adoration box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 3,
+          "said": "Eucharistic Adoration ... Wednesday, Thursday & Friday: 8:30 – 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 3,
+          "said": "Eucharistic Adoration ... Wednesday, Thursday & Friday: 8:30 – 9:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the p3 Eucharistic Adoration box of both bulletins read. The p2 schedule box lists only Tuesday, but a missing mention is not a conflict; the dedicated Adoration box is the fuller listing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 3,
+          "said": "Eucharistic Adoration ... Wednesday, Thursday & Friday: 8:30 – 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 3,
+          "said": "Eucharistic Adoration ... Wednesday, Thursday & Friday: 8:30 – 9:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the p3 Eucharistic Adoration box of both bulletins read. The p2 schedule box lists only Tuesday, but a missing mention is not a conflict; the dedicated Adoration box is the fuller listing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 3,
+          "said": "Eucharistic Adoration ... Wednesday, Thursday & Friday: 8:30 – 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 3,
+          "said": "Eucharistic Adoration ... Wednesday, Thursday & Friday: 8:30 – 9:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the p3 Eucharistic Adoration box of both bulletins read. The p2 schedule box lists only Tuesday, but a missing mention is not a conflict; the dedicated Adoration box is the fuller listing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction after the Monday 7 PM Mass and Novena"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephparishnj.org/",
+          "said": "Monday : 7 PM - Novena to Our Lady of the Miraculous Meda l and Benediction at 7:30PM -After Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:20:27Z",
+            "current_because": "The homepage carries November 2026 items (Solemnity of Christ the King, November 22, 2026; the November 1 bowling fundraiser), names the current pastor Fr. Artur Zaba, and its Mass and Reconciliation times match the bulletin.",
+            "bulletin": "d027577d",
+            "fits_because": "The newest bulletin prints the Monday 7:00 pm Mass this Benediction follows; it simply doesn't list the Novena/Benediction."
+          }
+        }
+      ],
+      "rationale": "R6, POLICY (Benediction implies Adoration): the parish's current website gives Benediction at 7:30 PM after the Monday 7 PM Mass, which fits the bulletin's Monday 7:00 pm Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 2,
+          "said": "Weekend Masses: ... Polish: 9:00 am Spanish: 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c4b12f3",
+          "page": 2,
+          "said": "Weekend Masses: ... Polish: 9:00 am Spanish: 7:00 pm"
+        }
+      ],
+      "rationale": "R30/R31: the day is not printed. The line follows the Sunday and Polish (Sunday 9 AM) lines, so Sunday is likely; but neither bulletin's intentions list a 7 PM weekend Mass and the website's schedule omits a Spanish Mass. Leaning Sunday since it is printed in the regular schedule box of both bulletins.",
+      "question": "The schedule box lists 'Spanish: 7:00 pm' under Weekend Masses without a day. Add it, and on which day?",
+      "options": [
+        {
+          "label": "Sunday 7:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-lincoln-park",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Saturday 7:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-lincoln-park",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:14Z"
+      }
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 3,
+          "said": "Nov 15 Grade 5 Class Mass"
+        }
+      ],
+      "rationale": "R16, POLICY rule 7: a religious-ed class Mass on Nov 15 (the as_of week's Sunday) with no time of its own, presumably at a regular Sunday Mass; nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d027577d",
+          "page": 3,
+          "said": "Nov 18 Thanksgiving Prayer Service"
+        }
+      ],
+      "rationale": "R24: a religious-ed prayer service, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

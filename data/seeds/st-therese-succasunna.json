@@ -1,0 +1,895 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-therese-succasunna",
+  "status": "approved",
+  "as_of": "2026-11-15T16:52:14Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T21:58:56Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:44:12Z",
+  "summary": "One church, St. Therese, Succasunna. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule: Sat 5 PM vigil, Sun 7:30/9/10:30/12, Mon-Fri 7:00 & 12:05, Sat 7:00, first-Saturday 9 AM, Sat confession 11-12, Wednesday Adoration 7:30-11:45 and first-Friday 11 AM Exposition. Dated: Thanksgiving Mass Nov 26 9 AM. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8bfc673aee0a554fa331b22ff6867529fa49955f9d2f96c5b3ebaed3675ecc5e",
+      "fetched_at": "2026-11-15T16:52:14Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "bf56f77e886d95400a048c1382e25f50597b278c39f177326943d9ece94bf1ef",
+      "fetched_at": "2026-11-08T22:05:07Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Saturday Vigil Mass at 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Saturday- 7:00am & 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule and the page 5 Mass Schedule of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Sunday at 7:30, 9:00, 10:30 am & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Sunday - 7:30am, 9:00am(live streamed), 10:30am & 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedules of both bulletins read; the intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Sunday at 7:30, 9:00, 10:30 am & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Sunday - 7:30am, 9:00am(live streamed), 10:30am & 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedules of both bulletins read; the intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Sunday at 7:30, 9:00, 10:30 am & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Sunday - 7:30am, 9:00am(live streamed), 10:30am & 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedules of both bulletins read; the intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Sunday at 7:30, 9:00, 10:30 am & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Sunday - 7:30am, 9:00am(live streamed), 10:30am & 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedules of both bulletins read; the intentions match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday at 7:00 am & 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Monday - Friday 7:00am & 12:05pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedules of both bulletins read; each day's intentions list both Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday at 7:00 am & 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Monday - Friday 7:00am & 12:05pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedules of both bulletins read; each day's intentions list both Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday at 7:00 am & 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Monday - Friday 7:00am & 12:05pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedules of both bulletins read; each day's intentions list both Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday at 7:00 am & 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Monday - Friday 7:00am & 12:05pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedules of both bulletins read; each day's intentions list both Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday at 7:00 am & 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Monday - Friday 7:00am & 12:05pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedules of both bulletins read; each day's intentions list both Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday at 7:00 am & 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Monday - Friday 7:00am & 12:05pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedules of both bulletins read; each day's intentions list both Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday at 7:00 am & 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Monday - Friday 7:00am & 12:05pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedules of both bulletins read; each day's intentions list both Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday at 7:00 am & 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Monday - Friday 7:00am & 12:05pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedules of both bulletins read; each day's intentions list both Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday at 7:00 am & 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Monday - Friday 7:00am & 12:05pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedules of both bulletins read; each day's intentions list both Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday at 7:00 am & 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Monday - Friday 7:00am & 12:05pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedules of both bulletins read; each day's intentions list both Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Saturday 7:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Saturday- 7:00am & 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedules and intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "First Saturday Mass 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "First Saturday's - 9:00am"
+        }
+      ],
+      "rationale": "R1: the newest bulletin prints it as a standing first-Saturday Mass (POLICY, Weekly or dated rule 2); also in the older bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Reconciliation/ Confession Saturday: 11:00 am - 12:00 pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 5,
+          "said": "Confessions are Saturdays 11:00am-12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 5,
+          "said": "or by appointment. Please call a priest to schedule."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "11:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "Adoration & Benediction Every Wednesday 7:30am to 11:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 2,
+          "said": "Adoration & Benediction every Wednesday 7:30am-11:45am"
+        }
+      ],
+      "rationale": "R1: printed in the Devotions box of both bulletins; POLICY records Benediction as a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition and Consecration to the Sacred Heart, before the 12:05 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "First Fridays 11am the first Friday of the month Exposition of the Blessed Sacrament & Consecration to the Sacred Heart of Jesus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf56f77e",
+          "page": 2,
+          "said": "11am the First Friday of the month Exposition of the Blessed Sacrament & Consecration to the Sacred Heart of Jesus followed by 12:05 pm Mass"
+        }
+      ],
+      "rationale": "R1: a standing first-Friday Exposition in the Devotions box of both bulletins; POLICY, Times: it runs until a Mass with no end time of its own, so no end_time and a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 1,
+          "said": "First Wednesday Novena Immediately following the 12:05pm mass"
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 3,
+          "said": "St. Therese Church Thanksgiving Mass Thursday November 26th 9am"
+        }
+      ],
+      "rationale": "R1, R16: a dated Thanksgiving Day Mass after as_of; R17: no cancellation of the weekday Masses is stated, so none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-succasunna",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Eucharistic Procession in honor of Christ the King"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bfc673a",
+          "page": 3,
+          "said": "Eucharistic Procession in honor of Christ the King, Sunday Nov 22, after the noon Mass, St. Therese Church"
+        }
+      ],
+      "rationale": "R24: a Eucharistic procession is not an Adoration period POLICY records, and it has no clock time of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

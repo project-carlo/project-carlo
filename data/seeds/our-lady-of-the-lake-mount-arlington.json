@@ -1,0 +1,545 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-lake-mount-arlington",
+  "status": "approved",
+  "as_of": "2026-11-15T16:11:31Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:28:44Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:10Z",
+  "summary": "One church. Mass, Saturday confession and first-Friday Adoration (after the 9:00 AM Mass, timed 9:30 by R10) are identical in the page 1 boxes of both bulletins read (Nov 8 and Nov 15, 2026), and the Mass intentions match. No open questions; holy days and confession by appointment have no time.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "08f0872bceff00994041b93cf781697f9507de72704fede6c16ac50955c976bd",
+      "fetched_at": "2026-11-15T16:11:31Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "7191daaa14db32974427ac423b20a44deaf642fbfb90b1561c99f8adb27a4b8a",
+      "fetched_at": "2026-11-08T15:37:30Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-mount-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 1,
+          "said": "Mass Schedule Saturday Evening -------------------- 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 1,
+          "said": "Mass Schedule Saturday Evening -------------------- 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 3,
+          "said": "SATURDAY ... 5:00 PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 3,
+          "said": "SATURDAY ... 5:00 PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both bulletins and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-mount-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 1,
+          "said": "Sunday --------------------- 8:00 & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 1,
+          "said": "Sunday --------------------- 8:00 & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 3,
+          "said": "SUNDAY ... 8:00 AM ... 11:00 AM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 3,
+          "said": "SUNDAY ... 8:00 AM ... 11:00 AM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both bulletins and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-mount-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 1,
+          "said": "Sunday --------------------- 8:00 & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 1,
+          "said": "Sunday --------------------- 8:00 & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 3,
+          "said": "SUNDAY ... 8:00 AM ... 11:00 AM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 3,
+          "said": "SUNDAY ... 8:00 AM ... 11:00 AM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both bulletins and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-mount-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 1,
+          "said": "Monday - Friday -------------------- 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 1,
+          "said": "Monday - Friday -------------------- 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 3,
+          "said": "MONDAY ... FRIDAY 9:00 AM (Mass intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 3,
+          "said": "MONDAY ... FRIDAY 9:00 AM (Mass intentions each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both bulletins; each weekday's 9:00 AM Mass has an intention in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-mount-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 1,
+          "said": "Monday - Friday -------------------- 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 1,
+          "said": "Monday - Friday -------------------- 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 3,
+          "said": "MONDAY ... FRIDAY 9:00 AM (Mass intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 3,
+          "said": "MONDAY ... FRIDAY 9:00 AM (Mass intentions each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both bulletins; each weekday's 9:00 AM Mass has an intention in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-mount-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 1,
+          "said": "Monday - Friday -------------------- 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 1,
+          "said": "Monday - Friday -------------------- 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 3,
+          "said": "MONDAY ... FRIDAY 9:00 AM (Mass intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 3,
+          "said": "MONDAY ... FRIDAY 9:00 AM (Mass intentions each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both bulletins; each weekday's 9:00 AM Mass has an intention in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-mount-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 1,
+          "said": "Monday - Friday -------------------- 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 1,
+          "said": "Monday - Friday -------------------- 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 3,
+          "said": "MONDAY ... FRIDAY 9:00 AM (Mass intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 3,
+          "said": "MONDAY ... FRIDAY 9:00 AM (Mass intentions each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both bulletins; each weekday's 9:00 AM Mass has an intention in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-mount-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 1,
+          "said": "Monday - Friday -------------------- 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 1,
+          "said": "Monday - Friday -------------------- 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 3,
+          "said": "MONDAY ... FRIDAY 9:00 AM (Mass intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 3,
+          "said": "MONDAY ... FRIDAY 9:00 AM (Mass intentions each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both bulletins; each weekday's 9:00 AM Mass has an intention in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-mount-arlington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturday, 4:00 - 4:45 pm (Other times by appt.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturday, 4:00 - 4:45 pm (Other times by appt.)"
+        }
+      ],
+      "rationale": "R1: printed under Sacramental Life on page 1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-mount-arlington",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION ON THE FIRST FRIDAY OF THE MONTH AFTER THE 9:00 AM MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7191daaa",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION ON THE FIRST FRIDAY OF THE MONTH AFTER THE 9:00 AM MASS"
+        }
+      ],
+      "rationale": "R1, R10: printed on page 1 of both bulletins; after a weekday Mass, POLICY starts it 30 minutes after the 9:00 AM Mass starts; no end time given. Named first Friday, so weeks_of_month first (POLICY rule 2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 1,
+          "said": "Holy Days ------ Call Rectory for schedule"
+        }
+      ],
+      "rationale": "R26: holy day Masses have no printed time; call the rectory.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08f0872b",
+          "page": 1,
+          "said": "(Other times by appt.)"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

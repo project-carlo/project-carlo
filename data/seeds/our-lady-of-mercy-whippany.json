@@ -1,0 +1,846 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-mercy-whippany",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:32Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:16:42Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:02Z",
+  "summary": "One listed church plus a parish chapel at 85 Whippany Road that the church list lacks. Weekend Masses (Sat 5:30 PM; Sun 7:30, 9:30, 11 AM) and Saturday 5-5:30 PM confession at the Church agree in both bulletins and the website; weekday Masses, Monday confession and chapel Adoration are excluded under R23 and listed as a church-list issue. Open: Monday evening Adoration, which the weekly calendars place in the Church.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1366c78620b20750e755c0b2d211cd02171ea6fb5777bb1f026bed5e06114341",
+      "fetched_at": "2026-11-15T16:51:32Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "696adc5a26ca4065a0440745930ec15344bdc57096e57c11ade57b680be3cc5c",
+      "fetched_at": "2026-11-08T22:03:31Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 1,
+          "said": "Saturday Evening ....5:30 PM (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "696adc5a",
+          "page": 1,
+          "said": "Saturday Evening ....5:30 PM (Church)"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofmercyparish.com/mass-time",
+          "said": "Saturday : 5:30 PM English English EN Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, at the Church; the intentions and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 1,
+          "said": "Sunday ....7:30 AM, 9:30 AM, 11:00 AM (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "696adc5a",
+          "page": 1,
+          "said": "Sunday ....7:30 AM, 9:30 AM, 11:00 AM (Church)"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofmercyparish.com/mass-time",
+          "said": "Sunday : 7:30 AM ... 9:30 AM ... 11:00 AM English English EN Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, at the Church; the intentions and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 1,
+          "said": "Sunday ....7:30 AM, 9:30 AM, 11:00 AM (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "696adc5a",
+          "page": 1,
+          "said": "Sunday ....7:30 AM, 9:30 AM, 11:00 AM (Church)"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofmercyparish.com/mass-time",
+          "said": "Sunday : 7:30 AM ... 9:30 AM ... 11:00 AM English English EN Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, at the Church; the intentions and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 1,
+          "said": "Sunday ....7:30 AM, 9:30 AM, 11:00 AM (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "696adc5a",
+          "page": 1,
+          "said": "Sunday ....7:30 AM, 9:30 AM, 11:00 AM (Church)"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofmercyparish.com/mass-time",
+          "said": "Sunday : 7:30 AM ... 9:30 AM ... 11:00 AM English English EN Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, at the Church; the intentions and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 1,
+          "said": "Saturdays ....5:00-5:30 PM (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "696adc5a",
+          "page": 1,
+          "said": "Saturdays ....5:00-5:30 PM (Church)"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofmercyparish.com/mass-time",
+          "said": "Saturday 5:00 PM to 5:30 PM in Church"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both bulletins read, at the Church; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel, 85 Whippany Road"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 1,
+          "said": "Monday-Friday ....9:00 AM (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "696adc5a",
+          "page": 1,
+          "said": "Monday-Friday ....9:00 AM (Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofmercyparish.com/mass-time",
+          "said": "Our Chapel is located at 85 Whippany Road."
+        }
+      ],
+      "rationale": "R23: weekday Masses are in the parish chapel, which the website places at 85 Whippany Road, a different address from the Church (90 Whippany Rd per the newest bulletin p4) and from the listed address (9 Parsippany Rd, the parish office). POLICY leaves out a separate chapel at another address the church list lacks; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel, 85 Whippany Road"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 1,
+          "said": "Monday-Friday ....9:00 AM (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "696adc5a",
+          "page": 1,
+          "said": "Monday-Friday ....9:00 AM (Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofmercyparish.com/mass-time",
+          "said": "Our Chapel is located at 85 Whippany Road."
+        }
+      ],
+      "rationale": "R23: weekday Masses are in the parish chapel, which the website places at 85 Whippany Road, a different address from the Church (90 Whippany Rd per the newest bulletin p4) and from the listed address (9 Parsippany Rd, the parish office). POLICY leaves out a separate chapel at another address the church list lacks; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel, 85 Whippany Road"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 1,
+          "said": "Monday-Friday ....9:00 AM (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "696adc5a",
+          "page": 1,
+          "said": "Monday-Friday ....9:00 AM (Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofmercyparish.com/mass-time",
+          "said": "Our Chapel is located at 85 Whippany Road."
+        }
+      ],
+      "rationale": "R23: weekday Masses are in the parish chapel, which the website places at 85 Whippany Road, a different address from the Church (90 Whippany Rd per the newest bulletin p4) and from the listed address (9 Parsippany Rd, the parish office). POLICY leaves out a separate chapel at another address the church list lacks; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel, 85 Whippany Road"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 1,
+          "said": "Monday-Friday ....9:00 AM (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "696adc5a",
+          "page": 1,
+          "said": "Monday-Friday ....9:00 AM (Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofmercyparish.com/mass-time",
+          "said": "Our Chapel is located at 85 Whippany Road."
+        }
+      ],
+      "rationale": "R23: weekday Masses are in the parish chapel, which the website places at 85 Whippany Road, a different address from the Church (90 Whippany Rd per the newest bulletin p4) and from the listed address (9 Parsippany Rd, the parish office). POLICY leaves out a separate chapel at another address the church list lacks; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel, 85 Whippany Road"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 1,
+          "said": "Monday-Friday ....9:00 AM (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "696adc5a",
+          "page": 1,
+          "said": "Monday-Friday ....9:00 AM (Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofmercyparish.com/mass-time",
+          "said": "Our Chapel is located at 85 Whippany Road."
+        }
+      ],
+      "rationale": "R23: weekday Masses are in the parish chapel, which the website places at 85 Whippany Road, a different address from the Church (90 Whippany Rd per the newest bulletin p4) and from the listed address (9 Parsippany Rd, the parish office). POLICY leaves out a separate chapel at another address the church list lacks; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel, 85 Whippany Road"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 1,
+          "said": "Mondays ....7:00-8:00 PM (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "696adc5a",
+          "page": 1,
+          "said": "Mondays ....7:00-8:00 PM (Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofmercyparish.com/mass-time",
+          "said": "Monday 7:10 PM to 7:45 PM in the Chapel"
+        }
+      ],
+      "rationale": "R23: Monday confession is in the chapel at 85 Whippany Road, not on the church list (see the weekday Mass slots). No source places Monday confession in the Church, unlike Monday Adoration (asked separately). The website's 7:10-7:45 also differs from the bulletin's 7:00-8:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel, 85 Whippany Road; Divine Mercy Devotion"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament (Chapel) Friday 9:30-10:00 AM (Divine Mercy Devotion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "696adc5a",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament (Chapel) Friday 9:30-10:00 AM (Divine Mercy Devotion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 2,
+          "said": "Friday, November 20 - 9:30-10:00 AM: Eucharistic Adoration (Chapel)"
+        }
+      ],
+      "rationale": "R23: Adoration in the chapel at 85 Whippany Road, not on the church list (see the weekday Mass slots).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel, 85 Whippany Road"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament (Chapel) First Thursday 9:30-10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "696adc5a",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament (Chapel) First Thursday 9:30-10:00 AM"
+        }
+      ],
+      "rationale": "R23: Adoration in the chapel at 85 Whippany Road, not on the church list (see the weekday Mass slots).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel, 85 Whippany Road"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament (Chapel) First Friday 9:30 AM - 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "696adc5a",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament (Chapel) First Friday 9:30 AM - 12:00 noon"
+        }
+      ],
+      "rationale": "R23: Adoration in the chapel at 85 Whippany Road, not on the church list (see the weekday Mass slots).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament (Chapel) Monday 7:00-8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "696adc5a",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament (Chapel) Monday 7:00-8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 2,
+          "said": "Monday, November 16 - 7:00-8:00 PM: Eucharistic Adoration (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "696adc5a",
+          "page": 2,
+          "said": "Monday, November 9 - 6:00-7:00 PM: Eucharistic Adoration (Church)"
+        }
+      ],
+      "rationale": "R28, C8: the standing Devotions box places Monday Adoration in the Chapel (another address, R23), but both weekly 'This Week at OLM' calendars read place it in the Church, the Nov 16 one at the box's 7-8 PM. Two consecutive weeks in the Church suggest it has moved (R40 would otherwise treat each as a one-date exception); leaning toward weekly 7-8 PM at the Church, the time the box and the newest calendar share.",
+      "question": "Monday evening Adoration: the schedule box says 7-8 PM in the Chapel (85 Whippany Rd, not listed), but the weekly calendars put it in the Church (Nov 9 at 6-7 PM, Nov 16 at 7-8 PM). Include it weekly at the Church?",
+      "options": [
+        {
+          "label": "Mondays 7-8 PM at the Church",
+          "entry": {
+            "church_slug": "our-lady-of-mercy-whippany",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Only Monday, November 16, 7-8 PM at the Church",
+          "entry": {
+            "church_slug": "our-lady-of-mercy-whippany",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-16",
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out (Chapel)",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:02Z"
+      }
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ourladyofmercyparish.com/mass-time",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : ... 7:00 PM English English EN in the Church",
+          "schedule_check": {
+            "checked_at": "2026-11-23T13:20:28Z",
+            "current_because": "Checked 2026-11-23: the page's 'Upcoming Holy Days' lists the Immaculate Conception, the next holy day after today, and its weekend, weekday and Saturday confession times match both November 2026 bulletins exactly.",
+            "bulletin": "1366c786",
+            "fits_because": "The newest bulletin (Nov 15) does not yet print holy-day Masses; the 7 PM Church Mass sits outside the weekly schedule and its Church fits the bulletin's Church/Chapel split."
+          }
+        }
+      ],
+      "rationale": "R6, R16: a dated holy-day Mass at the Church on or after as_of, from the parish's current Mass-times page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, in the Chapel, 85 Whippany Road"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ourladyofmercyparish.com/mass-time",
+          "said": "December 8 : 9:00 AM English English EN in the Chapel 12:05 PM English English EN in the Chapel"
+        }
+      ],
+      "rationale": "R23: the holy-day Masses in the chapel at 85 Whippany Road, not on the church list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, in the Chapel, 85 Whippany Road"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ourladyofmercyparish.com/mass-time",
+          "said": "December 8 : 9:00 AM English English EN in the Chapel 12:05 PM English English EN in the Chapel"
+        }
+      ],
+      "rationale": "R23: the holy-day Masses in the chapel at 85 Whippany Road, not on the church list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1366c786",
+          "page": 1,
+          "said": "or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Our Lady of Mercy Chapel, 85 Whippany Road, Whippany",
+      "said": "Mass Monday-Friday 9:00 AM (Chapel); Confession Mondays 7:00-8:00 PM (Chapel); Adoration (Chapel) Monday 7:00-8:00 PM, Friday 9:30-10:00 AM, First Thursday 9:30-10:00 AM, First Friday 9:30 AM-12:00 noon. Website: 'Our Chapel is located at 85 Whippany Road.' The listed church's address, 9 Parsippany Rd, is the parish office; the Church is at 90 Whippany Rd (p4).",
+      "bulletin": "1366c786",
+      "page": 1
+    }
+  ]
+}

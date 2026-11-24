@@ -1,0 +1,615 @@
+{
+  "schema_version": 1,
+  "parish_slug": "good-shepherd-andover",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:29Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T12:39:14Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:41:36Z",
+  "summary": "One church. Weekend Masses (Sat 5 PM; Sun 7:30, 9, 11 AM) and Mon-Fri 8:30 AM daily Mass agree in both November 2026 bulletins and the website (the intentions' 'Sunday 7:30 PM' is a typo for 7:30 AM). Saturday 4:00-4:45 PM Confession and the first-Friday 9-10 AM Holy Hour come from the parish's current Mass-times page (R6); no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5239cacaeca29fcdbdc3886103ccdc11f8b194a049f10c3d7513f468cd87dd21",
+      "fetched_at": "2026-11-15T16:51:29Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1dbbd5b2835dc8edda92c66677911abd457b7d3930a3d6551c57571a576a6069",
+      "fetched_at": "2026-11-08T16:00:00Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-andover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5239caca",
+          "page": 2,
+          "said": "Saturday, November 21, 2026 5:00 PM Arthur Ottimo; PRIEST'S MASS SCHEDULE 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5239caca",
+          "page": 5,
+          "said": "Saturday 11/21 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dbbd5b2",
+          "page": 2,
+          "said": "Saturday, November 7, 2026 5:00 PM; Saturday, November 14, 2026 5:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: the Saturday 5:00 PM Mass is in the intentions, the priest's Mass schedule and the ministry schedule of both bulletins (Nov 8 and Nov 15); the website's Mass times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-andover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5239caca",
+          "page": 2,
+          "said": "PRIEST'S MASS SCHEDULE ... 7:30 AM ... 11/21-22 Fr. Tim"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5239caca",
+          "page": 5,
+          "said": "Sunday 11/22 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dbbd5b2",
+          "page": 2,
+          "said": "PRIEST'S MASS SCHEDULE 7:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: the priest's Mass schedule and ministry schedule of both bulletins give Sunday 7:30 AM. The intentions print '7:30 PM' as the first Sunday Mass (listed before 9:00 AM), a typo: the website also says Sunday 7:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-andover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5239caca",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 9:00 AM Dianne H. Duffy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5239caca",
+          "page": 5,
+          "said": "Sunday 11/22 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dbbd5b2",
+          "page": 2,
+          "said": "Sunday, November 8, 2026 9:00 AM Jimmy Garcia"
+        }
+      ],
+      "rationale": "R1, R35: in the intentions, priest's schedule and ministry schedule of both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-andover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5239caca",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 11:00 AM Ann Annichiarco"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5239caca",
+          "page": 5,
+          "said": "Sunday 11/22 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dbbd5b2",
+          "page": 2,
+          "said": "Sunday, November 8, 2026 11:00 AM Patricia Lillian Urban"
+        }
+      ],
+      "rationale": "R1, R35: in the intentions, priest's schedule and ministry schedule of both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-andover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5239caca",
+          "page": 2,
+          "said": "Daily Mass November 16 - 20 @ 8:30 AM Monday ... Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dbbd5b2",
+          "page": 2,
+          "said": "Daily Mass November 9 - 13 @ 8:30 AM Monday ... Friday"
+        }
+      ],
+      "rationale": "R1, R35: the bulletins' 'Daily Mass' heading gives Monday-Friday 8:30 AM in both weeks read; the website's daily Mass schedule (Mon Fri 8:30 AM) agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-andover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5239caca",
+          "page": 2,
+          "said": "Daily Mass November 16 - 20 @ 8:30 AM Monday ... Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dbbd5b2",
+          "page": 2,
+          "said": "Daily Mass November 9 - 13 @ 8:30 AM Monday ... Friday"
+        }
+      ],
+      "rationale": "R1, R35: the bulletins' 'Daily Mass' heading gives Monday-Friday 8:30 AM in both weeks read; the website's daily Mass schedule (Mon Fri 8:30 AM) agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-andover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5239caca",
+          "page": 2,
+          "said": "Daily Mass November 16 - 20 @ 8:30 AM Monday ... Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dbbd5b2",
+          "page": 2,
+          "said": "Daily Mass November 9 - 13 @ 8:30 AM Monday ... Friday"
+        }
+      ],
+      "rationale": "R1, R35: the bulletins' 'Daily Mass' heading gives Monday-Friday 8:30 AM in both weeks read; the website's daily Mass schedule (Mon Fri 8:30 AM) agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-andover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5239caca",
+          "page": 2,
+          "said": "Daily Mass November 16 - 20 @ 8:30 AM Monday ... Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dbbd5b2",
+          "page": 2,
+          "said": "Daily Mass November 9 - 13 @ 8:30 AM Monday ... Friday"
+        }
+      ],
+      "rationale": "R1, R35: the bulletins' 'Daily Mass' heading gives Monday-Friday 8:30 AM in both weeks read; the website's daily Mass schedule (Mon Fri 8:30 AM) agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-andover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5239caca",
+          "page": 2,
+          "said": "Daily Mass November 16 - 20 @ 8:30 AM Monday ... Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dbbd5b2",
+          "page": 2,
+          "said": "Daily Mass November 9 - 13 @ 8:30 AM Monday ... Friday"
+        }
+      ],
+      "rationale": "R1, R35: the bulletins' 'Daily Mass' heading gives Monday-Friday 8:30 AM in both weeks read; the website's daily Mass schedule (Mon Fri 8:30 AM) agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-andover",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-25",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Eve"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5239caca",
+          "page": 3,
+          "said": "THANKSGIVING EVE MASS Wednesday, November 25th @ 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dbbd5b2",
+          "page": 3,
+          "said": "Thanksgiving Eve Mass Wednesday, November 25th @ 7:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass after as_of, printed in both bulletins and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-andover",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Funeral Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1dbbd5b2",
+          "page": 2,
+          "said": "Funeral Mass: Saturday, November 21, 2026 @ 1:00 PM"
+        }
+      ],
+      "rationale": "R24: a funeral Mass for one person.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-andover",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Celebration of First Reconciliation"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1dbbd5b2",
+          "page": 4,
+          "said": "Celebration of First Reconciliation Who: First Communicants and their families When: Saturday, November 21st at 10am"
+        }
+      ],
+      "rationale": "R25, POLICY (closed to the public): the First Reconciliation celebration is for first communicants and their families, not a public confession time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-andover",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://goodshepherdrc.org/mass-times",
+          "said": "Confession Times Saturday : 4:00 PM to 4:45 PM Or By Appointment - Call Parish Office",
+          "schedule_check": {
+            "checked_at": "2026-11-23T12:42:25Z",
+            "current_because": "Checked 2026-11-23: the same page lists Thanksgiving Eve Nov 25 7:00 PM and Immaculate Conception Dec 8, 2026 as upcoming and shows the current day's Gospel; its Mass times match both November 2026 bulletins exactly.",
+            "bulletin": "5239caca",
+            "fits_because": "Neither bulletin prints a Confession time; the newest (Nov 15, 2026) has the Saturday 5:00 PM Mass this Confession precedes."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://goodshepherdrc.org/reconciliation",
+          "said": "A priest will be available for confessions starting at 4:00 PM prior to the 5:00 PM Saturday evening Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-23T12:42:25Z",
+            "current_because": "Checked 2026-11-23: the same page lists Thanksgiving Eve Nov 25 7:00 PM and Immaculate Conception Dec 8, 2026 as upcoming and shows the current day's Gospel; its Mass times match both November 2026 bulletins exactly.",
+            "bulletin": "5239caca",
+            "fits_because": "Neither bulletin prints a Confession time; the newest (Nov 15, 2026) has the Saturday 5:00 PM Mass this Confession precedes."
+          }
+        }
+      ],
+      "rationale": "R6: the parish's current Mass-times page gives Saturday Confession 4:00-4:45 PM, and its Reconciliation page says confessions start at 4:00 PM before the 5:00 PM Saturday Mass. The bulletins print no Confession time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-andover",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour in the chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://goodshepherdrc.org/mass-times",
+          "said": "Holy Hour 1st Friday : 9:00 AM to 10:00 AM Chapel",
+          "schedule_check": {
+            "checked_at": "2026-11-23T12:42:29Z",
+            "current_because": "Checked 2026-11-23: the same page lists Thanksgiving Eve Nov 25 7:00 PM and Immaculate Conception Dec 8, 2026 as upcoming and shows the current day's Gospel; its Mass times match both November 2026 bulletins exactly.",
+            "bulletin": "5239caca",
+            "fits_because": "Neither read bulletin covers a first Friday (Nov 8-14 and Nov 15-22 weeks); the parish's 'side chapel' (Eucharist page) holds the 8:30 AM weekday Mass that precedes the 9:00 Holy Hour."
+          }
+        }
+      ],
+      "rationale": "R6, R12: the parish's current Mass-times page lists a 1st Friday Holy Hour 9:00-10:00 AM in the chapel; a Holy Hour is Adoration (POLICY). The Eucharist page says weekday liturgies are in the church's side chapel, so the chapel is on site. Neither read bulletin's week holds a first Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-andover",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://goodshepherdrc.org/mass-times",
+          "said": "Immaculate Conception December 8 : 8:30 AM"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the holy day Mass is at the regular Tuesday 8:30 AM weekday Mass (s6), so it is not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

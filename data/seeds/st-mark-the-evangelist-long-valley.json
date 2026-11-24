@@ -1,0 +1,572 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mark-the-evangelist-long-valley",
+  "status": "approved",
+  "as_of": "2026-11-15T16:18:20Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:54:05Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:38Z",
+  "summary": "One church. The newest bulletin (issue of November 8, fetched November 15) prints the standing schedule on p1 and a 'New Liturgical Schedule: Effective November 1st' graphic on p4; they agree, and both bulletins' Mass intentions confirm the Masses. Lent-only Friday Mass is left out (R33). No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "083c6bb6589ba5f7d4873a1ab3325380bf08ccbaf322ed1b5ea725c29b30108c",
+      "fetched_at": "2026-11-15T16:18:20Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2c597ed3e55e4aa0fea3db1bc33b7563b46ed8f2a81c0dad09d1d49347c9d91e",
+      "fetched_at": "2026-11-08T15:43:21Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-the-evangelist-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 1,
+          "said": "Weekend Masses Saturday: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 4,
+          "said": "WEEKEND MASSES Saturday 5:00 PM & Sunday 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 2,
+          "said": "Saturday, November 14 5:00 PM +Mary Korbylo"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2c597ed3",
+          "page": 2,
+          "said": "Saturday, October 31 5:00 PM +Mary Rusek"
+        }
+      ],
+      "rationale": "R1, R35: printed in the newest bulletin's schedule box (p1) and its 'New Liturgical Schedule: Effective November 1st' graphic (p4); the intentions of both bulletins list it every Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-the-evangelist-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 1,
+          "said": "Sunday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 4,
+          "said": "WEEKEND MASSES Saturday 5:00 PM & Sunday 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2c597ed3",
+          "page": 2,
+          "said": "Sunday, November 1 Solemnity of All Saints 9:30 AM +Mark Draghi"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box (p1) and the new-schedule graphic (p4); both bulletins' intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-the-evangelist-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 1,
+          "said": "Daily Mass Monday-Thursday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 4,
+          "said": "DAILY MASS Monday-Thursday 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 2,
+          "said": "Monday, November 9 ... 9:30 AM; Thursday, November 12 ... 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2c597ed3",
+          "page": 2,
+          "said": "Monday, November 2 ... 9:30 AM; Thursday, November 5 ... 9:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and new-schedule graphic; both weeks' intentions list Mon-Thu 9:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-the-evangelist-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 1,
+          "said": "Daily Mass Monday-Thursday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 4,
+          "said": "DAILY MASS Monday-Thursday 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 2,
+          "said": "Monday, November 9 ... 9:30 AM; Thursday, November 12 ... 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2c597ed3",
+          "page": 2,
+          "said": "Monday, November 2 ... 9:30 AM; Thursday, November 5 ... 9:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and new-schedule graphic; both weeks' intentions list Mon-Thu 9:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-the-evangelist-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 1,
+          "said": "Daily Mass Monday-Thursday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 4,
+          "said": "DAILY MASS Monday-Thursday 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 2,
+          "said": "Monday, November 9 ... 9:30 AM; Thursday, November 12 ... 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2c597ed3",
+          "page": 2,
+          "said": "Monday, November 2 ... 9:30 AM; Thursday, November 5 ... 9:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and new-schedule graphic; both weeks' intentions list Mon-Thu 9:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-the-evangelist-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 1,
+          "said": "Daily Mass Monday-Thursday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 4,
+          "said": "DAILY MASS Monday-Thursday 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 2,
+          "said": "Monday, November 9 ... 9:30 AM; Thursday, November 12 ... 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2c597ed3",
+          "page": 2,
+          "said": "Monday, November 2 ... 9:30 AM; Thursday, November 5 ... 9:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and new-schedule graphic; both weeks' intentions list Mon-Thu 9:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-the-evangelist-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Fridays of Lent only"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 1,
+          "said": "(Friday: 9:30 AM during Lent only)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 2,
+          "said": "Friday, November 13 - NO MASS"
+        }
+      ],
+      "rationale": "R33: Lent has no fixed months, so a season cannot express it; outside Lent there is no Friday Mass (intentions print 'NO MASS' on Fridays). Update mode will read the Lenten bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-the-evangelist-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 5:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 1,
+          "said": "Confessions Saturday: 6:00 PM (after Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 4,
+          "said": "CONFESSIONS Saturday 6:00 PM (after Mass) & Tuesday 10:00 AM"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the clock time 6:00 PM is printed, so it wins over the relative timing; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-the-evangelist-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 1,
+          "said": "Tuesday: 10:00 AM (after Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 4,
+          "said": "CONFESSIONS Saturday 6:00 PM (after Mass) & Tuesday 10:00 AM"
+        }
+      ],
+      "rationale": "R1, POLICY Times: clock time 10:00 AM printed; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 1,
+          "said": "and upon request (ask Fr. Sylwester)"
+        }
+      ],
+      "rationale": "R26: confession upon request has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-the-evangelist-long-valley",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 1,
+          "said": "Eucharistic Adoration Thursday: 10:00-10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION Thursday 10:00 - 10:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the new-schedule graphic.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-the-evangelist-long-valley",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 1,
+          "said": "First Thursday: 6:00-8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 4,
+          "said": "& First Thursday of the month 6:00 - 8:00 PM"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the newest bulletin's standing schedule box names the first Thursday, so it is weekly with weeks_of_month first.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 1,
+          "said": "Marian Novena Wednesday: 10:00 AM (after Mass)"
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "083c6bb6",
+          "page": 1,
+          "said": "Holy Days of Obligation To be announced from the pulpit"
+        }
+      ],
+      "rationale": "R26: holy day Mass times are not printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,821 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-christopher-parsippany",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:43Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T16:54:15Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:54Z",
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same box: Sat 5:00 PM, Sun 7:30/9:30/11:30 AM and 1:30 PM Spanish, Mon-Fri 12:05 PM, all confirmed by the Mass intentions. Open: weekday Confession 'after the 12:05 pm Mass' on request, leaning 12:35 PM per C5. No Adoration is printed.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "fdc6d1233967d2ed723feb14beb6700095d8b565b5344123057a2081909547af",
+      "fetched_at": "2026-11-15T16:51:43Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c9c70ef34cb9510d996d60680aa696bbc77169f01e2af134a649395bed46be74",
+      "fetched_at": "2026-11-08T22:04:22Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "SATURDAY Vigil Mass at 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "SATURDAY Vigil Mass at 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 2 Masses box of both bulletins read (Nov 8 and Nov 15); the intentions list a 5:00 PM Mass each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "SUNDAY 7:30, 9:30, 11:30 am, & 1:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "SUNDAY 7:30, 9:30, 11:30 am, & 1:30 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the page 2 Masses box of both bulletins read, and in each Sunday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "SUNDAY 7:30, 9:30, 11:30 am, & 1:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "SUNDAY 7:30, 9:30, 11:30 am, & 1:30 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the page 2 Masses box of both bulletins read, and in each Sunday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "SUNDAY 7:30, 9:30, 11:30 am, & 1:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "SUNDAY 7:30, 9:30, 11:30 am, & 1:30 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the page 2 Masses box of both bulletins read, and in each Sunday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "SUNDAY 7:30, 9:30, 11:30 am, & 1:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "SUNDAY 7:30, 9:30, 11:30 am, & 1:30 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the page 2 Masses box of both bulletins read; the box marks it Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "WEEKDAYS Monday - Friday 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "WEEKDAYS Monday - Friday 12:05 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 2 Masses box of both bulletins read; the intentions list 12:05 PM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "WEEKDAYS Monday - Friday 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "WEEKDAYS Monday - Friday 12:05 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 2 Masses box of both bulletins read; the intentions list 12:05 PM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "WEEKDAYS Monday - Friday 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "WEEKDAYS Monday - Friday 12:05 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 2 Masses box of both bulletins read; the intentions list 12:05 PM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "WEEKDAYS Monday - Friday 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "WEEKDAYS Monday - Friday 12:05 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 2 Masses box of both bulletins read; the intentions list 12:05 PM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "WEEKDAYS Monday - Friday 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "WEEKDAYS Monday - Friday 12:05 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 2 Masses box of both bulletins read; the intentions list 12:05 PM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:05 PM Mass; tell the priest"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "PENANCE Available on weekdays after the 12:05 pm Mass. Please inform the officiating priest of your need for Confession either before Mass begins or immediately after it concludes."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "PENANCE Available on weekdays after the 12:05 pm Mass. Please inform the officiating priest of your need for Confession either before Mass begins or immediately after it concludes."
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request; POLICY, Times (R10) puts it 30 minutes after a weekday Mass starts, 12:35 PM. Printed the same in both bulletins read.",
+      "question": "Include weekday Confession after the 12:05 PM Mass (on request to the priest) at 12:35 PM?",
+      "options": [
+        {
+          "label": "Mon-Fri 12:35 PM, after the 12:05 PM Mass",
+          "entry": {
+            "church_slug": "st-christopher-parsippany",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "12:35",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 12:05 PM Mass; tell the priest"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:54Z"
+      },
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:05 PM Mass; tell the priest"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "PENANCE Available on weekdays after the 12:05 pm Mass. Please inform the officiating priest of your need for Confession either before Mass begins or immediately after it concludes."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "PENANCE Available on weekdays after the 12:05 pm Mass. Please inform the officiating priest of your need for Confession either before Mass begins or immediately after it concludes."
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request; POLICY, Times (R10) puts it 30 minutes after a weekday Mass starts, 12:35 PM. Printed the same in both bulletins read.",
+      "question": "Include weekday Confession after the 12:05 PM Mass (on request to the priest) at 12:35 PM?",
+      "options": [
+        {
+          "label": "Mon-Fri 12:35 PM, after the 12:05 PM Mass",
+          "entry": {
+            "church_slug": "st-christopher-parsippany",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "12:35",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 12:05 PM Mass; tell the priest"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:54Z"
+      },
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:05 PM Mass; tell the priest"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "PENANCE Available on weekdays after the 12:05 pm Mass. Please inform the officiating priest of your need for Confession either before Mass begins or immediately after it concludes."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "PENANCE Available on weekdays after the 12:05 pm Mass. Please inform the officiating priest of your need for Confession either before Mass begins or immediately after it concludes."
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request; POLICY, Times (R10) puts it 30 minutes after a weekday Mass starts, 12:35 PM. Printed the same in both bulletins read.",
+      "question": "Include weekday Confession after the 12:05 PM Mass (on request to the priest) at 12:35 PM?",
+      "options": [
+        {
+          "label": "Mon-Fri 12:35 PM, after the 12:05 PM Mass",
+          "entry": {
+            "church_slug": "st-christopher-parsippany",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "12:35",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 12:05 PM Mass; tell the priest"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:54Z"
+      },
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:05 PM Mass; tell the priest"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "PENANCE Available on weekdays after the 12:05 pm Mass. Please inform the officiating priest of your need for Confession either before Mass begins or immediately after it concludes."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "PENANCE Available on weekdays after the 12:05 pm Mass. Please inform the officiating priest of your need for Confession either before Mass begins or immediately after it concludes."
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request; POLICY, Times (R10) puts it 30 minutes after a weekday Mass starts, 12:35 PM. Printed the same in both bulletins read.",
+      "question": "Include weekday Confession after the 12:05 PM Mass (on request to the priest) at 12:35 PM?",
+      "options": [
+        {
+          "label": "Mon-Fri 12:35 PM, after the 12:05 PM Mass",
+          "entry": {
+            "church_slug": "st-christopher-parsippany",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "12:35",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 12:05 PM Mass; tell the priest"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:54Z"
+      },
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:05 PM Mass; tell the priest"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "PENANCE Available on weekdays after the 12:05 pm Mass. Please inform the officiating priest of your need for Confession either before Mass begins or immediately after it concludes."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "PENANCE Available on weekdays after the 12:05 pm Mass. Please inform the officiating priest of your need for Confession either before Mass begins or immediately after it concludes."
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request; POLICY, Times (R10) puts it 30 minutes after a weekday Mass starts, 12:35 PM. Printed the same in both bulletins read.",
+      "question": "Include weekday Confession after the 12:05 PM Mass (on request to the priest) at 12:35 PM?",
+      "options": [
+        {
+          "label": "Mon-Fri 12:35 PM, after the 12:05 PM Mass",
+          "entry": {
+            "church_slug": "st-christopher-parsippany",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "12:35",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 12:05 PM Mass; tell the priest"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:54Z"
+      },
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Miraculous Medal Novena"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "MIRACULOUS MEDAL NOVENA Monday 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "MIRACULOUS MEDAL NOVENA Monday 12:30 pm"
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "HOLY DAYS Vigil Mass at 7:00 pm Holy Day 12:05 & 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9c70ef3",
+          "page": 2,
+          "said": "HOLY DAYS Vigil Mass at 7:00 pm Holy Day 12:05 & 7:00 pm"
+        }
+      ],
+      "rationale": "R26, POLICY Dates: holy-day Masses are given with no date; they cannot be weekly and no holy day's date is printed, so there is nothing to record. Update mode will read dated holy days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fdc6d123",
+          "page": 2,
+          "said": "For urgent Confession needs, please contact the Rectory Office at 973-539-7050 to request a special accommodation"
+        }
+      ],
+      "rationale": "R26: confession by arrangement has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

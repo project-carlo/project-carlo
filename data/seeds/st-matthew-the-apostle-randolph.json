@@ -1,0 +1,914 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-matthew-the-apostle-randolph",
+  "status": "approved",
+  "as_of": "2026-11-15T16:19:04Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T18:07:08Z",
+  "reviewer": "agent:seed-review@889c2ee61460",
+  "approved_at": "2026-11-23T22:48:16Z",
+  "summary": "One church, two bulletins (Nov 8 and Nov 15, 2026), no history. Weekend, daily Mass, Saturday Reconciliation and third-Tuesday Adoration agree in both schedule boxes; the Advent and Christmas calendar gives dated Masses and the Christmas Day 8 AM cancellation. Open: whether the Dec 15 shortened Adoration (2-6:45 pm) cancels that day's usual 2-8 pm occurrence.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "735ca8bc81a1f53abc5d7357c2240eae93d61a0348ca535c82d5102ccaba7524",
+      "fetched_at": "2026-11-15T16:19:04Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "845b17d07b27385a63972e13d6a91dc72b1cbc4f54026df8caec5f0b4876bfcb",
+      "fetched_at": "2026-11-08T15:43:32Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 2,
+          "said": "Mass & Liturgy Schedule Saturday: 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "845b17d0",
+          "page": 2,
+          "said": "Mass & Liturgy Schedule Saturday: 5:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass & Liturgy Schedule box of both bulletins read; the week's calendar (p3) agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 2,
+          "said": "Sunday: 8:00 am, 9:30 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "845b17d0",
+          "page": 2,
+          "said": "Sunday: 8:00 am, 9:30 am, 11:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass & Liturgy Schedule box of both bulletins read; the week's calendar (p3) agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 2,
+          "said": "Sunday: 8:00 am, 9:30 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "845b17d0",
+          "page": 2,
+          "said": "Sunday: 8:00 am, 9:30 am, 11:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass & Liturgy Schedule box of both bulletins read; the week's calendar (p3) agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 2,
+          "said": "Sunday: 8:00 am, 9:30 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "845b17d0",
+          "page": 2,
+          "said": "Sunday: 8:00 am, 9:30 am, 11:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass & Liturgy Schedule box of both bulletins read; the week's calendar (p3) agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 2,
+          "said": "Daily Mass: Monday - Friday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "845b17d0",
+          "page": 2,
+          "said": "Daily Mass: Monday - Friday: 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; each weekday of the p3 calendar lists Mass 8:00 am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 2,
+          "said": "Daily Mass: Monday - Friday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "845b17d0",
+          "page": 2,
+          "said": "Daily Mass: Monday - Friday: 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; each weekday of the p3 calendar lists Mass 8:00 am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 2,
+          "said": "Daily Mass: Monday - Friday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "845b17d0",
+          "page": 2,
+          "said": "Daily Mass: Monday - Friday: 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; each weekday of the p3 calendar lists Mass 8:00 am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 2,
+          "said": "Daily Mass: Monday - Friday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "845b17d0",
+          "page": 2,
+          "said": "Daily Mass: Monday - Friday: 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; each weekday of the p3 calendar lists Mass 8:00 am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 2,
+          "said": "Daily Mass: Monday - Friday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "845b17d0",
+          "page": 2,
+          "said": "Daily Mass: Monday - Friday: 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; each weekday of the p3 calendar lists Mass 8:00 am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 2,
+          "said": "Reconciliation: Saturday: 4:00 pm - 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "845b17d0",
+          "page": 2,
+          "said": "Reconciliation: Saturday: 4:00 pm - 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 4,
+          "said": "The Sacrament of Reconciliation is celebrated every Saturday from 4:00 pm - 4:30 pm."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the Reconciliation notice of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 4,
+          "said": "You may also call the Parish office to schedule an appointment with Fr. Brian"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 2,
+          "said": "Eucharistic Adoration: Third Tuesday of the Month: 2:00 pm - 8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "845b17d0",
+          "page": 2,
+          "said": "Eucharistic Adoration: Third Tuesday of the Month: 2:00 pm - 8:00 pm"
+        }
+      ],
+      "rationale": "R1, R11: printed in the schedule box of both bulletins; the newest bulletin's week holds the third Tuesday (Nov 17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 5,
+          "said": "Thanksgiving Day Mass will be celebrated on Thursday, November 26 at 10:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "845b17d0",
+          "page": 6,
+          "said": "Thanksgiving Day Mass will be celebrated on Thursday, November 26 at 10:00 am."
+        }
+      ],
+      "rationale": "R1, R16, R17: dated holiday Mass after as_of; the bulletin says nothing of the weekly 8:00 am Thursday Mass, so that slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 6,
+          "said": "Immaculate Conception - Tuesday, 12/08/25 Mass at 8:00 am, 12:05 pm"
+        }
+      ],
+      "rationale": "R1, R16: holy day Mass outside the weekly schedule; the 8:00 am Mass is the weekly Tuesday slot (POLICY, Weekly or dated rule 6). The printed year 25 is a misprint: 12/08/2026 is a Tuesday and the calendar runs 11/29/26 to 01/01/27.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-15",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Penance Service"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 6,
+          "said": "Parish Penance Service Tuesday, 12/15/26 at 7:00 pm"
+        }
+      ],
+      "rationale": "R1, R16: a dated Advent penance service (Confession) after as_of; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-15",
+        "start_time": "14:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 6,
+          "said": "Eucharistic Adoration Tuesday, 12/15/26: 2:00 pm - 6:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 2,
+          "said": "Third Tuesday of the Month: 2:00 pm - 8:00 pm"
+        }
+      ],
+      "rationale": "R40: the Dec 15 calendar entry (2:00-6:45 pm, before the 7 pm Penance Service) changes that one occurrence. The answer to the earlier question (cancel 2-8 pm plus the new 2-6:45 pm) can't be approved: a dated entry is keyed by church, type, date and start time, so a cancellation at 14:00 and the new 14:00 entry are the same slot. Leaning towards the dated 2:00-6:45 pm entry because it records the real hours. The catch is that the frontend links only cancelled dated rows to weekly ones, so the site may also show the weekly 2-8 pm that day. Cancelling instead removes the wrong 8 pm end but shows no Adoration on Dec 15.",
+      "question": "Dec 15 (third Tuesday): the Advent calendar gives Adoration 2:00-6:45 pm instead of the usual 2-8 pm. The file can't hold both a cancelled 2 pm occurrence and a new 2 pm one that day. Which should it record?",
+      "options": [
+        {
+          "label": "Dated Adoration 2:00-6:45 pm",
+          "entry": {
+            "church_slug": "st-matthew-the-apostle-randolph",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-15",
+            "start_time": "14:00",
+            "end_time": "18:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Cancel that day's 2-8 pm occurrence",
+          "entry": {
+            "church_slug": "st-matthew-the-apostle-randolph",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-15",
+            "start_time": "14:00",
+            "end_time": "20:00",
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave the weekly slot alone",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@889c2ee61460",
+        "at": "2026-11-23T22:48:16Z"
+      }
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 6,
+          "said": "Christmas Eve - Thursday, 12/24/26 Family Liturgy at 5:00 pm Mass at 7:00 pm and 10:00 pm *Christmas Pageant prior to 5:00 pm Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Masses; the 5:00 pm Family Liturgy is a Mass (the same box calls it the 5:00 pm Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 6,
+          "said": "Christmas Eve - Thursday, 12/24/26 Family Liturgy at 5:00 pm Mass at 7:00 pm and 10:00 pm *Christmas Pageant prior to 5:00 pm Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Masses; the 5:00 pm Family Liturgy is a Mass (the same box calls it the 5:00 pm Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "22:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 6,
+          "said": "Christmas Eve - Thursday, 12/24/26 Family Liturgy at 5:00 pm Mass at 7:00 pm and 10:00 pm *Christmas Pageant prior to 5:00 pm Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Masses; the 5:00 pm Family Liturgy is a Mass (the same box calls it the 5:00 pm Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 6,
+          "said": "Christmas Day - Friday, 12/25/26 Mass at 9:30 am and 11:00 am"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Day Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 6,
+          "said": "Christmas Day - Friday, 12/25/26 Mass at 9:30 am and 11:00 am"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Day Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 6,
+          "said": "Christmas Day - Friday, 12/25/26 *No 8:00 am Mass"
+        }
+      ],
+      "rationale": "R1, R16, R18: the bulletin cancels the weekly Friday 8:00 am Mass on Christmas Day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Eve"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 6,
+          "said": "New Year's Eve - Thursday, 12/31/26 Mass at 5:00 pm"
+        }
+      ],
+      "rationale": "R1, R16: dated vigil Mass for the Solemnity of Mary.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Day"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "735ca8bc",
+          "page": 6,
+          "said": "New Year's Day - Friday, 01/01/27 Mass at 10:00 am"
+        }
+      ],
+      "rationale": "R1, R16, R17: dated holy day Mass; the bulletin does not say the Friday 8:00 am Mass is cancelled, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

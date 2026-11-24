@@ -1,0 +1,571 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-philip-the-apostle-clifton",
+  "status": "approved",
+  "as_of": "2026-11-15T16:52:32Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T21:45:52Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:44:03Z",
+  "summary": "One church, St. Philip the Apostle, Clifton. The page-1 schedule box is identical in both bulletins read (Nov 8 and Nov 15, 2026): Mass Mon-Sat 9:00 AM, Sat Vigil 5:30 PM, Sun 8:00, 10:00 and 12:00, a Friday 9:30-10:30 AM Holy Hour and Saturday Confession at 4:30, and the Mass intentions match it. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a69ae77cf4b70d0254dd846d26d23225e24d777f3b46e17982e722ffa2ea168d",
+      "fetched_at": "2026-11-15T16:52:32Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "53150e870da139cbce2fae7b60551f41d4c9e795fc5631e2757d60ee4d9d59e5",
+      "fetched_at": "2026-11-08T16:01:18Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 1,
+          "said": "Saturday (Vigil) - 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53150e87",
+          "page": 1,
+          "said": "Saturday (Vigil) - 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 5,
+          "said": "SATURDAY, NOVEMBER 21, 2026 ... 5:30 PM Paul, and Maria Konzelmann"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read, and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 1,
+          "said": "Sunday - 8:00 AM 10:00 AM (Broadcast) 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53150e87",
+          "page": 1,
+          "said": "Sunday - 8:00 AM 10:00 AM (Broadcast) 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the Sunday intentions list 8:00, 10:00 and 12:00 every week. The 10:00 AM is broadcast and also celebrated in church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 1,
+          "said": "Sunday - 8:00 AM 10:00 AM (Broadcast) 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53150e87",
+          "page": 1,
+          "said": "Sunday - 8:00 AM 10:00 AM (Broadcast) 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the Sunday intentions list 8:00, 10:00 and 12:00 every week. The 10:00 AM is broadcast and also celebrated in church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 1,
+          "said": "Sunday - 8:00 AM 10:00 AM (Broadcast) 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53150e87",
+          "page": 1,
+          "said": "Sunday - 8:00 AM 10:00 AM (Broadcast) 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the Sunday intentions list 8:00, 10:00 and 12:00 every week. The 10:00 AM is broadcast and also celebrated in church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 1,
+          "said": "MASS | Daily - 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53150e87",
+          "page": 1,
+          "said": "MASS | Daily - 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 5,
+          "said": "MONDAY ... FRIDAY, NOVEMBER 16-20, 2026: 9:00 AM intentions each day"
+        }
+      ],
+      "rationale": "R1: 'Daily - 9:00 AM' in the schedule box of both bulletins read; the intentions list a 9:00 AM Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 1,
+          "said": "MASS | Daily - 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53150e87",
+          "page": 1,
+          "said": "MASS | Daily - 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 5,
+          "said": "MONDAY ... FRIDAY, NOVEMBER 16-20, 2026: 9:00 AM intentions each day"
+        }
+      ],
+      "rationale": "R1: 'Daily - 9:00 AM' in the schedule box of both bulletins read; the intentions list a 9:00 AM Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 1,
+          "said": "MASS | Daily - 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53150e87",
+          "page": 1,
+          "said": "MASS | Daily - 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 5,
+          "said": "MONDAY ... FRIDAY, NOVEMBER 16-20, 2026: 9:00 AM intentions each day"
+        }
+      ],
+      "rationale": "R1: 'Daily - 9:00 AM' in the schedule box of both bulletins read; the intentions list a 9:00 AM Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 1,
+          "said": "MASS | Daily - 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53150e87",
+          "page": 1,
+          "said": "MASS | Daily - 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 5,
+          "said": "MONDAY ... FRIDAY, NOVEMBER 16-20, 2026: 9:00 AM intentions each day"
+        }
+      ],
+      "rationale": "R1: 'Daily - 9:00 AM' in the schedule box of both bulletins read; the intentions list a 9:00 AM Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 1,
+          "said": "MASS | Daily - 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53150e87",
+          "page": 1,
+          "said": "MASS | Daily - 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 3,
+          "said": "Holy Mass on Thanksgiving Day, Thursday, November 26, 2026, will be celebrated at 9 AM."
+        }
+      ],
+      "rationale": "R1: 'Daily - 9:00 AM' in the schedule box of both bulletins read, with Thursday 9:00 AM intentions both weeks. The Thanksgiving Day 9 AM Mass falls on this weekly slot, so it is not recorded separately (POLICY, Weekly or dated, rules 6-7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 1,
+          "said": "MASS | Daily - 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53150e87",
+          "page": 1,
+          "said": "MASS | Daily - 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 5,
+          "said": "SATURDAY, NOVEMBER 21, 2026 9:00 AM Sergio P. Llanos, Jr."
+        },
+        {
+          "source": "agent",
+          "bulletin": "53150e87",
+          "page": 5,
+          "said": "SATURDAY, NOVEMBER 14, 2026 9:00 AM Deceased members of the Columbiettes"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily - 9:00 AM' covers Saturday too; the intentions print a Saturday 9:00 AM Mass in both weeks read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 1,
+          "said": "HOLY HOUR | Every Friday - 9:30 to 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53150e87",
+          "page": 1,
+          "said": "HOLY HOUR | Every Friday - 9:30 to 10:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; POLICY counts a Holy Hour as Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-clifton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 1,
+          "said": "CONFESSION | Every Saturday - 4:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53150e87",
+          "page": 1,
+          "said": "CONFESSION | Every Saturday - 4:30"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read. The box gives no AM/PM; 4:30 PM is the only sensible reading, an hour before the 5:30 PM Vigil. No end time is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 1,
+          "said": "For Communion Visit and/or Anointing of the Sick, please contact the Parish Office."
+        }
+      ],
+      "rationale": "R24, R26: Anointing and Communion visits are not Mass, Confession or Adoration, and they are by request with no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a69ae77c",
+          "page": 4,
+          "said": "Rosary Remembers-November 16 All are welcome to join us for Mass and remembrance of our loved ones during the month of November. Our meeting starts at 6:30 in Marian Hall"
+        }
+      ],
+      "rationale": "POLICY, What to extract (no definite start time), R26: the 6:30 is the meeting's start, not a stated Mass time, and the November 16 intentions list only the 9:00 AM Mass. Also printed in 53150e870da1 p4.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

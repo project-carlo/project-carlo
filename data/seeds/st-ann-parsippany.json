@@ -1,0 +1,665 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-ann-parsippany",
+  "status": "approved",
+  "as_of": "2026-11-15T16:20:51Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T14:00:57Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:37Z",
+  "summary": "One church. The newest issue (Nov 15) is a Fall Festival issue with no schedule box: its Mass intentions confirm Sat 5 PM, Sun 8 and 10:30, and weekday 8:30 AM Masses, which the Nov 8 issue's schedule box and the website agree with. First Friday Mass and Holy Hour come from the Nov 8 box (R12); Thanksgiving moves to 9 AM. Open: the Friday 9 AM Holy Hour and Saturday 4 PM Confession, printed only in the Nov 8 box.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "11e71d2bb2816c8f6d9b8cfaf75997065236f57b3db24d3b957f789546c9f4ab",
+      "fetched_at": "2026-11-15T16:20:51Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4e367ed6488c52f1b78cc54d474fcf0af89543d96b58755f0a8e141e53582b8e",
+      "fetched_at": "2026-11-08T15:45:12Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11e71d2b",
+          "page": 2,
+          "said": "Mass Intentions: November 15th - 33rd Sunday ... 5:00 PM Vigil; November 22nd ... 5:00 PM Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 1,
+          "said": "Saturday Evening ... 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 2,
+          "said": "Mass Intentions 5:00 PM Vigil (Nov 8 and Nov 15)"
+        },
+        {
+          "source": "website",
+          "url": "https://saint-ann.net/mass-times",
+          "said": "Saturday : 5:00 PM English"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: the newest issue's intentions print the 5:00 PM Vigil for both weekends it covers; the older issue's schedule box and the website's Mass Times page agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11e71d2b",
+          "page": 2,
+          "said": "Mass Intentions, Nov 15 and Nov 22: 8:00 AM ... 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 1,
+          "said": "Sunday ... 8:00 AM, 10:30 AM (Livestreamed)"
+        },
+        {
+          "source": "website",
+          "url": "https://saint-ann.net/mass-times",
+          "said": "Sunday : 8:00 AM English 10:30 AM English"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: both Sundays in the newest issue's intentions list 8:00 AM and 10:30 AM; the older schedule box and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11e71d2b",
+          "page": 2,
+          "said": "Mass Intentions, Nov 15 and Nov 22: 8:00 AM ... 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 1,
+          "said": "Sunday ... 8:00 AM, 10:30 AM (Livestreamed)"
+        },
+        {
+          "source": "website",
+          "url": "https://saint-ann.net/mass-times",
+          "said": "Sunday : 8:00 AM English 10:30 AM English"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: both Sundays in the newest issue's intentions list 8:00 AM and 10:30 AM; the older schedule box and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11e71d2b",
+          "page": 2,
+          "said": "Mass Intentions: Monday, November 16th ... Friday, November 20th, 8:30 AM each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 2,
+          "said": "Mass Intentions Monday, November 9th - Friday, November 13th, 8:30 AM each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 1,
+          "said": "Monday to Friday ... 8:30 AM (Livestreamed)"
+        },
+        {
+          "source": "website",
+          "url": "https://saint-ann.net/mass-times",
+          "said": "Monday : 8:30 AM English ... Friday : 8:30 AM English"
+        }
+      ],
+      "rationale": "R1, R35: the 8:30 AM weekday Masses are in the intentions of both issues (two different weeks) and the older issue's schedule box calls them the regular schedule; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11e71d2b",
+          "page": 2,
+          "said": "Mass Intentions: Monday, November 16th ... Friday, November 20th, 8:30 AM each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 2,
+          "said": "Mass Intentions Monday, November 9th - Friday, November 13th, 8:30 AM each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 1,
+          "said": "Monday to Friday ... 8:30 AM (Livestreamed)"
+        },
+        {
+          "source": "website",
+          "url": "https://saint-ann.net/mass-times",
+          "said": "Monday : 8:30 AM English ... Friday : 8:30 AM English"
+        }
+      ],
+      "rationale": "R1, R35: the 8:30 AM weekday Masses are in the intentions of both issues (two different weeks) and the older issue's schedule box calls them the regular schedule; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11e71d2b",
+          "page": 2,
+          "said": "Mass Intentions: Monday, November 16th ... Friday, November 20th, 8:30 AM each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 2,
+          "said": "Mass Intentions Monday, November 9th - Friday, November 13th, 8:30 AM each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 1,
+          "said": "Monday to Friday ... 8:30 AM (Livestreamed)"
+        },
+        {
+          "source": "website",
+          "url": "https://saint-ann.net/mass-times",
+          "said": "Monday : 8:30 AM English ... Friday : 8:30 AM English"
+        }
+      ],
+      "rationale": "R1, R35: the 8:30 AM weekday Masses are in the intentions of both issues (two different weeks) and the older issue's schedule box calls them the regular schedule; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11e71d2b",
+          "page": 2,
+          "said": "Mass Intentions: Monday, November 16th ... Friday, November 20th, 8:30 AM each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 2,
+          "said": "Mass Intentions Monday, November 9th - Friday, November 13th, 8:30 AM each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 1,
+          "said": "Monday to Friday ... 8:30 AM (Livestreamed)"
+        },
+        {
+          "source": "website",
+          "url": "https://saint-ann.net/mass-times",
+          "said": "Monday : 8:30 AM English ... Friday : 8:30 AM English"
+        }
+      ],
+      "rationale": "R1, R35: the 8:30 AM weekday Masses are in the intentions of both issues (two different weeks) and the older issue's schedule box calls them the regular schedule; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11e71d2b",
+          "page": 2,
+          "said": "Mass Intentions: Monday, November 16th ... Friday, November 20th, 8:30 AM each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 2,
+          "said": "Mass Intentions Monday, November 9th - Friday, November 13th, 8:30 AM each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 1,
+          "said": "Monday to Friday ... 8:30 AM (Livestreamed)"
+        },
+        {
+          "source": "website",
+          "url": "https://saint-ann.net/mass-times",
+          "said": "Monday : 8:30 AM English ... Friday : 8:30 AM English"
+        }
+      ],
+      "rationale": "R1, R35: the 8:30 AM weekday Masses are in the intentions of both issues (two different weeks) and the older issue's schedule box calls them the regular schedule; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 1,
+          "said": "Celebration of the Eucharist: First Fridays ... 6:00 PM"
+        }
+      ],
+      "rationale": "R12: a named First Friday Mass in the older issue's schedule box; neither read issue's week (Nov 8-14, Nov 15-22) holds a first Friday, and the newest issue prints no schedule box at all (festival issue).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-parsippany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 1,
+          "said": "Holy Hour & Exposition of the Blessed Sacrament: First Fridays ... 5:00 PM"
+        }
+      ],
+      "rationale": "R12: a named First Friday Holy Hour with exposition in the older issue's schedule box; neither read issue's week holds a first Friday. No end time is printed, so none is given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-parsippany",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day, with music"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 6,
+          "said": "Thanksgiving Day Mass on Thursday, November 26, will be celebrated at 9:00 AM instead of the usual 8:30 AM and will include music."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 4,
+          "said": "On Thursday, November 26, Thanksgiving Day, we will celebrate Mass at 9:00 AM with music."
+        }
+      ],
+      "rationale": "R19, R40: the older issue moves the Thanksgiving Mass from 8:30 to 9:00 AM; on or after as_of, and the newest issue says nothing contrary.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-parsippany",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day; moved to 9:00 AM"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 6,
+          "said": "Thanksgiving Day Mass on Thursday, November 26, will be celebrated at 9:00 AM instead of the usual 8:30 AM"
+        }
+      ],
+      "rationale": "R19, R40, R16: a moved Mass is a cancellation of the usual 8:30 AM on Nov 26 plus the 9:00 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-parsippany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour, after the 8:30 AM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 1,
+          "said": "Holy Hour & Exposition of the Blessed Sacrament: Every Friday ... Following the 8:30 AM Mass"
+        }
+      ],
+      "rationale": "R29: the newest issue (a Fall Festival issue whose cover replaces the usual schedule box) prints no Adoration at all, and the website's Mass Times page lists only Masses, so R6/R36 cannot settle it (only one older issue). R10 times it 30 minutes after the weekday 8:30 Mass. Leaning include: the omission looks like the festival layout, not a change.",
+      "question": "Keep the Friday Holy Hour after the 8:30 AM Mass (9:00 AM), printed only in the older issue's schedule box?",
+      "options": [
+        {
+          "label": "Fridays 9:00 AM",
+          "entry": {
+            "church_slug": "st-ann-parsippany",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour, after the 8:30 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:37Z"
+      }
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-parsippany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e367ed6",
+          "page": 1,
+          "said": "Celebration of Reconciliation: Every Saturday ... 4:00 PM"
+        }
+      ],
+      "rationale": "R29: the newest issue (Fall Festival issue without the usual schedule box) prints no Confession, and the website's Mass Times page lists only Masses; only one older issue read, so R36 cannot apply. Leaning include: the omission looks like the festival layout, not a change. No end time printed.",
+      "question": "Keep Saturday Confession at 4:00 PM, printed only in the older issue's schedule box?",
+      "options": [
+        {
+          "label": "Saturdays 4:00 PM",
+          "entry": {
+            "church_slug": "st-ann-parsippany",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:37Z"
+      }
+    }
+  ]
+}

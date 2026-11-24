@@ -1,0 +1,813 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-francis-de-sales-mcafee",
+  "status": "approved",
+  "as_of": "2026-11-15T16:16:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:04:29Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:03Z",
+  "summary": "One church. Both bulletins read (Nov 8 and 15) print the same schedule box: Sat 5 PM and 7 PM Spanish, Sun 8, 10, 12; Mon-Sat 8:30 AM; Sat confession 4-4:45; Adoration Sun 6-8 PM and First Fridays 9-12 and 6-9 PM. Dated: Dec 8 holy-day Masses from the website and Christmas Eve 4 PM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c2b1ec48459018269bf87ee4972513a6db624f6efbd75200f4ce8b83c0fe5336",
+      "fetched_at": "2026-11-15T16:16:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "14e6a37219997da8da8f7647763bc9a80f2223f2f3a1db35079eea18fa9d8b09",
+      "fetched_at": "2026-11-08T15:41:35Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 1,
+          "said": "Saturday (Vigil): English: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 1,
+          "said": "Saturday (Vigil): English: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 2,
+          "said": "Saturday 5:00 PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 2,
+          "said": "Saturday 5:00 PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and intentions of both bulletins read; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 1,
+          "said": "Saturday (Vigil): Spanish: 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 1,
+          "said": "Saturday (Vigil): Spanish: 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 2,
+          "said": "7:00 PM Spanish Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 2,
+          "said": "7:00 PM Spanish Mass"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and intentions of both bulletins. The website omits it, which is not a conflict (R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 1,
+          "said": "Sunday 8:00 AM 10:00 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 1,
+          "said": "Sunday 8:00 AM 10:00 AM 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and intentions of both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 1,
+          "said": "Sunday 8:00 AM 10:00 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 1,
+          "said": "Sunday 8:00 AM 10:00 AM 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and intentions of both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 1,
+          "said": "Sunday 8:00 AM 10:00 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 1,
+          "said": "Sunday 8:00 AM 10:00 AM 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and intentions of both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 1,
+          "said": "Weekday Mass: Monday through Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 1,
+          "said": "Weekday Mass: Monday through Saturday 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://stfrancisvernon.org/",
+          "said": "Daily Mass Schedule Mon Sat 8:30 AM"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins. The Wednesday intention line reads '8:30 PM' in both issues, a misprint: every other weekday is 8:30 AM, and the box and website say Monday through Saturday 8:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 1,
+          "said": "Weekday Mass: Monday through Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 1,
+          "said": "Weekday Mass: Monday through Saturday 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://stfrancisvernon.org/",
+          "said": "Daily Mass Schedule Mon Sat 8:30 AM"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins. The Wednesday intention line reads '8:30 PM' in both issues, a misprint: every other weekday is 8:30 AM, and the box and website say Monday through Saturday 8:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 1,
+          "said": "Weekday Mass: Monday through Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 1,
+          "said": "Weekday Mass: Monday through Saturday 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://stfrancisvernon.org/",
+          "said": "Daily Mass Schedule Mon Sat 8:30 AM"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins. The Wednesday intention line reads '8:30 PM' in both issues, a misprint: every other weekday is 8:30 AM, and the box and website say Monday through Saturday 8:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 1,
+          "said": "Weekday Mass: Monday through Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 1,
+          "said": "Weekday Mass: Monday through Saturday 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://stfrancisvernon.org/",
+          "said": "Daily Mass Schedule Mon Sat 8:30 AM"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins. The Wednesday intention line reads '8:30 PM' in both issues, a misprint: every other weekday is 8:30 AM, and the box and website say Monday through Saturday 8:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 1,
+          "said": "Weekday Mass: Monday through Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 1,
+          "said": "Weekday Mass: Monday through Saturday 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://stfrancisvernon.org/",
+          "said": "Daily Mass Schedule Mon Sat 8:30 AM"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins. The Wednesday intention line reads '8:30 PM' in both issues, a misprint: every other weekday is 8:30 AM, and the box and website say Monday through Saturday 8:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 1,
+          "said": "Weekday Mass: Monday through Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 1,
+          "said": "Weekday Mass: Monday through Saturday 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://stfrancisvernon.org/",
+          "said": "Daily Mass Schedule Mon Sat 8:30 AM"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins. The Wednesday intention line reads '8:30 PM' in both issues, a misprint: every other weekday is 8:30 AM, and the box and website say Monday through Saturday 8:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 1,
+          "said": "Reconciliation: Saturday 4:00 - 4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 1,
+          "said": "Reconciliation: Saturday 4:00 - 4:45 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Daily Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament In the Daily Chapel ... Sunday Evenings 6:00 PM - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament In the Daily Chapel ... Sunday Evenings 6:00 PM - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 1,
+          "said": "Adoration: Sunday 6:00 - 8:00 PM"
+        }
+      ],
+      "rationale": "R1: schedule box and Adoration box of both bulletins; the week-at-a-glance lists 6:00 PM Eucharistic Adoration each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Daily Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 2,
+          "said": "In the Daily Chapel First Friday of the Month 9:00 AM - 12:00 PM & 6:00 PM - 9:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 2,
+          "said": "In the Daily Chapel First Friday of the Month 9:00 AM - 12:00 PM & 6:00 PM - 9:00 PM"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the newest bulletin prints First Friday Adoration in both boxes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Daily Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 2,
+          "said": "In the Daily Chapel First Friday of the Month 9:00 AM - 12:00 PM & 6:00 PM - 9:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 2,
+          "said": "In the Daily Chapel First Friday of the Month 9:00 AM - 12:00 PM & 6:00 PM - 9:00 PM"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the evening session of the same First Friday Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 5,
+          "said": "Christmas Eve, December 24th at the 4 PM mass"
+        }
+      ],
+      "rationale": "R1, R16: the Youth Choir notice dates a 4 PM Christmas Eve Mass, open to all; it is after as_of. Other Christmas times are not yet printed; update mode will read them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 1,
+          "said": "Holy Days: 8:30AM, 12:00 PM, 7:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14e6a372",
+          "page": 1,
+          "said": "Holy Days: 8:30AM, 12:00 PM, 7:30PM"
+        }
+      ],
+      "rationale": "POLICY Dates: generic holy-day times pin down no date; the Dec 8 Immaculate Conception Masses the website dates are recorded as their own slots.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2b1ec48",
+          "page": 4,
+          "said": "The Vernon Clergy invite you to attend Thanksgiving Service Tuesday, November 24, 2026 at 7:00 pm at the Glenwood Baptist Church"
+        }
+      ],
+      "rationale": "R22, R24: an ecumenical service at another denomination's church, not a Mass at the parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stfrancisvernon.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 8:30 AM 12:00 PM 7:30 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:06:40Z",
+            "current_because": "Fetched 2026-11-23; the homepage's 'Upcoming Holy Days' lists the coming December 8 and its events calendar runs through December 2026.",
+            "bulletin": "c2b1ec48",
+            "fits_because": "The newest bulletin's schedule box gives Holy Days: 8:30AM, 12:00 PM, 7:30PM, the same three times; the 8:30 AM is the weekly Tuesday Mass."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish website dates the Immaculate Conception Masses, matching the bulletin's holy-day times; the 8:30 AM is the weekly Tuesday Mass and is not duplicated (POLICY, Weekly or dated rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-mcafee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stfrancisvernon.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 8:30 AM 12:00 PM 7:30 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:06:40Z",
+            "current_because": "Fetched 2026-11-23; the homepage's 'Upcoming Holy Days' lists the coming December 8 and its events calendar runs through December 2026.",
+            "bulletin": "c2b1ec48",
+            "fits_because": "The newest bulletin's schedule box gives Holy Days: 8:30AM, 12:00 PM, 7:30PM, the same three times; the 8:30 AM is the weekly Tuesday Mass."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish website dates the Immaculate Conception Masses, matching the bulletin's holy-day times; the 8:30 AM is the weekly Tuesday Mass and is not duplicated (POLICY, Weekly or dated rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

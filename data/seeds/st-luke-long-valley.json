@@ -1,0 +1,629 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-luke-long-valley",
+  "status": "approved",
+  "as_of": "2026-11-15T16:21:02Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:48:36Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:34Z",
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026, pages are images) print the same schedule box: daily 9 AM Mass Mon-Sat, Saturday 5 PM vigil, Sunday 7:30, 9:30, 11 AM and 6 PM, Saturday 4 PM confession, and first-Friday Adoration 9:30-12 (September-June). No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "23247ea28408dd4fc7de64dc11d0a7eb23c4611a68d51b14b3bbd0f146b42c4b",
+      "fetched_at": "2026-11-15T16:21:02Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "12ec933692c53ff0eaf7e6b8f958c1f319c6c3dbc62b2fdaa688e4cb1df5b489",
+      "fetched_at": "2026-11-08T15:45:21Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 1,
+          "said": "Daily Mass // 9:00 am Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12ec9336",
+          "page": 1,
+          "said": "Daily Mass // 9:00 am Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 2,
+          "said": "Mass Intentions list 9:00 am each day Monday, November 16 through Saturday, November 21"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on page 1 of both bulletins read; the intentions on page 2 list a 9:00 am Mass every day Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 1,
+          "said": "Daily Mass // 9:00 am Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12ec9336",
+          "page": 1,
+          "said": "Daily Mass // 9:00 am Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 2,
+          "said": "Mass Intentions list 9:00 am each day Monday, November 16 through Saturday, November 21"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on page 1 of both bulletins read; the intentions on page 2 list a 9:00 am Mass every day Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 1,
+          "said": "Daily Mass // 9:00 am Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12ec9336",
+          "page": 1,
+          "said": "Daily Mass // 9:00 am Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 2,
+          "said": "Mass Intentions list 9:00 am each day Monday, November 16 through Saturday, November 21"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on page 1 of both bulletins read; the intentions on page 2 list a 9:00 am Mass every day Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 1,
+          "said": "Daily Mass // 9:00 am Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12ec9336",
+          "page": 1,
+          "said": "Daily Mass // 9:00 am Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 2,
+          "said": "Mass Intentions list 9:00 am each day Monday, November 16 through Saturday, November 21"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on page 1 of both bulletins read; the intentions on page 2 list a 9:00 am Mass every day Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 1,
+          "said": "Daily Mass // 9:00 am Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12ec9336",
+          "page": 1,
+          "said": "Daily Mass // 9:00 am Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 2,
+          "said": "Mass Intentions list 9:00 am each day Monday, November 16 through Saturday, November 21"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on page 1 of both bulletins read; the intentions on page 2 list a 9:00 am Mass every day Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 1,
+          "said": "Daily Mass // 9:00 am Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12ec9336",
+          "page": 1,
+          "said": "Daily Mass // 9:00 am Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 2,
+          "said": "Mass Intentions list 9:00 am each day Monday, November 16 through Saturday, November 21"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on page 1 of both bulletins read; the intentions on page 2 list a 9:00 am Mass every day Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 1,
+          "said": "Saturday Vigil Mass // 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12ec9336",
+          "page": 1,
+          "said": "Saturday Vigil Mass // 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on page 1 of both bulletins read, and in the page 2 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 1,
+          "said": "Sunday Masses // 7:30, 9:30, 11:00 am // 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12ec9336",
+          "page": 1,
+          "said": "Sunday Masses // 7:30, 9:30, 11:00 am // 6:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on page 1 of both bulletins read, and in the page 2 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 1,
+          "said": "Sunday Masses // 7:30, 9:30, 11:00 am // 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12ec9336",
+          "page": 1,
+          "said": "Sunday Masses // 7:30, 9:30, 11:00 am // 6:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on page 1 of both bulletins read, and in the page 2 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 1,
+          "said": "Sunday Masses // 7:30, 9:30, 11:00 am // 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12ec9336",
+          "page": 1,
+          "said": "Sunday Masses // 7:30, 9:30, 11:00 am // 6:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on page 1 of both bulletins read, and in the page 2 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 1,
+          "said": "Sunday Masses // 7:30, 9:30, 11:00 am // 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12ec9336",
+          "page": 1,
+          "said": "Sunday Masses // 7:30, 9:30, 11:00 am // 6:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on page 1 of both bulletins read, and in the page 2 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 1,
+          "said": "Sacrament of Reconciliation // Saturday 4:00 pm (or by appointment)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12ec9336",
+          "page": 1,
+          "said": "Sacrament of Reconciliation // Saturday 4:00 pm (or by appointment)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 2,
+          "said": "11.21.26 /Saturday ... 4:00 PM Reconciliation"
+        }
+      ],
+      "rationale": "R1: printed on page 1 of both bulletins read; no end time given, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 1,
+          "said": "(or by appointment)"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-long-valley",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 1,
+          "said": "Eucharistic Adoration // First Friday of each month, 9:30 am-12:00 pm (September-June)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12ec9336",
+          "page": 1,
+          "said": "Eucharistic Adoration // First Friday of each month, 9:30 am-12:00 pm (September-June)"
+        }
+      ],
+      "rationale": "R1: printed in the standing schedule on page 1 of both bulletins; POLICY keeps First Friday as weeks_of_month and September-June as the season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12ec9336",
+          "page": 1,
+          "said": "Church Open for Prayer: The church is open daily for private prayer from 8:00 a.m. to 8:00 p.m."
+        }
+      ],
+      "rationale": "R38: the church being open for private prayer does not establish an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23247ea2",
+          "page": 6,
+          "said": "Tuesday, November 24, 2026 7:00 PM Church of the Messiah 50 County Rd 513, Chester, NJ ... Thanksgiving Week Worship Service sponsored by the Long Valley Clergy Association"
+        }
+      ],
+      "rationale": "R24, R22: an ecumenical worship service, not a Mass, held at another church in Chester.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

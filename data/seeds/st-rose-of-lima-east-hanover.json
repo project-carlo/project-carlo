@@ -1,0 +1,810 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-rose-of-lima-east-hanover",
+  "status": "approved",
+  "as_of": "2026-11-15T16:52:16Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T21:52:36Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:44:07Z",
+  "summary": "One church. The bulletins (Oct 25 and Nov 8, 2026 issues) have no schedule box: Mass times come from two weeks of intentions in each (Sun 7:30, 9:15, 10:30, 12:15, 7 PM; Sat 5:30 PM; Mon-Sat 9 AM), matching the website. Confession and Adoration are from the Parish Opportunities box on page 6. Open: whether Wednesday 1 PM Adoration ('See you in September') is running now.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "36cab1ea955f866946ccd26b1964d4e151862f9854bc4f2e13f2cb6d2ca7dda9",
+      "fetched_at": "2026-11-15T16:52:16Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1b483256b14660cbc4b72e338e9b53817e7de293aae23c5160d4fd219777eb06",
+      "fetched_at": "2026-11-08T16:01:20Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 2,
+          "said": "Sunday, November 8th 7:30 ... 9:15 ... 10:30 ... 12:15 ... 7:00; Sunday, November 15th 7:30 ... 9:15 ... 10:30 ... 12:15 ... 7:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 2,
+          "said": "Sunday, October 25th 7:30 ... 9:15 ... 10:30 ... 12:15 ... 7:00"
+        },
+        {
+          "source": "website",
+          "url": "https://saintroseoflimachurch.org/mass-times",
+          "said": "Sunday : 7:30 AM 9:15 AM Children's Mass 10:30 AM 12:15 PM 7:00 PM"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: the same five Sunday Mass times are in the intentions for both Sundays of the newest bulletin and for October 25 and November 1 in the older one; the website's Mass schedule agrees. The bulletins print no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 2,
+          "said": "Sunday, November 8th 7:30 ... 9:15 ... 10:30 ... 12:15 ... 7:00; Sunday, November 15th 7:30 ... 9:15 ... 10:30 ... 12:15 ... 7:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 2,
+          "said": "Sunday, October 25th 7:30 ... 9:15 ... 10:30 ... 12:15 ... 7:00"
+        },
+        {
+          "source": "website",
+          "url": "https://saintroseoflimachurch.org/mass-times",
+          "said": "Sunday : 7:30 AM 9:15 AM Children's Mass 10:30 AM 12:15 PM 7:00 PM"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: the same five Sunday Mass times are in the intentions for both Sundays of the newest bulletin and for October 25 and November 1 in the older one; the website's Mass schedule agrees. The bulletins print no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 2,
+          "said": "Sunday, November 8th 7:30 ... 9:15 ... 10:30 ... 12:15 ... 7:00; Sunday, November 15th 7:30 ... 9:15 ... 10:30 ... 12:15 ... 7:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 2,
+          "said": "Sunday, October 25th 7:30 ... 9:15 ... 10:30 ... 12:15 ... 7:00"
+        },
+        {
+          "source": "website",
+          "url": "https://saintroseoflimachurch.org/mass-times",
+          "said": "Sunday : 7:30 AM 9:15 AM Children's Mass 10:30 AM 12:15 PM 7:00 PM"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: the same five Sunday Mass times are in the intentions for both Sundays of the newest bulletin and for October 25 and November 1 in the older one; the website's Mass schedule agrees. The bulletins print no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 2,
+          "said": "Sunday, November 8th 7:30 ... 9:15 ... 10:30 ... 12:15 ... 7:00; Sunday, November 15th 7:30 ... 9:15 ... 10:30 ... 12:15 ... 7:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 2,
+          "said": "Sunday, October 25th 7:30 ... 9:15 ... 10:30 ... 12:15 ... 7:00"
+        },
+        {
+          "source": "website",
+          "url": "https://saintroseoflimachurch.org/mass-times",
+          "said": "Sunday : 7:30 AM 9:15 AM Children's Mass 10:30 AM 12:15 PM 7:00 PM"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: the same five Sunday Mass times are in the intentions for both Sundays of the newest bulletin and for October 25 and November 1 in the older one; the website's Mass schedule agrees. The bulletins print no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 2,
+          "said": "Sunday, November 8th 7:30 ... 9:15 ... 10:30 ... 12:15 ... 7:00; Sunday, November 15th 7:30 ... 9:15 ... 10:30 ... 12:15 ... 7:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 2,
+          "said": "Sunday, October 25th 7:30 ... 9:15 ... 10:30 ... 12:15 ... 7:00"
+        },
+        {
+          "source": "website",
+          "url": "https://saintroseoflimachurch.org/mass-times",
+          "said": "Sunday : 7:30 AM 9:15 AM Children's Mass 10:30 AM 12:15 PM 7:00 PM"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: the same five Sunday Mass times are in the intentions for both Sundays of the newest bulletin and for October 25 and November 1 in the older one; the website's Mass schedule agrees. The bulletins print no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 2,
+          "said": "Saturday, November 14th ... 5:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 2,
+          "said": "Saturday, October 31st ... 5:30"
+        },
+        {
+          "source": "website",
+          "url": "https://saintroseoflimachurch.org/mass-times",
+          "said": "Saturday : 5:30 PM VIGIL MASS"
+        }
+      ],
+      "rationale": "R35: the Saturday 5:30 PM Mass is in the intentions of both bulletins (two different weeks); the website's Mass schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 2,
+          "said": "Monday, November 9th ... 9:00 (likewise Tuesday through Saturday, November 10th-14th, 9:00)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 2,
+          "said": "Monday, October 26th ... 9:00 (likewise Tuesday through Saturday, October 27th-31st, 9:00)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintroseoflimachurch.org/mass-times",
+          "said": "Daily Mass Schedule Mon Fri 9:00 AM Saturday : 9:00 AM"
+        }
+      ],
+      "rationale": "R35: a 9:00 AM Mass is in the intentions for every weekday Monday-Saturday in both bulletins (weeks of October 26 and November 9), and page 6 refers to the 9am Mass on Friday and Saturday; the website's daily schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 2,
+          "said": "Monday, November 9th ... 9:00 (likewise Tuesday through Saturday, November 10th-14th, 9:00)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 2,
+          "said": "Monday, October 26th ... 9:00 (likewise Tuesday through Saturday, October 27th-31st, 9:00)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintroseoflimachurch.org/mass-times",
+          "said": "Daily Mass Schedule Mon Fri 9:00 AM Saturday : 9:00 AM"
+        }
+      ],
+      "rationale": "R35: a 9:00 AM Mass is in the intentions for every weekday Monday-Saturday in both bulletins (weeks of October 26 and November 9), and page 6 refers to the 9am Mass on Friday and Saturday; the website's daily schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 2,
+          "said": "Monday, November 9th ... 9:00 (likewise Tuesday through Saturday, November 10th-14th, 9:00)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 2,
+          "said": "Monday, October 26th ... 9:00 (likewise Tuesday through Saturday, October 27th-31st, 9:00)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintroseoflimachurch.org/mass-times",
+          "said": "Daily Mass Schedule Mon Fri 9:00 AM Saturday : 9:00 AM"
+        }
+      ],
+      "rationale": "R35: a 9:00 AM Mass is in the intentions for every weekday Monday-Saturday in both bulletins (weeks of October 26 and November 9), and page 6 refers to the 9am Mass on Friday and Saturday; the website's daily schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 2,
+          "said": "Monday, November 9th ... 9:00 (likewise Tuesday through Saturday, November 10th-14th, 9:00)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 2,
+          "said": "Monday, October 26th ... 9:00 (likewise Tuesday through Saturday, October 27th-31st, 9:00)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintroseoflimachurch.org/mass-times",
+          "said": "Daily Mass Schedule Mon Fri 9:00 AM Saturday : 9:00 AM"
+        }
+      ],
+      "rationale": "R35: a 9:00 AM Mass is in the intentions for every weekday Monday-Saturday in both bulletins (weeks of October 26 and November 9), and page 6 refers to the 9am Mass on Friday and Saturday; the website's daily schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 2,
+          "said": "Monday, November 9th ... 9:00 (likewise Tuesday through Saturday, November 10th-14th, 9:00)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 2,
+          "said": "Monday, October 26th ... 9:00 (likewise Tuesday through Saturday, October 27th-31st, 9:00)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintroseoflimachurch.org/mass-times",
+          "said": "Daily Mass Schedule Mon Fri 9:00 AM Saturday : 9:00 AM"
+        }
+      ],
+      "rationale": "R35: a 9:00 AM Mass is in the intentions for every weekday Monday-Saturday in both bulletins (weeks of October 26 and November 9), and page 6 refers to the 9am Mass on Friday and Saturday; the website's daily schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 2,
+          "said": "Monday, November 9th ... 9:00 (likewise Tuesday through Saturday, November 10th-14th, 9:00)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 2,
+          "said": "Monday, October 26th ... 9:00 (likewise Tuesday through Saturday, October 27th-31st, 9:00)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintroseoflimachurch.org/mass-times",
+          "said": "Daily Mass Schedule Mon Fri 9:00 AM Saturday : 9:00 AM"
+        }
+      ],
+      "rationale": "R35: a 9:00 AM Mass is in the intentions for every weekday Monday-Saturday in both bulletins (weeks of October 26 and November 9), and page 6 refers to the 9am Mass on Friday and Saturday; the website's daily schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": "08:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 6,
+          "said": "Reconciliation Saturdays at 8:15 - 8:45am & 4:45 - 5:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 6,
+          "said": "Reconciliation Saturdays at 8:15 - 8:45am & 4:45 - 5:15pm"
+        }
+      ],
+      "rationale": "R1: printed under Parish Opportunities in both bulletins; the website gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:45",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 6,
+          "said": "Reconciliation Saturdays at 8:15 - 8:45am & 4:45 - 5:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 6,
+          "said": "Reconciliation Saturdays at 8:15 - 8:45am & 4:45 - 5:15pm"
+        }
+      ],
+      "rationale": "R1: printed under Parish Opportunities in both bulletins; the website gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 6,
+          "said": "Adoration of the Blessed Sacrament Tuesday 8-8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 6,
+          "said": "Adoration of the Blessed Sacrament Tuesday 8-8:45 am"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; the website's adoration times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 6,
+          "said": "Adoration of the Blessed Sacrament ... First Fridays at 6 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 6,
+          "said": "Adoration of the Blessed Sacrament ... First Fridays at 6 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://saintroseoflimachurch.org/adoration-times",
+          "said": "1st Friday 6:00 PM to 7:00 PM Holy Hour every First Friday of the Month"
+        }
+      ],
+      "rationale": "R1 for the start (named First Friday, printed in the newest bulletin); R6 for the 7:00 PM end, which the bulletin omits and the parish's own adoration-times page gives as a one-hour Holy Hour that matches the bulletin's start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 6,
+          "said": "Adoration Wednesdays 1 pm. See you in September."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b483256",
+          "page": 6,
+          "said": "Adoration Wednesdays 1 pm. See you in September."
+        },
+        {
+          "source": "website",
+          "url": "https://saintroseoflimachurch.org/adoration-times",
+          "said": "Wednesday 1:00 PM to 2:00 PM"
+        }
+      ],
+      "rationale": "R6/R30: both bulletins (Oct 25 and Nov 8 issues) print Wednesday 1 pm Adoration with 'See you in September', which reads like a summer pause notice left in place; September is past, and the website lists Wednesday 1:00-2:00 PM without any pause. Leaning include 1-2 PM, but whether it currently runs is unclear from the bulletin's wording.",
+      "question": "Wednesday 1 PM Adoration: the bulletins add 'See you in September.' Include it as running now?",
+      "options": [
+        {
+          "label": "Wednesdays 1:00-2:00 PM",
+          "entry": {
+            "church_slug": "st-rose-of-lima-east-hanover",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "13:00",
+            "end_time": "14:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Wednesdays 1:00 PM, no end time",
+          "entry": {
+            "church_slug": "st-rose-of-lima-east-hanover",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "13:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:44:07Z"
+      }
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36cab1ea",
+          "page": 6,
+          "said": "Miraculous Medal Novena Following 9am Mass on Saturday; Devotion to Padre Pio Following the 9am Mass on Friday; First Saturday Devotion to Our Lady of Fatima Following 9am Mass"
+        }
+      ],
+      "rationale": "R24: devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,542 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-elizabeth-ann-seton-flanders",
+  "status": "approved",
+  "as_of": "2026-11-15T16:16:00Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:02:32Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:01Z",
+  "summary": "One church. Weekend (Sat 5 PM; Sun 7:30, 9, 11), Mon-Sat 9 AM Mass, Saturday 4-4:30 PM Reconciliation and Tuesday 2-4 PM Adoration agree in both bulletins read (Nov 8 and Nov 15, 2026). No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "684721e48e964f1068a12c5646da45c1260c22ab90876cfddf220860fe368218",
+      "fetched_at": "2026-11-15T16:16:00Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "44879d0b5bd1a3818a6ac528a6bdb3e7f6b54cf84c1cb13cd05041f513d39412",
+      "fetched_at": "2026-11-08T15:41:29Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-flanders",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "684721e4",
+          "page": 1,
+          "said": "The Eucharist Saturday Eve 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44879d0b",
+          "page": 1,
+          "said": "The Eucharist Saturday Eve 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule box on page 1 of both bulletins read, and in each week's weekend intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-flanders",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "684721e4",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:00 am & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44879d0b",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:00 am & 11:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule box on page 1 of both bulletins read, and in each week's intentions and liturgical roles (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-flanders",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "684721e4",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:00 am & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44879d0b",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:00 am & 11:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule box on page 1 of both bulletins read, and in each week's intentions and liturgical roles (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-flanders",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "684721e4",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:00 am & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44879d0b",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:00 am & 11:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule box on page 1 of both bulletins read, and in each week's intentions and liturgical roles (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-flanders",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "684721e4",
+          "page": 1,
+          "said": "During the Week Monday - Saturday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44879d0b",
+          "page": 1,
+          "said": "During the Week Monday - Saturday 9:00 am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both bulletins; the p2 daily intentions list 9:00am each weekday and Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-flanders",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "684721e4",
+          "page": 1,
+          "said": "During the Week Monday - Saturday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44879d0b",
+          "page": 1,
+          "said": "During the Week Monday - Saturday 9:00 am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both bulletins; the p2 daily intentions list 9:00am each weekday and Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-flanders",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "684721e4",
+          "page": 1,
+          "said": "During the Week Monday - Saturday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44879d0b",
+          "page": 1,
+          "said": "During the Week Monday - Saturday 9:00 am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both bulletins; the p2 daily intentions list 9:00am each weekday and Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-flanders",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "684721e4",
+          "page": 1,
+          "said": "During the Week Monday - Saturday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44879d0b",
+          "page": 1,
+          "said": "During the Week Monday - Saturday 9:00 am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both bulletins; the p2 daily intentions list 9:00am each weekday and Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-flanders",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "684721e4",
+          "page": 1,
+          "said": "During the Week Monday - Saturday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44879d0b",
+          "page": 1,
+          "said": "During the Week Monday - Saturday 9:00 am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both bulletins; the p2 daily intentions list 9:00am each weekday and Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-flanders",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "684721e4",
+          "page": 1,
+          "said": "During the Week Monday - Saturday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44879d0b",
+          "page": 1,
+          "said": "During the Week Monday - Saturday 9:00 am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both bulletins; the p2 daily intentions list 9:00am each weekday and Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-flanders",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "684721e4",
+          "page": 1,
+          "said": "Reconciliation Saturdays, 4:00 to 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44879d0b",
+          "page": 1,
+          "said": "Reconciliation Saturdays, 4:00 to 4:30 pm"
+        }
+      ],
+      "rationale": "R1: printed on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-flanders",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "684721e4",
+          "page": 3,
+          "said": "Eucharistic Adoration. Adoration is held on Tuesdays from 2pm to 4pm in the Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "44879d0b",
+          "page": 3,
+          "said": "Eucharistic Adoration. Adoration is held on Tuesdays from 2pm to 4pm in the Church."
+        }
+      ],
+      "rationale": "R1: printed on page 3 of both bulletins read, in the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "684721e4",
+          "page": 1,
+          "said": "Personal appointments for this Sacrament are encouraged and can be made by calling the Parish Office."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "684721e4",
+          "page": 1,
+          "said": "Holydays 9:00 am & 7:00 pm"
+        }
+      ],
+      "rationale": "R16, POLICY Dates: holy-day Masses are dated, and the bulletin pins no holy-day date; update mode will read the dated notices.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "684721e4",
+          "page": 3,
+          "said": "Join us on Zoom to Pray the Rosary Monday-Fridays, beginning at 6:00pm."
+        }
+      ],
+      "rationale": "R24: a Rosary on Zoom is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

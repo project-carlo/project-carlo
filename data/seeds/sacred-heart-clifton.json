@@ -1,0 +1,881 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-clifton",
+  "status": "approved",
+  "as_of": "2026-11-15T16:13:34Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:49:43Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:28Z",
+  "summary": "One church (Sacred Heart, Clifton). The Mass, Confession and Adoration boxes and the intentions agree in both bulletins read (Nov 8 and Nov 15, 2026): Sat 12, 5, 7 PM (Spanish); Sun 8 (EF Latin), 10, 12; weekdays 12 PM plus 7 PM Spanish Mon/Tue/Thu/Fri; Sat confession 4-4:45; Adoration Fri and Sat after the noon Mass and first Saturdays from 8 AM. Open: Confession at the Nov 28 Advent retreat.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "49b00228368c8081556aa45332c12ca662fc61547b3f87171b301edd048c664f",
+      "fetched_at": "2026-11-15T16:13:34Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c764ec2961d9532ab7e49fbe9848f08b1833968242339a8699daad9a828401dd",
+      "fetched_at": "2026-11-08T15:39:12Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Saturday: 12:00p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "Saturday: 12:00p.m. Noon"
+        }
+      ],
+      "rationale": "R1, R35: Mass Times box on page 1 of both bulletins read (Nov 8, Nov 15); intentions list a Saturday 12:00 pm Mass both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Saturday: ... 5:00p.m. (Anticipated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "Saturday: ... 5:00p.m. (Anticipated)"
+        }
+      ],
+      "rationale": "R1, R35: Mass Times box of both bulletins read; intentions list 5:00 pm Memorial Mass both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Saturday: ... 7:00p.m. (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "Saturday: ... 7:00p.m. (Español)"
+        }
+      ],
+      "rationale": "R1, R35: Mass Times box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Extraordinary Form (Latin)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Sunday: 8:00a.m. (EF: Latin)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "Sunday: 8:00a.m. (EF: Latin)"
+        }
+      ],
+      "rationale": "R1, R35: Mass Times box of both bulletins read; the note keeps the form and language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Sunday: 8:00a.m. (EF: Latin), 10:00a.m., 12:00p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "Sunday: 8:00a.m. (EF: Latin), 10:00a.m., 12:00p.m."
+        }
+      ],
+      "rationale": "R1, R35: Mass Times box of both bulletins read; intentions confirm both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Sunday: 8:00a.m. (EF: Latin), 10:00a.m., 12:00p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "Sunday: 8:00a.m. (EF: Latin), 10:00a.m., 12:00p.m."
+        }
+      ],
+      "rationale": "R1, R35: Mass Times box of both bulletins read; intentions confirm both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        }
+      ],
+      "rationale": "R1, R35: Mass Times box of both bulletins read; page 2 intentions list a 12:00 pm Mass every weekday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        }
+      ],
+      "rationale": "R1, R35: Mass Times box of both bulletins read; page 2 intentions list a 12:00 pm Mass every weekday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        }
+      ],
+      "rationale": "R1, R35: Mass Times box of both bulletins read; page 2 intentions list a 12:00 pm Mass every weekday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        }
+      ],
+      "rationale": "R1, R35: Mass Times box of both bulletins read; page 2 intentions list a 12:00 pm Mass every weekday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        }
+      ],
+      "rationale": "R1, R35: Mass Times box of both bulletins read; page 2 intentions list a 12:00 pm Mass every weekday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        }
+      ],
+      "rationale": "R1, R35: the 7 PM Spanish weekday Mass is limited to Mon, Tue, Thu, Fri; the page 2 intentions of both weeks list 7:00 pm on those days and none on Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        }
+      ],
+      "rationale": "R1, R35: the 7 PM Spanish weekday Mass is limited to Mon, Tue, Thu, Fri; the page 2 intentions of both weeks list 7:00 pm on those days and none on Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        }
+      ],
+      "rationale": "R1, R35: the 7 PM Spanish weekday Mass is limited to Mon, Tue, Thu, Fri; the page 2 intentions of both weeks list 7:00 pm on those days and none on Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "Weekdays: 12:00p.m., 7:00p.m. (Español: lunes, martes, jueves, viernes)"
+        }
+      ],
+      "rationale": "R1, R35: the 7 PM Spanish weekday Mass is limited to Mon, Tue, Thu, Fri; the page 2 intentions of both weeks list 7:00 pm on those days and none on Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "CONFESSIONS Sat. 4:00p.m. - 4:45p.m. or contact the Rectory for appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "CONFESSIONS Sat. 4:00p.m. - 4:45p.m. or contact the Rectory for appt."
+        }
+      ],
+      "rationale": "R1: Confessions box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "or contact the Rectory for appt."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Until after the 7:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Every Fri. following the 12:00 pm Mass until after the 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Every Fri. following the 12:00 pm Mass until after the 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 7,
+          "said": "Every Friday following the 12:00 pm Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; after a weekday Mass starts 30 minutes after the 12:00 PM Mass. The end is only relative ('until after the 7:00pm' Mass), so no end_time; the note keeps it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Every Sat. following the 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "Every Sat. following the 12:00pm"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins. The Saturday noon Mass is not a Saturday evening vigil or Sunday Mass, so POLICY's weekday rule applies: 30 minutes after it starts. No end is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Until after the 12:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "1st Saturday at 8:00 am until after the 12:00pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c764ec29",
+          "page": 1,
+          "said": "1st Saturday at 8:00 am until after the 12:00pm Mass"
+        }
+      ],
+      "rationale": "R1, R11: printed in the standing Adoration box of both bulletins, which names the week; neither issue's week holds a first Saturday, but the standing box prints it every week. End only relative, so no end_time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "Holy Days: 12:00p.m., 6:00p.m. (English) 7:00 p.m. (Spanish)"
+        }
+      ],
+      "rationale": "POLICY, Dates: the holy-day line names no date; the next holy day (Dec 8) is not printed with its date, so no dated entries are projected. Update mode will pick them up when announced.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 1,
+          "said": "DEVOTIONS AND NOVENAS Sacred Heart: Fridays 12:00pm; Miraculous Medal: Mondays 12:00pm; Bilingual Marian Devotions: 1st Saturday 8:00am"
+        }
+      ],
+      "rationale": "R24: devotions and novenas are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-28",
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Mini Retreat, Quiet Reflection & Confession"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 6,
+          "said": "Saturday, November 28th, 2025, 9:00am – Noon ... 10:15 am Quiet Reflection & Confession; 10:30 am The 2nd Coming of Our Lord and Savior"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49b00228",
+          "page": 6,
+          "said": "sábado, 28 de noviembre de 2026 ... 10:15 am Reflexión en silencio y confesión"
+        }
+      ],
+      "rationale": "R30: a dated Confession inside a parish retreat that asks for registration and a free-will donation; 'please join us' reads as open, so lean include. No end time printed (the next talk is 10:30). The English heading says 2025, the Spanish 2026; Nov 28 2026 is a Saturday. The retreat's 12:00 pm Mass with Exposition and Benediction is the weekly Saturday noon Mass (POLICY, rule 7) and needs no slot.",
+      "question": "Add the Confession at the Nov 28 Advent Mini Retreat (10:15 AM)?",
+      "options": [
+        {
+          "label": "Nov 28 10:15 AM",
+          "entry": {
+            "church_slug": "sacred-heart-clifton",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-28",
+            "start_time": "10:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Advent Mini Retreat, Quiet Reflection & Confession"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:28Z"
+      }
+    }
+  ]
+}

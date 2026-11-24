@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-stephen-passaic",
+  "status": "approved",
+  "as_of": "2026-11-15T16:52:16Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T21:55:46Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:44:10Z",
+  "summary": "One church, Hungarian parish. No schedule box: the weekly Masses come from the p1 intentions tables of both bulletins (R35), matching the website's Mass Times page: Sat 4:30 PM English, Sun 11:00 AM Hungarian, Fri 6:30 PM Hungarian (website: omitted in summer, months not given). Advent Saturday 7 AM Roráté Masses are announced without dates and left out (R20/R33). No Confession or Adoration times anywhere. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "89ec1c19c41c38d4e5b409f6b2c24d26ff803a447847b1a8a7ee80f89f0ff476",
+      "fetched_at": "2026-11-15T16:52:16Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "7110f1d1bf5d305bfb6e4ad5497a211735911909d8813d61f38b209f7e24ada7",
+      "fetched_at": "2026-11-08T16:01:26Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89ec1c19",
+          "page": 1,
+          "said": "Sat. Nov 21 4:30PM (E) Maria & Ernest Mozer Sr., Rose Brandecker"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7110f1d1",
+          "page": 1,
+          "said": "Sat. Nov.7 4:30PM (E) ... Sat. Nov 14 4:30PM (E)"
+        },
+        {
+          "source": "website",
+          "url": "https://ststephenspassaic.com/mass-times/",
+          "said": "Saturday: 4:30 PM (English)"
+        }
+      ],
+      "rationale": "R35, R1: the Saturday 4:30 PM (E) Mass is in the intentions table of both bulletins, three Saturdays (Nov 7, 14, 21); the website's Mass Times page gives the same standing time. (E) is English, per the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Hungarian"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89ec1c19",
+          "page": 1,
+          "said": "Sun.Nov 15 11:00AM (H) ... Sun. Nov 22 11:00AM (H)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7110f1d1",
+          "page": 1,
+          "said": "Sun.Nov 8 11:00AM (H)"
+        },
+        {
+          "source": "website",
+          "url": "https://ststephenspassaic.com/mass-times/",
+          "said": "Sunday: 11:00 AM (Hungarian)"
+        }
+      ],
+      "rationale": "R35, R1: the Sunday 11:00 AM (H) Mass is in the intentions table of both bulletins for Nov 8, 15 and 22, and announcements refer to 'the Sunday 11am Mass' (p2); the website gives the same standing time. (H) is Hungarian.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Hungarian"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89ec1c19",
+          "page": 1,
+          "said": "Fri. Nov 20 6:30PM (H) Keresztapákért és Édesapákért"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89ec1c19",
+          "page": 3,
+          "said": "November 20-án, pénteken az esti szentmise után tartjuk következő gyűlésünket"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7110f1d1",
+          "page": 1,
+          "said": "Fri. Nov 13 6:30PM (H) Abonyi László"
+        },
+        {
+          "source": "website",
+          "url": "https://ststephenspassaic.com/mass-times/",
+          "said": "Friday: 6:30 PM (Hungarian) (Mass omitted during the summer months)"
+        }
+      ],
+      "rationale": "R35: Friday 6:30 PM (H) is in the intentions of two consecutive weeks (Nov 13, Nov 20) and the website lists it as the standing Friday Mass. The website says it is omitted 'during the summer months' without naming months, so no season is recorded (POLICY, Weekly qualifiers: season only with the months given; cf. R15); update mode will see the summer pause.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Hungarian Rorate Mass in Advent"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89ec1c19",
+          "page": 3,
+          "said": "Adventben ismét lesznek magyar nyelvű Roráté szentmisék, szombat reggelenként 7 órakor."
+        }
+      ],
+      "rationale": "R20, R33: Advent Roráté Masses on Saturday mornings at 7, announced for a season starting after as_of (Advent begins Nov 29). The bulletin prints no dates and gives the season only as 'Advent', which no month season or weekly slot expresses truthfully; POLICY forbids projecting dates. Update mode will read the Advent bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89ec1c19",
+          "page": 1,
+          "said": "Fri. Nov 20 ... Sat. Nov 21 ... Sun. Nov 22 (intentions table lists no Confession or Adoration)"
+        },
+        {
+          "source": "website",
+          "url": "https://ststephenspassaic.com/mass-times/",
+          "said": "Saturday: 4:30 PM (English) Sunday: 11:00 AM (Hungarian) Friday: 6:30 PM (Hungarian)"
+        }
+      ],
+      "rationale": "R26: neither bulletin nor the website gives any Confession or Adoration time, so none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

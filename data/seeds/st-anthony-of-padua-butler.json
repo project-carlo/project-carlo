@@ -1,0 +1,624 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anthony-of-padua-butler",
+  "status": "approved",
+  "as_of": "2026-11-15T16:20:56Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T16:40:41Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:41Z",
+  "summary": "One church. Weekend, weekday and Saturday confession times agree in both bulletins read (Nov 8 and Nov 15, 2026) and on the parish website. Spanish Sunday confession and first-Sunday exposition follow the 12:30 PM Spanish Mass and are timed by R10.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "194c03a49c8fb03c1c130ae86292536134bed16e5199534216688d6f173b46e5",
+      "fetched_at": "2026-11-15T16:20:56Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a60e68dc458d58a5324fd5e711b0c62c313aac9ad5014ee384e4c2ab128355ab",
+      "fetched_at": "2026-11-08T15:45:17Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-butler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 1,
+          "said": "Masses: Saturday 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a60e68dc",
+          "page": 1,
+          "said": "Masses: Saturday 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule of both bulletins read, and in the Saturday intentions; the website's Mass schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-butler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 1,
+          "said": "Sundays: 7:30, 9 & 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a60e68dc",
+          "page": 1,
+          "said": "Sundays: 7:30, 9 & 11am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule of both bulletins read, with intentions at each time; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-butler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 1,
+          "said": "Sundays: 7:30, 9 & 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a60e68dc",
+          "page": 1,
+          "said": "Sundays: 7:30, 9 & 11am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule of both bulletins read, with intentions at each time; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-butler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 1,
+          "said": "Sundays: 7:30, 9 & 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a60e68dc",
+          "page": 1,
+          "said": "Sundays: 7:30, 9 & 11am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule of both bulletins read, with intentions at each time; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-butler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 1,
+          "said": "12:30pm in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a60e68dc",
+          "page": 1,
+          "said": "12:30pm in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 3,
+          "said": "La misa dominical es a las 12:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule and the Spanish ministry column of both bulletins; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-butler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 1,
+          "said": "Weekday Masses: 7:30am & Saturday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a60e68dc",
+          "page": 1,
+          "said": "Weekday Masses: 7:30am & Saturday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 2,
+          "said": "Nov. 16 Monday ... Nov. 20 Friday 7:30am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule of both bulletins; the intentions list 7:30am Monday to Friday, and the website says Mon Fri 7:30 AM. The Nov 11 Veterans Day 9:00am Mass in the older issue is a past dated change (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-butler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 1,
+          "said": "Weekday Masses: 7:30am & Saturday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a60e68dc",
+          "page": 1,
+          "said": "Weekday Masses: 7:30am & Saturday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 2,
+          "said": "Nov. 16 Monday ... Nov. 20 Friday 7:30am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule of both bulletins; the intentions list 7:30am Monday to Friday, and the website says Mon Fri 7:30 AM. The Nov 11 Veterans Day 9:00am Mass in the older issue is a past dated change (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-butler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 1,
+          "said": "Weekday Masses: 7:30am & Saturday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a60e68dc",
+          "page": 1,
+          "said": "Weekday Masses: 7:30am & Saturday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 2,
+          "said": "Nov. 16 Monday ... Nov. 20 Friday 7:30am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule of both bulletins; the intentions list 7:30am Monday to Friday, and the website says Mon Fri 7:30 AM. The Nov 11 Veterans Day 9:00am Mass in the older issue is a past dated change (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-butler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 1,
+          "said": "Weekday Masses: 7:30am & Saturday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a60e68dc",
+          "page": 1,
+          "said": "Weekday Masses: 7:30am & Saturday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 2,
+          "said": "Nov. 16 Monday ... Nov. 20 Friday 7:30am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule of both bulletins; the intentions list 7:30am Monday to Friday, and the website says Mon Fri 7:30 AM. The Nov 11 Veterans Day 9:00am Mass in the older issue is a past dated change (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-butler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 1,
+          "said": "Weekday Masses: 7:30am & Saturday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a60e68dc",
+          "page": 1,
+          "said": "Weekday Masses: 7:30am & Saturday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 2,
+          "said": "Nov. 16 Monday ... Nov. 20 Friday 7:30am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule of both bulletins; the intentions list 7:30am Monday to Friday, and the website says Mon Fri 7:30 AM. The Nov 11 Veterans Day 9:00am Mass in the older issue is a past dated change (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-butler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 1,
+          "said": "Weekday Masses: 7:30am & Saturday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a60e68dc",
+          "page": 1,
+          "said": "Weekday Masses: 7:30am & Saturday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 2,
+          "said": "Nov. 21 Saturday 8:00am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule and Saturday intentions of both bulletins; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-butler",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 1,
+          "said": "Confessions: Saturdays 8:30—9:00am after the 8am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a60e68dc",
+          "page": 1,
+          "said": "Confessions: Saturdays 8:30—9:00am after the 8am Mass"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the stated clock times win over 'after the 8am Mass'; both bulletins and the website (Saturday 8:30AM to 9:00 AM) agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-butler",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:30 PM Spanish Mass, in the sanctuary"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 3,
+          "said": "Sacramento de la Reconciliación: Las confesiones están después de la misa dominical cada semana en el sanctuario."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a60e68dc",
+          "page": 3,
+          "said": "Sacramento de la Reconciliación: Las confesiones están después de la misa dominical cada semana en el sanctuario."
+        }
+      ],
+      "rationale": "R10: the Spanish ministry column gives weekly confessions after the Sunday (12:30 PM Spanish) Mass with no clock time; after a weekend Mass is one hour after it starts, no end time. Printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-butler",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition after the 12:30 PM Spanish Mass, with the Divine Mercy Chaplet"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 3,
+          "said": "Cada primer Domingo del mes, durante la exposición del Santisimo, rezaremos la coronilla a La Divina Misericordia. Despues de la misa de 12:30 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a60e68dc",
+          "page": 3,
+          "said": "Cada primer Domingo del mes, durante la exposición del Santisimo, rezaremos la coronilla a La Divina Misericordia. Despues de la misa de 12:30 pm."
+        }
+      ],
+      "rationale": "R1, R10: the newest bulletin itself prints the first-Sunday exposition after the 12:30 PM Mass; with no clock time, after a weekend Mass is an hour after it starts. Printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "194c03a4",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is also offered by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

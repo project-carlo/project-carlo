@@ -1,0 +1,676 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-gerard-majella-paterson",
+  "status": "approved",
+  "as_of": "2026-11-15T16:16:20Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:09:53Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:07Z",
+  "summary": "One church, St. Gerard Majella, Paterson. The schedule box is identical in the Nov 8 and Nov 14 issues: Mon-Sat 8:15 AM, Thu 7 PM Spanish, Sat 5 PM, Sun 9, 11 and 1 PM Spanish; Confession Mon 6-7 PM and Sat 4-4:45 PM; Adoration Monday 6 PM and last Thursday after the Spanish Mass (7:30 PM per R10). Plus the dated Thanksgiving 9 AM Mass. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5de4e94d38100bb5ce7348f07d3220090e101c8202126ecef0881029b4531a03",
+      "fetched_at": "2026-11-15T16:16:20Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ef314accc2a0812a963910d62e405c21cf3cb83de30126b163eb74f2ff6577fa",
+      "fetched_at": "2026-11-08T15:41:47Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gerard-majella-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 1,
+          "said": "Daily Mass/Misa diaria Monday - Saturday 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 1,
+          "said": "Daily Mass/Misa diaria Monday - Saturday 8:15 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass box of both bulletins read (Nov 8 and Nov 14 issues); the intentions on p2 list 8:15AM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gerard-majella-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 1,
+          "said": "Daily Mass/Misa diaria Monday - Saturday 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 1,
+          "said": "Daily Mass/Misa diaria Monday - Saturday 8:15 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass box of both bulletins read (Nov 8 and Nov 14 issues); the intentions on p2 list 8:15AM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gerard-majella-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 1,
+          "said": "Daily Mass/Misa diaria Monday - Saturday 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 1,
+          "said": "Daily Mass/Misa diaria Monday - Saturday 8:15 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass box of both bulletins read (Nov 8 and Nov 14 issues); the intentions on p2 list 8:15AM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gerard-majella-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 1,
+          "said": "Daily Mass/Misa diaria Monday - Saturday 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 1,
+          "said": "Daily Mass/Misa diaria Monday - Saturday 8:15 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass box of both bulletins read (Nov 8 and Nov 14 issues); the intentions on p2 list 8:15AM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gerard-majella-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 1,
+          "said": "Daily Mass/Misa diaria Monday - Saturday 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 1,
+          "said": "Daily Mass/Misa diaria Monday - Saturday 8:15 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass box of both bulletins read (Nov 8 and Nov 14 issues); the intentions on p2 list 8:15AM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gerard-majella-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 1,
+          "said": "Daily Mass/Misa diaria Monday - Saturday 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 1,
+          "said": "Daily Mass/Misa diaria Monday - Saturday 8:15 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass box of both bulletins read (Nov 8 and Nov 14 issues); the intentions on p2 list 8:15AM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gerard-majella-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 1,
+          "said": "Thursday/ jueves 7:00 PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 1,
+          "said": "Thursday/ jueves 7:00 PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 2,
+          "said": "7:00 PM (Spanish Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gerard-majella-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 1,
+          "said": "Saturday/ Sábado: 5:00PM (English/Inglés)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 1,
+          "said": "Saturday/ Sábado: 5:00PM (English/Inglés)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gerard-majella-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 1,
+          "said": "Sunday/ Domingo: 9:00AM, 11:00AM (English/Inglés)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 1,
+          "said": "Sunday/ Domingo: 9:00AM, 11:00AM (English/Inglés)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gerard-majella-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 1,
+          "said": "Sunday/ Domingo: 9:00AM, 11:00AM (English/Inglés)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 1,
+          "said": "Sunday/ Domingo: 9:00AM, 11:00AM (English/Inglés)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gerard-majella-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 1,
+          "said": "1:00PM (Spanish/ Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 1,
+          "said": "1:00PM (Spanish/ Español)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gerard-majella-paterson",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Monday: 6:00PM to 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Monday: 6:00PM to 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 2,
+          "said": "6:00PM (Adoration and Confession )"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins with its end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gerard-majella-paterson",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 1,
+          "said": "Saturday: 4:00PM to 4:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 1,
+          "said": "Saturday: 4:00PM to 4:45PM"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 1,
+          "said": "Weekdays: By Appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gerard-majella-paterson",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday/ lunes 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday/ lunes 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 4,
+          "said": "Adoration/ Confession 6:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Adoration box of both bulletins; no end time is given, so end_time stays null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gerard-majella-paterson",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; after the 7:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 1,
+          "said": "El último jueves del mes en Español despues de la Misa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 1,
+          "said": "El último jueves del mes en Español despues de la Misa"
+        }
+      ],
+      "rationale": "R1, R10: the Adoration box of both bulletins gives last-Thursday Adoration in Spanish after Mass; the Thursday Spanish Mass is 7:00 PM, so POLICY (after a weekday Mass) starts it 30 minutes later. Neither read week holds a last Thursday (R11), but the standing box prints it in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gerard-majella-paterson",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5de4e94d",
+          "page": 2,
+          "said": "THANKSGIVING MASS Thanksgiving Day 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef314acc",
+          "page": 2,
+          "said": "THANKSGIVING MASS Thanksgiving Day 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass on or after as_of; per R17 the weekly 8:15 AM Thursday Mass is left alone since no cancellation is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

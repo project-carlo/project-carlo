@@ -1,0 +1,491 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-pius-x-montville",
+  "status": "approved",
+  "as_of": "2026-11-15T16:52:07Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T21:48:38Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:44:05Z",
+  "summary": "One church. Neither November bulletin prints a schedule box, so the weekly Masses (Sat 5 PM; Sun 7:30, 9:30, 11:30; Mon/Tue/Thu/Fri 7:30 AM) rest on matching intentions in both issues and the parish website; Saturday Confession and first-Friday Adoration (Sept-June) come from the website (R6). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "23f9947644d18084f5565114bd639285a6a1626be76faec0acbd629aeaf2ca13",
+      "fetched_at": "2026-11-15T16:52:07Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3443747f27f4dce1ff02e11bb4325b95afba149b96889de10fa506e80fbe36a6",
+      "fetched_at": "2026-11-08T22:04:13Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-montville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23f99476",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21 5:00 PM Joseph Cali Fr. Mark"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3443747f",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 14 5:00 PM James LaValley Fr. Jayke"
+        },
+        {
+          "source": "website",
+          "url": "https://st-pius-x.org/mass-times",
+          "said": "Sunday Mass Schedule Saturday : 5:00 PM"
+        }
+      ],
+      "rationale": "R35, R1: the Saturday 5:00 PM Mass is in the Mass intentions of both bulletins read (Nov 15 and Nov 8 issues); the parish website's Mass Times page gives the same time. The bulletins print no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-montville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23f99476",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22 7:30 AM Michael Walsh ... 9:30 AM John & Mary Sessa ... 11:30 AM Louis & Christine Dascenza"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3443747f",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 15 7:30 AM Marie Dominick ... 9:30 AM Rose Astrella ... 11:30 AM Families Godin & Lenieux"
+        },
+        {
+          "source": "website",
+          "url": "https://st-pius-x.org/mass-times",
+          "said": "Sunday : 7:30 AM ... 9:30 AM ... 11:30 AM"
+        }
+      ],
+      "rationale": "R35, R1: the three Sunday Masses are in the intentions of both bulletins read; the website's Mass Times page gives the same times. The bulletins print no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-montville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23f99476",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22 7:30 AM Michael Walsh ... 9:30 AM John & Mary Sessa ... 11:30 AM Louis & Christine Dascenza"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3443747f",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 15 7:30 AM Marie Dominick ... 9:30 AM Rose Astrella ... 11:30 AM Families Godin & Lenieux"
+        },
+        {
+          "source": "website",
+          "url": "https://st-pius-x.org/mass-times",
+          "said": "Sunday : 7:30 AM ... 9:30 AM ... 11:30 AM"
+        }
+      ],
+      "rationale": "R35, R1: the three Sunday Masses are in the intentions of both bulletins read; the website's Mass Times page gives the same times. The bulletins print no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-montville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23f99476",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22 7:30 AM Michael Walsh ... 9:30 AM John & Mary Sessa ... 11:30 AM Louis & Christine Dascenza"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3443747f",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 15 7:30 AM Marie Dominick ... 9:30 AM Rose Astrella ... 11:30 AM Families Godin & Lenieux"
+        },
+        {
+          "source": "website",
+          "url": "https://st-pius-x.org/mass-times",
+          "said": "Sunday : 7:30 AM ... 9:30 AM ... 11:30 AM"
+        }
+      ],
+      "rationale": "R35, R1: the three Sunday Masses are in the intentions of both bulletins read; the website's Mass Times page gives the same times. The bulletins print no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-montville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23f99476",
+          "page": 2,
+          "said": "MONDAY, NOVEMBR 16 7:30 AM; TUESDAY, NOVEMBER 17 7:30 AM; THURSDAY, NOVEMBER 19 7:30 AM; FRIDAY, NOVEMBER 20 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3443747f",
+          "page": 2,
+          "said": "MONDAY, NOVEMBR 9 7:30 AM; TUESDAY, NOVEMBER 10 7:30 AM; THURSDAY, NOVEMBER 12 7:30 AM; FRIDAY, NOVEMBER 13 7:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://st-pius-x.org/mass-times",
+          "said": "Daily Mass Schedule M T u T h F 7:30 AM"
+        }
+      ],
+      "rationale": "R35, R1: a 7:30 AM Mass on Monday, Tuesday, Thursday and Friday is in the intentions of both bulletins read, with no Wednesday Mass in either week; the website's Daily Mass Schedule lists the same four days (M Tu Th F) at 7:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-montville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23f99476",
+          "page": 2,
+          "said": "MONDAY, NOVEMBR 16 7:30 AM; TUESDAY, NOVEMBER 17 7:30 AM; THURSDAY, NOVEMBER 19 7:30 AM; FRIDAY, NOVEMBER 20 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3443747f",
+          "page": 2,
+          "said": "MONDAY, NOVEMBR 9 7:30 AM; TUESDAY, NOVEMBER 10 7:30 AM; THURSDAY, NOVEMBER 12 7:30 AM; FRIDAY, NOVEMBER 13 7:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://st-pius-x.org/mass-times",
+          "said": "Daily Mass Schedule M T u T h F 7:30 AM"
+        }
+      ],
+      "rationale": "R35, R1: a 7:30 AM Mass on Monday, Tuesday, Thursday and Friday is in the intentions of both bulletins read, with no Wednesday Mass in either week; the website's Daily Mass Schedule lists the same four days (M Tu Th F) at 7:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-montville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23f99476",
+          "page": 2,
+          "said": "MONDAY, NOVEMBR 16 7:30 AM; TUESDAY, NOVEMBER 17 7:30 AM; THURSDAY, NOVEMBER 19 7:30 AM; FRIDAY, NOVEMBER 20 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3443747f",
+          "page": 2,
+          "said": "MONDAY, NOVEMBR 9 7:30 AM; TUESDAY, NOVEMBER 10 7:30 AM; THURSDAY, NOVEMBER 12 7:30 AM; FRIDAY, NOVEMBER 13 7:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://st-pius-x.org/mass-times",
+          "said": "Daily Mass Schedule M T u T h F 7:30 AM"
+        }
+      ],
+      "rationale": "R35, R1: a 7:30 AM Mass on Monday, Tuesday, Thursday and Friday is in the intentions of both bulletins read, with no Wednesday Mass in either week; the website's Daily Mass Schedule lists the same four days (M Tu Th F) at 7:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-montville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23f99476",
+          "page": 2,
+          "said": "MONDAY, NOVEMBR 16 7:30 AM; TUESDAY, NOVEMBER 17 7:30 AM; THURSDAY, NOVEMBER 19 7:30 AM; FRIDAY, NOVEMBER 20 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3443747f",
+          "page": 2,
+          "said": "MONDAY, NOVEMBR 9 7:30 AM; TUESDAY, NOVEMBER 10 7:30 AM; THURSDAY, NOVEMBER 12 7:30 AM; FRIDAY, NOVEMBER 13 7:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://st-pius-x.org/mass-times",
+          "said": "Daily Mass Schedule M T u T h F 7:30 AM"
+        }
+      ],
+      "rationale": "R35, R1: a 7:30 AM Mass on Monday, Tuesday, Thursday and Friday is in the intentions of both bulletins read, with no Wednesday Mass in either week; the website's Daily Mass Schedule lists the same four days (M Tu Th F) at 7:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-montville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://st-pius-x.org/confession-times",
+          "said": "Confession Times Saturday : 4:15 PM to 4:45 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-23T21:51:53Z",
+            "current_because": "Checked 2026-11-23: the site's Mass Times page matches the Nov 2026 bulletins' Mass intentions exactly (Sat 5 PM; Sun 7:30, 9:30, 11:30; M Tu Th F 7:30 AM), and the site lists the 2026-2027 lesson schedule, so it is maintained.",
+            "bulletin": "23f99476",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only intentions; the 4:15-4:45 PM Saturday Confession ends before its 5:00 PM Saturday Mass, and nothing in it contradicts the time."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Confession time; the parish website's Confession Times page gives Saturday 4:15-4:45 PM and its other schedule matches the bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-montville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "After the 7:30 AM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://st-pius-x.org/eucharistic-adoration",
+          "said": "Eucharistic Adoration is held every first Friday of the month after the 7:30 am Mass during the months of September to June.",
+          "schedule_check": {
+            "checked_at": "2026-11-23T21:51:53Z",
+            "current_because": "Checked 2026-11-23: the site's Mass Times page matches the Nov 2026 bulletins exactly, including the 7:30 AM Friday Mass this Adoration follows, and the site lists the 2026-2027 lesson schedule.",
+            "bulletin": "23f99476",
+            "fits_because": "Neither read bulletin's week (Nov 9-15, Nov 16-22) holds a first Friday, so neither would print it (R11/R12); both print the Friday 7:30 AM Mass it follows."
+          }
+        }
+      ],
+      "rationale": "R6, R10: the parish's Eucharistic Adoration page gives first Fridays after the 7:30 AM Mass, September to June; after a weekday Mass POLICY starts it 30 minutes after the Mass (8:00 AM) with no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23f99476",
+          "page": 5,
+          "said": "Knights of Columbus will be holding Holy Hour on 11/21"
+        }
+      ],
+      "rationale": "R24, R26: the Knights' Holy Hour on Nov 21 has no time or place given, so there is nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://st-pius-x.org/holy-day-mass-schedule",
+          "said": "7:30 AM and 7:30 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates; R16: the website's holy day schedule names no holy day or date, and neither bulletin announces a holy day Mass; update mode will pick up Dec 8 times from the bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

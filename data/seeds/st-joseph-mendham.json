@@ -1,0 +1,582 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-mendham",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:45Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:21:15Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:16Z",
+  "summary": "One church (Mass in the church on weekends, in its chapel on weekdays). Both bulletins read (Nov 8 and Nov 15, 2026) print the same page-1 schedule: Sat 5 PM, Sun 7:30/9:30/11:30, Mon-Sat 9 AM, Saturday Confession 4-4:30, Friday Adoration after the 9 AM Mass (9:30, R10). Open: a youth ministry 'Mass & Bagels' on Nov 16, leaning leave out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "624b95ecd6fefaeba31408f6c8073c0e30af184cc450aad7fdb96904bbb93b54",
+      "fetched_at": "2026-11-15T16:51:45Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "729823711600ab0a600f153e4f8ddff1c7097878cd408c0fa94a66ae22924c90",
+      "fetched_at": "2026-11-08T22:03:34Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-mendham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "624b95ec",
+          "page": 1,
+          "said": "Sunday Mass Schedule Saturday: 5:00 PM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72982371",
+          "page": 1,
+          "said": "Sunday Mass Schedule Saturday: 5:00 PM Church"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule box of both bulletins read, and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-mendham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "624b95ec",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 & 11:30 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72982371",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 & 11:30 AM Church"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule box of both bulletins read, and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-mendham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "624b95ec",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 & 11:30 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72982371",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 & 11:30 AM Church"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule box of both bulletins read, and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-mendham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "624b95ec",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 & 11:30 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72982371",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 & 11:30 AM Church"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule box of both bulletins read, and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-mendham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "624b95ec",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday - Friday: 9:00 AM Chapel Saturday: 9:00 AM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72982371",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday - Friday: 9:00 AM Chapel Saturday: 9:00 AM Chapel"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule box of both bulletins read and in both weeks' intentions. The chapel is at the church (POLICY, Churches and chapels: the Church and Chapel share hours and address, 8 West Main Street).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-mendham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "624b95ec",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday - Friday: 9:00 AM Chapel Saturday: 9:00 AM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72982371",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday - Friday: 9:00 AM Chapel Saturday: 9:00 AM Chapel"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule box of both bulletins read and in both weeks' intentions. The chapel is at the church (POLICY, Churches and chapels: the Church and Chapel share hours and address, 8 West Main Street).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-mendham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "624b95ec",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday - Friday: 9:00 AM Chapel Saturday: 9:00 AM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72982371",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday - Friday: 9:00 AM Chapel Saturday: 9:00 AM Chapel"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule box of both bulletins read and in both weeks' intentions. The chapel is at the church (POLICY, Churches and chapels: the Church and Chapel share hours and address, 8 West Main Street).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-mendham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "624b95ec",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday - Friday: 9:00 AM Chapel Saturday: 9:00 AM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72982371",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday - Friday: 9:00 AM Chapel Saturday: 9:00 AM Chapel"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule box of both bulletins read and in both weeks' intentions. The chapel is at the church (POLICY, Churches and chapels: the Church and Chapel share hours and address, 8 West Main Street).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-mendham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "624b95ec",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday - Friday: 9:00 AM Chapel Saturday: 9:00 AM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72982371",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday - Friday: 9:00 AM Chapel Saturday: 9:00 AM Chapel"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule box of both bulletins read and in both weeks' intentions. The chapel is at the church (POLICY, Churches and chapels: the Church and Chapel share hours and address, 8 West Main Street).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-mendham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "624b95ec",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday - Friday: 9:00 AM Chapel Saturday: 9:00 AM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72982371",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday - Friday: 9:00 AM Chapel Saturday: 9:00 AM Chapel"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule box of both bulletins read and in both weeks' intentions. The chapel is at the church (POLICY, Churches and chapels: the Church and Chapel share hours and address, 8 West Main Street).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-mendham",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "624b95ec",
+          "page": 1,
+          "said": "Reconciliation Saturdays, 4:00 - 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "72982371",
+          "page": 1,
+          "said": "Reconciliation Saturdays, 4:00 - 4:30 p.m."
+        }
+      ],
+      "rationale": "R1: the page-1 sacraments column of both bulletins gives a clock time with an end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-mendham",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "624b95ec",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament takes place following the 9:00 a.m. Mass on Fridays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "72982371",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament takes place following the 9:00 a.m. Mass on Fridays."
+        }
+      ],
+      "rationale": "R10, POLICY Times: no clock time is given; following a weekday Mass starts 30 minutes after it, and no end is given. Printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-mendham",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-16",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Youth Ministry Mass & Bagels"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "624b95ec",
+          "page": 5,
+          "said": "ST. JOE'S YOUTH MINISTRY NOVEMBER SAVE THE DATES! ... MASS & BAGELS MONDAY NOVEMBER 16 6:30PM"
+        }
+      ],
+      "rationale": "R30: a youth ministry flyer, not the parish schedule; no place is given, and the Monday intentions on p1 list only the 9:00 am Mass. POLICY leaves out a Mass limited to a group; it is unclear whether this is a Mass open to all or a youth gathering, so leaning leave out.",
+      "question": "Add the youth ministry's Monday, November 16, 6:30 PM 'Mass & Bagels'?",
+      "options": [
+        {
+          "label": "Monday, November 16, 6:30 PM Mass",
+          "entry": {
+            "church_slug": "st-joseph-mendham",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-16",
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Youth Ministry Mass & Bagels"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:16Z"
+      }
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "624b95ec",
+          "page": 1,
+          "said": "Divine Mercy Chaplet and Novena is prayed Monday following the 9:00 a.m. Mass. The Rosary is prayed at 8:30 a.m."
+        }
+      ],
+      "rationale": "R24: devotions that are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "624b95ec",
+          "page": 1,
+          "said": "The Church and Chapel are open for private prayer Monday - Saturday 7:00 a.m. - 5:00 p.m."
+        }
+      ],
+      "rationale": "R38, POLICY: a building open for prayer is not an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

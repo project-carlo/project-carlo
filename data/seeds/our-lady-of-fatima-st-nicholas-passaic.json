@@ -1,0 +1,612 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-fatima-st-nicholas-passaic",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:29Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:06:59Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:41:55Z",
+  "summary": "One church (St. Nicholas, Passaic). Both bulletins read (Nov 8 and Nov 15, image-only) print the same schedule box: Sat 4 PM English and 7 PM, Sunday Spanish 9, 10:30, 12 and 1:30, Mon-Fri 7 PM Spanish, Monday Holy Hour 7:30-8:30 PM, Tuesday Confession 7:30 PM. Plus the Nov 26 Thanksgiving Mass at 10 AM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ec92f5492e1b52cd403fc90ca0a09e716bfcfe5667f400ec10be74dd7973d2a3",
+      "fetched_at": "2026-11-15T16:51:29Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "98ad65bce958f76f19793519ba52f34cc3e66e83365bdc963c7248fbb8fb4165",
+      "fetched_at": "2026-11-08T16:00:06Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec92f549",
+          "page": 1,
+          "said": "Sábado / Saturday 4:00 PM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98ad65bc",
+          "page": 1,
+          "said": "Sábado / Saturday 4:00 PM English"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box on page 1 of both bulletins read; intentions on p3 list Saturday 4:00 pm too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec92f549",
+          "page": 1,
+          "said": "Sábado / Saturday ... 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98ad65bc",
+          "page": 1,
+          "said": "Sábado / Saturday ... 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; no language is printed for it, so no note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec92f549",
+          "page": 1,
+          "said": "Domingo / Sunday Spanish 9:00 AM 10:30 AM 12:00 PM 1:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98ad65bc",
+          "page": 1,
+          "said": "Domingo / Sunday Spanish 9:00 AM 10:30 AM 12:00 PM 1:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read under the Spanish heading; intentions on p3 list the same four times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec92f549",
+          "page": 1,
+          "said": "Domingo / Sunday Spanish 9:00 AM 10:30 AM 12:00 PM 1:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98ad65bc",
+          "page": 1,
+          "said": "Domingo / Sunday Spanish 9:00 AM 10:30 AM 12:00 PM 1:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read under the Spanish heading; intentions on p3 list the same four times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec92f549",
+          "page": 1,
+          "said": "Domingo / Sunday Spanish 9:00 AM 10:30 AM 12:00 PM 1:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98ad65bc",
+          "page": 1,
+          "said": "Domingo / Sunday Spanish 9:00 AM 10:30 AM 12:00 PM 1:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read under the Spanish heading; intentions on p3 list the same four times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec92f549",
+          "page": 1,
+          "said": "Domingo / Sunday Spanish 9:00 AM 10:30 AM 12:00 PM 1:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98ad65bc",
+          "page": 1,
+          "said": "Domingo / Sunday Spanish 9:00 AM 10:30 AM 12:00 PM 1:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read under the Spanish heading; intentions on p3 list the same four times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec92f549",
+          "page": 1,
+          "said": "Lunes a Viernes / Monday to Friday 7:00 PM - Spansih"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98ad65bc",
+          "page": 1,
+          "said": "Lunes a Viernes / Monday to Friday 7:00 PM - Spansih"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; intentions on p3 list 7:00 pm Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec92f549",
+          "page": 1,
+          "said": "Lunes a Viernes / Monday to Friday 7:00 PM - Spansih"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98ad65bc",
+          "page": 1,
+          "said": "Lunes a Viernes / Monday to Friday 7:00 PM - Spansih"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; intentions on p3 list 7:00 pm Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec92f549",
+          "page": 1,
+          "said": "Lunes a Viernes / Monday to Friday 7:00 PM - Spansih"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98ad65bc",
+          "page": 1,
+          "said": "Lunes a Viernes / Monday to Friday 7:00 PM - Spansih"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; intentions on p3 list 7:00 pm Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec92f549",
+          "page": 1,
+          "said": "Lunes a Viernes / Monday to Friday 7:00 PM - Spansih"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98ad65bc",
+          "page": 1,
+          "said": "Lunes a Viernes / Monday to Friday 7:00 PM - Spansih"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; intentions on p3 list 7:00 pm Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec92f549",
+          "page": 1,
+          "said": "Lunes a Viernes / Monday to Friday 7:00 PM - Spansih"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98ad65bc",
+          "page": 1,
+          "said": "Lunes a Viernes / Monday to Friday 7:00 PM - Spansih"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; intentions on p3 list 7:00 pm Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-passaic",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec92f549",
+          "page": 1,
+          "said": "Hora Santa | Holy Hour Lunes 7:30 - 8:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98ad65bc",
+          "page": 1,
+          "said": "Hora Santa | Holy Hour Lunes 7:30 - 8:30 PM"
+        }
+      ],
+      "rationale": "R1; POLICY, What to extract: a Holy Hour is Adoration. Printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec92f549",
+          "page": 1,
+          "said": "Confesiones | Confessions Martes / Tuesday 7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98ad65bc",
+          "page": 1,
+          "said": "Confesiones | Confessions Martes / Tuesday 7:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; no end time is given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-passaic",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec92f549",
+          "page": 4,
+          "said": "Thanksgiving Day Mass, Thursday, November 26, at 10:00 a.m., let us gather as a parish community to thank God"
+        }
+      ],
+      "rationale": "R1, R16: a dated open parish Mass after as_of, outside the weekly schedule (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec92f549",
+          "page": 3,
+          "said": "Saturday Nov 21 10:00 am Boda Mayra & Larry Rosas; 1:00 pm Boda Arly Merino & Jose Martinez"
+        }
+      ],
+      "rationale": "R24: weddings are closed Masses under POLICY.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec92f549",
+          "page": 4,
+          "said": "Spiritual Retreat ... Saturday, December 5, from 9:00 a.m. to 12:00 p.m."
+        }
+      ],
+      "rationale": "R24: a retreat, not a Mass, Confession or Adoration; no Mass or Adoration time is printed for it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98ad65bc",
+          "page": 4,
+          "said": "Youth Holy Hour - C.I.A. | Friday, November 13 | Following the 7:00 p.m. Mass"
+        }
+      ],
+      "rationale": "R16: a one-time dated Holy Hour on November 13, before as_of (2026-11-15); out of seed scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

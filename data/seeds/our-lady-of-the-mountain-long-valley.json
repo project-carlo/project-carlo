@@ -1,0 +1,1215 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-mountain-long-valley",
+  "status": "approved",
+  "as_of": "2026-11-15T16:11:59Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:37:12Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:17Z",
+  "summary": "One church. The newest bulletin's schedule box (Sat 4:45 PM; Sun 8, 9:15, 10:45 AM, 12:15 PM; weekdays 9:30 AM; First Saturday devotion and Mass; Friday Adoration; Confession Mon Sept.-May, Sat, First Friday and First Saturday) agrees with the intentions of both bulletins read. Open: the season of the Monday Holy Hour, confession on request after daily Mass, and a one-off Sunday 5 PM 'Private Intention' Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b0003821bc8f7dae56911ff4f1085011bf5333d5dd5092b72765feb7eead0779",
+      "fetched_at": "2026-11-15T16:11:59Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2e9d421d49c95d6f8d74ed8dbc64904b02fd8de96add7eb2b61b2dd3b40cddda",
+      "fetched_at": "2026-11-08T15:37:54Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Mass Schedule Saturday: 4:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21 4:45pm John McNary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e9d421d",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 7 ... 4:45pm Joseph Cattone"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Mass Schedule box and in the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Sunday: 8:00, 9:15, 10:45 am & 12:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e9d421d",
+          "page": 2,
+          "said": "32ND SUNDAY IN ORDINARY TIME, NOVEMBER 8 8:00am ... 9:15am ... 10:45am ... 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Mass Schedule box; the intentions of both bulletins read list the same four Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Sunday: 8:00, 9:15, 10:45 am & 12:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e9d421d",
+          "page": 2,
+          "said": "32ND SUNDAY IN ORDINARY TIME, NOVEMBER 8 8:00am ... 9:15am ... 10:45am ... 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Mass Schedule box; the intentions of both bulletins read list the same four Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Sunday: 8:00, 9:15, 10:45 am & 12:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e9d421d",
+          "page": 2,
+          "said": "32ND SUNDAY IN ORDINARY TIME, NOVEMBER 8 8:00am ... 9:15am ... 10:45am ... 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Mass Schedule box; the intentions of both bulletins read list the same four Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Sunday: 8:00, 9:15, 10:45 am & 12:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e9d421d",
+          "page": 2,
+          "said": "32ND SUNDAY IN ORDINARY TIME, NOVEMBER 8 8:00am ... 9:15am ... 10:45am ... 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Mass Schedule box; the intentions of both bulletins read list the same four Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Weekdays: 9:30 am (Monday - Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e9d421d",
+          "page": 2,
+          "said": "TUESDAY, NOVEMBER 3 9:30am ... FRIDAY, NOVEMBER 6 9:30am"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Mass Schedule box; the intentions of both bulletins read list 9:30am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Weekdays: 9:30 am (Monday - Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e9d421d",
+          "page": 2,
+          "said": "TUESDAY, NOVEMBER 3 9:30am ... FRIDAY, NOVEMBER 6 9:30am"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Mass Schedule box; the intentions of both bulletins read list 9:30am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Weekdays: 9:30 am (Monday - Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e9d421d",
+          "page": 2,
+          "said": "TUESDAY, NOVEMBER 3 9:30am ... FRIDAY, NOVEMBER 6 9:30am"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Mass Schedule box; the intentions of both bulletins read list 9:30am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Weekdays: 9:30 am (Monday - Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e9d421d",
+          "page": 2,
+          "said": "TUESDAY, NOVEMBER 3 9:30am ... FRIDAY, NOVEMBER 6 9:30am"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Mass Schedule box; the intentions of both bulletins read list 9:30am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Weekdays: 9:30 am (Monday - Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e9d421d",
+          "page": 2,
+          "said": "TUESDAY, NOVEMBER 3 9:30am ... FRIDAY, NOVEMBER 6 9:30am"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Mass Schedule box; the intentions of both bulletins read list 9:30am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "First Saturday Devotion ... 10:00 am: Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e9d421d",
+          "page": 5,
+          "said": "First Saturday Mass, Devotions & Membership Meeting Saturday, November 7, 2026 ... 10:00 AM: Holy Mass"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: the newest bulletin's Devotions box names the First Saturday Mass; the older bulletin's November 7 intentions and notice confirm it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "First Saturday Devotion 9:00-10:00 am: Adoration & Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e9d421d",
+          "page": 5,
+          "said": "9:00-10:00 AM: Exposition of the Blessed Sacrament and Sacrament of Reconciliation"
+        }
+      ],
+      "rationale": "R1: First Saturday Adoration in the newest bulletin's Devotions box; the older bulletin says the Blessed Sacrament is exposed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Reconciliation ... First Saturday: 9:00 - 10:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Reconciliation box and Devotions box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Reconciliation ... Saturday: 4:15 pm"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Reconciliation box; no end time is given, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Reconciliation ... First Friday: 10:30 - 11:00 am"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: printed in the newest bulletin's Reconciliation box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass, with the Divine Mercy Chaplet"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Divine Mercy Devotion (Every Friday after Holy Mass) 10:00 am: Adoration & Divine Mercy Chaplet"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 2,
+          "said": "Friday, November 20 After the Mass Adoration of the Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e9d421d",
+          "page": 2,
+          "said": "Friday, November 6 After the Mass Adoration of the Blessed Sacrament"
+        }
+      ],
+      "rationale": "R1: the Devotions box gives the clock time 10:00 am every Friday (POLICY, Times: a stated clock time wins); no end is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Reconciliation Monday: 7:00 - 8:00 pm (Sept. - May)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 2,
+          "said": "Monday, November 16 7:00-8:00 pm Holy Hour & Confession"
+        }
+      ],
+      "rationale": "R1: the Reconciliation box gives Monday 7-8 pm with the months Sept.-May, kept as the season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 2,
+          "said": "Monday, November 16 7:00-8:00 pm Holy Hour & Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e9d421d",
+          "page": 2,
+          "said": "Monday, November 2 7:00-8:00 pm No Holy Hour & Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Reconciliation Monday: 7:00 - 8:00 pm (Sept. - May)"
+        }
+      ],
+      "rationale": "R35, POLICY (Holy Hour is Adoration): both bulletins' weekly calendars carry a Monday 7-8 pm 'Holy Hour & Confession' (the older one cancelling it for All Souls' Day, implying it is regular). The schedule box lists only the Confession, with the season Sept.-May; whether the Holy Hour follows the same season is my inference, so I ask, leaning toward the same season.",
+      "question": "Is the Monday 7-8 PM Holy Hour weekly from September to May, like the Monday Confession it goes with?",
+      "options": [
+        {
+          "label": "Mondays 7-8 PM, Sept.-May",
+          "entry": {
+            "church_slug": "our-lady-of-the-mountain-long-valley",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mondays 7-8 PM, all year",
+          "entry": {
+            "church_slug": "our-lady-of-the-mountain-long-valley",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:17Z"
+      }
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass; ask the priest"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Reconciliation ... First Saturday: 9:00 - 10:00 am, or after daily Mass, ask the priest."
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request is included at POLICY's time, 30 minutes after a weekday Mass (R10). The line follows 'First Saturday', but 'daily Mass' reads as every weekday.",
+      "question": "Add Confession after each weekday Mass, on request ('after daily Mass, ask the priest')?",
+      "options": [
+        {
+          "label": "Weekdays 10:00 AM, on request",
+          "entry": {
+            "church_slug": "our-lady-of-the-mountain-long-valley",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 9:30 AM Mass; ask the priest"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:17Z"
+      },
+      "group": "after-daily-mass"
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass; ask the priest"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Reconciliation ... First Saturday: 9:00 - 10:00 am, or after daily Mass, ask the priest."
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request is included at POLICY's time, 30 minutes after a weekday Mass (R10). The line follows 'First Saturday', but 'daily Mass' reads as every weekday.",
+      "question": "Add Confession after each weekday Mass, on request ('after daily Mass, ask the priest')?",
+      "options": [
+        {
+          "label": "Weekdays 10:00 AM, on request",
+          "entry": {
+            "church_slug": "our-lady-of-the-mountain-long-valley",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 9:30 AM Mass; ask the priest"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:17Z"
+      },
+      "group": "after-daily-mass"
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass; ask the priest"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Reconciliation ... First Saturday: 9:00 - 10:00 am, or after daily Mass, ask the priest."
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request is included at POLICY's time, 30 minutes after a weekday Mass (R10). The line follows 'First Saturday', but 'daily Mass' reads as every weekday.",
+      "question": "Add Confession after each weekday Mass, on request ('after daily Mass, ask the priest')?",
+      "options": [
+        {
+          "label": "Weekdays 10:00 AM, on request",
+          "entry": {
+            "church_slug": "our-lady-of-the-mountain-long-valley",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 9:30 AM Mass; ask the priest"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:17Z"
+      },
+      "group": "after-daily-mass"
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass; ask the priest"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Reconciliation ... First Saturday: 9:00 - 10:00 am, or after daily Mass, ask the priest."
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request is included at POLICY's time, 30 minutes after a weekday Mass (R10). The line follows 'First Saturday', but 'daily Mass' reads as every weekday.",
+      "question": "Add Confession after each weekday Mass, on request ('after daily Mass, ask the priest')?",
+      "options": [
+        {
+          "label": "Weekdays 10:00 AM, on request",
+          "entry": {
+            "church_slug": "our-lady-of-the-mountain-long-valley",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 9:30 AM Mass; ask the priest"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:17Z"
+      },
+      "group": "after-daily-mass"
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass; ask the priest"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Reconciliation ... First Saturday: 9:00 - 10:00 am, or after daily Mass, ask the priest."
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request is included at POLICY's time, 30 minutes after a weekday Mass (R10). The line follows 'First Saturday', but 'daily Mass' reads as every weekday.",
+      "question": "Add Confession after each weekday Mass, on request ('after daily Mass, ask the priest')?",
+      "options": [
+        {
+          "label": "Weekdays 10:00 AM, on request",
+          "entry": {
+            "church_slug": "our-lady-of-the-mountain-long-valley",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 9:30 AM Mass; ask the priest"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:17Z"
+      },
+      "group": "after-daily-mass"
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 2,
+          "said": "33rd SUNDAY IN ORDINARY TIME, NOVEMBER 15 ... 5:00pm Private Intention"
+        }
+      ],
+      "rationale": "R30, leaning per C1: a 5 PM Sunday Mass is not in the Mass Schedule box and appears only in the intentions as 'Private Intention'; it may be a private Mass. It falls on as_of's date (R16), so it is in scope.",
+      "question": "Include the Sunday, November 15 5:00 PM Mass that appears only in the intentions?",
+      "options": [
+        {
+          "label": "Sunday Nov 15 5:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-the-mountain-long-valley",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-15",
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:17Z"
+      }
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 1,
+          "said": "Holy Day of Obligation Holy Day: 9:30 am, 4:30pm, 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: the holy-day times pin no date, and no holy day is announced in the bulletins read; update mode will record each holy day when a bulletin dates it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2e9d421d",
+          "page": 4,
+          "said": "ALL SOULS' DAY MASS FOR THE NEWLY DEPARTED - Monday, November 2 - 7:00 PM"
+        }
+      ],
+      "rationale": "R16: dated before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 2,
+          "said": "Monday - Friday Rosary before Mass (9:10 am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0003821",
+          "page": 2,
+          "said": "Wednesday ... During the Mass Novena to the Miraculous Medal"
+        }
+      ],
+      "rationale": "R24: Rosary and Novena are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

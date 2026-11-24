@@ -1,0 +1,980 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-james-of-the-marches-totowa",
+  "status": "approved",
+  "as_of": "2026-11-15T16:16:32Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:11:57Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:09Z",
+  "summary": "One church. The p1 schedule box (Sat 5:30 PM vigil; Sun 7:30, 10:15, 12:00; Mon-Wed & Fri 8:00 & 12:05; Thu 8:15 & 12:05; Sat 8:30), Confession (Mon 4-5, Tue 7-8, Sat 4:30-5:15 PM) and Tuesday 4-8 PM Adoration agree across both bulletins and their intentions. Dated: Italian Mass Nov 18, Thanksgiving Mass Nov 26, feast Mass Nov 28 at 10 AM replacing the 8:30. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "485e92e8e07e2f98bd6502952816dfccad564ceb0a15fec23e68ae6aa18ac309",
+      "fetched_at": "2026-11-15T16:16:32Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "161851d46c38e68fbcfe57a1dd254b0ff3b17708d50699b24491a0b5843da95a",
+      "fetched_at": "2026-11-08T15:42:00Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 1,
+          "said": "Sundays---- Vigil Mass 5:30 pm (Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 5,
+          "said": "SATURDAY, November 14 ... 5:30pm Jay T. Kopec"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of the newest bulletin; the Nov 8 issue's intentions agree (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 1,
+          "said": "Sundays---- 7:30, 10:15 am & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 5,
+          "said": "SUNDAY, November 15 7:30am ... 10:15am ... 12:00pm"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of the newest bulletin; the Nov 8 issue's intentions agree (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 1,
+          "said": "Sundays---- 7:30, 10:15 am & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 5,
+          "said": "SUNDAY, November 15 7:30am ... 10:15am ... 12:00pm"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of the newest bulletin; the Nov 8 issue's intentions agree (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 1,
+          "said": "Sundays---- 7:30, 10:15 am & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 5,
+          "said": "SUNDAY, November 15 7:30am ... 10:15am ... 12:00pm"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of the newest bulletin; the Nov 8 issue's intentions agree (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday ---- 8:00 am and 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 5,
+          "said": "MONDAY ... TUESDAY ... WEDNESDAY ... FRIDAY: 8:00am ... 12:05pm"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of the newest bulletin; both issues' intentions list 8:00am and 12:05pm on these days (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday ---- 8:00 am and 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 5,
+          "said": "MONDAY ... TUESDAY ... WEDNESDAY ... FRIDAY: 8:00am ... 12:05pm"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of the newest bulletin; both issues' intentions list 8:00am and 12:05pm on these days (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday ---- 8:00 am and 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 5,
+          "said": "MONDAY ... TUESDAY ... WEDNESDAY ... FRIDAY: 8:00am ... 12:05pm"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of the newest bulletin; both issues' intentions list 8:00am and 12:05pm on these days (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday ---- 8:00 am and 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 5,
+          "said": "MONDAY ... TUESDAY ... WEDNESDAY ... FRIDAY: 8:00am ... 12:05pm"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of the newest bulletin; both issues' intentions list 8:00am and 12:05pm on these days (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday ---- 8:00 am and 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 5,
+          "said": "MONDAY ... TUESDAY ... WEDNESDAY ... FRIDAY: 8:00am ... 12:05pm"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of the newest bulletin; both issues' intentions list 8:00am and 12:05pm on these days (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday ---- 8:00 am and 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 5,
+          "said": "MONDAY ... TUESDAY ... WEDNESDAY ... FRIDAY: 8:00am ... 12:05pm"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of the newest bulletin; both issues' intentions list 8:00am and 12:05pm on these days (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday ---- 8:00 am and 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 5,
+          "said": "MONDAY ... TUESDAY ... WEDNESDAY ... FRIDAY: 8:00am ... 12:05pm"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of the newest bulletin; both issues' intentions list 8:00am and 12:05pm on these days (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday ---- 8:00 am and 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 5,
+          "said": "MONDAY ... TUESDAY ... WEDNESDAY ... FRIDAY: 8:00am ... 12:05pm"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of the newest bulletin; both issues' intentions list 8:00am and 12:05pm on these days (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 1,
+          "said": "Thursday ---- 8:15 am and 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 5,
+          "said": "THURSDAY, November 12 8:15am ... 12:05pm"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of the newest bulletin; both issues' intentions agree (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 1,
+          "said": "Thursday ---- 8:15 am and 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 5,
+          "said": "THURSDAY, November 12 8:15am ... 12:05pm"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of the newest bulletin; both issues' intentions agree (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 1,
+          "said": "Saturdays ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 5,
+          "said": "SATURDAY, November 14 8:30am MEMORIAL MASS"
+        }
+      ],
+      "rationale": "R1: schedule box on p1; the intentions call it the Saturday Memorial Mass, a regular public Mass with collective memorial intentions, not a Mass for one person.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 3,
+          "said": "CONFESSION SCHEDULE Monday: 4:00pm to 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 3,
+          "said": "Monday: 4:00pm to 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed on p1 and p3 of the newest bulletin and p3 of the Nov 8 issue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 3,
+          "said": "Tuesday: 7:00 to 8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 3,
+          "said": "Tuesday: 7:00 to 8:00 pm"
+        }
+      ],
+      "rationale": "R1: printed on p1 and p3 of both issues; its own clock times, inside Tuesday Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 3,
+          "said": "Saturdays: 4:30 to 5:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 3,
+          "said": "Saturdays: 4:30 to 5:15 pm"
+        }
+      ],
+      "rationale": "R1: printed on p1 and p3 of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 3,
+          "said": "Or by appointment only, call the rectory"
+        }
+      ],
+      "rationale": "R26: confession by appointment / 'by request anytime' has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 3,
+          "said": "EUCHARISTIC ADORATION Tuesdays, Starting at 4:00pm until 8:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 3,
+          "said": "Tuesdays, Starting at 4:00pm until 8:00pm"
+        }
+      ],
+      "rationale": "R1: printed in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Cenacle Prayer Group"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 4,
+          "said": "The Cenacle Prayer Group meets every Tuesday evening in the church at 6:30pm for Eucharistic Adoration, prayer, and fellowship"
+        }
+      ],
+      "rationale": "R37: lies inside the Tuesday 4:00-8:00 PM Adoration already recorded; no separate slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Italian Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 3,
+          "said": "The Italian Mass will be celebrated Wednesday, November 18 at 7:30pm"
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass on or after as_of. The Nov 8 issue does not print it, so no monthly pattern is established; dated per POLICY rule 3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 5,
+          "said": "THURSDAY, NOVEMBER 26, 2026 THANKSGIVING MASS AT 9:00AM"
+        }
+      ],
+      "rationale": "R1, R16, R17: dated holiday Mass; the bulletin cancels nothing, so the Thursday weekly slots are left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-28",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Feast of St. James of the Marches"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 2,
+          "said": "Saturday, November 28 Feast of St. James of the Marches 10:00am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 2,
+          "said": "10:00am Mass (NO 8:30am MEMORIAL MASS)"
+        }
+      ],
+      "rationale": "R1, R16: dated feast Mass, printed in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-28",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 2,
+          "said": "(NO 8:30am MEMORIAL MASS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 2,
+          "said": "(NO 8:30am MEMORIAL MASS)"
+        }
+      ],
+      "rationale": "R1, R16: the bulletin says the Saturday 8:30 AM Mass will not take place on Nov 28.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-of-the-marches-totowa",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-06",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rosarian Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "485e92e8",
+          "page": 4,
+          "said": "Rosarian Mass: December 6, 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "161851d4",
+          "page": 4,
+          "said": "Rosarian Mass: December 6, 12pm"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: a society's occasion at the regular Sunday 12:00 PM Mass; only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

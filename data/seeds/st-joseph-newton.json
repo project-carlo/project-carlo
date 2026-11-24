@@ -1,0 +1,1103 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-newton",
+  "status": "approved",
+  "as_of": "2026-11-15T16:16:53Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:23:49Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:18Z",
+  "summary": "One church, St. Joseph, Newton. The regular Mass and Saturday Confession schedule is identical in both bulletins and on the website. Adoration follows each weekend Mass (Sunday times from the website) and first Fridays; holy-day and Christmas Masses come from the parish website. Open: Adoration after the Saturday vigil, and the first-Friday Adoration start time.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "288ecbf295d4f7eac457a904581413d9656ca9f01b8672f5a0e43bc357253d15",
+      "fetched_at": "2026-11-15T16:16:53Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6d913d27133ef587711c9cdbb7713559e4f1568f8b4c4d5dff5017f966a7f2de",
+      "fetched_at": "2026-11-08T15:42:20Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Saturday (Sunday Vigil) at 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 1,
+          "said": "Saturday (Sunday Vigil) at 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list it each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Sunday at 8:00am, 9:30am and 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 1,
+          "said": "Sunday at 8:00am, 9:30am and 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list each.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Sunday at 8:00am, 9:30am and 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 1,
+          "said": "Sunday at 8:00am, 9:30am and 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list each.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Sunday at 8:00am, 9:30am and 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 1,
+          "said": "Sunday at 8:00am, 9:30am and 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list each.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Monday-Friday at 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 1,
+          "said": "Monday-Friday at 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Monday-Friday at 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 1,
+          "said": "Monday-Friday at 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Monday-Friday at 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 1,
+          "said": "Monday-Friday at 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Monday-Friday at 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 1,
+          "said": "Monday-Friday at 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Monday-Friday at 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 1,
+          "said": "Monday-Friday at 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Confessions Saturday from 4:00-4:30pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 1,
+          "said": "Confessions Saturday from 4:00-4:30pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the website's confession page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Confessions ... or by appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 5,
+          "said": "There will be NO MASS on Thanksgiving Day."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 5,
+          "said": "There will be NO MASS on Thanksgiving Day."
+        }
+      ],
+      "rationale": "R1, R16: Thanksgiving is Thursday, November 26, 2026; the bulletin cancels that day's 12:15 PM Mass. The website's calendar agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-18",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 3,
+          "said": "Mass of Remembrance ... Please come and pray with us on Friday, December 18th at 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 3,
+          "said": "Mass of Remembrance ... Please come and pray with us on Friday, December 18th at 6:30pm"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass open to all who have lost loved ones (POLICY, Churches: it invites everyone); on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "09:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Adoration of The Most Blessed Sacrament After each Mass on the weekends"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 1,
+          "said": "Adoration of The Most Blessed Sacrament After each Mass on the weekends"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephnewton.org/mass-times",
+          "said": "Sunday 9:00 AM to 9:15 AM After each Mass on the Weekend. 10:30 AM to 10:45 AM ... 12:30 PM to 12:45 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:26:36Z",
+            "current_because": "Checked 2026-11-23: the Mass Times page lists the upcoming December 8 holy day and its weekend, weekday and Saturday 4:00-4:30 confession times match the current bulletins exactly.",
+            "bulletin": "288ecbf2",
+            "fits_because": "Fits the November 15, 2026 bulletin, which says Adoration is after each weekend Mass and on first Fridays without giving clock times."
+          }
+        }
+      ],
+      "rationale": "R10, R6: the bulletin says Adoration follows each weekend Mass; POLICY puts it an hour after each Sunday Mass's start, and the parish's Mass Times page gives exactly those starts with 15-minute ends.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": "10:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Adoration of The Most Blessed Sacrament After each Mass on the weekends"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 1,
+          "said": "Adoration of The Most Blessed Sacrament After each Mass on the weekends"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephnewton.org/mass-times",
+          "said": "Sunday 9:00 AM to 9:15 AM After each Mass on the Weekend. 10:30 AM to 10:45 AM ... 12:30 PM to 12:45 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:26:36Z",
+            "current_because": "Checked 2026-11-23: the Mass Times page lists the upcoming December 8 holy day and its weekend, weekday and Saturday 4:00-4:30 confession times match the current bulletins exactly.",
+            "bulletin": "288ecbf2",
+            "fits_because": "Fits the November 15, 2026 bulletin, which says Adoration is after each weekend Mass and on first Fridays without giving clock times."
+          }
+        }
+      ],
+      "rationale": "R10, R6: the bulletin says Adoration follows each weekend Mass; POLICY puts it an hour after each Sunday Mass's start, and the parish's Mass Times page gives exactly those starts with 15-minute ends.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "12:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Adoration of The Most Blessed Sacrament After each Mass on the weekends"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 1,
+          "said": "Adoration of The Most Blessed Sacrament After each Mass on the weekends"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephnewton.org/mass-times",
+          "said": "Sunday 9:00 AM to 9:15 AM After each Mass on the Weekend. 10:30 AM to 10:45 AM ... 12:30 PM to 12:45 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:26:36Z",
+            "current_because": "Checked 2026-11-23: the Mass Times page lists the upcoming December 8 holy day and its weekend, weekday and Saturday 4:00-4:30 confession times match the current bulletins exactly.",
+            "bulletin": "288ecbf2",
+            "fits_because": "Fits the November 15, 2026 bulletin, which says Adoration is after each weekend Mass and on first Fridays without giving clock times."
+          }
+        }
+      ],
+      "rationale": "R10, R6: the bulletin says Adoration follows each weekend Mass; POLICY puts it an hour after each Sunday Mass's start, and the parish's Mass Times page gives exactly those starts with 15-minute ends.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Adoration of The Most Blessed Sacrament After each Mass on the weekends"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 1,
+          "said": "Adoration of The Most Blessed Sacrament After each Mass on the weekends"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephnewton.org/mass-times",
+          "said": "Sunday 9:00 AM to 9:15 AM After each Mass on the Weekend."
+        }
+      ],
+      "rationale": "R30: the bulletin's 'each Mass on the weekends' covers the vigil, and POLICY (Times) places it an hour after a weekend Mass, but the website's Adoration list gives only the three Sunday times. Leaning include since the bulletin is explicit and a missing website mention is not a conflict (R6).",
+      "question": "Add Adoration after the Saturday 5:00 PM vigil Mass (6:00 PM by POLICY)?",
+      "options": [
+        {
+          "label": "Saturdays 6:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-newton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:18Z"
+      }
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Adoration of The Most Blessed Sacrament After each Mass on the weekends and first Fridays of the month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 1,
+          "said": "Adoration of The Most Blessed Sacrament After each Mass on the weekends and first Fridays of the month"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephnewton.org/mass-times",
+          "said": "Friday 12:30 PM to 3:00 PM First Friday of each month."
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephnewton.org/events/adoration-benediction/20261204",
+          "said": "Friday , December 4 , 2026 , 12:35 PM - 3:00 PM Repeats every first Friday of the month ... Mass at 12:05pm followed by Adoration. Prayers and Benediction at 3:00pm."
+        }
+      ],
+      "rationale": "R12, R6, C8: the bulletins name first-Friday Adoration (neither read week holds a first Friday), but only the website gives clock times, and its two pages differ by 5 minutes. Leaning 12:30 from the standing Mass Times page; the event page's 'Mass at 12:05pm' contradicts the bulletin's 12:15 Mass, so it is less reliable.",
+      "question": "First-Friday Adoration and Benediction: which start time?",
+      "options": [
+        {
+          "label": "First Fridays 12:30-3:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-newton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "First Fridays 12:35-3:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-newton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "12:35",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:18Z"
+      }
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stjosephnewton.org/mass-times",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 12:15 PM ... 6:30 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:26:36Z",
+            "current_because": "Checked 2026-11-23: the Mass Times page lists the upcoming December 8 holy day and its weekend, weekday and Saturday 4:00-4:30 confession times match the current bulletins exactly.",
+            "bulletin": "288ecbf2",
+            "fits_because": "Fits the November 15, 2026 bulletin, which says Adoration is after each weekend Mass and on first Fridays without giving clock times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's Mass Times page gives the holy day's Masses; 12:15 PM is the weekly Tuesday Mass, so only the 6:30 PM Mass is added.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stjosephnewton.org/christmas-mass-schedule",
+          "said": "CHRISTMAS EVE MASSES Thursday, December 24th 4:00pm and 10:00pm",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:26:36Z",
+            "current_because": "Checked 2026-11-23: the page gives 2026-27 dates whose weekdays are right for 2026-27 (Thursday, December 24th; Friday, January 1), and its regular Masses match the current bulletins.",
+            "bulletin": "288ecbf2",
+            "fits_because": "Fits the November 15, 2026 bulletin: same 5:00pm vigil, 8:00, 9:30, 11:30 Sunday and 12:15pm weekday Masses; holy-day Masses at extra times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's Christmas Masses page; dated holy-day Masses on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "22:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stjosephnewton.org/christmas-mass-schedule",
+          "said": "CHRISTMAS EVE MASSES Thursday, December 24th 4:00pm and 10:00pm",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:26:36Z",
+            "current_because": "Checked 2026-11-23: the page gives 2026-27 dates whose weekdays are right for 2026-27 (Thursday, December 24th; Friday, January 1), and its regular Masses match the current bulletins.",
+            "bulletin": "288ecbf2",
+            "fits_because": "Fits the November 15, 2026 bulletin: same 5:00pm vigil, 8:00, 9:30, 11:30 Sunday and 12:15pm weekday Masses; holy-day Masses at extra times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's Christmas Masses page; dated holy-day Masses on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stjosephnewton.org/christmas-mass-schedule",
+          "said": "CHRISTMAS DAY MASSES Friday, December 25th 9:00am and 11:00am",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:26:36Z",
+            "current_because": "Checked 2026-11-23: the page gives 2026-27 dates whose weekdays are right for 2026-27 (Thursday, December 24th; Friday, January 1), and its regular Masses match the current bulletins.",
+            "bulletin": "288ecbf2",
+            "fits_because": "Fits the November 15, 2026 bulletin: same 5:00pm vigil, 8:00, 9:30, 11:30 Sunday and 12:15pm weekday Masses; holy-day Masses at extra times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's Christmas Masses page. R17: it doesn't say the 12:15 PM Mass is cancelled that day, so no cancellation is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stjosephnewton.org/christmas-mass-schedule",
+          "said": "CHRISTMAS DAY MASSES Friday, December 25th 9:00am and 11:00am",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:26:36Z",
+            "current_because": "Checked 2026-11-23: the page gives 2026-27 dates whose weekdays are right for 2026-27 (Thursday, December 24th; Friday, January 1), and its regular Masses match the current bulletins.",
+            "bulletin": "288ecbf2",
+            "fits_because": "Fits the November 15, 2026 bulletin: same 5:00pm vigil, 8:00, 9:30, 11:30 Sunday and 12:15pm weekday Masses; holy-day Masses at extra times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's Christmas Masses page. R17: it doesn't say the 12:15 PM Mass is cancelled that day, so no cancellation is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Solemnity of Mary, Mother of God"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stjosephnewton.org/christmas-mass-schedule",
+          "said": "Friday, January, 1, 20277 at 9:00am (There is NO 12:15pm Mass today)",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:26:36Z",
+            "current_because": "Checked 2026-11-23: the page gives 2026-27 dates whose weekdays are right for 2026-27 (Thursday, December 24th; Friday, January 1), and its regular Masses match the current bulletins.",
+            "bulletin": "288ecbf2",
+            "fits_because": "Fits the November 15, 2026 bulletin: same 5:00pm vigil, 8:00, 9:30, 11:30 Sunday and 12:15pm weekday Masses; holy-day Masses at extra times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's Christmas Masses page ('20277' is a typo for 2027; January 1, 2027 is a Friday).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-newton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Solemnity of Mary, Mother of God"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stjosephnewton.org/christmas-mass-schedule",
+          "said": "Friday, January, 1, 20277 at 9:00am (There is NO 12:15pm Mass today)",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:26:36Z",
+            "current_because": "Checked 2026-11-23: the page gives 2026-27 dates whose weekdays are right for 2026-27 (Thursday, December 24th; Friday, January 1), and its regular Masses match the current bulletins.",
+            "bulletin": "288ecbf2",
+            "fits_because": "Fits the November 15, 2026 bulletin: same 5:00pm vigil, 8:00, 9:30, 11:30 Sunday and 12:15pm weekday Masses; holy-day Masses at extra times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the page says there is no 12:15 PM Mass that day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "288ecbf2",
+          "page": 1,
+          "said": "Stations of the Cross: Each Friday after the 12:15pm Mass; Novena of the Miraculous Medal: Each Monday after Mass; The Rosary is prayed at 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d913d27",
+          "page": 1,
+          "said": "Stations of the Cross: Each Friday after the 12:15pm Mass; Novena of the Miraculous Medal: Each Monday after Mass; The Rosary is prayed at 11:30am"
+        }
+      ],
+      "rationale": "R24: devotions that are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

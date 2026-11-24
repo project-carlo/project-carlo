@@ -1,0 +1,576 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-spirit-pequannock",
+  "status": "approved",
+  "as_of": "2026-11-15T16:09:46Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T12:49:33Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:41:42Z",
+  "summary": "One church. Both bulletins read (Oct 25 and Nov 8, 2026 issues; the newest was fetched Nov 15 but prints November 8) carry the same schedule box: daily 8:30 AM, Sat 5 PM, Sun 7:30, 10 and 7 PM Masses; Confession Tue 9-9:30 AM and Sat 4-4:30 PM; Adoration Tue after Mass to 9:30 AM and first Saturdays 8-9 AM. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f0bf0b1f6810e49a49329097d7433d150838d13a9c1cd1405b3d36089dcc1eef",
+      "fetched_at": "2026-11-15T16:09:46Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4299775ab24f59200fcd323208d2ffe5f0a50d5c6445beb4c6bff7c53192dddb",
+      "fetched_at": "2026-11-08T15:35:37Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f0bf0b1f",
+          "page": 1,
+          "said": "MASS TIMES DAILY(M-F) | 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299775a",
+          "page": 1,
+          "said": "MASS TIMES DAILY(M-F) | 8:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read (Oct 25 and Nov 8 issues); the intentions list 8:30AM Masses Monday-Friday in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f0bf0b1f",
+          "page": 1,
+          "said": "MASS TIMES DAILY(M-F) | 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299775a",
+          "page": 1,
+          "said": "MASS TIMES DAILY(M-F) | 8:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read (Oct 25 and Nov 8 issues); the intentions list 8:30AM Masses Monday-Friday in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f0bf0b1f",
+          "page": 1,
+          "said": "MASS TIMES DAILY(M-F) | 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299775a",
+          "page": 1,
+          "said": "MASS TIMES DAILY(M-F) | 8:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read (Oct 25 and Nov 8 issues); the intentions list 8:30AM Masses Monday-Friday in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f0bf0b1f",
+          "page": 1,
+          "said": "MASS TIMES DAILY(M-F) | 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299775a",
+          "page": 1,
+          "said": "MASS TIMES DAILY(M-F) | 8:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read (Oct 25 and Nov 8 issues); the intentions list 8:30AM Masses Monday-Friday in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f0bf0b1f",
+          "page": 1,
+          "said": "MASS TIMES DAILY(M-F) | 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299775a",
+          "page": 1,
+          "said": "MASS TIMES DAILY(M-F) | 8:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read (Oct 25 and Nov 8 issues); the intentions list 8:30AM Masses Monday-Friday in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f0bf0b1f",
+          "page": 1,
+          "said": "SATURDAY | 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299775a",
+          "page": 1,
+          "said": "SATURDAY | 5:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; intentions list Saturday 5:00PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f0bf0b1f",
+          "page": 1,
+          "said": "SUNDAY | 7:30 & 10:00 AM, 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299775a",
+          "page": 1,
+          "said": "SUNDAY | 7:30 & 10:00 AM, 7:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; intentions list Sunday 7:30, 10:00AM and 7:00PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f0bf0b1f",
+          "page": 1,
+          "said": "SUNDAY | 7:30 & 10:00 AM, 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299775a",
+          "page": 1,
+          "said": "SUNDAY | 7:30 & 10:00 AM, 7:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; intentions list Sunday 7:30, 10:00AM and 7:00PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-pequannock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f0bf0b1f",
+          "page": 1,
+          "said": "SUNDAY | 7:30 & 10:00 AM, 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299775a",
+          "page": 1,
+          "said": "SUNDAY | 7:30 & 10:00 AM, 7:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; intentions list Sunday 7:30, 10:00AM and 7:00PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f0bf0b1f",
+          "page": 1,
+          "said": "CONFESSIONS TUESDAY | 9:00 - 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299775a",
+          "page": 1,
+          "said": "CONFESSIONS TUESDAY | 9:00 - 9:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Confessions box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-pequannock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f0bf0b1f",
+          "page": 1,
+          "said": "SATURDAY | 4:00 PM - 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299775a",
+          "page": 1,
+          "said": "SATURDAY | 4:00 PM - 4:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Confessions box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-pequannock",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f0bf0b1f",
+          "page": 1,
+          "said": "ADORATION TUESDAY|afterMass - 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299775a",
+          "page": 1,
+          "said": "ADORATION TUESDAY|afterMass - 9:30 AM"
+        }
+      ],
+      "rationale": "R1, R10: the Adoration box gives 'after Mass' to 9:30 AM; the weekday Mass is 8:30 AM, so POLICY, Times starts it 30 minutes later at 9:00 AM. Same in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-pequannock",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f0bf0b1f",
+          "page": 1,
+          "said": "FIRST SATURDAY|8:00 - 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299775a",
+          "page": 1,
+          "said": "FIRST SATURDAY|8:00 - 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R11: printed as First Saturday Adoration in the box of both bulletins; POLICY keeps it weekly with weeks_of_month first. The newest issue (Nov 8) covers Saturday Nov 7, a first Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-pequannock",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Annual Remembrance Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4299775a",
+          "page": 3,
+          "said": "join us for our Annual Remembrances Mass on Monday, November 2, at 7:00 PM"
+        }
+      ],
+      "rationale": "R16: a dated Mass before as_of; out of seed scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4299775a",
+          "page": 2,
+          "said": "Father Art Zaba will be saying Mass for our deceased members at St. Joseph's Church on November 3, 2026 at 6 PM"
+        }
+      ],
+      "rationale": "R22, R16: at St. Joseph's, another parish's church, for deceased Knights and Columbiettes, and dated before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

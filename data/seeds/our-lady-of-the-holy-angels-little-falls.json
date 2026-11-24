@@ -1,0 +1,1050 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-holy-angels-little-falls",
+  "status": "approved",
+  "as_of": "2026-11-15T16:11:23Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:25:54Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:08Z",
+  "summary": "One church, Our Lady of the Holy Angels, Little Falls. Weekend Masses (Sat 5 PM; Sun 7:30, 9:30, 11:30 AM, 5 PM), weekday Masses in the chapel (Mon-Fri 7:00 and 11:45 AM) and Saturday 3:45 PM Confession agree in both bulletins read and on the website. Open: a website-only Adoration line (12:00-3:00 PM, no day given) the bulletins never mention; leaning leave out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2da0c90314c343a1f27c0f4f4e922fae18029b473697cde15596bbd4155d2a90",
+      "fetched_at": "2026-11-15T16:11:23Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e79b4cb51770795d5e03f56f55b2d6cc8b6316ef154668fb0f0c775a76fe86ad",
+      "fetched_at": "2026-11-08T15:37:15Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2da0c903",
+          "page": 1,
+          "said": "Mass Schedule ... Saturday: 5:00 PM ... All weekend Masses celebrated in the Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79b4cb5",
+          "page": 1,
+          "said": "Mass Schedule ... Saturday: 5:00 PM ... All weekend Masses celebrated in the Church."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read (Nov 8 and Nov 15); the website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2da0c903",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:30 AM, 5:00 PM / All weekend Masses celebrated in the Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79b4cb5",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:30 AM, 5:00 PM / All weekend Masses celebrated in the Church."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list these Masses each Sunday and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2da0c903",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:30 AM, 5:00 PM / All weekend Masses celebrated in the Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79b4cb5",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:30 AM, 5:00 PM / All weekend Masses celebrated in the Church."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list these Masses each Sunday and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2da0c903",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:30 AM, 5:00 PM / All weekend Masses celebrated in the Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79b4cb5",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:30 AM, 5:00 PM / All weekend Masses celebrated in the Church."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list these Masses each Sunday and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2da0c903",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:30 AM, 5:00 PM / All weekend Masses celebrated in the Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79b4cb5",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:30 AM, 5:00 PM / All weekend Masses celebrated in the Church."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list these Masses each Sunday and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2da0c903",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79b4cb5",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each day's intentions; POLICY, Churches and chapels: 'in the Chapel' of the parish's own church belongs to that church, so the note names it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2da0c903",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79b4cb5",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each day's intentions; POLICY, Churches and chapels: 'in the Chapel' of the parish's own church belongs to that church, so the note names it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2da0c903",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79b4cb5",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each day's intentions; POLICY, Churches and chapels: 'in the Chapel' of the parish's own church belongs to that church, so the note names it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2da0c903",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79b4cb5",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each day's intentions; POLICY, Churches and chapels: 'in the Chapel' of the parish's own church belongs to that church, so the note names it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2da0c903",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79b4cb5",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each day's intentions; POLICY, Churches and chapels: 'in the Chapel' of the parish's own church belongs to that church, so the note names it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2da0c903",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79b4cb5",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each day's intentions; POLICY, Churches and chapels: 'in the Chapel' of the parish's own church belongs to that church, so the note names it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2da0c903",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79b4cb5",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each day's intentions; POLICY, Churches and chapels: 'in the Chapel' of the parish's own church belongs to that church, so the note names it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2da0c903",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79b4cb5",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each day's intentions; POLICY, Churches and chapels: 'in the Chapel' of the parish's own church belongs to that church, so the note names it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2da0c903",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79b4cb5",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each day's intentions; POLICY, Churches and chapels: 'in the Chapel' of the parish's own church belongs to that church, so the note names it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2da0c903",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79b4cb5",
+          "page": 1,
+          "said": "Monday-Friday: 7:00 AM, 11:45 AM / All weekday Masses celebrated in the Chapel."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each day's intentions; POLICY, Churches and chapels: 'in the Chapel' of the parish's own church belongs to that church, so the note names it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2da0c903",
+          "page": 1,
+          "said": "Rite of Reconciliation (Confessions) Saturday: 3:45 PM / Confessions take place in the Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79b4cb5",
+          "page": 1,
+          "said": "Rite of Reconciliation (Confessions) Saturday: 3:45 PM / Confessions take place in the Church."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins read; no end time is given, so none is recorded (POLICY, Times). The website's Confession tab also gives Saturday 3:45 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holyangelsrc.org/mass-schedule",
+          "said": "Adoration ... Perpetual / Blessed Sacrament Exposed from Private Prayer in Church between 12:00-3:00 PM"
+        }
+      ],
+      "rationale": "R5/R6: only the website's Adoration tab gives this; it names no day, labels it 'Perpetual' yet gives 12:00-3:00 PM, and neither bulletin read (Nov 8, Nov 15) mentions Adoration. Leaning leave out: the days and whether it continues are unclear, and a wrong time is worse than a missing one.",
+      "question": "Add website-only Adoration, 12:00-3:00 PM in the church, on every day?",
+      "options": [
+        {
+          "label": "Every day 12:00-3:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-the-holy-angels-little-falls",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the Church"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:08Z"
+      },
+      "group": "web-adoration"
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holyangelsrc.org/mass-schedule",
+          "said": "Adoration ... Perpetual / Blessed Sacrament Exposed from Private Prayer in Church between 12:00-3:00 PM"
+        }
+      ],
+      "rationale": "R5/R6: only the website's Adoration tab gives this; it names no day, labels it 'Perpetual' yet gives 12:00-3:00 PM, and neither bulletin read (Nov 8, Nov 15) mentions Adoration. Leaning leave out: the days and whether it continues are unclear, and a wrong time is worse than a missing one.",
+      "question": "Add website-only Adoration, 12:00-3:00 PM in the church, on every day?",
+      "options": [
+        {
+          "label": "Every day 12:00-3:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-the-holy-angels-little-falls",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the Church"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:08Z"
+      },
+      "group": "web-adoration"
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holyangelsrc.org/mass-schedule",
+          "said": "Adoration ... Perpetual / Blessed Sacrament Exposed from Private Prayer in Church between 12:00-3:00 PM"
+        }
+      ],
+      "rationale": "R5/R6: only the website's Adoration tab gives this; it names no day, labels it 'Perpetual' yet gives 12:00-3:00 PM, and neither bulletin read (Nov 8, Nov 15) mentions Adoration. Leaning leave out: the days and whether it continues are unclear, and a wrong time is worse than a missing one.",
+      "question": "Add website-only Adoration, 12:00-3:00 PM in the church, on every day?",
+      "options": [
+        {
+          "label": "Every day 12:00-3:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-the-holy-angels-little-falls",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the Church"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:08Z"
+      },
+      "group": "web-adoration"
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holyangelsrc.org/mass-schedule",
+          "said": "Adoration ... Perpetual / Blessed Sacrament Exposed from Private Prayer in Church between 12:00-3:00 PM"
+        }
+      ],
+      "rationale": "R5/R6: only the website's Adoration tab gives this; it names no day, labels it 'Perpetual' yet gives 12:00-3:00 PM, and neither bulletin read (Nov 8, Nov 15) mentions Adoration. Leaning leave out: the days and whether it continues are unclear, and a wrong time is worse than a missing one.",
+      "question": "Add website-only Adoration, 12:00-3:00 PM in the church, on every day?",
+      "options": [
+        {
+          "label": "Every day 12:00-3:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-the-holy-angels-little-falls",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the Church"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:08Z"
+      },
+      "group": "web-adoration"
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holyangelsrc.org/mass-schedule",
+          "said": "Adoration ... Perpetual / Blessed Sacrament Exposed from Private Prayer in Church between 12:00-3:00 PM"
+        }
+      ],
+      "rationale": "R5/R6: only the website's Adoration tab gives this; it names no day, labels it 'Perpetual' yet gives 12:00-3:00 PM, and neither bulletin read (Nov 8, Nov 15) mentions Adoration. Leaning leave out: the days and whether it continues are unclear, and a wrong time is worse than a missing one.",
+      "question": "Add website-only Adoration, 12:00-3:00 PM in the church, on every day?",
+      "options": [
+        {
+          "label": "Every day 12:00-3:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-the-holy-angels-little-falls",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the Church"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:08Z"
+      },
+      "group": "web-adoration"
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holyangelsrc.org/mass-schedule",
+          "said": "Adoration ... Perpetual / Blessed Sacrament Exposed from Private Prayer in Church between 12:00-3:00 PM"
+        }
+      ],
+      "rationale": "R5/R6: only the website's Adoration tab gives this; it names no day, labels it 'Perpetual' yet gives 12:00-3:00 PM, and neither bulletin read (Nov 8, Nov 15) mentions Adoration. Leaning leave out: the days and whether it continues are unclear, and a wrong time is worse than a missing one.",
+      "question": "Add website-only Adoration, 12:00-3:00 PM in the church, on every day?",
+      "options": [
+        {
+          "label": "Every day 12:00-3:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-the-holy-angels-little-falls",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the Church"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:08Z"
+      },
+      "group": "web-adoration"
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holyangelsrc.org/mass-schedule",
+          "said": "Adoration ... Perpetual / Blessed Sacrament Exposed from Private Prayer in Church between 12:00-3:00 PM"
+        }
+      ],
+      "rationale": "R5/R6: only the website's Adoration tab gives this; it names no day, labels it 'Perpetual' yet gives 12:00-3:00 PM, and neither bulletin read (Nov 8, Nov 15) mentions Adoration. Leaning leave out: the days and whether it continues are unclear, and a wrong time is worse than a missing one.",
+      "question": "Add website-only Adoration, 12:00-3:00 PM in the church, on every day?",
+      "options": [
+        {
+          "label": "Every day 12:00-3:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-the-holy-angels-little-falls",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the Church"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:08Z"
+      },
+      "group": "web-adoration"
+    }
+  ]
+}

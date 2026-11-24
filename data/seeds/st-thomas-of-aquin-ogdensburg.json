@@ -1,0 +1,587 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-thomas-of-aquin-ogdensburg",
+  "status": "approved",
+  "as_of": "2026-11-15T16:20:08Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T22:01:42Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:44:14Z",
+  "summary": "One church. Both November 2026 bulletins' Mass intentions give Sat 5 PM, Sun 8, 10:30 and noon, and Mon-Fri 8 AM (called 'Morning Liturgy' but with daily intentions), matching the parish website. The bulletins print no confession or adoration; Saturday 4:00-4:45 PM Confession and First Friday (Sep-May) Adoration 8:30-9:00 AM come from the current website (R6). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8cc40259b6cb18d6ef33487d6c60ea42298d19033da164f9b5cd450cb6648c02",
+      "fetched_at": "2026-11-15T16:20:08Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "32a95a17737fd94a53301bf265cba1924b4a1d8cb0025a513048c9f69a86416d",
+      "fetched_at": "2026-11-08T15:44:22Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-of-aquin-ogdensburg",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stthomasofaquin.org/",
+          "said": "Sacrament of Reconcliation Saturday : 4:00 PM to 4:45 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-23T22:03:47Z",
+            "current_because": "Checked 2026-11-23: the homepage's upcoming events list December 2026 dates (First Friday Dec 4, 2026; Cookie Walk Dec 12) and names the current bishop, Kevin J. Sweeney; its Mass times match both 2026 bulletins exactly.",
+            "bulletin": "8cc40259",
+            "fits_because": "The newest bulletin (Nov 15, 2026) prints Sat 5 PM, Sun 8, 10:30, noon and Mon-Fri 8 AM, the same as the site; it prints no confession or adoration times at all, so nothing conflicts. The Saturday 4:00-4:45 confession window ends just before the bulletin's 5:00 PM Saturday Mass."
+          }
+        }
+      ],
+      "rationale": "R6: neither bulletin prints confession times; the parish's current website gives Saturday 4:00-4:45 PM, ahead of the bulletin's 5 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-of-aquin-ogdensburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stthomasofaquin.org/",
+          "said": "Eucharistic Adoration First Friday of the month (September thru May) following the 8:00 AM Liturgy until 9:00 AM.",
+          "schedule_check": {
+            "checked_at": "2026-11-23T22:03:52Z",
+            "current_because": "Checked 2026-11-23: the homepage's upcoming events list December 2026 dates (First Friday Dec 4, 2026; Cookie Walk Dec 12) and names the current bishop, Kevin J. Sweeney; its Mass times match both 2026 bulletins exactly.",
+            "bulletin": "8cc40259",
+            "fits_because": "The newest bulletin (Nov 15, 2026) prints Sat 5 PM, Sun 8, 10:30, noon and Mon-Fri 8 AM, the same as the site; it prints no confession or adoration times at all, so nothing conflicts. Neither bulletin's week (Nov 7-22) holds a first Friday, so neither would print it; the 8:00 AM Liturgy it follows is the bulletin's weekday Mass."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://stthomasofaquin.org/events/first-friday-liturgy-folowed-by-euchaist-adoraio-until-8-15-pm/20261204",
+          "said": "Friday , December 4 , 2026 Repeats every first Friday of the month",
+          "schedule_check": {
+            "checked_at": "2026-11-23T22:03:52Z",
+            "current_because": "Checked 2026-11-23: the homepage's upcoming events list December 2026 dates (First Friday Dec 4, 2026; Cookie Walk Dec 12) and names the current bishop, Kevin J. Sweeney; its Mass times match both 2026 bulletins exactly.",
+            "bulletin": "8cc40259",
+            "fits_because": "The newest bulletin (Nov 15, 2026) prints Sat 5 PM, Sun 8, 10:30, noon and Mon-Fri 8 AM, the same as the site; it prints no confession or adoration times at all, so nothing conflicts. Neither bulletin's week (Nov 7-22) holds a first Friday, so neither would print it; the 8:00 AM Liturgy it follows is the bulletin's weekday Mass."
+          }
+        }
+      ],
+      "rationale": "R6, R10, R11: no read bulletin's week holds a first Friday. The website gives First Friday Adoration September through May following the 8:00 AM weekday Mass until 9:00 AM; POLICY starts it 30 minutes after a weekday Mass, 8:30. The event page's address says 'until-8-15-pm', but its title and the schedule both say until 9:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-of-aquin-ogdensburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8cc40259",
+          "page": 2,
+          "said": "Sat. 5:00 P.M. [intention]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32a95a17",
+          "page": 2,
+          "said": "Sat. 5:00 P.M. [intention]"
+        },
+        {
+          "source": "website",
+          "url": "https://stthomasofaquin.org/",
+          "said": "Saturday : 5:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: the Saturday 5:00 PM Mass is in the intentions of both weeks of both bulletins read (Nov 7-22), and the website's Sunday Mass Schedule gives Saturday 5:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-of-aquin-ogdensburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8cc40259",
+          "page": 2,
+          "said": "Sun. 8:00 A.M. ... 10:30 A.M. ... 12 Noon [intentions]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32a95a17",
+          "page": 2,
+          "said": "Sun. 8:00 A.M. ... 10:30 A.M. ... 12 Noon [intentions]"
+        },
+        {
+          "source": "website",
+          "url": "https://stthomasofaquin.org/",
+          "said": "Sunday : 8:00 AM 10:30 AM 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: the three Sunday Masses are in the intentions of both weeks of both bulletins read, and match the website's Sunday Mass Schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-of-aquin-ogdensburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8cc40259",
+          "page": 2,
+          "said": "Sun. 8:00 A.M. ... 10:30 A.M. ... 12 Noon [intentions]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32a95a17",
+          "page": 2,
+          "said": "Sun. 8:00 A.M. ... 10:30 A.M. ... 12 Noon [intentions]"
+        },
+        {
+          "source": "website",
+          "url": "https://stthomasofaquin.org/",
+          "said": "Sunday : 8:00 AM 10:30 AM 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: the three Sunday Masses are in the intentions of both weeks of both bulletins read, and match the website's Sunday Mass Schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-of-aquin-ogdensburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8cc40259",
+          "page": 2,
+          "said": "Sun. 8:00 A.M. ... 10:30 A.M. ... 12 Noon [intentions]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32a95a17",
+          "page": 2,
+          "said": "Sun. 8:00 A.M. ... 10:30 A.M. ... 12 Noon [intentions]"
+        },
+        {
+          "source": "website",
+          "url": "https://stthomasofaquin.org/",
+          "said": "Sunday : 8:00 AM 10:30 AM 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: the three Sunday Masses are in the intentions of both weeks of both bulletins read, and match the website's Sunday Mass Schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-of-aquin-ogdensburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8cc40259",
+          "page": 3,
+          "said": "Morning Liturgy – Mon., Tues., Wed, Thurs and Fri at 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32a95a17",
+          "page": 3,
+          "said": "Morning Liturgy – Mon., Tues., Wed, Thurs and Fri at 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8cc40259",
+          "page": 2,
+          "said": "Mon. 8:00 A.M. ... Fri. 8:00 A.M. [a Mass intention each day]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32a95a17",
+          "page": 2,
+          "said": "Mon. 8:00 A.M. ... Fri. 8:00 A.M. [a Mass intention each day]"
+        },
+        {
+          "source": "website",
+          "url": "https://stthomasofaquin.org/",
+          "said": "Daily Mass Schedule Mon Fri 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35, R39: page 3 calls it 'Morning Liturgy', but a Mass intention is printed for every weekday in both bulletins and the website lists it as the Daily Mass Schedule; nothing says a Communion Service replaces Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-of-aquin-ogdensburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8cc40259",
+          "page": 3,
+          "said": "Morning Liturgy – Mon., Tues., Wed, Thurs and Fri at 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32a95a17",
+          "page": 3,
+          "said": "Morning Liturgy – Mon., Tues., Wed, Thurs and Fri at 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8cc40259",
+          "page": 2,
+          "said": "Mon. 8:00 A.M. ... Fri. 8:00 A.M. [a Mass intention each day]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32a95a17",
+          "page": 2,
+          "said": "Mon. 8:00 A.M. ... Fri. 8:00 A.M. [a Mass intention each day]"
+        },
+        {
+          "source": "website",
+          "url": "https://stthomasofaquin.org/",
+          "said": "Daily Mass Schedule Mon Fri 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35, R39: page 3 calls it 'Morning Liturgy', but a Mass intention is printed for every weekday in both bulletins and the website lists it as the Daily Mass Schedule; nothing says a Communion Service replaces Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-of-aquin-ogdensburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8cc40259",
+          "page": 3,
+          "said": "Morning Liturgy – Mon., Tues., Wed, Thurs and Fri at 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32a95a17",
+          "page": 3,
+          "said": "Morning Liturgy – Mon., Tues., Wed, Thurs and Fri at 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8cc40259",
+          "page": 2,
+          "said": "Mon. 8:00 A.M. ... Fri. 8:00 A.M. [a Mass intention each day]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32a95a17",
+          "page": 2,
+          "said": "Mon. 8:00 A.M. ... Fri. 8:00 A.M. [a Mass intention each day]"
+        },
+        {
+          "source": "website",
+          "url": "https://stthomasofaquin.org/",
+          "said": "Daily Mass Schedule Mon Fri 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35, R39: page 3 calls it 'Morning Liturgy', but a Mass intention is printed for every weekday in both bulletins and the website lists it as the Daily Mass Schedule; nothing says a Communion Service replaces Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-of-aquin-ogdensburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8cc40259",
+          "page": 3,
+          "said": "Morning Liturgy – Mon., Tues., Wed, Thurs and Fri at 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32a95a17",
+          "page": 3,
+          "said": "Morning Liturgy – Mon., Tues., Wed, Thurs and Fri at 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8cc40259",
+          "page": 2,
+          "said": "Mon. 8:00 A.M. ... Fri. 8:00 A.M. [a Mass intention each day]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32a95a17",
+          "page": 2,
+          "said": "Mon. 8:00 A.M. ... Fri. 8:00 A.M. [a Mass intention each day]"
+        },
+        {
+          "source": "website",
+          "url": "https://stthomasofaquin.org/",
+          "said": "Daily Mass Schedule Mon Fri 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35, R39: page 3 calls it 'Morning Liturgy', but a Mass intention is printed for every weekday in both bulletins and the website lists it as the Daily Mass Schedule; nothing says a Communion Service replaces Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-of-aquin-ogdensburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8cc40259",
+          "page": 3,
+          "said": "Morning Liturgy – Mon., Tues., Wed, Thurs and Fri at 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32a95a17",
+          "page": 3,
+          "said": "Morning Liturgy – Mon., Tues., Wed, Thurs and Fri at 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8cc40259",
+          "page": 2,
+          "said": "Mon. 8:00 A.M. ... Fri. 8:00 A.M. [a Mass intention each day]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32a95a17",
+          "page": 2,
+          "said": "Mon. 8:00 A.M. ... Fri. 8:00 A.M. [a Mass intention each day]"
+        },
+        {
+          "source": "website",
+          "url": "https://stthomasofaquin.org/",
+          "said": "Daily Mass Schedule Mon Fri 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35, R39: page 3 calls it 'Morning Liturgy', but a Mass intention is printed for every weekday in both bulletins and the website lists it as the Daily Mass Schedule; nothing says a Communion Service replaces Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8cc40259",
+          "page": 3,
+          "said": "Novena to Our Lady of the Miraculous Medal - Monday following the 8:00 AM Liturgy"
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

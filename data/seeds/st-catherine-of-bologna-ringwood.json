@@ -1,0 +1,574 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-catherine-of-bologna-ringwood",
+  "status": "approved",
+  "as_of": "2026-11-15T16:15:17Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T16:50:09Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:50Z",
+  "summary": "One church. Both bulletins read (Oct 25 and Nov 15, 2026) print the same schedule box: daily Mass Mon-Sat 9 AM, Saturday vigil 5 PM, Sundays 7:30, 9, 11 AM and 6 PM, Saturday confession 4-4:30 PM. Friday 9:30-10:30 AM Adoration is weekly by R35 from both bulletins' calendars. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1a313621b66d6d6fb737164cf1af72e3a162634742978d7733430931065170f6",
+      "fetched_at": "2026-11-15T16:15:17Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "dec003ec4972b1cff4e9e4b413800a8773234bd0d3e6e677c9c9ca9ce5a13297",
+      "fetched_at": "2026-11-08T15:40:53Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-bologna-ringwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a313621",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday-Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dec003ec",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday-Saturday 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list a 9:00 Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-bologna-ringwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a313621",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday-Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dec003ec",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday-Saturday 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list a 9:00 Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-bologna-ringwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a313621",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday-Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dec003ec",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday-Saturday 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list a 9:00 Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-bologna-ringwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a313621",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday-Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dec003ec",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday-Saturday 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list a 9:00 Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-bologna-ringwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a313621",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday-Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dec003ec",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday-Saturday 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list a 9:00 Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-bologna-ringwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a313621",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday-Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dec003ec",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday-Saturday 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list a 9:00 Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-bologna-ringwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a313621",
+          "page": 1,
+          "said": "Saturday Vigil 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dec003ec",
+          "page": 1,
+          "said": "Saturday Vigil 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-bologna-ringwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a313621",
+          "page": 1,
+          "said": "Sunday 7:30am, 9:00am, 11:00am, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dec003ec",
+          "page": 1,
+          "said": "Sunday 7:30am, 9:00am, 11:00am, 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-bologna-ringwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a313621",
+          "page": 1,
+          "said": "Sunday 7:30am, 9:00am, 11:00am, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dec003ec",
+          "page": 1,
+          "said": "Sunday 7:30am, 9:00am, 11:00am, 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-bologna-ringwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a313621",
+          "page": 1,
+          "said": "Sunday 7:30am, 9:00am, 11:00am, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dec003ec",
+          "page": 1,
+          "said": "Sunday 7:30am, 9:00am, 11:00am, 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-bologna-ringwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a313621",
+          "page": 1,
+          "said": "Sunday 7:30am, 9:00am, 11:00am, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dec003ec",
+          "page": 1,
+          "said": "Sunday 7:30am, 9:00am, 11:00am, 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-bologna-ringwood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a313621",
+          "page": 1,
+          "said": "Confession Saturday 4:00pm - 4:30pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dec003ec",
+          "page": 1,
+          "said": "Confession Saturday 4:00pm - 4:30pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-bologna-ringwood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a313621",
+          "page": 5,
+          "said": "Friday, November 20 9:30am-10:30am- Friday Adoration-Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dec003ec",
+          "page": 7,
+          "said": "Friday, October 30 9:30am-10:30am-Adoration-Church"
+        }
+      ],
+      "rationale": "R35: the same Friday 9:30-10:30 AM Adoration in the church appears in the parish calendar of both bulletins, for different weeks (Oct 30 and Nov 20), not marked special; the newest calls it 'Friday Adoration'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a313621",
+          "page": 1,
+          "said": "Confession ... or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-bologna-ringwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Interfaith Thanksgiving Service"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a313621",
+          "page": 3,
+          "said": "Interfaith Thanksgiving Service, Tuesday, November 24, 2026, 7:00 PM, St. Catherine of Bologna Church"
+        }
+      ],
+      "rationale": "R24/R25: an interfaith prayer service, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

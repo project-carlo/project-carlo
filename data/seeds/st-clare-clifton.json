@@ -1,0 +1,940 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-clare-clifton",
+  "status": "approved",
+  "as_of": "2026-11-15T16:15:49Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T16:56:39Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:56Z",
+  "summary": "One church, St. Clare, Clifton; weekday Masses and Adoration are in the Divine Mercy Chapel (in the parish office on the same grounds) except Fridays. Both bulletins read (Nov 8, Nov 15) print the same schedule box; Adoration before each Mass has no printed end time, so it is recorded without one. Confession Saturday 3:00-3:45 PM per the bulletin (website says 3:30); a dated 9:00 AM Mass on Thu Nov 19 comes from the intentions. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9366ba3b9b702ec25964dc482aa2056a61e1d86385b3811f650791345ef902c1",
+      "fetched_at": "2026-11-15T16:15:49Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "166733805def3bf7906dea8d6ebb88bc5b3878d667a46c68503d621bf970a689",
+      "fetched_at": "2026-11-08T15:41:15Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "Saturday Evening Vigil Mass ... 4:00 PM - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "Saturday Evening Vigil Mass ... 4:00 PM - Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read (Nov 8 and Nov 15); the Nov 21 intentions list 4:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "Sunday 9:00 AM - Mass; 11:00 AM - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "Sunday 9:00 AM - Mass; 11:00 AM - Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read; the intentions list Sunday 9:00 and 11:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "Sunday 9:00 AM - Mass; 11:00 AM - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "Sunday 9:00 AM - Mass; 11:00 AM - Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read; the intentions list Sunday 9:00 and 11:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 4:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "Saturday Evening Vigil Mass 3:00 PM - Adoration and Confession 4:00 PM - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "Saturday Evening Vigil Mass 3:00 PM - Adoration and Confession 4:00 PM - Mass"
+        }
+      ],
+      "rationale": "R1; POLICY, Times: a clock time running until a Mass with no end of its own has no end_time and a note naming the Mass. The website's 'Adoration: 1 hour before each weekend Mass' agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 2,
+          "said": "RECONCILIATION Saturdays: 3:00 - 3:45 PM at the Church, by appointment, or at any reasonable time upon request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 2,
+          "said": "RECONCILIATION Saturdays: 3:00 - 3:45 PM at the Church, by appointment, or at any reasonable time upon request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "3:00 PM - Adoration and Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "3:00 PM - Adoration and Confession"
+        }
+      ],
+      "rationale": "R1: the sacramental box gives 3:00-3:45 PM in both bulletins. The website's Confession Times say 3:00-3:30 PM; the bulletin is newer and more specific (R6: a missing or older website detail does not override it).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "Sunday 8:00 AM - Adoration 9:00 AM - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "Sunday 8:00 AM - Adoration 9:00 AM - Mass"
+        }
+      ],
+      "rationale": "R1; POLICY, Times: runs until the Mass with no end time of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 11:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "Sunday 10:00 AM - Adoration 11:00 AM - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "Sunday 10:00 AM - Adoration 11:00 AM - Mass"
+        }
+      ],
+      "rationale": "R1; POLICY, Times: runs until the Mass with no end time of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "DAILY MASS/ADORATION SCHEDULE (Divine Mercy Chapel) Monday - Friday 8:30 AM - Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "DAILY MASS/ADORATION SCHEDULE (Divine Mercy Chapel) Monday - Friday 8:30 AM - Holy Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://saintclarenj.com/",
+          "said": "Note: Daily mass is in the main office/Divine Mercy Chapel. Not in the church."
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins; the intentions list 8:30 AM Mon-Wed. POLICY, Churches and chapels: the website places the chapel in the parish's main office, on the same grounds as the church, so it is recorded at St. Clare with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "DAILY MASS/ADORATION SCHEDULE (Divine Mercy Chapel) Monday - Friday 8:30 AM - Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "DAILY MASS/ADORATION SCHEDULE (Divine Mercy Chapel) Monday - Friday 8:30 AM - Holy Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://saintclarenj.com/",
+          "said": "Note: Daily mass is in the main office/Divine Mercy Chapel. Not in the church."
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins; the intentions list 8:30 AM Mon-Wed. POLICY, Churches and chapels: the website places the chapel in the parish's main office, on the same grounds as the church, so it is recorded at St. Clare with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "DAILY MASS/ADORATION SCHEDULE (Divine Mercy Chapel) Monday - Friday 8:30 AM - Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "DAILY MASS/ADORATION SCHEDULE (Divine Mercy Chapel) Monday - Friday 8:30 AM - Holy Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://saintclarenj.com/",
+          "said": "Note: Daily mass is in the main office/Divine Mercy Chapel. Not in the church."
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins; the intentions list 8:30 AM Mon-Wed. POLICY, Churches and chapels: the website places the chapel in the parish's main office, on the same grounds as the church, so it is recorded at St. Clare with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "DAILY MASS/ADORATION SCHEDULE (Divine Mercy Chapel) Monday - Friday 8:30 AM - Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "DAILY MASS/ADORATION SCHEDULE (Divine Mercy Chapel) Monday - Friday 8:30 AM - Holy Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://saintclarenj.com/",
+          "said": "Note: Daily mass is in the main office/Divine Mercy Chapel. Not in the church."
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins; the intentions list 8:30 AM Mon-Wed. POLICY, Churches and chapels: the website places the chapel in the parish's main office, on the same grounds as the church, so it is recorded at St. Clare with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "Monday - Friday 8:30 AM - Holy Mass (Friday Adoration and Mass at the Main Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "Monday - Friday 8:30 AM - Holy Mass (Friday Adoration and Mass at the Main Church)"
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins; Friday's is at the main church. The First Friday 8:30 AM Mass in honor of the Sacred Heart is this same Mass (POLICY rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chapel; before the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "DAILY MASS/ADORATION SCHEDULE (Divine Mercy Chapel) Monday - Friday 8:00 AM - Adoration 8:30 AM - Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "DAILY MASS/ADORATION SCHEDULE (Divine Mercy Chapel) Monday - Friday 8:00 AM - Adoration 8:30 AM - Holy Mass"
+        }
+      ],
+      "rationale": "R1; POLICY, Times: runs until the Mass with no end time of its own. Chapel on the same grounds (website: in the main office).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chapel; before the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "DAILY MASS/ADORATION SCHEDULE (Divine Mercy Chapel) Monday - Friday 8:00 AM - Adoration 8:30 AM - Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "DAILY MASS/ADORATION SCHEDULE (Divine Mercy Chapel) Monday - Friday 8:00 AM - Adoration 8:30 AM - Holy Mass"
+        }
+      ],
+      "rationale": "R1; POLICY, Times: runs until the Mass with no end time of its own. Chapel on the same grounds (website: in the main office).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chapel; before the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "DAILY MASS/ADORATION SCHEDULE (Divine Mercy Chapel) Monday - Friday 8:00 AM - Adoration 8:30 AM - Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "DAILY MASS/ADORATION SCHEDULE (Divine Mercy Chapel) Monday - Friday 8:00 AM - Adoration 8:30 AM - Holy Mass"
+        }
+      ],
+      "rationale": "R1; POLICY, Times: runs until the Mass with no end time of its own. Chapel on the same grounds (website: in the main office).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chapel; before the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "DAILY MASS/ADORATION SCHEDULE (Divine Mercy Chapel) Monday - Friday 8:00 AM - Adoration 8:30 AM - Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "DAILY MASS/ADORATION SCHEDULE (Divine Mercy Chapel) Monday - Friday 8:00 AM - Adoration 8:30 AM - Holy Mass"
+        }
+      ],
+      "rationale": "R1; POLICY, Times: runs until the Mass with no end time of its own. Chapel on the same grounds (website: in the main office).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM - Adoration (Friday Adoration and Mass at the Main Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM - Adoration (Friday Adoration and Mass at the Main Church)"
+        }
+      ],
+      "rationale": "R1; POLICY, Times: runs until the Mass with no end time of its own. Friday's is in the main church per the bulletin (the website still lists the chapel; the bulletin is newer and explicit).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "third",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chapel; before the 9:00 AM Healing Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "Saturday 8:30 AM - Adoration 9:00 AM - Healing Mass (Except for First Saturday of the month)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "Saturday 8:30 AM - Adoration 9:00 AM - Healing Mass (Except for First Saturday of the month)"
+        }
+      ],
+      "rationale": "R1; POLICY, Weekly qualifiers: 'except for First Saturday' is written as the remaining weeks; the parenthetical follows both Saturday lines. No end time of its own (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "third",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass, Divine Mercy Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "Saturday 9:00 AM - Healing Mass (Except for First Saturday of the month)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "Saturday 9:00 AM - Healing Mass (Except for First Saturday of the month)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 3,
+          "said": "SATURDAY, NOVEMBER 14, 2026 9:00 AM + Mary Ellen Condon"
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins; the Nov 14 intentions list it. The Nov 21 intentions list no 9:00 AM Mass, but a missing intention line is not a cancellation (R17, R39). Website: 'Healing Mass at the Chapel'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition, main church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "FIRST FRIDAY DEVOTION (Main Church) 9:00 AM - 6:00 PM- Exposition of the Eucharist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "FIRST FRIDAY DEVOTION (Main Church) 9:00 AM - 6:00 PM- Exposition of the Eucharist"
+        },
+        {
+          "source": "website",
+          "url": "https://saintclarenj.com/",
+          "said": "Starting Sept. 4, 2026 there will be all day Adoration in Church."
+        }
+      ],
+      "rationale": "R1, R11: a named first-Friday service printed in both bulletins; POLICY rule 2 keeps it weekly with weeks_of_month.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass, main church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 1,
+          "said": "FIRST FRIDAY DEVOTION (Main Church) 6:00 PM - Mass in Honor of the Immaculate Heart of Mary/ Healing Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16673380",
+          "page": 1,
+          "said": "FIRST FRIDAY DEVOTION (Main Church) 6:00 PM - Mass in Honor of the Immaculate Heart of Mary/ Healing Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://saintclarenj.com/",
+          "said": "1st Friday : 6:00 PM English Healing Mass at the Church"
+        }
+      ],
+      "rationale": "R1, R11: a named first-Friday Mass printed in both bulletins and on the website; POLICY rule 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 3,
+          "said": "THURSDAY, NOVEMBER 19, 2026 9:00 AM + Deceased Pastors & Nuns of the Parish"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 3; R16, R40: the newest intentions date Thursday Nov 19's Mass at 9:00 AM, not the usual 8:30 (the Nov 12 intentions give 8:30). Recorded as a dated Mass on or after as_of; no cancellation of the 8:30 slot is recorded since none is stated (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9366ba3b",
+          "page": 2,
+          "said": "RECONCILIATION ... by appointment, or at any reasonable time upon request"
+        }
+      ],
+      "rationale": "R26: confession by appointment or on request has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

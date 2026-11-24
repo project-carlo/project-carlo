@@ -1,0 +1,667 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-james-st-thomas-montague",
+  "status": "approved",
+  "as_of": "2026-11-15T16:16:40Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:14:51Z",
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:12Z",
+  "summary": "Two churches (St. James, Montague; St. Thomas, Sandyston). Mass and Saturday Confession times agree in both bulletins read (Nov 8, Nov 15) and on the website; Friday 10-noon Adoration at St. Thomas recurs in both calendars; the website adds a Nov 26 Thanksgiving Mass. Open: Saturday Adoration after the 8 AM Mass at St. James (no start time printed), and the Knights' second-Tuesday 6:30 PM Adoration.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "11295d5a49182d3f2b7d9c0a3cb618bce39656f3a71fb96aec6f374297eb0030",
+      "fetched_at": "2026-11-15T16:16:40Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4990ca432a366c76f6f788ec4ad1cc39442d05f694106d631511855f50c7db49",
+      "fetched_at": "2026-11-08T15:42:10Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-greater-montague",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11295d5a",
+          "page": 1,
+          "said": "MASS SCHEDULE St. James Sunday: 8:00 am & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4990ca43",
+          "page": 1,
+          "said": "MASS SCHEDULE St. James Sunday: 8:00 am & 11:30 am"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read, with intentions at these times on p3; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-greater-montague",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11295d5a",
+          "page": 1,
+          "said": "MASS SCHEDULE St. James Sunday: 8:00 am & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4990ca43",
+          "page": 1,
+          "said": "MASS SCHEDULE St. James Sunday: 8:00 am & 11:30 am"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read, with intentions at these times on p3; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-greater-montague",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11295d5a",
+          "page": 1,
+          "said": "St. James ... Saturday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4990ca43",
+          "page": 1,
+          "said": "St. James ... Saturday: 8:00 am"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins, with Saturday 8:00AM intentions on p3; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-sandyston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11295d5a",
+          "page": 1,
+          "said": "St. Thomas Saturday: 4:30 pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4990ca43",
+          "page": 1,
+          "said": "St. Thomas Saturday: 4:30 pm (Vigil)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins, with intentions on p3; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-sandyston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11295d5a",
+          "page": 1,
+          "said": "St. Thomas ... Sunday: 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4990ca43",
+          "page": 1,
+          "said": "St. Thomas ... Sunday: 9:30 am"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins, with intentions on p3; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-sandyston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11295d5a",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday: 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4990ca43",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday: 9:00 am"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins and the 9:00AM intentions of each weekday on p3 (Thursday: 'No Mass'). The website's daily box says 'M W F' but its own text invites people to 'Tuesday's at the 9am Daily Mass', so Tuesday stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-sandyston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11295d5a",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday: 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4990ca43",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday: 9:00 am"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins and the 9:00AM intentions of each weekday on p3 (Thursday: 'No Mass'). The website's daily box says 'M W F' but its own text invites people to 'Tuesday's at the 9am Daily Mass', so Tuesday stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-sandyston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11295d5a",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday: 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4990ca43",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday: 9:00 am"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins and the 9:00AM intentions of each weekday on p3 (Thursday: 'No Mass'). The website's daily box says 'M W F' but its own text invites people to 'Tuesday's at the 9am Daily Mass', so Tuesday stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-sandyston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11295d5a",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday: 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4990ca43",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday: 9:00 am"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins and the 9:00AM intentions of each weekday on p3 (Thursday: 'No Mass'). The website's daily box says 'M W F' but its own text invites people to 'Tuesday's at the 9am Daily Mass', so Tuesday stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-sandyston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11295d5a",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION St. Thomas the Apostle Saturday: 4:00 - 4:20 pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4990ca43",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION St. Thomas the Apostle Saturday: 4:00 - 4:20 pm or by appointment"
+        }
+      ],
+      "rationale": "R1: in the box of both bulletins; the website gives the same Saturday 4:00 PM to 4:20 PM at St. Thomas.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11295d5a",
+          "page": 1,
+          "said": "or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-sandyston",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11295d5a",
+          "page": 5,
+          "said": "Friday, Nov. 20 10:00a.m. STC Adoration of Blessed Sacrament --till 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4990ca43",
+          "page": 5,
+          "said": "Friday, Nov. 13 10:00a.m. STC Adoration of Blessed Sacrament --till 12 Noon"
+        },
+        {
+          "source": "website",
+          "url": "https://saintjamesthomas.org/",
+          "said": "Exposition of the Blessed Sacrament & Adoration is normally held immediately following the Friday 9am Daily Mass & ends by Noon."
+        }
+      ],
+      "rationale": "R35: the same Friday 10 AM-noon Adoration at St. Thomas is in the weekly calendar of two consecutive weeks, and the website says it is normally held every Friday after the 9am Mass until noon. POLICY, Times: the bulletin's clock time 10:00 wins over the website's relative wording.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-greater-montague",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11295d5a",
+          "page": 5,
+          "said": "Saturday, Nov. 21 8:00 a.m. SJC Mass & Adoration, till 9:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4990ca43",
+          "page": 5,
+          "said": "Saturday, Nov. 14 8:00 a.m. SJC Mass & Adoration, till 9:30 a.m."
+        }
+      ],
+      "rationale": "R30: the calendar of both weeks lists 'Mass & Adoration, till 9:30' at St. James on Saturday (recurring per R35), but gives Adoration no start of its own; POLICY, Final source checks says a combined event doesn't time its components. Leaning to start it 30 minutes after the 8:00 AM Saturday-morning (weekday) Mass per R10, ending at the printed 9:30. The website does not mention it.",
+      "question": "Add Saturday Adoration after the 8:00 AM Mass at St. James, ending 9:30 AM?",
+      "options": [
+        {
+          "label": "Saturdays 8:30-9:30 AM",
+          "entry": {
+            "church_slug": "st-james-the-greater-montague",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:12Z"
+      }
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-sandyston",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction; before the 7 PM Knights of Columbus meeting"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4990ca43",
+          "page": 4,
+          "said": "The Knights of Columbus Msgr. Gacquin Council 12974 meets every second Tuesday of the month in the Father Lewis Center. The meeting starts at 7 p.m. preceded by Eucharistic Adoration at 6:30."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4990ca43",
+          "page": 5,
+          "said": "Tuesday, Nov. 10 ... 6:30 p.m. STC K of C Adoration & Benediction 7:00 p.m. STC K of C. Meeting"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11295d5a",
+          "page": 4,
+          "said": "meets every second Tuesday of the month in the Father Lewis Center. The meeting starts at 7 p.m. preceded by Eucharistic Adoration at 6:30."
+        }
+      ],
+      "rationale": "R30: a named second-Tuesday service (R12: the newest week holds no second Tuesday, so the Nov 8 issue, whose week does, is cited). It is printed as part of the Knights' council meeting, and nothing says whether the Adoration is open to all; the calendar lists it publicly at STC (St. Thomas Church or the Fr. Lewis Center on its grounds), so leaning include. No end time: it runs until the 7 PM meeting (POLICY, Times).",
+      "question": "Add the Knights of Columbus' second-Tuesday 6:30 PM Adoration & Benediction at St. Thomas?",
+      "options": [
+        {
+          "label": "Second Tuesdays 6:30 PM",
+          "entry": {
+            "church_slug": "st-thomas-the-apostle-sandyston",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "second"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction; before the 7 PM Knights of Columbus meeting"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:12Z"
+      }
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-sandyston",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintjamesthomas.org/",
+          "said": "Thurs., Nov. 26th there shall be a 9AM Mass of Thanksgiving at St. Thomas.",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:16:48Z",
+            "current_because": "Checked 2026-11-23: the homepage announces the Nov. 23 Thanksgiving Ecumenical Service and the Nov. 15 All Saints celebration of this year, and lists this Mass under Upcoming Special Masses for November 26.",
+            "bulletin": "11295d5a",
+            "fits_because": "The Nov 15 bulletin announces the same Nov. 23 ecumenical service at St. Thomas and its schedule box gives the same Masses as the site; Thanksgiving falls outside the bulletin's week, and a 9 AM Mass at St. Thomas matches its weekday Mass time."
+          }
+        }
+      ],
+      "rationale": "R6, R16: a dated holiday Mass on or after as_of that the parish's own current website states, at a listed church; the bulletins read do not cover that week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11295d5a",
+          "page": 5,
+          "said": "Thanksgiving Ecumenical Service. Next Monday, Nov. 23, St. Thomas will be hosting ... The Service begins at 7 p.m."
+        }
+      ],
+      "rationale": "R24: an ecumenical prayer service, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
