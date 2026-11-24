@@ -66,6 +66,8 @@ data/runs/*/*
 !data/runs/*/eval/
 data/runs/pdf-detail-study/eval/**/evidence/
 data/runs/pdf-detail-full/eval/**/evidence/
+# The second-opinion eval's per-parish dumps; each run's report.md is committed.
+data/runs/seed-opinion/eval/**/results.json
 scratch-detail-*.log
 data/out/
 data/pipeline/

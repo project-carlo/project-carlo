@@ -228,5 +228,5 @@ Worth considering next:
   cancellation as a qualifier of the regular slot. That is a POLICY-level rule for the
   eval classifiers too.
 - Outputs: `baseline-matcher-v2/`, `prompt-v1-2026-11-17/`, `prompt-v2-2026-11-17/`,
-  `prompt-v3-2026-11-17/` (each has `report.md` and `results.json`). Replies are cached
+  `prompt-v3-2026-11-17/` (each has its `report.md`; the script's `results.json` stays local). Replies are cached
   by prompt version in `cache/`.
