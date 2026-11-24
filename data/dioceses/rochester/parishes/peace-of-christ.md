@@ -3,30 +3,28 @@ name: Peace of Christ Parish
 website: https://peaceofchristparish.org
 bulletin_provider: discover_mass
 provider_id: peace-of-christ-parish-at-st-ambrose-rochester-ny
-publication:
-- discovermass:peace-of-christ-parish-at-st-ambrose-rochester-ny
-- discovermass:peace-of-christ-parish-at-st-james-rochester-ny
+publication: ['discovermass:peace-of-christ-parish-at-st-ambrose-rochester-ny', 'discovermass:peace-of-christ-parish-at-st-james-rochester-ny']
 group: ''
 evidence:
 - url: https://discovermass.com/church/peace-of-christ-parish-at-st-ambrose-rochester-ny/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: PEACE OF CHRIST PARISH
   note: Discover Mass church page and its newest issues (27 September and 4 October 2026, 8 pages). Page
     2 header "PEACE OF CHRIST PARISH / PARISH STAFF" with the key "AM- St. Ambrose, JA- St. James, JO-
     St. John, PO - Parish Office, SAA- St. Ambrose Academy". The PDF text layer has broken kerning ("Peter
     B. Mottola" comes out "PeterB .M ottola"), which is why this quote is short.
 - url: https://discovermass.com/church/peace-of-christ-parish-at-st-james-rochester-ny/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   note: A second Discover Mass church page, "Peace of Christ Parish at St. James", carries the same bulletin
     (page 2 staff list and calendar are identical to the St. Ambrose page for the same Sundays). The parish
     site embeds both slugs.
 - url: https://ps.dor.org/directory/peace-of-christ/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 'Saturday: St. James, at 4:30 PM Sunday: St. James at 7:45 AM St. John at 9:00 AM & 11:00 AM
     St. Ambrose at 9:45 AM & 5:00 PM'
   note: 'Diocesan directory listing: the multi-site parish and its three churches.'
 - url: https://www.peaceofchristparish.org/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   note: 'probe url: embeds both discovermass slugs.'
 promoted: 2026-10-02
 ---
@@ -37,11 +35,9 @@ Peace of Christ is a multi-site parish (St. Ambrose, St. James, St. John the Eva
 
 ## Worship sites
 
-Three: `st-ambrose` (25 Empire Boulevard), `st-james-rochester` (130 Brett Road), `st-john-evangelist-humboldt` (553 Humboldt Street). The locator's parish-level entry "Peace of Christ Parish" (`directory:348-peace-of-christ-parish`) is linked to St. Ambrose. St. Ambrose Academy (31 Empire Blvd) is a school.
+Three churches: `st-ambrose` (25 Empire Boulevard), `st-james-rochester` (130 Brett Road), `st-john-evangelist-humboldt` (553 Humboldt Street). The locator's parish-level entry "Peace of Christ Parish" (`directory:348-peace-of-christ-parish`) is linked to St. Ambrose. St. Ambrose Academy (31 Empire Blvd) is a school.
 
-The parish's Perpetual Adoration Chapel, in the former St. James Convent at 123 Whittington Road,
-has adoration and holy hours but no Mass; it is `excluded/perpetual-adoration-chapel-rochester`
-(no-public-mass), added 2026-10-27.
+The parish's Perpetual Adoration Chapel, in the former St. James Convent at 123 Whittington Road, has adoration and holy hours but no Mass. It was excluded (`no-public-mass`) on 2026-10-27; since 2026-11-24 it is the row `perpetual-adoration-chapel-rochester` with `kind: adoration_chapel` (README: a parish's Adoration chapel at an address of its own), its schedule set by `data/corrections/peace-of-christ/2026-11-24-perpetual-adoration-chapel.json`.
 
 ## Website and bulletin provider
 
