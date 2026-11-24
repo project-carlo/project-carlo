@@ -30,6 +30,18 @@ evidence:
   quote: There are currently no bulletins available for Our Lady of Hope.
   note: 'Its Mass times there (MassTimes.org data, under a COVID-era banner): Saturday 4:00pm; Sunday
     9:00am, 11:00am; Monday to Friday 11:30am. It gives the address 248 Lafayette Ave.'
+- url: https://web.archive.org/web/20251012070102/http://www.ourladyofhopewny.org/Activities/Worship-Schedule
+  seen: 2026-11-24
+  quote: Saturday at 4pm
+  note: 'The parish''s own Worship Schedule page as the Wayback Machine saved it on 12 October 2025: "Weekend
+    Mass: Saturday at 4pm Sunday at 9am & 11am Weekday: 8am & 12pm at the Convent". The weekend times
+    agree with the diocese''s Official Catholic Directory (September 2025, page 17), whose weekday Mass
+    is "11:30 a.m. convent chapel".'
+- url: https://www.buffalodiocese.org/wp-content/uploads/DOB_CatholicDirectory.pdf
+  seen: 2026-11-24
+  quote: 'Weekdays: 11:30 a.m. convent chapel'
+  note: 'Official Catholic Directory, September 2025, page 17: Saturday Evening 4 p.m.; Sundays 9 a.m.
+    and 11 a.m.'
 revisit: 'Owner''s rule (16 November 2026): keep this row unresolved with its published Mass times for
   the coming feature. Look again for a bulletin on ourladyofhopewny.org (Cloudflare blocks automated reads),
   ParishesOnline our-lady-of-hope-14213 or Discover Mass.'
@@ -48,6 +60,14 @@ research:
   outcome: not-found
   next_action: Check again at the revisit date
   retry_when: A bulletin appears on any of these
+- method: parish-site-access visit.py on ourladyofhopewny.org/Activities/Worship-Schedule (headed Chrome,
+    8 loads); web search for a Facebook page
+  url: https://ourladyofhopewny.org/Activities/Worship-Schedule
+  checked: '2026-11-24'
+  outcome: access-blocked
+  next_action: Capture the live Worship Schedule page for a source schedule (`seed capture`) once Cloudflare
+    lets a load through, or find a Facebook page its site links
+  retry_when: Cloudflare lets a load through
 bulletin_status: not-found
 ---
 
