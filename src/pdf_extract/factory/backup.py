@@ -3,6 +3,9 @@
 Losing the ledger loses only history, costs and transcripts; the work is in git.
 Uploading needs R2 keys that can write (the ones `pnpm data:push` uses), from the
 dispatcher's `.env` (secrets.py).
+
+Seed workers can read R2, so the copy uploaded leaves out the second opinions not yet
+revealed to their drafters (`opinions.py`); restored, those are asked again.
 """
 
 from __future__ import annotations
@@ -28,12 +31,30 @@ def copy_database(source: Path, dest: Path) -> None:
         src.close()
 
 
+def hide_unrevealed(path: Path) -> None:
+    """Drop, from a copy of the ledger, the replies of second opinions not yet revealed,
+    and vacuum, so no page of the file still holds them."""
+    conn = sqlite3.connect(path)
+    try:
+        if conn.execute("SELECT 1 FROM sqlite_master WHERE type = 'table' AND "
+                        "name = 'seed_opinion'").fetchone():
+            # A restored ledger asks for them again.
+            conn.execute("UPDATE seed_opinion SET reply = NULL, status = CASE WHEN status = "
+                         "'done' THEN 'queued' ELSE status END, attempts = 0 "
+                         "WHERE revealed_at IS NULL")
+            conn.commit()
+            conn.execute("VACUUM")
+    finally:
+        conn.close()
+
+
 def backup_ledger(ledger_path: Path, prefix: str, secrets: dict[str, str],
                   out_dir: Path = DATA / "backups") -> str:
     out_dir.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now(UTC).strftime("%Y-%m-%d")
     dest = out_dir / f"factory-{stamp}.db"
     copy_database(ledger_path, dest)
+    hide_unrevealed(dest)
     remote = remote_from_env(secrets)
     if remote is None:
         return f"{dest} (no R2 keys: not uploaded)"

@@ -291,12 +291,10 @@ Commands read a `.env` file in the repo root if there is one (without overriding
 variables already set).
 
 - `OPENAI_API_KEY`: for `pnpm process` and `pnpm weekly:run`, the OpenAI
-  classifiers (`pnpm eval`, `pnpm extract`), and `pnpm seed ask|extract`.
+  classifiers (`pnpm eval`, `pnpm extract`), and the factory dispatcher's
+  second opinion on each seed (docs/seed-second-opinion-plan.md).
 - `GEMINI_API_KEY`: for the Gemini classifiers (`pnpm eval`, `pnpm extract`,
-  the labeler) and `pnpm seed ask|extract` with a Gemini model. The weekly
-  pipeline doesn't use it.
-- `CARLO_SEED_CALL_LIMIT`: external calls `pnpm seed ask|extract` may make per
-  parish (default 4).
+  the labeler). The weekly pipeline doesn't use it.
 - `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`: Cloudflare R2
   access. Without them everything runs on local files only.
 - `R2_BUCKET`: bucket name (default `project-carlo-data`).

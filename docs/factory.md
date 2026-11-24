@@ -21,7 +21,7 @@ prompts, the queue and settings are in `factory/`. How quota is measured is in
 | **Run** | One pass of one diocese through the pipeline, map or seed: one branch, one checkout, one PR. |
 | **Stage** | A kind of work (`survey`, `map`, `seed`...), defined by its stage spec `factory/stages/<stage>.yaml` and prompt `factory/prompts/<stage>.md`. |
 | **Job** | One run of a stage on one input ("map batch 3", "seed St. Paul"), named `<seq>-<stage>` in its Run (`wilmington-map-1/004-map`). |
-| **Attempt** | One worker session on a job: the first, or a send-back, resume, continue or answer. |
+| **Attempt** | One worker session on a job: the first, or a send-back, resume, continue, answer or (seeds) opinion. |
 | **Worker** | A fresh Agent SDK session that runs one attempt and ends. It can't start other agents, commit or push. |
 | **Gate** | A check the dispatcher runs after an attempt. The worker's own report is never enough. |
 | **Handoff** | The JSON a worker writes at the end of its job (`handoff.py` has the schema). |
@@ -31,7 +31,8 @@ prompts, the queue and settings are in `factory/`. How quota is measured is in
 | **Playbook** | The sections of `diocese.md` later map jobs read: publishers, rules settled, new lessons. |
 | **Precedent** | A seed question `seed-review` settled by judgment, kept in `diocese.md` so the rest of the diocese is decided alike. |
 | **Dispatcher** | The long-running Python process that picks jobs, starts workers, runs gates and records everything in the ledger. |
-| **Ledger** | `data/factory/factory.db` (SQLite): Runs, jobs, attempts, steps, gates, flags, readings. |
+| **Ledger** | `data/factory/factory.db` (SQLite): Runs, jobs, attempts, steps, gates, flags, readings, second opinions. |
+| **Second opinion** | gpt-6-luna's blind reading of a parish's newest bulletins, which the dispatcher compares with its seed ([seed-second-opinion-plan.md](seed-second-opinion-plan.md)). |
 | **Foreman** | The `foreman` skill you run by hand to review a job, a stage or a Run. |
 
 ## The pipeline
@@ -62,6 +63,18 @@ seed Run  for each batch: seed × each parish ─▶ seed-review ─▶ pr ─�
   `seed_follow_up_weeks` after the map Run merged with whatever is ready. A follow-up
   seeds the rest when they are all ready or at that deadline, and each parish still not
   ready then gets an issue.
+- **The second opinion.** When a seed Run starts, the dispatcher asks gpt-6-luna to read
+  each parish's newest `opinion_max_bulletins` bulletins blind, in the background
+  (`opinion_workers` calls at once; `opinions.py`). Replies wait in the ledger, which
+  workers can't see. When a seed job's gates pass, the dispatcher waits for its parish's
+  (up to `opinion_timeout_minutes`), asking again on the drafter's own bulletins if it
+  read a newer one, writes it into the seed file as `second_opinion` and compares. No
+  differences: the job commits. Differences: the same session gets an `opinion` prompt
+  (not a send-back) to change, ask or keep each with a cited page (R4), and `seed check`
+  fails until each is resolved. seed-review checks every kept one against its page. If
+  luna can't be reached, the seed goes on without and the PR says so; a seed is never
+  blocked on it. Seed workers hold no model keys: the dispatcher makes the call, with
+  the `.env`'s `OPENAI_API_KEY`.
 - **After the PR opens** the Run doesn't change. A parked parish answered later goes to a
   small follow-up Run of the same kind (`map → promote → pr` or `seed → seed-review →
   pr`) once the PR is merged.
@@ -83,7 +96,9 @@ seed Run  for each batch: seed × each parish ─▶ seed-review ─▶ pr ─�
    weren't brought back fail it the same way); HEAD didn't move; then the spec's gates.
 5. **Then:**
    - all pass: commit with a `Factory-Job` trailer, push, act on the handoff (leads,
-     lessons, verdicts, flags), and the next job follows;
+     lessons, verdicts, flags), and the next job follows. A seed job first gets its
+     second opinion revealed and compared (above), which may give its session an
+     `opinion` attempt;
    - a gate fails or a reviewer sends it back: the same session gets the problems, up to
      `max_send_backs`; then a seed parks its parish and anything else blocks the Run;
    - a usage limit: the job waits for the reset and resumes its session;
@@ -115,7 +130,8 @@ answer can't fix.
 - **PRs.** A map Run's PR lists coverage, open records, fetch gaps, advisory and settled
   flags, parked parishes, the playbook's sizes and every rule `integrate` changed. A seed
   Run's lists every decision `seed-review` made, answers against the drafter's lean
-  first. Fix what's wrong, then **merge with a merge commit** so main keeps the Run's
+  first, then the second opinion: a table (parishes, differences, changed, asked, kept,
+  cost), each difference the drafter kept against luna, and the seeds that had none. Fix what's wrong, then **merge with a merge commit** so main keeps the Run's
   history. Merged Runs are noticed after the next fetch, and their checkouts and sandbox
   workspaces removed.
 - **Rules stay yours.** The factory never edits `rules.md`; turning a precedent or a
@@ -245,8 +261,9 @@ Every change lands mid-Run, so:
    `data/factory/` (gitignored, on the Linux filesystem). A checkout made earlier as a
    linked worktree: stop the dispatcher, then `pnpm factory clones --apply` turns it and
    its Run worktrees into standalone clones in place.
-2. `uv sync --group dev --group factory`, `pnpm data:pull`, and R2 keys that can write in
-   `.env` for the nightly ledger backup.
+2. `uv sync --group dev --group factory`, `pnpm data:pull`, R2 keys that can write in
+   `.env` for the nightly ledger backup (which leaves out second opinions not yet
+   revealed), and `OPENAI_API_KEY` for the second opinions.
 3. Sign each account in: `CLAUDE_CONFIG_DIR=<dir> claude /login`. List them, your GitHub
    login and any paths in `data/factory/local.yaml` (`factory/local.example.yaml`). `gh`
    must be signed in.
@@ -277,10 +294,12 @@ pnpm factory clones [--apply]            linked worktrees to turn into standalon
 ## Not built yet
 
 - A dashboard; until then, `pnpm factory status`.
+- Feeding the second opinion's readings anywhere else (update mode, the labeler), and
+  dropping a bulletin to stay under the long-context price.
 - Sandbox next steps: make `sandbox` the default once the live checks pass, and refuse
-  `host` for real Runs unless `allow_host_workers: true`; scoped keys for seed stages (a
-  read-only R2 token, model keys with spend caps); gVisor or a microVM if host-kernel
-  exploits become a concern.
+  `host` for real Runs unless `allow_host_workers: true`; a scoped read-only R2 token for
+  seed stages (they hold no model keys); gVisor or a microVM if host-kernel exploits
+  become a concern.
 - Several Runs or workers at once.
 - An agent that tries to settle a blocking flag before it becomes an issue.
 - Recording your corrections to reviewer decisions, and auto-merge once they're rare.

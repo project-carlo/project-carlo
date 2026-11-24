@@ -1305,9 +1305,8 @@ def test_each_stage_gets_only_the_secrets_its_spec_names(env: Env) -> None:
     d = env.dispatcher(seed_script, secrets=secrets)
     drive(d)
     seen = {r.stage: r.secrets for r in env.worker.calls}
-    assert seen["seed"] == {
-        "R2_ACCESS_KEY_ID": "r2", "GEMINI_API_KEY": "g", "OPENAI_API_KEY": "o"}
-    # The reviewer can't run `seed ask` or `seed extract`, so it gets no model keys.
+    # No seed worker holds a model key: the dispatcher makes the second-opinion call.
+    assert seen["seed"] == {"R2_ACCESS_KEY_ID": "r2"}
     assert seen["seed-review"] == {"R2_ACCESS_KEY_ID": "r2"}
     check = next(c for c in env.command_secrets if c.startswith("pnpm seed check"))
     assert env.command_secrets[check] == {"R2_ACCESS_KEY_ID": "r2"}
@@ -1954,7 +1953,7 @@ def test_deny_reaches_the_sdk_and_the_seed_cli(
                             "go", "", {})
     SdkWorker().run(request)  # through the launcher's environment, as a real attempt
     assert set(spec.deny) <= set(seen["disallowed_tools"])
-    assert seen["env"][SEED_REFUSE_ENV] == "approve ask extract"
+    assert seen["env"][SEED_REFUSE_ENV] == "approve"
     assert REFUSE_ENV == SEED_REFUSE_ENV
 
     # However it is spelled, the CLI refuses a denied command before touching anything.

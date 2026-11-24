@@ -42,6 +42,8 @@ def pending(kind: str, prompt: str | None = None) -> str:
     - `resume`: after a crash or a lost result (the dispatcher restarted, git failed, the
       owner retried the job).
     - `answer`: the owner's answer to the job's blocking flag.
+    - `opinion`: a seed's differences from the second opinion, after its gates passed.
+      Not a send-back: it doesn't count against `max_send_backs`.
     """
     return json.dumps({"kind": kind, "prompt": prompt})
 
@@ -92,6 +94,7 @@ CREATE TABLE IF NOT EXISTS attempt (
     job_id INTEGER NOT NULL REFERENCES job(id),
     n INTEGER NOT NULL,
     kind TEXT NOT NULL,             -- start | send_back | continue | resume | answer | fresh
+                                    -- | opinion
     prompt TEXT NOT NULL,
     account TEXT,
     session_id TEXT,
@@ -238,11 +241,41 @@ CREATE TABLE IF NOT EXISTS attempt_meta (  -- how an attempt ran and the tokens 
     gaps TEXT NOT NULL DEFAULT '[]',  -- JSON: what couldn't be recovered
     at TEXT NOT NULL
 );
+CREATE TABLE IF NOT EXISTS seed_opinion (  -- a blind second reading of a parish's bulletins
+    id INTEGER PRIMARY KEY,
+    run_id TEXT NOT NULL REFERENCES run(id),
+    parish TEXT NOT NULL,
+    status TEXT NOT NULL,           -- queued | asking | done | failed | skipped
+    drafter_newest TEXT,            -- the drafter's newest read bulletin it was asked for
+    as_of TEXT,                     -- only bulletins fetched by then (that bulletin's fetch)
+    candidates TEXT,                -- JSON: the bulletins to pick from (null: the database's)
+    bulletins TEXT,                 -- JSON: the ones it read, newest first
+    churches TEXT,                  -- JSON: the parish's churches as the prompt gives them
+    today TEXT,
+    request_key TEXT,               -- model, prompt version, bulletins, churches, today
+    model TEXT,
+    version TEXT,
+    attempts INTEGER NOT NULL DEFAULT 0,
+    reply TEXT,                     -- JSON: the raw reply and its usage; kept out of R2 and
+                                    -- the Run's files until it is revealed
+    reused_from INTEGER,            -- the row whose stored reply to the same request it took
+    cost_usd REAL,
+    error TEXT,
+    job_id INTEGER REFERENCES job(id),  -- the seed job it was revealed to
+    entries_sha256 TEXT,            -- of the entries written into the seed file
+    stats TEXT,                     -- JSON: its differences by resolution, last submission
+    created_at TEXT NOT NULL,
+    asked_at TEXT,
+    answered_at TEXT,
+    revealed_at TEXT
+);
 CREATE TABLE IF NOT EXISTS kv (key TEXT PRIMARY KEY, value TEXT);
 CREATE INDEX IF NOT EXISTS job_run ON job (run_id, status);
 CREATE INDEX IF NOT EXISTS flag_run ON flag (run_id, status);
 CREATE INDEX IF NOT EXISTS step_attempt ON step (attempt_id);
 CREATE INDEX IF NOT EXISTS rate_limit_attempt ON rate_limit_event (attempt_id);
+CREATE INDEX IF NOT EXISTS seed_opinion_parish ON seed_opinion (run_id, parish);
+CREATE INDEX IF NOT EXISTS seed_opinion_key ON seed_opinion (request_key);
 """
 
 # Columns added since a table was first created: an older ledger gains them on open.
@@ -488,6 +521,9 @@ class Ledger:
 
     def clear_actions(self, job_id: int) -> None:
         self.run_sql("DELETE FROM action WHERE job_id = ?", job_id)
+
+    def clear_action(self, job_id: int, name: str) -> None:
+        self.run_sql("DELETE FROM action WHERE job_id = ? AND name = ?", job_id, name)
 
     # ── Flags ───────────────────────────────────────────────────────────────
     def add_flag(self, run_id: str, job_id: int | None, *, severity: str, scope: str,

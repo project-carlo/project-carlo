@@ -44,6 +44,10 @@ Compare: other sources
   site      <parish> [path or address] [--fresh] [--no-browser]
                                         a website page as text
 
+Second opinion: the dispatcher's blind reading, once revealed (no model calls here)
+  opinion show <parish>                            its differences from the slots, and state
+  opinion keep <parish> <diff> --src S... --why R  keep the slot: a bulletin page and a rule
+
 Source seeds: a website_schedule parish, with no bulletin (docs/source-schedules-plan.md)
   capture      <parish> [path or address] [--primary]
                                         store a website or Facebook page; prints its text
@@ -52,14 +56,10 @@ Source seeds: a website_schedule parish, with no bulletin (docs/source-schedules
   current      <parish> "why" [--recheck-after YYYY-MM-DD]
                                         why the schedule looks current
   A source seed cites its captures (`cap 5e60aa31: …`); it has no bulletins, history
-  or paid calls.
+  or second opinion.
 
-Paid calls: cached, recorded in the file's `calls`, CARLO_SEED_CALL_LIMIT per parish (4)
-  ask       <parish> <bulletin> --model M "question"   one question about one bulletin
-  extract   <parish> <bulletin> --model M              a full extraction with POLICY
-
-A bulletin is `latest` or a prefix of its content hash; M is gpt-6.1-sol or
-gemini-3-flash-preview. Output is compact text, or the JSON result with `--json`.
+A bulletin is `latest` or a prefix of its content hash. Output is compact text, or the
+JSON result with `--json`.
 Drafters run `finalize`, which checks; the factory's gates run `check`. `approve` is
 the factory's seed-review agent's (docs/factory.md); the owner changes an answer
 in the labeler. Workflow: docs/factory.md (seed Runs) and
@@ -77,14 +77,13 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.classifiers.seed_ask import MODELS
 from pdf_extract.db import ensure_db
 from pdf_extract.model import WEBSITE_SCHEDULE
 from pdf_extract.schedule.corrections import load_correction_files
 from pdf_extract.schedule.store import parish_churches
 from pdf_extract.seeding import page_images, queries
+from pdf_extract.seeding import second_opinion as opinion
 from pdf_extract.seeding import slots as slot_writes
-from pdf_extract.seeding.calls import call_limit, load_or_start, run_ask, run_extract
 from pdf_extract.seeding.captures import capture_page, capture_text, keep_quoted_screenshots
 from pdf_extract.seeding.checks import check_seed
 from pdf_extract.seeding.coverage import diff, event_parts, missing_warning
@@ -97,11 +96,14 @@ from pdf_extract.seeding.files import (
     SeedSummary,
     asked_questions,
     is_source_seed,
+    new_seed,
+    new_source_seed,
     primary_capture,
     read_seed,
     seed_kind,
     seed_path,
     seed_slugs,
+    validate_seed,
     write_seed_file,
 )
 from pdf_extract.seeding.finalize import finalize_seed
@@ -141,6 +143,21 @@ def _with_conn(fn: Callable[[Any, SeedContext, argparse.Namespace], Result]):
 # ── Handlers ────────────────────────────────────────────────────────────────
 def _no_seed_file(slug: str) -> str:
     return f"no seed file: start one with `pnpm seed start {slug}`"
+
+
+def load_or_start(conn, ctx: SeedContext, parish_slug: str) -> dict[str, Any]:
+    """The parish's seed file, or a new draft listing its bulletins (not yet written).
+
+    A `website_schedule` parish has no bulletins: its new draft is a source seed.
+    """
+    seed = read_seed(parish_slug, ctx.seeds_dir)
+    if seed is not None:
+        return seed
+    if queries.parish_row(conn, parish_slug)["bulletin_provider"] == WEBSITE_SCHEDULE:
+        return new_source_seed(parish_slug)
+    bulletins = [b for b in queries.parish_bulletins(conn, parish_slug)
+                 if b["duplicate_of"] is None]
+    return new_seed(parish_slug, bulletins)
 
 
 def _start(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
@@ -290,16 +307,6 @@ def _history(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     )
 
 
-def _extract(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
-    call = run_extract(conn, ctx, args.parish, args.bulletin, args.model)
-    return {"parish": args.parish, "call": call, "limit": call_limit()}
-
-
-def _ask(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
-    call = run_ask(conn, ctx, args.parish, args.bulletin, args.model, args.question)
-    return {"parish": args.parish, "call": call, "limit": call_limit()}
-
-
 def _finalize(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     warnings: dict[str, list[str]] = {}
     errors: dict[str, str] = {}
@@ -314,6 +321,8 @@ def _finalize(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
             source = is_source_seed(seed)
             past = [] if source else queries.recent_history(conn, slug)
             seed = {**finalize_seed(seed, churches, past), "parish_slug": slug}
+            if seed.get("status") != APPROVED:
+                seed = opinion.refresh(seed)  # the differences as the draft now stands
             write_seed_file(seed, ctx.seeds_dir)
             if source and seed.get("status") != APPROVED:
                 # A reviewer anywhere must see the screenshots its quotes were read from.
@@ -339,6 +348,7 @@ def _check(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     slugs = seed_slugs(ctx.seeds_dir) if getattr(args, "all", False) else args.parish
     if not slugs:
         raise SeedError("Name the parishes to check, or pass --all")
+    shas = opinion.expected_shas()  # set by the dispatcher for its gates
     files = []
     for slug in slugs:
         try:
@@ -353,6 +363,7 @@ def _check(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
         # An approved file is its reviewer's: newer drafting evidence rules don't apply.
         problems = check_seed(conn, seed, parish_slug=slug,
                               check_evidence=seed.get("status") != APPROVED,
+                              opinion_sha=shas.get(slug),
                               seeds_dir=ctx.seeds_dir)
         summary = SeedSummary.of(slug, seed)
         files.append({
@@ -503,6 +514,37 @@ def _slot_show(args: argparse.Namespace) -> Result:
     return {"parish": args.parish, "slots": [by_id[i] for i in args.ids]}
 
 
+def _opinion_view(slug: str, seed: dict[str, Any]) -> Result:
+    if opinion.section(seed) is None:
+        raise SeedError(f"{slug} has no second opinion yet: the dispatcher reveals it once "
+                        "your draft passes its gates, so there is nothing to show before then")
+    seed = opinion.refresh(seed) if seed.get("status") != APPROVED else seed
+    sec = opinion.section(seed)
+    assert sec is not None
+    view = {k: v for k, v in sec.items() if k != "differences"}
+    return {"parish": slug, "opinion": view, "stats": opinion.stats(seed),
+            "differences": sec["differences"]}
+
+
+def _opinion_show(args: argparse.Namespace) -> Result:
+    return _opinion_view(args.parish, _read_for_slots(_ctx(args), args.parish))
+
+
+def _opinion_keep(args: argparse.Namespace) -> Result:
+    ctx = _ctx(args)
+    seed = _read_for_slots(ctx, args.parish)
+    sources = [s for spec in args.src for s in slot_writes.parse_source(seed, spec)]
+    try:
+        seed = opinion.keep(seed, args.diff, sources, args.why)
+    except opinion.OpinionError as exc:
+        raise SeedError(str(exc)) from exc
+    problems = validate_seed(seed, parish_slug=args.parish)
+    if problems:
+        raise SeedError("nothing written:\n  " + "\n  ".join(problems))
+    write_seed_file(seed, ctx.seeds_dir)
+    return _opinion_view(args.parish, seed)
+
+
 # ── Text output ─────────────────────────────────────────────────────────────
 def _when(value: str | None) -> str:
     return (value or "—")[:16].replace("T", " ")
@@ -606,30 +648,29 @@ def _text_history(r: Result) -> str:
     return "\n".join(lines)
 
 
-def _call_head(call: dict[str, Any], limit: int) -> str:
-    cost = "—" if call.get("cost_usd") is None else f"${call['cost_usd']:.4f}"
-    served = "cache (free)" if call["cached"] else f"API, {cost}"
-    return f"{call['id']}: {call['kind']} {call['model']} on {call['bulletin'][:12]} ({served}; " \
-        f"limit {limit} paid calls)"
-
-
-def _text_extract(r: Result) -> str:
-    call = r["call"]
-    lines = [_call_head(call, r["limit"]),
-             f"  issue {call.get('published_date') or '—'}"
-             + ("  WRONG BULLETIN" if call.get("wrong_bulletin") else "")]
-    lines += [_row(ev) for ev in call["events"]]
+def _text_opinion(r: Result) -> str:
+    o = r["opinion"]
+    reads = ", ".join(f"{b['label']} {b['content_hash'][:8]} (issue {b.get('published_date') or '—'})"
+                      for b in o["bulletins"])
+    st = r["stats"]
+    lines = [f"{r['parish']}: second opinion by {o['model']} ({o['call']}), revealed "
+             f"{_when(o['revealed_at'])}, on {reads}",
+             f"{st['agree']} of its {st['entries']} entries agree with a slot; "
+             f"{st['differences']} differences, {st['unresolved']} unresolved"]
+    for item in r["differences"]:
+        resolution = item.get("resolution")
+        lines.append("")
+        lines += opinion.explain(o, item)
+        if resolution is None:
+            lines.append(f"  UNRESOLVED: re-read the page, then change the slot, ask, or "
+                         f"`pnpm seed opinion keep {r['parish']} {item['id']} --src ... --why ...`")
+        elif resolution["how"] == "kept":
+            src = "; ".join(slot_writes.format_source(s) for s in resolution["src"])
+            lines.append(f"  kept: {src}. {resolution['why']}")
+        else:
+            lines.append(f"  {resolution['how']}" + (f": {resolution['reason']}"
+                                                     if resolution.get("reason") else ""))
     return "\n".join(lines)
-
-
-def _text_ask(r: Result) -> str:
-    call = r["call"]
-    return "\n".join([
-        _call_head(call, r["limit"]),
-        f"  Q: {call['question']}",
-        f"  A: {call['answer']}",
-        f"  page {call['page'] or '—'}: “{call['quote']}”",
-    ])
 
 
 def _text_check(r: Result) -> str:
@@ -1121,16 +1162,23 @@ def add_seed_parser(
     p.add_argument("--no-browser", action="store_true",
                    help="Only a plain request: never fall back to the stealth browser")
 
-    # Paid calls
-    p = leaf("ask", "One question about one bulletin (cached, recorded)", _with_conn(_ask),
-             _text_ask)
+    # Second opinion
+    second = sub.add_parser("opinion", help="The dispatcher's second opinion: show it, keep a slot",
+                            description="The dispatcher's blind second reading of the "
+                            "bulletins, once revealed in the seed file",
+                            usage="%(prog)s <command> ...", prog=f"{parser.prog} opinion")
+    second.set_defaults(help_parser=second)
+    second_sub = second.add_subparsers(dest="opinion_command", metavar="<command>")
+    in_opinion = {"under": second_sub, "prog": second.prog}
+    p = leaf("show", "Its differences from the slots, with its quotes, and how each stands",
+             _opinion_show, _text_opinion, **in_opinion)
     parish(p)
-    bulletin(p)
-    p.add_argument("--model", required=True, choices=MODELS)
-    p.add_argument("question", help="The question, naming the page if you know it")
-
-    p = leaf("extract", "A full extraction by an external model (cached, recorded)",
-             _with_conn(_extract), _text_extract)
+    p = leaf("keep", "Keep a slot the opinion reads otherwise: cite the bulletin page that "
+             "supports it and the rule", _opinion_keep, _text_opinion, **in_opinion)
     parish(p)
-    bulletin(p)
-    p.add_argument("--model", required=True, choices=MODELS)
+    p.add_argument("diff", metavar="DIFF", help="The difference's id (d3)")
+    p.add_argument("--src", action="append", required=True, metavar="'HASH pN: SAID'",
+                   help="The bulletin page that supports the slot: `latest p2: ...` or "
+                        "`1ab3e7c2 p2: ...` (repeatable)")
+    p.add_argument("--why", required=True, metavar="'R…: …'",
+                   help="Why the slot stands, citing its rule (R17: ...) or POLICY")
