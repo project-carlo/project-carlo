@@ -325,6 +325,46 @@ These cases are always `needs_human`. They are the standing examples of the defa
 
 **R32. It's unclear which listed church it belongs to.**
 
+## Source seeds
+
+A `website_schedule` parish has no bulletin: its seed is drafted from its own website or
+Facebook page (docs/source-schedules-plan.md). These rules replace what the others say
+about bulletins (R1–R3, R7–R12, R19, R36); the rest (times, recurrence, location, what to
+leave out, asking, blocking) apply to the page's words as they apply to a bulletin's.
+
+**R42. Capture every page you rely on, and quote it.**
+- When: drafting a source seed.
+- Do: `seed capture <parish> [path or address]` each page before citing it, and cite it as
+  `cap <capture>: <its words>`; `seed check` finds each quote in the capture's text. A
+  quote you read from the screenshot (a schedule posted as a picture) is `cap <capture>
+  image: …`: nothing checks it but the reviewer, so quote only what the picture plainly
+  shows. Only the parish's own website and its own Facebook page are sources: not the
+  diocese's directory, MassTimes, Google or another parish's site. Its Facebook page is
+  its own when its website links it: capture the website page that does (usually the
+  homepage). Make the page that holds the schedule primary (`--primary`); the site
+  links it.
+
+**R43. What a page can settle.**
+- When: a capture bears on a slot.
+- Do: a clearly stated regular schedule settles its weekly slots: a Mass times page, a
+  schedule in a site's footer or sidebar, or a pinned or recent Facebook post giving the
+  weekly times. A post about one occasion settles only that dated entry, and only on or
+  after `as_of`. A time mentioned in passing ("after the 10:30 Mass") is not a schedule:
+  ask.
+
+**R44. Judge whether it is current, and say why.**
+- When: every source seed, before it is done.
+- Do: weigh the clues (a dated post, this year's dates, the current pastor, a season
+  heading that fits today, a page updated recently) and record them with `seed current
+  <parish> "…"`. There is no fixed age limit: use judgement. When the clues point to an
+  old schedule (last year's dates, a former pastor, a summer schedule in winter), or the
+  website and Facebook disagree and the newer page doesn't say it replaces the other, ask.
+
+**R45. Expect gaps.**
+- When: a page lists no holy days, special Masses or cancellations.
+- Do: leave them out without asking; a website rarely carries them. Never add a time the
+  page doesn't state (a holy day from the general calendar, a usual Confession time).
+
 ## Blocked parishes
 
 **R34. Blocked.**

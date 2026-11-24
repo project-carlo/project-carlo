@@ -33,6 +33,18 @@ evidence:
   seen: 2026-09-26
   note: 'Diocesan weekend Mass-times pages (fetched 2026-09-26) list ''Church of the Annunciation, Elma'':
     Sun. 8 a.m.; Sun. 11 a.m.; Sun. 5 p.m..'
+- url: https://container.parishesonline.com/bulletins/14/0467/20261115B.pdf
+  seen: 2026-11-16
+  note: 'This page is only an image (no text layer), so the lines are transcribed from the rendered page
+    rather than quoted. Page 2 of the 15 November 2026 WHEAT bulletin, under ''The Church of Annunciation'':
+    ''Sunday, November 15 9:00 am … 11:00 am … 5:00 pm'' and ''Sunday, November 22 9:00 am … 11:00 am
+    … 5:00 pm''.'
+- url: https://www.buffalodiocese.org/sunday-morning-mass-times/
+  seen: 2026-11-16
+  note: 'Diocesan weekend Mass-times pages (re-read 2026-11-16; Saturday page modified 2026-09-02, Sunday
+    morning 2026-10-07, Sunday afternoon 2026-11-16) list ''Church of the Annunciation, Elma'': Sun. 8
+    a.m., Sun. 11 a.m., Sun. 5 p.m. Out of date: the parish bulletin is the source for this church (no
+    schedule change).'
 promoted: 2026-09-26
 ---
 
@@ -43,3 +55,7 @@ The WHEAT Roman Catholic Family of Parishes bulletin (2026-09-20) lists Mass her
 ## Name and address
 
 Name and address come from PR 14's row. On the house number, the modelled address agrees with GCatholic, the diocesan parish finder. Coordinates are from GCatholic's Plus Code, decoded.
+
+## Diocesan Mass-times pages
+
+2026-11-16: the diocese's weekend Mass-times pages list 'Church of the Annunciation, Elma': Sun. 8 a.m., Sun. 11 a.m., Sun. 5 p.m. They differ from the site, but the 15 November 2026 WHEAT bulletin (p. 2, an image) lists Sunday 9:00 a.m., 11:00 a.m. and 5:00 p.m. here, as the site shows. The diocese's 'Sun. 8 a.m.' is wrong.

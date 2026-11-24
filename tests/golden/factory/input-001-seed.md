@@ -4,8 +4,7 @@ You are a worker in the onboarding factory: one fresh session that runs one job 
 Code scheduled you, and no person is watching.
 
 - Diocese: `testd`. This directory holds the Run's files, from branch `factory/testd-seed-1`.
-- Your scratch folder is `scratch/testd-seed-1/001-seed/`; the Run's shared tools
-  folder is `scratch/testd-seed-1/tools/` (read its README.md before writing a script).
+- Your scratch folder is `scratch/testd-seed-1/001-seed/`.
 - You may change only `data/dioceses/testd/**`, `scratch/testd-seed-1/001-seed/**`. Any other change is reverted and the job sent back.
 - You can't commit, push, use `gh` or start agents. When you finish, the dispatcher runs
   its gates (`pnpm --silent diocese check testd`), then commits your work.

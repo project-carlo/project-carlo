@@ -134,9 +134,31 @@ describe("parseSnapshot", () => {
       homepage_url: "https://a",
       bulletin_url: null,
       bulletin_week: null,
+      // A parish with no bulletin: its times are from its Facebook page.
+      schedule_source: "facebook",
+      source_url: "https://www.facebook.com/a",
+      checked_on: "2026-11-16",
     });
-    expect(s.churchDetail("b")?.bulletin_week).toBe("2026-09-20");
+    expect(s.churchDetail("b")).toMatchObject({
+      bulletin_week: "2026-09-20",
+      schedule_source: null,
+      source_url: null,
+      checked_on: null,
+    });
     expect(s.churchDetail("missing")).toBeNull();
+  });
+
+  it("reads a snapshot without a source schedule's columns as bulletin churches", () => {
+    const churches: Partial<typeof fixture.churches> = { ...fixture.churches };
+    delete churches.schedule_source;
+    delete churches.source_url;
+    delete churches.checked_on;
+    const older = parseSnapshot(JSON.stringify({ ...fixture, churches }));
+    expect(older.churchDetail("a")).toMatchObject({
+      schedule_source: null,
+      source_url: null,
+      checked_on: null,
+    });
   });
 
   it("reads a column added since version 1 as null when a snapshot lacks it", () => {

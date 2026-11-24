@@ -71,7 +71,12 @@ from pdf_extract.factory.secrets import Secrets, pick
 from pdf_extract.factory.spec import CODE, StageSpec, fill, in_scope, load_stage, placeholders
 from pdf_extract.factory.workers import CRASH, OK, PARTIAL, SANDBOX, TIMEOUT
 from pdf_extract.seeding import second_opinion
-from pdf_extract.seeding.files import newest_read_bulletin, validate_seed, write_seed_file
+from pdf_extract.seeding.files import (
+    is_source_seed,
+    newest_read_bulletin,
+    validate_seed,
+    write_seed_file,
+)
 
 LOGGER = logging.getLogger(__name__)
 # What a git, gh or command call raises when it fails; a job's tick waits and tries again.
@@ -610,7 +615,8 @@ class Engine:
         if self.opinions is None or not parish or not op.supported(worktree):
             return None
         seed = read_seed(worktree, parish)
-        if seed is None or seed.get("status") == "approved":
+        # A source seed has no bulletins for luna to read (docs/source-schedules-plan.md).
+        if seed is None or seed.get("status") == "approved" or is_source_seed(seed):
             return None
         try:
             return self._opinion_step(run, job, worktree, parish, seed)

@@ -24,6 +24,7 @@ import re
 from datetime import UTC, date, datetime, time
 from hashlib import sha256
 from typing import Any
+from urllib.parse import parse_qs, unquote, urlsplit
 
 from pdf_extract.timeparse import normalize_event_date, time_to_minutes
 
@@ -34,6 +35,15 @@ DAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sun
 WEEKS_OF_MONTH = ("first", "second", "third", "fourth", "fifth", "last")
 # The ordinals a month can have of a weekday; "last" is the fourth or the fifth.
 ORDINAL_WEEKS = WEEKS_OF_MONTH[:5]
+
+# A parish with no bulletin whose schedule comes from its own website or Facebook
+# page instead: a source seed (docs/source-schedules-plan.md). `fetch` and `process`
+# skip it; the seed is only replaced by a later approved one.
+WEBSITE_SCHEDULE = "website_schedule"
+# Where a source schedule is read: the parish's website, or its Facebook page.
+WEBSITE = "website"
+FACEBOOK = "facebook"
+SOURCE_PLATFORMS = (WEBSITE, FACEBOOK)
 
 # February has 29: a season boundary recurs every year, leap years included.
 DAYS_IN_MONTH = (31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
@@ -320,3 +330,60 @@ def gemini_rows(events: list[Any]) -> list[dict[str, Any]]:
         row["problems"] = problems
         out.append(row)
     return out
+
+
+_FACEBOOK_HOSTS = ("facebook.com", "fb.com", "fb.me")
+
+
+def source_platform(url: str) -> str:
+    """`facebook` for a Facebook address, else `website`."""
+    host = (urlsplit(url).hostname or "").lower()
+    return FACEBOOK if any(host == h or host.endswith(f".{h}") for h in _FACEBOOK_HOSTS) \
+        else WEBSITE
+
+
+# A Facebook address's first path segment when it names no page: sharing links, the
+# page plugin (whose `href` names the page) and the like.
+_FACEBOOK_NOT_PAGES = frozenset({
+    "", "sharer", "sharer.php", "share", "share.php", "dialog", "plugins", "tr", "login",
+    "login.php", "home.php", "watch", "events", "hashtag", "help", "policies", "privacy",
+    "legal", "photo", "photo.php", "story.php", "permalink.php", "reel", "reels", "search",
+    "l.php", "media", "stories", "notes", "photos", "videos",
+})
+# A page's id at the end of a path segment: `/p/St-Rita-Parish-100064512345678/`.
+_FACEBOOK_TRAILING_ID = re.compile(r"-(\d+)$")
+
+
+def facebook_page(url: str) -> str | None:
+    """The Facebook page `url` is on, as a canonical address, or None when it names none.
+
+    Every address on one page names it alike: `facebook.com/StRita`, `m.facebook.com/
+    strita/posts/1` and `facebook.com/profile.php?id=1` with its `id`, as do `/p/St-Rita-1`,
+    `/people/St-Rita/1` and `/pages/category/Church/St-Rita-1`. A page plugin's address
+    names the page in its `href`. One under `/p/`, `/people/` or `/pages/` with no id
+    names none that can be told apart from another's.
+    """
+    if source_platform(url) != FACEBOOK:
+        return None
+    parts = urlsplit(url)
+    query = parse_qs(parts.query)
+    segments = [unquote(s) for s in parts.path.split("/") if s]
+    head = segments[0].lower() if segments else ""
+    if head == "plugins" and query.get("href"):
+        return facebook_page(query["href"][0])
+    if head == "profile.php" and query.get("id"):
+        return f"https://www.facebook.com/profile.php?id={query['id'][0]}"
+    if head == "pg" and len(segments) >= 2:
+        return f"https://www.facebook.com/{segments[1].lower()}"
+    if head in ("pages", "people", "p"):
+        # By the page's id: a segment of its own (/pages/Name/123, /people/Name/123), or
+        # the end of its name (/p/Name-123, /pages/category/Kind/Name-123).
+        rest = segments[1:4]
+        page_id = next((s for s in rest if s.isdigit()), None) or next(
+            (m.group(1) for s in rest if (m := _FACEBOOK_TRAILING_ID.search(s))), None)
+        return None if page_id is None else f"https://www.facebook.com/profile.php?id={page_id}"
+    if head == "groups" and len(segments) >= 2:
+        return f"https://www.facebook.com/groups/{segments[1].lower()}"
+    if head in _FACEBOOK_NOT_PAGES:
+        return None
+    return f"https://www.facebook.com/{head}"

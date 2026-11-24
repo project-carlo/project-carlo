@@ -20,6 +20,21 @@ export function pdfUrl(parish: string, hash: string): string {
   return `/api/bulletins/${parish}/${hash}/pdf`;
 }
 
+/**
+ * A source seed's capture: its stored text, or its screenshot. The screenshot's
+ * address names its hash too: capturing the page again replaces the screenshot
+ * under the same text, and the browser must not show the old one from its cache.
+ */
+export function captureUrl(
+  parish: string,
+  hash: string,
+  part: "text" | "image",
+  screenshotHash?: string | null,
+): string {
+  const url = `/api/seeds/${parish}/captures/${hash}/${part}`;
+  return screenshotHash ? `${url}?screenshot=${screenshotHash}` : url;
+}
+
 export const api = {
   config: () => request<Config>("/api/config"),
   bulletins: () => request<{ bulletins: BulletinSummary[]; progress: Progress }>("/api/bulletins"),

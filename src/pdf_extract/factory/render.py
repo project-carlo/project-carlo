@@ -23,7 +23,7 @@ from typing import Any
 from pdf_extract.factory import playbook
 from pdf_extract.factory.config import FactoryError
 from pdf_extract.factory.handoff import PARKING_STAGES
-from pdf_extract.factory.ledger import LISTED, Ledger
+from pdf_extract.factory.ledger import LISTED, MAP, Ledger
 from pdf_extract.factory.plan import describe_entry, diocese_dir, ordered_batches
 from pdf_extract.factory.spec import StageSpec, fill
 from pdf_extract.factory.workers import strip_frontmatter
@@ -71,8 +71,7 @@ You are a worker in the onboarding factory: one fresh session that runs one job 
 Code scheduled you, and no person is watching.
 
 - Diocese: `{run['diocese']}`. This directory holds the Run's files, from branch `{run['branch']}`.
-- Your scratch folder is `{scratch_rel(run['id'], job['name'])}`; the Run's shared tools
-  folder is `scratch/{run['id']}/tools/` (read its README.md before writing a script).
+- Your scratch folder is `{scratch_rel(run['id'], job['name'])}`{_tools_line(run)}
 - You may change only {writes}. Any other change is reverted and the job sent back.
 - You can't commit, push, use `gh` or start agents. When you finish, the dispatcher runs
   its gates ({gates}), then commits your work.
@@ -97,6 +96,14 @@ Before you end, write `{handoff_rel(run['id'], job['name'])}`, about 300 tokens:
   or `roster:id` it touches.
 - `lessons`: only what is reusable beyond one parish, one line each.
 """
+
+
+def _tools_line(run: Any) -> str:
+    """A map Run's shared tools folder, which its survey starts. A seed Run has none."""
+    if run["kind"] != MAP:
+        return "."
+    return (f"; the Run's shared tools\n  folder is `scratch/{run['id']}/tools/` "
+            "(read its README.md before writing a script).")
 
 
 def _reads_list(run_id: str, job_name: str, spec: StageSpec) -> str:

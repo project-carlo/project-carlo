@@ -5,7 +5,7 @@
  */
 import type { ChurchBase, ChurchDetail } from "@carlo/core";
 import { cityPath, type City, type CityLink } from "./cities";
-import { CHURCH_LIST, SOURCE_PHRASE, UNNAMED_CHURCH } from "../copy";
+import { CHURCH_LIST, SOURCE_NAMES, SOURCE_PHRASE, UNNAMED_CHURCH } from "../copy";
 
 export const SITE_NAME = "Project Carlo";
 export const SITE_LOCALE = "en_US";
@@ -68,7 +68,10 @@ export function buildChurchDescription(church: ChurchDetail): string {
   const name = church.name?.trim() || "this church";
   const loc = churchLocation(church);
   const where = loc ? ` in ${loc}` : "";
-  return `Mass, Confession, and Adoration times for ${name}${where}, from the parish’s weekly bulletin.`;
+  const from = church.schedule_source
+    ? SOURCE_NAMES[church.schedule_source]
+    : "the parish’s weekly bulletin";
+  return `Mass, Confession, and Adoration times for ${name}${where}, from ${from}.`;
 }
 
 /** Canonical path of the prerendered all-churches index page. */

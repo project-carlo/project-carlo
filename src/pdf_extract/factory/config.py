@@ -59,7 +59,7 @@ JOB_USAGE = {
     "map": JobUsage(25, 1),
     "integrate": JobUsage(5, 1),
     "reconcile": JobUsage(25, 2),
-    "seed": JobUsage(10, 1),
+    "seed": JobUsage(6, 1),
     "seed-review": JobUsage(15, 1),
 }
 

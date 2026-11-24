@@ -196,8 +196,10 @@ or approve the held run by hand.
 
 ## Out of scope
 
-- Using websites as the primary seed source (rules.md says how far a website
-  counts).
+- Using websites as the primary seed source of a parish with a bulletin (rules.md
+  says how far a website counts). A parish with no bulletin gets a source seed from
+  its own website or Facebook page instead
+  ([source-schedules-plan.md](source-schedules-plan.md)).
   Phone calls and the diocesan directory remain out of scope.
 - Using approved seeds as labels. Their weekly slots are close to a label for
   the newest bulletin, so this could come later.
@@ -230,7 +232,15 @@ code departs from it. The code is `src/pdf_extract/seeding/`, the second opinion
   whose PDF is another row's (stored before fetch compared downloads by their
   bytes) is listed as a duplicate, and the other commands skip it.
 - **`seed pdf` and `seed pages`** write to `data/seed-work/<parish>/`
-  (gitignored): the PDF the pipeline reads, and PNGs at `--dpi` (150).
+  (gitignored): the PDF the pipeline reads, and PNGs. A page is 100 dpi by
+  default, `--region` zooms into part of one (1600 px, up to 300 dpi), and
+  `--sheet` tiles pages into labelled sheets for finding the ones to read.
+  `--images` packs the images on text pages that have no text layer
+  (`seeding/textless.py`), whose print `seed text` can't read, into one
+  labelled image, each tile listed with its page and region. Every PNG fits
+  what Claude Code's Read passes on unshrunk (2000 px on the long edge, 4,784
+  visual tokens), a higher `--dpi` is lowered to fit, and each reports its
+  token cost (`seeding/page_images.py`).
 - **Calls.** Both ask the bulletin as of its fetch date, as the evals do, so a
   replay is served from the cache. `extract` runs the eval classifiers
   (`gpt-6-luna --model gpt-6.1-sol`, `gemini-flash-qualified`) and shares their

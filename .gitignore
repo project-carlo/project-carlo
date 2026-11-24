@@ -72,8 +72,11 @@ scratch-detail-*.log
 data/out/
 data/pipeline/
 # PDFs and page images `pnpm seed pdf|pages` write for the seeding agent to read.
-# Seed files (data/seeds/) are committed.
+# Seed files (data/seeds/) are committed, with each source seed capture's text and the
+# screenshots its quotes were read from. The blob store's local copy of every capture
+# screenshot (data/captures/) is not: it reaches R2 from a machine that writes there.
 data/seed-work/
+data/captures/
 scratch/
 # `pnpm label --demo` builds its generated dataset here. Real labels
 # (data/labels/) are committed.

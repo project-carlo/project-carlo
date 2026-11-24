@@ -510,8 +510,11 @@ def test_pdf_and_pages_are_written_for_the_agent(conn, tmp_path: Path):
     assert pdf["pages"] == 3
     pages = render_pages(conn, PARISH, "latest", page=2, dpi=50, work_dir=tmp_path)
     assert len(pages["paths"]) == 1 and Path(pages["paths"][0]).read_bytes()[:4] == b"\x89PNG"
+    assert pages["images"][0]["tokens"] == pages["tokens"] > 0
     with pytest.raises(SeedError, match="pages 1 to 3"):
         render_pages(conn, PARISH, "latest", page=9, work_dir=tmp_path)
+    with pytest.raises(SeedError, match="--region"):
+        render_pages(conn, PARISH, "latest", page=1, region="middle", work_dir=tmp_path)
 
 
 def test_text_reads_each_page_and_marks_the_ones_that_are_only_images(conn):
@@ -826,6 +829,19 @@ def test_a_seed_that_fails_its_checks_is_skipped(conn, demo, seed):
     result = load_approved_seeds(conn, demo["seeds_dir"])
     assert result["loaded"] == [] and "unknown_church" in result["skipped"][0]["reason"]
     assert render_seeds(result)[-1].startswith(f"- **{PARISH}** seed file not loaded")
+
+
+def test_a_loaded_seed_whose_church_retires_later_is_not_reported(conn, demo, seed):
+    approved = _approved(seed)
+    write_seed_file(approved, demo["seeds_dir"])
+    assert [r["parish"] for r in load_approved_seeds(conn, demo["seeds_dir"])["loaded"]] == [PARISH]
+    church = _slot(approved, "s1")["entry"]["church_slug"]
+    with conn:
+        conn.execute("UPDATE church SET retired_at = '2026-11-20T00:00:00Z' WHERE slug = ?",
+                     (church,))
+    assert check_seed(conn, approved, parish_slug=PARISH, check_bulletins=False,
+                      check_evidence=False)  # it would now fail its checks
+    assert load_approved_seeds(conn, demo["seeds_dir"]) == {"loaded": [], "skipped": []}
 
 
 def test_ensure_db_leaves_approved_seeds_to_load_seeds(pipeline_dir: Path):
