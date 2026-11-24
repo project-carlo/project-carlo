@@ -896,6 +896,9 @@ class _FetchJob:
     predicted: _Prediction | None = None
     """Where the bulletin would be, to try before resolving the link in the
     browser (see `_predict_parishes_online_link`)."""
+    missed: bool = False
+    """Whether the job is back in line for the browser, its predicted address
+    having missed."""
 
 
 # How a ParishesOnline parish's bulletin was found, for the run summary: at
@@ -904,6 +907,9 @@ class _FetchJob:
 DIRECT_HIT = "direct_hit"
 DIRECT_MISS = "direct_miss"
 NOT_PREDICTED = "not_predicted"
+# Not a recorded status: the job goes back in line on its own site, for the
+# browser, rather than its worker waiting for that site.
+_PREDICTION_MISSED = "prediction_missed"
 
 
 @dataclass(frozen=True)
@@ -931,8 +937,8 @@ class _SiteLanes:
     A worker holds one site at a time: its parish's site while its tab
     resolves the bulletin link (`take`), then the PDF's site while it
     downloads (`switch`), until it lets go (`release`) before compacting. A
-    parish with a predicted address starts on its site instead, and
-    switches to its own only if the prediction misses.
+    parish with a predicted address starts on that address's site instead,
+    and goes back in line on its own site if the prediction misses (`done`).
     Holding only one, a worker never waits for a site while another waits
     for one it holds, so the lanes cannot deadlock. A page's requests to
     other sites (a flipbook, a redirect) are not waited for; there are only
@@ -1246,7 +1252,15 @@ def _fetch_in_parallel(
                     fetched = _fetch_one(
                         job, lanes=lanes, tab=tab, store=store, sunday=sunday, today=today,
                     )
-                    if tab.broken and fetched.status == FETCH_RESOLVE_FAILED and not job.retried:
+                    if fetched.status == _PREDICTION_MISSED:
+                        # Whichever worker next finds the directory free reads
+                        # the page; this one takes another parish meanwhile, so
+                        # misses do not pile up workers waiting for it.
+                        again = (
+                            _site_for_source(job.source),
+                            replace(job, predicted=None, missed=True),
+                        )
+                    elif tab.broken and fetched.status == FETCH_RESOLVE_FAILED and not job.retried:
                         # The browser broke under this parish: it is tried
                         # again, by whichever worker has a browser first.
                         LOGGER.warning(
@@ -1310,11 +1324,13 @@ def _fetch_one(
 
     Holds the parish's site (taken from `lanes`) while resolving, then the
     PDF's site while downloading, and neither while compacting. A parish with
-    a predicted address holds its site while trying it, and is resolved as
-    any other only when that misses.
+    a predicted address holds its site while trying it, and comes back
+    `_PREDICTION_MISSED` when that misses, to be resolved as any other.
     """
     slug = job.parish["slug"]
-    route = NOT_PREDICTED if job.source.provider == PARISHES_ONLINE_TYPE else None
+    route = None
+    if job.source.provider == PARISHES_ONLINE_TYPE:
+        route = DIRECT_MISS if job.missed else NOT_PREDICTED
 
     def result(status: str, **fields: Any) -> _Fetched:
         return _Fetched(job, status, route=route, **fields)
@@ -1326,17 +1342,15 @@ def _fetch_one(
             route = DIRECT_HIT
             link, known, download = found
             LOGGER.info("Parish %s: bulletin at its predicted address %s", slug, link.fetch_url)
+        elif job.predicted:
+            LOGGER.info("Parish %s: prediction missed; resolving in the browser", slug)
+            return result(_PREDICTION_MISSED)
         else:
-            if job.predicted:
-                route = DIRECT_MISS
-                LOGGER.info("Parish %s: prediction missed; resolving in the browser", slug)
-            elif route == NOT_PREDICTED:
+            if route == NOT_PREDICTED:
                 LOGGER.info(
                     "Parish %s: no stored ParishesOnline address to predict from;"
                     " resolving in the browser", slug,
                 )
-            # A no-op unless the parish started on its predicted address's site.
-            lanes.switch(_site_for_source(job.source))
             try:
                 link = _build_bulletin_link(
                     job.source.provider, job.source.provider_id, page=tab.page,
@@ -1465,16 +1479,33 @@ def _download_predicted(job: _FetchJob) -> tuple[BulletinLink, Duplicate | None,
     return link, known, download
 
 
+# S3 answers a missing key with an XML error naming one of these codes:
+# AccessDenied when the bucket does not let us list it (ParishesOnline's,
+# checked 2026-11-24), NoSuchKey when it does.
+_S3_ERROR_CODE = re.compile(rb"<Code>(?:AccessDenied|NoSuchKey)</Code>")
+_S3_ERROR_BYTES = 4096
+
+
 def _missing_from_file_host(url: str, *, referer: str) -> bool:
     """Whether ParishesOnline's file host says it has no file at `url`.
 
-    Asks for the first byte only. Anything but a 403 or 404 (the file, an
-    error, no answer) is not taken to mean the file is missing.
+    Asks for the first byte only. Only S3's own answer for a missing key
+    counts: a 403 from CloudFront in front of it (a bot check, say) could be
+    hiding a file that is there. Anything else (the file, an error, no
+    answer) is not taken to mean the file is missing.
     """
     try:
         _http_get(url, referer=referer, extra_headers={"Range": "bytes=0-0"})
     except HTTPError as exc:
-        return exc.code in (HTTPStatus.FORBIDDEN, HTTPStatus.NOT_FOUND)
+        if exc.code not in (HTTPStatus.FORBIDDEN, HTTPStatus.NOT_FOUND):
+            return False
+        if (exc.headers or {}).get("Server") != "AmazonS3":
+            return False
+        try:
+            body = exc.read(_S3_ERROR_BYTES)
+        except (OSError, HTTPException):
+            return False
+        return _S3_ERROR_CODE.search(body or b"") is not None
     except (OSError, HTTPException):
         return False
     return False
