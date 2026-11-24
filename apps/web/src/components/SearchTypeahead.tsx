@@ -13,7 +13,7 @@ import { useQuery } from "@tanstack/react-query";
 import type { ChurchSearchResult } from "../api";
 import {
   approximateLocationQuery,
-  churchSearchIndexQuery,
+  churchSearchIndexQueryFor,
 } from "../lib/homeStartQueries";
 import { formatAddress } from "@carlo/core";
 import type { LatLng } from "../lib/cities";
@@ -79,6 +79,9 @@ interface SearchTypeaheadProps {
    * cover, results rank around their IP location.
    */
   getSearchCenter?: () => LatLng | null;
+  /** Only this diocese's churches and their cities are suggested (the embed's
+   *  `diocese=`); every church when unset. */
+  diocese?: string | null;
 }
 
 export function SearchTypeahead({
@@ -88,6 +91,7 @@ export function SearchTypeahead({
   size = "md",
   placeholder = "Search for a city, ZIP, address, or church…",
   getSearchCenter,
+  diocese = null,
 }: SearchTypeaheadProps) {
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
@@ -101,7 +105,7 @@ export function SearchTypeahead({
   }, [query]);
 
   const { data: allChurches = [], isLoading: churchesLoading } = useQuery(
-    churchSearchIndexQuery,
+    churchSearchIndexQueryFor(diocese),
   );
   const localIndex = useMemo(
     () => buildLocalSearchIndex(allChurches),

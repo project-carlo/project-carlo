@@ -176,6 +176,42 @@ interface ChurchMapProps {
   /** Church pins open a small card with only the church's name, for a map
    *  too small to hold the full one (the city and church pages' previews). */
   compactPopups?: boolean;
+  /** Framed on another site's page (the embed): the map leaves the page's
+   *  scrolling alone; see FramedGestures. */
+  framed?: boolean;
+}
+
+/**
+ * The gestures of a map framed on another site's page, which mustn't take
+ * the page's scrolling: the wheel zooms only once the map has been clicked,
+ * until the pointer leaves it, and on a touch screen one finger scrolls the
+ * page while two move and zoom the map (Leaflet's pinch pans too).
+ */
+function FramedGestures() {
+  const map = useMap();
+  useEffect(() => {
+    const container = map.getContainer();
+    const wheelOn = () => map.scrollWheelZoom.enable();
+    const wheelOff = () => map.scrollWheelZoom.disable();
+    wheelOff();
+    container.addEventListener("pointerdown", wheelOn);
+    container.addEventListener("mouseleave", wheelOff);
+    const touchOnly = window.matchMedia("(hover: none) and (pointer: coarse)");
+    // Without Leaflet's dragging the container takes `touch-action: pan-x
+    // pan-y`, so the browser scrolls the page for one finger.
+    const syncDragging = () => {
+      if (touchOnly.matches) map.dragging.disable();
+      else map.dragging.enable();
+    };
+    syncDragging();
+    touchOnly.addEventListener("change", syncDragging);
+    return () => {
+      container.removeEventListener("pointerdown", wheelOn);
+      container.removeEventListener("mouseleave", wheelOff);
+      touchOnly.removeEventListener("change", syncDragging);
+    };
+  }, [map]);
+  return null;
 }
 
 /**
@@ -975,6 +1011,7 @@ export const ChurchMap = memo(function ChurchMap({
   mapRef,
   currentChurchId,
   compactPopups = false,
+  framed = false,
 }: ChurchMapProps) {
   const withCoords = useMemo(() => churches.filter(hasCoords), [churches]);
   const clusterIndex = useMemo(
@@ -1022,6 +1059,7 @@ export const ChurchMap = memo(function ChurchMap({
       whenReady={handleReady}
     >
       {onViewChange && <ViewReporter onViewChange={onViewChange} />}
+      {framed && <FramedGestures />}
       <PopupPaneElevator />
       <TileLayer
         attribution={OSM_ATTRIBUTION}

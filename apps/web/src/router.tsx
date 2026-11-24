@@ -11,6 +11,7 @@ import { RouteError } from "./views/RouteError";
 import { MapLoadingIndicator } from "./components/MapLoadingIndicator";
 import { isAboutPageEnabled } from "./lib/featureFlags";
 import { ANALYTICS_DASHBOARD_PATH } from "./lib/analyticsReports";
+import { EMBED_PATH } from "./lib/embed";
 
 const lazyPageFallback = (
   <main className="flex min-h-svh items-center justify-center bg-paper px-4">
@@ -28,6 +29,12 @@ function routes(queryClient: QueryClient): RouteObject[] {
     {
       path: "/landing",
       element: <LandingPage />,
+    },
+    {
+      // The map for other sites to frame (docs/embed.md).
+      path: EMBED_PATH,
+      lazy: () =>
+        import("./views/EmbedPage").then((m) => ({ Component: m.EmbedPage })),
     },
     {
       path: "/map",
@@ -104,7 +111,8 @@ export function createAppRouter(queryClient: QueryClient) {
       // "Loading map…" never shows: the fallback shows it instead, as does
       // index.html before any script runs. Other pages get just the paper.
       hydrateFallbackElement:
-        window.location.pathname === "/" ? (
+        window.location.pathname === "/" ||
+        window.location.pathname === EMBED_PATH ? (
           <main className="fixed inset-x-0 top-0 h-dvh bg-paper">
             <MapLoadingIndicator systemFont />
           </main>

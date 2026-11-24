@@ -1,3 +1,7 @@
+# No X-Frame-Options or CSP frame-ancestors, here or in worker/index.ts:
+# dioceses frame /embed on their own sites (docs/embed.md). Allowlist their
+# domains before ever adding one.
+
 /frontend.json.gz
   Content-Type: application/octet-stream
   Cache-Control: public, no-cache, must-revalidate

@@ -34,7 +34,13 @@ latest seed's `as_of` in the parishes' Eastern time zone) say where its times
 were read and when, and it has no `bulletin_url` or `bulletin_week`, whatever
 it once published; the three are null for every other church, which the app
 reads as a bulletin's times.
-`schedule_source` and `checked_on` are coded. Churches retired from
+`schedule_source` and `checked_on` are coded. A church's `diocese` is its
+parish's in data/parishes.csv (the folder under data/dioceses/ the parish's
+record is in), or for a parish no longer in the CSV the folder its record is
+still in, or else null. It is read from the files, not the database: a
+deploy can build from the published database before the CSVs are seeded into
+it (`datasync.build_deploy_snapshot`), and the website's embed filters on it,
+so it must not wait for a weekly run. Churches retired from
 churches.csv are left out, and so are the churches of parishes without an
 approved seed: their bulletins are fetched, but they aren't on the site yet.
 
@@ -71,6 +77,7 @@ as having nulls there, rather than refuse it.
 
 from __future__ import annotations
 
+import csv
 import gzip
 import json
 import logging
@@ -82,6 +89,7 @@ from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
 
+from pdf_extract import storage
 from pdf_extract.bulletin_week import parse_iso_date, week_order_sql
 from pdf_extract.model import DAYS, WEBSITE_SCHEDULE
 from pdf_extract.schedule.qualifiers import (
@@ -110,7 +118,7 @@ READABLE_VERSIONS = (1, 2, 3)
 CHURCH_COLUMNS = (
     "id", "parish_id", "slug", "name", "address_line1", "address_line2", "city", "state",
     "postal_code", "latitude", "longitude", "homepage_url", "bulletin_url", "bulletin_week",
-    "schedule_source", "source_url", "checked_on",
+    "schedule_source", "source_url", "checked_on", "diocese",
 )
 EVENT_COLUMNS = (
     "id", "church_id", "event_type", "event_kind", "day_of_week", "date", "start_time",
@@ -128,13 +136,13 @@ _V2_DEFAULTS = frozenset({
 # Columns added since version 1 shipped. A snapshot written before one was
 # added lacks it; readers take it as all nulls.
 ADDED_COLUMNS = {
-    "churches": {"bulletin_week", "schedule_source", "source_url", "checked_on"},
+    "churches": {"bulletin_week", "schedule_source", "source_url", "checked_on", "diocese"},
     "events": {"exclude_weeks", "valid_from", "valid_until"},
 }
 # Strings that repeat across rows: a table of distinct values plus small
 # integers is smaller and faster for the browser to parse than the strings.
 _CODED_COLUMNS = {
-    "churches": {"city", "state", "bulletin_week", "schedule_source", "checked_on"},
+    "churches": {"city", "state", "bulletin_week", "schedule_source", "checked_on", "diocese"},
     "events": {"event_type", "event_kind", "day_of_week", "date", "note"},
 }
 # Event ids mostly go up by one, so their differences compress far better.
@@ -363,18 +371,49 @@ def finish_events(rows: list[tuple], build_date: date) -> list[tuple]:
     return sorted(out, key=lambda r: r[_ID])
 
 
+def parish_dioceses(parishes_csv: Path, dioceses_dir: Path) -> dict[str, str]:
+    """Each parish slug's diocese: its row's in `parishes_csv`, or else the
+    folder under `dioceses_dir` its record is in, as a parish taken off the
+    CSV (excluded, or set to `no_bulletin`) keeps its record there. A deploy
+    can still serve such a parish's churches from the published database
+    while the removal waits for a reviewed weekly run, so it needs a diocese
+    too. A parish with neither is left out.
+
+    A missing `parishes_csv` is an error, not an empty map: the snapshot
+    would ship with no church in any diocese.
+    """
+    if not parishes_csv.exists():
+        raise FileNotFoundError(
+            f"{parishes_csv} not found; run from the repository root or pass parishes_csv"
+        )
+    dioceses = {
+        path.stem: path.parent.parent.name
+        for kind in ("excluded", "parishes")
+        for path in sorted(dioceses_dir.glob(f"*/{kind}/*.md"))
+    }
+    with open(parishes_csv, encoding="utf-8", newline="") as f:
+        for row in csv.DictReader(f):
+            if diocese := (row.get("diocese") or "").strip():
+                dioceses[row["slug"].strip()] = diocese
+    return dioceses
+
+
 def extract(
     source: Path = SOURCE_DB,
     dest: Path = DEST_SNAPSHOT,
     *,
     keep_previous: bool = True,
     build_date: date | None = None,
+    parishes_csv: Path | None = None,
+    dioceses_dir: Path | None = None,
 ) -> dict[str, object]:
     """Write the frontend snapshot of `source` to `dest`.
 
     With `keep_previous`, an existing snapshot at `dest` is first moved to
     `<dest>.previous` for `verify-frontend-snapshot` to compare against.
     `build_date` (default today) is the day before which dated rows are left out.
+    Each church's `diocese` comes from `parishes_csv` (default data/parishes.csv),
+    or else from the parish's record in `dioceses_dir` (default data/dioceses/).
     """
     if not source.exists():
         raise FileNotFoundError(f"Source database not found: {source}")
@@ -392,7 +431,8 @@ def extract(
                    -- once published.
                    CASE WHEN sourced.parish_id IS NULL THEN latest.source_url END,
                    CASE WHEN sourced.parish_id IS NULL THEN latest.week END,
-                   sourced.schedule_source, sourced.schedule_source_url, sourced.as_of
+                   sourced.schedule_source, sourced.schedule_source_url, sourced.as_of,
+                   p.slug
             FROM church c
             LEFT JOIN parish p ON c.parish_id = p.id
             LEFT JOIN latest ON latest.parish_id = c.parish_id AND latest.rn = 1
@@ -407,9 +447,18 @@ def extract(
                 "SELECT DISTINCT parish_id FROM schedule_revision WHERE source_kind = 'seed'"
             ).fetchall()
         }
+        dioceses = parish_dioceses(
+            storage.PARISHES_CSV_PATH if parishes_csv is None else parishes_csv,
+            storage.DIOCESES_DIR if dioceses_dir is None else dioceses_dir,
+        )
         # Only parishes with an approved seed are on the site.
-        churches = [(*row[:-1], checked_on(row[-1])) for row in churches if row[1] in seeded]
+        churches = [
+            (*row[:-2], checked_on(row[-2]), dioceses.get(row[-1]))
+            for row in churches if row[1] in seeded
+        ]
         shown = {row[0] for row in churches}
+        if without := sum(row[-1] is None for row in churches):
+            LOGGER.warning("%d churches have no diocese; the embed leaves them out", without)
         events = [
             row for row in finish_events(_schedule_events(src), build_date or date.today())
             if row[_CHURCH] in shown

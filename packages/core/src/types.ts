@@ -55,6 +55,11 @@ export interface ChurchBase {
   postal_code: string | null;
   latitude: number | null;
   longitude: number | null;
+  /**
+   * The diocese the church's parish is recorded under (its folder in
+   * data/dioceses/, e.g. "syracuse"); null or absent when the data names none.
+   */
+  diocese?: string | null;
 }
 
 export interface ChurchMapItem extends ChurchBase {
