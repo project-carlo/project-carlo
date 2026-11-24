@@ -1,13 +1,13 @@
 {
   "parish": "peace-of-christ",
   "actor": "lyonsl2 (via Claude)",
-  "note": "Perpetual Adoration Chapel, 123 Whittington Road (#111): the parish's Adoration chapel at an address of its own, now the church row perpetual-adoration-chapel-rochester (kind adoration_chapel), open 24 hours with entry by code, plus the two Holy Hours the bulletin prints there. The parish page peaceofchristparish.org/perpetual-adoration (read 26 October, re-read 24 November 2026) says adorers sign up for weekly hours so that adoration is \"24/7\", and \"The Chapel will remained locked 24/7. Call the parish office for the numerical code to enter the Chapel.\" The 29 November 2026 bulletin (the newest; the 15 and 22 November issues say the same), p. 1: \"Perpetual Adoration, 123 Whittington Road / Call the Parish Office to Sign Up for a Time\"; p. 3, under PERPETUAL ADORATION CHAPEL, WEEKLY EVENTS: \"Tuesdays, 10:00 AM- Family Friendly Holy Hour (Kids Encouraged!)\" and \"First Tuesdays, 7:00 PM- ... Holy Hour for Vocations\", with no end times, and \"ACCESS THE CHAPEL Call the parish office\". The seed excluded these Holy Hours (s16-s19) only because the chapel was not a church row.",
+  "note": "Perpetual Adoration Chapel, 123 Whittington Road (#111): the parish's Adoration chapel at an address of its own, now the church row peace-of-christ-adoration-chapel-rochester (kind adoration_chapel), open 24 hours with entry by code, plus the two Holy Hours the bulletin prints there. The parish page peaceofchristparish.org/perpetual-adoration (read 26 October, re-read 24 November 2026) says adorers sign up for weekly hours so that adoration is \"24/7\", and \"The Chapel will remained locked 24/7. Call the parish office for the numerical code to enter the Chapel.\" The 29 November 2026 bulletin (the newest; the 15 and 22 November issues say the same), p. 1: \"Perpetual Adoration, 123 Whittington Road / Call the Parish Office to Sign Up for a Time\"; p. 3, under PERPETUAL ADORATION CHAPEL, WEEKLY EVENTS: \"Tuesdays, 10:00 AM- Family Friendly Holy Hour (Kids Encouraged!)\" and \"First Tuesdays, 7:00 PM- ... Holy Hour for Vocations\", with no end times, and \"ACCESS THE CHAPEL Call the parish office\". The seed excluded these Holy Hours (s16-s19) only because the chapel was not a church row.",
   "as_of": "2026-11-08T21:11:51Z",
   "operations": [
     {
       "op": "add",
       "after": {
-        "church_slug": "perpetual-adoration-chapel-rochester",
+        "church_slug": "peace-of-christ-adoration-chapel-rochester",
         "event_type": "adoration",
         "event_kind": "continuous",
         "open_from": null,
@@ -19,7 +19,7 @@
     {
       "op": "add",
       "after": {
-        "church_slug": "perpetual-adoration-chapel-rochester",
+        "church_slug": "peace-of-christ-adoration-chapel-rochester",
         "event_type": "adoration",
         "event_kind": "weekly",
         "day_of_week": "Tuesday",
@@ -30,7 +30,7 @@
     {
       "op": "add",
       "after": {
-        "church_slug": "perpetual-adoration-chapel-rochester",
+        "church_slug": "peace-of-christ-adoration-chapel-rochester",
         "event_type": "adoration",
         "event_kind": "weekly",
         "day_of_week": "Tuesday",

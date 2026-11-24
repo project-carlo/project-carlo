@@ -199,6 +199,7 @@ Newest first: date, what was done, and the `pnpm diocese coverage` numbers after
   nursing-home Mass; explained in the parish records. Nothing to promote. Coverage: directory
   168/168; GCatholic 165/165; parish-directory 134/134.
 - 2026-11-24: Peace of Christ's Perpetual Adoration Chapel (123 Whittington Rd.) is a church
-  row again, `perpetual-adoration-chapel-rochester` with `kind: adoration_chapel`, replacing
-  its `no-public-mass` exclusion: a parish's Adoration chapel at its own address is now a row.
-  Its 24-hour Adoration and Tuesday Holy Hours come from a correction file. Promoted.
+  row again, `peace-of-christ-adoration-chapel-rochester` ("Peace of Christ Perpetual
+  Adoration Chapel") with `kind: adoration_chapel`, replacing its `no-public-mass` exclusion
+  `perpetual-adoration-chapel-rochester`: a parish's Adoration chapel at its own address is now
+  a row. Its 24-hour Adoration and Tuesday Holy Hours come from a correction file. Promoted.

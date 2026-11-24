@@ -1,6 +1,6 @@
 ---
 parish: peace-of-christ
-name: Perpetual Adoration Chapel
+name: Peace of Christ Perpetual Adoration Chapel
 line1: 123 Whittington Road
 line2: ''
 city: Rochester
@@ -46,8 +46,8 @@ kind: adoration_chapel
 
 No: an Adoration chapel (`kind: adoration_chapel`), not a place of Mass. Peace of Christ's Perpetual Adoration Chapel is in the former St. James Convent at 123 Whittington Road. The parish page (re-read 2026-11-24) calls it perpetual adoration by weekly sign-up, with the chapel "locked 24/7" and its door code given out by the parish office, and mentions no Mass; the bulletin's Mass schedule and intentions put every Mass at St. Ambrose, St. James or St. John. It is a church row under the README's rule for a parish's Adoration chapel at an address of its own: it has its own street address, and the parish page and every recent bulletin give that address and its hours. Its schedule (open 24 hours, entry by code, plus the Tuesday Holy Hours the bulletin prints there) is in `data/corrections/peace-of-christ/2026-11-24-perpetual-adoration-chapel.json`.
 
-It was excluded as `no-public-mass` on 2026-10-27, before Adoration chapels at their own address became church rows; that exclusion was replaced by this record on 2026-11-24.
+It was excluded as `no-public-mass` on 2026-10-27, before Adoration chapels at their own address became church rows; that exclusion (`excluded/perpetual-adoration-chapel-rochester`) was replaced by this record on 2026-11-24.
 
 ## Name and address
 
-"Perpetual Adoration Chapel", as the bulletin's page 3 heads it ("PERPETUAL ADORATION CHAPEL"); the parish page calls it the Adoration Chapel. 123 Whittington Road, Rochester NY 14609: the parish page (which says Irondequoit, the town, in its own spelling) and the bulletin agree, so both are verified. The point is OSM's building at that address, about 35 m east of St. James Church (130 Brett Road), "a short walk from the church parking lot".
+"Peace of Christ Perpetual Adoration Chapel". The bulletin's page 3 heads it "PERPETUAL ADORATION CHAPEL" and the parish page calls it the Adoration Chapel, but both are the parish's own pages, where the parish goes without saying. On its own, "Perpetual Adoration Chapel" could be any parish's chapel, so the name adds the parish, in the parish page's words: "Peace of Christ Parish is now home to a Perpetual Adoration Chapel". 123 Whittington Road, Rochester NY 14609: the parish page (which says Irondequoit, the town, in its own spelling) and the bulletin agree, so both are verified. The point is OSM's building at that address, about 35 m east of St. James Church (130 Brett Road), "a short walk from the church parking lot".
