@@ -29,7 +29,7 @@ Extract Mass, Confession, and Adoration schedule information from the attached C
 - A Communion Service (a Liturgy of the Word with Communion, led by a deacon or lay minister) is not a Mass: never record one as a Mass. When the bulletin says a Communion Service replaces a Mass on a date, record that Mass under `cancellations` for that date.
 - Leave out a Mass that is closed to the public: a private Mass, or one the bulletin limits to a group (a school Mass for students only, a Mass for residents only, a Mass by invitation). A wedding, a funeral, or a memorial or anniversary Mass for one person is closed unless the bulletin invites everyone to it.
 - A Mass the regular schedule lists "with" a school or group ("First Friday Mass with St. Mary's School") is open unless the bulletin limits it.
-- Skip anything without a definite start time, such as "Confession by appointment" or "call the office" A chapel open 24 hours is the one exception (see Chapels open 24 hours).
+- Skip anything without a definite start time, such as "Confession by appointment" or "call the office". A chapel open 24 hours is the one exception (see Chapels open 24 hours).
 
 # Churches and chapels
 

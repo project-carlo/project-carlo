@@ -277,18 +277,26 @@ def _note_errors(note: Any, where: str) -> list[str]:
 # email address or a door code (docs/believed-schedules.md, "Notes"). Names
 # can't be told apart from a chapel's or a saint's: seed review is their check.
 _PHONE_RE = re.compile(r"(?<!\d)(?:\+?1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]\d{4}(?!\d)")
-_EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
-# "code 4321", "code: 12#", "PIN is 0420", "combination 1-2-3", "#4321", "4321#".
+# The local part starts only where a run of its characters does, so a long run
+# with no "@" is read once, not once from each of its characters.
+_EMAIL_RE = re.compile(r"(?<![\w.+-])[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
+# "code 4321", "code: 12#", "PIN is 0420", "combination 1-2-3", "4321#": three
+# digits or more after the word, or digits ending in # or *. "code needed, 2
+# doors" and "Room #205" name none.
 _CODE_RE = re.compile(
-    r"\b(?:code|pin|combination|keypad|passcode)\b\W{0,3}(?:\w+\W{1,3}){0,2}?[#*]?\d[\d\s#*-]{1,}"
-    r"|(?<![\w#])[#*]\d{3,}|\b\d{3,}[#*]",
+    r"\b(?:code|pin|combination|keypad|passcode)\b\W{0,3}(?:\w+\W{1,3}){0,2}?"
+    r"(?:\d(?:[\s-]?\d){2,}|\d+\s?[#*])"
+    r"|\b\d{3,}#",
     re.IGNORECASE,
 )
 
 
-# Clock times, taken out before looking for a code: "code needed 9 PM-6 AM" names none.
+# Clock times and round-the-clock hours, taken out before looking for a code:
+# "code needed 9 PM-6 AM" and "access code required, 24/7" name none.
 _CLOCK_RE = re.compile(
-    r"\b\d{1,2}(?::\d{2})?\s*(?:a\.?\s?m\b\.?|p\.?\s?m\b\.?|noon|midnight)|\b\d{1,2}:\d{2}\b",
+    r"\b\d{1,2}(?::\d{2})?\s{0,3}(?:a\.?\s?m\b\.?|p\.?\s?m\b\.?|noon|midnight)"
+    r"|\b\d{1,2}:\d{2}\b"
+    r"|\b24\s?(?:/\s?7|-?\s?(?:hours?|hrs?)\b)",
     re.IGNORECASE,
 )
 

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+import time
 from datetime import date
 from pathlib import Path
 
@@ -112,13 +113,29 @@ def test_two_chapels_at_one_church_conflict_unless_their_dates_part() -> None:
     ("closed during Mass", False),
     ("access code needed 9:00 PM-6:00 AM", False),
     ("code needed after 9 pm", False),
+    ("Access code required, 24/7", False),
+    ("Keypad entry 24 hours", False),
+    ("Door code changes monthly, 2 doors", False),
+    ("Adoration Chapel, Room #205", False),
+    ("Room 101*", False),
     ("door code 4321", True),
+    ("PIN is 0420", True),
+    ("combination 1-2-3", True),
+    ("enter 4321# at the door", True),
     ("Code: 12#", True),
     ("call (315) 555-1212", True),
     ("email office@example.org", True),
 ])
 def test_notes_never_hold_contacts_or_codes(note: str, private: bool) -> None:
     assert (private_detail(note) is not None) == private
+
+
+def test_the_privacy_check_reads_a_long_note_in_linear_time() -> None:
+    # Each pattern starts only where a run starts (CodeQL py/polynomial-redos).
+    start = time.perf_counter()
+    for text in ("+" * 50_000, "a" * 50_000, "code " + "1-" * 25_000, "1 " * 25_000):
+        private_detail(text)
+    assert time.perf_counter() - start < 2
 
 
 def test_every_reviewed_note_passes_the_privacy_check() -> None:
@@ -280,7 +297,7 @@ def test_the_model_can_add_a_chapel_but_not_a_second_one(conn: sqlite3.Connectio
     assert entry is not None and reason == DUPLICATE
 
 
-def test_the_model_cannot_put_a_phone_number_in_a_note(conn: sqlite3.Connection) -> None:
+def test_a_phone_number_the_model_puts_in_a_note_is_dropped(conn: sqlite3.Connection) -> None:
     _seed(conn, [SUN_9])
     _bulletin(conn, "b1", "2026-11-15T00:00:00Z")
     add = {"op": "add", "entry": {**CHAPEL, "note": "Call Joe at 315-555-1212"},
@@ -288,8 +305,18 @@ def test_the_model_cannot_put_a_phone_number_in_a_note(conn: sqlite3.Connection)
     _run(conn, FakeUpdater(_reply(changes=[add])))
 
     reason = conn.execute("SELECT reason FROM proposed_change").fetchone()[0]
-    assert reason == "invalid_entry"
-    assert not any(e.continuous for e in live_entries(conn, _parish_id(conn)).values())
+    assert reason == "auto"
+    [chapel] = [e for e in live_entries(conn, _parish_id(conn)).values() if e.continuous]
+    assert chapel.note is None
+
+
+def test_a_modify_that_only_adds_a_private_note_changes_nothing() -> None:
+    weekly = parse_entry(SUN_9, CHURCHES)
+    _, reason, _ = check_proposal(
+        "modify", 7, {**SUN_9, "note": "PIN is 0420"},
+        schedule=Schedule(ids={7: weekly}), churches=CHURCHES, today=date(2026, 11, 17),
+    )
+    assert reason == "no_change"
 
 
 def test_a_24h_slot_covers_the_whole_days_history_read() -> None:

@@ -14,11 +14,13 @@ The per-proposal checks (`check_proposal`) are also what a hand edit must pass.
 
 from __future__ import annotations
 
+import logging
 from collections.abc import Collection
 from dataclasses import dataclass, field
 from datetime import date
 from typing import Any
 
+from pdf_extract.model import private_detail
 from pdf_extract.schedule.entries import (
     INVALID_ENTRY,
     UNKNOWN_CHURCH,
@@ -28,10 +30,12 @@ from pdf_extract.schedule.entries import (
 )
 from pdf_extract.schedule.store import ADD, DELETE, MODIFY
 
-# 3: continuous chapels, and notes holding a phone number, email address or door
-# code rejected as `invalid_entry` (`model.private_detail`).
+# 3: continuous chapels, and a note holding a phone number, email address or door
+# code dropped from the entry (`model.private_detail`).
 POLICY_VERSION = "3"
 DECIDED_BY = f"policy@{POLICY_VERSION}"
+
+LOGGER = logging.getLogger(__name__)
 
 APPLIED = "applied"
 REJECTED = "rejected"
@@ -158,7 +162,7 @@ def check_proposal(
     entry: Entry | None = None
     if op in (ADD, MODIFY):
         try:
-            entry = parse_entry(raw_entry, churches)
+            entry = parse_entry(_without_private_note(raw_entry), churches)
         except EntryError as exc:
             return None, exc.reason, str(exc)
     target = (
@@ -185,6 +189,21 @@ def check_proposal(
     if op == MODIFY and entry == target:
         return entry, NO_CHANGE, "the new entry is the same as the old one"
     return entry, None, None
+
+
+def _without_private_note(raw_entry: Any) -> Any:
+    """The proposed entry, its note dropped when it holds a contact or a door code.
+
+    The schedule change the note came with is still good, so only the note goes:
+    the site never shows it, and a modify that changed nothing else is `no_change`.
+    """
+    note = raw_entry.get("note") if isinstance(raw_entry, dict) else None
+    private = private_detail(note) if isinstance(note, str) else None
+    if not private:
+        return raw_entry
+    LOGGER.warning("Dropping a proposed note for %s: it %s",
+                   raw_entry.get("church_slug"), private.split(";")[0])
+    return {**raw_entry, "note": None}
 
 
 @dataclass

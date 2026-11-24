@@ -94,9 +94,9 @@ row"), so it gets its own pin and page.
 ## Notes
 
 A note, on any entry, never holds a person's name, a phone number, an email
-address or a door code. Seed checks and the update policy (`invalid_entry`) refuse
-a note that looks like one of the last three (`model.private_detail`), and the
-snapshot build leaves such a note out. Names can't be told apart from a chapel's
+address or a door code. Seed checks refuse a note that looks like one of the last
+three (`model.private_detail`), the update policy drops it from the proposed entry
+(the rest of the change still applies), and the snapshot build leaves it out. Names can't be told apart from a chapel's
 or a saint's, so seed review is their check.
 
 ## Corrections
