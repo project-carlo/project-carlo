@@ -1,0 +1,643 @@
+{
+  "schema_version": 1,
+  "parish_slug": "immaculate-heart-of-mary-philadelphia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:41:11Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:57:40Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church; weekday Masses and Tuesday Adoration are in its Sacred Heart Chapel. Both bulletins (Nov 8 and Nov 15, 2026) print the same schedule box, which the parish website matches. Open: whether to add the standing 9:00 AM Thanksgiving Day Mass as a dated entry for Nov 26.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "89c17d2d27f3209ef8e14b59a4f47e856198c43505eb0679dba4e49088e0f571",
+      "fetched_at": "2026-11-15T16:41:11Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ac94bd333ad2d59841db560347fb67f113cdbed4bc354aa71eb0a56a66d35f78",
+      "fetched_at": "2026-11-08T15:52:50Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 1,
+          "said": "SUNDAY - THE LORD'S DAY Vigil - Saturday 5:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac94bd33",
+          "page": 1,
+          "said": "SUNDAY - THE LORD'S DAY Vigil - Saturday 5:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21 5:15pm Thomas F. Wynne, Jr."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in the week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 1,
+          "said": "SUNDAY - THE LORD'S DAY ... 7:30 am, 9:30 am, and 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac94bd33",
+          "page": 1,
+          "said": "SUNDAY - THE LORD'S DAY ... 7:30 am, 9:30 am, and 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22 7:30 ... 9:30 ... 11:30"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in the week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 1,
+          "said": "SUNDAY - THE LORD'S DAY ... 7:30 am, 9:30 am, and 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac94bd33",
+          "page": 1,
+          "said": "SUNDAY - THE LORD'S DAY ... 7:30 am, 9:30 am, and 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22 7:30 ... 9:30 ... 11:30"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in the week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 1,
+          "said": "SUNDAY - THE LORD'S DAY ... 7:30 am, 9:30 am, and 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac94bd33",
+          "page": 1,
+          "said": "SUNDAY - THE LORD'S DAY ... 7:30 am, 9:30 am, and 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22 7:30 ... 9:30 ... 11:30"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in the week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 1,
+          "said": "WEEKDAYS: IN SACRED HEART CHAPEL Monday thru Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac94bd33",
+          "page": 1,
+          "said": "WEEKDAYS: IN SACRED HEART CHAPEL Monday thru Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 2,
+          "said": "8:30 (each weekday Nov 16-20 in the intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions; POLICY, Churches and chapels: the parish's Sacred Heart Chapel is recorded at the church with a note (the website also says 'in Chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 1,
+          "said": "WEEKDAYS: IN SACRED HEART CHAPEL Monday thru Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac94bd33",
+          "page": 1,
+          "said": "WEEKDAYS: IN SACRED HEART CHAPEL Monday thru Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 2,
+          "said": "8:30 (each weekday Nov 16-20 in the intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions; POLICY, Churches and chapels: the parish's Sacred Heart Chapel is recorded at the church with a note (the website also says 'in Chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 1,
+          "said": "WEEKDAYS: IN SACRED HEART CHAPEL Monday thru Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac94bd33",
+          "page": 1,
+          "said": "WEEKDAYS: IN SACRED HEART CHAPEL Monday thru Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 2,
+          "said": "8:30 (each weekday Nov 16-20 in the intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions; POLICY, Churches and chapels: the parish's Sacred Heart Chapel is recorded at the church with a note (the website also says 'in Chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 1,
+          "said": "WEEKDAYS: IN SACRED HEART CHAPEL Monday thru Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac94bd33",
+          "page": 1,
+          "said": "WEEKDAYS: IN SACRED HEART CHAPEL Monday thru Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 2,
+          "said": "8:30 (each weekday Nov 16-20 in the intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions; POLICY, Churches and chapels: the parish's Sacred Heart Chapel is recorded at the church with a note (the website also says 'in Chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart Chapel; in the Church when school is in session"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 1,
+          "said": "Monday thru Friday 8:30 am ... Wednesdays when school is in session Mass will be held in the Church - 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac94bd33",
+          "page": 1,
+          "said": "Monday thru Friday 8:30 am ... Wednesdays when school is in session Mass will be held in the Church - 8:30 am"
+        }
+      ],
+      "rationale": "R1: same weekly 8:30 AM Mass in both bulletins; only the room changes, so one slot with a location note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 1,
+          "said": "WEEKDAYS: IN SACRED HEART CHAPEL ... Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac94bd33",
+          "page": 1,
+          "said": "WEEKDAYS: IN SACRED HEART CHAPEL ... Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21 8:00 Betty Mc Cormick"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION IN CHURCH Saturday 4:00 pm - 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac94bd33",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION IN CHURCH Saturday 4:00 pm - 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart Chapel; Benediction after the 6:30 PM Novena"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 3,
+          "said": "Each Tuesday the Blessed Sacrament is exposed for our adoration in the Sacred Heart Chapel from 9 am to 6:30 pm. Benediction and Novena follows."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac94bd33",
+          "page": 3,
+          "said": "Each Tuesday the Blessed Sacrament is exposed ... Sacred Heart Chapel from 9 am to 6:30 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 1,
+          "said": "TUESDAY SOLEMN EXPOSITION OF THE BLESSED SACRAMENT AFTER 8:30 am MASS UNTIL 6:30 p.m. ... MIRACULOUS MEDAL NOVENA TUESDAY EVENING AT 6:30 pm BENEDICTION FOLLOWS NOVENA PRAYERS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac94bd33",
+          "page": 1,
+          "said": "TUESDAY SOLEMN EXPOSITION OF THE BLESSED SACRAMENT AFTER 8:30 am MASS UNTIL 6:30 p.m. ... MIRACULOUS MEDAL NOVENA TUESDAY EVENING AT 6:30 pm BENEDICTION FOLLOWS NOVENA PRAYERS"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the clock times 9 am to 6:30 pm on p3 win over 'after 8:30 am Mass'; Benediction closes the exposition after the novena, so it is one Adoration event with a note, not a second one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 1,
+          "said": "MIRACULOUS MEDAL NOVENA TUESDAY EVENING AT 6:30 pm"
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not Mass, Confession or Adoration; its Benediction is noted on the Tuesday Adoration slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 1,
+          "said": "HOLY DAYS OF OBLIGATION 5:15 pm Vigil Mass 8:30 am, Noon, & 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac94bd33",
+          "page": 1,
+          "said": "HOLY DAYS OF OBLIGATION 5:15 pm Vigil Mass 8:30 am, Noon, & 7:00 pm"
+        }
+      ],
+      "rationale": "POLICY, Dates; R16: a generic holy-day schedule with no holy day dated in either bulletin; dates are not projected from the calendar. Update mode will read the bulletins that date the Immaculate Conception and Christmas.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89c17d2d",
+          "page": 1,
+          "said": "HOLIDAYS: IN CHURCH 9:00 am (Memorial Day, Independence Day, Labor Day and Thanksgiving Day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac94bd33",
+          "page": 1,
+          "said": "HOLIDAYS: IN CHURCH 9:00 am (Memorial Day, Independence Day, Labor Day and Thanksgiving Day)"
+        }
+      ],
+      "rationale": "R30: the standing schedule names Thanksgiving Day (Nov 26, 2026, after as_of) but prints no date, and POLICY, Dates forbids projecting a date the bulletin doesn't pin down. Leaning include: the holiday names one unambiguous day and the time is printed in both issues. R17: the weekly Thursday 8:30 AM slot is left alone either way (no cancellation stated).",
+      "question": "Add the 9:00 AM Thanksgiving Day Mass on Thursday, November 26, 2026?",
+      "options": [
+        {
+          "label": "Thanksgiving 2026-11-26 9 AM",
+          "entry": {
+            "church_slug": "immaculate-heart-of-mary-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving Day"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
