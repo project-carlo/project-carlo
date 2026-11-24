@@ -118,9 +118,15 @@ def survey_files() -> dict[str, str]:
     }
 
 
-def parish_record(roster: str) -> str:
-    return (f"---\nname: Parish\nbulletin_provider: parishes_online\nprovider_id: x\n"
-            f"roster: ['{roster}']\n---\nNotes.\n")
+def parish_record() -> str:
+    """A parish record as the map Run writes it: no `roster`, which its churches carry."""
+    return "---\nname: Parish\nbulletin_provider: parishes_online\nprovider_id: x\n---\nNotes.\n"
+
+
+def church_record(parish: str, *roster: str, kind: str = "church") -> str:
+    """A church (or an `excluded` or `open` record) of `parish`, with its roster refs."""
+    refs = ", ".join(f"'{r}'" for r in roster)
+    return f"---\nparish: {parish}\nname: Church\nroster: [{refs}]\n---\nNotes ({kind}).\n"
 
 
 def seed_file(parish: str, status: str = "needs_review") -> str:
@@ -259,7 +265,7 @@ def map_script(**overrides: Callable[[WorkerRequest, int], StubAction]):
                                            rules=["Campus Masses are left out."]))
         if req.stage == "map":
             return StubAction(
-                files={"data/dioceses/{diocese}/parishes/p-{job}.md": parish_record("x:1")},
+                files={"data/dioceses/{diocese}/parishes/p-{job}.md": parish_record()},
                 handoff=done(lessons=[f"Lesson from {req.job_name}"],
                              leads=[{"touches": "b1", "note": "St. Ann may share St. Bede's"}]))
         return StubAction(handoff=done())
@@ -540,7 +546,7 @@ def test_a_failing_gate_sends_the_job_back_to_its_session(env: Env) -> None:
 
 def test_out_of_scope_changes_are_reverted_and_sent_back(env: Env) -> None:
     def mapping(req: WorkerRequest, attempt: int) -> StubAction:
-        files = {"data/dioceses/{diocese}/parishes/p.md": parish_record("x:1")}
+        files = {"data/dioceses/{diocese}/parishes/p.md": parish_record()}
         if attempt == 1:
             files["data/parishes.csv"] = "slug\nsneaky\n"
         return StubAction(files=files, handoff=done())
@@ -559,7 +565,7 @@ def test_out_of_scope_changes_are_reverted_and_sent_back(env: Env) -> None:
 def test_changes_a_sandbox_refused_are_recorded_and_sent_back(env: Env) -> None:
     def mapping(req: WorkerRequest, attempt: int) -> StubAction:
         refused = ["data/parishes.csv (outside your write boundaries)"] if attempt == 1 else []
-        return StubAction(files={"data/dioceses/{diocese}/parishes/p.md": parish_record("x:1")},
+        return StubAction(files={"data/dioceses/{diocese}/parishes/p.md": parish_record()},
                           handoff=done(), refused=refused)
 
     d = env.dispatcher(map_script(map=mapping))
@@ -925,7 +931,7 @@ GAP = ("fetch_gap:\n  kind: solutio-file-403\n  seen: 2026-10-21\n"
 
 def test_reconcile_settles_earlier_flags_and_the_pr_lists_the_rest(env: Env) -> None:
     def mapping(req: WorkerRequest, attempt: int) -> StubAction:
-        parish = parish_record("x:1")
+        parish = parish_record()
         if req.job_name == "003-map":
             parish = parish.replace("---\nNotes", GAP + "---\nNotes")
         return StubAction(
@@ -1228,13 +1234,17 @@ def test_csv_conflicts_take_mains_version_and_promote_again(env: Env) -> None:
 
 
 # ── Seed Runs ────────────────────────────────────────────────────────────────
-def seed_env(env: Env) -> Any:
+def seed_env(env: Env, extra: dict[str, str] | None = None) -> Any:
+    extra = extra or {}
     env.commit_main({
         f"data/dioceses/{D}/diocese.md": META,
         f"data/dioceses/{D}/batches.json": json.dumps(BATCHES),
         f"data/dioceses/{D}/rosters/directory.json": json.dumps(ROSTER),
-        f"data/dioceses/{D}/parishes/st-ann.md": parish_record("directory:1"),
-        f"data/dioceses/{D}/parishes/st-clare.md": parish_record("directory:3"),
+        f"data/dioceses/{D}/parishes/st-ann.md": parish_record(),
+        f"data/dioceses/{D}/parishes/st-clare.md": parish_record(),
+        f"data/dioceses/{D}/churches/st-ann.md": church_record("st-ann", "directory:1"),
+        f"data/dioceses/{D}/churches/st-clare.md": church_record("st-clare", "directory:3"),
+        **extra,
     }, "mapped")
     (env.repo / "factory" / "queue.json").write_text("[]")
     run_id = env.ledger.add_run(diocese=D, kind=SEED, worktrees_dir=env.config.worktrees_dir,
@@ -1296,6 +1306,62 @@ def test_seed_run_reviews_approves_and_records_decisions(env: Env) -> None:
     approve = [c for c in env.commands_run if c.startswith("pnpm seed approve st-ann")][0]
     answers = json.loads((wt / approve.split("--answers ")[1]).read_text())
     assert answers[0]["slot"] == "s1" and answers[0]["choice"] == 1
+
+
+def test_seed_batches_follow_the_roster_refs_of_each_parishs_churches(tmp_path: Path) -> None:
+    from pdf_extract.factory import plan
+
+    folder = tmp_path / "data" / "dioceses" / D
+    files = {
+        "batches.json": json.dumps(BATCHES),
+        # Real parish records carry no roster: their churches do.
+        "parishes/st-ann.md": parish_record(),
+        "churches/st-ann.md": church_record("st-ann", "directory:1"),
+        # An open record in b2 (planned first) loses to the parish's own church in b1.
+        "open/st-ann-chapel.md": church_record("st-ann", "directory:3", kind="open"),
+        "parishes/st-bede.md": parish_record(),
+        "churches/st-bede.md": church_record("st-bede", "gcatholic:9"),
+        # A parish whose churches are in no batch falls back to its excluded records.
+        "excluded/old-st-bede.md": church_record("st-bede", "directory:2", kind="excluded"),
+        "parishes/st-clare.md": parish_record(),
+        "churches/st-clare-a.md": church_record("st-clare", "gcatholic:3"),
+        "churches/st-clare-b.md": church_record("st-clare", "directory:3"),
+        # A roster on the parish record itself still counts.
+        "parishes/st-dom.md": parish_record().replace("---\nNotes", "roster: ['directory:2']\n"
+                                                                     "---\nNotes"),
+        "parishes/st-eve.md": parish_record(),
+        "churches/st-eve.md": church_record("st-eve", "gcatholic:7"),
+    }
+    for name, text in files.items():
+        (folder / name).parent.mkdir(parents=True, exist_ok=True)
+        (folder / name).write_text(text)
+    parishes = ["st-eve", "st-dom", "st-clare", "st-bede", "st-ann"]
+    assert plan.seed_batches(tmp_path, D, parishes) == [
+        ("b2", ["st-clare"]), ("b1", ["st-dom", "st-bede", "st-ann"]),
+        (plan.OTHER_BATCH, ["st-eve"])]
+    assert plan.seed_batches(tmp_path, D, ["st-ann"]) == [("b1", ["st-ann"])]
+
+
+def test_seeds_drafted_under_no_batch_are_reviewed_per_batch_and_not_reseeded(
+        env: Env) -> None:
+    """A Run whose seeds an older plan drafted as "(no batch)" picks up per batch."""
+    run = seed_env(env, {"data/seeds/st-ann.json": seed_file("st-ann")})
+    old = env.ledger.add_job(run["id"], "seed", {"parish": "st-ann", "batch": "(no batch)"})
+    env.ledger.set_job(old, status=DONE, finished_at=env.now.isoformat())
+
+    def approve_all(req: WorkerRequest, attempt: int) -> StubAction:
+        if req.stage == "seed-review":
+            return StubAction(handoff=done(seeds=[{"parish": p, "verdict": "approve"}
+                                                  for p in req.values["parishes"].split()]))
+        return seed_script(req, attempt)
+
+    drive(env.dispatcher(approve_all))
+    stages = [(j["stage"], json.loads(j["input"]).get("parish") or
+               json.loads(j["input"]).get("parishes")) for j in env.ledger.jobs(run["id"])]
+    assert stages == [("seed", "st-ann"), ("seed", "st-clare"), ("seed-review", ["st-clare"]),
+                      ("seed-review", ["st-ann"]), ("pr", None)]
+    reviews = [json.loads(j["input"])["batch"] for j in env.ledger.jobs(run["id"], "seed-review")]
+    assert reviews == ["b2", "b1"]
 
 
 def test_each_stage_gets_only_the_secrets_its_spec_names(env: Env) -> None:
@@ -1513,7 +1579,7 @@ def merged_map(env: Env, parishes: list[str], merged_at: datetime) -> None:
     """A merged map Run: its records are in main, and its worktree is gone."""
     run_id = env.ledger.add_run(diocese=D, kind=MAP, worktrees_dir=env.tmp / "wt", status=MERGED)
     folder = f"data/dioceses/{D}/parishes"
-    env.commit_main({**{f"{folder}/{p}.md": parish_record("directory:1") for p in parishes},
+    env.commit_main({**{f"{folder}/{p}.md": parish_record() for p in parishes},
                      f"{folder}/gone.md": "---\nname: Gone\nbulletin_provider: no_bulletin\n---\n"},
                     "mapped")
     env.ledger.set_run(run_id, merged_at=merged_at.isoformat())
@@ -1579,32 +1645,32 @@ def test_unsupported_parishes_wait_on_a_collector_until_their_provider_is_set(
 
     folder = tmp_path / "data" / "dioceses" / D / "parishes"
     folder.mkdir(parents=True)
-    (folder / "live.md").write_text(parish_record("directory:1"))
-    (folder / "gap.md").write_text(parish_record("directory:2").replace(
+    (folder / "live.md").write_text(parish_record())
+    (folder / "gap.md").write_text(parish_record().replace(
         "parishes_online", "unsupported").replace("---\nNotes", GAP + "---\nNotes"))
     # No fetch_gap (validate refuses that): still never seeded, still waiting.
-    (folder / "bare.md").write_text(parish_record("directory:3").replace(
+    (folder / "bare.md").write_text(parish_record().replace(
         "parishes_online", "unsupported"))
-    (folder / "none.md").write_text(parish_record("directory:4").replace(
+    (folder / "none.md").write_text(parish_record().replace(
         "parishes_online", "no_bulletin"))
     # No bulletin to wait for: its source seed is drafted outside seed Runs.
-    (folder / "sourced.md").write_text(parish_record("directory:5").replace(
+    (folder / "sourced.md").write_text(parish_record().replace(
         "parishes_online", "website_schedule"))
     assert plan.seedable_parishes(tmp_path, D) == ["live"]
     assert plan.fetch_gap_parishes(tmp_path, D) == ["bare", "gap"]
     # Flipping the provider and clearing the gap seeds it like any other.
-    (folder / "gap.md").write_text(parish_record("directory:2"))
+    (folder / "gap.md").write_text(parish_record())
     assert plan.seedable_parishes(tmp_path, D) == ["gap", "live"]
 
 
 def test_the_pr_says_which_fetch_gap_rows_go_live(tmp_path: Path) -> None:
     folder = tmp_path / "data" / "dioceses" / D / "parishes"
     folder.mkdir(parents=True)
-    (folder / "kept.md").write_text(parish_record("directory:1").replace(
+    (folder / "kept.md").write_text(parish_record().replace(
         "parishes_online", "unsupported").replace("---\nNotes", GAP + "---\nNotes"))
-    (folder / "live.md").write_text(parish_record("directory:2").replace(
+    (folder / "live.md").write_text(parish_record().replace(
         "---\nNotes", GAP + "---\nNotes"))
-    (folder / "new.md").write_text(parish_record("directory:3").replace(
+    (folder / "new.md").write_text(parish_record().replace(
         "bulletin_provider: parishes_online\n", "").replace("---\nNotes", GAP + "---\nNotes"))
     [line] = report._fetch_gaps(tmp_path, D)
     assert line.startswith("- `solutio-file-403` (3): `kept`, `live` (live as parishes_online), "
@@ -1614,7 +1680,7 @@ def test_the_pr_says_which_fetch_gap_rows_go_live(tmp_path: Path) -> None:
 def test_a_parish_waiting_on_a_collector_isnt_seeded_until_its_gap_is_cleared(env: Env) -> None:
     merged_map(env, ["a", "b"], env.now - timedelta(weeks=7))
     path = f"data/dioceses/{D}/parishes/g.md"
-    gap = parish_record("directory:1").replace("---\nNotes", GAP + "---\nNotes")
+    gap = parish_record().replace("---\nNotes", GAP + "---\nNotes")
     env.commit_main({path: gap}, "g waits on a collector")
     env.ledger.add_run(diocese=D, kind=SEED, worktrees_dir=env.tmp / "wt", status=MERGED,
                        parishes=[])
@@ -1625,7 +1691,7 @@ def test_a_parish_waiting_on_a_collector_isnt_seeded_until_its_gap_is_cleared(en
     assert json.loads(run["parishes"]) == ["a", "b"]
     assert "1 wait on a collector" in run["notes"]
     assert not list((env.forge.folder / "issues").glob("*.json"))  # g isn't overdue
-    env.commit_main({path: parish_record("directory:1")}, "collector landed")
+    env.commit_main({path: parish_record()}, "collector landed")
     r = readiness.assess(env.ledger, env.config, D, env.tmp / "parish_events.db", env.now,
                          repo=env.repo)
     assert r is not None and "g" in r.seedable and r.fetch_gaps == []

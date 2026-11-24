@@ -22,7 +22,18 @@ from pdf_extract.factory.opinions import ASKING, FAILED, Opinions
 from pdf_extract.factory.workers import StubAction, WorkerRequest
 from pdf_extract.labeling.demo import build_demo
 from pdf_extract.seeding import second_opinion as so
-from tests.test_factory import BATCHES, META, ROSTER, D, Env, done, drive, git, parish_record
+from tests.test_factory import (
+    BATCHES,
+    META,
+    ROSTER,
+    D,
+    Env,
+    church_record,
+    done,
+    drive,
+    git,
+    parish_record,
+)
 from tests.test_factory import env as factory_env  # noqa: F401
 from tests.test_seed_second_opinion import HF, NEW, OLD, PARISH, FakeCaller, reply, weekly
 
@@ -70,7 +81,8 @@ def opinion_run(env: Env, *, marker: bool = True) -> Any:
         f"data/dioceses/{D}/diocese.md": META,
         f"data/dioceses/{D}/batches.json": json.dumps(BATCHES),
         f"data/dioceses/{D}/rosters/directory.json": json.dumps(ROSTER),
-        f"data/dioceses/{D}/parishes/{PARISH}.md": parish_record("directory:3"),
+        f"data/dioceses/{D}/parishes/{PARISH}.md": parish_record(),
+        f"data/dioceses/{D}/churches/{PARISH}.md": church_record(PARISH, "directory:3"),
     }
     if marker:
         files[MARKER] = "# the Run's seed CLI reads a second opinion\n"

@@ -20,8 +20,11 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.dioceses.records import (
+    CHURCH,
+    EXCLUDED,
     NO_BULLETIN_PROVIDERS,
     OFF_SITE_PROVIDERS,
+    OPEN,
     UNSUPPORTED,
     parse_file,
 )
@@ -123,20 +126,39 @@ def fetch_gaps_on_main(repo: Path, ref: str, diocese: str) -> list[str]:
     return _on_main(repo, ref, diocese, fetch_gap_parishes)
 
 
+def parish_roster_refs(worktree: Path, diocese: str) -> tuple[dict[str, set[str]],
+                                                               dict[str, set[str]]]:
+    """Each parish's roster refs: its churches' (and any on the parish record itself),
+    then, apart, those of the excluded and open records that name it as their `parish`."""
+    own: dict[str, set[str]] = {}
+    for slug, r in parish_records(worktree, diocese).items():
+        own.setdefault(slug, set()).update(r.get("roster") or [])
+    linked: dict[str, set[str]] = {}
+    for kind, into in ((CHURCH, own), (EXCLUDED, linked), (OPEN, linked)):
+        for path in sorted((diocese_dir(worktree, diocese) / kind.dir).glob("*.md")):
+            front, _ = parse_file(path)
+            if front.get("parish"):
+                into.setdefault(front["parish"], set()).update(front.get("roster") or [])
+    return own, linked
+
+
 def seed_batches(worktree: Path, diocese: str, parishes: list[str]) -> list[tuple[str, list[str]]]:
-    """The map Run's batches as parish slugs, keeping only `parishes`; the rest last."""
-    records = parish_records(worktree, diocese)
+    """The map Run's batches as parish slugs, keeping only `parishes`; the rest last.
+
+    A parish goes to the first batch holding one of its churches' roster refs. One whose
+    churches are in no batch falls back to the refs of its excluded and open records."""
+    own, linked = parish_roster_refs(worktree, diocese)
+    batches = [(b["id"], set(b.get("entries") or [])) for b in ordered_batches(worktree, diocese)]
     wanted = list(parishes)
-    placed: set[str] = set()
-    out = []
-    for batch in ordered_batches(worktree, diocese):
-        entries = set(batch.get("entries") or [])
-        slugs = [p for p in wanted if p not in placed
-                 and entries & set(records.get(p, {}).get("roster") or [])]
-        placed.update(slugs)
-        if slugs:
-            out.append((batch["id"], slugs))
-    rest = [p for p in wanted if p not in placed]
+    where: dict[str, str] = {}
+    for refs in (own, linked):
+        for batch_id, entries in batches:
+            for p in wanted:
+                if p not in where and entries & refs.get(p, set()):
+                    where[p] = batch_id
+    out = [(batch_id, slugs) for batch_id, _ in batches
+           if (slugs := [p for p in wanted if where.get(p) == batch_id])]
+    rest = [p for p in wanted if p not in where]
     if rest:
         out.append((OTHER_BATCH, rest))
     return out
