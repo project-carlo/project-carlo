@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-bonaventure-university-chapel",
+  "status": "needs_review",
+  "as_of": "2026-11-24T21:15:59+00:00",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-24T21:15:45Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, the University Chapel in Doyle Hall. University Ministries' page gives Sunday Masses at 11 AM and 7 PM there. The weekday 12:30 PM Mass (Great Room, McGinley-Carney Center) and Friday confession (Interfaith Prayer Tower) are in other buildings, so they are left out. Open: a Sunday 6-6:45 PM time under the Confession Schedule heading, in the Eucharistic Chapel of Doyle Hall. The Masses are offered during the academic year; the page gives no summer schedule.",
+  "blocked_reason": null,
+  "bulletins": [],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-university-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "f5df4f30",
+          "url": "https://www.sbu.edu/life-at-sbu/university-ministries",
+          "said": "Mass Schedule Sundays 11 a.m. & 7 p.m. University Chapel, Doyle Hall"
+        },
+        {
+          "source": "website",
+          "capture": "f5df4f30",
+          "url": "https://www.sbu.edu/life-at-sbu/university-ministries",
+          "said": "Sunday Masses are offered in the University Chapel at 11 a.m. and 7 p.m."
+        }
+      ],
+      "rationale": "R43: the page's Mass Schedule box and its Mass Card text state the Sunday Masses in the University Chapel. The paragraph opens \"During the academic year\"; the box gives no season, so none is recorded (R15), and the recheck date falls before the spring term ends.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-university-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "f5df4f30",
+          "url": "https://www.sbu.edu/life-at-sbu/university-ministries",
+          "said": "Mass Schedule Sundays 11 a.m. & 7 p.m. University Chapel, Doyle Hall"
+        },
+        {
+          "source": "website",
+          "capture": "f5df4f30",
+          "url": "https://www.sbu.edu/life-at-sbu/university-ministries",
+          "said": "Sunday Masses are offered in the University Chapel at 11 a.m. and 7 p.m."
+        }
+      ],
+      "rationale": "R43: the page's Mass Schedule box and its Mass Card text state the Sunday Masses in the University Chapel. The paragraph opens \"During the academic year\"; the box gives no season, so none is recorded (R15), and the recheck date falls before the spring term ends.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-university-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Great Room, McGinley-Carney Center"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "f5df4f30",
+          "url": "https://www.sbu.edu/life-at-sbu/university-ministries",
+          "said": "Monday through Friday 12:30 p.m. Great Room, McGinley-Carney Center"
+        }
+      ],
+      "rationale": "R23: the weekday Mass is in a meeting room of another building, not a church on the list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-university-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Great Room, McGinley-Carney Center"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "f5df4f30",
+          "url": "https://www.sbu.edu/life-at-sbu/university-ministries",
+          "said": "Monday through Friday 12:30 p.m. Great Room, McGinley-Carney Center"
+        }
+      ],
+      "rationale": "R23: the weekday Mass is in a meeting room of another building, not a church on the list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-university-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Great Room, McGinley-Carney Center"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "f5df4f30",
+          "url": "https://www.sbu.edu/life-at-sbu/university-ministries",
+          "said": "Monday through Friday 12:30 p.m. Great Room, McGinley-Carney Center"
+        }
+      ],
+      "rationale": "R23: the weekday Mass is in a meeting room of another building, not a church on the list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-university-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Great Room, McGinley-Carney Center"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "f5df4f30",
+          "url": "https://www.sbu.edu/life-at-sbu/university-ministries",
+          "said": "Monday through Friday 12:30 p.m. Great Room, McGinley-Carney Center"
+        }
+      ],
+      "rationale": "R23: the weekday Mass is in a meeting room of another building, not a church on the list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-university-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Great Room, McGinley-Carney Center"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "f5df4f30",
+          "url": "https://www.sbu.edu/life-at-sbu/university-ministries",
+          "said": "Monday through Friday 12:30 p.m. Great Room, McGinley-Carney Center"
+        }
+      ],
+      "rationale": "R23: the weekday Mass is in a meeting room of another building, not a church on the list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-university-chapel",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "13:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Interfaith Prayer Tower, University Ministries"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "f5df4f30",
+          "url": "https://www.sbu.edu/life-at-sbu/university-ministries",
+          "said": "Fridays, 1-1:30 p.m. (Following daily Mass) Interfaith Prayer Tower, University Ministries"
+        }
+      ],
+      "rationale": "R23: held in the Interfaith Prayer Tower, not the University Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "f5df4f30",
+          "url": "https://www.sbu.edu/life-at-sbu/university-ministries",
+          "said": "Confession Schedule Fridays, 1-1:30 p.m. (Following daily Mass) Interfaith Prayer Tower, University Ministries Sundays, 6-6:45 p.m. Eucharistic Chapel, Doyle Hall"
+        }
+      ],
+      "rationale": "The times sit under the box's Confession Schedule heading, each followed by its place, as the Mass times are; the Sunday time is in Doyle Hall, before the 7 PM Mass. The text has no word for the service itself, so it is asked.",
+      "question": "Add Sunday 6-6:45 PM Confession in the Eucharistic Chapel, Doyle Hall (the University Chapel's building)?",
+      "options": [
+        {
+          "label": "Sundays 6-6:45 PM",
+          "entry": {
+            "church_slug": "st-bonaventure-university-chapel",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": "18:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Chapel, Doyle Hall"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ],
+  "kind": "source",
+  "captures": [
+    {
+      "content_hash": "f5df4f30a163cf854830186608933fc064b7d64731edb17687a4ed55255425ec",
+      "url": "https://www.sbu.edu/life-at-sbu/university-ministries",
+      "final_url": null,
+      "platform": "website",
+      "captured_at": "2026-11-24T21:15:59+00:00",
+      "screenshot_hash": "f95fabac1d187f486a9a7063825f0bd4d3efa867ae8daa971e86443018c0352f",
+      "primary": true
+    }
+  ],
+  "current_because": "University Ministries' page is maintained this term: its news items are dated 19 November, 4 November and 14 October 2026, it names the current chaplain, Fr. Steven Kuehn, O.F.M., and its Mass Schedule box names the rooms in use. The box itself is undated, and the Mass paragraph opens \"During the academic year\", so the times hold for the 2026-27 term; recheck before the spring term ends, when a summer schedule may apply. Captured 24 November 2026.",
+  "recheck_after": "2027-04-15"
+}

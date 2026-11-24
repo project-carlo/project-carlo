@@ -4,7 +4,7 @@ state: NY
 website: https://www.buffalodiocese.org
 status: promoted
 gcatholic: buff0
-promoted: 2026-11-16
+promoted: 2026-11-24
 ---
 
 ## Sources
@@ -65,6 +65,9 @@ promoted: 2026-11-16
   website): Holy Family (Sanborn, reopened from `excluded/`), Niagara University's chapel, the
   Canisius and St. Bonaventure University chapels, Mt. Irenaeus and the Infant Jesus Shrine. Our
   Lady of Hope keeps its `no_bulletin` parish row, which is already unresolved and off the site.
+  The feature landed as source schedules (`website_schedule` rows, docs/source-schedules-plan.md),
+  which cite only the place's own website or Facebook page, never the diocese's lists. On
+  2026-11-24 Mt. Irenaeus and the Canisius and St. Bonaventure chapels moved to it (see the Log).
 - Eastern Catholic churches in the territory are excluded as `other-jurisdiction`, each confirmed
   on its GCatholic page (Ukrainian Stamford, Ruthenian Passaic, Maronite Brooklyn).
 
@@ -188,3 +191,27 @@ promoted: 2026-11-16
   - Wikipedia's Buffalo former-churches table gives the year a parish ended ("Parish defunct"), not
     the year of the last Mass. `last_mass` is kept only where another row dates the end of worship
     (St. Francis Xavier 2007, St. Clare 2016) and removed for St. Agatha and Immaculate Heart of Mary.
+- 2026-11-24: Source schedules for three places with published Mass and no bulletin (the owner's
+  rule of 16 November). Each open/ record became a `website_schedule` parish row and a church, with
+  a source seed drafted from captures of its own pages (`data/seeds/<slug>.json`, captures in
+  `data/seeds/captures/<slug>/`); the seeds await review in the labeler.
+  - Mt. Irenaeus (`mt-irenaeus-friendship`): Sunday 11 a.m. Mass in Holy Peace Chapel, from its
+    site's Mass event (listed for 22 November 2026) and Visit Us page.
+  - Christ the King Chapel, Canisius (`canisius-christ-the-king-chapel`): the chapel page's
+    schedule and its 2026-27 calendar (to 1 January 2027), with the Sunday 9:30 a.m. from the
+    Campus Ministry page. The summer Sunday-morning Mass at Riverfest Park isn't a church.
+  - University Chapel, St. Bonaventure (`st-bonaventure-university-chapel`): Sunday 11 a.m. and
+    7 p.m. in Doyle Hall. The weekday Mass (McGinley-Carney Center's Great Room) and Friday
+    confession (Interfaith Prayer Tower) are in other rooms and left out; rechecked by 15 April
+    2027, before a summer schedule could apply.
+  - Coordinates from OSM buildings for all three; addresses are the places' own.
+  - Not moved, with this pass's findings on each record: Our Lady of Hope (its site still behind
+    Cloudflare; its own page, saved by the Wayback Machine in October 2025, and the diocese's
+    September 2025 directory agree on Saturday 4, Sunday 9 and 11), Holy Family, Sanborn (its
+    times are published only by the diocese, which a source schedule can't cite), Niagara
+    University's chapel (one undated page, which disagrees with the catalog on a Sunday 7 p.m.),
+    the Infant Jesus Shrine (the September 2025 directory matches Discover Mass's times, but it has
+    no site of its own that loads) and Coronation (no published Mass).
+  - The diocese's weekend Mass-times pages are headed "updated as of May 5th, 2024"; its Official
+    Catholic Directory (https://www.buffalodiocese.org/wp-content/uploads/DOB_CatholicDirectory.pdf)
+    is dated September 2025 and gives Mass times per parish and shrine.

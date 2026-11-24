@@ -1,7 +1,9 @@
 ---
 name: Holy Family
-revisit: If it starts publishing a bulletin, make it a parish row; otherwise show it from the diocese's
-  published times when that feature lands.
+revisit: Its times are published only by the diocese (directory and Mass-times pages), which a source
+  schedule can't cite. Look for its own site or Facebook page, or its Mass in the Fatima Shrine bulletin
+  (Fr. Calabrese is pastor of both; the 15 November 2026 Fatima bulletin gives his 523-9114 number but
+  not Holy Family's Mass).
 revisit_after: 2027-03-01
 roster: ['directory:7816', 'gcatholic:17716', 'mass-times:holy-family-sanborn-tuscarora-nation']
 evidence:
@@ -21,6 +23,13 @@ evidence:
   seen: 2026-09-26
   note: 'Diocesan weekend Mass-times pages (fetched 2026-09-26) list ''Holy Family, Sanborn/Tuscarora
     Nation'': Sun. 9:30 a.m. (June 1 – August 31); Sun. 10 a.m. (Sept. 1 – May 31).'
+- url: https://www.buffalodiocese.org/wp-content/uploads/DOB_CatholicDirectory.pdf
+  seen: 2026-11-24
+  quote: 'Sundays: 10 a.m. (Sept.-May); 9:30 a.m. (June-Aug.)'
+  note: 'The diocese''s Official Catholic Directory, dated September 2025, page 46: Holy Family [1953],
+    Tuscarora Reservation, 5180 Chew Road; Very Rev. Peter M. Calabrese, CRSP, Pastor; phone 716-523-9114;
+    "Holydays: 6 p.m.". The same times as the Mass-times pages, whose banner says "updated as of May 5th,
+    2024".'
 line1: 5180 Chew Rd.
 city: Sanborn
 state: NY
@@ -31,6 +40,15 @@ research:
   outcome: not-found
   next_action: Look for a bulletin or Facebook page of the Tuscarora mission
   retry_when: A parish site or bulletin for Holy Family appears
+- method: 'Checked whether its published times look current, for a source schedule: diocesan directory,
+    Fatima Shrine bulletins (same pastor), web search'
+  url: https://fatimashrine.com/bulletins/
+  checked: '2026-11-24'
+  outcome: not-found
+  next_action: A source schedule needs the place's own website or Facebook page (docs/source-schedules-plan.md);
+    look for one, or for Holy Family in the Fatima Shrine bulletin
+  retry_when: Holy Family has a website or Facebook page of its own, or the Fatima Shrine bulletin carries
+    its Mass
 ---
 
 ## What is known

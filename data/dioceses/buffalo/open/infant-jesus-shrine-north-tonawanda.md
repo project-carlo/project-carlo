@@ -16,6 +16,13 @@ evidence:
   quote: 'Served by: Pallottines'
   note: 'GCatholic''s page: ''Shrine of the Holy Infant Jesus'', Languages: English, Polish; Telephone
     +1 (716) 694-4313; website northtonawanda.sac.org.pl.'
+- url: https://www.buffalodiocese.org/wp-content/uploads/DOB_CatholicDirectory.pdf
+  seen: 2026-11-24
+  quote: 'Sundays and Holydays: 9 a.m., 10 a.m. (Polish),'
+  note: 'The diocese''s Official Catholic Directory, dated September 2025, page 54 (Shrines): Infant Jesus
+    Shrine, conducted by the Pallottine Fathers, Director Rev. John Posiewala, SAC; Sundays and Holydays
+    9 a.m., 10 a.m. (Polish), 11 a.m. and 4 p.m.; weekdays 9:30 a.m. and 4 p.m. These agree with Discover
+    Mass''s times, so those are not only COVID-era data, but nothing dated 2026 confirms them.'
 line1: 3452 Niagara Falls Blvd.
 city: North Tonawanda
 state: NY
@@ -27,6 +34,13 @@ research:
   outcome: access-blocked
   next_action: Open the shrine site in a browser that accepts its certificate, or call the shrine
   retry_when: The shrine site loads
+- method: probe get over http; Wayback CDX for northtonawanda.sac.org.pl; web search
+  url: http://northtonawanda.sac.org.pl
+  checked: '2026-11-24'
+  outcome: access-blocked
+  next_action: Find the shrine's current site or Facebook page (the Pallottines' sac.org.pl site was last
+    archived in 2008), or call 716-694-4313
+  retry_when: A current site or Facebook page for the shrine is found
 ---
 
 ## What is known

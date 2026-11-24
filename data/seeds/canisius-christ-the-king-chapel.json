@@ -1,0 +1,738 @@
+{
+  "schema_version": 1,
+  "parish_slug": "canisius-christ-the-king-chapel",
+  "status": "needs_review",
+  "as_of": "2026-11-24T21:14:50+00:00",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-24T21:14:22Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Christ the King Chapel. Its page on the Canisius site gives Sunday 7 PM year-round, weekdays 12:05 PM, Monday and Friday confessions and Friday Adoration 11-12; the Campus Ministry page gives the Sunday 9:30 AM, which moves outdoors to Riverfest Park (not a church) from June 28 to August 23. The page's calendar adds Thanksgiving, Immaculate Conception, Christmas and New Year's Day Masses. Open: whether the 12:05 Mass is held on Thanksgiving, Christmas Day and New Year's Day.",
+  "blocked_reason": null,
+  "bulletins": [],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "canisius-christ-the-king-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 8,
+          "start_day": 24,
+          "end_month": 6,
+          "end_day": 27
+        },
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "359063bf",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry",
+          "said": "Sunday Mass on campus is at 9:30am and 7:00pm. We also have Weekday Mass on M-F at 12:05pm in Christ the King Chapel."
+        },
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "ALL SAINTS DAY MASS at both Sunday Masses. 9:30 AM and 7:00 PM."
+        },
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "Sundays, June 28 through August 23 , our morning Mass will be at 9:00 a.m. at Riverfest Park"
+        }
+      ],
+      "rationale": "R43: the Campus Ministry page's stated schedule, confirmed by the chapel page's calendar. The chapel page moves the morning Mass to Riverfest Park from June 28 to August 23, so the chapel's 9:30 is kept as the season outside those dates.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "canisius-christ-the-king-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 6,
+          "start_day": 28,
+          "end_month": 8,
+          "end_day": 23
+        },
+        "note": "Summer, outdoors at Riverfest Park, 249 Ohio St."
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "Sundays, June 28 through August 23 , our morning Mass will be at 9:00 a.m. at Riverfest Park"
+        }
+      ],
+      "rationale": "R23: Riverfest Park is an outdoor venue, not a church on the list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "canisius-christ-the-king-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "7:00pm (year-round, Christ the King Chapel)"
+        },
+        {
+          "source": "website",
+          "capture": "359063bf",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry",
+          "said": "Sunday Mass on campus is at 9:30am and 7:00pm."
+        }
+      ],
+      "rationale": "R43: the chapel page's stated schedule, year-round.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "canisius-christ-the-king-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "Weekday Masses in Christ the King Chapel Monday-Friday 12:05 PM"
+        },
+        {
+          "source": "website",
+          "capture": "359063bf",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry",
+          "said": "We also have Weekday Mass on M-F at 12:05pm in Christ the King Chapel."
+        }
+      ],
+      "rationale": "R43: the chapel page's stated schedule; its liturgies \"are not limited to the Academic schedule\".",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "canisius-christ-the-king-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "Weekday Masses in Christ the King Chapel Monday-Friday 12:05 PM"
+        },
+        {
+          "source": "website",
+          "capture": "359063bf",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry",
+          "said": "We also have Weekday Mass on M-F at 12:05pm in Christ the King Chapel."
+        }
+      ],
+      "rationale": "R43: the chapel page's stated schedule; its liturgies \"are not limited to the Academic schedule\".",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "canisius-christ-the-king-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "Weekday Masses in Christ the King Chapel Monday-Friday 12:05 PM"
+        },
+        {
+          "source": "website",
+          "capture": "359063bf",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry",
+          "said": "We also have Weekday Mass on M-F at 12:05pm in Christ the King Chapel."
+        }
+      ],
+      "rationale": "R43: the chapel page's stated schedule; its liturgies \"are not limited to the Academic schedule\".",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "canisius-christ-the-king-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "Weekday Masses in Christ the King Chapel Monday-Friday 12:05 PM"
+        },
+        {
+          "source": "website",
+          "capture": "359063bf",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry",
+          "said": "We also have Weekday Mass on M-F at 12:05pm in Christ the King Chapel."
+        }
+      ],
+      "rationale": "R43: the chapel page's stated schedule; its liturgies \"are not limited to the Academic schedule\".",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "canisius-christ-the-king-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "Weekday Masses in Christ the King Chapel Monday-Friday 12:05 PM"
+        },
+        {
+          "source": "website",
+          "capture": "359063bf",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry",
+          "said": "We also have Weekday Mass on M-F at 12:05pm in Christ the King Chapel."
+        }
+      ],
+      "rationale": "R43: the chapel page's stated schedule; its liturgies \"are not limited to the Academic schedule\".",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "canisius-christ-the-king-chapel",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "Confessions Monday and Friday 11:00 - 12 (or by appt. if arranged with staff)"
+        }
+      ],
+      "rationale": "R43: the chapel page's stated schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "canisius-christ-the-king-chapel",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "Confessions Monday and Friday 11:00 - 12 (or by appt. if arranged with staff)"
+        }
+      ],
+      "rationale": "R43: the chapel page's stated schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "canisius-christ-the-king-chapel",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "Friday Devotions Adoration 11-12"
+        }
+      ],
+      "rationale": "R43: the chapel page's stated schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "canisius-christ-the-king-chapel",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "26th. THANKSGIVING DAY MASS. 9:30 AM with light brunch."
+        }
+      ],
+      "rationale": "R43: a dated Mass in the chapel page's calendar, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "canisius-christ-the-king-chapel",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "8th: Solemnity of the Immaculate Conception. Holy Day of Obligation Masses. 12:05 and 5:15. CKC"
+        }
+      ],
+      "rationale": "R43: a dated holy-day Mass in the calendar; the 12:05 is the regular weekday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "canisius-christ-the-king-chapel",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve family Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "24th: CHRISTMAS EVE. FAMILY MASS is at 4:00 PM."
+        }
+      ],
+      "rationale": "R43: a dated Mass in the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "canisius-christ-the-king-chapel",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "25th: CHRISTMAS DAY. Mass is at 9:30 AM."
+        }
+      ],
+      "rationale": "R43: a dated Mass in the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "canisius-christ-the-king-chapel",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mary, Mother of God"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "January 1, 2027: Solemnity of Mary, Mother of God. Mass is at 9:30 AM."
+        }
+      ],
+      "rationale": "R43: a dated Mass in the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "26th. THANKSGIVING DAY MASS. 9:30 AM with light brunch."
+        }
+      ],
+      "rationale": "The calendar names one Mass that day and says nothing of the 12:05; on Columbus Day it said \"No 12:05 Mass\" outright. Leaning: the 9:30 replaces it (a campus holiday).",
+      "question": "On Thanksgiving, Christmas Day and New Year's Day the calendar gives one Mass, at 9:30 AM. Is the weekday 12:05 PM Mass also held those days?",
+      "options": [
+        {
+          "label": "No 12:05 Mass",
+          "entry": {
+            "church_slug": "canisius-christ-the-king-chapel",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "12:05",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Held as usual",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "holidays"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "25th: CHRISTMAS DAY. Mass is at 9:30 AM. No 7:00 PM Mass"
+        }
+      ],
+      "rationale": "As for Thanksgiving: \"Mass is at 9:30 AM\" reads as the day's only Mass.",
+      "question": "On Thanksgiving, Christmas Day and New Year's Day the calendar gives one Mass, at 9:30 AM. Is the weekday 12:05 PM Mass also held those days?",
+      "options": [
+        {
+          "label": "No 12:05 Mass",
+          "entry": {
+            "church_slug": "canisius-christ-the-king-chapel",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "12:05",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Day"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Held as usual",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "holidays"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "c0e4895e",
+          "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+          "said": "January 1, 2027: Solemnity of Mary, Mother of God. Mass is at 9:30 AM. No 7:00 PM Mass"
+        }
+      ],
+      "rationale": "As for Thanksgiving: \"Mass is at 9:30 AM\" reads as the day's only Mass.",
+      "question": "On Thanksgiving, Christmas Day and New Year's Day the calendar gives one Mass, at 9:30 AM. Is the weekday 12:05 PM Mass also held those days?",
+      "options": [
+        {
+          "label": "No 12:05 Mass",
+          "entry": {
+            "church_slug": "canisius-christ-the-king-chapel",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2027-01-01",
+            "start_time": "12:05",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mary, Mother of God"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Held as usual",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "holidays"
+    }
+  ],
+  "kind": "source",
+  "captures": [
+    {
+      "content_hash": "c0e4895e4f84c0383dfa8629ef4c56cd03c076d2f3971465d71a12c65045aec5",
+      "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel",
+      "final_url": null,
+      "platform": "website",
+      "captured_at": "2026-11-24T21:14:36+00:00",
+      "screenshot_hash": "b0be7719fd883670e2b7f0de5789c59dc09f86b0531d7023ea0534584bd527c7",
+      "primary": true
+    },
+    {
+      "content_hash": "359063bf85db767e1f2c59bf5f178ec7cb76d1dcdef4ce44e384868381ee8805",
+      "url": "https://www.canisius.edu/student-experience/faith-service/campus-ministry",
+      "final_url": null,
+      "platform": "website",
+      "captured_at": "2026-11-24T21:14:50+00:00",
+      "screenshot_hash": "6081c5fe00eb4ae8f98e63b3267ca017cf25f5005cc63ab8650ddecc0d876958",
+      "primary": false
+    }
+  ],
+  "current_because": "The chapel page's Calendar of Events runs through this academic year: 4 October (the 800th anniversary of St. Francis's death, which is 2026), Thanksgiving on the 26th and the First Sunday of Advent on the 29th (both match 2026's calendar), and \"January 1, 2027\". It names the current chaplain, Fr. Frederick G. Betti, S.J. The Campus Ministry page's box is headed \"2025-26 Mass Schedule\", a stale label, but its times match the chapel page's. Captured 24 November 2026.",
+  "recheck_after": "2027-02-24"
+}
