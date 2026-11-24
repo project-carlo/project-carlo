@@ -1,0 +1,570 @@
+{
+  "schema_version": 1,
+  "parish_slug": "mother-of-divine-providence-king-of-prussia",
+  "status": "ready",
+  "as_of": "2026-11-15T16:41:25Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-24T00:08:17Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, King of Prussia. The newest (Nov 15) and prior (Nov 8) bulletins print the same schedule: Sat 4 PM vigil, Sun 8 & 10:30 AM, Mon-Sat 8 AM, Sat confession 3-3:45 PM, and Tuesday Adoration 8:30 AM-7 PM. Both bulletins are image-only PDFs, read from page renders. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "55f48616581fd8d0a26cb0920335a1508a949f58f6050a84926950315a0709d8",
+      "fetched_at": "2026-11-15T16:41:25Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "79a45b38ba63cf1ca4a3cd34c7e334e5fec460df0af63f5a26d2be2173c79ae9",
+      "fetched_at": "2026-11-08T15:52:51Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mother-of-divine-providence-king-of-prussia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 3,
+          "said": "Saturday Vigil: 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79a45b38",
+          "page": 3,
+          "said": "Saturday Vigil: 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 4,
+          "said": "Saturday, November 21, 2026 ... 4:00 PM Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box (Parish Devotions) of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mother-of-divine-providence-king-of-prussia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 3,
+          "said": "Sunday: 8:00 AM & 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79a45b38",
+          "page": 3,
+          "said": "Sunday: 8:00 AM & 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 4,
+          "said": "Sunday, November 22, 2026 8:00 AM Mass ... 10:30 AM Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mother-of-divine-providence-king-of-prussia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 3,
+          "said": "Sunday: 8:00 AM & 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79a45b38",
+          "page": 3,
+          "said": "Sunday: 8:00 AM & 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 4,
+          "said": "Sunday, November 22, 2026 8:00 AM Mass ... 10:30 AM Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mother-of-divine-providence-king-of-prussia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 3,
+          "said": "Monday through Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79a45b38",
+          "page": 3,
+          "said": "Monday through Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 4,
+          "said": "Mass intentions list an 8:00 AM Mass each day Monday-Saturday, November 16-21"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both bulletins read; each day's 8:00 AM Mass appears in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mother-of-divine-providence-king-of-prussia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 3,
+          "said": "Monday through Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79a45b38",
+          "page": 3,
+          "said": "Monday through Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 4,
+          "said": "Mass intentions list an 8:00 AM Mass each day Monday-Saturday, November 16-21"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both bulletins read; each day's 8:00 AM Mass appears in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mother-of-divine-providence-king-of-prussia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 3,
+          "said": "Monday through Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79a45b38",
+          "page": 3,
+          "said": "Monday through Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 4,
+          "said": "Mass intentions list an 8:00 AM Mass each day Monday-Saturday, November 16-21"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both bulletins read; each day's 8:00 AM Mass appears in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mother-of-divine-providence-king-of-prussia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 3,
+          "said": "Monday through Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79a45b38",
+          "page": 3,
+          "said": "Monday through Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 4,
+          "said": "Mass intentions list an 8:00 AM Mass each day Monday-Saturday, November 16-21"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both bulletins read; each day's 8:00 AM Mass appears in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mother-of-divine-providence-king-of-prussia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 3,
+          "said": "Monday through Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79a45b38",
+          "page": 3,
+          "said": "Monday through Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 4,
+          "said": "Mass intentions list an 8:00 AM Mass each day Monday-Saturday, November 16-21"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both bulletins read; each day's 8:00 AM Mass appears in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mother-of-divine-providence-king-of-prussia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 3,
+          "said": "Monday through Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79a45b38",
+          "page": 3,
+          "said": "Monday through Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 4,
+          "said": "Mass intentions list an 8:00 AM Mass each day Monday-Saturday, November 16-21"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both bulletins read; each day's 8:00 AM Mass appears in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mother-of-divine-providence-king-of-prussia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 3,
+          "said": "Sacrament of Reconciliation Saturday: 3:00 PM to 3:45 PM Also by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "79a45b38",
+          "page": 3,
+          "said": "Sacrament of Reconciliation Saturday: 3:00 PM to 3:45 PM Also by appointment."
+        }
+      ],
+      "rationale": "R1, R35: printed in the Sacraments box of both bulletins read; 'by appointment' adds no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mother-of-divine-providence-king-of-prussia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 7,
+          "said": "The Church is open for quiet prayer during Eucharistic Adoration Every Tuesday -- 8:30 am - 7 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79a45b38",
+          "page": 7,
+          "said": "The Church is open for quiet prayer during Eucharistic Adoration Every Tuesday -- 8:30 am - 7 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 3,
+          "said": "Eucharistic Adoration (Servants of the Blessed Sacrament) After 8:00 AM Mass until 7:00 PM each Tuesday."
+        },
+        {
+          "source": "agent",
+          "bulletin": "79a45b38",
+          "page": 3,
+          "said": "Eucharistic Adoration (Servants of the Blessed Sacrament) After 8:00 AM Mass until 7:00 PM each Tuesday."
+        }
+      ],
+      "rationale": "R1, R35, POLICY Times: the p7 box gives the clock time 8:30 am-7 pm, which agrees with p3's 'after 8:00 AM Mass' worked out per R10. The St. Monica prayer group (6:15 PM) and Legion of Mary rosary fall inside this period (R37).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 3,
+          "said": "Holydays and Holidays: As announced"
+        }
+      ],
+      "rationale": "R26, R17: 'As announced' gives no time, and neither bulletin read announces a holy day or holiday Mass (Thanksgiving not yet announced). Update mode will read the announcement.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 3,
+          "said": "Rosary After morning Mass (Monday through Saturday); Miraculous Medal Novena Prayers After Saturday morning Mass"
+        }
+      ],
+      "rationale": "R24: devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55f48616",
+          "page": 10,
+          "said": "Gaudeamus concerts and other Around the Archdiocese events at other parishes"
+        }
+      ],
+      "rationale": "R22: events at other parishes' churches; not this parish's.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
