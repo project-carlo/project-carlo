@@ -277,9 +277,8 @@ def _note_errors(note: Any, where: str) -> list[str]:
 # email address or a door code (docs/believed-schedules.md, "Notes"). Names
 # can't be told apart from a chapel's or a saint's: seed review is their check.
 _PHONE_RE = re.compile(r"(?<!\d)(?:\+?1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]\d{4}(?!\d)")
-# The local part starts only where a run of its characters does, so a long run
-# with no "@" is read once, not once from each of its characters.
-_EMAIL_RE = re.compile(r"(?<![\w.+-])[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
+# An email address's domain, matched from just after an "@" (`_holds_email`).
+_EMAIL_DOMAIN_RE = re.compile(r"[\w-]+(?:\.[\w-]+)+")
 # "code 4321", "code: 12#", "PIN is 0420", "combination 1-2-3", "4321#": three
 # digits or more after the word, or digits ending in # or *. "code needed, 2
 # doors" and "Room #205" name none.
@@ -301,9 +300,24 @@ _CLOCK_RE = re.compile(
 )
 
 
+def _holds_email(text: str) -> bool:
+    """Whether `text` holds `name@domain.tld`.
+
+    Read from each "@" rather than by one search for the whole address, which
+    would try every character as the start of its name.
+    """
+    at = text.find("@")
+    while at != -1:
+        named = at > 0 and (text[at - 1].isalnum() or text[at - 1] in "_.+-")
+        if named and _EMAIL_DOMAIN_RE.match(text, at + 1):
+            return True
+        at = text.find("@", at + 1)
+    return False
+
+
 def private_detail(text: str) -> str | None:
     """What in `text` looks like a person's contact or a door code, as an error's tail."""
-    if _EMAIL_RE.search(text):
+    if _holds_email(text):
         return "holds an email address; notes never carry contact details"
     if _PHONE_RE.search(text):
         return "holds a phone number; notes never carry contact details"
