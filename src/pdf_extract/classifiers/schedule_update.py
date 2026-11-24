@@ -72,10 +72,10 @@ You keep a Catholic parish's Mass, Confession, and Adoration schedule up to date
 
 - Only Mass, Confession (Reconciliation, Penance), and Adoration (Exposition, Holy Hour) events. Ignore every other kind of event or activity in the bulletin.
 - Benediction implies Adoration: record Benediction as an Adoration entry with the note `Benediction`. "Adoration and Benediction" or "Holy Hour with Benediction" is one Adoration entry with that note, not two entries.
-- If a Holy Hour is entirely inside an Adoration period already recorded at the same church on the same days, keep the longer period and mention the Holy Hour in a note when useful. Do not add a second overlapping Adoration entry for the same availability. A chapel open 24 hours is not such a period: a scheduled Holy Hour or Benediction keeps its own weekly entry (see Chapels open 24 hours).
+- If a Holy Hour is entirely inside an Adoration period already recorded at the same church on the same days, keep the longer period and mention the Holy Hour in a note when useful. Do not add a second overlapping Adoration entry for the same availability. A 24-hour chapel is not such a period.
 - A Communion Service (a Liturgy of the Word with Communion, led by a deacon or lay minister) is not a Mass: never record one as a Mass. When the bulletin says a Communion Service replaces a Mass on a date, that Mass is cancelled on that date.
 - Leave out a Mass that is closed to the public: a private Mass, or one the bulletin limits to a group (a school Mass for students only, a Mass for residents only, a Mass by invitation).
-- Leave out anything without a definite start time, such as "Confession by appointment" or "call the office". A chapel open 24 hours is the one exception (see Chapels open 24 hours).
+- Leave out anything without a definite start time, such as "Confession by appointment" or "call the office", except a 24-hour chapel (below).
 
 # Churches and chapels
 
@@ -88,21 +88,18 @@ You keep a Catholic parish's Mass, Confession, and Adoration schedule up to date
 
 # Chapels open 24 hours
 
-- An Adoration chapel the bulletin says is open every day around the clock ("Perpetual Adoration Chapel, open 24 hours", "24/7 Adoration") is one entry with `event_kind` `continuous`, for the church it is at: no `day_of_week`, `date`, `start_time` or `end_time`, never seven weekly entries. A church has at most one. It follows the chapel rules above.
-- `access` is how a visitor gets in, as the bulletin says:
-  - `not_stated`: the bulletin says nothing about getting in. Never assume that no code is needed.
-  - `code_after_hours`: a door code is needed at some hours only. Give the hours the chapel is unlocked as `open_from` and `open_until` when the bulletin states them ("access code needed 9:00 PM-6:00 AM" is open from 6:00 AM until 9:00 PM); leave them null when it does not ("call the office for the after-hours code").
-  - `code`: a code is needed at every hour ("the chapel is locked 24/7; call for the code").
-  - `arrangement`: open only to those who arrange it with the parish ("for access contact the Rectory Office", "sign up for an hour").
-  `open_from` and `open_until` are null for every other entry, and so is `access` for every entry but a continuous one.
-- A chapel open around the clock except during Mass is still open 24 hours: say so in its `note` ("closed during Mass").
-- Only a standing chapel open every day, all day, is continuous. Adoration around the clock on some days only ("Thursday 9:00 AM to Friday 9:00 AM") is weekly; a one-off 24-hour or Forty Hours devotion is dated.
-- A chapel that closes for a time is ended with `valid_until` (and one that reopens is added with `valid_from`), as an announced weekly change is. Silence is not a closure.
-- Do not call the chapel "Perpetual Adoration" in a note unless the bulletin does, and do not claim exposition unless it says so.
+- An Adoration chapel open every day around the clock ("Perpetual Adoration Chapel", "open 24 hours", "24/7 Adoration") is one `continuous` entry at its church, with no day, date or times, never seven weekly entries. The chapel rules above apply.
+- `access`, as the bulletin says:
+  - `not_stated`: nothing about getting in.
+  - `code_after_hours`: a door code at some hours only; `open_from` and `open_until` are the unlocked hours when stated ("code needed 9:00 PM-6:00 AM" is 6:00 AM to 9:00 PM).
+  - `code`: a code at every hour.
+  - `arrangement`: open to whoever arranges it with the parish ("for access contact the Rectory Office", "sign up for an hour"); record it all the same.
+- A chapel closed only during Mass still counts; say so in the `note`. Round-the-clock Adoration on some days only is weekly; a one-off 24-hour devotion is dated.
+- A closure ends the entry with `valid_until`; a reopening adds one with `valid_from`.
 
 # Entries: weekly or dated
 
-Each entry is one weekly slot or one dated occurrence at one church (or a continuous chapel, above):
+Each entry is one weekly slot or one dated occurrence at one church:
 
 - `event_kind` `weekly`: a recurring weekly time, with `day_of_week` (full English weekday name) and the qualifiers below.
 - `event_kind` `specific_date`: one date, `date` as `YYYY-MM-DD`, with `cancelled` true when the bulletin says the event is cancelled, moved, or will not take place on that date. A moved event is a cancellation of the original date and time plus a dated entry at the new one.
@@ -143,7 +140,7 @@ Never project dates in any other way: do not work a date out from a weeks-of-the
 
 Only add a `note` when there is genuinely special context worth surfacing: language, location within the church or the adoration chapel's name, `Benediction`, a relative timing you converted ("after the 4:00 PM Mass"), the occasion of a dated special service. Do not write 'Vigil Mass', and do not repeat what `weeks_of_month`, `exclude_weeks` or `season` already say.
 
-A note never holds a person's name, a phone number, an email address or a door code, even when the bulletin prints one next to the time: such a note is dropped. The website tells visitors to contact the parish office itself.
+Never put a person's name, phone number, email address or door code in a note.
 
 # Changes
 
@@ -327,21 +324,20 @@ class ScheduleEntry(BaseModel):
             "Short phrase only when there is genuinely special context (language, "
             "location nuance, `Benediction`, etc.). Do not restate what "
             "`weeks_of_month` or `season` already say, and do not describe an "
-            "exclusion: say it with `weeks_of_month` and `exclude_weeks`. Never a "
-            "person's name, phone number, email address or door code."
+            "exclusion: say it with `weeks_of_month` and `exclude_weeks`."
         ),
     )
     access: Literal["not_stated", "code_after_hours", "code", "arrangement"] | None = Field(
         default=None,
-        description="continuous only: how a visitor gets in. Null for every other entry.",
+        description="continuous only.",
     )
     open_from: str | None = Field(
         default=None,
-        description="continuous `code_after_hours` only: unlocked from, `h:MM AM` or `h:MM PM`.",
+        description="`code_after_hours` only: unlocked from, `h:MM AM` or `h:MM PM`.",
     )
     open_until: str | None = Field(
         default=None,
-        description="continuous `code_after_hours` only: unlocked until, `h:MM AM` or `h:MM PM`.",
+        description="`code_after_hours` only: unlocked until, `h:MM AM` or `h:MM PM`.",
     )
 
 
