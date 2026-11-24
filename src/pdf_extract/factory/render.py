@@ -224,6 +224,9 @@ Parked parishes (an issue waits for the owner; leave their records alone):
 ## Your job: seed `{inputs['parish']}`
 
 Draft `data/seeds/{inputs['parish']}.json`.
+
+This diocese's seeding precedents (`diocese.md`, *Seeding precedents*):
+{_precedents(Path(run['worktree']), run['diocese']) or '(none yet)'}
 """
     if stage == "seed-review":
         return _seed_review_input(ledger, run, inputs, values)
@@ -362,11 +365,16 @@ when you need one.
 {_playbook(worktree, diocese)}"""
 
 
+def _precedents(worktree: Path, diocese: str) -> str:
+    """`diocese.md`'s *Seeding precedents*: how this diocese's reviews settled questions."""
+    meta = diocese_dir(worktree, diocese) / "diocese.md"
+    return playbook.section(meta, playbook.PRECEDENTS) if meta.exists() else ""
+
+
 def _seed_review_input(ledger: Ledger, run: Any, inputs: dict[str, Any],
                        values: dict[str, str]) -> str:
     worktree, diocese, run_id = Path(run["worktree"]), run["diocese"], run["id"]
-    meta = diocese_dir(worktree, diocese) / "diocese.md"
-    precedents = playbook.section(meta, playbook.PRECEDENTS) if meta.exists() else ""
+    precedents = _precedents(worktree, diocese)
     redrafted = []
     for parish in inputs.get("redrafted") or []:
         row = ledger.one("SELECT v.problems FROM verdict v JOIN job j ON j.id = v.job_id "
@@ -374,8 +382,11 @@ def _seed_review_input(ledger: Ledger, run: Any, inputs: dict[str, Any],
                          run_id, parish)
         problems = "; ".join(json.loads(row["problems"])) if row else ""
         redrafted.append(f"{parish}, sent back for: {problems}")
+    batches = inputs.get("batches") or [inputs.get("batch")]
+    scope = (f"batch `{batches[0]}`" if len(batches) == 1
+             else "batches " + ", ".join(f"`{b}`" for b in batches))
     return f"""\
-## Your job: review the seeds of batch `{inputs.get('batch')}`
+## Your job: review the seeds of {scope}
 
 Parishes (`pnpm seed status` shows each one's status and open questions):
 {_lines(list(inputs.get('parishes') or []))}

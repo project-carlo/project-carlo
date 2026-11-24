@@ -509,7 +509,8 @@ def _sizes(parts: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def preview(ledger: Ledger, stage: str, run_id: str | None, *, repo: Path,
-            lessons_before_integrate: int, inputs: dict[str, Any] | None = None
+            lessons_before_integrate: int, seed_review_questions: int,
+            inputs: dict[str, Any] | None = None
             ) -> dict[str, Any]:
     """What the next attempt of a stage's job would be given, without running anything:
     the Run's unfinished job of that stage, else a new job with the inputs the plan would
@@ -529,9 +530,11 @@ def preview(ledger: Ledger, stage: str, run_id: str | None, *, repo: Path,
     existing = inputs is None and job is not None and job["stage"] == stage
     if not existing:
         if inputs is None:
-            nxt = next_job(ledger, run, lessons_before_integrate=lessons_before_integrate)
+            nxt = next_job(ledger, run, lessons_before_integrate=lessons_before_integrate,
+                           seed_review_questions=seed_review_questions)
             if nxt is None or nxt.stage != stage:  # e.g. map while integrate is due first
-                nxt = next_job(ledger, run, lessons_before_integrate=sys.maxsize)
+                nxt = next_job(ledger, run, lessons_before_integrate=sys.maxsize,
+                               seed_review_questions=0)
             inputs = nxt.inputs if nxt is not None and nxt.stage == stage else {}
         seq = 1 + len(ledger.jobs(run["id"]))
         job = {"id": None, "run_id": run["id"], "name": f"{seq:03d}-{stage}", "stage": stage,

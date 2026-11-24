@@ -131,7 +131,8 @@ class Fixture:
         review = self.add(self.seed, "seed-review", {"batch": "b1", "parishes": ["st-ann"]})
         self.verdict(review, drafted, "st-ann", "send_back", ["Slot s1 has no source.",
                                                                "Check the 9:00."])
-        self.add(self.seed, "seed-review", {"batch": "b1", "parishes": ["st-ann", "st-bede"],
+        self.add(self.seed, "seed-review", {"batch": "b2 +1 more", "batches": ["b2", "b1"],
+                                            "parishes": ["st-ann", "st-bede"],
                                             "redrafted": ["st-ann"]})
         assert seed_id
 

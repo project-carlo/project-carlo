@@ -49,6 +49,12 @@ timezone: America/New_York
 seed_ready_bulletins: 2
 seed_first_run_share: 0.8
 seed_follow_up_weeks: 6
+# Seeds are drafted a map batch at a time. seed-review reviews the parishes drafted since
+# its last job once they hold seed_review_questions open questions together, at the end
+# of a batch: enough to be worth a review's fixed cost, few enough to read each page
+# cited. The first batch is reviewed on its own (precedents early), a redraft at once,
+# and the rest when nothing is left to draft.
+seed_review_questions: 20
 # The second opinion on each seed (docs/seed-second-opinion-plan.md): gpt-6-luna reads each
 # parish's newest opinion_max_bulletins bulletins blind when its seed Run starts, at most
 # opinion_workers calls at once. A seed job whose gates pass waits up to

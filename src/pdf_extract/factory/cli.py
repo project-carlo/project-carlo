@@ -165,8 +165,10 @@ def _prompt(args: argparse.Namespace) -> Result:
         inputs = json.loads(args.input) if args.input else None
     except ValueError as exc:
         raise FactoryError(f"--input isn't JSON: {exc}") from None
+    config = load_config()
     return report.preview(_ledger(args, read_only=True), args.stage, args.run, repo=_repo(),
-                          lessons_before_integrate=load_config().lessons_before_integrate,
+                          lessons_before_integrate=config.lessons_before_integrate,
+                          seed_review_questions=config.seed_review_questions,
                           inputs=inputs)
 
 

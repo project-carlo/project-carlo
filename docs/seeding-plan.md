@@ -57,8 +57,9 @@ seed Run ─► seed job per parish ─► data/seeds/<parish>.json ─► seed-
    ([factory.md](factory.md#the-pipeline)), and runs one seed job per parish, a batch at a time.
 2. Each seed job drafts its parish and writes its seed file; the dispatcher
    checks it (`seed check`) and commits it.
-3. `seed-review` reviews the batch's seeds, answers every open question and
-   approves each seed, or sends it back to its drafter.
+3. `seed-review` reviews the seeds of a chunk of batches (the first batch alone,
+   then about `seed_review_questions` open questions at a time), answers every open
+   question and approves each seed, or sends it back to its drafter.
 4. The factory's PR lists every answer and why. The owner changes any in the
    labeler's Seeds view, then merges. Every pipeline command loads the approved
    seeds not yet in its database (see [Loading seeds](#loading-seeds)), so the
