@@ -1,5 +1,6 @@
 import hashlib
 import http.client
+import io
 import logging
 import sqlite3
 import threading
@@ -7,10 +8,13 @@ import time
 from collections import Counter
 from contextlib import contextmanager
 from datetime import date
+from email.message import Message
 from pathlib import Path
+from urllib.error import HTTPError
 
 import pytest
 
+import pdf_extract.fetch
 from pdf_extract.blobstore import bulletin_pdf_key, get_store
 from pdf_extract.db import create_db
 from pdf_extract.duplicates import Validators
@@ -636,7 +640,7 @@ def test_fetch_never_has_two_requests_in_flight_to_one_site(monkeypatch, db: Pat
 
     def build_link(bulletin_provider, fetch_provider_id, **_):
         if bulletin_provider == "parishes_online":
-            with request("parishesonline"):
+            with request("parishesonline.com"):
                 url = f"https://container.parishesonline.com/{fetch_provider_id}.pdf"
         else:
             with request("parish-two"):
@@ -644,7 +648,7 @@ def test_fetch_never_has_two_requests_in_flight_to_one_site(monkeypatch, db: Pat
         return BulletinLink(source_url=url, fetch_url=url)
 
     def download(*, fetch_url, source_url, validators=None):
-        site = "parishesonline" if "parishesonline" in fetch_url else "parish-two"
+        site = "container.parishesonline.com" if "parishesonline" in fetch_url else "parish-two"
         with request(site):
             return Download(pdf=f"%PDF {fetch_url}".encode())
 
@@ -654,9 +658,10 @@ def test_fetch_never_has_two_requests_in_flight_to_one_site(monkeypatch, db: Pat
     result = fetch_bulletins()
 
     assert result["fetched_bulletins"] == 3
-    assert most["parishesonline"] == 1
+    assert most["parishesonline.com"] == 1
+    assert most["container.parishesonline.com"] == 1
     assert most["parish-two"] == 1
-    assert most["*"] == 2, "the two sites were fetched at the same time"
+    assert most["*"] >= 2, "different sites were fetched at the same time"
 
 
 def test_fetch_fails_when_a_worker_crashes(monkeypatch, db: Path) -> None:
@@ -702,7 +707,9 @@ def test_fetch_stops_the_workers_when_recording_fails(monkeypatch, db: Path) -> 
     ("url", "site"),
     [
         ("https://parishesonline.com/organization/x", "parishes_online"),
-        ("https://container.parishesonline.com/bulletins/06/0144/x.pdf", "parishes_online"),
+        # The file host is CloudFront, not the directory's servers.
+        ("https://container.parishesonline.com/bulletins/06/0144/x.pdf",
+         "container.parishesonline.com"),
         ("https://files.ecatholic.com/20434/bulletins/x.pdf", "ecatholic"),
         ("https://bulletins.discovermass.com/download.php?bulletin=1", "discover_mass"),
         ("https://parishes.rcda.org/holycross/bulletin.php", "rcda.org"),
@@ -730,8 +737,8 @@ def test_fetch_counts_a_hosted_providers_parish_sites_as_the_provider() -> None:
 def test_fetch_waits_to_download_from_a_site_another_worker_holds(
     monkeypatch, db: Path,
 ) -> None:
-    # An "other" parish keeps its bulletin on ParishesOnline, which another
-    # worker is fetching a parish from.
+    # An "other" parish keeps its bulletin on ParishesOnline's file host, which
+    # another worker downloads a parish's bulletin from.
     sources = {
         "test-parish": FetchSource("other", "https://www.parish-one.org"),
         "test-parish-1": FetchSource("parishes_online", "second"),
@@ -759,20 +766,20 @@ def test_fetch_waits_to_download_from_a_site_another_worker_holds(
                 in_flight[site] -= 1
 
     def build_link(bulletin_provider, fetch_provider_id, **_):
-        site = "parishesonline" if bulletin_provider == "parishes_online" else "parish-one"
+        site = "parishesonline.com" if bulletin_provider == "parishes_online" else "parish-one"
         with request(site):
             url = f"https://container.parishesonline.com/{fetch_provider_id}.pdf"
         return BulletinLink(source_url=url, fetch_url=url)
 
     def download(*, fetch_url, source_url, validators=None):
-        with request("parishesonline"):
+        with request("container.parishesonline.com"):
             return Download(pdf=f"%PDF {fetch_url}".encode())
 
     monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
     monkeypatch.setattr("pdf_extract.fetch._download_bulletin", download)
 
     assert fetch_bulletins()["fetched_bulletins"] == 2
-    assert most["parishesonline"] == 1
+    assert most["container.parishesonline.com"] == 1
 
 
 def test_fetch_hands_a_parish_tried_again_to_another_worker(monkeypatch, db: Path) -> None:
@@ -941,3 +948,384 @@ def test_fetch_logs_a_workers_error_when_recording_fails(monkeypatch, db: Path, 
     with caplog.at_level(logging.ERROR), pytest.raises(sqlite3.OperationalError):
         fetch_bulletins()
     assert "worker broke" in caplog.text
+
+
+# ── ParishesOnline predicted addresses ──────────────────────────────────────
+
+PO_PROVIDER_ID = "st-james-church-15670"
+PO_PAGE = f"https://parishesonline.com/publication-page/{PO_PROVIDER_ID}"
+PO_FILES = "https://container.parishesonline.com/bulletins/03/0863"
+# The weekly run's day, and so its Sunday.
+PO_SUNDAY = date(2026, 11, 15)
+
+
+def _po(name: str) -> tuple[str, str]:
+    """An issue as the organization page links it: (publication page, PDF)."""
+    pdf = f"{PO_FILES}/{name}.pdf"
+    return f"{PO_PAGE}?selectedPublication={pdf}", pdf
+
+
+def _po_parish(monkeypatch, db: Path, *, stored: str | None = "20261108B") -> None:
+    """Make test-parish a ParishesOnline parish, with `stored` its last issue."""
+    monkeypatch.setattr(
+        "pdf_extract.fetch._resolve_fetch_source",
+        lambda parish: FetchSource("parishes_online", PO_PROVIDER_ID)
+        if parish["slug"] == "test-parish" else None,
+    )
+    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data, **_: data)
+    _fake_browser(monkeypatch)
+    if stored is not None:
+        _add_bulletin(
+            db, source_url=_po(stored)[0], content_hash=f"hash-{stored}",
+            fetched_at="2026-11-08T09:00:00Z",
+        )
+
+
+def _s3_missing(url: str) -> HTTPError:
+    """The file host's answer for a file that is not there: S3's own 403."""
+    headers = Message()
+    headers["Server"] = "AmazonS3"
+    headers["Content-Type"] = "application/xml"
+    body = (
+        b'<?xml version="1.0" encoding="UTF-8"?>\n'
+        b"<Error><Code>AccessDenied</Code><Message>Access Denied</Message></Error>"
+    )
+    return HTTPError(url, 403, "Forbidden", headers, io.BytesIO(body))
+
+
+def _po_host(
+    monkeypatch, files: dict[str, bytes], *, etags: dict[str, str] | None = None,
+    fails: dict[str, Exception] | None = None,
+):
+    """Serve `files` over HTTP like the file host: 403 for anything else, 304 for a
+    file asked for with its etag. Returns the URLs requested, a first-byte
+    request marked "(1 byte)"."""
+    requested: list[str] = []
+    etags, fails = etags or {}, fails or {}
+
+    def http_get(url, *, referer=None, extra_headers=None, **_):
+        headers = extra_headers or {}
+        requested.append(f"{url} (1 byte)" if headers.get("Range") == "bytes=0-0" else url)
+        if url in fails:
+            raise fails[url]
+        if url not in files:
+            raise _s3_missing(url)
+        if etags.get(url) and headers.get("If-None-Match") == etags[url]:
+            raise HTTPError(url, 304, "Not Modified", Message(), None)
+        body = files[url][:1] if headers.get("Range") == "bytes=0-0" else files[url]
+        return _Response(body, etag=etags.get(url))
+
+    monkeypatch.setattr("pdf_extract.fetch._http_get", http_get)
+    return requested
+
+
+def _po_browser(monkeypatch, issue: str | None) -> list[str]:
+    """Resolve in the "browser" to `issue`; returns the parishes resolved."""
+    calls: list[str] = []
+
+    def build_link(bulletin_provider, fetch_provider_id, **_):
+        calls.append(fetch_provider_id)
+        if issue is None:
+            raise AssertionError("resolved in the browser")
+        source_url, fetch_url = _po(issue)
+        return BulletinLink(source_url=source_url, fetch_url=fetch_url)
+
+    monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
+    return calls
+
+
+def _routes(result: dict[str, int]) -> tuple[int, int, int]:
+    return (
+        result["parishes_online_direct_hits"], result["parishes_online_direct_misses"],
+        result["parishes_online_not_predicted"],
+    )
+
+
+def test_fetch_takes_a_parishes_online_bulletin_at_its_predicted_address(
+    monkeypatch, db: Path,
+) -> None:
+    _po_parish(monkeypatch, db)
+    requested = _po_host(monkeypatch, {_po("20261115B")[1]: b"%PDF-1.4 this sunday"})
+    browser = _po_browser(monkeypatch, None)
+    _start_run(db, "run-1")
+
+    result = fetch_bulletins(run_id="run-1", today=PO_SUNDAY)
+
+    assert result["fetched_bulletins"] == 1
+    assert _routes(result) == (1, 0, 0)
+    assert browser == []
+    # Next Sunday's is not posted; the publication page is never asked for.
+    assert requested == [f"{_po('20261122B')[1]} (1 byte)", _po("20261115B")[1]]
+    newest = max(_bulletins(db), key=lambda b: b["id"])
+    assert newest["source_url"] == _po("20261115B")[0]
+    assert newest["content_hash"] == hashlib.sha256(b"%PDF-1.4 this sunday").hexdigest()
+    outcome = _results(db, "run-1")["test-parish"]
+    assert outcome["status"] == "new"
+    assert outcome["source_url"] == _po("20261115B")[0]
+    assert "predicted" in outcome["detail"]
+
+
+@pytest.mark.parametrize("page_pick", [
+    pytest.param("20261122B", id="listed"),
+    pytest.param("20261115B", id="not-listed-yet"),
+])
+def test_fetch_reads_the_page_when_next_sundays_parishes_online_bulletin_is_posted(
+    monkeypatch, db: Path, page_pick: str,
+) -> None:
+    # A file is on the host before its display date lists it on the page.
+    _po_parish(monkeypatch, db)
+    requested = _po_host(monkeypatch, {
+        _po("20261115B")[1]: b"%PDF-1.4 this sunday",
+        _po("20261122B")[1]: b"%PDF-1.4 next sunday",
+    })
+    browser = _po_browser(monkeypatch, page_pick)
+
+    result = fetch_bulletins(today=PO_SUNDAY)
+
+    assert _routes(result) == (0, 1, 0)
+    assert browser == [PO_PROVIDER_ID]
+    assert requested == [f"{_po('20261122B')[1]} (1 byte)", _po(page_pick)[1]]
+    assert max(_bulletins(db), key=lambda b: b["id"])["source_url"] == _po(page_pick)[0]
+
+
+@pytest.mark.parametrize("failure", [
+    pytest.param(TimeoutError("timed out"), id="timeout"),
+    pytest.param(HTTPError("x", 500, "Server Error", Message(), None), id="server-error"),
+    # CloudFront's own 403 (a bot check) is not S3 saying the file is not there.
+    pytest.param(HTTPError("x", 403, "Forbidden", Message(), None), id="cloudfront-403"),
+])
+def test_fetch_reads_the_page_when_the_file_host_will_not_say_next_sundays_is_missing(
+    monkeypatch, db: Path, failure: Exception,
+) -> None:
+    _po_parish(monkeypatch, db)
+    requested = _po_host(
+        monkeypatch, {_po("20261115B")[1]: b"%PDF-1.4 this sunday"},
+        fails={_po("20261122B")[1]: failure},
+    )
+    browser = _po_browser(monkeypatch, "20261115B")
+
+    result = fetch_bulletins(today=PO_SUNDAY)
+
+    assert _routes(result) == (0, 1, 0)
+    assert browser == [PO_PROVIDER_ID]
+    assert requested == [f"{_po('20261122B')[1]} (1 byte)", _po("20261115B")[1]]
+
+
+@pytest.mark.parametrize("served", [
+    pytest.param(None, id="not-there"),
+    pytest.param(b"<!DOCTYPE html><html><body>Access denied</body></html>", id="a-page"),
+    pytest.param(b"", id="empty"),
+    pytest.param(b"PK\x03\x04 not a pdf", id="not-a-pdf"),
+])
+def test_fetch_resolves_in_the_browser_when_the_predicted_address_serves_no_bulletin(
+    monkeypatch, db: Path, served: bytes | None,
+) -> None:
+    _po_parish(monkeypatch, db)
+    files = {_po("20261101B")[1]: b"%PDF-1.4 the page's pick"}
+    if served is not None:
+        files[_po("20261115B")[1]] = served
+    requested = _po_host(monkeypatch, files)
+    browser = _po_browser(monkeypatch, "20261101B")
+    _start_run(db, "run-1")
+
+    result = fetch_bulletins(run_id="run-1", today=PO_SUNDAY)
+
+    assert _routes(result) == (0, 1, 0)
+    assert browser == [PO_PROVIDER_ID]
+    assert requested == [
+        f"{_po('20261122B')[1]} (1 byte)", _po("20261115B")[1], _po("20261101B")[1],
+    ]
+    outcome = _results(db, "run-1")["test-parish"]
+    assert outcome["status"] == "new"
+    assert outcome["source_url"] == _po("20261101B")[0]
+    assert not outcome["detail"]
+
+
+def test_fetch_resolves_in_the_browser_before_the_runs_sunday(monkeypatch, db: Path) -> None:
+    # A Friday run's Sunday is the coming one, whose bulletin may be on the
+    # file host before its display date lists it.
+    _po_parish(monkeypatch, db)
+    requested = _po_host(monkeypatch, {_po("20261122B")[1]: b"%PDF-1.4 coming sunday"})
+    browser = _po_browser(monkeypatch, "20261122B")
+
+    result = fetch_bulletins(today=date(2026, 11, 20))
+
+    assert _routes(result) == (0, 0, 1)
+    assert browser == [PO_PROVIDER_ID]
+    assert requested == [_po("20261122B")[1]]
+
+
+def test_fetch_resolves_in_the_browser_a_parish_with_nothing_to_predict_from(
+    monkeypatch, db: Path,
+) -> None:
+    _po_parish(monkeypatch, db, stored=None)
+    requested = _po_host(monkeypatch, {
+        _po("20261115B")[1]: b"%PDF-1.4 this sunday",
+    })
+    browser = _po_browser(monkeypatch, "20261115B")
+
+    result = fetch_bulletins(today=PO_SUNDAY)
+
+    assert _routes(result) == (0, 0, 1)
+    assert browser == [PO_PROVIDER_ID]
+    assert requested == [_po("20261115B")[1]]
+
+
+def test_fetch_counts_no_route_for_other_providers(monkeypatch, db: Path) -> None:
+    _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+    _serve(monkeypatch, b"%PDF-1.4 fake")
+    _fake_browser(monkeypatch)
+
+    assert _routes(fetch_bulletins()) == (0, 0, 0)
+
+
+def test_fetch_asks_a_predicted_address_whether_the_copy_it_has_is_current(
+    monkeypatch, db: Path,
+) -> None:
+    # This week's bulletin, fetched before from its predicted address with
+    # an extractor date that could not be trusted, so it is fetched again.
+    _po_parish(monkeypatch, db, stored=None)
+    bulletin_id = _add_bulletin(
+        db, source_url=_po("20261115B")[0], content_hash="had",
+        fetched_at="2026-11-13T09:00:00Z",
+    )
+    conn = connect_db(db)
+    with conn:
+        conn.execute("UPDATE bulletin SET etag = '\"v1\"' WHERE id = ?", (bulletin_id,))
+    conn.close()
+    pdf = _po("20261115B")[1]
+    _po_host(monkeypatch, {pdf: b"%PDF-1.4 had"}, etags={pdf: '"v1"'})
+    _po_browser(monkeypatch, None)
+
+    result = fetch_bulletins(today=PO_SUNDAY)
+
+    assert result["unchanged_bulletins"] == 1
+    assert _routes(result) == (1, 0, 0)
+    assert [b["content_hash"] for b in _bulletins(db)] == ["had"]
+
+
+def test_fetch_downloads_a_predicted_bulletin_without_holding_parishes_online(
+    monkeypatch, db: Path,
+) -> None:
+    # test-parish's bulletin is at its predicted address; test-parish-1 has
+    # nothing to predict from, and is read from the organization page at the
+    # same time.
+    sources = {
+        "test-parish": FetchSource("parishes_online", PO_PROVIDER_ID),
+        "test-parish-1": FetchSource("parishes_online", "st-paul"),
+    }
+    monkeypatch.setattr(
+        "pdf_extract.fetch._resolve_fetch_source", lambda parish: sources.get(parish["slug"]),
+    )
+    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data, **_: data)
+    _fake_browser(monkeypatch)
+    _add_bulletin(
+        db, source_url=_po("20261108B")[0], content_hash="old",
+        fetched_at="2026-11-08T09:00:00Z",
+    )
+
+    lock = threading.Lock()
+    in_flight: Counter[str] = Counter()
+    most: Counter[str] = Counter()
+
+    @contextmanager
+    def request(site: str):
+        with lock:
+            in_flight[site] += 1
+            most[site] = max(most[site], in_flight[site])
+            most["*"] = max(most["*"], in_flight.total())
+        try:
+            time.sleep(0.3)
+            yield
+        finally:
+            with lock:
+                in_flight[site] -= 1
+
+    def http_get(url, **_):
+        with request("container.parishesonline.com"):
+            if url.endswith("20261115B.pdf"):
+                return _Response(f"%PDF-1.4 {url}".encode())
+            raise _s3_missing(url)
+
+    def build_link(bulletin_provider, fetch_provider_id, **_):
+        with request("parishesonline.com"):
+            pdf = "https://container.parishesonline.com/bulletins/03/0001/20261115B.pdf"
+        return BulletinLink(
+            source_url=f"https://parishesonline.com/publication-page/st-paul?selectedPublication={pdf}",
+            fetch_url=pdf,
+        )
+
+    monkeypatch.setattr("pdf_extract.fetch._http_get", http_get)
+    monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
+
+    result = fetch_bulletins(today=PO_SUNDAY)
+
+    assert result["fetched_bulletins"] == 2
+    assert _routes(result) == (1, 0, 1)
+    assert most["container.parishesonline.com"] == 1
+    assert most["parishesonline.com"] == 1
+    assert most["*"] == 2, "the directory was read while a predicted address was fetched"
+
+
+def test_a_missed_prediction_does_not_hold_its_worker_while_the_directory_is_busy(
+    monkeypatch, db: Path,
+) -> None:
+    # test-parish's prediction misses while test-parish-1's organization page
+    # is being read; its worker fetches test-parish-2 meanwhile, rather than
+    # waiting for the directory, and test-parish is read from the page after.
+    sources = {
+        "test-parish": FetchSource("parishes_online", PO_PROVIDER_ID),
+        "test-parish-1": FetchSource("parishes_online", "st-paul"),
+        "test-parish-2": FetchSource("other", "https://www.parish-two.org"),
+    }
+    monkeypatch.setattr(
+        "pdf_extract.fetch._resolve_fetch_source", lambda parish: sources.get(parish["slug"]),
+    )
+    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data, **_: data)
+    _fake_browser(monkeypatch)
+    _add_bulletin(
+        db, source_url=_po("20261108B")[0], content_hash="old",
+        fetched_at="2026-11-08T09:00:00Z",
+    )
+    st_paul = "https://container.parishesonline.com/bulletins/03/0001/20261115B.pdf"
+    parish_two = "https://www.parish-two.org/bulletin.pdf"
+    _po_host(monkeypatch, {
+        _po("20261101B")[1]: b"%PDF-1.4 the page's pick",
+        st_paul: b"%PDF-1.4 st paul", parish_two: b"%PDF-1.4 parish two",
+    })
+    host = pdf_extract.fetch._http_get
+    st_paul_opened = threading.Event()
+
+    def http_get(url, **kwargs):
+        if url == _po("20261122B")[1]:
+            assert st_paul_opened.wait(5)
+        return host(url, **kwargs)
+
+    monkeypatch.setattr("pdf_extract.fetch._http_get", http_get)
+    events: list[str] = []
+
+    def build_link(bulletin_provider, fetch_provider_id, **_):
+        if fetch_provider_id == "st-paul":
+            events.append("st-paul page opened")
+            st_paul_opened.set()
+            time.sleep(0.5)
+            events.append("st-paul page read")
+            return BulletinLink(
+                source_url=f"https://parishesonline.com/publication-page/st-paul?selectedPublication={st_paul}",
+                fetch_url=st_paul,
+            )
+        events.append(fetch_provider_id)
+        if fetch_provider_id == PO_PROVIDER_ID:
+            source_url, fetch_url = _po("20261101B")
+            return BulletinLink(source_url=source_url, fetch_url=fetch_url)
+        return BulletinLink(source_url=parish_two, fetch_url=parish_two)
+
+    monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
+
+    result = fetch_bulletins(today=PO_SUNDAY, workers=2)
+
+    assert result["fetched_bulletins"] == 3
+    assert _routes(result) == (0, 1, 1)
+    assert events == [
+        "st-paul page opened", "https://www.parish-two.org", "st-paul page read", PO_PROVIDER_ID,
+    ]

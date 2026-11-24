@@ -20,6 +20,7 @@ from pdf_extract.fetch import (
     _parse_ecatholic_pdf_date,
     _pick_latest_ecatholic_pdf_url,
     _pick_parishes_online_issue,
+    _predict_parishes_online_link,
     _resolve_ecatholic_latest_link,
     _resolve_fetch_source,
     _resolve_latest_anchor_link_with_playwright,
@@ -773,3 +774,172 @@ def test_parishes_online_prefers_the_weekly_bulletin_unless_it_is_stale() -> Non
     assert _pick_parishes_online_issue([issue("20261004F")]) == issue("20261004F")
     oldest_first = [issue("20260927B"), issue("20261004S"), issue("20261004B")]
     assert _pick_parishes_online_issue(oldest_first) == issue("20261004B")
+
+
+# ── ParishesOnline predicted addresses ──────────────────────────────────────
+
+_PO_PAGE = "https://parishesonline.com/publication-page/st-james-church-15670"
+_PO_FILES = "https://container.parishesonline.com/bulletins/03/0863"
+_PO_SOURCE = FetchSource(PARISHES_ONLINE_TYPE, "st-james-church-15670")
+# A Sunday run, as the weekly one is.
+_PO_SUNDAY = date(2026, 11, 15)
+
+
+def _po_issue(name: str, *, files: str = _PO_FILES, page: str = _PO_PAGE) -> tuple[str, str]:
+    """An issue as the organization page links it: (publication page, PDF)."""
+    pdf = f"{files}/{name}.pdf"
+    return f"{page}?selectedPublication={pdf}", pdf
+
+
+def _po_stored(name: str, **kwargs) -> dict:
+    source_url, _ = _po_issue(name, **kwargs)
+    return {
+        "id": 1, "source_url": source_url, "content_hash": "h", "published_date": None,
+        "fetched_at": "2026-11-08T09:00:00Z", "wrong_bulletin": 0,
+    }
+
+
+def _po_predicted(
+    stored: list[dict], sunday: date = _PO_SUNDAY, today: date | None = None,
+) -> tuple[tuple[str, str], tuple[str, ...]] | None:
+    prediction = _predict_parishes_online_link(_PO_SOURCE, stored, sunday, today or sunday)
+    if prediction is None:
+        return None
+    return (prediction.link.source_url, prediction.link.fetch_url), prediction.later
+
+
+def _po_direct_pick(listed: list[str], on_host: set[str]) -> tuple[str, str] | None:
+    """What the fetch stage takes directly on a Sunday run, predicted from the
+    oldest issue listed: this Sunday's bulletin, if it is on the file host and
+    no later one is."""
+    predicted = _po_predicted([_po_stored(min(listed))])
+    assert predicted is not None
+    (this_sunday, later) = predicted
+    hosted = {_po_issue(name)[1] for name in on_host}
+    if any(url in hosted for url in later) or this_sunday[1] not in hosted:
+        return None
+    return this_sunday
+
+
+def test_parishes_online_predicts_this_sundays_bulletin_and_checks_next_sundays() -> None:
+    assert _po_predicted([_po_stored("20261108B")]) == (
+        _po_issue("20261115B"), (_po_issue("20261122B")[1],),
+    )
+
+
+def test_parishes_online_predicted_link_is_the_one_the_page_gives() -> None:
+    # The page's own anchor for the issue, read the way the browser reads it.
+    href = "/publication-page/st-james-church-15670?selectedPublication=" + (
+        f"{_PO_FILES}/20261115B.pdf"
+    )
+    from_page = _extract_parishes_online_pdf_url_from_href(
+        href=href, provider_id="st-james-church-15670",
+        base_url="https://parishesonline.com/organization/st-james-church-15670",
+    )
+    predicted = _po_predicted([_po_stored("20261108B")])
+    assert predicted is not None and from_page == predicted[0]
+
+
+@pytest.mark.parametrize("today", [date(2026, 11, 15), date(2026, 11, 16), date(2026, 11, 18)])
+def test_parishes_online_predicts_on_and_after_the_runs_sunday(today: date) -> None:
+    predicted = _po_predicted([_po_stored("20261108B")], today=today)
+    assert predicted is not None and predicted[0] == _po_issue("20261115B")
+
+
+@pytest.mark.parametrize("today", [date(2026, 11, 19), date(2026, 11, 21)])
+def test_parishes_online_predicts_nothing_before_the_runs_sunday(today: date) -> None:
+    # `nearest_sunday` rounds Thursday on: this Sunday's bulletin may be on the
+    # file host before its display date lists it.
+    assert _po_predicted([_po_stored("20261108B")], date(2026, 11, 22), today) is None
+
+
+def test_parishes_online_predicts_from_the_newest_stored_bulletin() -> None:
+    older = _po_stored("20261025B", files="https://container.parishesonline.com/bulletins/03/0001")
+    newer = {**_po_stored("20261108B"), "id": 2}
+    older["published_date"], newer["published_date"] = "2026-10-25", "2026-11-08"
+    predicted = _po_predicted([older, newer])
+    assert predicted is not None and predicted[0][1] == f"{_PO_FILES}/20261115B.pdf"
+
+
+def test_parishes_online_predicts_from_a_special_issue_too() -> None:
+    # The account is the parish's whatever issue was stored last.
+    predicted = _po_predicted([_po_stored("20261108S")])
+    assert predicted is not None and predicted[0] == _po_issue("20261115B")
+
+
+@pytest.mark.parametrize("stored", [
+    pytest.param([], id="nothing-stored"),
+    pytest.param(
+        [_po_stored("20261108B", page="https://parishesonline.com/publication-page/st-paul")],
+        id="another-organization",
+    ),
+    pytest.param([{**_po_stored("20261108B"), "wrong_bulletin": 1}], id="wrong-bulletin"),
+    pytest.param(
+        [{**_po_stored("20261108B"), "source_url": f"{_PO_FILES}/20261108B.pdf"}],
+        id="pdf-without-its-page",
+    ),
+    pytest.param(
+        [{**_po_stored("20261108B"), "source_url": _po_stored("20261108B")["source_url"]
+          .replace("https://container", "https%3A%2F%2Fcontainer")}],
+        id="encoded-link",
+    ),
+    pytest.param(
+        [_po_stored("x", files="https://container.parishesonline.com/bulletins/03/0863/old")],
+        id="not-a-dated-issue",
+    ),
+    pytest.param(
+        [{**_po_stored("20261108B"), "source_url": "https://stjames.org/bulletin.pdf"}],
+        id="another-host",
+    ),
+])
+def test_parishes_online_predicts_nothing_without_a_stored_issue_to_go_by(
+    stored: list[dict],
+) -> None:
+    assert _po_predicted(stored) is None
+
+
+def test_parishes_online_predicts_nothing_for_another_provider() -> None:
+    other = FetchSource(ECATHOLIC_TYPE, "st-james-church-15670")
+    assert _predict_parishes_online_link(
+        other, [_po_stored("20261108B")], _PO_SUNDAY, _PO_SUNDAY,
+    ) is None
+
+
+# Each case: the issues the organization page lists, and the files on the
+# file host when that is not just those. A file is on the host before it is
+# listed, and stays there for years after.
+@pytest.mark.parametrize(("listed", "on_host"), [
+    pytest.param(["20261108B", "20261115B"], None, id="this-sunday"),
+    pytest.param(["20261108B", "20261115B", "20261122B"], None, id="next-sunday-listed"),
+    pytest.param(["20261108B", "20261115B"], {"20261108B", "20261115B", "20261122B"},
+                 id="next-sunday-not-listed-yet"),
+    pytest.param(["20261108B", "20261115B", "20261122S"], None, id="special-next-sunday"),
+    pytest.param(["20261108B", "20261115S", "20261115B"], None, id="special-same-sunday"),
+    pytest.param(["20261101B", "20261108B"], None, id="not-posted-yet"),
+    pytest.param(["20261101B", "20261108B"], {"20261025B", "20261101B", "20261108B"},
+                 id="old-issues-on-the-host"),
+    # A parish that stopped posting weekly bulletins: the page takes its
+    # newest insert, and no weekly address answers.
+    pytest.param(["20261018B", "20261108S", "20261115S"], None, id="specials-only"),
+    # Never seen: the page prefers an insert posted two weeks after this
+    # Sunday's bulletin, or a bulletin posted two weeks early.
+    pytest.param(["20261108B", "20261115B", "20261129S"], None, id="special-two-weeks-ahead",
+                 marks=pytest.mark.xfail(strict=True, reason="beyond the lag the page allows")),
+    pytest.param(["20261108B", "20261115B", "20261129B"], None, id="posted-two-weeks-early",
+                 marks=pytest.mark.xfail(strict=True, reason="beyond PARISHES_ONLINE_WEEKS_AHEAD")),
+])
+def test_parishes_online_direct_pick_is_the_pages_pick_or_none(
+    listed: list[str], on_host: set[str] | None,
+) -> None:
+    page_pick = _pick_parishes_online_issue([_po_issue(name) for name in reversed(listed)])
+    direct = _po_direct_pick(listed, set(listed) if on_host is None else on_host)
+    assert direct in (None, page_pick)
+
+
+@pytest.mark.parametrize("listed", [
+    ["20261108B", "20261115B"],
+    ["20261108B", "20261115B", "20261122S"],
+    ["20261108B", "20261115S", "20261115B"],
+])
+def test_parishes_online_direct_pick_takes_this_sundays_bulletin(listed: list[str]) -> None:
+    assert _po_direct_pick(listed, set(listed)) == _po_issue("20261115B")
