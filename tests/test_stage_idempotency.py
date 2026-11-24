@@ -437,6 +437,43 @@ def test_fetch_reports_a_download_over_the_limit_as_too_large(monkeypatch, db: P
     assert _results(db, "run-1")["test-parish"]["status"] == "too_large"
 
 
+def test_fetch_pauses_a_parish_whose_bulletin_is_on_a_paused_site(monkeypatch, db: Path) -> None:
+    _link_to(monkeypatch, "http://sponsors.bonventure.net/pdfs/1838/2026-11-22.pdf")
+    downloads = _serve(monkeypatch, b"%PDF-1.4 fake")
+    _fake_browser(monkeypatch)
+    _start_run(db, "run-1")
+
+    result = fetch_bulletins(parish_name="Test Parish", run_id="run-1")
+
+    assert downloads == []
+    assert result["paused_parishes"] == 1
+    assert result["failed_parishes"] == 0
+    assert _bulletins(db) == []
+    paused = _results(db, "run-1")["test-parish"]
+    assert paused["status"] == "paused"
+    assert paused["detail"] == "bonventure.net is paused"
+
+
+def test_fetch_does_not_resolve_a_recipe_on_a_paused_site(monkeypatch, db: Path) -> None:
+    links = _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+    downloads = _serve(monkeypatch, b"%PDF-1.4 fake")
+    monkeypatch.setattr(
+        "pdf_extract.fetch._resolve_fetch_source",
+        lambda parish: FetchSource(
+            "other", "https://test.org", "page-pdfs http://sponsors.bonventure.net/?page=1838",
+        ),
+    )
+    _fake_browser(monkeypatch)
+    _start_run(db, "run-1")
+
+    result = fetch_bulletins(parish_name="Test Parish", run_id="run-1")
+
+    assert links == [] and downloads == []
+    assert result["paused_parishes"] == 1
+    assert result["failed_parishes"] == 0
+    assert _results(db, "run-1")["test-parish"]["status"] == "paused"
+
+
 DISCOVER_MASS_CAP_PAGE = (
     b"Maximum number of files downloaded today. Please contact "
     b"<a href='https://discovermass.com/contact-us/'>Discover Mass</a> for support."
