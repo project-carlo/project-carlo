@@ -277,8 +277,6 @@ def _note_errors(note: Any, where: str) -> list[str]:
 # email address or a door code (docs/believed-schedules.md, "Notes"). Names
 # can't be told apart from a chapel's or a saint's: seed review is their check.
 _PHONE_RE = re.compile(r"(?<!\d)(?:\+?1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]\d{4}(?!\d)")
-# An email address's domain, matched from just after an "@" (`_holds_email`).
-_EMAIL_DOMAIN_RE = re.compile(r"[\w-]+(?:\.[\w-]+)+")
 # "code 4321", "code: 12#", "PIN is 0420", "combination 1-2-3", "4321#": three
 # digits or more after the word, or digits ending in # or *. "code needed, 2
 # doors" and "Room #205" name none.
@@ -303,13 +301,18 @@ _CLOCK_RE = re.compile(
 def _holds_email(text: str) -> bool:
     """Whether `text` holds `name@domain.tld`.
 
-    Read from each "@" rather than by one search for the whole address, which
-    would try every character as the start of its name.
+    Read from each "@", without a regular expression: a search for the whole
+    address would try every character as the start of its name.
     """
     at = text.find("@")
     while at != -1:
         named = at > 0 and (text[at - 1].isalnum() or text[at - 1] in "_.+-")
-        if named and _EMAIL_DOMAIN_RE.match(text, at + 1):
+        end = at + 1
+        while end < len(text) and (text[end].isalnum() or text[end] in "_.-"):
+            end += 1
+        # The domain: a label, a dot and another label ("example.org").
+        label, dot, rest = text[at + 1:end].partition(".")
+        if named and label and dot and rest[:1] not in ("", "."):
             return True
         at = text.find("@", at + 1)
     return False
