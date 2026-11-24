@@ -1,0 +1,1577 @@
+{
+  "schema_version": 1,
+  "parish_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+  "status": "ready",
+  "as_of": "2026-11-15T16:41:36Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-24T00:10:47Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (the shrine, with its Lower Shrine chapel). Both November 2026 bulletins and the shrine's Mass page agree: Sat 5 PM vigil, Sun 10 AM, third-Sunday noon Healing Mass Sep-May, Mon-Sat 8 AM and noon Masses, Mon-Sat confessions 10:45 AM and 4 PM, Thursday Adoration 8:30-4:45. Dated: Healing Mass confessions Nov 15 and The Light Is On (Dec 2, 5-7 PM). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "81d09ca138ef6efcbe97320b6851a7f0eb48aef131ff9a08ffe86d66d560b531",
+      "fetched_at": "2026-11-15T16:41:36Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4e9dc6636c4b778e2983e455348e5f481a2a79efe2c658b55b228237d23b950e",
+      "fetched_at": "2026-11-08T15:52:53Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "Saturday: Vigil Mass at 5:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "Saturday: Vigil Mass at 5:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Saturday, November 7, 2026 ... 5:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the SUNDAY MASS box of both bulletins and in both intention lists.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "Sunday: 10:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "Sunday: 10:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the SUNDAY MASS box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": "Healing Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "A Healing Mass takes place at noon on the third Sunday of every month from September through May"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Healing Mass: THIS SUNDAY! 12:00 p.m. Mass"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the schedule box names the third Sunday and the months September through May; the Nov 15 issue (a third Sunday) prints it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS Mass at 8:00 a.m. & 12:00 p.m. Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Mass Intentions for the Week ... 8:00 a.m. ... 12:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Saturday, November 14, 2026 8:00 a.m. Susan & Roger Gronert 12:00 p.m. Cresenzo Gallone"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Saturday, November 14, 2026 8:00 a.m. Susan & Roger Gronert 12:00 p.m. Cresenzo Gallone"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Saturday, November 21, 2026 8:00 a.m. ... 12:00 p.m. Joseph F. Aversa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Saturday, November 7, 2026 8:00 a.m. ... 12:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintritashrine.org/mass-times",
+          "said": "DAILY MASS SCHEDULE Monday through Saturday 8:00 a.m. 12:00 p.m. Noon"
+        }
+      ],
+      "rationale": "R1, R35: the weekday box's 8 AM and noon Masses are listed on every Saturday of both bulletins' intentions (Nov 7, 14, 21); the website says Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Saturday, November 14, 2026 8:00 a.m. Susan & Roger Gronert 12:00 p.m. Cresenzo Gallone"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Saturday, November 14, 2026 8:00 a.m. Susan & Roger Gronert 12:00 p.m. Cresenzo Gallone"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Saturday, November 21, 2026 8:00 a.m. ... 12:00 p.m. Joseph F. Aversa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Saturday, November 7, 2026 8:00 a.m. ... 12:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintritashrine.org/mass-times",
+          "said": "DAILY MASS SCHEDULE Monday through Saturday 8:00 a.m. 12:00 p.m. Noon"
+        }
+      ],
+      "rationale": "R1, R35: the weekday box's 8 AM and noon Masses are listed on every Saturday of both bulletins' intentions (Nov 7, 14, 21); the website says Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 3,
+          "said": "There will be no 4:00 p.m. Confessions on that day [Veterans Day, Wed Nov 11]"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintritashrine.org/mass-times",
+          "said": "THE SACRAMENT of RECONCILIATION Monday through Saturday 10:45 a.m. 4:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-24T00:13:09Z",
+            "current_because": "Mass-times page names the same schedule as both November 2026 bulletins (5 PM vigil, 10 AM Sunday, third-Sunday noon Healing Mass Sep-May, Thursday Adoration 8:30-4:45); no stale dates or old clergy.",
+            "bulletin": "81d09ca1",
+            "fits_because": "The newest bulletin (Nov 15, 2026) p1 prints the same Mass and confession times under WEEKDAY MASS & CONFESSIONS; the site only names the days (Monday through Saturday), and the intentions list 8 AM and noon Masses on Saturdays."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box prints the times under 'Weekday'; the shrine's own Mass page says Monday through Saturday, and the bulletin's 'weekday' Masses also run Saturdays. No end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 3,
+          "said": "There will be no 4:00 p.m. Confessions on that day [Veterans Day, Wed Nov 11]"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintritashrine.org/mass-times",
+          "said": "THE SACRAMENT of RECONCILIATION Monday through Saturday 10:45 a.m. 4:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-24T00:13:09Z",
+            "current_because": "Mass-times page names the same schedule as both November 2026 bulletins (5 PM vigil, 10 AM Sunday, third-Sunday noon Healing Mass Sep-May, Thursday Adoration 8:30-4:45); no stale dates or old clergy.",
+            "bulletin": "81d09ca1",
+            "fits_because": "The newest bulletin (Nov 15, 2026) p1 prints the same Mass and confession times under WEEKDAY MASS & CONFESSIONS; the site only names the days (Monday through Saturday), and the intentions list 8 AM and noon Masses on Saturdays."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box prints the times under 'Weekday'; the shrine's own Mass page says Monday through Saturday, and the bulletin's 'weekday' Masses also run Saturdays. No end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 3,
+          "said": "There will be no 4:00 p.m. Confessions on that day [Veterans Day, Wed Nov 11]"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintritashrine.org/mass-times",
+          "said": "THE SACRAMENT of RECONCILIATION Monday through Saturday 10:45 a.m. 4:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-24T00:13:09Z",
+            "current_because": "Mass-times page names the same schedule as both November 2026 bulletins (5 PM vigil, 10 AM Sunday, third-Sunday noon Healing Mass Sep-May, Thursday Adoration 8:30-4:45); no stale dates or old clergy.",
+            "bulletin": "81d09ca1",
+            "fits_because": "The newest bulletin (Nov 15, 2026) p1 prints the same Mass and confession times under WEEKDAY MASS & CONFESSIONS; the site only names the days (Monday through Saturday), and the intentions list 8 AM and noon Masses on Saturdays."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box prints the times under 'Weekday'; the shrine's own Mass page says Monday through Saturday, and the bulletin's 'weekday' Masses also run Saturdays. No end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 3,
+          "said": "There will be no 4:00 p.m. Confessions on that day [Veterans Day, Wed Nov 11]"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintritashrine.org/mass-times",
+          "said": "THE SACRAMENT of RECONCILIATION Monday through Saturday 10:45 a.m. 4:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-24T00:13:09Z",
+            "current_because": "Mass-times page names the same schedule as both November 2026 bulletins (5 PM vigil, 10 AM Sunday, third-Sunday noon Healing Mass Sep-May, Thursday Adoration 8:30-4:45); no stale dates or old clergy.",
+            "bulletin": "81d09ca1",
+            "fits_because": "The newest bulletin (Nov 15, 2026) p1 prints the same Mass and confession times under WEEKDAY MASS & CONFESSIONS; the site only names the days (Monday through Saturday), and the intentions list 8 AM and noon Masses on Saturdays."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box prints the times under 'Weekday'; the shrine's own Mass page says Monday through Saturday, and the bulletin's 'weekday' Masses also run Saturdays. No end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 3,
+          "said": "There will be no 4:00 p.m. Confessions on that day [Veterans Day, Wed Nov 11]"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintritashrine.org/mass-times",
+          "said": "THE SACRAMENT of RECONCILIATION Monday through Saturday 10:45 a.m. 4:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-24T00:13:09Z",
+            "current_because": "Mass-times page names the same schedule as both November 2026 bulletins (5 PM vigil, 10 AM Sunday, third-Sunday noon Healing Mass Sep-May, Thursday Adoration 8:30-4:45); no stale dates or old clergy.",
+            "bulletin": "81d09ca1",
+            "fits_because": "The newest bulletin (Nov 15, 2026) p1 prints the same Mass and confession times under WEEKDAY MASS & CONFESSIONS; the site only names the days (Monday through Saturday), and the intentions list 8 AM and noon Masses on Saturdays."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box prints the times under 'Weekday'; the shrine's own Mass page says Monday through Saturday, and the bulletin's 'weekday' Masses also run Saturdays. No end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 3,
+          "said": "There will be no 4:00 p.m. Confessions on that day [Veterans Day, Wed Nov 11]"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintritashrine.org/mass-times",
+          "said": "THE SACRAMENT of RECONCILIATION Monday through Saturday 10:45 a.m. 4:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-24T00:13:09Z",
+            "current_because": "Mass-times page names the same schedule as both November 2026 bulletins (5 PM vigil, 10 AM Sunday, third-Sunday noon Healing Mass Sep-May, Thursday Adoration 8:30-4:45); no stale dates or old clergy.",
+            "bulletin": "81d09ca1",
+            "fits_because": "The newest bulletin (Nov 15, 2026) p1 prints the same Mass and confession times under WEEKDAY MASS & CONFESSIONS; the site only names the days (Monday through Saturday), and the intentions list 8 AM and noon Masses on Saturdays."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box prints the times under 'Weekday'; the shrine's own Mass page says Monday through Saturday, and the bulletin's 'weekday' Masses also run Saturdays. No end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 3,
+          "said": "There will be no 4:00 p.m. Confessions on that day [Veterans Day, Wed Nov 11]"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintritashrine.org/mass-times",
+          "said": "THE SACRAMENT of RECONCILIATION Monday through Saturday 10:45 a.m. 4:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-24T00:13:09Z",
+            "current_because": "Mass-times page names the same schedule as both November 2026 bulletins (5 PM vigil, 10 AM Sunday, third-Sunday noon Healing Mass Sep-May, Thursday Adoration 8:30-4:45); no stale dates or old clergy.",
+            "bulletin": "81d09ca1",
+            "fits_because": "The newest bulletin (Nov 15, 2026) p1 prints the same Mass and confession times under WEEKDAY MASS & CONFESSIONS; the site only names the days (Monday through Saturday), and the intentions list 8 AM and noon Masses on Saturdays."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box prints the times under 'Weekday'; the shrine's own Mass page says Monday through Saturday, and the bulletin's 'weekday' Masses also run Saturdays. No end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 3,
+          "said": "There will be no 4:00 p.m. Confessions on that day [Veterans Day, Wed Nov 11]"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintritashrine.org/mass-times",
+          "said": "THE SACRAMENT of RECONCILIATION Monday through Saturday 10:45 a.m. 4:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-24T00:13:09Z",
+            "current_because": "Mass-times page names the same schedule as both November 2026 bulletins (5 PM vigil, 10 AM Sunday, third-Sunday noon Healing Mass Sep-May, Thursday Adoration 8:30-4:45); no stale dates or old clergy.",
+            "bulletin": "81d09ca1",
+            "fits_because": "The newest bulletin (Nov 15, 2026) p1 prints the same Mass and confession times under WEEKDAY MASS & CONFESSIONS; the site only names the days (Monday through Saturday), and the intentions list 8 AM and noon Masses on Saturdays."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box prints the times under 'Weekday'; the shrine's own Mass page says Monday through Saturday, and the bulletin's 'weekday' Masses also run Saturdays. No end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 3,
+          "said": "There will be no 4:00 p.m. Confessions on that day [Veterans Day, Wed Nov 11]"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintritashrine.org/mass-times",
+          "said": "THE SACRAMENT of RECONCILIATION Monday through Saturday 10:45 a.m. 4:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-24T00:13:09Z",
+            "current_because": "Mass-times page names the same schedule as both November 2026 bulletins (5 PM vigil, 10 AM Sunday, third-Sunday noon Healing Mass Sep-May, Thursday Adoration 8:30-4:45); no stale dates or old clergy.",
+            "bulletin": "81d09ca1",
+            "fits_because": "The newest bulletin (Nov 15, 2026) p1 prints the same Mass and confession times under WEEKDAY MASS & CONFESSIONS; the site only names the days (Monday through Saturday), and the intentions list 8 AM and noon Masses on Saturdays."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box prints the times under 'Weekday'; the shrine's own Mass page says Monday through Saturday, and the bulletin's 'weekday' Masses also run Saturdays. No end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 3,
+          "said": "There will be no 4:00 p.m. Confessions on that day [Veterans Day, Wed Nov 11]"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintritashrine.org/mass-times",
+          "said": "THE SACRAMENT of RECONCILIATION Monday through Saturday 10:45 a.m. 4:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-24T00:13:09Z",
+            "current_because": "Mass-times page names the same schedule as both November 2026 bulletins (5 PM vigil, 10 AM Sunday, third-Sunday noon Healing Mass Sep-May, Thursday Adoration 8:30-4:45); no stale dates or old clergy.",
+            "bulletin": "81d09ca1",
+            "fits_because": "The newest bulletin (Nov 15, 2026) p1 prints the same Mass and confession times under WEEKDAY MASS & CONFESSIONS; the site only names the days (Monday through Saturday), and the intentions list 8 AM and noon Masses on Saturdays."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box prints the times under 'Weekday'; the shrine's own Mass page says Monday through Saturday, and the bulletin's 'weekday' Masses also run Saturdays. No end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 3,
+          "said": "There will be no 4:00 p.m. Confessions on that day [Veterans Day, Wed Nov 11]"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintritashrine.org/mass-times",
+          "said": "THE SACRAMENT of RECONCILIATION Monday through Saturday 10:45 a.m. 4:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-24T00:13:09Z",
+            "current_because": "Mass-times page names the same schedule as both November 2026 bulletins (5 PM vigil, 10 AM Sunday, third-Sunday noon Healing Mass Sep-May, Thursday Adoration 8:30-4:45); no stale dates or old clergy.",
+            "bulletin": "81d09ca1",
+            "fits_because": "The newest bulletin (Nov 15, 2026) p1 prints the same Mass and confession times under WEEKDAY MASS & CONFESSIONS; the site only names the days (Monday through Saturday), and the intentions list 8 AM and noon Masses on Saturdays."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box prints the times under 'Weekday'; the shrine's own Mass page says Monday through Saturday, and the bulletin's 'weekday' Masses also run Saturdays. No end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 1,
+          "said": "WEEKDAY MASS & CONFESSIONS ... Confessions at 10:45 a.m. & 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 3,
+          "said": "There will be no 4:00 p.m. Confessions on that day [Veterans Day, Wed Nov 11]"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintritashrine.org/mass-times",
+          "said": "THE SACRAMENT of RECONCILIATION Monday through Saturday 10:45 a.m. 4:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-24T00:13:09Z",
+            "current_because": "Mass-times page names the same schedule as both November 2026 bulletins (5 PM vigil, 10 AM Sunday, third-Sunday noon Healing Mass Sep-May, Thursday Adoration 8:30-4:45); no stale dates or old clergy.",
+            "bulletin": "81d09ca1",
+            "fits_because": "The newest bulletin (Nov 15, 2026) p1 prints the same Mass and confession times under WEEKDAY MASS & CONFESSIONS; the site only names the days (Monday through Saturday), and the intentions list 8 AM and noon Masses on Saturdays."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box prints the times under 'Weekday'; the shrine's own Mass page says Monday through Saturday, and the bulletin's 'weekday' Masses also run Saturdays. No end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Shrine Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Please prayerfully consider stopping by the Lower Shrine Chapel to join us on Thursdays between 8:30 a.m. and 4:45 p.m. for Adoration of the Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Please prayerfully consider stopping by the Lower Shrine Chapel to join us on Thursdays between 8:30 a.m. and 4:45 p.m. for Adoration of the Blessed Sacrament."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; the Lower Shrine is in the shrine building (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Shrine, before the Healing Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 2,
+          "said": "Healing Mass: THIS SUNDAY! 12:00 p.m. Mass 11:30 a.m. Confessions (Lower Shrine)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e9dc663",
+          "page": 2,
+          "said": "Healing Mass: November 15, 2026 ... 11:30 a.m. Confessions (Lower Shrine)"
+        }
+      ],
+      "rationale": "R1, R16, POLICY Weekly or dated rule 3: given only for this dated Healing Mass (not named as a monthly confession), on as_of's date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "national-shrine-of-st-rita-of-cascia-philadelphia",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "17:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "The Light Is On for You, Upper Shrine"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 4,
+          "said": "Join us in the Upper Shrine on Wednesday, December 2, 2026, from 5:00 p.m. to 7:00 p.m. ... receive the Sacrament of Reconciliation, speak with a priest"
+        }
+      ],
+      "rationale": "R1, R16: a dated confession evening after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "SACRAMENT OF MARRIAGE & FUNERALS Arrangements made by appointment."
+        }
+      ],
+      "rationale": "R24, R26: weddings and funerals by appointment; no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81d09ca1",
+          "page": 1,
+          "said": "Novena to Saint Rita at all Masses on Wednesdays"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintritashrine.org/mass-times",
+          "said": "Monday through Friday at 11:30 a.m. in the Upper Shrine for the Recitation of the Holy Rosary"
+        }
+      ],
+      "rationale": "R24: novenas and the weekday Rosary are devotions, not Mass, Confession or Adoration; the Masses themselves are recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
