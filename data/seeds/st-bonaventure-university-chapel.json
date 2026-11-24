@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-bonaventure-university-chapel",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-24T21:15:59+00:00",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-24T21:15:45Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:claude-opus-5.5@55322860",
+  "approved_at": "2026-11-24T21:42:54Z",
   "summary": "One church, the University Chapel in Doyle Hall. University Ministries' page gives Sunday Masses at 11 AM and 7 PM there. The weekday 12:30 PM Mass (Great Room, McGinley-Carney Center) and Friday confession (Interfaith Prayer Tower) are in other buildings, so they are left out. Open: a Sunday 6-6:45 PM time under the Confession Schedule heading, in the Eucharistic Chapel of Doyle Hall. The Masses are offered during the academic year; the page gives no summer schedule.",
   "blocked_reason": null,
   "bulletins": [],
@@ -282,9 +282,22 @@
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-university-chapel",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Eucharistic Chapel, Doyle Hall"
+      },
       "page": null,
       "sources": [
         {
@@ -294,7 +307,7 @@
           "said": "Confession Schedule Fridays, 1-1:30 p.m. (Following daily Mass) Interfaith Prayer Tower, University Ministries Sundays, 6-6:45 p.m. Eucharistic Chapel, Doyle Hall"
         }
       ],
-      "rationale": "The times sit under the box's Confession Schedule heading, each followed by its place, as the Mass times are; the Sunday time is in Doyle Hall, before the 7 PM Mass. The text has no word for the service itself, so it is asked.",
+      "rationale": "The page's HTML puts this time in its Confessions accordion, under \"Confession Schedule\", as its own paragraph: \"Sundays, 6-6:45 p.m.\" then \"Eucharistic Chapel, Doyle Hall\" (the University Chapel's building). The captured text loses the accordion heading, so it is asked; leaning include.",
       "question": "Add Sunday 6-6:45 PM Confession in the Eucharistic Chapel, Doyle Hall (the University Chapel's building)?",
       "options": [
         {
@@ -320,7 +333,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:claude-opus-5.5@55322860",
+        "at": "2026-11-24T21:42:54Z"
+      }
     }
   ],
   "kind": "source",
