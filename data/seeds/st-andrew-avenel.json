@@ -1,0 +1,472 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-andrew-avenel",
+  "status": "approved",
+  "as_of": "2026-11-15T16:19:27Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T23:34:18Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:34Z",
+  "summary": "One church. Both November 2026 bulletins print Sat 4 PM and Sun 8, 10, 11:30 AM in the schedule box and an 8 AM Mass Mon-Fri in the intentions. The parish website (current) adds Saturday 3 PM Confession and a first-Saturday 8 AM Mass, which no read bulletin's week could show. No Adoration found. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "fc913c66865606fec3b01a4dc0716a24e24251890729038e79de67f86bda190a",
+      "fetched_at": "2026-11-15T16:19:27Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "0fad97456a9ce9d26c417a374716222c092854a17c28bfe88f7b052db7644fa1",
+      "fetched_at": "2026-11-08T15:44:14Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-avenel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc913c66",
+          "page": 1,
+          "said": "MASS SCHEDULE SATURDAY VIGIL: 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fad9745",
+          "page": 1,
+          "said": "MASS SCHEDULE SATURDAY VIGIL: 4:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read (Nov 8 and Nov 15) and in their intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-avenel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc913c66",
+          "page": 1,
+          "said": "SUNDAY: 8:00AM, 10:00AM & 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fad9745",
+          "page": 1,
+          "said": "SUNDAY: 8:00AM, 10:00AM & 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-avenel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc913c66",
+          "page": 1,
+          "said": "SUNDAY: 8:00AM, 10:00AM & 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fad9745",
+          "page": 1,
+          "said": "SUNDAY: 8:00AM, 10:00AM & 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-avenel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc913c66",
+          "page": 1,
+          "said": "SUNDAY: 8:00AM, 10:00AM & 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fad9745",
+          "page": 1,
+          "said": "SUNDAY: 8:00AM, 10:00AM & 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-avenel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc913c66",
+          "page": 2,
+          "said": "Mass Intentions Mon 11/16 ... Fri 11/20 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fad9745",
+          "page": 2,
+          "said": "Mass Intentions Mon 11/9 ... Fri 11/13 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.standrewparish.com/",
+          "said": "Mon Fri 8:00 AM English"
+        }
+      ],
+      "rationale": "R35: the 8:00 AM weekday Mass is in the intentions Monday to Friday in both bulletins (different weeks), not marked special; the schedule box lists weekends only, and the parish website's Mass Times list Mon-Fri 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-avenel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc913c66",
+          "page": 2,
+          "said": "Mass Intentions Mon 11/16 ... Fri 11/20 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fad9745",
+          "page": 2,
+          "said": "Mass Intentions Mon 11/9 ... Fri 11/13 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.standrewparish.com/",
+          "said": "Mon Fri 8:00 AM English"
+        }
+      ],
+      "rationale": "R35: the 8:00 AM weekday Mass is in the intentions Monday to Friday in both bulletins (different weeks), not marked special; the schedule box lists weekends only, and the parish website's Mass Times list Mon-Fri 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-avenel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc913c66",
+          "page": 2,
+          "said": "Mass Intentions Mon 11/16 ... Fri 11/20 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fad9745",
+          "page": 2,
+          "said": "Mass Intentions Mon 11/9 ... Fri 11/13 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.standrewparish.com/",
+          "said": "Mon Fri 8:00 AM English"
+        }
+      ],
+      "rationale": "R35: the 8:00 AM weekday Mass is in the intentions Monday to Friday in both bulletins (different weeks), not marked special; the schedule box lists weekends only, and the parish website's Mass Times list Mon-Fri 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-avenel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc913c66",
+          "page": 2,
+          "said": "Mass Intentions Mon 11/16 ... Fri 11/20 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fad9745",
+          "page": 2,
+          "said": "Mass Intentions Mon 11/9 ... Fri 11/13 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.standrewparish.com/",
+          "said": "Mon Fri 8:00 AM English"
+        }
+      ],
+      "rationale": "R35: the 8:00 AM weekday Mass is in the intentions Monday to Friday in both bulletins (different weeks), not marked special; the schedule box lists weekends only, and the parish website's Mass Times list Mon-Fri 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-avenel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc913c66",
+          "page": 2,
+          "said": "Mass Intentions Mon 11/16 ... Fri 11/20 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fad9745",
+          "page": 2,
+          "said": "Mass Intentions Mon 11/9 ... Fri 11/13 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.standrewparish.com/",
+          "said": "Mon Fri 8:00 AM English"
+        }
+      ],
+      "rationale": "R35: the 8:00 AM weekday Mass is in the intentions Monday to Friday in both bulletins (different weeks), not marked special; the schedule box lists weekends only, and the parish website's Mass Times list Mon-Fri 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-avenel",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.standrewparish.com/confession-times",
+          "said": "Confession Times Saturday : 3:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-19T23:35:40Z",
+            "current_because": "Checked 2026-11-19: the parish's own eCatholic site; its homepage lists the same weekend and weekday Mass times as the November 2026 bulletins and a calendar event for Nov 9-19, 2026 with the current pastor Fr. David Kosmoski.",
+            "bulletin": "fc913c66",
+            "fits_because": "The bulletins print no Confession times at all; Saturday 3:00 PM sits just before the 4:00 PM Vigil the newest bulletin prints, and nothing in it contradicts it."
+          }
+        }
+      ],
+      "rationale": "R6: the parish website's Confession Times page gives Saturday 3:00 PM; the bulletins print no Confession schedule. No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-avenel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.standrewparish.com/",
+          "said": "1st Saturday : 8:00 AM English",
+          "schedule_check": {
+            "checked_at": "2026-11-19T23:35:40Z",
+            "current_because": "Checked 2026-11-19: the parish's own site; its Mass Times match the November 2026 bulletins exactly and its calendar holds a Nov 9-19, 2026 event with the current pastor Fr. David Kosmoski.",
+            "bulletin": "fc913c66",
+            "fits_because": "Neither bulletin's week holds a first Saturday (Nov 14 is the second, Nov 21 the third), so their Saturday intentions (Vigil only) cannot show it; the 8:00 AM time matches the parish's weekday Mass."
+          }
+        }
+      ],
+      "rationale": "R6, R11: the website's Mass Times list a 1st Saturday 8:00 AM Mass. Neither read bulletin covers a first Saturday, so their silence is no conflict.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

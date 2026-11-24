@@ -1,0 +1,697 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-of-czestochowa-bound-brook",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:23Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:41:38Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:46Z",
+  "summary": "One church. The page 1 schedule box is identical in both bulletins (Nov 8 and Nov 15, 2026, image-only): Sat 5 PM, Sun 9 AM and 11 AM Polish, Mon-Sat 8:30 AM, Saturday confessions 8-8:30 AM and 4-4:45 PM, Friday Adoration after Mass to noon, Tuesday novenas with Benediction. Forty Hours Adoration on Nov 15 is the only dated entry in scope. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "bc52f8f75e76af3be612ba88418e3801f5463ef06e4fa50a52c7def2ca48545c",
+      "fetched_at": "2026-11-15T16:51:23Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "23e15860a401ff5edd15538b3a7180631469c9f57c8289ca4f9c8071038fa9a9",
+      "fetched_at": "2026-11-08T15:59:50Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-czestochowa-bound-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 1,
+          "said": "SATURDAY EVE: 5:00 p.m. (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 1,
+          "said": "SATURDAY EVE: 5:00 p.m. (English)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the intentions list Saturday 5:00PM Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-czestochowa-bound-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 1,
+          "said": "SUNDAY: 9:00 a.m. (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 1,
+          "said": "SUNDAY: 9:00 a.m. (English)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-czestochowa-bound-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 1,
+          "said": "SUNDAY: ... 11:00 a.m. (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 1,
+          "said": "SUNDAY: ... 11:00 a.m. (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-czestochowa-bound-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 1,
+          "said": "WEEKDAY MASS: 8:30 a.m. (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 1,
+          "said": "WEEKDAY MASS: 8:30 a.m. (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 2,
+          "said": "Mass intentions list 8:30AM Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 2,
+          "said": "Mass intentions list 8:30AM Monday to Friday"
+        }
+      ],
+      "rationale": "R1: weekday Mass in the schedule box of both bulletins, with intentions every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-czestochowa-bound-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 1,
+          "said": "WEEKDAY MASS: 8:30 a.m. (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 1,
+          "said": "WEEKDAY MASS: 8:30 a.m. (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 2,
+          "said": "Mass intentions list 8:30AM Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 2,
+          "said": "Mass intentions list 8:30AM Monday to Friday"
+        }
+      ],
+      "rationale": "R1: weekday Mass in the schedule box of both bulletins, with intentions every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-czestochowa-bound-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 1,
+          "said": "WEEKDAY MASS: 8:30 a.m. (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 1,
+          "said": "WEEKDAY MASS: 8:30 a.m. (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 2,
+          "said": "Mass intentions list 8:30AM Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 2,
+          "said": "Mass intentions list 8:30AM Monday to Friday"
+        }
+      ],
+      "rationale": "R1: weekday Mass in the schedule box of both bulletins, with intentions every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-czestochowa-bound-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 1,
+          "said": "WEEKDAY MASS: 8:30 a.m. (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 1,
+          "said": "WEEKDAY MASS: 8:30 a.m. (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 2,
+          "said": "Mass intentions list 8:30AM Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 2,
+          "said": "Mass intentions list 8:30AM Monday to Friday"
+        }
+      ],
+      "rationale": "R1: weekday Mass in the schedule box of both bulletins, with intentions every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-czestochowa-bound-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 1,
+          "said": "WEEKDAY MASS: 8:30 a.m. (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 1,
+          "said": "WEEKDAY MASS: 8:30 a.m. (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 2,
+          "said": "Mass intentions list 8:30AM Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 2,
+          "said": "Mass intentions list 8:30AM Monday to Friday"
+        }
+      ],
+      "rationale": "R1: weekday Mass in the schedule box of both bulletins, with intentions every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-czestochowa-bound-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 14 8:30AM For Our Parishioners; SATURDAY, NOVEMBER 21 8:30AM Jule Lasowski"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 7 8:30AM For the Souls in Purgatory; SATURDAY, NOVEMBER 14 8:30AM For Our Parishioners"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 1,
+          "said": "WEEKDAY MASS: 8:30 a.m. (English)"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: a Saturday 8:30AM Mass is in the intentions of every Saturday across both bulletins (Nov 7, 14, 21), matching the schedule box's 8:30 weekday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-czestochowa-bound-brook",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 1,
+          "said": "CONFESSIONS: Saturday: 8:00 - 8:30 a.m.; 4:00 - 4:45 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 1,
+          "said": "CONFESSIONS: Saturday: 8:00 - 8:30 a.m.; 4:00 - 4:45 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-czestochowa-bound-brook",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 1,
+          "said": "CONFESSIONS: Saturday: 8:00 - 8:30 a.m.; 4:00 - 4:45 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 1,
+          "said": "CONFESSIONS: Saturday: 8:00 - 8:30 a.m.; 4:00 - 4:45 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-czestochowa-bound-brook",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 1,
+          "said": "ADORATION: Friday after 8:30 a.m Mass until 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 1,
+          "said": "ADORATION: Friday after 8:30 a.m Mass until 12:00pm"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; after a weekday Mass starts 30 minutes after it (9:00), ending at the printed 12:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-czestochowa-bound-brook",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction with Novenas, after the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 1,
+          "said": "NOVENAS (To Our Lady of the Miraculous Medal, St. Joseph and St. Jude Thaddeus) WITH BENEDICTION: Tuesday after 8:30 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 1,
+          "said": "NOVENAS (To Our Lady of the Miraculous Medal, St. Joseph and St. Jude Thaddeus) WITH BENEDICTION: Tuesday after 8:30 a.m. Mass"
+        }
+      ],
+      "rationale": "R1, R10, POLICY (Benediction implies Adoration): printed in both bulletins; after a weekday Mass is 30 minutes after it starts, 9:00 AM; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-czestochowa-bound-brook",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "12:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Forty Hours Devotions; after the 11:00 AM Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 4,
+          "said": "Forty Hours Devotions 2026 Sunday, November 15 Exposition of the Most Blessed Sacrament following the 11:00am Mass; Adoration until 4:00pm. Solemn Vespers at 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 4,
+          "said": "Sunday, November 15 Exposition ... following the 11:00am Mass; Adoration until 4:00pm."
+        }
+      ],
+      "rationale": "R1, R10, R16: dated on as_of's date; after a Sunday Mass starts an hour after it (12:00), ending at the printed 4:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 1,
+          "said": "HOLY DAYS OF OBLIGATION Vigil Mass: 7:00 p.m. (English) Holy Day: 9:00 a.m. (English) 7:00 p.m. (Polish)"
+        }
+      ],
+      "rationale": "R16, POLICY Dates: generic holy-day times with no date pinned; holy days are dated, and none is printed with a date in either bulletin. Update mode will read the dated holy days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-czestochowa-bound-brook",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-13",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Forty Hours Devotions, English"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e15860",
+          "page": 4,
+          "said": "Friday, November 13 ... evening Mass in English at 7:00pm"
+        }
+      ],
+      "rationale": "R16: dated before as_of; out of seed scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc52f8f7",
+          "page": 1,
+          "said": "HOLY ROSARY: Monday - Saturday 8:00 a.m. CHAPLET OF DIVINE MERCY: Mon. - Sat., 9:00 a.m."
+        }
+      ],
+      "rationale": "R24: Rosary and Chaplet are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

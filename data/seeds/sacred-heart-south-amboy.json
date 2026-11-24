@@ -1,0 +1,675 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-south-amboy",
+  "status": "approved",
+  "as_of": "2026-11-15T16:04:57Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T23:26:25Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:28Z",
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: Sat 4 PM, Sun 7, 9 (Polish), 10:30, 12, 2 PM (Spanish), Mon-Sat 8 AM; Confession Sat 3 PM and first Fridays 6 PM October-May. No open questions; confession 'before morning Mass' has no clock time and is left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7ae3f10683eb2ac1d22b33e26a0970518cb7e50d4dee8f80a0df507129d91615",
+      "fetched_at": "2026-11-15T16:04:57Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e1540a48c42e109bfdcfb168ebd1f2c3e4e14b9923e13e99e659a3fdf0158c8b",
+      "fetched_at": "2026-11-08T15:31:58Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 1,
+          "said": "Saturday evening: 4:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 1,
+          "said": "Saturday evening: 4:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 2,
+          "said": "Saturday, November 21 ... 4:00pm + Melissa Zrebiec-Charter"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 2,
+          "said": "Saturday, November 21 ... 4:00pm + Melissa Zrebiec-Charter"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read (Nov 8 and Nov 15) and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 1,
+          "said": "Sunday: 7:00 am, 9:00 am (Polish), 10:30am, 12:00 noon, 2:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 1,
+          "said": "Sunday: 7:00 am, 9:00 am (Polish), 10:30am, 12:00 noon, 2:00pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 1,
+          "said": "Sunday: 7:00 am, 9:00 am (Polish), 10:30am, 12:00 noon, 2:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 1,
+          "said": "Sunday: 7:00 am, 9:00 am (Polish), 10:30am, 12:00 noon, 2:00pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 1,
+          "said": "Sunday: 7:00 am, 9:00 am (Polish), 10:30am, 12:00 noon, 2:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 1,
+          "said": "Sunday: 7:00 am, 9:00 am (Polish), 10:30am, 12:00 noon, 2:00pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 1,
+          "said": "Sunday: 7:00 am, 9:00 am (Polish), 10:30am, 12:00 noon, 2:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 1,
+          "said": "Sunday: 7:00 am, 9:00 am (Polish), 10:30am, 12:00 noon, 2:00pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions mark it 9:00am(P). POLICY, Notes: language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 1,
+          "said": "Sunday: 7:00 am, 9:00 am (Polish), 10:30am, 12:00 noon, 2:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 1,
+          "said": "Sunday: 7:00 am, 9:00 am (Polish), 10:30am, 12:00 noon, 2:00pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions mark it 2:00pm(S). POLICY, Notes: language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (Monday through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (Monday through Saturday)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; each weekday 8:00am has an intention in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (Monday through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (Monday through Saturday)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; each weekday 8:00am has an intention in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (Monday through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (Monday through Saturday)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; each weekday 8:00am has an intention in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (Monday through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (Monday through Saturday)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; each weekday 8:00am has an intention in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (Monday through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (Monday through Saturday)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; each weekday 8:00am has an intention in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (Monday through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (Monday through Saturday)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; each weekday 8:00am has an intention in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-south-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 1,
+          "said": "CONFESSIONS Before morning Mass except First Friday; Saturdays: 3:00 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 1,
+          "said": "CONFESSIONS Before morning Mass except First Friday; Saturdays: 3:00 pm."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read. No end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-south-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 10,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 1,
+          "said": "Every 1st Friday @ 6:00pm (October thru May)."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 1,
+          "said": "Every 1st Friday @ 6:00pm (October thru May)."
+        }
+      ],
+      "rationale": "R1: the standing schedule box of both bulletins prints it, named by its week of the month (POLICY rule 2) with the months October through May kept as the season. No end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 1,
+          "said": "CONFESSIONS Before morning Mass except First Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 1,
+          "said": "CONFESSIONS Before morning Mass except First Friday"
+        }
+      ],
+      "rationale": "R26, POLICY Times: 'before morning Mass' gives no clock time or duration, so there is no definite start time to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-south-amboy",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "10:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour of Petition & Hope, St. Anne's Chapel, St. Mary of Ostrabrama, South River"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 4,
+          "said": "A Holy Hour of Petition & Hope will take place in St. Anne's Chapel, Saint Mary of Ostrabrama Church, South River on Saturday, November 21st, from 10:00am to 11:00am."
+        }
+      ],
+      "rationale": "R22: held at St. Mary of Ostrabrama, South River (st-mary-of-ostrabrama-south-river), another parish's church; recorded here at this parish's slug only so the exclusion is visible.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-south-amboy",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Saint Padre Pio Mass, St. Ambrose Parish prayer group"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ae3f106",
+          "page": 4,
+          "said": "Come and join the Saint Padre Pio Prayer Group of St. Ambrose Parish, Old Bridge, as they celebrate Mass together in honor of Saint Padre Pio, on Saturday, November 21st"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1540a48",
+          "page": 4,
+          "said": "Come and join the Saint Padre Pio Prayer Group of St. Ambrose Parish, Old Bridge, as they celebrate Mass together in honor of Saint Padre Pio, on Saturday, November 21st"
+        }
+      ],
+      "rationale": "R22: the notice names no venue; it is St. Ambrose Parish, Old Bridge's prayer group, so the Mass is most likely at St. Ambrose (another parish's church). Location unclear, so left out per POLICY, Churches and chapels.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

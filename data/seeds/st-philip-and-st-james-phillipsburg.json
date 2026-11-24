@@ -1,0 +1,1383 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-philip-and-st-james-phillipsburg",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:22Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T05:00:29Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:59Z",
+  "summary": "One church. Weekend, weekday, Saturday confession and Mon-Fri chapel Adoration times agree in both bulletins (Nov 8, Nov 15) and the parish's Mass Times page, which adds confession end times, a 2nd/4th-Tuesday 7 PM Spanish Mass and a last-Wednesday 6 PM Vocations Club Mass. Thanksgiving week dated entries come from the bulletin and website. Open: whether Adoration is cancelled Friday Nov 27 (bulletin says closed only Thursday; website says both days).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "24d0b0479a00952d95c33ca2577a59348f053cf34b8d4cadb732873a1b1fbc1f",
+      "fetched_at": "2026-11-15T16:51:22Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "07231715873511de6e4efecc5234a55f94972870558a47e4e3690b351580a8ac",
+      "fetched_at": "2026-11-08T15:59:52Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Weekend Masses Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Weekend Masses Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 3,
+          "said": "SATURDAY, November 21st ... 8am – Marie Rose Berntine"
+        }
+      ],
+      "rationale": "R1: schedule box on page 1 of both bulletins; the intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Saturday & Sunday 4:30 pm, 9:00 & 11:00 am; 1:00 pm (Spanish) & 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Saturday & Sunday 4:30 pm, 9:00 & 11:00 am; 1:00 pm (Spanish) & 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 3,
+          "said": "4:30pm – Joseph J. Riotto"
+        }
+      ],
+      "rationale": "R1: schedule box on page 1 of both bulletins; the intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Saturday & Sunday 4:30 pm, 9:00 & 11:00 am; 1:00 pm (Spanish) & 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Saturday & Sunday 4:30 pm, 9:00 & 11:00 am; 1:00 pm (Spanish) & 5:30 pm"
+        }
+      ],
+      "rationale": "R1: schedule box on page 1 of both bulletins; the Sunday intentions on page 3 list 9:00, 11:00 and 5:30.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Saturday & Sunday 4:30 pm, 9:00 & 11:00 am; 1:00 pm (Spanish) & 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Saturday & Sunday 4:30 pm, 9:00 & 11:00 am; 1:00 pm (Spanish) & 5:30 pm"
+        }
+      ],
+      "rationale": "R1: schedule box on page 1 of both bulletins; the Sunday intentions on page 3 list 9:00, 11:00 and 5:30.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Saturday & Sunday 4:30 pm, 9:00 & 11:00 am; 1:00 pm (Spanish) & 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Saturday & Sunday 4:30 pm, 9:00 & 11:00 am; 1:00 pm (Spanish) & 5:30 pm"
+        }
+      ],
+      "rationale": "R1: schedule box on page 1 of both bulletins; the Sunday intentions on page 3 list 9:00, 11:00 and 5:30.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "1:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "1:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 3,
+          "said": "1:00pm – (SP) – Gregorio García-Victoria"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; each weekday's intentions on page 3 give 6:45am and 12:10pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; each weekday's intentions on page 3 give 6:45am and 12:10pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; each weekday's intentions on page 3 give 6:45am and 12:10pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; each weekday's intentions on page 3 give 6:45am and 12:10pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; each weekday's intentions on page 3 give 6:45am and 12:10pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; each weekday's intentions on page 3 give 6:45am and 12:10pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; each weekday's intentions on page 3 give 6:45am and 12:10pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; each weekday's intentions on page 3 give 6:45am and 12:10pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; each weekday's intentions on page 3 give 6:45am and 12:10pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Weekday Masses: Monday - Friday: 6:45 am & 12:10 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; each weekday's intentions on page 3 give 6:45am and 12:10pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Family Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Adoration: Monday - Friday: 7:30 am - 8 pm in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Adoration: Monday - Friday: 7:30 am - 8 pm in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://spsj.org/masstimes",
+          "said": "Adoration (Holy Family Chapel) Monday - Friday 7:30am-8:00pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the website names the chapel (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Family Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Adoration: Monday - Friday: 7:30 am - 8 pm in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Adoration: Monday - Friday: 7:30 am - 8 pm in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://spsj.org/masstimes",
+          "said": "Adoration (Holy Family Chapel) Monday - Friday 7:30am-8:00pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the website names the chapel (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Family Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Adoration: Monday - Friday: 7:30 am - 8 pm in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Adoration: Monday - Friday: 7:30 am - 8 pm in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://spsj.org/masstimes",
+          "said": "Adoration (Holy Family Chapel) Monday - Friday 7:30am-8:00pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the website names the chapel (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Family Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Adoration: Monday - Friday: 7:30 am - 8 pm in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Adoration: Monday - Friday: 7:30 am - 8 pm in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://spsj.org/masstimes",
+          "said": "Adoration (Holy Family Chapel) Monday - Friday 7:30am-8:00pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the website names the chapel (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Family Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Adoration: Monday - Friday: 7:30 am - 8 pm in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Adoration: Monday - Friday: 7:30 am - 8 pm in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://spsj.org/masstimes",
+          "said": "Adoration (Holy Family Chapel) Monday - Friday 7:30am-8:00pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the website names the chapel (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "07:30",
+        "end_time": "20:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 5,
+          "said": "Adoration closed only on Thursday, November 26th"
+        },
+        {
+          "source": "website",
+          "url": "https://spsj.org/event/event.php?id=1587814165&start=&cat=All&pg=1&title=Thanksgiving+Holiday+Schedule",
+          "said": "No Adoration on Thu, Nov 26 and Fri, Nov 27."
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin closes Adoration on Thanksgiving, on or after as_of; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Friday Holy Hour"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 4,
+          "said": "FIRST FRIDAY HOLY HOUR All are welcome to come together for a Holy Hour on December 4th (First Friday) at 6:00pm in the Church."
+        },
+        {
+          "source": "website",
+          "url": "https://spsj.org/event/event.php?id=1246851337&start=20261204&cat=All&pg=1&title=First+Friday+Holy+Hour",
+          "said": "every first Friday of the month ... Holy Hour at 6:00pm in the Church"
+        }
+      ],
+      "rationale": "R37: the 6-7 PM Holy Hour lies entirely inside the Friday 7:30 AM-8 PM Adoration already recorded at this church, so it is not a second slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "second",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At nursing homes (Brakeley, Lopatcong, Phillipsburg)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 4,
+          "said": "Every 1st, 2nd, & 3rd Tuesday of the month, we hold Mass at the following nursing homes, 10:30am"
+        }
+      ],
+      "rationale": "R22, R25: Masses at nursing homes elsewhere, for residents; not at the parish church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "10:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Confessions: Saturdays 10:00 am & 3:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Confessions: Saturdays 10:00 am & 3:15 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://spsj.org/masstimes",
+          "said": "Confession Saturday 10:00-10:45am and 3:15-4:15pm",
+          "schedule_check": {
+            "checked_at": "2026-11-20T05:03:37Z",
+            "current_because": "The Mass Times page lists this week dated (Nov 19-25) with the same intentions as the Nov 15 bulletin, and the Thanksgiving 2026 schedule; checked 2026-11-20.",
+            "bulletin": "24d0b047",
+            "fits_because": "Same start times as the newest bulletin's schedule box, which gives no end; the 3:15 window ends before the 4:30 PM vigil."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the schedule box of both bulletins gives the starts; the parish's current Mass Times page gives the same starts with their ends.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 1,
+          "said": "Confessions: Saturdays 10:00 am & 3:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "Confessions: Saturdays 10:00 am & 3:15 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://spsj.org/masstimes",
+          "said": "Confession Saturday 10:00-10:45am and 3:15-4:15pm",
+          "schedule_check": {
+            "checked_at": "2026-11-20T05:03:37Z",
+            "current_because": "The Mass Times page lists this week dated (Nov 19-25) with the same intentions as the Nov 15 bulletin, and the Thanksgiving 2026 schedule; checked 2026-11-20.",
+            "bulletin": "24d0b047",
+            "fits_because": "Same start times as the newest bulletin's schedule box, which gives no end; the 3:15 window ends before the 4:30 PM vigil."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the schedule box of both bulletins gives the starts; the parish's current Mass Times page gives the same starts with their ends.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 3,
+          "said": "TUESDAY, November 10th ... 7pm – (SP) – Saturmino Castro by Jessica Roman"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07231715",
+          "page": 1,
+          "said": "7pm Spanish Mass followed by Spanish Charismatic Prayer"
+        },
+        {
+          "source": "website",
+          "url": "https://spsj.org/masstimes",
+          "said": "Spanish Weekday Mass 2nd and 4th Tuesday of the month at 7:00pm",
+          "schedule_check": {
+            "checked_at": "2026-11-20T05:03:37Z",
+            "current_because": "The Mass Times page lists this week dated (Nov 19-25) with the same intentions as the Nov 15 bulletin, and the Thanksgiving 2026 schedule; checked 2026-11-20.",
+            "bulletin": "24d0b047",
+            "fits_because": "The Nov 15 bulletin's week holds only the 3rd Tuesday, so it would not print it; the Nov 8 bulletin prints a 7pm Spanish Mass on the 2nd Tuesday."
+          }
+        }
+      ],
+      "rationale": "R6, R12: the website names the 2nd/4th Tuesday pattern; the Nov 8 issue prints it on Nov 10 (2nd Tuesday); the newest issue's week holds only the third Tuesday, when its 7pm is just the prayer group.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. John Vianney Vocations Club Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://spsj.org/masstimes",
+          "said": "St. John Vianney Vocations Club Mass last Wednesday of the month at 6:00pm",
+          "schedule_check": {
+            "checked_at": "2026-11-20T05:03:37Z",
+            "current_because": "The Mass Times page lists this week dated (Nov 19-25) with the same intentions as the Nov 15 bulletin, and the Thanksgiving 2026 schedule; checked 2026-11-20.",
+            "bulletin": "24d0b047",
+            "fits_because": "The Nov 15 and Nov 8 bulletins cover the 3rd and 2nd weeks, so neither would print a last-Wednesday Mass; nothing in them conflicts."
+          }
+        }
+      ],
+      "rationale": "R6: in the parish's own Mass Schedule list and dated Nov 25 on the same page; a Mass 'with' a group is open (POLICY). Neither read bulletin's week holds a last Wednesday (R11).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://spsj.org/event/event.php?id=1587814165&start=&cat=All&pg=1&title=Thanksgiving+Holiday+Schedule",
+          "said": "Join us for 9:00am Mass on Thanksgiving Day.",
+          "schedule_check": {
+            "checked_at": "2026-11-20T05:03:37Z",
+            "current_because": "The Mass Times page lists this week dated (Nov 19-25) with the same intentions as the Nov 15 bulletin, and the Thanksgiving 2026 schedule; checked 2026-11-20.",
+            "bulletin": "24d0b047",
+            "fits_because": "The Nov 15 bulletin closes Adoration on Thanksgiving, consistent with a holiday schedule; it prints no Thanksgiving Mass times."
+          }
+        }
+      ],
+      "rationale": "R6, R16, R17: a dated holiday Mass on or after as_of; the weekday slots are left alone because Thursday's page does not say they are cancelled.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://spsj.org/event/event.php?id=1587814165&start=&cat=All&pg=1&title=Thanksgiving+Holiday+Schedule",
+          "said": "9:00am on Fri, Nov 27 (only Mass of the day)",
+          "schedule_check": {
+            "checked_at": "2026-11-20T05:03:37Z",
+            "current_because": "The Mass Times page lists this week dated (Nov 19-25) with the same intentions as the Nov 15 bulletin, and the Thanksgiving 2026 schedule; checked 2026-11-20.",
+            "bulletin": "24d0b047",
+            "fits_because": "The Nov 15 bulletin closes the office on Nov 27; it prints no times for that day."
+          }
+        }
+      ],
+      "rationale": "R6, R16, R40: a dated exception on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://spsj.org/event/event.php?id=1587814165&start=&cat=All&pg=1&title=Thanksgiving+Holiday+Schedule",
+          "said": "9:00am on Fri, Nov 27 (only Mass of the day)",
+          "schedule_check": {
+            "checked_at": "2026-11-20T05:03:37Z",
+            "current_because": "The Mass Times page lists this week dated (Nov 19-25) with the same intentions as the Nov 15 bulletin, and the Thanksgiving 2026 schedule; checked 2026-11-20.",
+            "bulletin": "24d0b047",
+            "fits_because": "The Nov 15 bulletin closes the office on Nov 27; it prints no times for that day."
+          }
+        }
+      ],
+      "rationale": "R6, R16, R40: 'only Mass of the day' explicitly replaces the 6:45 and 12:10 Masses on that date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://spsj.org/event/event.php?id=1587814165&start=&cat=All&pg=1&title=Thanksgiving+Holiday+Schedule",
+          "said": "9:00am on Fri, Nov 27 (only Mass of the day)",
+          "schedule_check": {
+            "checked_at": "2026-11-20T05:03:37Z",
+            "current_because": "The Mass Times page lists this week dated (Nov 19-25) with the same intentions as the Nov 15 bulletin, and the Thanksgiving 2026 schedule; checked 2026-11-20.",
+            "bulletin": "24d0b047",
+            "fits_because": "The Nov 15 bulletin closes the office on Nov 27; it prints no times for that day."
+          }
+        }
+      ],
+      "rationale": "R6, R16, R40: 'only Mass of the day' explicitly replaces the 6:45 and 12:10 Masses on that date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-and-st-james-phillipsburg",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "07:30",
+        "end_time": "20:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "24d0b047",
+          "page": 5,
+          "said": "Adoration closed only on Thursday, November 26th"
+        },
+        {
+          "source": "website",
+          "url": "https://spsj.org/event/event.php?id=1587814165&start=&cat=All&pg=1&title=Thanksgiving+Holiday+Schedule",
+          "said": "No Adoration on Thu, Nov 26 and Fri, Nov 27."
+        }
+      ],
+      "rationale": "R28/R40: the Nov 15 bulletin says Adoration is closed 'only' on Thursday; the website's Thanksgiving schedule (seen Nov 20, newer) says no Adoration Thursday and Friday. Leaning cancel: the newer, holiday-specific page, which also drops Friday's usual Masses.",
+      "question": "Is Adoration cancelled on Friday, Nov 27 (day after Thanksgiving)?",
+      "options": [
+        {
+          "label": "Cancelled Nov 27",
+          "entry": {
+            "church_slug": "st-philip-and-st-james-phillipsburg",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-27",
+            "start_time": "07:30",
+            "end_time": "20:00",
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (Adoration as usual)",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:57:59Z"
+      }
+    }
+  ]
+}

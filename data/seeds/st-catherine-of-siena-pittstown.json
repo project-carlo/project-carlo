@@ -1,0 +1,542 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-catherine-of-siena-pittstown",
+  "status": "approved",
+  "as_of": "2026-11-15T16:19:40Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:22:08Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:52Z",
+  "summary": "One church. Weekend (Sat 4:30 PM; Sun 8, 9:30, 11 AM), weekday 8 AM Mass, Saturday 3:30-4 PM Reconciliation and First Friday 3-7 PM Exposition agree in both bulletins read (Nov 8 and Nov 15, 2026). No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "cef8dc21ae02c7c261e30971e797e7be995aae1af4200943f8614bd791f7fdd7",
+      "fetched_at": "2026-11-15T16:19:40Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "5d55759d478fe5a1bb51d28b0973347a503f406ad0a2bdc02a5b9b7850fc97e5",
+      "fetched_at": "2026-11-08T15:44:23Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-pittstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 1,
+          "said": "Weekend Masses Saturday Vigil: 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 5,
+          "said": "Saturday, November 21 4:30 PM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d55759d",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 PM"
+        }
+      ],
+      "rationale": "R1: in the schedule box and events calendar of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-pittstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:30 AM and 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d55759d",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:30 AM and 11:00 AM"
+        }
+      ],
+      "rationale": "R1: in the schedule box and events calendar of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-pittstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:30 AM and 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d55759d",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:30 AM and 11:00 AM"
+        }
+      ],
+      "rationale": "R1: in the schedule box and events calendar of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-pittstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:30 AM and 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d55759d",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:30 AM and 11:00 AM"
+        }
+      ],
+      "rationale": "R1: in the schedule box and events calendar of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-pittstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 5,
+          "said": "8:00 AM Mass (each day Nov 16-20)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d55759d",
+          "page": 1,
+          "said": "Monday-Friday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: in the schedule box, events calendar and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-pittstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 5,
+          "said": "8:00 AM Mass (each day Nov 16-20)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d55759d",
+          "page": 1,
+          "said": "Monday-Friday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: in the schedule box, events calendar and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-pittstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 5,
+          "said": "8:00 AM Mass (each day Nov 16-20)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d55759d",
+          "page": 1,
+          "said": "Monday-Friday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: in the schedule box, events calendar and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-pittstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 5,
+          "said": "8:00 AM Mass (each day Nov 16-20)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d55759d",
+          "page": 1,
+          "said": "Monday-Friday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: in the schedule box, events calendar and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-pittstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 5,
+          "said": "8:00 AM Mass (each day Nov 16-20)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d55759d",
+          "page": 1,
+          "said": "Monday-Friday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: in the schedule box, events calendar and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-pittstown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 1,
+          "said": "Reconciliation Saturday: 3:30 PM - 4:00 PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 5,
+          "said": "Saturday, November 21 3:30 PM - 4:00 PM Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d55759d",
+          "page": 1,
+          "said": "Saturday: 3:30 PM - 4:00 PM"
+        }
+      ],
+      "rationale": "R1: in the schedule box and events calendar of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-pittstown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 1,
+          "said": "Exposition of the Blessed Sacrament First Friday: 3:00 PM - 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d55759d",
+          "page": 1,
+          "said": "First Friday: 3:00 PM - 7:00 PM"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: the newest schedule box names First Friday Exposition; neither bulletin's week holds a first Friday (R11), but the standing schedule box prints it in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cef8dc21",
+          "page": 1,
+          "said": "Reconciliation ... or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-pittstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-07",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d55759d",
+          "page": 5,
+          "said": "Saturday, November 7 10:00 AM Mass of Remembrance"
+        }
+      ],
+      "rationale": "R16: a dated Mass before as_of is out of seed scope; recorded so a reviewer sees it was considered.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

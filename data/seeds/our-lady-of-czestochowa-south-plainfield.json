@@ -1,0 +1,550 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-czestochowa-south-plainfield",
+  "status": "approved",
+  "as_of": "2026-11-15T16:19:08Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T23:02:31Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:09Z",
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: Sat 4:30 PM vigil, Sun 8:00, 10:30 and 1:00 PM (Vietnamese), Mon-Fri 9:00 AM, Sat 4:00 PM Reconciliation, First Friday Adoration after the 9 AM Mass, plus a Thanksgiving Day Mass Nov 26 at 10 AM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3b906c8a7ccd4ac10f9fe8e9d102fae2795ad9c208ca770d8fa0c75b276a668a",
+      "fetched_at": "2026-11-15T16:19:08Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "fc2c50302e6e0528318d26801352759ffefc42d2e2ffbf0e0a137a618727d048",
+      "fetched_at": "2026-11-08T15:43:56Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b906c8a",
+          "page": 1,
+          "said": "WEEKEND MASS Saturday Vigil|4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc2c5030",
+          "page": 1,
+          "said": "WEEKEND MASS Saturday Vigil|4:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read; the intentions list a 4:30pm Vigil Mass each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b906c8a",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:30am & 1:00pm (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc2c5030",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:30am & 1:00pm (Vietnamese)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b906c8a",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:30am & 1:00pm (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc2c5030",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:30am & 1:00pm (Vietnamese)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b906c8a",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:30am & 1:00pm (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc2c5030",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:30am & 1:00pm (Vietnamese)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b906c8a",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday|9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc2c5030",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday|9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read; the newest intentions list 9:00am Mass Nov 16-20.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b906c8a",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday|9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc2c5030",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday|9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read; the newest intentions list 9:00am Mass Nov 16-20.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b906c8a",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday|9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc2c5030",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday|9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read; the newest intentions list 9:00am Mass Nov 16-20.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b906c8a",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday|9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc2c5030",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday|9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read; the newest intentions list 9:00am Mass Nov 16-20.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b906c8a",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday|9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc2c5030",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday|9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read; the newest intentions list 9:00am Mass Nov 16-20.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-south-plainfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b906c8a",
+          "page": 1,
+          "said": "RECONCILIATION Saturday |4:00pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc2c5030",
+          "page": 1,
+          "said": "RECONCILIATION Saturday |4:00pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; no end time given, so none (POLICY, Times). 'By appointment' has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-south-plainfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b906c8a",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION First Friday - after 9AM weekday Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc2c5030",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION First Friday - after 9AM weekday Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in the standing schedule box of both bulletins; after a weekday Mass is 30 minutes after it starts, no end time given. R11: neither bulletin's week holds a first Friday, but the standing schedule box names it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b906c8a",
+          "page": 3,
+          "said": "Thanksgiving Day Mass ... Thursday, November 26 at 10:00AM All are welcome!"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc2c5030",
+          "page": 3,
+          "said": "Nov 26 10:00AM Thanksgiving Day Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated Mass after as_of, open to all. R17: no cancellation of the 9:00am weekday Mass is stated, so none recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b906c8a",
+          "page": 1,
+          "said": "HOLY DAY OF OBLIGATION English | 9:00am & 7:00pm Vietnamese | 8:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc2c5030",
+          "page": 1,
+          "said": "HOLY DAY OF OBLIGATION English | 9:00am & 7:00pm Vietnamese | 8:00pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: holy-day times with no date the bulletin pins down are neither weekly nor dated; update mode will pick up dated holy days from later bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-south-plainfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Novena of the Miraculous Medal"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b906c8a",
+          "page": 1,
+          "said": "NOVENA OF THE MIRACULOUS MEDAL Tuesdays |After 9:00am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc2c5030",
+          "page": 1,
+          "said": "NOVENA OF THE MIRACULOUS MEDAL Tuesdays |After 9:00am Mass"
+        }
+      ],
+      "rationale": "R24: a Novena is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,863 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-bernard-of-clairvaux-bridgewater",
+  "status": "approved",
+  "as_of": "2026-11-15T16:50:55Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:18:56Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:50Z",
+  "summary": "One church (St. Bernard of Clairvaux, Bridgewater); the bulletin prints no schedule box, so the times come from the weekly parish calendar (p3), the Mass intentions (p2) and the live-stream line. Both bulletins read (Nov 8 and Nov 15) agree: Sunday 7:30, 9:00, 10:30 and 12:00; Mon-Fri 8:00 AM in the church and 12:10 PM in the chapel; Saturday 9:00 AM, 4:00 PM Confessions and 5:15 PM vigil; plus Simbang Gabi Mass Dec 21 at 7:30 PM. No Adoration is printed; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "178b03b1bc678bafd07c3a6ad219da8b7620c03c5801028a32e8c64e5d174e39",
+      "fetched_at": "2026-11-15T16:50:55Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1d65eea524e9ec4a82e6a9ad48cbd24e4004c4f6337e3a47334314d0d9dfe001",
+      "fetched_at": "2026-11-08T22:02:54Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Sunday, November 15 / Sunday, November 22: 7:30 am - Mass; Church; 9:00 am - Mass; Church; 10:30 am - Mass & Children's Liturgy; Church; 12:00 pm - Mass; Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Sunday, November 8: 7:30 am - Mass; 9:00 am - Mass; 10:30 am - Mass & Children's Liturgy; 12:00 pm - Mass"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: the same four Sunday Masses are in the parish calendar for Nov 8, 15 and 22 across both bulletins, and the newest's intentions list them for Nov 22.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Sunday, November 15 / Sunday, November 22: 7:30 am - Mass; Church; 9:00 am - Mass; Church; 10:30 am - Mass & Children's Liturgy; Church; 12:00 pm - Mass; Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Sunday, November 8: 7:30 am - Mass; 9:00 am - Mass; 10:30 am - Mass & Children's Liturgy; 12:00 pm - Mass"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: the same four Sunday Masses are in the parish calendar for Nov 8, 15 and 22 across both bulletins, and the newest's intentions list them for Nov 22.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Sunday, November 15 / Sunday, November 22: 7:30 am - Mass; Church; 9:00 am - Mass; Church; 10:30 am - Mass & Children's Liturgy; Church; 12:00 pm - Mass; Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Sunday, November 8: 7:30 am - Mass; 9:00 am - Mass; 10:30 am - Mass & Children's Liturgy; 12:00 pm - Mass"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: the same four Sunday Masses are in the parish calendar for Nov 8, 15 and 22 across both bulletins, and the newest's intentions list them for Nov 22.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Sunday, November 15 / Sunday, November 22: 7:30 am - Mass; Church; 9:00 am - Mass; Church; 10:30 am - Mass & Children's Liturgy; Church; 12:00 pm - Mass; Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Sunday, November 8: 7:30 am - Mass; 9:00 am - Mass; 10:30 am - Mass & Children's Liturgy; 12:00 pm - Mass"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: the same four Sunday Masses are in the parish calendar for Nov 8, 15 and 22 across both bulletins, and the newest's intentions list them for Nov 22.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Monday-Friday, November 16-20: 8:00 am - Mass; Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 2,
+          "said": "The following Masses are live-streamed: Daily M-F 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Monday-Friday, November 9-13: 8:00 am - Mass; Church"
+        }
+      ],
+      "rationale": "R1, R35: the standing live-stream line says Daily M-F 8:00am, and both weeks' calendars list it each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Monday-Friday, November 16-20: 8:00 am - Mass; Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 2,
+          "said": "The following Masses are live-streamed: Daily M-F 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Monday-Friday, November 9-13: 8:00 am - Mass; Church"
+        }
+      ],
+      "rationale": "R1, R35: the standing live-stream line says Daily M-F 8:00am, and both weeks' calendars list it each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Monday-Friday, November 16-20: 8:00 am - Mass; Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 2,
+          "said": "The following Masses are live-streamed: Daily M-F 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Monday-Friday, November 9-13: 8:00 am - Mass; Church"
+        }
+      ],
+      "rationale": "R1, R35: the standing live-stream line says Daily M-F 8:00am, and both weeks' calendars list it each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Monday-Friday, November 16-20: 8:00 am - Mass; Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 2,
+          "said": "The following Masses are live-streamed: Daily M-F 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Monday-Friday, November 9-13: 8:00 am - Mass; Church"
+        }
+      ],
+      "rationale": "R1, R35: the standing live-stream line says Daily M-F 8:00am, and both weeks' calendars list it each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Monday-Friday, November 16-20: 8:00 am - Mass; Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 2,
+          "said": "The following Masses are live-streamed: Daily M-F 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Monday-Friday, November 9-13: 8:00 am - Mass; Church"
+        }
+      ],
+      "rationale": "R1, R35: the standing live-stream line says Daily M-F 8:00am, and both weeks' calendars list it each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Monday-Friday, November 16-20: 12:10 pm - Mass; Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Monday-Friday, November 9-13: 12:10 pm - Mass; Chapel"
+        }
+      ],
+      "rationale": "R35: both weeks' calendars list a 12:10 PM Mass in the Chapel every weekday, and the intentions on p2 list it too. The calendar treats the Chapel as a room of the parish's building (prayer groups meet in 'Chapel & St. Bernard of Clairvaux Room'), so under POLICY, Churches and chapels it belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Monday-Friday, November 16-20: 12:10 pm - Mass; Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Monday-Friday, November 9-13: 12:10 pm - Mass; Chapel"
+        }
+      ],
+      "rationale": "R35: both weeks' calendars list a 12:10 PM Mass in the Chapel every weekday, and the intentions on p2 list it too. The calendar treats the Chapel as a room of the parish's building (prayer groups meet in 'Chapel & St. Bernard of Clairvaux Room'), so under POLICY, Churches and chapels it belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Monday-Friday, November 16-20: 12:10 pm - Mass; Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Monday-Friday, November 9-13: 12:10 pm - Mass; Chapel"
+        }
+      ],
+      "rationale": "R35: both weeks' calendars list a 12:10 PM Mass in the Chapel every weekday, and the intentions on p2 list it too. The calendar treats the Chapel as a room of the parish's building (prayer groups meet in 'Chapel & St. Bernard of Clairvaux Room'), so under POLICY, Churches and chapels it belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Monday-Friday, November 16-20: 12:10 pm - Mass; Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Monday-Friday, November 9-13: 12:10 pm - Mass; Chapel"
+        }
+      ],
+      "rationale": "R35: both weeks' calendars list a 12:10 PM Mass in the Chapel every weekday, and the intentions on p2 list it too. The calendar treats the Chapel as a room of the parish's building (prayer groups meet in 'Chapel & St. Bernard of Clairvaux Room'), so under POLICY, Churches and chapels it belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Monday-Friday, November 16-20: 12:10 pm - Mass; Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Monday-Friday, November 9-13: 12:10 pm - Mass; Chapel"
+        }
+      ],
+      "rationale": "R35: both weeks' calendars list a 12:10 PM Mass in the Chapel every weekday, and the intentions on p2 list it too. The calendar treats the Chapel as a room of the parish's building (prayer groups meet in 'Chapel & St. Bernard of Clairvaux Room'), so under POLICY, Churches and chapels it belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Saturday, November 21: 9:00 am - Mass; Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 2,
+          "said": "live-streamed: Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Saturday, November 14: 9:00 am - Mass; Church"
+        }
+      ],
+      "rationale": "R1, R35: the standing live-stream line and both weeks' calendars print it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Saturday, November 21: 5:15 pm - Mass; Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 2,
+          "said": "5:15pm Saturday Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Saturday, November 14: 5:15 pm - Mass; Church"
+        }
+      ],
+      "rationale": "R1, R35: the standing live-stream line and both weeks' calendars print it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Saturday, November 21: 4:00 pm - Confessions; Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Saturday, November 14: 4:00 pm - Confessions; Church"
+        }
+      ],
+      "rationale": "R35: both weeks' calendars list Saturday 4:00 PM Confessions in the Church. No end time is printed, so POLICY leaves end_time null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-21",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 5,
+          "said": "our St. Bernard of Clairvaux Church is hosting the Filipino long held and beloved Catholic tradition of Simbang Gabi on Dec 21 at 7:30pm ... A fellowship is held immediately after the mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 5,
+          "said": "Simbang Gabi on Dec 21 at 7:30pm"
+        }
+      ],
+      "rationale": "R1, R16: a dated public Mass at the parish church after as_of, invited in both bulletins (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-20",
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At Avalon Assisted Living at Bridgewater"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Friday, November 20: 2:00 pm - Mass at Avalon Assisted Living at Bridgewater"
+        }
+      ],
+      "rationale": "R22, POLICY Churches and chapels: an assisted-living home at another address, not on the church list (seed church finds no match), and likely limited to residents.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-of-clairvaux-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At Sunrise of Bridgewater"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "Tuesday, November 10: 2:00 pm - Mass at Sunrise of Bridgewater"
+        }
+      ],
+      "rationale": "R22: a senior residence at another address, not on the church list; printed once in the older bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "2:00 pm - Communion Service at Green Knoll HC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1d65eea5",
+          "page": 3,
+          "said": "2:00 pm - Communion Service at Waterfront"
+        }
+      ],
+      "rationale": "R25, POLICY: Communion Services at care homes elsewhere are not Masses and not at a listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "178b03b1",
+          "page": 3,
+          "said": "Sunday, November 22: 7:00 pm - Interfaith Thanksgiving Service; Church"
+        }
+      ],
+      "rationale": "R24: an interfaith prayer service, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

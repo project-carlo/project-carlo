@@ -1,0 +1,558 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-alpha",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:13Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:36:57Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:44Z",
+  "summary": "One church; the bulletin has no schedule box, so the weekly times come from the Mass intentions of the Nov 8 and Nov 15 issues, confirmed by the parish website: Sat 5 PM; Sun 8, 9:30, 11 AM; Mon/Tue/Fri 8 AM; Thu 6 PM; Sat 9 AM; Sat confession 4-4:30 PM; Thursday Adoration 5 PM (website). The Advent confession change (3:30-4:30) is left for update mode (R20). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "37fc8d0e43d38f7c7e525019f5e16e823195637a6dd2b2f3cd5fff2b0b51aac9",
+      "fetched_at": "2026-11-15T16:51:13Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f3ba9d6004fbb62696050664abe2a421f22d2bf54256d9db4a13692ef336b046",
+      "fetched_at": "2026-11-08T22:03:13Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-alpha",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37fc8d0e",
+          "page": 4,
+          "said": "Saturday November 21 Vigil Mass ... 5:00 PM Betty Fulmer"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37fc8d0e",
+          "page": 3,
+          "said": "5:00 P.M. Sat: (altar servers, readers, EMs for November 21 & 22)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3ba9d60",
+          "page": 4,
+          "said": "Saturday November 14 Vigil Mass ... 5:00 PM Richard & Helen Mistretta"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmaryrc.org/mass-times",
+          "said": "Sunday Mass Schedule Saturday : 5:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: the 5:00 PM vigil is in the Mass intentions and ministry schedule of both bulletins (Nov 8 and Nov 15) and on the parish website's Mass schedule. The bulletin has no schedule box; the intentions are its schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-alpha",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37fc8d0e",
+          "page": 4,
+          "said": "Sunday November 22: 8:00 AM Warren Getch; 9:30 AM People of the Parish; 11:00 AM Patrica & George Meagher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3ba9d60",
+          "page": 4,
+          "said": "Sunday November 8: 8:00 AM, 9:30 AM, 11:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmaryrc.org/mass-times",
+          "said": "Sunday : 8:00 AM 9:30 AM 11:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: the three Sunday Masses appear in the intentions for Nov 8, 15 and 22 and the ministry schedules, and on the website's Mass schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-alpha",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37fc8d0e",
+          "page": 4,
+          "said": "Sunday November 22: 8:00 AM Warren Getch; 9:30 AM People of the Parish; 11:00 AM Patrica & George Meagher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3ba9d60",
+          "page": 4,
+          "said": "Sunday November 8: 8:00 AM, 9:30 AM, 11:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmaryrc.org/mass-times",
+          "said": "Sunday : 8:00 AM 9:30 AM 11:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: the three Sunday Masses appear in the intentions for Nov 8, 15 and 22 and the ministry schedules, and on the website's Mass schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-alpha",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37fc8d0e",
+          "page": 4,
+          "said": "Sunday November 22: 8:00 AM Warren Getch; 9:30 AM People of the Parish; 11:00 AM Patrica & George Meagher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3ba9d60",
+          "page": 4,
+          "said": "Sunday November 8: 8:00 AM, 9:30 AM, 11:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmaryrc.org/mass-times",
+          "said": "Sunday : 8:00 AM 9:30 AM 11:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: the three Sunday Masses appear in the intentions for Nov 8, 15 and 22 and the ministry schedules, and on the website's Mass schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-alpha",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37fc8d0e",
+          "page": 4,
+          "said": "Monday November 16 8:00 AM; Tuesday November 17 8:00 AM; Friday November 20 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3ba9d60",
+          "page": 4,
+          "said": "NO DAILY MASSES from Monday, November 9th through Saturday, November 14th; Monday/Tuesday/Friday 8:00 AM No Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmaryrc.org/mass-times",
+          "said": "Daily Mass Schedule M T u F 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35, R6: the newest intentions list 8:00 AM Masses on Monday, Tuesday and Friday; the Nov 8 issue lists the same slots as suspended for one week only (no daily Masses Nov 9-14), and the website's daily schedule gives 8:00 AM on these days (its 'M T u F' label; Wednesday has no Mass in both bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-alpha",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37fc8d0e",
+          "page": 4,
+          "said": "Monday November 16 8:00 AM; Tuesday November 17 8:00 AM; Friday November 20 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3ba9d60",
+          "page": 4,
+          "said": "NO DAILY MASSES from Monday, November 9th through Saturday, November 14th; Monday/Tuesday/Friday 8:00 AM No Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmaryrc.org/mass-times",
+          "said": "Daily Mass Schedule M T u F 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35, R6: the newest intentions list 8:00 AM Masses on Monday, Tuesday and Friday; the Nov 8 issue lists the same slots as suspended for one week only (no daily Masses Nov 9-14), and the website's daily schedule gives 8:00 AM on these days (its 'M T u F' label; Wednesday has no Mass in both bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-alpha",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37fc8d0e",
+          "page": 4,
+          "said": "Monday November 16 8:00 AM; Tuesday November 17 8:00 AM; Friday November 20 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3ba9d60",
+          "page": 4,
+          "said": "NO DAILY MASSES from Monday, November 9th through Saturday, November 14th; Monday/Tuesday/Friday 8:00 AM No Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmaryrc.org/mass-times",
+          "said": "Daily Mass Schedule M T u F 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35, R6: the newest intentions list 8:00 AM Masses on Monday, Tuesday and Friday; the Nov 8 issue lists the same slots as suspended for one week only (no daily Masses Nov 9-14), and the website's daily schedule gives 8:00 AM on these days (its 'M T u F' label; Wednesday has no Mass in both bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-alpha",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37fc8d0e",
+          "page": 4,
+          "said": "Thursday November 19 6:00PM Margaret E. Kennedy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3ba9d60",
+          "page": 4,
+          "said": "Thursday November 12 6:00PM No Mass—No Adoration (no daily Masses Nov 9-14)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmaryrc.org/mass-times",
+          "said": "Thursday : 6:00 PM"
+        }
+      ],
+      "rationale": "R1, R35, R6: Thursday 6:00 PM in the newest intentions; the Nov 8 issue shows the same slot suspended for that week only; the website's daily schedule gives Thursday 6:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-alpha",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37fc8d0e",
+          "page": 4,
+          "said": "Saturday November 21 9:00 AM Jorge Jelkh"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3ba9d60",
+          "page": 4,
+          "said": "Saturday November 14 9:00 AM No Mass (no daily Masses Nov 9-14)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmaryrc.org/mass-times",
+          "said": "Saturday : 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35, R6: Saturday 9:00 AM in the newest intentions (Presentation feast, but also in the Nov 8 template and the website's daily schedule), so it is the regular Saturday morning Mass, not a feast-only one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-alpha",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37fc8d0e",
+          "page": 6,
+          "said": "November confessions will be heard on Saturdays from 4:00 to 4:30 pm through the 21st. 3:30 to 4:30 for Advent."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3ba9d60",
+          "page": 6,
+          "said": "November confessions will be heard on Saturdays from 4:00 to 4:30 pm through the 21st."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmaryrc.org/confession-times",
+          "said": "Saturday : 4:00 PM to 4:30 PM"
+        }
+      ],
+      "rationale": "R1, R6: both bulletins print Saturday 4:00-4:30 PM confessions, and the website's confession page gives the same as the standing Saturday time. The Advent change (3:30-4:30) is for later and is a separate excluded slot (R20).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-alpha",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37fc8d0e",
+          "page": 6,
+          "said": "3:30 to 4:30 for Advent."
+        }
+      ],
+      "rationale": "R20: a change announced for later (Advent begins Nov 29, after as_of); keep the current 4:00-4:30 slot and let update mode read the Advent bulletins. No dates are printed, so no dated entries (POLICY, Dates).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stmaryrc.org/confession-times",
+          "said": "Summer Confession Times Please contact the Parish Office appt during these times only: Mondays & Fridays 10:00 am thru 3:00 pm"
+        }
+      ],
+      "rationale": "R26: summer confession by appointment has no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-alpha",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 6:00 PM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stmaryrc.org/mass-times",
+          "said": "Eucharistic Adoration 5:00 PM Thursdays before 6:00 PM Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-20T04:40:43Z",
+            "current_because": "Fetched 2026-11-20; the page's Mass times match the Nov 2026 bulletins exactly (Sat 5 PM, Sun 8/9:30/11, M/T/F 8 AM, Thu 6 PM, Sat 9 AM, Sat confession 4-4:30) and the page shows this week's daily readings.",
+            "bulletin": "37fc8d0e",
+            "fits_because": "The Nov 8 bulletin p4 says 'No Adoration November 12th' and lists 'Thursday 6:00PM No Mass—No Adoration', confirming a regular Thursday Adoration tied to the 6:00 PM Mass, which the Nov 15 bulletin lists."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3ba9d60",
+          "page": 4,
+          "said": "No Adoration November 12th. / Thursday 6:00PM No Mass—No Adoration"
+        }
+      ],
+      "rationale": "R6, POLICY Times: the website gives Thursday Adoration at 5:00 PM before the 6:00 PM Mass; the bulletins confirm a weekly Thursday Adoration with that Mass but print no time. It runs until the Mass with no stated end, so no end_time and a note naming the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

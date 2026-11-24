@@ -1,0 +1,1394 @@
+{
+  "schema_version": 1,
+  "parish_slug": "visitation-new-brunswick",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:22Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T05:16:36Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:58:10Z",
+  "summary": "Two listed churches: St. Mary of Mount Virgin (New Brunswick) and St. Theresa (Edison); the bulletin also names St. John the Baptist (now a soup kitchen), which the website gives as the place of the Sunday 9:30 Spanish Mass but which is not on the church list. Both bulletins (Nov 8, Nov 15) print the same schedule box. Open: the Sunday Spanish Mass's time and church, Friday Adoration's end (5:30 or 6:00), the first-Tuesday Latin Mass, and website-only Adoration after the Friday 7 PM Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2333c920fae9c605e92f88dc3761aa8e472793973c0aef5399b906ce950c4e69",
+      "fetched_at": "2026-11-15T16:51:22Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3f719eaca2efa6e81facc6a4c2497eebe55682a4f61546af2fcb58468342bfa7",
+      "fetched_at": "2026-11-08T22:03:27Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "WEEKEND MASSES St. Mary of Mount Virgin Saturday --------- 4:00 p.m. & 7:00 p.m. (in Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "WEEKEND MASSES St. Mary of Mount Virgin Saturday --------- 4:00 p.m. & 7:00 p.m. (in Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the weekend schedule box of both bulletins; the intentions list 4:00pm each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Saturday --------- 4:00 p.m. & 7:00 p.m. (in Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Saturday --------- 4:00 p.m. & 7:00 p.m. (in Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the weekend schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Sunday ------------- 8:30 a.m., 9:30 a.m. (in Spanish), 11:00 a.m., 1:00 p.m. (in Spanish) & 6:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Sunday ------------- 8:30 a.m., 9:30 a.m. (in Spanish), 11:00 a.m., 1:00 p.m. (in Spanish) & 6:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekend schedule box of both bulletins and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Sunday ------------- 8:30 a.m., 9:30 a.m. (in Spanish), 11:00 a.m., 1:00 p.m. (in Spanish) & 6:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Sunday ------------- 8:30 a.m., 9:30 a.m. (in Spanish), 11:00 a.m., 1:00 p.m. (in Spanish) & 6:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekend schedule box of both bulletins and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Sunday ------------- 8:30 a.m., 9:30 a.m. (in Spanish), 11:00 a.m., 1:00 p.m. (in Spanish) & 6:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Sunday ------------- 8:30 a.m., 9:30 a.m. (in Spanish), 11:00 a.m., 1:00 p.m. (in Spanish) & 6:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekend schedule box of both bulletins and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Sunday ------------- 8:30 a.m., 9:30 a.m. (in Spanish), 11:00 a.m., 1:00 p.m. (in Spanish) & 6:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Sunday ------------- 8:30 a.m., 9:30 a.m. (in Spanish), 11:00 a.m., 1:00 p.m. (in Spanish) & 6:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekend schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "St. Mary of Mount Virgin ... Sunday 8:30 a.m., 9:30 a.m. (in Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "St. Mary of Mount Virgin ... Sunday 8:30 a.m., 9:30 a.m. (in Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 2,
+          "said": "Sunday, November 15, 2026 ... 9:00am Evenzia Rodriguez & Federico Torres; Sunday, November 22, 2026 ... 9:00am Gladys Maria Tejada"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 2,
+          "said": "Sunday, November 8, 2026 ... 9:30am Maria Elsa Alvarado & Evaristo Alvarado"
+        },
+        {
+          "source": "website",
+          "url": "https://parishofthevisitation.org/",
+          "said": "9:30 am in Spanish –St. John's - Sunday"
+        }
+      ],
+      "rationale": "R28, R32: the schedule box in both bulletins lists 9:30 (Spanish) under St. Mary of Mount Virgin, but the intentions under St. Mary of Mt. Virgin give 9:30 for Nov 8 and 9:00 for Nov 15 and Nov 22, and the parish website puts the 9:30 Spanish Mass at St. John's (29 Abeel St.), which is not on the church list. Leaning to the printed schedule box (both issues); the 9:00 intentions may reflect a change the box has not caught up with.",
+      "question": "Sunday Spanish Mass: 9:30 at St. Mary's, 9:00 at St. Mary's, or leave out (website puts it at St. John's, not on the church list)?",
+      "options": [
+        {
+          "label": "Sundays 9:30 AM at St. Mary of Mount Virgin",
+          "entry": {
+            "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Sundays 9:00 AM at St. Mary of Mount Virgin",
+          "entry": {
+            "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:58:10Z"
+      }
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-infant-jesus-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "St. Theresa Saturday ----------5:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "St. Theresa Saturday ----------5:30 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekend schedule box of both bulletins; the St. Theresa intentions list 5:30pm each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Confessions Saturdays 3:00 p.m. - 4:00 p.m. or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Confessions Saturdays 3:00 p.m. - 4:00 p.m. or by appointment."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box. The website says 3:00 PM to 3:45 PM; the newest bulletin's clock time is kept (R7/R1), and the start agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Confessions ... or by appointment."
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "WEEKDAY MASSES St. Mary of Mount Virgin Monday thru Saturday ------- 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "WEEKDAY MASSES St. Mary of Mount Virgin Monday thru Saturday ------- 8:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins; every day's intentions list 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "WEEKDAY MASSES St. Mary of Mount Virgin Monday thru Saturday ------- 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "WEEKDAY MASSES St. Mary of Mount Virgin Monday thru Saturday ------- 8:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins; every day's intentions list 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "WEEKDAY MASSES St. Mary of Mount Virgin Monday thru Saturday ------- 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "WEEKDAY MASSES St. Mary of Mount Virgin Monday thru Saturday ------- 8:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins; every day's intentions list 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "WEEKDAY MASSES St. Mary of Mount Virgin Monday thru Saturday ------- 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "WEEKDAY MASSES St. Mary of Mount Virgin Monday thru Saturday ------- 8:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins; every day's intentions list 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "WEEKDAY MASSES St. Mary of Mount Virgin Monday thru Saturday ------- 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "WEEKDAY MASSES St. Mary of Mount Virgin Monday thru Saturday ------- 8:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins; every day's intentions list 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "WEEKDAY MASSES St. Mary of Mount Virgin Monday thru Saturday ------- 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "WEEKDAY MASSES St. Mary of Mount Virgin Monday thru Saturday ------- 8:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins; every day's intentions list 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; in the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Mon., Wed., Thur. & Fri.------- 6:00 a.m. (in Spanish) (Held in the Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Mon., Wed., Thur. & Fri.------- 6:00 a.m. (in Spanish) (Held in the Chapel)"
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins; the intentions list 6:00am on exactly those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; in the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Mon., Wed., Thur. & Fri.------- 6:00 a.m. (in Spanish) (Held in the Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Mon., Wed., Thur. & Fri.------- 6:00 a.m. (in Spanish) (Held in the Chapel)"
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins; the intentions list 6:00am on exactly those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; in the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Mon., Wed., Thur. & Fri.------- 6:00 a.m. (in Spanish) (Held in the Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Mon., Wed., Thur. & Fri.------- 6:00 a.m. (in Spanish) (Held in the Chapel)"
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins; the intentions list 6:00am on exactly those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; in the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Mon., Wed., Thur. & Fri.------- 6:00 a.m. (in Spanish) (Held in the Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Mon., Wed., Thur. & Fri.------- 6:00 a.m. (in Spanish) (Held in the Chapel)"
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins; the intentions list 6:00am on exactly those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Monday thru Friday ----------- 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Monday thru Friday ----------- 12:10 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins and in the intentions. The website's 'Suspended during Summer' gives no months, so no season (R15); the Monday St. Jude Novena follows this same Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Monday thru Friday ----------- 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Monday thru Friday ----------- 12:10 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins and in the intentions. The website's 'Suspended during Summer' gives no months, so no season (R15); the Monday St. Jude Novena follows this same Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Monday thru Friday ----------- 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Monday thru Friday ----------- 12:10 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins and in the intentions. The website's 'Suspended during Summer' gives no months, so no season (R15); the Monday St. Jude Novena follows this same Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Monday thru Friday ----------- 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Monday thru Friday ----------- 12:10 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins and in the intentions. The website's 'Suspended during Summer' gives no months, so no season (R15); the Monday St. Jude Novena follows this same Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Monday thru Friday ----------- 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Monday thru Friday ----------- 12:10 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday schedule box of both bulletins and in the intentions. The website's 'Suspended during Summer' gives no months, so no season (R15); the Monday St. Jude Novena follows this same Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Tuesday Mass: This is now held at St. Mary every Tuesday in the Chapel at 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Tuesday Mass: This is now held at St. Mary every Tuesday in the Chapel at 7:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins and in the Tuesday intentions (7:00pm Nov 10 and Nov 17). The website says it is in Spanish, but the first Tuesday's 7 PM is the Latin Mass, so no language note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Latin Mass first Tuesday of every month @ 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Latin Mass first Tuesday of every month @ 7:00 p.m."
+        }
+      ],
+      "rationale": "R30, R32: the box gives no church; it sits under St. Mary of Mount Virgin's weekday schedule, and its time matches the weekly Tuesday 7 PM Mass in St. Mary's chapel, so it looks like that Mass in Latin on first Tuesdays. A second slot would duplicate the weekly one; leaning to leave it out.",
+      "question": "Record the first-Tuesday 7 PM Latin Mass as its own slot?",
+      "options": [
+        {
+          "label": "Leave out: the weekly Tuesday 7 PM Mass already covers it",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "First Tuesdays 7 PM Latin Mass at St. Mary's",
+          "entry": {
+            "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Latin"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:58:10Z"
+      }
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 2,
+          "said": "Friday, November 20, 2026 ... 7:00pm Maria Romero r/b Eulalia & Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 2,
+          "said": "Friday, November 13, 2026 ... 7:00pm Maria Jaquez Peralta & Victor Peralta"
+        },
+        {
+          "source": "website",
+          "url": "https://parishofthevisitation.org/",
+          "said": "Friday 7:00 PM (Spanish) - St. Mary's; followed by Exposition of the Blessed Sacrament (Adoración al Santisimo)",
+          "schedule_check": {
+            "checked_at": "2026-11-20T05:19:56Z",
+            "current_because": "Homepage read 2026-11-20; its weekday list matches the bulletin's current schedule (Tuesday 7 PM Mass now at St. Mary's, 6 AM Spanish M/W/Th/F).",
+            "bulletin": "2333c920",
+            "fits_because": "The Nov 15 bulletin's intentions for St. Mary of Mt. Virgin list a 7:00pm Mass on Friday Nov 20, as the Nov 8 issue did for Friday Nov 13."
+          }
+        }
+      ],
+      "rationale": "R35, R6: the St. Mary intentions of two issue weeks list a Friday 7:00pm Mass, and the parish website states it as a regular Friday 7 PM Spanish Mass at St. Mary's. The schedule box omits it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Mary's Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Adoration/Chapel Tuesday (except Holy Day vigils) - suspended for the summertime. It resumes in September From 5:00 to 6:00 p.m. @ St. Mary's Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Adoration/Chapel Tuesday (except Holy Day vigils) - suspended for the summertime. It resumes in September From 5:00 to 6:00 p.m. @ St. Mary's Chapel"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; the summer suspension gives only its end (September), so no season (R15), and the Holy Day vigil exception has no dates (R33).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Mary's Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 1,
+          "said": "Friday from 8:30-5:30 p.m. @ St. Mary's Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 1,
+          "said": "Friday from 8:30-5:30 p.m. @ St. Mary's Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 4,
+          "said": "Fridays in St. Mary's Chapel after the 8:00am Mass. Adoration will be available until 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f719eac",
+          "page": 4,
+          "said": "Fridays in St. Mary's Chapel after the 8:00am Mass. Adoration will be available until 6:00pm"
+        }
+      ],
+      "rationale": "R28, C8: the schedule box says 8:30-5:30 while the Adoration notice on p4 says after the 8:00 AM Mass (8:30 by R10) until 6:00 PM, in both bulletins. Leaning to the box's narrower 5:30 end, since a wrong end that runs late is worse than one that ends early.",
+      "question": "Friday Adoration in St. Mary's Chapel: until 5:30 PM or 6:00 PM?",
+      "options": [
+        {
+          "label": "Fridays 8:30 AM-5:30 PM",
+          "entry": {
+            "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "17:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Mary's Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Fridays 8:30 AM-6:00 PM",
+          "entry": {
+            "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Mary's Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:58:10Z"
+      }
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 PM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://parishofthevisitation.org/",
+          "said": "Friday 7:00 PM (Spanish) - St. Mary's; followed by Exposition of the Blessed Sacrament (Adoración al Santisimo)"
+        }
+      ],
+      "rationale": "R29, R6: only the website mentions Exposition after the Friday 7 PM Mass; neither bulletin does, and the bulletins' Friday Adoration notices end at 5:30/6:00 PM. R10 would time it 7:30 PM with no end. Leaning to leave it out until a bulletin confirms it.",
+      "question": "Add Adoration after the Friday 7 PM Spanish Mass (website only)?",
+      "options": [
+        {
+          "label": "Fridays from 7:30 PM, no end",
+          "entry": {
+            "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 PM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:58:10Z"
+      }
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2333c920",
+          "page": 4,
+          "said": "At 3:00pm join us for the Chaplet of Divine Mercy."
+        }
+      ],
+      "rationale": "R24: a devotion, not Mass, Confession or Adoration (it falls inside Friday Adoration).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "St. John the Baptist Church, 29 Abeel St., New Brunswick",
+      "said": "ST. JOHN THE BAPTIST CHURCH Elijah's Promise Soup Kitchen (the parish website lists 9:30 am in Spanish -St. John's - Sunday)",
+      "bulletin": "2333c920",
+      "page": 1
+    }
+  ]
+}

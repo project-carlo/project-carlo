@@ -1,0 +1,692 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-matthew-the-apostle-edison",
+  "status": "approved",
+  "as_of": "2026-11-15T16:20:08Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:52:19Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:54Z",
+  "summary": "One church, St. Matthew the Apostle, Edison. The Mass schedule box (p1) gives Sat 5 PM, 2nd-Saturday 7 PM Tagalog, Sunday 7:30/9/10:30/12 and 1:30 PM Spanish, Mon-Sat 8:30 AM, and Saturday confessions 11-11:30 AM and after the 5 PM Mass; both weeks' intentions agree. Open: Spanish Sunday confession 'after the Sunday Mass' on request.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ca9b13c6904fe12812da017c4650aa8c6e259906d43ecc948b63e2770de6a7b6",
+      "fetched_at": "2026-11-15T16:20:08Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "46a81d23253731a75a15431863ff80665f0fc3cc7b8272d4659c0b5999dbcd35",
+      "fetched_at": "2026-11-08T15:44:41Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 1,
+          "said": "Mass Schedule Saturday Evening: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 3,
+          "said": "SATURDAY, NOVEMBER 21, 2026 ... 5:00 PM Manuel Lago"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a81d23",
+          "page": 3,
+          "said": "SATURDAY, NOVEMBER 14, 2026 ... 5:00 PM Catherine Okerson"
+        }
+      ],
+      "rationale": "R1: in the newest bulletin's Mass Schedule box and both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 1,
+          "said": "Sunday 7:30, 9:00, 10:30 AM, 12:00 & 1:30 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a81d23",
+          "page": 3,
+          "said": "SUNDAY NOVEMBER 8, 2026 7:30 AM ... 9:00 AM ... 10:30 AM ... 12:00 PM"
+        }
+      ],
+      "rationale": "R1: in the newest bulletin's Mass Schedule box; the intentions of both bulletins list the same Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 1,
+          "said": "Sunday 7:30, 9:00, 10:30 AM, 12:00 & 1:30 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a81d23",
+          "page": 3,
+          "said": "SUNDAY NOVEMBER 8, 2026 7:30 AM ... 9:00 AM ... 10:30 AM ... 12:00 PM"
+        }
+      ],
+      "rationale": "R1: in the newest bulletin's Mass Schedule box; the intentions of both bulletins list the same Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 1,
+          "said": "Sunday 7:30, 9:00, 10:30 AM, 12:00 & 1:30 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a81d23",
+          "page": 3,
+          "said": "SUNDAY NOVEMBER 8, 2026 7:30 AM ... 9:00 AM ... 10:30 AM ... 12:00 PM"
+        }
+      ],
+      "rationale": "R1: in the newest bulletin's Mass Schedule box; the intentions of both bulletins list the same Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 1,
+          "said": "Sunday 7:30, 9:00, 10:30 AM, 12:00 & 1:30 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a81d23",
+          "page": 3,
+          "said": "SUNDAY NOVEMBER 8, 2026 7:30 AM ... 9:00 AM ... 10:30 AM ... 12:00 PM"
+        }
+      ],
+      "rationale": "R1: in the newest bulletin's Mass Schedule box; the intentions of both bulletins list the same Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 1,
+          "said": "12:00 & 1:30 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a81d23",
+          "page": 3,
+          "said": "1:30 PM Martin Jimenez r/o Brian Hudson (Spanish)"
+        }
+      ],
+      "rationale": "R1: in the newest bulletin's Mass Schedule box, marked Spanish; both weeks' intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a81d23",
+          "page": 3,
+          "said": "MONDAY, NOVEMBER 9, 2026 8:30 AM ... SATURDAY, NOVEMBER 14, 2026 8:30 AM"
+        }
+      ],
+      "rationale": "R1: in the newest bulletin's Mass Schedule box; each weekday of both weeks' intentions has an 8:30 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a81d23",
+          "page": 3,
+          "said": "MONDAY, NOVEMBER 9, 2026 8:30 AM ... SATURDAY, NOVEMBER 14, 2026 8:30 AM"
+        }
+      ],
+      "rationale": "R1: in the newest bulletin's Mass Schedule box; each weekday of both weeks' intentions has an 8:30 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a81d23",
+          "page": 3,
+          "said": "MONDAY, NOVEMBER 9, 2026 8:30 AM ... SATURDAY, NOVEMBER 14, 2026 8:30 AM"
+        }
+      ],
+      "rationale": "R1: in the newest bulletin's Mass Schedule box; each weekday of both weeks' intentions has an 8:30 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a81d23",
+          "page": 3,
+          "said": "MONDAY, NOVEMBER 9, 2026 8:30 AM ... SATURDAY, NOVEMBER 14, 2026 8:30 AM"
+        }
+      ],
+      "rationale": "R1: in the newest bulletin's Mass Schedule box; each weekday of both weeks' intentions has an 8:30 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a81d23",
+          "page": 3,
+          "said": "MONDAY, NOVEMBER 9, 2026 8:30 AM ... SATURDAY, NOVEMBER 14, 2026 8:30 AM"
+        }
+      ],
+      "rationale": "R1: in the newest bulletin's Mass Schedule box; each weekday of both weeks' intentions has an 8:30 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a81d23",
+          "page": 3,
+          "said": "MONDAY, NOVEMBER 9, 2026 8:30 AM ... SATURDAY, NOVEMBER 14, 2026 8:30 AM"
+        }
+      ],
+      "rationale": "R1: in the newest bulletin's Mass Schedule box; each weekday of both weeks' intentions has an 8:30 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Tagalog"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 1,
+          "said": "Saturday Evening: 5:00 PM, 2nd Saturday 7:00 PM (Tagalog)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a81d23",
+          "page": 3,
+          "said": "SATURDAY, NOVEMBER 14, 2026 ... 7:00 PM Joseph Vincent Luistro & November birthday (Tagalog) celebrants"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the schedule box names the second Saturday; the Nov 8 issue's intentions list it on Nov 14, a second Saturday, and the newest week (third Saturday) rightly omits it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "11:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Priest stays until all confessions are heard"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays: 11:00 AM to 11:30 AM (the priest will stay until all confessions are heard.)"
+        }
+      ],
+      "rationale": "R1: in the newest bulletin's Reconciliation box; POLICY, Times: the printed clock end time is kept, with the extension in the note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 5:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 1,
+          "said": "Saturdays: ... & after the 5:00 PM Mass"
+        }
+      ],
+      "rationale": "R1, R10: Saturday confession after the 5:00 PM vigil Mass, a weekend Mass, so one hour after it starts (6:00 PM), no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; after the 1:30 PM Mass, contact the priest"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 2,
+          "said": "CONFESIONES EN ESPAÑOL: _está dispuesto después de la misa dominical. Por favor comuníquese con él."
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request (contact him) is included at POLICY's time (R10, one hour after a weekend Mass). The line does not name which Sunday Mass or the priest (the name is blank); it sits in the Spanish-language section, so the 1:30 PM Spanish Mass is the likely one. Same words in the Nov 8 issue p2.",
+      "question": "Add Spanish confession after the Sunday Spanish Mass (contact the priest)?",
+      "options": [
+        {
+          "label": "Sundays 2:30 PM, after the 1:30 PM Spanish Mass",
+          "entry": {
+            "church_slug": "st-matthew-the-apostle-edison",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "14:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish; after the 1:30 PM Mass, contact the priest"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:57:54Z"
+      }
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 5,
+          "said": "Last Tuesday of the month at 7:00 PM. WHAT IS TAIZÉ PRAYER? ... We sit in the presence of the Blessed Sacrament."
+        }
+      ],
+      "rationale": "R24, POLICY: Taizé prayer is a devotion not called Adoration or Holy Hour; 'in the presence of the Blessed Sacrament' does not say it is exposed (POLICY, Churches and chapels), and no place is given. Recorded with no entry so a reviewer sees it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca9b13c6",
+          "page": 2,
+          "said": "MIRACULOUS MEDAL NOVENA Saturday Morning after 8:30 AM Mass."
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

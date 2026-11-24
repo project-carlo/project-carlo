@@ -1,0 +1,686 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-mount-warren",
+  "status": "approved",
+  "as_of": "2026-11-15T16:04:24Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T23:18:46Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:24Z",
+  "summary": "One church; daily Mass and Friday Adoration are in its Chapel. Both bulletins (Nov 8, Nov 15) print the same schedule: Sat 5 PM Vigil, Sun 8/10/11:30, Mon-Sat 9:15 AM, Sat Confession 4:15-4:45, Fri Adoration 10 AM-7 PM. The Vigil moves to 4 PM (Confession 3:15) from Nov 28, left to update mode per R20; dated Thanksgiving Mass, Nov 27 Adoration cancellation (website) and Christmas Eve 4 PM Mass added. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "62324f446c6d750ced2a38c5b23293c84678b26d6c85baa4b98dda815ecab1bd",
+      "fetched_at": "2026-11-15T16:04:24Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "0041857c836ceed07afb7d3809912f6d05ecd7edd2a7a7b49777d6cb0ec1f99b",
+      "fetched_at": "2026-11-08T15:31:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 1,
+          "said": "Sunday Masses | Saturday Vigil– 5:00 PM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0041857c",
+          "page": 1,
+          "said": "Sunday Masses | Saturday Vigil– 5:00 PM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 2,
+          "said": "Saturday, November 21 ... 5:00 PM Catherine Keilp"
+        }
+      ],
+      "rationale": "R1, R20: printed on page 1 of both bulletins and in the intentions. Page 3 announces the Vigil moves to 4:00 PM from November 28; R20 keeps the current time and leaves the future one to update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 1,
+          "said": "Sunday – 8:00 | 10:00 | 11:30 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0041857c",
+          "page": 1,
+          "said": "Sunday – 8:00 | 10:00 | 11:30 AM Church"
+        }
+      ],
+      "rationale": "R1: printed on page 1 of both bulletins and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 1,
+          "said": "Sunday – 8:00 | 10:00 | 11:30 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0041857c",
+          "page": 1,
+          "said": "Sunday – 8:00 | 10:00 | 11:30 AM Church"
+        }
+      ],
+      "rationale": "R1: printed on page 1 of both bulletins and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 1,
+          "said": "Sunday – 8:00 | 10:00 | 11:30 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0041857c",
+          "page": 1,
+          "said": "Sunday – 8:00 | 10:00 | 11:30 AM Church"
+        }
+      ],
+      "rationale": "R1: printed on page 1 of both bulletins and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 1,
+          "said": "Daily Masses Monday-Saturday | 9:15 AM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0041857c",
+          "page": 1,
+          "said": "Daily Masses Monday-Saturday | 9:15 AM Chapel"
+        }
+      ],
+      "rationale": "R1: printed on page 1 of both bulletins and in the intentions. POLICY, Churches and chapels: the parish's own chapel (Sanctuary Lamp in the Chapel, chapel alerts on the website) belongs to the church; noted as Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 1,
+          "said": "Daily Masses Monday-Saturday | 9:15 AM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0041857c",
+          "page": 1,
+          "said": "Daily Masses Monday-Saturday | 9:15 AM Chapel"
+        }
+      ],
+      "rationale": "R1: printed on page 1 of both bulletins and in the intentions. POLICY, Churches and chapels: the parish's own chapel (Sanctuary Lamp in the Chapel, chapel alerts on the website) belongs to the church; noted as Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 1,
+          "said": "Daily Masses Monday-Saturday | 9:15 AM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0041857c",
+          "page": 1,
+          "said": "Daily Masses Monday-Saturday | 9:15 AM Chapel"
+        }
+      ],
+      "rationale": "R1: printed on page 1 of both bulletins and in the intentions. POLICY, Churches and chapels: the parish's own chapel (Sanctuary Lamp in the Chapel, chapel alerts on the website) belongs to the church; noted as Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 1,
+          "said": "Daily Masses Monday-Saturday | 9:15 AM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0041857c",
+          "page": 1,
+          "said": "Daily Masses Monday-Saturday | 9:15 AM Chapel"
+        }
+      ],
+      "rationale": "R1: printed on page 1 of both bulletins and in the intentions. POLICY, Churches and chapels: the parish's own chapel (Sanctuary Lamp in the Chapel, chapel alerts on the website) belongs to the church; noted as Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 1,
+          "said": "Daily Masses Monday-Saturday | 9:15 AM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0041857c",
+          "page": 1,
+          "said": "Daily Masses Monday-Saturday | 9:15 AM Chapel"
+        }
+      ],
+      "rationale": "R1: printed on page 1 of both bulletins and in the intentions. POLICY, Churches and chapels: the parish's own chapel (Sanctuary Lamp in the Chapel, chapel alerts on the website) belongs to the church; noted as Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 1,
+          "said": "Daily Masses Monday-Saturday | 9:15 AM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0041857c",
+          "page": 1,
+          "said": "Daily Masses Monday-Saturday | 9:15 AM Chapel"
+        }
+      ],
+      "rationale": "R1: printed on page 1 of both bulletins and in the intentions. POLICY, Churches and chapels: the parish's own chapel (Sanctuary Lamp in the Chapel, chapel alerts on the website) belongs to the church; noted as Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 1,
+          "said": "Confessions – Saturday 4:15-4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0041857c",
+          "page": 1,
+          "said": "Confessions – Saturday 4:15-4:45 PM"
+        }
+      ],
+      "rationale": "R1, R20: printed on page 1 of both bulletins. Page 3 says Confessions begin at 3:15 PM from November 28 with the new Vigil time; R20 keeps the current time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 1,
+          "said": "Weekly Adoration | 10:00 AM-7:00 PM Every Friday after Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 4,
+          "said": "Eucharistic Adoration in the Chapel every Friday 10:00 AM until 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0041857c",
+          "page": 2,
+          "said": "Eucharistic Adoration in the Chapel every Friday 10:00 AM until 7:00 PM"
+        }
+      ],
+      "rationale": "R1: clock times printed on pages 1 and 4 of the newest bulletin and in the older one; POLICY, Times: the stated clock time wins over 'after Daily Mass'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 6,
+          "said": "WE WILL BE SINGING THE CHRISTMAS EVE MASS ONLY ON DECEMBER 24TH. THE MASS WILL BEGIN AT 4PM"
+        }
+      ],
+      "rationale": "R1, R16: a dated Christmas Eve Mass at the parish (children's choir flyer, image page 6), on or after as_of. Open to all; only the choir rehearsals are for children.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 3,
+          "said": "beginning Saturday, November 28th, the first Saturday of Advent, our Vigil Mass will be celebrated at 4:00 PM."
+        }
+      ],
+      "rationale": "R20: an announced future change; the current 5:00 PM Vigil is kept and update mode will read the bulletins that show the new time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 3,
+          "said": "Confessions will be available beginning at 3:15 PM."
+        }
+      ],
+      "rationale": "R20: part of the announced change from November 28; the current 4:15-4:45 PM Confession is kept.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62324f44",
+          "page": 1,
+          "said": "Holy Days – 9:15 AM | 7:00 PM Chapel"
+        }
+      ],
+      "rationale": "POLICY, Dates: a generic holy-day line with no holy day dated in the bulletin; no date is projected.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving; Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ourladyofthemount.org/",
+          "said": "Thanksgiving Mass will be celebrated on Thursday, November 26th at 9:30 AM in the Chapel.",
+          "schedule_check": {
+            "checked_at": "2026-11-19T23:20:49Z",
+            "current_because": "Homepage checked 2026-11-19 announces Thanksgiving 2026 (Nov 26) and the Nov 28 Vigil change, matching the newest bulletin; current pastor Fr. Sean Kenney.",
+            "bulletin": "62324f44",
+            "fits_because": "Newest bulletin (Nov 15) gives daily 9:15 AM Mass in the Chapel and Friday Adoration 10 AM-7 PM in the Chapel; this holiday notice changes one date of each and the bulletin does not cover that week."
+          }
+        }
+      ],
+      "rationale": "R6, R16, R17: the parish homepage gives a dated Thanksgiving Mass after as_of. The usual Thursday 9:15 AM Mass is left alone since no cancellation is stated (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mount-warren",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "10:00",
+        "end_time": "19:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ourladyofthemount.org/",
+          "said": "There will be no Adoration on Friday, November 27th.",
+          "schedule_check": {
+            "checked_at": "2026-11-19T23:20:53Z",
+            "current_because": "Homepage checked 2026-11-19 announces Thanksgiving 2026 (Nov 26) and the Nov 28 Vigil change, matching the newest bulletin; current pastor Fr. Sean Kenney.",
+            "bulletin": "62324f44",
+            "fits_because": "Newest bulletin (Nov 15) gives daily 9:15 AM Mass in the Chapel and Friday Adoration 10 AM-7 PM in the Chapel; this holiday notice changes one date of each and the bulletin does not cover that week."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish homepage cancels Adoration on one date after as_of; recorded so update mode doesn't miss it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

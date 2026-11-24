@@ -1,0 +1,752 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-patrick-belvidere",
+  "status": "approved",
+  "as_of": "2026-11-15T16:20:12Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:54:41Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:57Z",
+  "summary": "Two churches: St. Patrick (Belvidere) with Sat 4 PM, Sun 8 and 11 AM, Mon-Sat 9 AM Masses, Sat 3-3:30 PM Confession, Tuesday 5:30-6:30 PM and Thursday 7-8 PM Adoration (confession during the Thursday Holy Hour) and First Friday Adoration 9:30-3:30; St. Rose of Lima (Oxford) Sun 9:30 AM. Both bulletins read (image-only pages, rendered) agree; no history stored. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d1e25fcdd034e0ce4f9f95cfd89c908aadaa8848d0490e6ed642e07bc47ce4d7",
+      "fetched_at": "2026-11-15T16:20:12Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2f90b9b6b5afd04396ca220185f542ca9f9a623cc650c6dc2f18825231676620",
+      "fetched_at": "2026-11-08T15:44:45Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belvidere",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 2,
+          "said": "St. Patrick Church Mass Schedule Saturday: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 2,
+          "said": "St. Patrick Church Mass Schedule Saturday: 4:00pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the St. Patrick Mass schedule box of both bulletins read (Nov 15 and Nov 8); also on page 1.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belvidere",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 2,
+          "said": "St. Patrick Church Mass Schedule Sunday: 8:00am and 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 2,
+          "said": "St. Patrick Church Mass Schedule Sunday: 8:00am and 11:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the St. Patrick Mass schedule box of both bulletins read; the intentions list both Masses each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belvidere",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 2,
+          "said": "St. Patrick Church Mass Schedule Sunday: 8:00am and 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 2,
+          "said": "St. Patrick Church Mass Schedule Sunday: 8:00am and 11:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the St. Patrick Mass schedule box of both bulletins read; the intentions list both Masses each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belvidere",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 2,
+          "said": "Weekday: Mon-Sat. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 2,
+          "said": "Weekday: Mon-Sat. 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the St. Patrick Mass schedule box of both bulletins read; the intentions list a 9:00 AM (SP) Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belvidere",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 2,
+          "said": "Weekday: Mon-Sat. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 2,
+          "said": "Weekday: Mon-Sat. 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the St. Patrick Mass schedule box of both bulletins read; the intentions list a 9:00 AM (SP) Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belvidere",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 2,
+          "said": "Weekday: Mon-Sat. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 2,
+          "said": "Weekday: Mon-Sat. 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the St. Patrick Mass schedule box of both bulletins read; the intentions list a 9:00 AM (SP) Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belvidere",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 2,
+          "said": "Weekday: Mon-Sat. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 2,
+          "said": "Weekday: Mon-Sat. 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the St. Patrick Mass schedule box of both bulletins read; the intentions list a 9:00 AM (SP) Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belvidere",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 2,
+          "said": "Weekday: Mon-Sat. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 2,
+          "said": "Weekday: Mon-Sat. 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the St. Patrick Mass schedule box of both bulletins read; the intentions list a 9:00 AM (SP) Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belvidere",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 2,
+          "said": "Weekday: Mon-Sat. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 2,
+          "said": "Weekday: Mon-Sat. 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the St. Patrick Mass schedule box of both bulletins read; the intentions list a 9:00 AM (SP) Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belvidere",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 2,
+          "said": "Confessions: Saturday: 3:00 - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 2,
+          "said": "Confessions: Saturday: 3:00 - 3:30pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the St. Patrick schedule box of both bulletins read; page 3 'on Saturday afternoons at 3:00pm' agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-oxford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 2,
+          "said": "St. Rose of Lima Mass Schedule Sunday: 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 2,
+          "said": "St. Rose of Lima Mass Schedule Sunday: 9:30am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the St. Rose of Lima schedule box of both bulletins read; intentions list (SRL) 9:30 AM each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belvidere",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 3,
+          "said": "St. Patrick Church: First Friday of every Month: Eucharistic Adoration from: 9:30am-3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 3,
+          "said": "St. Patrick Church: First Friday of every Month: Eucharistic Adoration from: 9:30am-3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 1,
+          "said": "Eucharistic Adoration First Fridays: 9:30am - 3:30pm"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: a named first-Friday service printed in both bulletins; the Dec 4 notice (p3) is that same first Friday, so no dated entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belvidere",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 2,
+          "said": "Holy Hour St. Patrick Church every Thursday evening from 7:00pm-8:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 2,
+          "said": "Holy Hour St. Patrick Church every Thursday evening from 7:00pm-8:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 6,
+          "said": "Every Thursday Evening HOLY HOUR Adoration of the Blessed Sacrament from 7:00pm 8:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 6,
+          "said": "Every Thursday Evening HOLY HOUR Adoration of the Blessed Sacrament from 7:00pm 8:00pm"
+        }
+      ],
+      "rationale": "R1, R35: weekly Holy Hour (POLICY: a Holy Hour is Adoration) printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belvidere",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 2,
+          "said": "Holy Hour ... every Thursday evening from 7:00pm-8:00pm There will be opportunity for confession."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 2,
+          "said": "Holy Hour ... every Thursday evening from 7:00pm-8:00pm There will be opportunity for confession."
+        }
+      ],
+      "rationale": "R10, POLICY Times: confession offered during the Thursday Holy Hour takes its hours, note During Adoration; printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belvidere",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 6,
+          "said": "Tuesday Evening Adoration of the Blessed Sacrament ~ Jesus 5:30pm - 6:30pm St. Patrick Church will be open for Adoration All are welcome!"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 6,
+          "said": "Tuesday Evening Adoration of the Blessed Sacrament ~ Jesus 5:30pm - 6:30pm St. Patrick Church will be open for Adoration All are welcome!"
+        }
+      ],
+      "rationale": "R1, R35: the parish names it Adoration of the Blessed Sacrament (not just an open church) at a fixed weekly time, printed in both bulletins; exposition not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belvidere",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Anawim Community Center, 354 Jonestown Rd., Oxford"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 5,
+          "said": "Eucharistic Adoration every Wednesday 1 pm - 7 pm Anawim Community Center 354 Jonestown Rd., Oxford, NJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f90b9b6",
+          "page": 5,
+          "said": "Eucharistic Adoration every Wednesday 1 pm - 7 pm at the Anawim Community Center"
+        }
+      ],
+      "rationale": "R22: held by the Anawim Community at its own center at another address, not one of the parish's churches (seed church finds no match).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 6,
+          "said": "Visit the Blue Army Shrine ... Confessions Daily"
+        }
+      ],
+      "rationale": "R22, R26: an advertisement for the Blue Army Shrine, another place; no time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 1,
+          "said": "Daily Rosary: St. Patrick Church: 8:15 am Mon - Sat., Sun 7:20am; St. Rose of Lima Church: Sun 8:45am"
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 1,
+          "said": "First Friday Purgatorial Masses: St. Patrick Church ... will be celebrated on the First Friday of every month."
+        }
+      ],
+      "rationale": "R26, POLICY Weekly or dated rule 7: no time of its own; these are intentions offered at the regular first-Friday 9:00 AM Mass already recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 6,
+          "said": "Ecumenical Service at The United Methodist Church in Belvidere on Sunday, November 22nd at 3:00pm"
+        }
+      ],
+      "rationale": "R24, R22: not a Mass, Confession or Adoration, and at another church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1e25fcd",
+          "page": 3,
+          "said": "The Sacrament of Reconciliation ... or by calling parish office to arrange a time."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

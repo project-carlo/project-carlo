@@ -1,0 +1,612 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-james-the-less-jamesburg",
+  "status": "approved",
+  "as_of": "2026-11-15T16:50:59Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:49:14Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:11Z",
+  "summary": "One church, St. James the Less, Jamesburg. The Religious Services box is identical in both bulletins read (Nov 8 and Nov 15, 2026): Sat 4 PM; Sun 8, 10, 2 PM Spanish, 5 PM; Mon-Fri 8:30 AM; Confession Thu 4:30-4:50 and Sat 3 PM; Thursday Adoration 5-6 PM. Adds the bilingual 7 PM Mass for the Immaculate Conception on Dec 8. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "265337a6222c2fc6b8f7e632d59d94549b5610aeb94ef0fb3bb741b748ae5356",
+      "fetched_at": "2026-11-15T16:50:59Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "8013e7721d0a13565f31bc1670fd3599a488c6ddfb222f6b01567a2daf2a2cfb",
+      "fetched_at": "2026-11-08T15:59:36Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-less-jamesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 1,
+          "said": "Weekend Masses Saturday 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8013e772",
+          "page": 1,
+          "said": "Weekend Masses Saturday 4:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Religious Services box of both bulletins read (Nov 8 and Nov 15) and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-less-jamesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am, 2:00 pm (Spanish), 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8013e772",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am, 2:00 pm (Spanish), 5:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Religious Services box of both bulletins read and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-less-jamesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am, 2:00 pm (Spanish), 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8013e772",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am, 2:00 pm (Spanish), 5:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Religious Services box of both bulletins read and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-less-jamesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am, 2:00 pm (Spanish), 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8013e772",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am, 2:00 pm (Spanish), 5:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Religious Services box of both bulletins read and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-less-jamesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am, 2:00 pm (Spanish), 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8013e772",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am, 2:00 pm (Spanish), 5:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Religious Services box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-less-jamesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8013e772",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday 8:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Religious Services box of both bulletins read; each weekday's 8:30 AM intention is listed on p3 of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-less-jamesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8013e772",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday 8:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Religious Services box of both bulletins read; each weekday's 8:30 AM intention is listed on p3 of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-less-jamesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8013e772",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday 8:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Religious Services box of both bulletins read; each weekday's 8:30 AM intention is listed on p3 of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-less-jamesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8013e772",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday 8:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Religious Services box of both bulletins read; each weekday's 8:30 AM intention is listed on p3 of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-less-jamesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8013e772",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday 8:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Religious Services box of both bulletins read; each weekday's 8:30 AM intention is listed on p3 of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-less-jamesburg",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "16:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 1,
+          "said": "Confession Thursday 4:30 pm ... Adoration: On Thursdays ... Confession from 4:30 to 4:50 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8013e772",
+          "page": 1,
+          "said": "Confession Thursday 4:30 pm ... Adoration: On Thursdays ... Confession from 4:30 to 4:50 pm."
+        }
+      ],
+      "rationale": "R1: the schedule box gives Thursday 4:30 pm and the Adoration box on the same page gives its end, 4:50 pm; same in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-less-jamesburg",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 1,
+          "said": "Confession Thursday 4:30 pm, Saturday 3:00 pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8013e772",
+          "page": 1,
+          "said": "Confession Thursday 4:30 pm, Saturday 3:00 pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box; no end time given, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-less-jamesburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 1,
+          "said": "On Thursdays, Adoration will be held in the Church from 5:00 to 6:00 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8013e772",
+          "page": 1,
+          "said": "On Thursdays, Adoration will be held in the Church from 5:00 to 6:00 pm."
+        }
+      ],
+      "rationale": "R1: printed on p1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-less-jamesburg",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception; bilingual"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 6,
+          "said": "Tuesday, December 8 - Holy Day of Obligation ... Mass Schedule at St. James the Less: 8:30 am & 7:00 pm (Bilingual)"
+        }
+      ],
+      "rationale": "R1, R16: a holy-day Mass outside the weekly schedule, dated after as_of (POLICY, Weekly or dated rule 7). Its 8:30 AM Mass is the weekly Tuesday Mass and is not duplicated (rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 1,
+          "said": "Morning Prayer Monday - Friday 8:15 am; Holy Rosary First Saturday 3:30 pm; First Sunday 9:30 am and 1:00 pm (Spanish); Divine Mercy Chaplet (English) Second Sunday 9:30 am, (Spanish) at 1:30 pm each Sunday"
+        }
+      ],
+      "rationale": "R24, R25: Morning Prayer, the Rosary and the Divine Mercy Chaplet are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 1,
+          "said": "Confession ... or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "265337a6",
+          "page": 4,
+          "said": "Retiro de Adviento, 5 de diciembre, 9 AM a 3 PM, 146 Metlars Ln, Piscataway ... Adoración y Confesiones"
+        }
+      ],
+      "rationale": "R22, R26: a diocesan Advent retreat at another address in Piscataway; its Adoration and Confessions have no times of their own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

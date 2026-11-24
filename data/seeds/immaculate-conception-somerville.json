@@ -1,0 +1,1047 @@
+{
+  "schema_version": 1,
+  "parish_slug": "immaculate-conception-somerville",
+  "status": "approved",
+  "as_of": "2026-11-15T16:03:36Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T22:47:39Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:55:58Z",
+  "summary": "One church (weekday Masses and Adoration in its chapel). The weekly calendar on p7 is identical in the Nov 8 and Nov 15, 2026 bulletins and matches the website. Dated: Thanksgiving 9 AM Mass (bulletin) and the Dec 8 holy-day Masses (website, R6). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4980d495a2e32e368cfc9f87fe28086d33d9b7b884dcab7ad061e00816767b9d",
+      "fetched_at": "2026-11-15T16:03:36Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b913c408b045b51d424df18eb470fe41d7c59faaa50593d077a5068d62bad328",
+      "fetched_at": "2026-11-08T15:31:21Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "7:30 am Mass, Church / 9:00 am Mass, Church / 11:00 am Mass, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "7:30 am Mass, Church / 9:00 am Mass, Church / 11:00 am Mass, Church"
+        },
+        {
+          "source": "website",
+          "url": "https://www.immaculateconception.org/",
+          "said": "Sunday Mass Schedule Sunday : 7:30 AM ... 9:00 AM ... 11:00 AM ... Church"
+        }
+      ],
+      "rationale": "R1: printed in the week's calendar (p7) and Mass intentions (p2) of both bulletins read; the website's Sunday schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "7:30 am Mass, Church / 9:00 am Mass, Church / 11:00 am Mass, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "7:30 am Mass, Church / 9:00 am Mass, Church / 11:00 am Mass, Church"
+        },
+        {
+          "source": "website",
+          "url": "https://www.immaculateconception.org/",
+          "said": "Sunday Mass Schedule Sunday : 7:30 AM ... 9:00 AM ... 11:00 AM ... Church"
+        }
+      ],
+      "rationale": "R1: printed in the week's calendar (p7) and Mass intentions (p2) of both bulletins read; the website's Sunday schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "7:30 am Mass, Church / 9:00 am Mass, Church / 11:00 am Mass, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "7:30 am Mass, Church / 9:00 am Mass, Church / 11:00 am Mass, Church"
+        },
+        {
+          "source": "website",
+          "url": "https://www.immaculateconception.org/",
+          "said": "Sunday Mass Schedule Sunday : 7:30 AM ... 9:00 AM ... 11:00 AM ... Church"
+        }
+      ],
+      "rationale": "R1: printed in the week's calendar (p7) and Mass intentions (p2) of both bulletins read; the website's Sunday schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "1:00 pm Spanish Mass, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "1:00 pm Spanish Mass, Church"
+        },
+        {
+          "source": "website",
+          "url": "https://www.immaculateconception.org/",
+          "said": "1:00 PM Spanish Español ES"
+        }
+      ],
+      "rationale": "R1: printed in the calendar of both bulletins; the website lists it as Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "5:00 pm Vigil Mass, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "5:00 pm Vigil Mass, Church"
+        }
+      ],
+      "rationale": "R1: printed in the calendar and intentions of both bulletins; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "8:00 am Mass, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "8:00 am Mass, Church"
+        }
+      ],
+      "rationale": "R1: printed on Saturday in the calendar and intentions of both bulletins; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "6:30 am Mass, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "6:30 am Mass, Chapel"
+        }
+      ],
+      "rationale": "R1: printed each weekday in the calendar of both bulletins; the website's daily schedule agrees. POLICY, Churches and chapels: the parish's own Blessed Sacrament Chapel (the website lists it with the church's directions; the bulletin's sanctuary lamps are 'Church' and 'Chapel') belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "6:30 am Mass, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "6:30 am Mass, Chapel"
+        }
+      ],
+      "rationale": "R1: printed each weekday in the calendar of both bulletins; the website's daily schedule agrees. POLICY, Churches and chapels: the parish's own Blessed Sacrament Chapel (the website lists it with the church's directions; the bulletin's sanctuary lamps are 'Church' and 'Chapel') belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "6:30 am Mass, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "6:30 am Mass, Chapel"
+        }
+      ],
+      "rationale": "R1: printed each weekday in the calendar of both bulletins; the website's daily schedule agrees. POLICY, Churches and chapels: the parish's own Blessed Sacrament Chapel (the website lists it with the church's directions; the bulletin's sanctuary lamps are 'Church' and 'Chapel') belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "6:30 am Mass, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "6:30 am Mass, Chapel"
+        }
+      ],
+      "rationale": "R1: printed each weekday in the calendar of both bulletins; the website's daily schedule agrees. POLICY, Churches and chapels: the parish's own Blessed Sacrament Chapel (the website lists it with the church's directions; the bulletin's sanctuary lamps are 'Church' and 'Chapel') belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "6:30 am Mass, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "6:30 am Mass, Chapel"
+        }
+      ],
+      "rationale": "R1: printed each weekday in the calendar of both bulletins; the website's daily schedule agrees. POLICY, Churches and chapels: the parish's own Blessed Sacrament Chapel (the website lists it with the church's directions; the bulletin's sanctuary lamps are 'Church' and 'Chapel') belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "8:00 am Mass, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "8:00 am Mass, Chapel"
+        }
+      ],
+      "rationale": "R1: printed Monday-Thursday in the calendar of both bulletins; the website agrees. POLICY, Churches and chapels: the parish's own chapel belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "8:00 am Mass, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "8:00 am Mass, Chapel"
+        }
+      ],
+      "rationale": "R1: printed Monday-Thursday in the calendar of both bulletins; the website agrees. POLICY, Churches and chapels: the parish's own chapel belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "8:00 am Mass, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "8:00 am Mass, Chapel"
+        }
+      ],
+      "rationale": "R1: printed Monday-Thursday in the calendar of both bulletins; the website agrees. POLICY, Churches and chapels: the parish's own chapel belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "8:00 am Mass, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "8:00 am Mass, Chapel"
+        }
+      ],
+      "rationale": "R1: printed Monday-Thursday in the calendar of both bulletins; the website agrees. POLICY, Churches and chapels: the parish's own chapel belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "FRIDAY ... 8:30 am Mass, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "FRIDAY ... 8:30 am Mass, Church"
+        }
+      ],
+      "rationale": "R1: Friday's second Mass is at 8:30 in the Church (not 8:00 in the Chapel) in both bulletins' calendars and intentions and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "3:00 pm - 4:30 pm Confession, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "3:00 pm - 4:30 pm Confession, Church"
+        },
+        {
+          "source": "website",
+          "url": "https://www.immaculateconception.org/",
+          "said": "Saturday 3:00 PM to 4:30 PM Church"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' calendars; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "8:30 am - 3:00 pm Eucharistic Adoration, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "8:30 am - 3:00 pm Eucharistic Adoration, Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.immaculateconception.org/",
+          "said": "Tuesday 8:30 AM to 3:00 PM Chapel after Daily Mass"
+        }
+      ],
+      "rationale": "R1: Eucharistic Adoration in both bulletins' calendars and on the website, in the parish's chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "9:00 am - 7:00 pm Eucharistic Adoration, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 7,
+          "said": "9:00 am - 7:00 pm Eucharistic Adoration, Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.immaculateconception.org/",
+          "said": "Friday 9:00 AM to 7:00 PM Chapel Blessed Sacrament Chapel"
+        }
+      ],
+      "rationale": "R1: Eucharistic Adoration in both bulletins' calendars and on the website, in the Blessed Sacrament Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 4,
+          "said": "Thanksgiving Day Mass on Thursday, November 26 at 9:00 am in the Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 4,
+          "said": "Thanksgiving Day Mass on Thursday, November 26 at 9:00 am in the Church"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass after as_of, announced in both bulletins. R17: no cancellation of the weekday Masses is stated, so the weekly slots stay.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spartan Memorial Mass, Immaculata High School gym"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b913c408",
+          "page": 5,
+          "said": "Spartan Memorial Mass on Sunday, November 15, at 1:00 pm in the Immaculata High School gym"
+        }
+      ],
+      "rationale": "R22: held at Immaculata High School's gym, not at the church; also a memorial Mass dated on as_of's day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 7,
+          "said": "7:00 pm Miraculous Medal Rosary & Novena, Chapel; 2:00 pm Rosary for the Sick, Chapel; 8:00 pm Men's Evening Prayer, Chapel"
+        }
+      ],
+      "rationale": "R24: devotions that are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception (holy day)"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.immaculateconception.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 6:30 AM ... Church 8:30 AM ... Church 10:00 AM ... Church 12:10 PM ... Church 7:00 PM ... Church",
+          "schedule_check": {
+            "checked_at": "2026-11-19T22:49:49Z",
+            "current_because": "Checked 2026-11-19: the homepage's 'Upcoming Holy Days' block lists only December 8 next, beside news of the November 7, 2026 bishop's visit and a weekly schedule identical to the November 8 and 15, 2026 bulletins.",
+            "bulletin": "4980d495",
+            "fits_because": "The newest bulletin (Nov 15) names the Feast of the Immaculate Conception, December 8, among upcoming collections but prints no times; the site's weekday and weekend times match that bulletin exactly."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 4,
+          "said": "Feast of the Immaculate Conception: December 8"
+        }
+      ],
+      "rationale": "R6, R16: holy-day Masses on the parish's patronal feast, from the parish website's current Upcoming Holy Days list; the bulletin names the feast but gives no times. The 6:30 AM is left as the weekly Tuesday 6:30 slot (POLICY, Weekly or dated 6). R17: no cancellation of the other Tuesday slots is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception (holy day)"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.immaculateconception.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 6:30 AM ... Church 8:30 AM ... Church 10:00 AM ... Church 12:10 PM ... Church 7:00 PM ... Church",
+          "schedule_check": {
+            "checked_at": "2026-11-19T22:49:49Z",
+            "current_because": "Checked 2026-11-19: the homepage's 'Upcoming Holy Days' block lists only December 8 next, beside news of the November 7, 2026 bishop's visit and a weekly schedule identical to the November 8 and 15, 2026 bulletins.",
+            "bulletin": "4980d495",
+            "fits_because": "The newest bulletin (Nov 15) names the Feast of the Immaculate Conception, December 8, among upcoming collections but prints no times; the site's weekday and weekend times match that bulletin exactly."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 4,
+          "said": "Feast of the Immaculate Conception: December 8"
+        }
+      ],
+      "rationale": "R6, R16: holy-day Masses on the parish's patronal feast, from the parish website's current Upcoming Holy Days list; the bulletin names the feast but gives no times. The 6:30 AM is left as the weekly Tuesday 6:30 slot (POLICY, Weekly or dated 6). R17: no cancellation of the other Tuesday slots is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception (holy day)"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.immaculateconception.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 6:30 AM ... Church 8:30 AM ... Church 10:00 AM ... Church 12:10 PM ... Church 7:00 PM ... Church",
+          "schedule_check": {
+            "checked_at": "2026-11-19T22:49:49Z",
+            "current_because": "Checked 2026-11-19: the homepage's 'Upcoming Holy Days' block lists only December 8 next, beside news of the November 7, 2026 bishop's visit and a weekly schedule identical to the November 8 and 15, 2026 bulletins.",
+            "bulletin": "4980d495",
+            "fits_because": "The newest bulletin (Nov 15) names the Feast of the Immaculate Conception, December 8, among upcoming collections but prints no times; the site's weekday and weekend times match that bulletin exactly."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 4,
+          "said": "Feast of the Immaculate Conception: December 8"
+        }
+      ],
+      "rationale": "R6, R16: holy-day Masses on the parish's patronal feast, from the parish website's current Upcoming Holy Days list; the bulletin names the feast but gives no times. The 6:30 AM is left as the weekly Tuesday 6:30 slot (POLICY, Weekly or dated 6). R17: no cancellation of the other Tuesday slots is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-somerville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception (holy day)"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.immaculateconception.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 6:30 AM ... Church 8:30 AM ... Church 10:00 AM ... Church 12:10 PM ... Church 7:00 PM ... Church",
+          "schedule_check": {
+            "checked_at": "2026-11-19T22:49:49Z",
+            "current_because": "Checked 2026-11-19: the homepage's 'Upcoming Holy Days' block lists only December 8 next, beside news of the November 7, 2026 bishop's visit and a weekly schedule identical to the November 8 and 15, 2026 bulletins.",
+            "bulletin": "4980d495",
+            "fits_because": "The newest bulletin (Nov 15) names the Feast of the Immaculate Conception, December 8, among upcoming collections but prints no times; the site's weekday and weekend times match that bulletin exactly."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "4980d495",
+          "page": 4,
+          "said": "Feast of the Immaculate Conception: December 8"
+        }
+      ],
+      "rationale": "R6, R16: holy-day Masses on the parish's patronal feast, from the parish website's current Upcoming Holy Days list; the bulletin names the feast but gives no times. The 6:30 AM is left as the weekly Tuesday 6:30 slot (POLICY, Weekly or dated 6). R17: no cancellation of the other Tuesday slots is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
