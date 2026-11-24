@@ -45,7 +45,7 @@ Before you end, write `scratch/testd-seed-1/003-seed-review/handoff.json`, about
   or `roster:id` it touches.
 - `lessons`: only what is reusable beyond one parish, one line each.
 
-## Your job: review the seeds of batch `b1`
+## Your job: review the seeds of batches `b2`, `b1`
 
 Parishes (`pnpm seed status` shows each one's status and open questions):
 - st-ann

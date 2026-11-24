@@ -201,7 +201,8 @@ class Engine:
                 if run["kind"] == SEED:
                     self._fire_opinions(run)  # a new Run's checkout exists only now
                 nxt = next_job(self.ledger, run,
-                               lessons_before_integrate=self.config.lessons_before_integrate)
+                               lessons_before_integrate=self.config.lessons_before_integrate,
+                               seed_review_questions=self.config.seed_review_questions)
                 if nxt is not None:
                     return self.ledger.job(self.ledger.add_job(run["id"], nxt.stage, nxt.inputs))
                 self.ledger.set_run(run["id"], status=IN_REVIEW)

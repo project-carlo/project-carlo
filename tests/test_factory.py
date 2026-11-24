@@ -389,7 +389,8 @@ def test_prompt_previews_the_next_job_without_changing_the_ledger(env: Env) -> N
     ro = Ledger(env.ledger.path, read_only=True)
     with pytest.raises(sqlite3.OperationalError):
         ro.set("paused", {"reason": "a preview mustn't write"})
-    preview = report.preview(ro, "map", None, repo=env.repo, lessons_before_integrate=8)
+    preview = report.preview(ro, "map", None, repo=env.repo, lessons_before_integrate=8,
+                             seed_review_questions=20)
     assert (preview["job"], preview["kind"], preview["existing"]) == ("004-map", "start", False)
     assert preview["input"] == {"batch": "b1"}
     assert "St. Ann may share" in preview["first_message"]  # shown, but not claimed
@@ -403,7 +404,8 @@ def test_prompt_previews_the_next_job_without_changing_the_ledger(env: Env) -> N
     assert "## First message" in report.text_preview(preview)
     # Even integrate due first, the map preview shows the next batch.
     assert report.preview(ro, "map", run["id"], repo=env.repo,
-                          lessons_before_integrate=0)["input"] == {"batch": "b1"}
+                          lessons_before_integrate=0,
+                          seed_review_questions=20)["input"] == {"batch": "b1"}
     assert _dump(env.ledger) == before
 
     drive(d)
@@ -1362,6 +1364,139 @@ def test_seeds_drafted_under_no_batch_are_reviewed_per_batch_and_not_reseeded(
                       ("seed-review", ["st-ann"]), ("pr", None)]
     reviews = [json.loads(j["input"])["batch"] for j in env.ledger.jobs(run["id"], "seed-review")]
     assert reviews == ["b2", "b1"]
+
+
+# Five batches, b1 first, and each parish's open questions once drafted.
+CHUNK_BATCHES = {"version": 1, "diocese": D, "first_batch": "b1", "batches": [
+    {"id": f"b{n}", "name": f"Town {n}", "entries": [f"directory:{n}"]} for n in range(1, 6)]}
+CHUNK_PARISHES = {"p1": (1, 3), "p2": (2, 8), "p3": (3, 8), "p4": (3, 0), "p5": (4, 6),
+                  "p6": (5, 2)}  # slug: (batch, open questions)
+
+
+def seed_with_questions(parish: str, questions: int) -> str:
+    entry = {"church": "c", "day": "sunday", "start": "09:00"}
+    slots = [{"id": f"s{n}", "status": "needs_human", "question": f"Is Mass {n} weekly?",
+              "options": [{"label": "Include", "entry": entry, "leaning": True},
+                          {"label": "Leave out", "entry": None, "leaning": False}]}
+             for n in range(1, questions + 1)]
+    return json.dumps({"parish_slug": parish, "status": "needs_review", "slots": slots})
+
+
+def chunk_run(tmp_path: Path) -> tuple[Ledger, str]:
+    ledger = Ledger(tmp_path / "ledger.db")
+    run_id = ledger.add_run(diocese=D, kind=SEED, worktrees_dir=tmp_path / "wt",
+                            parishes=list(CHUNK_PARISHES))
+    folder = Path(ledger.run(run_id)["worktree"]) / "data" / "dioceses" / D
+    (folder / "churches").mkdir(parents=True)
+    (folder / "parishes").mkdir()
+    (folder / "batches.json").write_text(json.dumps(CHUNK_BATCHES))
+    for parish, (batch, _) in CHUNK_PARISHES.items():
+        (folder / "parishes" / f"{parish}.md").write_text(parish_record())
+        (folder / "churches" / f"{parish}.md").write_text(
+            church_record(parish, f"directory:{batch}"))
+    return ledger, run_id
+
+
+def plan_seed_run(ledger: Ledger, run_id: str, *, send_back: tuple[str, ...] = (),
+                  stop_after: int | None = None) -> list[tuple[str, Any]]:
+    """Runs the seed plan to the end (or `stop_after` jobs), doing each job as the
+    dispatcher would: a seed writes its file, a review approves (or sends back `send_back`
+    once, and the seed is redrafted at once). Each step, a second read-only ledger on the
+    same file, as after a restart, must plan the same job."""
+    from pdf_extract.factory import plan
+
+    worktree = Path(ledger.run(run_id)["worktree"])
+    seeds = worktree / "data" / "seeds"
+    seeds.mkdir(parents=True, exist_ok=True)
+    tick = iter(range(1, 1000))
+    clock = lambda: (datetime(2026, 11, 2, tzinfo=UTC)  # noqa: E731
+                     + timedelta(minutes=next(tick))).isoformat()
+    sent: set[str] = set()
+    done: list[tuple[str, Any]] = []
+    while stop_after is None or len(done) < stop_after:
+        nxt = plan.next_job(ledger, ledger.run(run_id), lessons_before_integrate=15,
+                            seed_review_questions=20)
+        again = Ledger(ledger.path, read_only=True)
+        assert plan.next_job(again, again.run(run_id), lessons_before_integrate=15,
+                             seed_review_questions=20) == nxt
+        again.close()
+        if nxt is None:
+            break
+        job = ledger.add_job(run_id, nxt.stage, nxt.inputs)
+        if nxt.stage == "seed":
+            parish = nxt.inputs["parish"]
+            (seeds / f"{parish}.json").write_text(
+                seed_with_questions(parish, CHUNK_PARISHES[parish][1]))
+            done.append(("seed", parish))
+        elif nxt.stage == "seed-review":
+            redraft = []
+            for parish in nxt.inputs["parishes"]:
+                seed_job = [j for j in ledger.jobs(run_id, "seed")
+                            if json.loads(j["input"])["parish"] == parish][-1]
+                verdict = "approve"
+                if parish in send_back and parish not in sent:
+                    sent.add(parish)
+                    verdict = "send_back"
+                    redraft.append(seed_job["id"])
+                else:
+                    path = seeds / f"{parish}.json"
+                    path.write_text(json.dumps(json.loads(path.read_text())
+                                               | {"status": "approved"}))
+                ledger.run_sql("INSERT INTO verdict (job_id, reviewed_job, subject, verdict, "
+                               "problems, at) VALUES (?,?,?,?,?,?)", job, seed_job["id"],
+                               parish, verdict, "[]", clock())
+            for seed_job in redraft:  # the drafter's session fixes it and finishes again
+                ledger.set_job(seed_job, finished_at=clock())
+            done.append(("seed-review", (nxt.inputs["batch"], nxt.inputs["parishes"],
+                                         nxt.inputs["redrafted"])))
+        else:
+            done.append((nxt.stage, None))
+        ledger.set_job(job, status=DONE, finished_at=clock())
+    return done
+
+
+def test_seed_reviews_take_the_first_batch_alone_then_chunks_of_questions(
+        tmp_path: Path) -> None:
+    ledger, run_id = chunk_run(tmp_path)
+    assert plan_seed_run(ledger, run_id) == [
+        ("seed", "p1"),
+        ("seed-review", ("b1", ["p1"], [])),  # alone, though only 3 questions
+        # 8, 16 (p4 is ready: 0, still reviewed), then 22 >= 20 at the end of b4.
+        ("seed", "p2"), ("seed", "p3"), ("seed", "p4"), ("seed", "p5"),
+        ("seed-review", ("b2 +2 more", ["p2", "p3", "p4", "p5"], [])),
+        # The tail: nothing left to draft, so 2 questions are reviewed.
+        ("seed", "p6"),
+        ("seed-review", ("b5", ["p6"], [])),
+        ("pr", None)]
+    review = [j for j in ledger.jobs(run_id, "seed-review")][1]
+    assert json.loads(review["input"])["batches"] == ["b2", "b3", "b4"]
+
+
+def test_a_redrafted_seed_is_reviewed_again_without_waiting(tmp_path: Path) -> None:
+    ledger, run_id = chunk_run(tmp_path)
+    assert plan_seed_run(ledger, run_id, send_back=("p1", "p3")) == [
+        ("seed", "p1"),
+        ("seed-review", ("b1", ["p1"], [])),
+        ("seed-review", ("b1", ["p1"], ["p1"])),
+        ("seed", "p2"), ("seed", "p3"), ("seed", "p4"), ("seed", "p5"),
+        ("seed-review", ("b2 +2 more", ["p2", "p3", "p4", "p5"], [])),
+        # p3's 8 questions alone, before p6 is drafted.
+        ("seed-review", ("b3", ["p3"], ["p3"])),
+        ("seed", "p6"),
+        ("seed-review", ("b5", ["p6"], [])),
+        ("pr", None)]
+
+
+def test_a_restarted_seed_plan_neither_reseeds_nor_rereviews(tmp_path: Path) -> None:
+    ledger, run_id = chunk_run(tmp_path)
+    first = plan_seed_run(ledger, run_id, stop_after=4)  # mid-chunk: p2 and p3 drafted
+    assert first[-1] == ("seed", "p3")
+    rest = plan_seed_run(Ledger(ledger.path), run_id)  # a new dispatcher on the same files
+    jobs = first + rest
+    assert [p for stage, p in jobs if stage == "seed"] == list(CHUNK_PARISHES)
+    reviewed = [p for stage, r in jobs if stage == "seed-review" for p in r[1]]
+    assert sorted(reviewed) == sorted(CHUNK_PARISHES)
+    assert jobs == plan_seed_run(*chunk_run(tmp_path / "again"))
 
 
 def test_each_stage_gets_only_the_secrets_its_spec_names(env: Env) -> None:

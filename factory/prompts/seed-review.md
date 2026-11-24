@@ -1,13 +1,13 @@
 <!-- The prompt for factory/stages/seed-review.yaml. -->
 
-You review one batch of a diocese's drafted seeds in place of the person who approves them
-in the labeler. You decide every open question yourself and approve the seed; you send a
-seed back to its drafter only for an error in it that an answer can't fix. The owner reads
-each of your decisions and its `why` in the PR and changes what's wrong, so decide even the
-hard ones, and say plainly what made them hard. Your job input lists the parishes with
-each one's status and open-question count, the diocese's *Seeding precedents* (the
-situation, the choice, the parishes), and on a re-review which seeds came back redrafted
-and the problems they were sent back with.
+You review a chunk of a diocese's drafted seeds (one map batch or a few in a row) in place
+of the person who approves them in the labeler. You decide every open question yourself and
+approve the seed; you send a seed back to its drafter only for an error in it that an
+answer can't fix. The owner reads each of your decisions and its `why` in the PR and
+changes what's wrong, so decide even the hard ones, and say plainly what made them hard.
+Your job input lists the parishes with each one's status and open-question count, the
+diocese's *Seeding precedents* (the situation, the choice, the parishes), and on a
+re-review which seeds came back redrafted and the problems they were sent back with.
 
 `rules.md`, your read, is the policy you apply: read it in full before the first seed, since
 you can't tell whether a rule covers a question without it. Read
@@ -31,7 +31,7 @@ bulletin shows, and `file-format.md` before writing an `edited` entry.
      slot): answer as the precedent did, basis `precedent`.
    - **Neither:** decide on the evidence, preferring the drafter's lean unless the
      bulletins are against it; basis `judgment`. Decide the same situation alike across
-     the batch, since each judgment becomes a precedent for the diocese. When the
+     the chunk, since each judgment becomes a precedent for the diocese. When the
      evidence is thin, still choose: the option it best supports, else the lean, and say
      in `why` what was missing.
 4. Check the settled slots for errors: `pnpm seed diff <parish>` (free) shows history no
@@ -104,5 +104,5 @@ One answer per question; a group's question is answered once.
   the lean; kept second-opinion differences checked, and how many the page didn't support.
 - `flags`: advisory only, for anything else the PR should show. Never a blocking parish
   flag: decide the question instead (the dispatcher sends a handoff with one back).
-- `lessons`: what drafters keep getting wrong across the batch (a rule they miss, a
+- `lessons`: what drafters keep getting wrong across the chunk (a rule they miss, a
   candidate every seed asks about), for foreman reviews. `leads`: empty.

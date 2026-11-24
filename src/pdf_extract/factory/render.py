@@ -374,8 +374,11 @@ def _seed_review_input(ledger: Ledger, run: Any, inputs: dict[str, Any],
                          run_id, parish)
         problems = "; ".join(json.loads(row["problems"])) if row else ""
         redrafted.append(f"{parish}, sent back for: {problems}")
+    batches = inputs.get("batches") or [inputs.get("batch")]
+    scope = (f"batch `{batches[0]}`" if len(batches) == 1
+             else "batches " + ", ".join(f"`{b}`" for b in batches))
     return f"""\
-## Your job: review the seeds of batch `{inputs.get('batch')}`
+## Your job: review the seeds of {scope}
 
 Parishes (`pnpm seed status` shows each one's status and open questions):
 {_lines(list(inputs.get('parishes') or []))}

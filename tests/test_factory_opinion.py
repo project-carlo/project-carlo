@@ -401,5 +401,5 @@ def test_the_backup_leaves_out_replies_not_yet_revealed(env: Env) -> None:
 def test_the_seed_prompt_still_renders(env: Env, stage: str) -> None:
     run = opinion_run(env)
     preview = report.preview(env.ledger, stage, run["id"], repo=env.repo,
-                             lessons_before_integrate=15)
+                             lessons_before_integrate=15, seed_review_questions=20)
     assert preview["kind"] == "start" and f"seed `{PARISH}`" in preview["first_message"]
