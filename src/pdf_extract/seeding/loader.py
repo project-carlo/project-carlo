@@ -134,15 +134,19 @@ def _load_one(
         return {"parish": slug, "reason": str(exc)}
     if not isinstance(seed, dict) or seed.get("status") != APPROVED:
         return None
+    # A file already loaded isn't checked again: the database has its entries,
+    # and a church retired since (its slots now name an unknown church) is
+    # update mode's to handle, not a reason to report the file every run.
+    row = conn.execute("SELECT id FROM parish WHERE slug = ?", (slug,)).fetchone()
+    if row is not None and is_loaded(conn, int(row[0]), seed):
+        return None
     # A reviewer already approved these decisions. Keep loading older approved
     # files even when the current drafting evidence requirements are stricter.
     problems = check_seed(conn, seed, parish_slug=slug, check_bulletins=False,
                           check_evidence=False)
     if problems:
         return {"parish": slug, "reason": "; ".join(problems[:3])}
-    parish_id = int(conn.execute("SELECT id FROM parish WHERE slug = ?", (slug,)).fetchone()[0])
-    if is_loaded(conn, parish_id, seed):
-        return None
+    parish_id = int(row[0])
     latest = latest_seeds.get(parish_id)
     if latest is not None and normalize_as_of(seed["as_of"]) <= latest:
         return {

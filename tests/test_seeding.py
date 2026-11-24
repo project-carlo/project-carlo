@@ -888,6 +888,19 @@ def test_a_seed_that_fails_its_checks_is_skipped(conn, demo, seed):
     assert render_seeds(result)[-1].startswith(f"- **{PARISH}** seed file not loaded")
 
 
+def test_a_loaded_seed_whose_church_retires_later_is_not_reported(conn, demo, seed):
+    approved = _approved(seed)
+    write_seed_file(approved, demo["seeds_dir"])
+    assert [r["parish"] for r in load_approved_seeds(conn, demo["seeds_dir"])["loaded"]] == [PARISH]
+    church = _slot(approved, "s1")["entry"]["church_slug"]
+    with conn:
+        conn.execute("UPDATE church SET retired_at = '2026-11-20T00:00:00Z' WHERE slug = ?",
+                     (church,))
+    assert check_seed(conn, approved, parish_slug=PARISH, check_bulletins=False,
+                      check_evidence=False)  # it would now fail its checks
+    assert load_approved_seeds(conn, demo["seeds_dir"]) == {"loaded": [], "skipped": []}
+
+
 def test_ensure_db_leaves_approved_seeds_to_load_seeds(pipeline_dir: Path):
     create_db()
     seed = {
