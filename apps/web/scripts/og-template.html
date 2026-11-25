@@ -125,19 +125,27 @@
             <circle cx="47.31" cy="33.43" r="3.75" fill="#F3ECD8" />
             <path fill="#E8C673" d="M30 16h4v5h5v4h-5v13h-4V25h-5v-4h5Z" />
           </svg>
+          <!-- "Carlo" is indented so its short "a" and "r" sit under the
+               descender of "Project"'s j, not its tall "l". The P's cap top
+               and Carlo's baseline line up with the tile's top and bottom;
+               `top` nudges the ink, since the line box has extra room above. -->
           <h2
             style="
+              position: relative;
+              top: 4px;
               font-family: Cardo, Georgia, serif;
               font-weight: 400;
-              font-size: 110px;
-              line-height: 0.88;
+              font-size: 120px;
+              line-height: 0.967;
               letter-spacing: -0.02em;
               color: oklch(0.2 0.015 50);
               margin: 0;
             "
           >
             Project<br />
-            <span style="font-style: italic; color: oklch(0.46 0.165 28)">Carlo</span>
+            <span style="font-style: italic; color: oklch(0.46 0.165 28); margin-left: 0.3em"
+              >Carlo</span
+            >
           </h2>
         </div>
         <div
