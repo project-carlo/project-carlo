@@ -6,8 +6,9 @@
  * and commit the output. Re-run with `pnpm --filter web og:gen` when the brand
  * mark or palette changes.
  *
- * OG layout: Option 01 "Missal title page" from docs/share-image-options.html.
- * Rendered via headless Chromium (Playwright) so oklch colors, Cardo small-caps,
+ * OG layout: Option 01 "Missal title page" from docs/share-image-options.html,
+ * with the brand mark beside a stacked title so it survives Google Search's
+ * centred-square thumbnail crop (see og-template.html). Rendered via headless Chromium (Playwright) so oklch colors, Cardo small-caps,
  * and paper grain match the design reference — sharp/librsvg cannot reproduce those.
  * Requires Playwright's Chromium: `pnpm --filter web test:e2e:install`.
  *

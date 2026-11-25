@@ -53,7 +53,9 @@
     </style>
   </head>
   <body>
-    <!-- Option 01 — Missal title page (docs/share-image-options.html) -->
+    <!-- Google Search crops this image to a centred square (x 285-915) for
+         its result thumbnails, so everything that matters stays inside it.
+         The pin is the brand mark from public/favicon.svg, without its tile. -->
     <div
       id="og-frame"
       class="grain"
@@ -101,92 +103,63 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          text-align: center;
-          gap: 34px;
-          padding: 0 90px;
+          gap: 40px;
         "
       >
-        <div
-          style="
-            font-family: Cardo, Georgia, serif;
-            font-variant-caps: small-caps;
-            font-feature-settings: 'smcp' 1, 'c2sc' 0;
-            letter-spacing: 0.2em;
-            font-size: 24px;
-            color: oklch(0.4 0.018 50);
-          "
-        >
-          A Catholic parish finder
-        </div>
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            gap: 22px;
-            color: oklch(0.66 0.095 75);
-            width: 440px;
-          "
-        >
-          <span
-            style="
-              height: 1px;
-              flex: 1;
-              background: color-mix(
-                in oklch,
-                oklch(0.2 0.015 50) 26%,
-                transparent
-              );
-            "
-          ></span>
+        <div style="display: flex; align-items: center; gap: 30px">
           <svg
-            width="56"
-            height="28"
-            viewBox="0 0 48 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.1"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            width="162"
+            height="210"
+            viewBox="12 6 40 52"
+            aria-hidden="true"
           >
             <path
-              d="M18 12c0-3 2-5 4-5s4 2 4 5-2 5-4 5-4-2-4-5Z"
-            ></path>
-            <path d="M22 12c0-3-2-5-4-5"></path>
-            <path d="M26 12c0 3 2 5 4 5"></path>
-            <circle cx="24" cy="12" r="0.9" fill="currentColor" stroke="none"></circle>
+              fill="#9B2F25"
+              d="M32 7c-10.8 0-19.5 8.7-19.5 19.5C12.5 40.1 32 57 32 57s19.5-16.9 19.5-30.5C51.5 15.7 42.8 7 32 7Z"
+            />
+            <path
+              fill="#F3ECD8"
+              d="m21.5 30.4 10.5-9 10.5 9V43c0 .8-.7 1.5-1.5 1.5H23c-.8 0-1.5-.7-1.5-1.5V30.4Z"
+            />
+            <path
+              fill="none"
+              stroke="#6D241E"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+              d="m21.5 30.4 10.5-9 10.5 9"
+            />
+            <path fill="#6D241E" d="M28.5 34.5a3.5 3.5 0 0 1 7 0v10h-7v-10Z" />
+            <path
+              fill="none"
+              stroke="#C6A04D"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+              d="M32 15v10M27.5 20H36.5"
+            />
           </svg>
-          <span
+          <h2
             style="
-              height: 1px;
-              flex: 1;
-              background: color-mix(
-                in oklch,
-                oklch(0.2 0.015 50) 26%,
-                transparent
-              );
+              font-family: Cardo, Georgia, serif;
+              font-weight: 400;
+              font-size: 110px;
+              line-height: 0.88;
+              letter-spacing: -0.02em;
+              color: oklch(0.2 0.015 50);
+              margin: 0;
             "
-          ></span>
+          >
+            Project<br />
+            <span style="font-style: italic; color: oklch(0.46 0.165 28)">Carlo</span>
+          </h2>
         </div>
-        <h2
-          style="
-            font-family: Cardo, Georgia, serif;
-            font-weight: 400;
-            font-size: 124px;
-            line-height: 0.9;
-            letter-spacing: -0.02em;
-            color: oklch(0.2 0.015 50);
-            margin: 0;
-          "
-        >
-          Project
-          <span style="font-style: italic; color: oklch(0.46 0.165 28)">Carlo</span>
-        </h2>
         <div
           style="
             font-family: 'EB Garamond', Georgia, serif;
             font-style: italic;
             letter-spacing: 0.01em;
-            font-size: 36px;
+            font-size: 29px;
             color: oklch(0.4 0.018 50);
           "
         >
