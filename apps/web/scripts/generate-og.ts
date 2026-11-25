@@ -18,15 +18,14 @@
  *
  * Outputs (into apps/web/public):
  *   - og-default.png      1200x630  link-share preview image (palette PNG)
- *   - apple-touch-icon.png 180x180  iOS home-screen icon
- *   - icon-192.png         192x192  web manifest icon
- *   - icon-512.png         512x512  web manifest icon (maskable-safe)
+ * It then runs generate-icons.ts, which writes the app icons for web and mobile.
  */
-import { readFileSync, writeFileSync } from "node:fs";
+import { writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { chromium } from "@playwright/test";
 import sharp from "sharp";
+import { generateIcons } from "./generate-icons";
 
 const WEB_DIR = resolve(import.meta.dirname, "..");
 const PUBLIC_DIR = resolve(WEB_DIR, "public");
@@ -129,19 +128,7 @@ async function renderOgPng(): Promise<void> {
 async function main() {
   await renderOgPng();
 
-  const favicon = readFileSync(resolve(PUBLIC_DIR, "favicon.svg"));
-  const iconSizes = [
-    ["apple-touch-icon.png", 180],
-    ["icon-192.png", 192],
-    ["icon-512.png", 512],
-  ] as const;
-  for (const [name, size] of iconSizes) {
-    await sharp(favicon, { density: 384 })
-      .resize(size, size)
-      .png()
-      .toFile(resolve(PUBLIC_DIR, name));
-    console.log(`Wrote ${name} (${size}x${size})`);
-  }
+  await generateIcons();
 }
 
 void main();
