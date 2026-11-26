@@ -1,0 +1,590 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-elizabeth-upper-uwchlan",
+  "status": "ready",
+  "as_of": "2026-11-15T16:45:08Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T19:52:37Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both issues read (Nov 8 and Nov 15, 2026; image-only PDFs) print the same schedule box: weekday 7:30 AM, Saturday 8:30 AM, Vigil 4:30 PM, Sunday 8:00/9:30/11:30 AM, Saturday 9:00 AM confession, Monday Adoration 8 AM-7:30 PM. No open questions; the Dec 17 Penance Service and Dec 8 holy day have no times yet.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0fd4cf672bae9d6d024c1bac799a77895614fc1185b112741eef5ac9da4b377e",
+      "fetched_at": "2026-11-15T16:45:08Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "720fb0ba2e909bbdb4cec03c3a79861aecec0e991f0cc4aa587fda1deab9155a",
+      "fetched_at": "2026-11-08T15:54:01Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-upper-uwchlan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720fb0ba",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 2,
+          "said": "Monday, 7:30 AM- ... Friday, 7:30 AM-"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read, and in the newest issue's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-upper-uwchlan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720fb0ba",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 2,
+          "said": "Monday, 7:30 AM- ... Friday, 7:30 AM-"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read, and in the newest issue's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-upper-uwchlan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720fb0ba",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 2,
+          "said": "Monday, 7:30 AM- ... Friday, 7:30 AM-"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read, and in the newest issue's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-upper-uwchlan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720fb0ba",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 2,
+          "said": "Monday, 7:30 AM- ... Friday, 7:30 AM-"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read, and in the newest issue's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-upper-uwchlan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720fb0ba",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 2,
+          "said": "Monday, 7:30 AM- ... Friday, 7:30 AM-"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read, and in the newest issue's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-upper-uwchlan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 1,
+          "said": "Daily Mass ... Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720fb0ba",
+          "page": 1,
+          "said": "Daily Mass ... Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 2,
+          "said": "Saturday, 8:30 AM- Patricia M. Boardman"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-upper-uwchlan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720fb0ba",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 2,
+          "said": "Saturday, 4:30 PM- People of Saint Elizabeth"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-upper-uwchlan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:30 AM and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720fb0ba",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:30 AM and 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-upper-uwchlan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:30 AM and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720fb0ba",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:30 AM and 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-upper-uwchlan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:30 AM and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720fb0ba",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:30 AM and 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-upper-uwchlan",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel, after the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 1,
+          "said": "Confession Saturday: 9:00 AM (until the last person in line for confession is heard), and by individual appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720fb0ba",
+          "page": 1,
+          "said": "Confession Saturday: 9:00 AM (until the last person in line for confession is heard), and by individual appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 4,
+          "said": "A priest confessor is available each Saturday in the chapel immediately following the 8:30 AM Mass"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the box gives the clock time 9:00 AM and no end ('until the last person in line ... is heard'), so end_time is null; the chapel is in the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-upper-uwchlan",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 1,
+          "said": "Adoration Monday: 8:00 AM-7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720fb0ba",
+          "page": 1,
+          "said": "Adoration Monday: 8:00 AM-7:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 1,
+          "said": "and by individual appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 9,
+          "said": "12/17 Parish Advent Penance Service"
+        }
+      ],
+      "rationale": "R24/R26: the Upcoming Events graphic gives the date but no time; update mode will read the time when printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fd4cf67",
+          "page": 9,
+          "said": "12/8 Solemnity of the Immaculate Conception"
+        }
+      ],
+      "rationale": "R26: the holy day is listed with no Mass times in this issue; nothing to record yet.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
