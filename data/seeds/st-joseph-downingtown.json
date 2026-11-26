@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "parish_slug": "st-joseph-downingtown",
-  "status": "needs_review",
+  "status": "blocked",
   "as_of": "2026-11-15T16:00:27Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-26T19:56:09Z",
   "reviewer": null,
   "approved_at": null,
   "summary": "One church, St. Joseph, Downingtown. Mass, Wednesday/Saturday Confession and the 24/7 Adoration chapel agree in both bulletins read and on the parish website; holy-day and Christmas Masses come from the website under R6. Open: the Adoration chapel (asked only because seed check crashes on a settled 24h slot; include it) and the Advent Penance Service (Dec 21, website only, no year).",
-  "blocked_reason": null,
+  "blocked_reason": "seed check (checks.py:343) crashes with a TypeError on any included continuous 24h Adoration slot, so the parish's Perpetual Adoration Chapel (s23, R46) can be neither settled nor approved: pnpm seed approve failed on the reviewer's answers. Representing it as seven weekly slots is forbidden (R46) and leaving it out would drop a real schedule. Unblock once the checker skips the as_of comparison for undated entries; then settle s23 as include.",
   "bulletins": [
     {
       "content_hash": "b03c4d98231043af9d7e1954102c8d5254b04d35a935935e2c57e2c94f83c141",
