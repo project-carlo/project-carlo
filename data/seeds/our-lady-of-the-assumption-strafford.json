@@ -1,0 +1,662 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-assumption-strafford",
+  "status": "ready",
+  "as_of": "2026-11-15T16:43:48Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T19:29:40Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both issues read (Nov 8 and Nov 15, 2026) print the same schedule box: Sat 9 AM and 5 PM vigil, Sun 7, 8:30, 10 AM, weekdays 8 AM, Saturday confession 3:30-4:30 PM, Tuesday Adoration 7-8 PM; the intentions agree. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b9c30373c28f5de194e2f96745af0d0ec300af8d951191512e69ae52a1e18c9a",
+      "fetched_at": "2026-11-15T16:43:48Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d4725ce7da39fa097b4a110dbce58a1a43f01480b3c7238c3f5dc0005a28aa60",
+      "fetched_at": "2026-11-08T15:53:08Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-strafford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 1,
+          "said": "Sunday 7:00AM, 8:30AM, & 10:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 1,
+          "said": "Sunday 7:00AM, 8:30AM, & 10:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 2,
+          "said": "Sunday ... 7:00- ... 8:30- ... 10:00-"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 2,
+          "said": "Sunday ... 7:00- ... 8:30- ... 10:00-"
+        }
+      ],
+      "rationale": "R1, R35: the Mass schedule box of both issues read, and both weeks' Mass intentions, print these Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-strafford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 1,
+          "said": "Sunday 7:00AM, 8:30AM, & 10:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 1,
+          "said": "Sunday 7:00AM, 8:30AM, & 10:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 2,
+          "said": "Sunday ... 7:00- ... 8:30- ... 10:00-"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 2,
+          "said": "Sunday ... 7:00- ... 8:30- ... 10:00-"
+        }
+      ],
+      "rationale": "R1, R35: the Mass schedule box of both issues read, and both weeks' Mass intentions, print these Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-strafford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 1,
+          "said": "Sunday 7:00AM, 8:30AM, & 10:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 1,
+          "said": "Sunday 7:00AM, 8:30AM, & 10:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 2,
+          "said": "Sunday ... 7:00- ... 8:30- ... 10:00-"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 2,
+          "said": "Sunday ... 7:00- ... 8:30- ... 10:00-"
+        }
+      ],
+      "rationale": "R1, R35: the Mass schedule box of both issues read, and both weeks' Mass intentions, print these Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-strafford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 1,
+          "said": "Saturday: 9:00AM & 5:00PM Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 1,
+          "said": "Saturday: 9:00AM & 5:00PM Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 2,
+          "said": "Saturday ... 5:00-"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 2,
+          "said": "Saturday ... 5:00-"
+        }
+      ],
+      "rationale": "R1: Saturday vigil in the schedule box and intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-strafford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 1,
+          "said": "Saturday: 9:00AM & 5:00PM Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 1,
+          "said": "Saturday: 9:00AM & 5:00PM Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 2,
+          "said": "Saturday ... 9:00-"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 2,
+          "said": "Saturday ... 9:00-"
+        }
+      ],
+      "rationale": "R1: Saturday morning Mass in the schedule box and intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-strafford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 1,
+          "said": "Weekdays 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 1,
+          "said": "Weekdays 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 2,
+          "said": "Monday ... Friday 8:00-"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 2,
+          "said": "Monday ... Friday 8:00-"
+        }
+      ],
+      "rationale": "R1: 'Weekdays 8:00AM' in the schedule box (Saturday is listed separately at 9:00); the intentions of both issues list 8:00 Mass Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-strafford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 1,
+          "said": "Weekdays 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 1,
+          "said": "Weekdays 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 2,
+          "said": "Monday ... Friday 8:00-"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 2,
+          "said": "Monday ... Friday 8:00-"
+        }
+      ],
+      "rationale": "R1: 'Weekdays 8:00AM' in the schedule box (Saturday is listed separately at 9:00); the intentions of both issues list 8:00 Mass Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-strafford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 1,
+          "said": "Weekdays 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 1,
+          "said": "Weekdays 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 2,
+          "said": "Monday ... Friday 8:00-"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 2,
+          "said": "Monday ... Friday 8:00-"
+        }
+      ],
+      "rationale": "R1: 'Weekdays 8:00AM' in the schedule box (Saturday is listed separately at 9:00); the intentions of both issues list 8:00 Mass Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-strafford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 1,
+          "said": "Weekdays 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 1,
+          "said": "Weekdays 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 2,
+          "said": "Monday ... Friday 8:00-"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 2,
+          "said": "Monday ... Friday 8:00-"
+        }
+      ],
+      "rationale": "R1: 'Weekdays 8:00AM' in the schedule box (Saturday is listed separately at 9:00); the intentions of both issues list 8:00 Mass Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-strafford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 1,
+          "said": "Weekdays 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 1,
+          "said": "Weekdays 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 2,
+          "said": "Monday ... Friday 8:00-"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 2,
+          "said": "Monday ... Friday 8:00-"
+        }
+      ],
+      "rationale": "R1: 'Weekdays 8:00AM' in the schedule box (Saturday is listed separately at 9:00); the intentions of both issues list 8:00 Mass Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-strafford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 1,
+          "said": "Confession: Saturdays from 3:30PM to 4:30PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 1,
+          "said": "Confession: Saturdays from 3:30PM to 4:30PM or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the Sacraments box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-strafford",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 1,
+          "said": "Eucharistic Adoration: Tuesdays from 7:00PM to 8:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4725ce7",
+          "page": 1,
+          "said": "Eucharistic Adoration: Tuesdays from 7:00PM to 8:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 1,
+          "said": "or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 1,
+          "said": "Holy Days: 7:00PM Vigil, 8:00AM, & 12:05PM"
+        }
+      ],
+      "rationale": "R16, POLICY Dates: a generic holy-day pattern with no holy day dated in either issue; dates are not projected. Update mode will read the issue that names the next holy day (Dec 8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9c30373",
+          "page": 1,
+          "said": "Anointing in preparation for surgery after Masses."
+        }
+      ],
+      "rationale": "R24: Anointing is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
