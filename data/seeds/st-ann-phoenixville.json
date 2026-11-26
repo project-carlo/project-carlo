@@ -1,0 +1,862 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-ann-phoenixville",
+  "status": "ready",
+  "as_of": "2026-11-15T16:44:31Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T18:47:58Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches (St. Ann Church and St. Ann Chapel). Both issues read (Nov 8, Nov 15; image-only PDFs) print the same Mass / Confessions box: weekday, weekend and language Masses, Sunday and Thursday Confession, Thursday Adoration. Dated: Thanksgiving 9 AM Mass, Guadalupe 7 PM Mass Dec 12, and the Nov 15 combined 9:30 Mass (Spanish church Mass cancelled). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "83c6dda9abe834de3d6c04fc3433402e48f237d047cef364fe6f71dbca6d430e",
+      "fetched_at": "2026-11-15T16:44:31Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e8ba5a07eae00a43bd70c708edafe9b3591dfd3a063a7266dc30e6b63095cbb6",
+      "fetched_at": "2026-11-08T15:53:33Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "Mass Times: Monday-Thursday 7:30 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "Mass Times: Monday-Thursday 7:30 AM Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass / Confessions box (p6) of both issues read (Nov 15 and Nov 8). Mass intentions list 7:30am Church each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "Mass Times: Monday-Thursday 7:30 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "Mass Times: Monday-Thursday 7:30 AM Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass / Confessions box (p6) of both issues read (Nov 15 and Nov 8). Mass intentions list 7:30am Church each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "Mass Times: Monday-Thursday 7:30 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "Mass Times: Monday-Thursday 7:30 AM Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass / Confessions box (p6) of both issues read (Nov 15 and Nov 8). Mass intentions list 7:30am Church each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "Mass Times: Monday-Thursday 7:30 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "Mass Times: Monday-Thursday 7:30 AM Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass / Confessions box (p6) of both issues read (Nov 15 and Nov 8). Mass intentions list 7:30am Church each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "Friday & Saturday 8:30 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "Friday & Saturday 8:30 AM Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass / Confessions box (p6) of both issues read (Nov 15 and Nov 8). Intentions list 8:30am Church Fri and Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "Friday & Saturday 8:30 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "Friday & Saturday 8:30 AM Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass / Confessions box (p6) of both issues read (Nov 15 and Nov 8). Intentions list 8:30am Church Fri and Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-chapel-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "Vigil Saturday 4:30 PM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "Vigil Saturday 4:30 PM Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the Mass / Confessions box (p6) of both issues read (Nov 15 and Nov 8). Intentions: Saturday 4:30pm Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "Sunday 7:00 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "Sunday 7:00 AM Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass / Confessions box (p6) of both issues read (Nov 15 and Nov 8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-chapel-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "Sunday ... 9:30 AM Chapel (ENG)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "Sunday ... 9:30 AM Chapel (ENG)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass / Confessions box (p6) of both issues read (Nov 15 and Nov 8). Note keeps it apart from the Spanish 9:30 in the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "9:30 AM Church (SPA)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "9:30 AM Church (SPA)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass / Confessions box (p6) of both issues read (Nov 15 and Nov 8). Absent from the Nov 15 intentions only because of the announced combined Mass that day (separate dated slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "4:00 PM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "4:00 PM Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass / Confessions box (p6) of both issues read (Nov 15 and Nov 8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "5:30 PM Church (Portguese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "5:30 PM Church (Portguese)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass / Confessions box (p6) of both issues read (Nov 15 and Nov 8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "Various Language Masses: Every Thursday in Church at 7:30 PM in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "Various Language Masses: Every Thursday in Church at 7:30 PM in Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the Mass / Confessions box (p6) of both issues read (Nov 15 and Nov 8). Intentions list Thursday 7:30pm Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "2nd Sunday in Church at 12:00 PM in Vietnamese"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "2nd Sunday in Church at 12:00 PM in Vietnamese"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: the standing box of both issues names the week; the newest issue prints it although its week holds no second Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Tamil"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "3rd Saturday in Church at 6:00 PM in Tamil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "3rd Saturday in Church at 6:00 PM in Tamil"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: printed in the standing box of both issues; the newest week holds the third Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "Confessions: Sunday 8:00-8:45 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "Confessions: Sunday 8:00-8:45 AM Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass / Confessions box (p6) of both issues read (Nov 15 and Nov 8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "Confessions: ... Thursday 6:30 PM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "Confessions: ... Thursday 6:30 PM Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass / Confessions box (p6) of both issues read (Nov 15 and Nov 8). POLICY Times: no end time printed, so none recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 6,
+          "said": "Adoration: Th 8:00 AM-7:00 PM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 6,
+          "said": "Adoration: Th 8:00 AM-7:00 PM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 3,
+          "said": "Parish Eucharistic Adoration is on Thursdays in church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 3,
+          "said": "Parish Eucharistic Adoration is on Thursdays in church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass / Confessions box (p6) of both issues read (Nov 15 and Nov 8). The Parish News notice confirms Thursday Adoration in church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 3,
+          "said": "Mass on Thanksgiving Day will be at 9:00 AM in the Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 4,
+          "said": "Mass on Thanksgiving Day will be at 9:00 AM in the Church."
+        }
+      ],
+      "rationale": "R1, R16, R17: dated holiday Mass on or after as_of; no weekday Mass is said to be cancelled, so the weekly Thursday slots stay as they are.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 4,
+          "said": "The celebration of Our Lady of Guadalupe will be on Saturday, December 12, beginning with Mass in the church at 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 2,
+          "said": "Our Lady of Guadalupe ... Saturday, December 12, beginning with Mass in the church at 7:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: dated feast Mass outside the weekly schedule, open to all.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-church-phoenixville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Combined 9:30 AM Mass in the Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e8ba5a07",
+          "page": 3,
+          "said": "Next Sunday, we will have our combined 9:30 AM Mass in the Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 5,
+          "said": "Sunday, November 15: 7:00am Church; 9:30am Chapel; 4:00pm Church (no 9:30 Church listed)"
+        }
+      ],
+      "rationale": "R19, R16: the Nov 8 issue moves Nov 15's 9:30 Masses into one combined Mass in the Chapel; the newest issue's intentions agree (no 9:30 Church). The date equals as_of's date, so it is in scope; the Chapel 9:30 Mass itself is the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83c6dda9",
+          "page": 3,
+          "said": "Family Praise & Pizza will gather on Friday, December 4th. A kid friendly adoration time with music and confession."
+        }
+      ],
+      "rationale": "R26, POLICY What to extract: no start time is printed for the adoration or confession.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
