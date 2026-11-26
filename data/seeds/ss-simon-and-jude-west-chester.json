@@ -1,0 +1,1173 @@
+{
+  "schema_version": 1,
+  "parish_slug": "ss-simon-and-jude-west-chester",
+  "status": "ready",
+  "as_of": "2026-11-15T16:44:21Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T18:24:21Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins (Nov 8 and 15, all-image pages) print the same schedule box: seasonal Saturday vigil (5 PM Mar-Oct, 4 PM Nov-Feb), four Sunday Masses, weekday 6:45/9:00, Saturday 9:00, Saturday confession 8-9 AM and (since Nov 1) 3-4 PM, weekday exposition 7:30 AM-8 PM and weekend chapel hours without exposition. No open questions; the website agrees.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a33feb044cf3af75c6252d3b749e3178f08394a7576f2440f584077a3aa149d6",
+      "fetched_at": "2026-11-15T16:44:21Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "7f4a976b4210ae673bfd9f32553c2a0990784c8fe3d9dde52f2ad2df53da8967",
+      "fetched_at": "2026-11-08T15:53:23Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 11,
+          "start_day": 1,
+          "end_month": 2,
+          "end_day": 28
+        },
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Saturday Vigil: 4:00 p.m. November 1 to February 28"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Saturday Vigil: 4:00 p.m. November 1 to February 28"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 9,
+          "said": "Saturday, November 21 ... 4:00 pm Gene & Evelyn Murphy"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the Mass schedule box of both bulletins gives the vigil's winter season with both ends; the intentions show 4:00 pm this week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 3,
+          "start_day": 1,
+          "end_month": 10,
+          "end_day": 31
+        },
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Saturday Vigil: 5:00 p.m. March 1 to October 31"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Saturday Vigil: 5:00 p.m. March 1 to October 31"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the Mass schedule box of both bulletins gives the summer vigil time with both ends of its season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Sunday: 7:30, 9:30, 11:30 a.m. & 6:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Sunday: 7:30, 9:30, 11:30 a.m. & 6:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the newest intentions list all four Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Sunday: 7:30, 9:30, 11:30 a.m. & 6:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Sunday: 7:30, 9:30, 11:30 a.m. & 6:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the newest intentions list all four Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Sunday: 7:30, 9:30, 11:30 a.m. & 6:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Sunday: 7:30, 9:30, 11:30 a.m. & 6:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the newest intentions list all four Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Sunday: 7:30, 9:30, 11:30 a.m. & 6:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Sunday: 7:30, 9:30, 11:30 a.m. & 6:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the newest intentions list all four Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the newest intentions list 6:45 and 9:00 am Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the newest intentions list 6:45 and 9:00 am Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the newest intentions list 6:45 and 9:00 am Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the newest intentions list 6:45 and 9:00 am Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the newest intentions list 6:45 and 9:00 am Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the newest intentions list 6:45 and 9:00 am Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the newest intentions list 6:45 and 9:00 am Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the newest intentions list 6:45 and 9:00 am Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the newest intentions list 6:45 and 9:00 am Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Weekday: 6:45 and 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the newest intentions list 6:45 and 9:00 am Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Sat. Morning: 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Sat. Morning: 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins and in the newest intentions (Saturday, November 21, 9:00 am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Reconciliation Saturdays: 8:00 - 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Reconciliation Saturdays: 8:00 - 9:00 a.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.simonandjude.org/",
+          "said": "Confession Times Saturdays 8 AM - 9 AM and 3 PM"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box; the homepage agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Saturdays: ... 4:00 - 5:00 p.m. After November 1, 3:00 - 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Saturdays: ... 4:00 - 5:00 p.m. After November 1, 3:00 - 4:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.simonandjude.org/",
+          "said": "Confession Times Saturdays 8 AM - 9 AM and 3 PM"
+        }
+      ],
+      "rationale": "R1, R15: since November 1 the afternoon confession is 3:00-4:00 p.m. (before the 4:00 p.m. winter vigil). The bulletin gives only the start of this period ('After November 1'), so per R15 no season is recorded; the homepage gives the same current 3 PM time. Update mode will see the return to 4:00-5:00 when the bulletin changes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Saturdays: 8:00 - 9:00 a.m. & 4:00 - 5:00 p.m. After November 1, 3:00 - 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Saturdays: 8:00 - 9:00 a.m. & 4:00 - 5:00 p.m. After November 1, 3:00 - 4:00 p.m."
+        }
+      ],
+      "rationale": "R15, R20: the 4:00-5:00 p.m. time applies before November 1 and is superseded now by 3:00-4:00 p.m.; its return in spring has no printed date, so it is left out rather than given an invented season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Eucharistic Adoration: Visit our Chapel to be with Our Lord in the Blessed Sacrament. Exposition is Monday to Friday 7:30 a.m. to 8:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Eucharistic Adoration: Visit our Chapel to be with Our Lord in the Blessed Sacrament. Exposition is Monday to Friday 7:30 a.m. to 8:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.simonandjude.org/adoration",
+          "said": "Exposition is Monday to Friday 7:30 am to 8:00 pm. ... Sacred Heart Chapel at Saints Simon and Jude Parish"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: exposition hours printed in both bulletins; the website names the chapel as the Sacred Heart Chapel at the parish (its one campus), so it belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Eucharistic Adoration: Visit our Chapel to be with Our Lord in the Blessed Sacrament. Exposition is Monday to Friday 7:30 a.m. to 8:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Eucharistic Adoration: Visit our Chapel to be with Our Lord in the Blessed Sacrament. Exposition is Monday to Friday 7:30 a.m. to 8:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.simonandjude.org/adoration",
+          "said": "Exposition is Monday to Friday 7:30 am to 8:00 pm. ... Sacred Heart Chapel at Saints Simon and Jude Parish"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: exposition hours printed in both bulletins; the website names the chapel as the Sacred Heart Chapel at the parish (its one campus), so it belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Eucharistic Adoration: Visit our Chapel to be with Our Lord in the Blessed Sacrament. Exposition is Monday to Friday 7:30 a.m. to 8:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Eucharistic Adoration: Visit our Chapel to be with Our Lord in the Blessed Sacrament. Exposition is Monday to Friday 7:30 a.m. to 8:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.simonandjude.org/adoration",
+          "said": "Exposition is Monday to Friday 7:30 am to 8:00 pm. ... Sacred Heart Chapel at Saints Simon and Jude Parish"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: exposition hours printed in both bulletins; the website names the chapel as the Sacred Heart Chapel at the parish (its one campus), so it belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Eucharistic Adoration: Visit our Chapel to be with Our Lord in the Blessed Sacrament. Exposition is Monday to Friday 7:30 a.m. to 8:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Eucharistic Adoration: Visit our Chapel to be with Our Lord in the Blessed Sacrament. Exposition is Monday to Friday 7:30 a.m. to 8:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.simonandjude.org/adoration",
+          "said": "Exposition is Monday to Friday 7:30 am to 8:00 pm. ... Sacred Heart Chapel at Saints Simon and Jude Parish"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: exposition hours printed in both bulletins; the website names the chapel as the Sacred Heart Chapel at the parish (its one campus), so it belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Eucharistic Adoration: Visit our Chapel to be with Our Lord in the Blessed Sacrament. Exposition is Monday to Friday 7:30 a.m. to 8:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Eucharistic Adoration: Visit our Chapel to be with Our Lord in the Blessed Sacrament. Exposition is Monday to Friday 7:30 a.m. to 8:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.simonandjude.org/adoration",
+          "said": "Exposition is Monday to Friday 7:30 am to 8:00 pm. ... Sacred Heart Chapel at Saints Simon and Jude Parish"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: exposition hours printed in both bulletins; the website names the chapel as the Sacred Heart Chapel at the parish (its one campus), so it belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart Chapel; no exposition"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Saturday and Sunday. The Chapel is open 6:00 a.m. to 6:00 p.m. No exposition."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Saturday and Sunday. The Chapel is open 6:00 a.m. to 6:00 p.m. No exposition."
+        },
+        {
+          "source": "website",
+          "url": "https://www.simonandjude.org/adoration",
+          "said": "Saturday and Sunday the Chapel is open 6:00 am to 6:00 pm No exposition. ... Adoration specifically refers to any prayer in front of the Blessed Sacrament whether in front of a closed Tabernacle or in front of the exposed host"
+        }
+      ],
+      "rationale": "R38: under the parish's Eucharistic Adoration heading, the on-site Sacred Heart Chapel's weekend hours are given as time with the Blessed Sacrament, and the parish's Adoration page counts prayer before the closed tabernacle as Adoration; the note says there is no exposition.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-simon-and-jude-west-chester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart Chapel; no exposition"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Saturday and Sunday. The Chapel is open 6:00 a.m. to 6:00 p.m. No exposition."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f4a976b",
+          "page": 2,
+          "said": "Saturday and Sunday. The Chapel is open 6:00 a.m. to 6:00 p.m. No exposition."
+        },
+        {
+          "source": "website",
+          "url": "https://www.simonandjude.org/adoration",
+          "said": "Saturday and Sunday the Chapel is open 6:00 am to 6:00 pm No exposition. ... Adoration specifically refers to any prayer in front of the Blessed Sacrament whether in front of a closed Tabernacle or in front of the exposed host"
+        }
+      ],
+      "rationale": "R38: under the parish's Eucharistic Adoration heading, the on-site Sacred Heart Chapel's weekend hours are given as time with the Blessed Sacrament, and the parish's Adoration page counts prayer before the closed tabernacle as Adoration; the note says there is no exposition.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Holy Days: 7:00 Vigil, 6:45 & 9:00 a.m. & 7:00 p.m."
+        }
+      ],
+      "rationale": "POLICY Dates, R16: holy-day times without a date the bulletin pins down; no holy day is dated in the newest bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 2,
+          "said": "Divine Mercy prayed after 9:00 a.m. Mass; Rosary Weekdays: after 6:45 a.m. and before 9:00 a.m. Mass"
+        }
+      ],
+      "rationale": "R24: devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a33feb04",
+          "page": 7,
+          "said": "A Day of Sanctification For Priests ... Monday, November 30 ... Mother of Divine Providence Church, King of Prussia"
+        }
+      ],
+      "rationale": "R22: at another parish's church, with no Mass time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
