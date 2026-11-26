@@ -1,0 +1,651 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-maximilian-kolbe-west-chester",
+  "status": "ready",
+  "as_of": "2026-11-15T16:01:30Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T18:34:24Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026; every page is an image) print the same schedule box on page 1: Mon-Sat 8:00 AM, Sat 4:00 PM vigil, Sun 7:30/9:00/10:30 AM, Saturday Confession 8:30-9:30 AM, and Tuesday Adoration 8:30 AM-4:30 PM with Benediction. Off-site events (Malvern Retreat House, St. Laurence) and devotions are excluded. No history is stored; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b404f1bdf322cfba4cb1aae66185dda0b6bb7facdcf3e6089bc2f0949eaf499f",
+      "fetched_at": "2026-11-15T16:01:30Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "fe92795de3d8f9de997be648c3b12c3eb7cc1a3b4811c1dc5aac1d6e71cbe2f8",
+      "fetched_at": "2026-11-08T15:29:15Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maximilian-kolbe-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 1,
+          "said": "Daily Mass Monday-Saturday.. 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 1,
+          "said": "Daily Mass Monday-Saturday.. 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 4,
+          "said": "Mass Intentions MONDAY ... SATURDAY: Weekday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 4,
+          "said": "Mass Intentions MONDAY ... SATURDAY: Weekday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box on page 1 of both bulletins read (Nov 8 and Nov 15), and each day's 8:00 AM intention is listed on page 4.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maximilian-kolbe-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 1,
+          "said": "Daily Mass Monday-Saturday.. 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 1,
+          "said": "Daily Mass Monday-Saturday.. 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 4,
+          "said": "Mass Intentions MONDAY ... SATURDAY: Weekday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 4,
+          "said": "Mass Intentions MONDAY ... SATURDAY: Weekday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box on page 1 of both bulletins read (Nov 8 and Nov 15), and each day's 8:00 AM intention is listed on page 4.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maximilian-kolbe-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 1,
+          "said": "Daily Mass Monday-Saturday.. 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 1,
+          "said": "Daily Mass Monday-Saturday.. 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 4,
+          "said": "Mass Intentions MONDAY ... SATURDAY: Weekday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 4,
+          "said": "Mass Intentions MONDAY ... SATURDAY: Weekday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box on page 1 of both bulletins read (Nov 8 and Nov 15), and each day's 8:00 AM intention is listed on page 4.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maximilian-kolbe-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 1,
+          "said": "Daily Mass Monday-Saturday.. 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 1,
+          "said": "Daily Mass Monday-Saturday.. 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 4,
+          "said": "Mass Intentions MONDAY ... SATURDAY: Weekday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 4,
+          "said": "Mass Intentions MONDAY ... SATURDAY: Weekday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box on page 1 of both bulletins read (Nov 8 and Nov 15), and each day's 8:00 AM intention is listed on page 4.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maximilian-kolbe-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 1,
+          "said": "Daily Mass Monday-Saturday.. 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 1,
+          "said": "Daily Mass Monday-Saturday.. 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 4,
+          "said": "Mass Intentions MONDAY ... SATURDAY: Weekday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 4,
+          "said": "Mass Intentions MONDAY ... SATURDAY: Weekday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box on page 1 of both bulletins read (Nov 8 and Nov 15), and each day's 8:00 AM intention is listed on page 4.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maximilian-kolbe-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 1,
+          "said": "Daily Mass Monday-Saturday.. 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 1,
+          "said": "Daily Mass Monday-Saturday.. 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 4,
+          "said": "Mass Intentions MONDAY ... SATURDAY: Weekday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 4,
+          "said": "Mass Intentions MONDAY ... SATURDAY: Weekday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box on page 1 of both bulletins read (Nov 8 and Nov 15), and each day's 8:00 AM intention is listed on page 4.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maximilian-kolbe-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 1,
+          "said": "Saturday Vigil.........4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 1,
+          "said": "Saturday Vigil.........4:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maximilian-kolbe-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 1,
+          "said": "Sunday.................... 7:30 AM 9:00 AM 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 1,
+          "said": "Sunday.................... 7:30 AM 9:00 AM 10:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maximilian-kolbe-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 1,
+          "said": "Sunday.................... 7:30 AM 9:00 AM 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 1,
+          "said": "Sunday.................... 7:30 AM 9:00 AM 10:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maximilian-kolbe-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 1,
+          "said": "Sunday.................... 7:30 AM 9:00 AM 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 1,
+          "said": "Sunday.................... 7:30 AM 9:00 AM 10:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maximilian-kolbe-west-chester",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday ......8:30AM - 9:30 AM or call for an appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday ......8:30AM - 9:30 AM or call for an appointment"
+        }
+      ],
+      "rationale": "R1, R35: printed on page 1 of both bulletins read; the appointment option has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maximilian-kolbe-west-chester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 1,
+          "said": "Adoration Tuesday........ 8:30AM - 4:30PM Followed by Bendediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 1,
+          "said": "Adoration Tuesday........ 8:30AM - 4:30PM Followed by Bendediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 5,
+          "said": "Join us for Adoration on Tuesday mornings after Mass. You are welcome to visit anytime during the day until 4:30pm!"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 5,
+          "said": "Join us for Adoration on Tuesday mornings after Mass. You are welcome to visit anytime during the day until 4:30pm!"
+        }
+      ],
+      "rationale": "R1, R35: page 1 of both bulletins gives the clock times, which fit page 5's after-the-8 AM-Mass wording; POLICY, What to extract: Benediction goes in the note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 3,
+          "said": "Monday, November 23, 2026 Malvern Retreat House St Joseph's Chapel 315 S. Warren Avenue Malvern, PA 19355 10 am - 3 pm Adoration- Confession- Flame of Love Rosary Talks- Veneration of the Relics- Holy Mass"
+        }
+      ],
+      "rationale": "R22: a day of prayer at the Malvern Retreat House, another address not on the parish's church list; its Mass, Confession and Adoration have no times of their own (POLICY, Final source checks).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 8,
+          "said": "Mass of Remembrance ... on November 21, 2026 at 10:30am at St. Laurence, Upper Darby"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe92795d",
+          "page": 3,
+          "said": "Mass of Remembrance ... on November 21, 2026 at 10:30am at St. Laurence, Upper Darby"
+        }
+      ],
+      "rationale": "R22: held at St. Laurence, Upper Darby, another parish's church; its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 5,
+          "said": "COME PRAY THE ROSARY Everyday after 8:00AM Daily Mass. Also, the 1st and 3rd Monday of each month at 7:00PM in the Chapel."
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion POLICY leaves out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b404f1bd",
+          "page": 2,
+          "said": "Miraculous Medal Novena - Prayed weekly every Monday following the Rosary."
+        }
+      ],
+      "rationale": "R24: a novena is a devotion POLICY leaves out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
