@@ -1,0 +1,807 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-katharine-of-siena-wayne",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:06Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T19:37:08Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 5 PM, Sun 9:30/11:30), weekday (Mon-Fri 6:30 & 8:00, Sat 8:00), Saturday confession 4:00-4:45 and Monday Adoration 8:30-4:45 with Benediction agree in both image-only bulletins and the website. Open: a Dec 6 '5:00 pm' Teen Mass that may be a misdated Saturday vigil.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e1008ce544e33f1a00161b69807aa9bf90e5bef0a611f21623c2e47fe42837b9",
+      "fetched_at": "2026-11-15T16:46:06Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b9ea409503a8bb8e685bcc612e92a9ba8e6b3749e8eeb29031491f9db7a3fdb4",
+      "fetched_at": "2026-11-08T15:54:45Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-of-siena-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Weekend Masses Saturday 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ea4095",
+          "page": 1,
+          "said": "Weekend Masses Saturday 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21, 2026 5:00 PM Fay Family"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read (Nov 8, Nov 15) and in the Nov 15 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-of-siena-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Sunday 9:30 & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ea4095",
+          "page": 1,
+          "said": "Sunday 9:30 & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22, 2026 9:30 AM Stephen Comly 11:30 AM Peter Dooner"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-of-siena-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Sunday 9:30 & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ea4095",
+          "page": 1,
+          "said": "Sunday 9:30 & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22, 2026 9:30 AM Stephen Comly 11:30 AM Peter Dooner"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-of-siena-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ea4095",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16, 2026 6:30 AM Special Intention 8:00 AM Helene Trelicot"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every weekday of the Nov 15 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-of-siena-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ea4095",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16, 2026 6:30 AM Special Intention 8:00 AM Helene Trelicot"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every weekday of the Nov 15 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-of-siena-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ea4095",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16, 2026 6:30 AM Special Intention 8:00 AM Helene Trelicot"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every weekday of the Nov 15 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-of-siena-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ea4095",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16, 2026 6:30 AM Special Intention 8:00 AM Helene Trelicot"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every weekday of the Nov 15 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-of-siena-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ea4095",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16, 2026 6:30 AM Special Intention 8:00 AM Helene Trelicot"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every weekday of the Nov 15 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-of-siena-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ea4095",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16, 2026 6:30 AM Special Intention 8:00 AM Helene Trelicot"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every weekday of the Nov 15 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-of-siena-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ea4095",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16, 2026 6:30 AM Special Intention 8:00 AM Helene Trelicot"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every weekday of the Nov 15 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-of-siena-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ea4095",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16, 2026 6:30 AM Special Intention 8:00 AM Helene Trelicot"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every weekday of the Nov 15 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-of-siena-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ea4095",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16, 2026 6:30 AM Special Intention 8:00 AM Helene Trelicot"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every weekday of the Nov 15 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-of-siena-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ea4095",
+          "page": 1,
+          "said": "Weekday Masses Monday-Friday 6:30, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16, 2026 6:30 AM Special Intention 8:00 AM Helene Trelicot"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every weekday of the Nov 15 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-of-siena-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Saturday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ea4095",
+          "page": 1,
+          "said": "Saturday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21, 2026 8:00 AM Joseph Judge"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-of-siena-wayne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays 4:00-4:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ea4095",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays 4:00-4:45pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-of-siena-wayne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Adoration Monday 8:30am - 4:30pm with Benediction 4:30-4:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ea4095",
+          "page": 1,
+          "said": "Adoration Monday 8:30am - 4:30pm with Benediction 4:30-4:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 2,
+          "said": "Eucharistic Adoration will begin after the 8:30am Mass today with Benediction starting at 4:30pm."
+        }
+      ],
+      "rationale": "R1, POLICY (What to extract: Adoration and Benediction is one event with the note Benediction): the box's clock times win over the intentions' 'after the 8:30am Mass' (no 8:30 Mass exists; POLICY, Times). Ends at the close of Benediction, 4:45.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 4,
+          "said": "Grotto Lighting & Blessing Dec. 6 after the 5:00 pm Mass ... Following the Teen Mass, we will process by candlelight"
+        }
+      ],
+      "rationale": "R30/R28: Dec 6, 2026 is a Sunday, but no Sunday 5:00 PM Mass appears in either schedule box, the intentions, or the website's Mass calendar (web /calendar/sks-mass-calendar/, November: no Sunday evening Mass); the same page's Young Adult item ties the 5:00PM Mass to Saturday Nov 28, so 'Dec. 6' may be a misdate for the Saturday Dec 5 vigil. Leaning leave out: a wrong time is worse than a missing one (POLICY).",
+      "question": "Add a Sunday Dec 6, 5:00 PM Teen Mass (Grotto Lighting)?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Sun Dec 6 5:00 PM Teen Mass",
+          "entry": {
+            "church_slug": "st-katharine-of-siena-wayne",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-06",
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Teen Mass"
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Holy Days Vigil 6:00pm Day: 6:30am, 8:00am,12:10pm & 7:00pm"
+        }
+      ],
+      "rationale": "R24, POLICY (Dates): generic holy-day times with no date printed; dates are not projected from the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1008ce5",
+          "page": 1,
+          "said": "Sacrament of Baptism Sundays 12:45pm"
+        }
+      ],
+      "rationale": "R24: Baptism is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
