@@ -1,0 +1,899 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-spring-city",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:13Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T18:57:40Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both issues read (Nov 8, Nov 15; Nov 15 is image-only) print the same schedule box: Sat 4:30 vigil, Sun 7:30/9/11, Mon-Fri 8 AM, Sat 3-4 PM confession, daily Adoration 8 AM-7 PM; the website matches and supplies the First Saturday Mass time (8 am). Open: whether the dated Nov 17 5:30 PM CGS First Communion Intention Mass is public.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a291b984b18b05ecaf4fba8f6c8c698b71a8d1f0aa4ba292ecf916447cbbea87",
+      "fetched_at": "2026-11-15T16:46:13Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "315577ae1974e054f5512b92525a288b9108f2e239bcd1715a87013cc0dbc587",
+      "fetched_at": "2026-11-08T15:54:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday Vigil: 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday Vigil: 4:30PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:00AM (live streamed) & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:00AM (live streamed) & 11:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:00AM (live streamed) & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:00AM (live streamed) & 11:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:00AM (live streamed) & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:00AM (live streamed) & 11:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "Monday - Friday: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "Monday - Friday: 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the website agrees (DAILY MASS 8 am (M thru F)).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "Monday - Friday: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "Monday - Friday: 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the website agrees (DAILY MASS 8 am (M thru F)).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "Monday - Friday: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "Monday - Friday: 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the website agrees (DAILY MASS 8 am (M thru F)).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "Monday - Friday: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "Monday - Friday: 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the website agrees (DAILY MASS 8 am (M thru F)).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "Monday - Friday: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "Monday - Friday: 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the website agrees (DAILY MASS 8 am (M thru F)).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Meditation Room"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturday 3:00PM-4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturday 3:00PM-4:00PM"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephspringcity.com/",
+          "said": "SATURDAY 3:00–4:00 pm in Meditation Room"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues; the website names the room.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "ADORATION OF THE MOST BLESSED SACRAMENT Daily- 8:00AM-7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "ADORATION OF THE MOST BLESSED SACRAMENT Daily- 8:00AM-7:00PM"
+        }
+      ],
+      "rationale": "R1: 'Daily' in the p1 box of both issues is one slot per day (POLICY, Weekly or dated rule 1); the website agrees (DAILY Adoration 8 am – 7 pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "ADORATION OF THE MOST BLESSED SACRAMENT Daily- 8:00AM-7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "ADORATION OF THE MOST BLESSED SACRAMENT Daily- 8:00AM-7:00PM"
+        }
+      ],
+      "rationale": "R1: 'Daily' in the p1 box of both issues is one slot per day (POLICY, Weekly or dated rule 1); the website agrees (DAILY Adoration 8 am – 7 pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "ADORATION OF THE MOST BLESSED SACRAMENT Daily- 8:00AM-7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "ADORATION OF THE MOST BLESSED SACRAMENT Daily- 8:00AM-7:00PM"
+        }
+      ],
+      "rationale": "R1: 'Daily' in the p1 box of both issues is one slot per day (POLICY, Weekly or dated rule 1); the website agrees (DAILY Adoration 8 am – 7 pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "ADORATION OF THE MOST BLESSED SACRAMENT Daily- 8:00AM-7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "ADORATION OF THE MOST BLESSED SACRAMENT Daily- 8:00AM-7:00PM"
+        }
+      ],
+      "rationale": "R1: 'Daily' in the p1 box of both issues is one slot per day (POLICY, Weekly or dated rule 1); the website agrees (DAILY Adoration 8 am – 7 pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "ADORATION OF THE MOST BLESSED SACRAMENT Daily- 8:00AM-7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "ADORATION OF THE MOST BLESSED SACRAMENT Daily- 8:00AM-7:00PM"
+        }
+      ],
+      "rationale": "R1: 'Daily' in the p1 box of both issues is one slot per day (POLICY, Weekly or dated rule 1); the website agrees (DAILY Adoration 8 am – 7 pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "ADORATION OF THE MOST BLESSED SACRAMENT Daily- 8:00AM-7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "ADORATION OF THE MOST BLESSED SACRAMENT Daily- 8:00AM-7:00PM"
+        }
+      ],
+      "rationale": "R1: 'Daily' in the p1 box of both issues is one slot per day (POLICY, Weekly or dated rule 1); the website agrees (DAILY Adoration 8 am – 7 pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hours 2:00 and 6:00 PM"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 1,
+          "said": "ADORATION OF THE MOST BLESSED SACRAMENT Daily- 8:00AM-7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 1,
+          "said": "ADORATION OF THE MOST BLESSED SACRAMENT Daily- 8:00AM-7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 3,
+          "said": "2pm - Holy Hour - Church; 6pm - Holy Hour Devotion for those in our Community & Private Prayer - Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 3,
+          "said": "2pm - Holy Hour - Church; 6pm - Holy Hour Devotion for those in our Community & Private Prayer - Church"
+        }
+      ],
+      "rationale": "R1: 'Daily' in the p1 box of both issues; R37: the Tuesday 2 PM and 6 PM Holy Hours fall inside it and are named in the note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 3,
+          "said": "2pm - Holy Hour - Church; 6pm - Holy Hour Devotion ... - Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 3,
+          "said": "2pm - Holy Hour - Church; 6pm - Holy Hour Devotion ... - Church"
+        }
+      ],
+      "rationale": "R37: entirely inside the daily 8 AM-7 PM Adoration at the same church; kept as a note on the Tuesday Adoration slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 3,
+          "said": "2pm - Holy Hour - Church; 6pm - Holy Hour Devotion ... - Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 3,
+          "said": "2pm - Holy Hour - Church; 6pm - Holy Hour Devotion ... - Church"
+        }
+      ],
+      "rationale": "R37: entirely inside the daily 8 AM-7 PM Adoration at the same church; kept as a note on the Tuesday Adoration slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-spring-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:20 AM Rosary"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 2,
+          "said": "1st Saturday Devotion & Mass 7:20AM Rosary followed by Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "315577ae",
+          "page": 2,
+          "said": "1st Saturday Devotion & Mass 7:20AM Rosary followed by Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephspringcity.com/",
+          "said": "FIRST SATURDAY DEVOTIONS & MASS Rosary-7:20 am Mass-8 am",
+          "schedule_check": {
+            "checked_at": "2026-11-26T19:00:09Z",
+            "current_because": "Homepage checked 2026-11-26: its Mass & Worship block matches both bulletins' schedule box exactly (4:30 vigil, 7:30/9/11 Sunday, 8 am M-F, daily Adoration 8-7, Saturday 3-4 confession) and it announces the 2027 Mass Book.",
+            "bulletin": "a291b984",
+            "fits_because": "The Nov 15 bulletin p2 prints the First Saturday Devotion & Mass with the 7:20AM Rosary followed by Mass but no Mass time; the site's Mass-8 am fits that and the 8 AM weekday Mass."
+          }
+        }
+      ],
+      "rationale": "R6, R12: the bulletins name the First Saturday Mass but give it no clock time; the parish website gives 8 am, matching everything else. The newest week holds no first Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 3,
+          "said": "TUESDAY, November 17 ... 530pm - CGS First Communion Intention Mass"
+        }
+      ],
+      "rationale": "R30: a dated Mass outside the regular schedule, tied to the Catechesis of the Good Shepherd First Communion group. The bulletin does not limit it to the group (POLICY: open unless limited), so I lean include; but it sits among program meetings and may be meant for the families only.",
+      "question": "Include the Tue Nov 17 5:30 PM CGS First Communion Intention Mass?",
+      "options": [
+        {
+          "label": "Include Nov 17 5:30 PM",
+          "entry": {
+            "church_slug": "st-joseph-spring-city",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-17",
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "CGS First Communion Intention Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 2,
+          "said": "Baptisms Sundays at 12:15pm by appointment"
+        }
+      ],
+      "rationale": "R24: not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a291b984",
+          "page": 3,
+          "said": "held after the 6:30pm daily Mass at St. Basil's"
+        }
+      ],
+      "rationale": "R22: St. Basil's is another parish's church, mentioned only for the Missionary Hub group; its days aren't given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
