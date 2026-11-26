@@ -1,0 +1,627 @@
+{
+  "schema_version": 1,
+  "parish_slug": "ss-peter-and-paul-west-chester",
+  "status": "ready",
+  "as_of": "2026-11-15T15:58:58Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T18:20:14Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Sts. Peter and Paul, West Chester. Both bulletins read (Nov 8 and Nov 15, 2026, image-only) print the same standing schedule: Sat 4:30 PM vigil, Sun 7:30/9:30/11:30, Mon-Sat 8:30 AM, Saturday confessions 8:00-8:20 AM and 3:00-4:00 PM, Wednesday exposition after the 8:30 Mass to 3 PM, and a First Friday 7-8 PM Holy Hour. Off-site Masses (a St. Anastasia Respect Life Mass, an Advent retreat at Daylesford Abbey) are excluded. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f3c9f6bc5a3170843664c63edf7bae421b23a22ca5fc8994afe7323dee303776",
+      "fetched_at": "2026-11-15T15:58:58Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "866c0e7b04bb81bfb25aa31b8efc3ce024dfedd4028b1f98db7060abdea6d197",
+      "fetched_at": "2026-11-08T15:27:48Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3c9f6bc",
+          "page": 2,
+          "said": "SaturdayVigil: 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "866c0e7b",
+          "page": 2,
+          "said": "SaturdayVigil: 4:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list Saturday 4:30 PM Masses too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3c9f6bc",
+          "page": 2,
+          "said": "Sunday: 7:30, 9:30, & 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "866c0e7b",
+          "page": 2,
+          "said": "Sunday: 7:30, 9:30, & 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list all three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3c9f6bc",
+          "page": 2,
+          "said": "Sunday: 7:30, 9:30, & 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "866c0e7b",
+          "page": 2,
+          "said": "Sunday: 7:30, 9:30, & 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list all three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3c9f6bc",
+          "page": 2,
+          "said": "Sunday: 7:30, 9:30, & 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "866c0e7b",
+          "page": 2,
+          "said": "Sunday: 7:30, 9:30, & 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list all three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3c9f6bc",
+          "page": 2,
+          "said": "Saturday: 8:30 AM / Weekdays: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "866c0e7b",
+          "page": 2,
+          "said": "Saturday: 8:30 AM / Weekdays: 8:30 AM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box of both bulletins gives Weekdays 8:30 AM and Saturday 8:30 AM; the intentions list an 8:30 AM Mass each Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3c9f6bc",
+          "page": 2,
+          "said": "Saturday: 8:30 AM / Weekdays: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "866c0e7b",
+          "page": 2,
+          "said": "Saturday: 8:30 AM / Weekdays: 8:30 AM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box of both bulletins gives Weekdays 8:30 AM and Saturday 8:30 AM; the intentions list an 8:30 AM Mass each Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3c9f6bc",
+          "page": 2,
+          "said": "Saturday: 8:30 AM / Weekdays: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "866c0e7b",
+          "page": 2,
+          "said": "Saturday: 8:30 AM / Weekdays: 8:30 AM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box of both bulletins gives Weekdays 8:30 AM and Saturday 8:30 AM; the intentions list an 8:30 AM Mass each Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3c9f6bc",
+          "page": 2,
+          "said": "Saturday: 8:30 AM / Weekdays: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "866c0e7b",
+          "page": 2,
+          "said": "Saturday: 8:30 AM / Weekdays: 8:30 AM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box of both bulletins gives Weekdays 8:30 AM and Saturday 8:30 AM; the intentions list an 8:30 AM Mass each Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3c9f6bc",
+          "page": 2,
+          "said": "Saturday: 8:30 AM / Weekdays: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "866c0e7b",
+          "page": 2,
+          "said": "Saturday: 8:30 AM / Weekdays: 8:30 AM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box of both bulletins gives Weekdays 8:30 AM and Saturday 8:30 AM; the intentions list an 8:30 AM Mass each Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3c9f6bc",
+          "page": 2,
+          "said": "Saturday: 8:30 AM / Weekdays: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "866c0e7b",
+          "page": 2,
+          "said": "Saturday: 8:30 AM / Weekdays: 8:30 AM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box of both bulletins gives Weekdays 8:30 AM and Saturday 8:30 AM; the intentions list an 8:30 AM Mass each Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-west-chester",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3c9f6bc",
+          "page": 2,
+          "said": "Confessions 8:00 to 8:20 AM Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "866c0e7b",
+          "page": 2,
+          "said": "Confessions 8:00 to 8:20 AM Saturday"
+        }
+      ],
+      "rationale": "R1: printed under Confessions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-west-chester",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3c9f6bc",
+          "page": 2,
+          "said": "Confessions 3:00 to 4:00 PM Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "866c0e7b",
+          "page": 2,
+          "said": "Confessions 3:00 to 4:00 PM Saturday"
+        }
+      ],
+      "rationale": "R1: printed under Confessions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-west-chester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 8:30 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3c9f6bc",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament Wednesdays following the 8:30 AM Mass, ending at 3:00 PM with a quiet repose of the Blessed Sacrament BARRING no funerals."
+        },
+        {
+          "source": "agent",
+          "bulletin": "866c0e7b",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament Wednesdays following the 8:30 AM Mass, ending at 3:00 PM with a quiet repose of the Blessed Sacrament BARRING no funerals."
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; 'following' a weekday Mass starts 30 minutes after the 8:30 AM Mass, so 9:00 AM, ending at the printed 3:00 PM. The funeral caveat is an occasional exception, not a schedule change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-west-chester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3c9f6bc",
+          "page": 2,
+          "said": "First Friday Holy Hour Exposition of the Blessed Sacrament 7:00 to 8:00 PM including music, private prayer and Benediction."
+        },
+        {
+          "source": "agent",
+          "bulletin": "866c0e7b",
+          "page": 2,
+          "said": "First Friday Holy Hour Exposition of the Blessed Sacrament 7:00 to 8:00 PM including music, private prayer and Benediction."
+        }
+      ],
+      "rationale": "R1: printed as a standing First Friday item in the devotions box of both bulletins (POLICY: weeks-of-the-month slots are weekly with weeks_of_month); Benediction as the note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-west-chester",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-30",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bishop Coffey Mass for deceased pro-life members, St. Anastasia Respect Life Ministry"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "866c0e7b",
+          "page": 6,
+          "said": "St. Anastasia Respect Life Ministry is honored to have Bishop Joseph Coffey celebrate the Mass ... Mass will be on Monday, November 30 at 7:00 PM"
+        }
+      ],
+      "rationale": "R22: hosted by St. Anastasia's Respect Life Ministry with no venue given; it is presumably at St. Anastasia (another parish), and not shown at Sts. Peter and Paul.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-west-chester",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent retreat Mass at Daylesford Abbey"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3c9f6bc",
+          "page": 6,
+          "said": "Advent Retreat Wednesday December 2 begins with 8:30AM Mass with Fr. Carl Braschoss at Daylesford Abbey"
+        }
+      ],
+      "rationale": "R22: held at Daylesford Abbey, not a church of this parish; a paid retreat. The parish's own Wednesday 8:30 AM Mass is unaffected.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
