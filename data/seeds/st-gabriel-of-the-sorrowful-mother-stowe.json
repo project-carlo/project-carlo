@@ -1,0 +1,518 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-gabriel-of-the-sorrowful-mother-stowe",
+  "status": "ready",
+  "as_of": "2026-11-15T16:45:34Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T19:12:32Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Gabriel in Stowe. Both bulletins (Nov 8 and Nov 15, 2026, image-only) print the same schedule: Sat 4 PM and Sun 9 AM Masses, weekday 9 AM Mass, Saturday 3-3:45 PM and First Friday confession after the 9 AM Mass, and Wednesday Adoration after the 9 AM Mass to 5 PM with Benediction. No open questions; off-site young-adult and St. Teresa of Calcutta events are excluded.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3e861950855589c32a830b805686e8c75e244aebcbda9fd9bfd0013dc820c689",
+      "fetched_at": "2026-11-15T16:45:34Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6df7b56f5fb1ae3431db7783b6c2bb33c9b2533a8a157cbe72e3d1f3f0d8bdc6",
+      "fetched_at": "2026-11-08T15:54:17Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-stowe",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e861950",
+          "page": 1,
+          "said": "Masses Saturday: 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6df7b56f",
+          "page": 1,
+          "said": "Masses Saturday: 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read; the Mass intentions list Sat 4:00 PM each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-stowe",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e861950",
+          "page": 1,
+          "said": "Masses Sunday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6df7b56f",
+          "page": 1,
+          "said": "Masses Sunday: 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read; Mass attendance and intentions confirm 9:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-stowe",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e861950",
+          "page": 1,
+          "said": "Masses Monday-Friday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6df7b56f",
+          "page": 1,
+          "said": "Masses Monday-Friday 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read; the intentions list 9:00 AM Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-stowe",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e861950",
+          "page": 1,
+          "said": "Masses Monday-Friday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6df7b56f",
+          "page": 1,
+          "said": "Masses Monday-Friday 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read; the intentions list 9:00 AM Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-stowe",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e861950",
+          "page": 1,
+          "said": "Masses Monday-Friday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6df7b56f",
+          "page": 1,
+          "said": "Masses Monday-Friday 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read; the intentions list 9:00 AM Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-stowe",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e861950",
+          "page": 1,
+          "said": "Masses Monday-Friday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6df7b56f",
+          "page": 1,
+          "said": "Masses Monday-Friday 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read; the intentions list 9:00 AM Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-stowe",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e861950",
+          "page": 1,
+          "said": "Masses Monday-Friday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6df7b56f",
+          "page": 1,
+          "said": "Masses Monday-Friday 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read; the intentions list 9:00 AM Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-stowe",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e861950",
+          "page": 1,
+          "said": "Confessions Saturday 3:00 PM to 3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6df7b56f",
+          "page": 1,
+          "said": "Confessions Saturday 3:00 PM to 3:45 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-stowe",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e861950",
+          "page": 1,
+          "said": "Confessions ... First Friday after 9:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6df7b56f",
+          "page": 1,
+          "said": "Confessions ... First Friday after 9:00 AM Mass"
+        }
+      ],
+      "rationale": "R1, R10: the standing schedule box of both bulletins prints First Friday confession after the weekday 9:00 AM Mass, so POLICY starts it 30 minutes after, with no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-stowe",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction at 5:00 PM; after the 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e861950",
+          "page": 2,
+          "said": "Special Day of Prayer is Wednesday. Adoration of the Most Blessed Sacrament: Wednesday after 9:00 A.M. Mass to 5:00 PM in the Church. Benediction at 5:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6df7b56f",
+          "page": 2,
+          "said": "Special Day of Prayer is Wednesday. Adoration of the Most Blessed Sacrament: Wednesday after 9:00 A.M. Mass to 5:00 PM in the Church. Benediction at 5:00 PM."
+        }
+      ],
+      "rationale": "R1, R10: a standing Wednesday notice in both bulletins; after a weekday Mass starts 30 minutes after it (9:30), and the printed 5:00 PM end and Benediction are one Adoration event (POLICY).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e861950",
+          "page": 2,
+          "said": "Novena in honor of Our Lady of the Miraculous Medal on Mondays after the 9:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6df7b56f",
+          "page": 2,
+          "said": "Novena in honor of Our Lady of the Miraculous Medal on Mondays after the 9:00 AM Mass"
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e861950",
+          "page": 2,
+          "said": "The Rosary Prayer Group leads the recitation of the Rosary every Sunday before the 9:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6df7b56f",
+          "page": 2,
+          "said": "The Rosary Prayer Group leads the recitation of the Rosary every Sunday before the 9:00 AM Mass"
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e861950",
+          "page": 4,
+          "said": "Holy Hour & Happy Hour, Fri Nov 20, Starting at 7:00PM ... Saint Teresa of Calcutta Parish, Limerick, PA; Gather & Give Thanks, Fri Dec 4, 7:00PM ... Holy Hour ... Saint Aloysius Parish, Pottstown, PA"
+        }
+      ],
+      "rationale": "R22: young-adult Holy Hours at other parishes' churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e861950",
+          "page": 5,
+          "said": "Tuesday, November 24, 2026, St. Teresa of Calcutta, Schwenksville: 6:15 PM Adoration, Flame of Love Rosary, Confessions; 7:00 PM Procession, Holy Mass"
+        }
+      ],
+      "rationale": "R22: an event at another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e861950",
+          "page": 5,
+          "said": "Memorial Mass for parents of deceased children ... St. Teresa of Calcutta ... Wednesday, November 18 at 7:00 PM, 2506 Swamp Pike, Limerick"
+        }
+      ],
+      "rationale": "R22, R16: at another parish, and dated before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
