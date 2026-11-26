@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "ss-philip-and-james-exton",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T15:59:11Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-26T19:46:52Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@33a545cddf3f",
+  "approved_at": "2026-11-26T20:50:04Z",
   "summary": "One church, two issues read (Nov 8 and Nov 15, 2026, image-only PDFs); the p1 Mass Schedule box is identical in both and matches the website and the intentions. Open: whether St. Mary's Chapel (weekday Adoration 9 AM-7 PM, exposed) is at the church; no history stored.",
   "blocked_reason": null,
   "bulletins": [
@@ -595,9 +595,22 @@
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Mary's Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -644,14 +657,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:50:04Z"
+      },
       "group": "st-marys-chapel"
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Mary's Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -698,14 +728,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:50:04Z"
+      },
       "group": "st-marys-chapel"
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Mary's Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -752,14 +799,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:50:04Z"
+      },
       "group": "st-marys-chapel"
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Mary's Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -806,14 +870,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:50:04Z"
+      },
       "group": "st-marys-chapel"
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Mary's Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -860,7 +941,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:50:04Z"
+      },
       "group": "st-marys-chapel"
     }
   ]

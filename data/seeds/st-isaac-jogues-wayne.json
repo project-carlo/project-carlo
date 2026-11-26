@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-isaac-jogues-wayne",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:45:44Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-26T19:32:02Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@33a545cddf3f",
+  "approved_at": "2026-11-26T20:49:59Z",
   "summary": "One church; no history stored. Masses, weekday chapel exposition and Confession agree in the schedule box of both issues (Nov 8, Nov 15) and the website; Thanksgiving 9 AM replaces the 12:05 that day. Open: weekend Adoration times (bulletin vs website), a website-only first-Friday 9 PM Night of Reparation Mass, and the undated Christmas/New Year times in the standing box.",
   "blocked_reason": null,
   "bulletins": [
@@ -653,9 +653,22 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel; after the 8:00 AM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -719,14 +732,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:49:59Z"
+      },
       "group": "weekend-adoration"
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel; after the 8:00 AM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -790,7 +820,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:49:59Z"
+      },
       "group": "weekend-adoration"
     },
     {
@@ -873,9 +907,24 @@
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "21:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Night of Reparation"
+      },
       "page": 1,
       "sources": [
         {
@@ -924,7 +973,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:49:59Z"
+      }
     },
     {
       "id": "s22",
@@ -1076,9 +1129,22 @@
     },
     {
       "id": "s27",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1120,14 +1186,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:49:59Z"
+      },
       "group": "christmas"
     },
     {
       "id": "s28",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1169,14 +1252,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:49:59Z"
+      },
       "group": "christmas"
     },
     {
       "id": "s29",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1218,14 +1318,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:49:59Z"
+      },
       "group": "christmas"
     },
     {
       "id": "s30",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1267,14 +1384,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:49:59Z"
+      },
       "group": "christmas"
     },
     {
       "id": "s31",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1316,14 +1450,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:49:59Z"
+      },
       "group": "christmas"
     },
     {
       "id": "s32",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1365,14 +1516,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:49:59Z"
+      },
       "group": "christmas"
     },
     {
       "id": "s33",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1414,14 +1582,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:49:59Z"
+      },
       "group": "christmas"
     },
     {
       "id": "s34",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1463,7 +1648,11 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:49:59Z"
+      },
       "group": "christmas"
     }
   ]

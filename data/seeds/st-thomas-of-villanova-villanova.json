@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-thomas-of-villanova-villanova",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:47:06Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-26T19:41:38Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@33a545cddf3f",
+  "approved_at": "2026-11-26T20:50:02Z",
   "summary": "Two churches, the Villanova Church and the Rosemont Chapel, read from two image-only issues (Nov 8 and Nov 15) with identical schedule boxes and intentions. Weekend and daily Masses, Saturday and First Friday confession (times worked out by POLICY from 'after Mass') and a dated Thanksgiving Mass are settled. Open: whether to list the monthly Men's Gathering Mass.",
   "blocked_reason": null,
   "bulletins": [
@@ -763,9 +763,29 @@
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "rosemont-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "Men's Gathering Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -808,7 +828,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@33a545cddf3f",
+        "at": "2026-11-26T20:50:02Z"
+      }
     }
   ]
 }
