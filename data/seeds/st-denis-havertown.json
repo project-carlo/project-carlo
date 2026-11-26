@@ -1,0 +1,920 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-denis-havertown",
+  "status": "ready",
+  "as_of": "2026-11-15T16:44:58Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T21:15:00Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, daily and Saturday confession times agree in both issues' schedule box, intentions and the website; the Mon-Fri 5:30 PM Mass takes the website's Sept.-June season. The Sacre Coeur perpetual adoration shrine (Havertown, address unprinted) is left out as a church-list issue. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6b9d3a83dd52d21ed4a3fee0d2215d050cfbed3a9200d44359e9b493358d3220",
+      "fetched_at": "2026-11-15T16:44:58Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "816399b363c4ea9cf21905335852a45ae6a6adcfd3a03187c9f1cb31e3c60817",
+      "fetched_at": "2026-11-08T15:53:54Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Weekend Mass Schedule Saturday Vigil: 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Weekend Mass Schedule Saturday Vigil: 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Sunday: 6:30am, 8:00am, 9:30am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Sunday: 6:30am, 8:00am, 9:30am, 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Sunday: 6:30am, 8:00am, 9:30am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Sunday: 6:30am, 8:00am, 9:30am, 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Sunday: 6:30am, 8:00am, 9:30am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Sunday: 6:30am, 8:00am, 9:30am, 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Sunday: 6:30am, 8:00am, 9:30am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Sunday: 6:30am, 8:00am, 9:30am, 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Daily Mass Monday-Saturday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Daily Mass Monday-Saturday 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; every weekday and Saturday of both weeks' intentions has an 8:30am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Daily Mass Monday-Saturday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Daily Mass Monday-Saturday 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; every weekday and Saturday of both weeks' intentions has an 8:30am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Daily Mass Monday-Saturday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Daily Mass Monday-Saturday 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; every weekday and Saturday of both weeks' intentions has an 8:30am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Daily Mass Monday-Saturday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Daily Mass Monday-Saturday 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; every weekday and Saturday of both weeks' intentions has an 8:30am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Daily Mass Monday-Saturday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Daily Mass Monday-Saturday 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; every weekday and Saturday of both weeks' intentions has an 8:30am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Daily Mass Monday-Saturday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Daily Mass Monday-Saturday 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; every weekday and Saturday of both weeks' intentions has an 8:30am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Monday, November 16 ... 5:30pm (likewise Tue Nov 17 to Fri Nov 20); box: (No 5:30pm Daily Mass during the summer)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Monday, November 9 ... 5:30pm (likewise Tue Nov 10 to Fri Nov 13)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintdenis.org/",
+          "said": "Monday- Friday 5:30 PM (Sept.-June)",
+          "schedule_check": {
+            "checked_at": "2026-11-26T21:19:16Z",
+            "current_because": "Homepage shows Father Kevin's 2026 Pastor's Report; its weekend, daily, holy day and confession times match the Nov 15 bulletin box exactly.",
+            "bulletin": "6b9d3a83",
+            "fits_because": "The bulletin box implies a 5:30pm weekday Mass outside summer and both weeks' intentions list it Mon-Fri; the site gives the months."
+          }
+        }
+      ],
+      "rationale": "R35: a 5:30pm Mass Mon-Fri in both weeks' intentions, and the schedule box's note that it stops in summer confirms it is regular; R6: the parish website gives the season Sept.-June, which the bulletin's 'summer' leaves unstated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Monday, November 16 ... 5:30pm (likewise Tue Nov 17 to Fri Nov 20); box: (No 5:30pm Daily Mass during the summer)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Monday, November 9 ... 5:30pm (likewise Tue Nov 10 to Fri Nov 13)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintdenis.org/",
+          "said": "Monday- Friday 5:30 PM (Sept.-June)",
+          "schedule_check": {
+            "checked_at": "2026-11-26T21:19:16Z",
+            "current_because": "Homepage shows Father Kevin's 2026 Pastor's Report; its weekend, daily, holy day and confession times match the Nov 15 bulletin box exactly.",
+            "bulletin": "6b9d3a83",
+            "fits_because": "The bulletin box implies a 5:30pm weekday Mass outside summer and both weeks' intentions list it Mon-Fri; the site gives the months."
+          }
+        }
+      ],
+      "rationale": "R35: a 5:30pm Mass Mon-Fri in both weeks' intentions, and the schedule box's note that it stops in summer confirms it is regular; R6: the parish website gives the season Sept.-June, which the bulletin's 'summer' leaves unstated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Monday, November 16 ... 5:30pm (likewise Tue Nov 17 to Fri Nov 20); box: (No 5:30pm Daily Mass during the summer)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Monday, November 9 ... 5:30pm (likewise Tue Nov 10 to Fri Nov 13)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintdenis.org/",
+          "said": "Monday- Friday 5:30 PM (Sept.-June)",
+          "schedule_check": {
+            "checked_at": "2026-11-26T21:19:16Z",
+            "current_because": "Homepage shows Father Kevin's 2026 Pastor's Report; its weekend, daily, holy day and confession times match the Nov 15 bulletin box exactly.",
+            "bulletin": "6b9d3a83",
+            "fits_because": "The bulletin box implies a 5:30pm weekday Mass outside summer and both weeks' intentions list it Mon-Fri; the site gives the months."
+          }
+        }
+      ],
+      "rationale": "R35: a 5:30pm Mass Mon-Fri in both weeks' intentions, and the schedule box's note that it stops in summer confirms it is regular; R6: the parish website gives the season Sept.-June, which the bulletin's 'summer' leaves unstated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Monday, November 16 ... 5:30pm (likewise Tue Nov 17 to Fri Nov 20); box: (No 5:30pm Daily Mass during the summer)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Monday, November 9 ... 5:30pm (likewise Tue Nov 10 to Fri Nov 13)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintdenis.org/",
+          "said": "Monday- Friday 5:30 PM (Sept.-June)",
+          "schedule_check": {
+            "checked_at": "2026-11-26T21:19:16Z",
+            "current_because": "Homepage shows Father Kevin's 2026 Pastor's Report; its weekend, daily, holy day and confession times match the Nov 15 bulletin box exactly.",
+            "bulletin": "6b9d3a83",
+            "fits_because": "The bulletin box implies a 5:30pm weekday Mass outside summer and both weeks' intentions list it Mon-Fri; the site gives the months."
+          }
+        }
+      ],
+      "rationale": "R35: a 5:30pm Mass Mon-Fri in both weeks' intentions, and the schedule box's note that it stops in summer confirms it is regular; R6: the parish website gives the season Sept.-June, which the bulletin's 'summer' leaves unstated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Monday, November 16 ... 5:30pm (likewise Tue Nov 17 to Fri Nov 20); box: (No 5:30pm Daily Mass during the summer)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Monday, November 9 ... 5:30pm (likewise Tue Nov 10 to Fri Nov 13)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintdenis.org/",
+          "said": "Monday- Friday 5:30 PM (Sept.-June)",
+          "schedule_check": {
+            "checked_at": "2026-11-26T21:19:16Z",
+            "current_because": "Homepage shows Father Kevin's 2026 Pastor's Report; its weekend, daily, holy day and confession times match the Nov 15 bulletin box exactly.",
+            "bulletin": "6b9d3a83",
+            "fits_because": "The bulletin box implies a 5:30pm weekday Mass outside summer and both weeks' intentions list it Mon-Fri; the site gives the months."
+          }
+        }
+      ],
+      "rationale": "R35: a 5:30pm Mass Mon-Fri in both weeks' intentions, and the schedule box's note that it stops in summer confirms it is regular; R6: the parish website gives the season Sept.-June, which the bulletin's 'summer' leaves unstated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Confessions Saturdays 3:30-4:30pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Confessions Saturdays 3:30-4:30pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Confessions ... or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 2,
+          "said": "Holy Days of Obligation 5:30pm Vigil, 6:30am, 8:30am, 10:00am, 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 2,
+          "said": "Holy Days of Obligation 5:30pm Vigil, 6:30am, 8:30am, 10:00am, 5:30pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no dates; no issue read prints a dated notice for Dec 8, so no date can be pinned (as st-isaac-jogues-wayne s27). Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-denis-havertown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-25",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Eve Family Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 3,
+          "said": "Please join us for St. Denis Thanksgiving Eve Family Mass Wednesday, November 25 at 5:30pm"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: a special occasion at the regular Wednesday 5:30pm Mass, already a weekly slot; not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 4,
+          "said": "Mass of Remembrance ... on November 21, 2026 at 10:30am at St. Laurence, Upper Darby"
+        }
+      ],
+      "rationale": "R22: at another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 5,
+          "said": "Saturday, November 28, 2026 ... 5:15 PM Mass in the Carroll chapel for those interested"
+        }
+      ],
+      "rationale": "R22: at Archbishop John Carroll High School's chapel, another address; a reunion Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "816399b3",
+          "page": 5,
+          "said": "Saturday, November 21st 4:30pm Mass in Archbishop Carroll Chapel"
+        }
+      ],
+      "rationale": "R22: at Archbishop John Carroll High School's chapel, another address; a class reunion's Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b9d3a83",
+          "page": 4,
+          "said": "Sacre Coeur Perpetual Adoration Shrine ... The Shrine is open everyday. All day and All night"
+        },
+        {
+          "source": "website",
+          "url": "https://saintdenis.org/",
+          "said": "Nate Roberts – Shrine Executive Director ... committing to a weekly hour of Eucharistic Adoration ... Signing up is easy through We Adore Him"
+        }
+      ],
+      "rationale": "R23: neither issue nor the parish homepage gives the shrine's address; sacrecoeurshrine.org says only 'Perpetual Adoration Chapel, Havertown PA', and Havertown has three listed churches. Not placed at St. Denis Church, so left out and listed as a church-list issue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Sacre Coeur Perpetual Adoration Shrine, Havertown",
+      "said": "Sacre Coeur Perpetual Adoration Shrine ... The Shrine is open everyday. All day and All night",
+      "bulletin": "6b9d3a83",
+      "page": 4
+    }
+  ]
+}
