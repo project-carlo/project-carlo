@@ -1,0 +1,2090 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-coatesville",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:00:15Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T20:13:41Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend and weekday Masses, Tue/Thu Adoration and confession before daily Mass agree in both issues (Nov 8, Nov 15). Open: whether the box's Friday 7 PM Spanish Mass exists (intentions and website say Mon-Thu), a First Saturday 7 AM Spanish Mass, Sunday/weekend confession times from the Spanish line and website, and the website's Christmas times.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "434f4fb7dce43576afd2ca812012e152fee6577c32ef03462e6bd64023999c0a",
+      "fetched_at": "2026-11-15T16:00:15Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c10f6a482eebabf521a334dc644090b046d94975f89a5071570b8dcc51e03342",
+      "fetched_at": "2026-11-08T15:28:38Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Mass Schedule Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Mass Schedule Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 2,
+          "said": "Mon., Nov. 16th ... 8:30 a.m.; Fri., Nov. 20th ... 8:30 a.m. + John Oulds"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box and the week's intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Mass Schedule Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Mass Schedule Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 2,
+          "said": "Mon., Nov. 16th ... 8:30 a.m.; Fri., Nov. 20th ... 8:30 a.m. + John Oulds"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box and the week's intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Mass Schedule Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Mass Schedule Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 2,
+          "said": "Mon., Nov. 16th ... 8:30 a.m.; Fri., Nov. 20th ... 8:30 a.m. + John Oulds"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box and the week's intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Mass Schedule Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Mass Schedule Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 2,
+          "said": "Mon., Nov. 16th ... 8:30 a.m.; Fri., Nov. 20th ... 8:30 a.m. + John Oulds"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box and the week's intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Mass Schedule Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Mass Schedule Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 2,
+          "said": "Mon., Nov. 16th ... 8:30 a.m.; Fri., Nov. 20th ... 8:30 a.m. + John Oulds"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box and the week's intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 2,
+          "said": "Mon., Nov. 16th ... 7:00 p.m. Mass in Spanish"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues list 7:00 PM Spanish Mass Monday to Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 2,
+          "said": "Mon., Nov. 16th ... 7:00 p.m. Mass in Spanish"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues list 7:00 PM Spanish Mass Monday to Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 2,
+          "said": "Mon., Nov. 16th ... 7:00 p.m. Mass in Spanish"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues list 7:00 PM Spanish Mass Monday to Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 2,
+          "said": "Mon., Nov. 16th ... 7:00 p.m. Mass in Spanish"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues list 7:00 PM Spanish Mass Monday to Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Monday through Friday 8:30am - 7:00pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 2,
+          "said": "Fri., Nov. 20th + Green + Weekday 8:30 a.m. + John Oulds (Nancy Hudock)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 2,
+          "said": "Fri., Nov. 13th ... 8:30 a.m. + Joseph Zaleski (Olga)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Mon Thu 7:00 PM Spanish"
+        }
+      ],
+      "rationale": "R28: the schedule box says Monday through Friday 7:00pm, but both weeks' intentions list no Friday 7 PM Mass while Mon-Thu have one, and the website gives the 7 PM Spanish Mass Mon-Thu only. Leaning leave out: a wrong time is worse than a missing one.",
+      "question": "Is there a Friday 7:00 PM Spanish Mass (and the 6:30 PM confession before it)?",
+      "options": [
+        {
+          "label": "Fridays 7 PM",
+          "entry": {
+            "church_slug": "st-joseph-coatesville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "fri-7pm"
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Mon Thu 6:30 PM to 6:50 PM"
+        }
+      ],
+      "rationale": "R28, R10: confession 30 minutes before the Friday 7 PM Mass stands or falls with that Mass; the website's confession grid gives the evening slot Mon-Thu only.",
+      "question": "Is there a Friday 7:00 PM Spanish Mass (and the 6:30 PM confession before it)?",
+      "options": [
+        {
+          "label": "Fridays 7 PM",
+          "entry": {
+            "church_slug": "st-joseph-coatesville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "fri-7pm"
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Saturday: 8:30 am – 4:15 pm – 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Saturday: 8:30 am – 4:15 pm – 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 2,
+          "said": "Sat., Nov. 21st ... 8:30 a.m. + Susan K. Pawlowski"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Saturday: 8:30 am – 4:15 pm – 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Saturday: 8:30 am – 4:15 pm – 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 2,
+          "said": "Sat., Nov. 21st ... 4:15 p.m. + Peg Thompson"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Saturday: 8:30 am – 4:15 pm – 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Saturday: 8:30 am – 4:15 pm – 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 2,
+          "said": "Sat., Nov. 14th ... 7:00 p.m. Mass in Spanish"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Sunday: 6:30 am (Spanish) 8:00 am - 10:00 am (English) 12:00 noon (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Sunday: 6:30 am (Spanish) 8:00 am - 10:00 am (English) 12:00 noon (Spanish)"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Sunday: 6:30 am (Spanish) 8:00 am - 10:00 am (English) 12:00 noon (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Sunday: 6:30 am (Spanish) 8:00 am - 10:00 am (English) 12:00 noon (Spanish)"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Sunday: 6:30 am (Spanish) 8:00 am - 10:00 am (English) 12:00 noon (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Sunday: 6:30 am (Spanish) 8:00 am - 10:00 am (English) 12:00 noon (Spanish)"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Sunday: 6:30 am (Spanish) 8:00 am - 10:00 am (English) 12:00 noon (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Sunday: 6:30 am (Spanish) 8:00 am - 10:00 am (English) 12:00 noon (Spanish)"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 2,
+          "said": "Sat., Nov. 7th + Green + Weekday/First Saturday 7:00 a.m. Mass in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 2,
+          "said": "Sat., Nov. 14th ... 8:30 a.m. ... 4:15 p.m. ... 7:00 p.m. Mass in Spanish (no 7 AM)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Saturday : 7:00 AM Spanish"
+        }
+      ],
+      "rationale": "R29/R33: neither schedule box prints it; the intentions list a 7 AM Spanish Mass only on Nov 7, headed 'First Saturday', and not on Nov 14 or 21; the website lists 'Saturday 7:00 AM Spanish' without a week. Leaning first Saturdays: the intentions show it only on the first Saturday. R11: the newest week holds no first Saturday.",
+      "question": "Add a 7:00 AM Spanish Saturday Mass?",
+      "options": [
+        {
+          "label": "First Saturdays 7 AM",
+          "entry": {
+            "church_slug": "st-joseph-coatesville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Every Saturday 7 AM",
+          "entry": {
+            "church_slug": "st-joseph-coatesville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Eucharistic Adoration Tuesday & Thursday from 9:30am to 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Eucharistic Adoration Tuesday & Thursday from 9:30am to 6:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues. The website says 10:00 a.m. - 7:00 p.m.; the bulletin, newer and consistent across issues, wins (R6: website does not override a clear bulletin time).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Eucharistic Adoration Tuesday & Thursday from 9:30am to 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Eucharistic Adoration Tuesday & Thursday from 9:30am to 6:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues. The website says 10:00 a.m. - 7:00 p.m.; the bulletin, newer and consistent across issues, wins (R6: website does not override a clear bulletin time).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 5,
+          "said": "Confesiones: Todos los días 30 minutos antes de las misas."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Mon Sat 8:00 AM to 8:20 AM"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 30 minutes before the 8:30 AM daily Mass, ending at the Mass. Saturday's 8:30 is a daily Mass: the Spanish says every day and the website grid gives Mon-Sat 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 5,
+          "said": "Confesiones: Todos los días 30 minutos antes de las misas."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Mon Sat 8:00 AM to 8:20 AM"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 30 minutes before the 8:30 AM daily Mass, ending at the Mass. Saturday's 8:30 is a daily Mass: the Spanish says every day and the website grid gives Mon-Sat 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 5,
+          "said": "Confesiones: Todos los días 30 minutos antes de las misas."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Mon Sat 8:00 AM to 8:20 AM"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 30 minutes before the 8:30 AM daily Mass, ending at the Mass. Saturday's 8:30 is a daily Mass: the Spanish says every day and the website grid gives Mon-Sat 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 5,
+          "said": "Confesiones: Todos los días 30 minutos antes de las misas."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Mon Sat 8:00 AM to 8:20 AM"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 30 minutes before the 8:30 AM daily Mass, ending at the Mass. Saturday's 8:30 is a daily Mass: the Spanish says every day and the website grid gives Mon-Sat 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 5,
+          "said": "Confesiones: Todos los días 30 minutos antes de las misas."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Mon Sat 8:00 AM to 8:20 AM"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 30 minutes before the 8:30 AM daily Mass, ending at the Mass. Saturday's 8:30 is a daily Mass: the Spanish says every day and the website grid gives Mon-Sat 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 5,
+          "said": "Confesiones: Todos los días 30 minutos antes de las misas."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Mon Sat 8:00 AM to 8:20 AM"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 30 minutes before the 8:30 AM daily Mass, ending at the Mass. Saturday's 8:30 is a daily Mass: the Spanish says every day and the website grid gives Mon-Sat 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Mon Thu 6:30 PM to 6:50 PM"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 30 minutes before the 7:00 PM weekday Spanish Mass (Mon-Thu; Friday is the fri-7pm question).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Mon Thu 6:30 PM to 6:50 PM"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 30 minutes before the 7:00 PM weekday Spanish Mass (Mon-Thu; Friday is the fri-7pm question).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Mon Thu 6:30 PM to 6:50 PM"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 30 minutes before the 7:00 PM weekday Spanish Mass (Mon-Thu; Friday is the fri-7pm question).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Mon Thu 6:30 PM to 6:50 PM"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 30 minutes before the 7:00 PM weekday Spanish Mass (Mon-Thu; Friday is the fri-7pm question).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 5,
+          "said": "Confesiones: Todos los días 30 minutos antes de las misas."
+        },
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 1,
+          "said": "Confessions 30 minutes before daily Mass."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Sunday 7:30 AM to 7:50 AM 9:30 AM to 9:50 AM 11:30 AM to 11:50 AM"
+        }
+      ],
+      "rationale": "R30: the English box says before daily Mass; the Spanish sacraments line says every day before the Masses, and the website gives Sunday 7:30, 9:30 and 11:30 confessions. Leaning include, timed by POLICY to end at the Mass.",
+      "question": "Add confession 30 minutes before the Sunday 8, 10 and 12 Masses?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-joseph-coatesville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": "08:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "sun-conf"
+    },
+    {
+      "id": "s33",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Sunday 7:30 AM to 7:50 AM 9:30 AM to 9:50 AM 11:30 AM to 11:50 AM"
+        }
+      ],
+      "rationale": "R30: as the group's first slot.",
+      "question": "Add confession 30 minutes before the Sunday 8, 10 and 12 Masses?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-joseph-coatesville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "10:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "sun-conf"
+    },
+    {
+      "id": "s34",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Sunday 7:30 AM to 7:50 AM 9:30 AM to 9:50 AM 11:30 AM to 11:50 AM"
+        }
+      ],
+      "rationale": "R30: as the group's first slot.",
+      "question": "Add confession 30 minutes before the Sunday 8, 10 and 12 Masses?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-joseph-coatesville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "sun-conf"
+    },
+    {
+      "id": "s35",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 5,
+          "said": "Confesiones: Todos los días 30 minutos antes de las misas."
+        }
+      ],
+      "rationale": "R30: only the Spanish 'every day before the Masses' supports it; the English says daily Mass and the website grid gives no confession before these Masses. Leaning leave out.",
+      "question": "Add confession before the Saturday 4:15 and 7:00 PM and Sunday 6:30 AM Masses?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-joseph-coatesville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:45",
+            "end_time": "16:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "wkend-conf"
+    },
+    {
+      "id": "s36",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 5,
+          "said": "Confesiones: Todos los días 30 minutos antes de las misas."
+        }
+      ],
+      "rationale": "R30: as the group's first slot.",
+      "question": "Add confession before the Saturday 4:15 and 7:00 PM and Sunday 6:30 AM Masses?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-joseph-coatesville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "wkend-conf"
+    },
+    {
+      "id": "s37",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c10f6a48",
+          "page": 5,
+          "said": "Confesiones: Todos los días 30 minutos antes de las misas."
+        }
+      ],
+      "rationale": "R30: as the group's first slot.",
+      "question": "Add confession before the Saturday 4:15 and 7:00 PM and Sunday 6:30 AM Masses?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-joseph-coatesville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "06:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "wkend-conf"
+    },
+    {
+      "id": "s38",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving, Spanish"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 6,
+          "said": "ThanksGiving Holy Mass Thursday November 26 8:30 A.M. English 10:00 A.M. Spanish"
+        }
+      ],
+      "rationale": "R1, R16: a dated Thanksgiving Mass outside the weekly schedule; the 8:30 AM is the weekly Thursday Mass (POLICY rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 7,
+          "said": "Solemnity of the Immaculate Conception Tuesday December 8 8:30AM 6:00PM"
+        }
+      ],
+      "rationale": "R1, R16: holy-day Mass outside the weekly schedule; 8:30 AM is the weekly Tuesday Mass. The website's older holy-day list (8:30 AM, 7:00 PM) is superseded by the bulletin's flyer.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, Spanish"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 7,
+          "said": "Solemnidad de la Inmaculada Concepción Martes Diciembre 8 7:30 P.M"
+        }
+      ],
+      "rationale": "R1, R16: dated Spanish holy-day Mass. No cancellation of the weekly 7 PM is stated (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "06:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe, Spanish"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 7,
+          "said": "Diciembre 12 Iglesia St. Joseph 5:00AM Las Mañanitas 6:00AM Sta. Misa"
+        }
+      ],
+      "rationale": "R1, R16: dated feast Mass at St. Joseph.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s42",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "05:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Las Mañanitas"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 7,
+          "said": "5:00AM LAS MAÑANITAS"
+        }
+      ],
+      "rationale": "R24: Las Mañanitas is a sung devotion, not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s43",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-west-brandywine",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe, Spanish"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 7,
+          "said": "Iglesia St. Peter 2835 Manor Rd 6:30PM Sta. Misa"
+        }
+      ],
+      "rationale": "R22: held at St. Peter Church, West Brandywine, another parish's listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s44",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-coatesville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigilia de Oración"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "434f4fb7",
+          "page": 2,
+          "said": "6:00 p.m. Vigilia de Oración por la Iglesia"
+        }
+      ],
+      "rationale": "R24: a prayer vigil, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s45",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "Nativity of Our Lord Jesus Christ December 24 : 6:00 PM English 8:00 PM Spanish"
+        }
+      ],
+      "rationale": "R6: the website's holy-day block gives Dec 8 as 8:30 AM and 7:00 PM Spanish, but the newest bulletin's flyers give 6:00 PM English and 7:30 PM Spanish, so the block may be last year's. No bulletin read prints Christmas times; update mode will read them. Leaning leave out.",
+      "question": "Add the website's Christmas Mass times (Dec 24 6 PM English, 8 PM Spanish; Dec 25 10 AM English, 12 PM Spanish)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-joseph-coatesville",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Eve"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "xmas-web"
+    },
+    {
+      "id": "s46",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "December 24 : 6:00 PM English 8:00 PM Spanish"
+        }
+      ],
+      "rationale": "R6: as the group's first slot.",
+      "question": "Add the website's Christmas Mass times (Dec 24 6 PM English, 8 PM Spanish; Dec 25 10 AM English, 12 PM Spanish)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-joseph-coatesville",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "20:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Eve, Spanish"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "xmas-web"
+    },
+    {
+      "id": "s47",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "December 25 : 10:00 AM English 12:00 PM Spanish"
+        }
+      ],
+      "rationale": "R6: as the group's first slot.",
+      "question": "Add the website's Christmas Mass times (Dec 24 6 PM English, 8 PM Spanish; Dec 25 10 AM English, 12 PM Spanish)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-joseph-coatesville",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "xmas-web"
+    },
+    {
+      "id": "s48",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephcoatesville.org/mass-times",
+          "said": "December 25 : 10:00 AM English 12:00 PM Spanish"
+        }
+      ],
+      "rationale": "R6: as the group's first slot.",
+      "question": "Add the website's Christmas Mass times (Dec 24 6 PM English, 8 PM Spanish; Dec 25 10 AM English, 12 PM Spanish)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-joseph-coatesville",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas, Spanish"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "xmas-web"
+    }
+  ]
+}
