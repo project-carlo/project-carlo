@@ -1,0 +1,611 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-cornelius-chadds-ford",
+  "status": "ready",
+  "as_of": "2026-11-15T15:59:55Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T20:55:10Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The Saturday vigil, four Sunday Masses, Mon-Fri 7:30 AM Mass, Saturday 2:30-3:30 confessions and Friday 8-4 Adoration agree in both issues' schedule box (Adoration resumed after the Nov 8 'will return' line), the intentions and the website. Plus the Nov 26 Thanksgiving Mass at 8:30 AM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9a9c21772800d669dcbfae2cbcdac8fdb567f1093a3c92a170fec2d0d5946372",
+      "fetched_at": "2026-11-15T15:59:55Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "245719953662b93a5b409d41d475a967b10b412c9c1169657d73dcef95b28b6d",
+      "fetched_at": "2026-11-08T15:28:24Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cornelius-chadds-ford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 1,
+          "said": "Saturday: ... Vigil Mass 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "24571995",
+          "page": 1,
+          "said": "Saturday: ... Vigil Mass 4:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintcornelius.org/",
+          "said": "Saturday : 4:00 PM English"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read; the website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cornelius-chadds-ford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:00 am, 11:00 am, 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "24571995",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:00 am, 11:00 am, 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 9,
+          "said": "Sunday Mass Intentions 7:30 AM ... 9:00 AM ... 11:00 AM ... 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in each week's Sunday intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cornelius-chadds-ford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:00 am, 11:00 am, 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "24571995",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:00 am, 11:00 am, 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 9,
+          "said": "Sunday Mass Intentions 7:30 AM ... 9:00 AM ... 11:00 AM ... 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in each week's Sunday intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cornelius-chadds-ford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:00 am, 11:00 am, 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "24571995",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:00 am, 11:00 am, 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 9,
+          "said": "Sunday Mass Intentions 7:30 AM ... 9:00 AM ... 11:00 AM ... 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in each week's Sunday intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cornelius-chadds-ford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:00 am, 11:00 am, 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "24571995",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:00 am, 11:00 am, 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 9,
+          "said": "Sunday Mass Intentions 7:30 AM ... 9:00 AM ... 11:00 AM ... 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in each week's Sunday intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cornelius-chadds-ford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "24571995",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 9,
+          "said": "Weekly Mass Schedule (Week of November 16 - November 20) Monday 7:30 AM ... Friday 7:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintcornelius.org/",
+          "said": "Daily Mass Schedule Mon Fri 7:30 AM English"
+        }
+      ],
+      "rationale": "R1: the box gives 'Weekday Mass: 7:30 am'; both issues' intentions list Monday-Friday 7:30 only, with no Saturday morning Mass, and the website gives Mon-Fri 7:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cornelius-chadds-ford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "24571995",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 9,
+          "said": "Weekly Mass Schedule (Week of November 16 - November 20) Monday 7:30 AM ... Friday 7:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintcornelius.org/",
+          "said": "Daily Mass Schedule Mon Fri 7:30 AM English"
+        }
+      ],
+      "rationale": "R1: the box gives 'Weekday Mass: 7:30 am'; both issues' intentions list Monday-Friday 7:30 only, with no Saturday morning Mass, and the website gives Mon-Fri 7:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cornelius-chadds-ford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "24571995",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 9,
+          "said": "Weekly Mass Schedule (Week of November 16 - November 20) Monday 7:30 AM ... Friday 7:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintcornelius.org/",
+          "said": "Daily Mass Schedule Mon Fri 7:30 AM English"
+        }
+      ],
+      "rationale": "R1: the box gives 'Weekday Mass: 7:30 am'; both issues' intentions list Monday-Friday 7:30 only, with no Saturday morning Mass, and the website gives Mon-Fri 7:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cornelius-chadds-ford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "24571995",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 9,
+          "said": "Weekly Mass Schedule (Week of November 16 - November 20) Monday 7:30 AM ... Friday 7:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintcornelius.org/",
+          "said": "Daily Mass Schedule Mon Fri 7:30 AM English"
+        }
+      ],
+      "rationale": "R1: the box gives 'Weekday Mass: 7:30 am'; both issues' intentions list Monday-Friday 7:30 only, with no Saturday morning Mass, and the website gives Mon-Fri 7:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cornelius-chadds-ford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "24571995",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 9,
+          "said": "Weekly Mass Schedule (Week of November 16 - November 20) Monday 7:30 AM ... Friday 7:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintcornelius.org/",
+          "said": "Daily Mass Schedule Mon Fri 7:30 AM English"
+        }
+      ],
+      "rationale": "R1: the box gives 'Weekday Mass: 7:30 am'; both issues' intentions list Monday-Friday 7:30 only, with no Saturday morning Mass, and the website gives Mon-Fri 7:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cornelius-chadds-ford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 1,
+          "said": "Saturday: Confessions 2:30 - 3:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "24571995",
+          "page": 1,
+          "said": "Saturday: Confessions 2:30 - 3:30"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintcornelius.org/",
+          "said": "Saturday 2:30 PM to 3:30 PM Enter the chapel through the side door."
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cornelius-chadds-ford",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 1,
+          "said": "Adoration: Friday 8:00 AM to 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "24571995",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: Will Return in Oct."
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintcornelius.org/",
+          "said": "Friday 8:00 AM to 4:00 PM In the Chapel - please keep doors closed"
+        }
+      ],
+      "rationale": "R1: printed in the newest p1 schedule box. The Nov 8 box still carried a stale 'Will Return in Oct.' line (R3), which the newest issue replaces with the times; the website's Adoration listing gives the same hours in the church's chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cornelius-chadds-ford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a9c2177",
+          "page": 6,
+          "said": "We invite you to join us for a Mass ... to give thanks ... Thanksgiving Day Mass 8:30 AM"
+        }
+      ],
+      "rationale": "R1, R16: a dated Thanksgiving Day (Thu Nov 26) Mass after as_of, open to all. R17: no cancellation of the 7:30 weekday Mass is stated, so the weekly slot stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
