@@ -1,0 +1,704 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-norbert-paoli",
+  "status": "ready",
+  "as_of": "2026-11-15T16:46:39Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T19:25:35Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Norbert, Paoli. Both bulletins (Nov 8 and Nov 15, 2026; pages are images) print the same schedule box: Sat 7:30 AM and 5 PM, Sun 9, 11:30, 1:30 (Spanish) and 6 PM, weekday Mass 7:30 AM, Confession Thu 6-7 PM, Sat 3:30-4:30 PM, Sun 12-1 PM, Adoration Thu 8 AM-7 PM. No history stored; no open questions. Off-site retreat Mass (Daylesford Abbey, Dec 2) left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a87571d0645d47f152a6d62b884000ec83d337d0d4284cc0d1b018eae64bf11a",
+      "fetched_at": "2026-11-15T16:46:39Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "57493fd76fd956d83ef97bc6438db5cd15200dac945454fb8445898a9b4a05e2",
+      "fetched_at": "2026-11-08T15:55:11Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-norbert-paoli",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "SATURDAY- 7:30 am & 5:00 pm Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57493fd7",
+          "page": 1,
+          "said": "SATURDAY- 7:30 am & 5:00 pm Vigil Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Worship Schedule box of both issues; the Mass intentions list Saturday 7:30 am and 5:00 pm each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-norbert-paoli",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "SATURDAY- 7:30 am & 5:00 pm Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57493fd7",
+          "page": 1,
+          "said": "SATURDAY- 7:30 am & 5:00 pm Vigil Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Worship Schedule box of both issues; the Mass intentions list Saturday 7:30 am and 5:00 pm each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-norbert-paoli",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "SUNDAY- 9:00 am · 11:30 am · 6:00 pm & 1:30 pm Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57493fd7",
+          "page": 1,
+          "said": "SUNDAY- 9:00 am · 11:30 am · 6:00 pm & 1:30 pm Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 5,
+          "said": "Mass Times Saturday 5pm | Sunday 9am, 11:30am, 1:30pm (Spanish) & 6pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and the Advent series box; the intentions list each Sunday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-norbert-paoli",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "SUNDAY- 9:00 am · 11:30 am · 6:00 pm & 1:30 pm Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57493fd7",
+          "page": 1,
+          "said": "SUNDAY- 9:00 am · 11:30 am · 6:00 pm & 1:30 pm Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 5,
+          "said": "Mass Times Saturday 5pm | Sunday 9am, 11:30am, 1:30pm (Spanish) & 6pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and the Advent series box; the intentions list each Sunday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-norbert-paoli",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "SUNDAY- 9:00 am · 11:30 am · 6:00 pm & 1:30 pm Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57493fd7",
+          "page": 1,
+          "said": "SUNDAY- 9:00 am · 11:30 am · 6:00 pm & 1:30 pm Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 5,
+          "said": "Mass Times Saturday 5pm | Sunday 9am, 11:30am, 1:30pm (Spanish) & 6pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and the Advent series box; the intentions list each Sunday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-norbert-paoli",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "SUNDAY- 9:00 am · 11:30 am · 6:00 pm & 1:30 pm Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57493fd7",
+          "page": 1,
+          "said": "SUNDAY- 9:00 am · 11:30 am · 6:00 pm & 1:30 pm Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 5,
+          "said": "Sunday ... 1:30pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; language noted per POLICY, Notes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-norbert-paoli",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "DAILY LITURGIES- 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57493fd7",
+          "page": 1,
+          "said": "DAILY LITURGIES- 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "Mass Intentions Monday, November 16 7:30 am ... Friday, November 20 7:30 am"
+        }
+      ],
+      "rationale": "R1: 'Daily Liturgies 7:30am' in the schedule box of both issues; the intentions of both issues name a 7:30 am Mass each weekday Monday-Friday (Saturday's 7:30 is printed separately), so these are Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-norbert-paoli",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "DAILY LITURGIES- 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57493fd7",
+          "page": 1,
+          "said": "DAILY LITURGIES- 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "Mass Intentions Monday, November 16 7:30 am ... Friday, November 20 7:30 am"
+        }
+      ],
+      "rationale": "R1: 'Daily Liturgies 7:30am' in the schedule box of both issues; the intentions of both issues name a 7:30 am Mass each weekday Monday-Friday (Saturday's 7:30 is printed separately), so these are Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-norbert-paoli",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "DAILY LITURGIES- 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57493fd7",
+          "page": 1,
+          "said": "DAILY LITURGIES- 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "Mass Intentions Monday, November 16 7:30 am ... Friday, November 20 7:30 am"
+        }
+      ],
+      "rationale": "R1: 'Daily Liturgies 7:30am' in the schedule box of both issues; the intentions of both issues name a 7:30 am Mass each weekday Monday-Friday (Saturday's 7:30 is printed separately), so these are Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-norbert-paoli",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "DAILY LITURGIES- 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57493fd7",
+          "page": 1,
+          "said": "DAILY LITURGIES- 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "Mass Intentions Monday, November 16 7:30 am ... Friday, November 20 7:30 am"
+        }
+      ],
+      "rationale": "R1: 'Daily Liturgies 7:30am' in the schedule box of both issues; the intentions of both issues name a 7:30 am Mass each weekday Monday-Friday (Saturday's 7:30 is printed separately), so these are Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-norbert-paoli",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "DAILY LITURGIES- 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57493fd7",
+          "page": 1,
+          "said": "DAILY LITURGIES- 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "Mass Intentions Monday, November 16 7:30 am ... Friday, November 20 7:30 am"
+        }
+      ],
+      "rationale": "R1: 'Daily Liturgies 7:30am' in the schedule box of both issues; the intentions of both issues name a 7:30 am Mass each weekday Monday-Friday (Saturday's 7:30 is printed separately), so these are Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-norbert-paoli",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English and Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "Thursdays: 6- 7pm: English & Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57493fd7",
+          "page": 1,
+          "said": "Thursdays: 6- 7pm: English & Español"
+        }
+      ],
+      "rationale": "R1: printed under Reconciliation/Confesiones in both issues; its own clock times, inside the Thursday Adoration hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-norbert-paoli",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "Saturdays: 3:30 - 4:30 pm: English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57493fd7",
+          "page": 1,
+          "said": "Saturdays: 3:30 - 4:30 pm: English"
+        }
+      ],
+      "rationale": "R1: printed under Reconciliation/Confesiones in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-norbert-paoli",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English and Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "Sundays: 12- 1pm: English & Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57493fd7",
+          "page": 1,
+          "said": "Sundays: 12- 1pm: English & Español"
+        }
+      ],
+      "rationale": "R1: printed under Reconciliation/Confesiones in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-norbert-paoli",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "Adoration Thursdays 8am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57493fd7",
+          "page": 1,
+          "said": "Adoration Thursdays 8am-7pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 1,
+          "said": "By Appointment: call 610.644.1655"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-norbert-paoli",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Retreat at Daylesford Abbey"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a87571d0",
+          "page": 6,
+          "said": "Advent Retreat Wednesday December 2 begins with 8:30AM Mass with Fr. Carl Braschoss at Daylesford Abbey"
+        }
+      ],
+      "rationale": "R22: held at Daylesford Abbey, not at St. Norbert Church; also a paid, registered retreat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
