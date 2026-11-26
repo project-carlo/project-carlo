@@ -1,0 +1,726 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-peter-west-brandywine",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:48Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T20:01:27Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Peter, West Brandywine). Weekend Masses Sat 8:30/5:00, Sun 7/9/11; weekday 8:30 Mon/Tue/Thu (no Wednesday Mass) and First Friday 9:30; Confession Tue 6:15-7 and Sat 3:30-4:30. Two bulletins and the website agree. Open: the perpetual Adoration chapel (asked only because of a checker crash; include), whether Friday 8:30 Mass also happens on first Fridays (C4), and a one-off youth Holy Hour on Nov 18.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2f66858484ade0d5d4b2530ac593405b4248ec6b8f9d99cb704149cccea25ce1",
+      "fetched_at": "2026-11-15T16:46:48Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "7194838538b2b915b66cb47881a4e8d3dca1329b97d3428893ceaf93a068291c",
+      "fetched_at": "2026-11-08T15:55:18Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-west-brandywine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 5,
+          "said": "Normal Mass Times: Saturday: 8:30am & 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 5,
+          "said": "Normal Mass Times: Saturday: 8:30am & 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 2,
+          "said": "Saturday 11/21 8:30am ... 5:00pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Normal Mass Times box of both issues and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-west-brandywine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 5,
+          "said": "Normal Mass Times: Saturday: 8:30am & 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 5,
+          "said": "Normal Mass Times: Saturday: 8:30am & 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 2,
+          "said": "Saturday 11/21 8:30am ... 5:00pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Normal Mass Times box of both issues and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-west-brandywine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 5,
+          "said": "Sunday: 7:00am, 9:00am & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 5,
+          "said": "Sunday: 7:00am, 9:00am & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 2,
+          "said": "Sunday 11/22 7:00am ... 9:00am ... 11:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Normal Mass Times box of both issues and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-west-brandywine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 5,
+          "said": "Sunday: 7:00am, 9:00am & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 5,
+          "said": "Sunday: 7:00am, 9:00am & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 2,
+          "said": "Sunday 11/22 7:00am ... 9:00am ... 11:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Normal Mass Times box of both issues and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-west-brandywine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 5,
+          "said": "Sunday: 7:00am, 9:00am & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 5,
+          "said": "Sunday: 7:00am, 9:00am & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 2,
+          "said": "Sunday 11/22 7:00am ... 9:00am ... 11:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Normal Mass Times box of both issues and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-west-brandywine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 5,
+          "said": "Monday - Friday: 8:30am ... We do not celebrate Mass on Wednesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 5,
+          "said": "Monday - Friday: 8:30am ... We do not celebrate Mass on Wednesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 2,
+          "said": "Monday 11/16 8:30am; Tuesday 11/17 8:30am; Thursday 11/19 8:30am"
+        }
+      ],
+      "rationale": "R1: the Normal Mass Times box of both issues; the intentions agree. Wednesday is left out because the box says no Mass is celebrated on Wednesday (the 11/11 Wednesday Mass in 7194838538b2 was a Forty Hours exception, before as_of).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-west-brandywine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 5,
+          "said": "Monday - Friday: 8:30am ... We do not celebrate Mass on Wednesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 5,
+          "said": "Monday - Friday: 8:30am ... We do not celebrate Mass on Wednesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 2,
+          "said": "Monday 11/16 8:30am; Tuesday 11/17 8:30am; Thursday 11/19 8:30am"
+        }
+      ],
+      "rationale": "R1: the Normal Mass Times box of both issues; the intentions agree. Wednesday is left out because the box says no Mass is celebrated on Wednesday (the 11/11 Wednesday Mass in 7194838538b2 was a Forty Hours exception, before as_of).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-west-brandywine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 5,
+          "said": "Monday - Friday: 8:30am ... We do not celebrate Mass on Wednesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 5,
+          "said": "Monday - Friday: 8:30am ... We do not celebrate Mass on Wednesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 2,
+          "said": "Monday 11/16 8:30am; Tuesday 11/17 8:30am; Thursday 11/19 8:30am"
+        }
+      ],
+      "rationale": "R1: the Normal Mass Times box of both issues; the intentions agree. Wednesday is left out because the box says no Mass is celebrated on Wednesday (the 11/11 Wednesday Mass in 7194838538b2 was a Forty Hours exception, before as_of).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-west-brandywine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 5,
+          "said": "First Friday: 9:30am (unless otherwise stated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 5,
+          "said": "First Friday: 9:30am (unless otherwise stated)"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: the standing schedule box names the first Friday, in both issues. Neither issue's week holds a first Friday, so no dated listing exists to check against.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 5,
+          "said": "Monday - Friday: 8:30am / First Friday: 9:30am (unless otherwise stated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 5,
+          "said": "Monday - Friday: 8:30am / First Friday: 9:30am (unless otherwise stated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 2,
+          "said": "Friday 11/20 8:30am – Jacob Crawford"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 2,
+          "said": "Friday 11/13 9:30am – School Mass"
+        }
+      ],
+      "rationale": "Leaning per C4: the box lists First Friday 9:30 right under Mon-Fri 8:30, which reads as replacing it, but never says so; the website gives Mon-Sat 8:30 with no first-Friday exception. Third-week Friday 11/20 is 8:30 in the intentions. Note 11/13 (second Friday) was a 9:30 School Mass, a dated exception before as_of.",
+      "question": "Is the Friday 8:30 AM Mass held on first Fridays, when the box gives First Friday 9:30 AM?",
+      "options": [
+        {
+          "label": "Fridays 8:30 AM except first Fridays",
+          "entry": {
+            "church_slug": "st-peter-west-brandywine",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "second",
+              "third",
+              "fourth",
+              "fifth"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Every Friday 8:30 AM",
+          "entry": {
+            "church_slug": "st-peter-west-brandywine",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-west-brandywine",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Shrine Room"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 5,
+          "said": "Confession (in the Shrine Room): Tuesday: 6:15 - 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 5,
+          "said": "Confession (in the Shrine Room): Tuesday: 6:15 - 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 6,
+          "said": "6:15pm - 7:00pm – Confessions – Shrine Room in Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 6,
+          "said": "6:15pm - 7:00pm – Confessions – Shrine Room in Church"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box and the weekly calendar of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-west-brandywine",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Shrine Room"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 5,
+          "said": "Confession (in the Shrine Room): ... Saturday: 3:30 - 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 5,
+          "said": "Confession (in the Shrine Room): ... Saturday: 3:30 - 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 6,
+          "said": "3:30pm - 4:30pm – Confessions – Shrine Room in Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 6,
+          "said": "3:30pm - 4:30pm – Confessions – Shrine Room in Church"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box and the weekly calendar of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 5,
+          "said": "Perpetual Adoration of The Most Blessed Sacrament in our Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 5,
+          "said": "Perpetual Adoration of The Most Blessed Sacrament in our Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71948385",
+          "page": 4,
+          "said": "DURING THESE DAYS OF FORTY HOURS THERE WILL NOT BE EXPOSITION IN THE ADORATION CHAPEL, BUT ONLY IN THE CHURCH"
+        },
+        {
+          "source": "website",
+          "url": "https://saintpeterchurch.net/mass-times/",
+          "said": "Perpetual Adoration Chapel: 24 hour Adoration 2835 Manor Rd. West Brandywine, PA 19320"
+        }
+      ],
+      "rationale": "R46, R1: settled on the evidence: a standing perpetual Adoration chapel with exposition, in both issues; the parish website gives it as 24 hour Adoration at the church's own address, 2835 Manor Rd (R6 for location); access not stated. Asked only because seed check crashes on a settled continuous inclusion (checks.py compares its null date with as_of); please include.",
+      "question": "Include the 24-hour Perpetual Adoration Chapel at St. Peter?",
+      "options": [
+        {
+          "label": "Include, open 24 hours",
+          "entry": {
+            "church_slug": "st-peter-west-brandywine",
+            "event_type": "adoration",
+            "event_kind": "continuous",
+            "day_of_week": null,
+            "date": null,
+            "start_time": null,
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel",
+            "access": "not_stated",
+            "open_from": null,
+            "open_until": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 6,
+          "said": "Wednesday, November 18th ... 7:00pm - 8:00pm – Parent Led Holy Hour for Youth"
+        }
+      ],
+      "rationale": "R30, R32: printed once, dated, in the ministry calendar with no room or church given (unlike most other lines) and aimed at youth, so it may not be open to the public. Not in 7194838538b2 (Forty Hours week). Leaning leave out, akin to precedent st-agnes-west-chester s24 (a Holy Hour limited to retreat registrants left out): a wrong time is worse than a missing one.",
+      "question": "Add the 'Parent Led Holy Hour for Youth' on Wed Nov 18, 7:00-8:00 PM?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include Nov 18 7-8 PM",
+          "entry": {
+            "church_slug": "st-peter-west-brandywine",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-18",
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Parent-led Holy Hour for youth"
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f668584",
+          "page": 2,
+          "said": "Sacrament of Anointing of the Sick - Arrangements can be made by calling the Parish Office"
+        }
+      ],
+      "rationale": "R24, R26: Anointing is not Mass, Confession or Adoration, and has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
