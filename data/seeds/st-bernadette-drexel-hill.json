@@ -1,0 +1,739 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-bernadette-drexel-hill",
+  "status": "ready",
+  "as_of": "2026-11-15T16:44:43Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T23:32:28Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both issues read (Nov 8, Nov 15) print the same p1 schedule box: Sat 4:30 PM vigil, Sun 9 and 11 AM, Mon-Fri 8:30 AM, confession Mon-Fri 8:00-8:25 AM and Sat 3:30-4:15 PM; intentions agree. No Adoration hours, holy-day or Thanksgiving times printed; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d96b7b6085c75f694ec2248b509f86661811cc0c2a00f19a7ff4be450ddcf2c4",
+      "fetched_at": "2026-11-15T16:44:43Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "51cbce59bca374b6fbf80be8ba45c6af377de946f46e492a043abb872528cf2c",
+      "fetched_at": "2026-11-08T15:53:42Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 1,
+          "said": "Mass Schedule - Sunday Masses - Saturday Vigil: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 1,
+          "said": "Mass Schedule - Sunday Masses - Saturday Vigil: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 3,
+          "said": "Saturday ... 4:30pm (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 3,
+          "said": "Saturday ... 4:30pm (intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 1,
+          "said": "Sunday: 9:00am and 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 1,
+          "said": "Sunday: 9:00am and 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 3,
+          "said": "Sunday ... 9:00am ... 11:00am (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 3,
+          "said": "Sunday ... 9:00am ... 11:00am (intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 1,
+          "said": "Sunday: 9:00am and 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 1,
+          "said": "Sunday: 9:00am and 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 3,
+          "said": "Sunday ... 9:00am ... 11:00am (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 3,
+          "said": "Sunday ... 9:00am ... 11:00am (intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 1,
+          "said": "Weekday Mass Monday—Friday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 1,
+          "said": "Weekday Mass Monday—Friday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 3,
+          "said": "8:30am intentions Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 3,
+          "said": "8:30am intentions Monday through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and each weekday's intentions in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 1,
+          "said": "Weekday Mass Monday—Friday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 1,
+          "said": "Weekday Mass Monday—Friday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 3,
+          "said": "8:30am intentions Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 3,
+          "said": "8:30am intentions Monday through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and each weekday's intentions in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 1,
+          "said": "Weekday Mass Monday—Friday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 1,
+          "said": "Weekday Mass Monday—Friday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 3,
+          "said": "8:30am intentions Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 3,
+          "said": "8:30am intentions Monday through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and each weekday's intentions in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 1,
+          "said": "Weekday Mass Monday—Friday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 1,
+          "said": "Weekday Mass Monday—Friday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 3,
+          "said": "8:30am intentions Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 3,
+          "said": "8:30am intentions Monday through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and each weekday's intentions in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 1,
+          "said": "Weekday Mass Monday—Friday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 1,
+          "said": "Weekday Mass Monday—Friday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 3,
+          "said": "8:30am intentions Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 3,
+          "said": "8:30am intentions Monday through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and each weekday's intentions in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-church-drexel-hill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 1,
+          "said": "Sacrament of Reconciliation - Before Daily Mass - 8:00am - 8:25am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 1,
+          "said": "Sacrament of Reconciliation - Before Daily Mass - 8:00am - 8:25am"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the box gives clock times for confession before the Mon-Fri 8:30 AM daily Mass in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-church-drexel-hill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 1,
+          "said": "Sacrament of Reconciliation - Before Daily Mass - 8:00am - 8:25am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 1,
+          "said": "Sacrament of Reconciliation - Before Daily Mass - 8:00am - 8:25am"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the box gives clock times for confession before the Mon-Fri 8:30 AM daily Mass in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-church-drexel-hill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 1,
+          "said": "Sacrament of Reconciliation - Before Daily Mass - 8:00am - 8:25am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 1,
+          "said": "Sacrament of Reconciliation - Before Daily Mass - 8:00am - 8:25am"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the box gives clock times for confession before the Mon-Fri 8:30 AM daily Mass in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-church-drexel-hill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 1,
+          "said": "Sacrament of Reconciliation - Before Daily Mass - 8:00am - 8:25am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 1,
+          "said": "Sacrament of Reconciliation - Before Daily Mass - 8:00am - 8:25am"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the box gives clock times for confession before the Mon-Fri 8:30 AM daily Mass in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-church-drexel-hill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 1,
+          "said": "Sacrament of Reconciliation - Before Daily Mass - 8:00am - 8:25am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 1,
+          "said": "Sacrament of Reconciliation - Before Daily Mass - 8:00am - 8:25am"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the box gives clock times for confession before the Mon-Fri 8:30 AM daily Mass in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-church-drexel-hill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 1,
+          "said": "Sacrament of Reconciliation ... Saturday: 3:30pm — 4:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 1,
+          "said": "Sacrament of Reconciliation ... Saturday: 3:30pm — 4:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 2,
+          "said": "VISITS TO THE MOST BLESSED SACRAMENT can be made in the Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "51cbce59",
+          "page": 2,
+          "said": "VISITS TO THE MOST BLESSED SACRAMENT can be made in the Chapel."
+        }
+      ],
+      "rationale": "R38, POLICY Churches and chapels: the chapel is open for visits with no hours and is not called Adoration; a chapel merely open for prayer is no Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 1,
+          "said": "Holy Day Masses - Times announced in Sunday Bulletin"
+        }
+      ],
+      "rationale": "R26: no holy-day times printed in either issue (no Thanksgiving or Dec 8 times yet); update mode will read them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 5,
+          "said": "a special Mass on Saturday December 5th at 4:30 PM followed by a reception in Msgr. O'Brien Hall"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rule 7: the retirement celebration is held at the regular Saturday 4:30 PM vigil, already weekly; not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d96b7b60",
+          "page": 7,
+          "said": "Our Lady of Mount Carmel will have a Sensory Friendly Mass ... December 24 at 6:00pm ... fourth Sunday at 12 Noon"
+        }
+      ],
+      "rationale": "R22: another parish's Masses, printed as a notice; not at St. Bernadette Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
