@@ -1,0 +1,859 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-oxford",
+  "status": "ready",
+  "as_of": "2026-11-15T16:44:19Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T20:52:15Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The p1 schedule box is the same in both issues read (Nov 8 and Nov 15): weekend, weekday, Confession and Tue/Thu Adoration times, all settled under R1. The Nov 15 issue's Thanksgiving notice adds a 9 AM Mass and 8-8:45 AM Confession on Nov 26 and cancels that afternoon's Mass and Confession. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "71b1e31a8dcf3ebb7cb7a988f33543b0c066d87350eebf431e864a03448a3232",
+      "fetched_at": "2026-11-15T16:44:19Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "faa53b89e600836d688d0979407d0b9382ad178341326f330f31ea8a7ef7a9fe",
+      "fetched_at": "2026-11-08T15:53:20Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Weekend Mass Schedule Saturday Vigil 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Weekend Mass Schedule Saturday Vigil 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read; the intentions list Sat 4 PM both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Sunday 7:45 AM, 10:00 AM, 12:00 Noon, 2:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Sunday 7:45 AM, 10:00 AM, 12:00 Noon, 2:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read; the intentions list each Sunday 7:45, 10 and 12 Noon.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Sunday 7:45 AM, 10:00 AM, 12:00 Noon, 2:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Sunday 7:45 AM, 10:00 AM, 12:00 Noon, 2:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read; the intentions list each Sunday 7:45, 10 and 12 Noon.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Sunday 7:45 AM, 10:00 AM, 12:00 Noon, 2:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Sunday 7:45 AM, 10:00 AM, 12:00 Noon, 2:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read; the intentions list each Sunday 7:45, 10 and 12 Noon.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Sunday 7:45 AM, 10:00 AM, 12:00 Noon, 2:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Sunday 7:45 AM, 10:00 AM, 12:00 Noon, 2:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read. The intentions and clergy schedule (p2) omit it, which R39 says proves nothing; it may be celebrated by a visiting priest.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Daily Mass Schedule M,W,F - 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Daily Mass Schedule M,W,F - 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; the intentions (p2) list 8 AM on Mon, Wed and Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Daily Mass Schedule M,W,F - 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Daily Mass Schedule M,W,F - 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; the intentions (p2) list 8 AM on Mon, Wed and Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Daily Mass Schedule M,W,F - 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Daily Mass Schedule M,W,F - 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; the intentions (p2) list 8 AM on Mon, Wed and Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Daily Mass Schedule T,TH - 6:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Daily Mass Schedule T,TH - 6:15PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; the intentions (p2) list 6:15 PM on Tue and Thu.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Daily Mass Schedule T,TH - 6:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Daily Mass Schedule T,TH - 6:15PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; the intentions (p2) list 6:15 PM on Tue and Thu.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Confessions Tuesdays and Thursdays 5:00-6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Confessions Tuesdays and Thursdays 5:00-6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Confessions Tuesdays and Thursdays 5:00-6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Confessions Tuesdays and Thursdays 5:00-6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Confessions Saturday 3:00– 3:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Confessions Saturday 3:00– 3:45PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "08:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Confessions Sundays 8:30-8:45 AM & 9:30-9:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Confessions Sundays 8:30-8:45 AM & 9:30-9:45 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "09:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Confessions Sundays 8:30-8:45 AM & 9:30-9:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Confessions Sundays 8:30-8:45 AM & 9:30-9:45 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Eucharistic Adoration Tuesday 10 AM-6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Eucharistic Adoration Tuesday 10 AM-6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 5,
+          "said": "Tuesday, November 17 10:00 AM Adoration followed by Benediction and Mass at 6:15 PM (Church)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; the p5 calendar adds Benediction (POLICY: note Benediction).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Eucharistic Adoration Thursday 5 PM-6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Eucharistic Adoration Thursday 5 PM-6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues. The Thanksgiving notice cancels only Mass and Confession that afternoon, so no Adoration cancellation is recorded (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Thanksgiving Day Mass will be at 9 AM."
+        }
+      ],
+      "rationale": "R1, R16: a dated notice for Thanksgiving, Thu Nov 26, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:00",
+        "end_time": "08:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Confessions will be heard from 8-8:45 AM."
+        }
+      ],
+      "rationale": "R1, R16: the Thanksgiving notice gives Confession times for Thu Nov 26.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "18:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "There will NOT be Mass or Confession late afternoon on Thanksgiving day."
+        }
+      ],
+      "rationale": "R1, R16: the notice cancels the weekly Thursday 6:15 PM Mass on Thanksgiving, Nov 26.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-oxford",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "There will NOT be Mass or Confession late afternoon on Thanksgiving day."
+        }
+      ],
+      "rationale": "R1, R16: the notice cancels the weekly Thursday 5:00-6:00 PM Confession on Thanksgiving, Nov 26.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "First Friday Night of Reparation First Friday/First Saturday of each month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "First Friday Night of Reparation First Friday/First Saturday of each month"
+        }
+      ],
+      "rationale": "R24, R26: a devotion with no time, not called Adoration or a Holy Hour; left out as at st-thomas-more-south-coventry s18.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "71b1e31a",
+          "page": 1,
+          "said": "Miraculous Medal Novena Monday following 8:00 AM MASS; Morning Rosary Monday, Wednesday, Friday at 7:30 AM; Evening Rosary First Thursday of each month at 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faa53b89",
+          "page": 1,
+          "said": "Miraculous Medal Novena Monday following 8:00 AM MASS; Morning Rosary Monday, Wednesday, Friday at 7:30 AM; Evening Rosary First Thursday of each month at 7:00 PM"
+        }
+      ],
+      "rationale": "R24: Rosary and Novena are devotions POLICY leaves out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
