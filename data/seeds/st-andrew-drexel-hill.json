@@ -1,0 +1,648 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-andrew-drexel-hill",
+  "status": "ready",
+  "as_of": "2026-11-15T16:44:29Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T23:22:01Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday, Saturday-morning Mass, Saturday and Sunday-after-7:30 confession, and Tuesday Adoration (Sep-Jun, 7:00 AM-6:40 PM with Benediction) agree in the schedule box of both issues read. The undated holy-day line is left out under POLICY, Dates; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "82599d12a9f816f543108512416f9231cfacc3487433daac5cf613df51dce4b3",
+      "fetched_at": "2026-11-15T16:44:29Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "441c6ab58eab4defe948a1349705582e3076607074148196593765441c665d77",
+      "fetched_at": "2026-11-08T15:53:31Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 7,
+          "said": "Sunday Mass Schedule Saturday: 5:00pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "441c6ab5",
+          "page": 7,
+          "said": "Sunday Mass Schedule Saturday: 5:00pm Vigil"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 7,
+          "said": "Sunday Mass Schedule Saturday: 5:00pm Vigil; Sunday 7:30am, 10:00am, 12:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "441c6ab5",
+          "page": 7,
+          "said": "Sunday Mass Schedule Saturday: 5:00pm Vigil; Sunday 7:30am, 10:00am, 12:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 7,
+          "said": "Sunday Mass Schedule Saturday: 5:00pm Vigil; Sunday 7:30am, 10:00am, 12:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "441c6ab5",
+          "page": 7,
+          "said": "Sunday Mass Schedule Saturday: 5:00pm Vigil; Sunday 7:30am, 10:00am, 12:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 7,
+          "said": "Sunday Mass Schedule Saturday: 5:00pm Vigil; Sunday 7:30am, 10:00am, 12:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "441c6ab5",
+          "page": 7,
+          "said": "Sunday Mass Schedule Saturday: 5:00pm Vigil; Sunday 7:30am, 10:00am, 12:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 7,
+          "said": "Daily Mass Weekdays: 6:30am, Saturday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "441c6ab5",
+          "page": 7,
+          "said": "Daily Mass Weekdays: 6:30am, Saturday: 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; weekdays are Monday to Friday, Saturday has its own 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 7,
+          "said": "Daily Mass Weekdays: 6:30am, Saturday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "441c6ab5",
+          "page": 7,
+          "said": "Daily Mass Weekdays: 6:30am, Saturday: 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; weekdays are Monday to Friday, Saturday has its own 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 7,
+          "said": "Daily Mass Weekdays: 6:30am, Saturday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "441c6ab5",
+          "page": 7,
+          "said": "Daily Mass Weekdays: 6:30am, Saturday: 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; weekdays are Monday to Friday, Saturday has its own 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 7,
+          "said": "Daily Mass Weekdays: 6:30am, Saturday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "441c6ab5",
+          "page": 7,
+          "said": "Daily Mass Weekdays: 6:30am, Saturday: 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; weekdays are Monday to Friday, Saturday has its own 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 7,
+          "said": "Daily Mass Weekdays: 6:30am, Saturday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "441c6ab5",
+          "page": 7,
+          "said": "Daily Mass Weekdays: 6:30am, Saturday: 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; weekdays are Monday to Friday, Saturday has its own 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 7,
+          "said": "Daily Mass Weekdays: 6:30am, Saturday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "441c6ab5",
+          "page": 7,
+          "said": "Daily Mass Weekdays: 6:30am, Saturday: 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-drexel-hill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 7,
+          "said": "Sacrament of Reconciliation: Saturday 3:30 – 4:30pm, Sunday after 7:30am Mass, or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "441c6ab5",
+          "page": 7,
+          "said": "Sacrament of Reconciliation: Saturday 3:30 – 4:30pm, Sunday after 7:30am Mass, or by appointment."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-drexel-hill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:30 AM Mass"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 7,
+          "said": "Sacrament of Reconciliation: Saturday 3:30 – 4:30pm, Sunday after 7:30am Mass, or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "441c6ab5",
+          "page": 7,
+          "said": "Sacrament of Reconciliation: Saturday 3:30 – 4:30pm, Sunday after 7:30am Mass, or by appointment."
+        }
+      ],
+      "rationale": "R1, R10: printed in both schedule boxes with no clock time; after a Sunday Mass POLICY starts it one hour after the 7:30 AM Mass, with no end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 7,
+          "said": "Sacrament of Reconciliation: ... or by appointment."
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-drexel-hill",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "18:40",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "Benediction"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 7,
+          "said": "The Most Blessed Sacrament is exposed in the monstrance for Adoration every Tuesday (September through June) until 6:40pm when the Divine Mercy Chaplet is prayed in reparation for the sins of sexual abuse and concludes with Benediction."
+        },
+        {
+          "source": "agent",
+          "bulletin": "441c6ab5",
+          "page": 7,
+          "said": "The Most Blessed Sacrament is exposed in the monstrance for Adoration every Tuesday (September through June) until 6:40pm when the Divine Mercy Chaplet is prayed in reparation for the sins of sexual abuse and concludes with Benediction."
+        },
+        {
+          "source": "agent",
+          "bulletin": "441c6ab5",
+          "page": 2,
+          "said": "Eucharistic Adoration is encouraged on Tuesdays following 6:30 AM Mass. Tuesday Adoration closes at 6:40 PM with the recitation of the Divine Mercy Chaplet and Benediction."
+        }
+      ],
+      "rationale": "R1, R10: the newest schedule box gives the days, months (season Sep-Jun) and the 6:40 PM end; the 441c6ab5 p2 notice starts it 'following 6:30 AM Mass', which POLICY times 30 minutes after a weekday Mass (7:00 AM). Benediction closes it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-drexel-hill",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Grade 7 Confirmation parent meeting"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 5,
+          "said": "A meeting for parents/guardians of students in Grade 7 who are preparing for the Sacrament of Confirmation will be held in church this Tuesday, November 17 at 6:30 PM. The meeting begins with Adoration and Reposition"
+        }
+      ],
+      "rationale": "POLICY, Final source checks; R37: the Adoration that opens a parents' meeting has no timing of its own and falls inside the weekly Tuesday Adoration, which closes at 6:40 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance at St. Laurence"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 6,
+          "said": "St. Laurence Church offers ... join us for Mass on Saturday, November 21 at 10:30 AM, followed by a potluck reception in the Church Hall"
+        }
+      ],
+      "rationale": "R22: held at St. Laurence, another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 2,
+          "said": "Holy Day Schedule Change Please note that the Vigil Mass for Holy Days of Obligation will be celebrated at 6:30 PM. Masses on the day of the Holy Day remain the same at 6:30 AM, 12:00 Noon, and 5:15 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "82599d12",
+          "page": 7,
+          "said": "Holy Days 6:30pm Vigil, 6:30am, 12:00pm, 5:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "441c6ab5",
+          "page": 7,
+          "said": "Holy Days 6:30pm Vigil, 6:30am, 12:00pm, 5:15pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: the holy-day Masses (6:30 PM vigil; 6:30 AM, 12:00 PM, 5:15 PM) are a standing line naming no holy day or date, so no date is pinned down and none may be projected (the Immaculate Conception falls Tue Dec 8, but neither issue prints it). As st-isaac-jogues-wayne s27 left out an undated standing holiday box. Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
