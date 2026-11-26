@@ -1,0 +1,714 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-charles-borromeo-drexel-hill",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:52Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T23:25:23Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Charles Borromeo), partnered with Sacred Heart, Havertown, whose times are excluded (R22). Sunday 10 AM and 4 PM, Thu-Sat 8:30 AM Masses, Saturday 9-10 AM confession and Thursday 6-7 PM Flame of Love Holy Hour agree in both bulletins and the website. Open: First Friday Holy Hour time (bulletins 7-8 PM vs website 6:30-7:30) and the untimed First Saturday Exposition; the Thursday-before-First-Friday confession is excluded under R33.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "dfa852f4fa6b344b3eb2720eafa803ecd8df0b67b91ac22b6c7be6b5a1541e1b",
+      "fetched_at": "2026-11-15T16:44:52Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6f26d7288f6d6279c38bb6ffa6f6e496eded445ef81273c87a1526b5abf8c6b9",
+      "fetched_at": "2026-11-08T15:53:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "ST. CHARLES BORROMEO 10:00 AM Mass ~ 4:00 PM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 3,
+          "said": "Sunday, November 22 ... 10:00AM ... 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f26d728",
+          "page": 2,
+          "said": "ST. CHARLES BORROMEO 10:00 AM Mass ~ 4:00 PM Mass"
+        }
+      ],
+      "rationale": "R1: Sunday schedule box of both issues read (Nov 8 prints it on p2); the intentions list both Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "ST. CHARLES BORROMEO 10:00 AM Mass ~ 4:00 PM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 3,
+          "said": "Sunday, November 22 ... 10:00AM ... 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f26d728",
+          "page": 2,
+          "said": "ST. CHARLES BORROMEO 10:00 AM Mass ~ 4:00 PM Mass"
+        }
+      ],
+      "rationale": "R1: Sunday schedule box of both issues read (Nov 8 prints it on p2); the intentions list both Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "ST. CHARLES BORROMEO 8:30 AM Thursday, Friday and Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 3,
+          "said": "Thursday, November 19 8:30AM; Friday, November 20 8:30AM; Saturday, November 21 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f26d728",
+          "page": 2,
+          "said": "ST. CHARLES BORROMEO 8:30 AM Thursday, Friday and Saturday"
+        }
+      ],
+      "rationale": "R1: weekday box of both issues (Nov 8 on p2) and the newest intentions. First Friday and First Saturday 8:30 Masses are these same slots.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "ST. CHARLES BORROMEO 8:30 AM Thursday, Friday and Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 3,
+          "said": "Thursday, November 19 8:30AM; Friday, November 20 8:30AM; Saturday, November 21 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f26d728",
+          "page": 2,
+          "said": "ST. CHARLES BORROMEO 8:30 AM Thursday, Friday and Saturday"
+        }
+      ],
+      "rationale": "R1: weekday box of both issues (Nov 8 on p2) and the newest intentions. First Friday and First Saturday 8:30 Masses are these same slots.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "ST. CHARLES BORROMEO 8:30 AM Thursday, Friday and Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 3,
+          "said": "Thursday, November 19 8:30AM; Friday, November 20 8:30AM; Saturday, November 21 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f26d728",
+          "page": 2,
+          "said": "ST. CHARLES BORROMEO 8:30 AM Thursday, Friday and Saturday"
+        }
+      ],
+      "rationale": "R1: weekday box of both issues (Nov 8 on p2) and the newest intentions. First Friday and First Saturday 8:30 Masses are these same slots.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-drexel-hill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "SAINT CHARLES BORROMEO 9:00-10:00AM—Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f26d728",
+          "page": 2,
+          "said": "9:00-10:00AM—Saturday"
+        }
+      ],
+      "rationale": "R1: Reconciliation box of both issues; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-drexel-hill",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Flame of Love Holy Hour"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "FLAME OF LOVE HOLY HOUR Join us on Thursday evenings 6:00-7:00PM in Saint Charles Borromeo Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f26d728",
+          "page": 2,
+          "said": "Join us on Thursday evenings 6:00-7:00PM in Saint Charles Borromeo Church"
+        }
+      ],
+      "rationale": "R1, POLICY What to extract: a Holy Hour is Adoration even with other prayer; printed in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "6:30— 7:30 PM—Thursday before First Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f26d728",
+          "page": 2,
+          "said": "6:30— 7:30 PM—Thursday before First Friday"
+        },
+        {
+          "source": "website",
+          "url": "https://scbdh.org/schedules/mass-schedule/",
+          "said": "6:30 PM – 7:30 PM – Thursday before First Friday at St. Charles"
+        }
+      ],
+      "rationale": "R33: the Thursday before first Friday is sometimes the first Thursday and sometimes the last Thursday of the previous month; the format can't express it and no date is printed (next would be Thu Dec 3, not printed). Left out rather than a false first-Thursday pattern.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "FIRST FRIDAY AT ST. CHARLES 8:30AM—Mass 7:00-8:00PM—Holy Hour of Reparation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f26d728",
+          "page": 2,
+          "said": "7:00-8:00PM—Holy Hour of Reparation"
+        },
+        {
+          "source": "website",
+          "url": "https://scbdh.org/schedules/mass-schedule/",
+          "said": "First Friday Schedule St. Charles 8:30 AM – Mass 6:30 PM – 7:30 PM – Holy Hour of Reparation"
+        }
+      ],
+      "rationale": "R6/R28 (C8): the website conflicts with both bulletins. Leaning bulletin: both issues (Nov 8, Nov 15) print 7:00-8:00, and the website looks a little stale (its rectory hours 'Mon / Wed / Fri: 9 AM – 4 PM' match Nov 8, while Nov 15 prints 9:00AM—3:00PM); its 6:30-7:30 may copy the Thursday confession line. Named first-Friday slot (POLICY Weekly rule 2); the newest week holds only third weeks, but the standing box prints it (R12 not needed).",
+      "question": "First Friday Holy Hour of Reparation: bulletin 7:00-8:00 PM or website 6:30-7:30 PM?",
+      "options": [
+        {
+          "label": "Bulletin: First Fridays 7:00-8:00 PM",
+          "entry": {
+            "church_slug": "st-charles-borromeo-drexel-hill",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour of Reparation"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Website: First Fridays 6:30-7:30 PM",
+          "entry": {
+            "church_slug": "st-charles-borromeo-drexel-hill",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": "19:30",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour of Reparation"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "FIRST SATURDAY AT ST. CHARLES 8:30AM Morning Mass Exposition, Devotions, Confession and Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f26d728",
+          "page": 2,
+          "said": "8:30AM Morning Mass Exposition, Devotions, Confession and Benediction"
+        },
+        {
+          "source": "website",
+          "url": "https://scbdh.org/schedules/mass-schedule/",
+          "said": "First Saturday Schedule St. Charles 8:30 AM – Mass, Exposition, Devotions, Confession, and Benediction"
+        }
+      ],
+      "rationale": "R30: no clock time and no 'after' wording for the Exposition; POLICY Final source checks says a larger event doesn't time its components. Leaning leave out. If read as after the weekday Mass, POLICY Times gives 9:00 AM with no end. Confession that morning is already covered by the weekly Saturday 9:00-10:00.",
+      "question": "Add First Saturday Exposition/Benediction at St. Charles, which the box ties only to the 8:30 AM Mass with no time?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "First Saturdays from 9:00 AM, no end",
+          "entry": {
+            "church_slug": "st-charles-borromeo-drexel-hill",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:30 AM Mass; Benediction"
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "SACRED HEART 4:00 PM Saturday Vigil Mass ~ 7:30 AM Mass"
+        }
+      ],
+      "rationale": "R22: Sacred Heart, Havertown is the partnering parish's own listed church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "SACRED HEART 4:00 PM Saturday Vigil Mass ~ 7:30 AM Mass"
+        }
+      ],
+      "rationale": "R22: Sacred Heart, Havertown is the partnering parish's own listed church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "SACRED HEART 8:30 AM Monday, Tuesday and Wednesday"
+        }
+      ],
+      "rationale": "R22: Sacred Heart, Havertown is the partnering parish's own listed church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "SACRED HEART 8:30 AM Monday, Tuesday and Wednesday"
+        }
+      ],
+      "rationale": "R22: Sacred Heart, Havertown is the partnering parish's own listed church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "SACRED HEART 8:30 AM Monday, Tuesday and Wednesday"
+        }
+      ],
+      "rationale": "R22: Sacred Heart, Havertown is the partnering parish's own listed church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "SACRED HEART 3:00—3:45 PM Before Saturday Vigil Mass"
+        }
+      ],
+      "rationale": "R22: Sacred Heart, Havertown is the partnering parish's own listed church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dfa852f4",
+          "page": 1,
+          "said": "HOLY DAY MASSES ST. CHARLES BORROMEO 4:00 PM Vigil Mass 8:30 AM Morning Mass"
+        }
+      ],
+      "rationale": "POLICY Dates: a standing holy-day line with no date; no read issue ties it to Dec 8 or another date (cf. precedent st-isaac-jogues-wayne s27). Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6f26d728",
+          "page": 2,
+          "said": "Please note the Daily Mass Schedule for this Week Only. Saint Charles Borromeo Monday, November 9-8:30AM Tuesday, November 10-8:30AM"
+        }
+      ],
+      "rationale": "R16: one week's dated changes (Nov 9-14), all before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
