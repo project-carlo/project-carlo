@@ -1,0 +1,730 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-fatima-secane",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:42:56Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T23:50:16Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Our Lady of Fatima, Secane); both issues (Nov 8, Nov 15) print the same p2 box: Sat 4 PM vigil, Sun 8 and 10:30, Mon-Sat 8:30, Sat 3-3:45 PM Confession; the website matches. Settled additions: First Saturday 7 AM Adoration and the Dec 4 7 PM Mass of Healing. Open: whether St. John Neumann Chapel (Sat 8 AM Confession, Thu 9-12 Adoration) is at the church, and the Dec 17 Advent retreat's exposition and confessions, which have no times of their own.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6461a6e79eb3af97cc2a1f5949012678da6c996e66d55a82f1ead461fbc042d3",
+      "fetched_at": "2026-11-15T16:42:56Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1efde00a51026c61b505007987e654e5f3c0c301c24fcc664583c978d43fdedb",
+      "fetched_at": "2026-11-08T15:53:02Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-church-secane",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 2,
+          "said": "MASSES Saturday Vigil: 4:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1efde00a",
+          "page": 2,
+          "said": "Saturday Vigil: 4:00 P.M."
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-church-secane",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 2,
+          "said": "Sunday: 8:00 & 10:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1efde00a",
+          "page": 2,
+          "said": "Sunday: 8:00 & 10:30 A.M."
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-church-secane",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 2,
+          "said": "Sunday: 8:00 & 10:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1efde00a",
+          "page": 2,
+          "said": "Sunday: 8:00 & 10:30 A.M."
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-church-secane",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 2,
+          "said": "Weekday: M-F: 8:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1efde00a",
+          "page": 2,
+          "said": "Weekday: M-F: 8:30 A.M."
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both issues; each weekday's intentions list 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-church-secane",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 2,
+          "said": "Weekday: M-F: 8:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1efde00a",
+          "page": 2,
+          "said": "Weekday: M-F: 8:30 A.M."
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both issues; each weekday's intentions list 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-church-secane",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 2,
+          "said": "Weekday: M-F: 8:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1efde00a",
+          "page": 2,
+          "said": "Weekday: M-F: 8:30 A.M."
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both issues; each weekday's intentions list 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-church-secane",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 2,
+          "said": "Weekday: M-F: 8:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1efde00a",
+          "page": 2,
+          "said": "Weekday: M-F: 8:30 A.M."
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both issues; each weekday's intentions list 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-church-secane",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 2,
+          "said": "Weekday: M-F: 8:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1efde00a",
+          "page": 2,
+          "said": "Weekday: M-F: 8:30 A.M."
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both issues; each weekday's intentions list 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-church-secane",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 2,
+          "said": "Saturday: 8:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1efde00a",
+          "page": 2,
+          "said": "Saturday: 8:30 A.M."
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both issues; the Saturday intentions list 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-church-secane",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 2,
+          "said": "RECONCILIATION Saturday : 3:00-3:45 PM - Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1efde00a",
+          "page": 2,
+          "said": "Saturday : 3:00-3:45 PM - Church"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both issues, in the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 2,
+          "said": "RECONCILIATION Saturday 8:00 AM - Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1efde00a",
+          "page": 2,
+          "said": "Saturday 8:00 AM - Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://olfsecane.org/mass-schedules/",
+          "said": "Reconciliation: Saturday: 8 am in Chapel"
+        }
+      ],
+      "rationale": "R32, POLICY Churches and chapels: the box and website say only 'Chapel'; no page gives the chapel's address, and seed church finds no St. John Neumann Chapel. Leaning include: it is printed in the parish's own schedule box beside the church's times, p1 lists a 'Sanctuary Candle in Chapel' with the church's, and p4 places the Thursday Adoration, Flame of Love and Sodality devotions in the same St. John Neumann Chapel next to St. John Neumann Hall; the parish has one church. Leaning per precedent ss-philip-and-james-exton s15. No end time printed. The First Saturday '8AM ... Confessions' (p4) falls in this weekly slot.",
+      "question": "Is the parish's 'Chapel' (St. John Neumann Chapel) at the church, so its Sat 8:00 AM Confession and Thu 9 AM-12 Noon Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "our-lady-of-fatima-church-secane",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "neumann-chapel"
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 4,
+          "said": "Thursday Adoration: Every Thursday, @ 9:00AM – 12:00Noon | St. John Neumann Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1efde00a",
+          "page": 4,
+          "said": "Thursday Adoration: Every Thursday, @ 9:00AM – 12:00Noon | St. John Neumann Chapel"
+        }
+      ],
+      "rationale": "R32, POLICY Churches and chapels: no page gives the chapel's address, and seed church finds no St. John Neumann Chapel. Leaning include, as for the Saturday 8 AM chapel Confession: same chapel, the parish's own listing, one church; leaning per precedent ss-philip-and-james-exton s15.",
+      "question": "Is the parish's 'Chapel' (St. John Neumann Chapel) at the church, so its Sat 8:00 AM Confession and Thu 9 AM-12 Noon Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "our-lady-of-fatima-church-secane",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. John Neumann Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "neumann-chapel"
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-church-secane",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 4,
+          "said": "FIRST SATURDAY MARIAN DEVOTION ... Monthly First Saturday Marian Devotion ... Schedule 7AM - Holy Adoration 8AM - Holy Rosary, Divine Mercy & Confessions 8:30 AM – Solemn Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1efde00a",
+          "page": 4,
+          "said": "Schedule 7AM - Holy Adoration"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly rule 2: a named monthly First Saturday slot, printed in both issues. No end time printed (the Rosary follows at 8 AM, but nothing says exposition ends). The 8 AM Confessions and 8:30 Mass fall in the weekly Saturday slots.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-church-secane",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-04",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Healing with Anointing of the Sick"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 5,
+          "said": "Mass of Healing OUR LADY OF FATIMA Secane, PA DECEMBER 4, 2026 6:45 pm Praise and Worship 7:00 pm Mass & Anointing of the Sick ... ALL ARE WELCOMED!"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass at the church, open to all, after as_of. Dated (POLICY Weekly rule 3): it falls on a first Friday but is not named by its week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 6,
+          "said": "Advent Retreat & Reconciliation ... Thursday, December 17, 2026, at 5:30 PM Program: Exposition of the Blessed Sacrament, Gospel Reading, Retreat Talk, Sacred Silence & Confessions"
+        }
+      ],
+      "rationale": "R30, POLICY Final source checks: an event that includes Adoration does not time its components; exposition is listed first, so it may begin at 5:30, but no time or end is printed for it. Nothing limits the retreat to registrants. Leaning leave out: on a public site a wrong time is worse than a missing one.",
+      "question": "Add the Advent Retreat & Reconciliation's Exposition, Thu Dec 17 5:30 PM, as Adoration?",
+      "options": [
+        {
+          "label": "Adoration Dec 17 5:30 PM",
+          "entry": {
+            "church_slug": "our-lady-of-fatima-church-secane",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-17",
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Advent Retreat & Reconciliation"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 6,
+          "said": "Advent Retreat & Reconciliation ... Thursday, December 17, 2026, at 5:30 PM Program: ... Sacred Silence & Confessions"
+        }
+      ],
+      "rationale": "R30, POLICY Final source checks: Confessions are the last item of the program and have no time of their own. Unlike precedent st-aloysius-pottstown s17 (a Liturgy of Penance that itself starts at the printed time), here they follow exposition, a reading and a talk. Leaning leave out.",
+      "question": "Add the Advent Retreat & Reconciliation's Confessions, Thu Dec 17, from 5:30 PM?",
+      "options": [
+        {
+          "label": "Confession Dec 17 5:30 PM",
+          "entry": {
+            "church_slug": "our-lady-of-fatima-church-secane",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-17",
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Advent Retreat & Reconciliation"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 4,
+          "said": "Morning with the MASTER: Daily Eucharistic Adoration before every Morning Mass"
+        }
+      ],
+      "rationale": "R26, POLICY Skip anything without a definite start time: 'before every Morning Mass' gives no start or length.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 2,
+          "said": "Holy Day: Vigil: 7:00 P.M. Holyday: 8:00 A.M.& 10:00 A.M."
+        },
+        {
+          "source": "website",
+          "url": "https://olfsecane.org/mass-schedules/",
+          "said": "Holy Day: 7:30 a.m., 10:00 a.m. & Vigil Mass at 7:00 p.m. the night before"
+        }
+      ],
+      "rationale": "R24, POLICY Dates: a generic holy-day line names no date and no read issue ties it to Dec 8 or another holy day this year (as precedent st-isaac-jogues-wayne s27). The website's 7:30 a.m. differs from the bulletin's 8:00. Update mode will read the issues that announce the Immaculate Conception.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6461a6e7",
+          "page": 4,
+          "said": "Evening mass opportunities at OLF parish will be AVAILABLE after THE NEW PRIEST'S ARRIVAL."
+        }
+      ],
+      "rationale": "R20: a future change with no date or times; keep the current schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
