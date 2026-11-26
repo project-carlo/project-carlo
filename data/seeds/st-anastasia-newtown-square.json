@@ -1,0 +1,894 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anastasia-newtown-square",
+  "status": "ready",
+  "as_of": "2026-11-15T16:44:26Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T21:24:46Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday, Saturday confession and Mon-Fri chapel Adoration agree in the p1 box of both issues read (Nov 8, Nov 15); intentions match. Dated: Adoration ends at 5 PM on Nov 19, and an all-welcome Pro-Life Memorial Mass Mon Nov 30 7 PM. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3704993951f3932ee4c7f34e80332d668a24189f30c836c3c07b19524f1ad1f5",
+      "fetched_at": "2026-11-15T16:44:26Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "114c947655320ea6ea5fa0f07469a6da629749e60921c8e904872b76c2bb18a5",
+      "fetched_at": "2026-11-08T15:53:31Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday | 5:15 PM Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday | 5:15 PM Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 3,
+          "said": "Saturday, November 21 ... 5:15 PM | Giorgio Castagna"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "Sunday | 7:00 AM, 9:00 AM, 10:30 AM, 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "Sunday | 7:00 AM, 9:00 AM, 10:30 AM, 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 3,
+          "said": "Sunday, November 22 7:00 AM ... 9:00 AM ... 10:30 AM ... 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "Sunday | 7:00 AM, 9:00 AM, 10:30 AM, 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "Sunday | 7:00 AM, 9:00 AM, 10:30 AM, 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 3,
+          "said": "Sunday, November 22 7:00 AM ... 9:00 AM ... 10:30 AM ... 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "Sunday | 7:00 AM, 9:00 AM, 10:30 AM, 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "Sunday | 7:00 AM, 9:00 AM, 10:30 AM, 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 3,
+          "said": "Sunday, November 22 7:00 AM ... 9:00 AM ... 10:30 AM ... 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "Sunday | 7:00 AM, 9:00 AM, 10:30 AM, 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "Sunday | 7:00 AM, 9:00 AM, 10:30 AM, 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 3,
+          "said": "Sunday, November 22 7:00 AM ... 9:00 AM ... 10:30 AM ... 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday - Saturday | 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday - Saturday | 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 3,
+          "said": "Monday, November 16 8:00 AM ... Saturday, November 21 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read; the intentions list 8:00 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday - Saturday | 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday - Saturday | 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 3,
+          "said": "Monday, November 16 8:00 AM ... Saturday, November 21 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read; the intentions list 8:00 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday - Saturday | 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday - Saturday | 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 3,
+          "said": "Monday, November 16 8:00 AM ... Saturday, November 21 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read; the intentions list 8:00 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday - Saturday | 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday - Saturday | 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 3,
+          "said": "Monday, November 16 8:00 AM ... Saturday, November 21 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read; the intentions list 8:00 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday - Saturday | 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday - Saturday | 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 3,
+          "said": "Monday, November 16 8:00 AM ... Saturday, November 21 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read; the intentions list 8:00 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday - Saturday | 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday - Saturday | 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 3,
+          "said": "Monday, November 16 8:00 AM ... Saturday, November 21 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read; the intentions list 8:00 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "RECONCILIATION / CONFESSIONS Saturday | 4:00 - 4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "RECONCILIATION / CONFESSIONS Saturday | 4:00 - 4:45 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "Other Times By Appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Monday - Friday | 8:30 AM to 9:00 PM In the Blessed Sacrament Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Monday - Friday | 8:30 AM to 9:00 PM In the Blessed Sacrament Chapel"
+        }
+      ],
+      "rationale": "R1, R38: printed in the p1 schedule box of both issues read; the chapel is in the parish's one church (POLICY, Churches and chapels). Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Monday - Friday | 8:30 AM to 9:00 PM In the Blessed Sacrament Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Monday - Friday | 8:30 AM to 9:00 PM In the Blessed Sacrament Chapel"
+        }
+      ],
+      "rationale": "R1, R38: printed in the p1 schedule box of both issues read; the chapel is in the parish's one church (POLICY, Churches and chapels). Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Monday - Friday | 8:30 AM to 9:00 PM In the Blessed Sacrament Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Monday - Friday | 8:30 AM to 9:00 PM In the Blessed Sacrament Chapel"
+        }
+      ],
+      "rationale": "R1, R38: printed in the p1 schedule box of both issues read; the chapel is in the parish's one church (POLICY, Churches and chapels). Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Monday - Friday | 8:30 AM to 9:00 PM In the Blessed Sacrament Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Monday - Friday | 8:30 AM to 9:00 PM In the Blessed Sacrament Chapel"
+        }
+      ],
+      "rationale": "R1, R38: printed in the p1 schedule box of both issues read; the chapel is in the parish's one church (POLICY, Churches and chapels). Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Monday - Friday | 8:30 AM to 9:00 PM In the Blessed Sacrament Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "114c9476",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Monday - Friday | 8:30 AM to 9:00 PM In the Blessed Sacrament Chapel"
+        }
+      ],
+      "rationale": "R1, R38: printed in the p1 schedule box of both issues read; the chapel is in the parish's one church (POLICY, Churches and chapels). Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "08:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel; ends early for Prayer and Praise"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 5,
+          "said": "Eucharistic Adoration will conclude at 5:00 PM on November 19 in preparation Prayer and Praise."
+        },
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 1,
+          "said": "Monday - Friday | 8:30 AM to 9:00 PM"
+        }
+      ],
+      "rationale": "R40, R16: a dated exception shortens Thursday Nov 19 (on or after as_of); start from the standing box, end as printed. No cancellation is recorded: the format refuses one at the same date and start, and nothing calls the day off.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-30",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Annual Pro-Life Memorial Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 6,
+          "said": "The Mass will be celebrated on Monday, November 30, at 7:00 p.m. ... We cordially invite you, your family, and friends ... All are welcome."
+        }
+      ],
+      "rationale": "R1, R16, POLICY (closed Masses): a memorial Mass for many deceased that the bulletin opens to all; at the parish's one church, outside the weekly schedule, on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-30",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Rosary before the Pro-Life Memorial Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 6,
+          "said": "preceded by the Holy Rosary at 6:30 p.m."
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anastasia-newtown-square",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Community Prayer & Praise"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37049939",
+          "page": 5,
+          "said": "Community Prayer & Praise 2026 ... Thursday, November 19, 2026 6:30 PM St. Anastasia Church"
+        }
+      ],
+      "rationale": "R24: a prayer-and-worship evening the bulletin never calls Adoration, Exposition or a Holy Hour.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
