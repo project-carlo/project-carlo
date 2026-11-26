@@ -1,0 +1,779 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-thomas-more-south-coventry",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:47:04Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T19:16:10Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Thomas More, Pottstown. The two November issues read (Nov 8 and 15) print the same schedule box: Sat 4:30, Sun 8 and 11, Mon-Sat 8:30, Tue/Thu 7 a.m.; confessions Wed 6:30 p.m. and Sat 9:15-10; Wed Adoration 9-12:30, plus a third-Wednesday Holy Hour (website). Open: the Regnum Christi Christ the King Mass on Nov 22 and the First Friday Night of Reparation, both leaning leave out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0fbaaa3e2543eafe9e33536ac572eccf60ee6e2939258f5eadf9bbfc8076e692",
+      "fetched_at": "2026-11-15T16:47:04Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2362cfbbb2a9d3c2b1db5f4e0d1102139a4f9dfc06279a44a9c9ab1d6f48ebbf",
+      "fetched_at": "2026-11-08T15:55:29Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-south-coventry",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the Celebration of Holy Mass box on p1 of both issues read; intentions list Sat 4:30 p.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-south-coventry",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 1,
+          "said": "Sunday: 8 a.m. & 11 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 1,
+          "said": "Sunday: 8 a.m. & 11 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass box on p1 of both issues read; intentions list Sunday 8 a.m. and 11 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-south-coventry",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 1,
+          "said": "Sunday: 8 a.m. & 11 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 1,
+          "said": "Sunday: 8 a.m. & 11 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass box on p1 of both issues read; intentions list Sunday 8 a.m. and 11 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-south-coventry",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 1,
+          "said": "Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 1,
+          "said": "Monday - Saturday: 8:30 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass box on p1 of both issues read; each weekday's intentions list 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-south-coventry",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 1,
+          "said": "Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 1,
+          "said": "Monday - Saturday: 8:30 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass box on p1 of both issues read; each weekday's intentions list 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-south-coventry",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 1,
+          "said": "Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 1,
+          "said": "Monday - Saturday: 8:30 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass box on p1 of both issues read; each weekday's intentions list 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-south-coventry",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 1,
+          "said": "Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 1,
+          "said": "Monday - Saturday: 8:30 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass box on p1 of both issues read; each weekday's intentions list 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-south-coventry",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 1,
+          "said": "Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 1,
+          "said": "Monday - Saturday: 8:30 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass box on p1 of both issues read; each weekday's intentions list 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-south-coventry",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 1,
+          "said": "Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 1,
+          "said": "Monday - Saturday: 8:30 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass box on p1 of both issues read; each weekday's intentions list 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-south-coventry",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 1,
+          "said": "Tuesday & Thursday : 7 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 1,
+          "said": "Tuesday & Thursday : 7 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass box on p1 of both issues read; Tuesday and Thursday intentions list 7 a.m. as well as 8:30.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-south-coventry",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 1,
+          "said": "Tuesday & Thursday : 7 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 1,
+          "said": "Tuesday & Thursday : 7 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass box on p1 of both issues read; Tuesday and Thursday intentions list 7 a.m. as well as 8:30.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-south-coventry",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 1,
+          "said": "Wednesday: 6:30 p.m. until last person is heard"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 1,
+          "said": "Wednesday: 6:30 p.m. until last person is heard"
+        }
+      ],
+      "rationale": "R1, POLICY Times: 'until last person is heard' has no end time. Both issues' p1 box; p3 calendars agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-south-coventry",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 1,
+          "said": "Saturday: 9:15 - 10 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 1,
+          "said": "Saturday: 9:15 - 10 a.m."
+        }
+      ],
+      "rationale": "R1: p1 box of both issues; p3 calendar of both lists 9:15 - 10 a.m. Sacrament of reconciliation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-south-coventry",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "12:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 1,
+          "said": "Adoration of the Most Blessed Sacrament Wednesday: 9 a.m. to 12:30 p.m. (per sign-up sheet)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 1,
+          "said": "Adoration of the Most Blessed Sacrament Wednesday: 9 a.m. to 12:30 p.m. (per sign-up sheet)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 3,
+          "said": "9 a.m. - 12:30 p.m. Eucharistic adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 3,
+          "said": "9 a.m. - 12:30 p.m. Eucharistic adoration"
+        }
+      ],
+      "rationale": "R1: both issues' p1 box and p3 calendar. The sign-up sheet arranges committed adorers, not access. The website's 'after the 8:30 am Mass until Noon' is older wording; both current bulletins print 12:30 (R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-south-coventry",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour for Vocations; Benediction"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 4,
+          "said": "Holy Hour for Vocations. Come pray on Wednesday, November 18, from 6 to 7 p.m. Includes Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 4,
+          "said": "Holy Hour for Vocations. Come pray on Wednesday, November 18, from 6 to 7 p.m. Includes Benediction"
+        },
+        {
+          "source": "website",
+          "url": "https://stthomasmorepottstown.org/",
+          "said": "Holy Hour for Vocations Join us every 3rd Wednesday of the month from 6:00 p.m. to 7:00 p.m. for a Holy Hour for Vocations. The hour will conclude with Benediction . All are welcome!",
+          "schedule_check": {
+            "checked_at": "2026-11-26T19:19:26Z",
+            "current_because": "Homepage fetched 2026-11-26 lists the same Mass and confession times as the Nov 2026 bulletins; the bulletin's Nov 18 date is a third Wednesday, matching it.",
+            "bulletin": "0fbaaa3e",
+            "fits_because": "Newest bulletin p4 and p3 calendar print the Holy Hour on Wed Nov 18 6 p.m., the third Wednesday of November."
+          }
+        }
+      ],
+      "rationale": "POLICY Weekly rule 2 with R6: the website names the week ('every 3rd Wednesday'); both bulletins print this month's occurrence, Nov 18, 6-7 p.m. with Benediction.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-more-south-coventry",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Morning of Refreshment for Young Moms"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 7,
+          "said": "Morning of Refreshment For Young Moms ... November 17, 2026 ... Mass begins: 9:30 AM ... $15 per morning | $50 to register for all four"
+        }
+      ],
+      "rationale": "POLICY, What to extract: a Mass within a paid, registered program limited to a group (young moms); leaning as precedent st-agnes-west-chester s24 (registered retreat's services left out).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 3,
+          "said": "Sunday, November 22 ... 4 p.m. RC Christ the King Mass"
+        }
+      ],
+      "rationale": "R30/R32: listed only in the parish calendar as 'RC' (Regnum Christi) Mass; no place or invitation given and it is outside the regular schedule. Leaning leave out: likely a movement's Mass, and a wrong time is worse than a missing one; leaning per precedent st-agnes-west-chester s24.",
+      "question": "Add the Regnum Christi Christ the King Mass, Sun Nov 22, 4 p.m.?",
+      "options": [
+        {
+          "label": "Sun Nov 22 4 PM",
+          "entry": {
+            "church_slug": "st-thomas-more-south-coventry",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-22",
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christ the King"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 1,
+          "said": "First Fridays: 8 p.m. to 2 a.m. Evening of Reparation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 1,
+          "said": "First Fridays: 8 p.m. to 2 a.m. Evening of Reparation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 5,
+          "said": "Night of Reparation is held at St. Thomas More every First Friday beginning at 8 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2362cfbb",
+          "page": 5,
+          "said": "Night of Reparation is held at St. Thomas More every First Friday beginning at 8 p.m."
+        }
+      ],
+      "rationale": "R30: listed under Prayer and Devotions, with a monstrance picture, but neither bulletin nor website calls it Adoration, Exposition or a Holy Hour (POLICY counts only events so called). It also runs past midnight, which the format can't end. Neither read issue's week holds a first Friday (R11).",
+      "question": "Add the First Friday 8 p.m.-2 a.m. Night of Reparation as Adoration?",
+      "options": [
+        {
+          "label": "First Fridays from 8 PM",
+          "entry": {
+            "church_slug": "st-thomas-more-south-coventry",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "20:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Night of Reparation, until 2 a.m."
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0fbaaa3e",
+          "page": 1,
+          "said": "Tuesday - Friday: 9 a.m. Fatima Rosary"
+        }
+      ],
+      "rationale": "R24: a Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
