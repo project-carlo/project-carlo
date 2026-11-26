@@ -1,0 +1,606 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-clifton-heights",
+  "status": "ready",
+  "as_of": "2026-11-15T16:44:16Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T23:18:25Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Sacred Heart) in a partnership with St. Charles Borromeo, Drexel Hill, whose times are excluded (R22). Both Nov 8 and Nov 15 issues print the same box: Sat 4:00 PM, Sun 7:30 AM, Mon-Wed 8:30 AM Mass and Sat 3:00-3:45 PM confession. Undated holy-day line left out. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "66ba8b2f6514c7524d4e7a58fc7ab120bdbcd5139112ae6c15b3683e84d400b8",
+      "fetched_at": "2026-11-15T16:44:16Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "0ab4aaaf033e88129d5ff8b7f85cbcd689a3fe83929bd232f8ccb797bf50a94a",
+      "fetched_at": "2026-11-08T15:53:18Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 1,
+          "said": "Sunday Schedule Of Masses Sacred Heart (Vigil) 4:00PM, 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ab4aaaf",
+          "page": 1,
+          "said": "Sunday Schedule Of Masses Sacred Heart (Vigil) 4:00PM, 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 2,
+          "said": "Saturday, November 21 4:00PM Frank Rizzo, Jr."
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the Sacred Heart Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 1,
+          "said": "Sunday Schedule Of Masses Sacred Heart (Vigil) 4:00PM, 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ab4aaaf",
+          "page": 1,
+          "said": "Sunday Schedule Of Masses Sacred Heart (Vigil) 4:00PM, 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 2,
+          "said": "Sunday, November 22 7:30AM Dolores Webb"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the Sacred Heart Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 1,
+          "said": "Weekdays Masses 8:30AM Sacred Heart Mon, Tues, Wed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ab4aaaf",
+          "page": 1,
+          "said": "Weekdays Masses 8:30AM Sacred Heart Mon, Tues, Wed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 2,
+          "said": "Monday, November 16 8:30AM ... Tuesday, November 17 8:30AM ... Wednesday, November 18 8:30AM"
+        }
+      ],
+      "rationale": "R1: the p1 box of both issues gives Sacred Heart's weekday Mass Mon-Wed 8:30 AM; the intentions agree (the older issue's Nov 9-10 'NO MASS' dates are past, R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 1,
+          "said": "Weekdays Masses 8:30AM Sacred Heart Mon, Tues, Wed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ab4aaaf",
+          "page": 1,
+          "said": "Weekdays Masses 8:30AM Sacred Heart Mon, Tues, Wed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 2,
+          "said": "Monday, November 16 8:30AM ... Tuesday, November 17 8:30AM ... Wednesday, November 18 8:30AM"
+        }
+      ],
+      "rationale": "R1: the p1 box of both issues gives Sacred Heart's weekday Mass Mon-Wed 8:30 AM; the intentions agree (the older issue's Nov 9-10 'NO MASS' dates are past, R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 1,
+          "said": "Weekdays Masses 8:30AM Sacred Heart Mon, Tues, Wed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ab4aaaf",
+          "page": 1,
+          "said": "Weekdays Masses 8:30AM Sacred Heart Mon, Tues, Wed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 2,
+          "said": "Monday, November 16 8:30AM ... Tuesday, November 17 8:30AM ... Wednesday, November 18 8:30AM"
+        }
+      ],
+      "rationale": "R1: the p1 box of both issues gives Sacred Heart's weekday Mass Mon-Wed 8:30 AM; the intentions agree (the older issue's Nov 9-10 'NO MASS' dates are past, R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton-heights",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 1,
+          "said": "Confession Schedule ... Sacred Heart 3:00-3:45PM Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ab4aaaf",
+          "page": 1,
+          "said": "Confession Schedule ... Sacred Heart 3:00-3:45PM Saturday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 confession box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 1,
+          "said": "St. Charles Borromeo 10:00AM, 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ab4aaaf",
+          "page": 1,
+          "said": "St. Charles Borromeo 10:00AM, 4:00PM"
+        }
+      ],
+      "rationale": "R22: St. Charles Borromeo, Drexel Hill is the partnering parish's own listed church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 1,
+          "said": "St. Charles Borromeo 10:00AM, 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ab4aaaf",
+          "page": 1,
+          "said": "St. Charles Borromeo 10:00AM, 4:00PM"
+        }
+      ],
+      "rationale": "R22: St. Charles Borromeo, Drexel Hill is the partnering parish's own listed church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 1,
+          "said": "Weekdays Masses 8:30AM ... St. Charles Borromeo Thurs, Fri, Sat; First Saturday at St. Charles Borromeo 8:30AM Morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ab4aaaf",
+          "page": 1,
+          "said": "Weekdays Masses 8:30AM ... St. Charles Borromeo Thurs, Fri, Sat; First Saturday at St. Charles Borromeo 8:30AM Morning Mass"
+        }
+      ],
+      "rationale": "R22: St. Charles Borromeo is another parish's listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 1,
+          "said": "Weekdays Masses 8:30AM ... St. Charles Borromeo Thurs, Fri, Sat; First Saturday at St. Charles Borromeo 8:30AM Morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ab4aaaf",
+          "page": 1,
+          "said": "Weekdays Masses 8:30AM ... St. Charles Borromeo Thurs, Fri, Sat; First Saturday at St. Charles Borromeo 8:30AM Morning Mass"
+        }
+      ],
+      "rationale": "R22: St. Charles Borromeo is another parish's listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 1,
+          "said": "Weekdays Masses 8:30AM ... St. Charles Borromeo Thurs, Fri, Sat; First Saturday at St. Charles Borromeo 8:30AM Morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ab4aaaf",
+          "page": 1,
+          "said": "Weekdays Masses 8:30AM ... St. Charles Borromeo Thurs, Fri, Sat; First Saturday at St. Charles Borromeo 8:30AM Morning Mass"
+        }
+      ],
+      "rationale": "R22: St. Charles Borromeo is another parish's listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 1,
+          "said": "Flame of Love Holy Hour St. Charles Borromeo 6:30PM Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 2,
+          "said": "Thursday evenings 6:30-7:30PM at Saint Charles Borromeo Church"
+        }
+      ],
+      "rationale": "R22: St. Charles Borromeo is another parish's listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 1,
+          "said": "First Friday at St. Charles Borromeo 7:00P.M. – Holy Hour"
+        }
+      ],
+      "rationale": "R22: St. Charles Borromeo is another parish's listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 1,
+          "said": "St. Charles Borromeo ... Saturday following the 8:30AM Mass 9:00-10:00AM; Thursday in November before First Friday 6:00-7:30PM"
+        }
+      ],
+      "rationale": "R22: St. Charles Borromeo is another parish's listed church (also its first-Saturday exposition and pre-First-Friday Thursday confession).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66ba8b2f",
+          "page": 1,
+          "said": "Holy Day Masses ... Sacred Heart 12:00 Noon, 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ab4aaaf",
+          "page": 1,
+          "said": "Holy Day Masses ... Sacred Heart 12:00 Noon, 7:00PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no date pins no day, and no read issue dates this year's Dec 8 Masses (as st-isaac-jogues-wayne s27). Update mode will read the dated notices.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
