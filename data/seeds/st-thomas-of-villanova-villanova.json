@@ -1,0 +1,814 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-thomas-of-villanova-villanova",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:47:06Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T19:41:38Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches, the Villanova Church and the Rosemont Chapel, read from two image-only issues (Nov 8 and Nov 15) with identical schedule boxes and intentions. Weekend and daily Masses, Saturday and First Friday confession (times worked out by POLICY from 'after Mass') and a dated Thanksgiving Mass are settled. Open: whether to list the monthly Men's Gathering Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "52fe464003cccc0b008ec59af98ab96cee5302df0be53ddce697b0ae544c02cb",
+      "fetched_at": "2026-11-15T16:47:06Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d3258fe25b45bbe4a35f435b20456a907922a497c51814e2e1dc0ce732aa0b11",
+      "fetched_at": "2026-11-08T15:55:30Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-of-villanova-church-villanova",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 1,
+          "said": "ST. THOMAS MASS SCHEDULE Villanova Church Sunday: 7:30am, 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 1,
+          "said": "ST. THOMAS MASS SCHEDULE Villanova Church Sunday: 7:30am, 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 3,
+          "said": "Sun.,Nov.22nd 7:30AM-VNCH ... 10:30AM-VNCH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 3,
+          "said": "Sun.,Nov.15th 7:30AM-VNCH ... 10:30AM-VNCH"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-of-villanova-church-villanova",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 1,
+          "said": "ST. THOMAS MASS SCHEDULE Villanova Church Sunday: 7:30am, 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 1,
+          "said": "ST. THOMAS MASS SCHEDULE Villanova Church Sunday: 7:30am, 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 3,
+          "said": "Sun.,Nov.22nd 7:30AM-VNCH ... 10:30AM-VNCH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 3,
+          "said": "Sun.,Nov.15th 7:30AM-VNCH ... 10:30AM-VNCH"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "rosemont-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 1,
+          "said": "Rosemont Chapel Saturday: 9:00am Vigil Mass: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 1,
+          "said": "Rosemont Chapel Saturday: 9:00am Vigil Mass: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 3,
+          "said": "Sat., Nov. 21st ... 4:30PM-RMCH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 3,
+          "said": "Sat., Nov.14th ... 4:30PM-RMCH"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "rosemont-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 1,
+          "said": "Rosemont Chapel Saturday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 1,
+          "said": "Rosemont Chapel Saturday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 3,
+          "said": "Sat., Nov. 21st 9:00AM-RMCH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 3,
+          "said": "Sat., Nov.14th 9:00AM-RMCH"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "rosemont-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 1,
+          "said": "Rosemont Chapel ... Sunday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 1,
+          "said": "Rosemont Chapel ... Sunday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 3,
+          "said": "Sun.,Nov.22nd 9:00AM-RMCH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 3,
+          "said": "Sun.,Nov.15th 9:00AM-RMCH"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "rosemont-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 1,
+          "said": "Rosemont Chapel ... Daily Mass: Mon-Fri: 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 1,
+          "said": "Rosemont Chapel ... Daily Mass: Mon-Fri: 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 3,
+          "said": "Mon., Nov. 16th 12:05PM-RMCH (and each day to Fri., Nov. 20th)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 3,
+          "said": "Mon., Nov. 9th 12:05PM-RMCH (and each day to Fri., Nov. 13th)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists the daily Mass at the Rosemont Chapel under the St. Thomas schedule; each day's intentions in both issues print 12:05PM-RMCH.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "rosemont-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 1,
+          "said": "Rosemont Chapel ... Daily Mass: Mon-Fri: 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 1,
+          "said": "Rosemont Chapel ... Daily Mass: Mon-Fri: 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 3,
+          "said": "Mon., Nov. 16th 12:05PM-RMCH (and each day to Fri., Nov. 20th)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 3,
+          "said": "Mon., Nov. 9th 12:05PM-RMCH (and each day to Fri., Nov. 13th)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists the daily Mass at the Rosemont Chapel under the St. Thomas schedule; each day's intentions in both issues print 12:05PM-RMCH.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "rosemont-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 1,
+          "said": "Rosemont Chapel ... Daily Mass: Mon-Fri: 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 1,
+          "said": "Rosemont Chapel ... Daily Mass: Mon-Fri: 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 3,
+          "said": "Mon., Nov. 16th 12:05PM-RMCH (and each day to Fri., Nov. 20th)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 3,
+          "said": "Mon., Nov. 9th 12:05PM-RMCH (and each day to Fri., Nov. 13th)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists the daily Mass at the Rosemont Chapel under the St. Thomas schedule; each day's intentions in both issues print 12:05PM-RMCH.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "rosemont-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 1,
+          "said": "Rosemont Chapel ... Daily Mass: Mon-Fri: 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 1,
+          "said": "Rosemont Chapel ... Daily Mass: Mon-Fri: 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 3,
+          "said": "Mon., Nov. 16th 12:05PM-RMCH (and each day to Fri., Nov. 20th)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 3,
+          "said": "Mon., Nov. 9th 12:05PM-RMCH (and each day to Fri., Nov. 13th)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists the daily Mass at the Rosemont Chapel under the St. Thomas schedule; each day's intentions in both issues print 12:05PM-RMCH.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "rosemont-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 1,
+          "said": "Rosemont Chapel ... Daily Mass: Mon-Fri: 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 1,
+          "said": "Rosemont Chapel ... Daily Mass: Mon-Fri: 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 3,
+          "said": "Mon., Nov. 16th 12:05PM-RMCH (and each day to Fri., Nov. 20th)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 3,
+          "said": "Mon., Nov. 9th 12:05PM-RMCH (and each day to Fri., Nov. 13th)"
+        }
+      ],
+      "rationale": "R1: the schedule box lists the daily Mass at the Rosemont Chapel under the St. Thomas schedule; each day's intentions in both issues print 12:05PM-RMCH.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "rosemont-chapel",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 1,
+          "said": "Reconciliation: Saturday after the 9:00am Liturgy in Rosemont Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 1,
+          "said": "Reconciliation: Saturday after the 9:00am Liturgy in Rosemont Chapel"
+        }
+      ],
+      "rationale": "R1, R10: no clock time is given, so POLICY, Times works it out. The Saturday 9:00 AM Mass is a morning Mass, not the Saturday evening vigil or a Sunday Mass that POLICY counts as weekend, so the weekday rule applies: 30 minutes after it starts, 9:30 AM, with no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "rosemont-chapel",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 12:05 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 1,
+          "said": "Reconciliation: ... First Fridays after 12:05 Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 1,
+          "said": "Reconciliation: ... First Fridays after 12:05 Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in the sacramental box of both issues. POLICY, Weekly or dated rule 2 makes it a first-week slot. After a weekday Mass is 30 minutes after it starts: 12:35 PM. It is at the Rosemont Chapel because the daily 12:05 Mass is held only there (schedule box, intentions).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "rosemont-chapel",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 1,
+          "said": "On Martin Luther King Day, Memorial Day, July 4th, Labor Day, and Thanksgiving Day Mass is at 9:00am in The Rosemont Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 1,
+          "said": "On Martin Luther King Day, Memorial Day, July 4th, Labor Day, and Thanksgiving Day Mass is at 9:00am in The Rosemont Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 3,
+          "said": "Thursday, the 26th - Thanksgiving Day."
+        }
+      ],
+      "rationale": "R1, R16: Thanksgiving Day falls on Thursday Nov 26, the date the Nov 8 issue gives it, which is after as_of. The weekly Thursday 12:05 Mass is left alone because neither issue cancels it (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 1,
+          "said": "On Martin Luther King Day, Memorial Day, July 4th, Labor Day, and Thanksgiving Day Mass is at 9:00am in The Rosemont Chapel."
+        }
+      ],
+      "rationale": "R33: an annual holiday rule the file can't express as weekly, and no issue prints the dates of MLK Day, Memorial Day, July 4th or Labor Day. Only the Thanksgiving 2026 Mass is recorded, as a dated entry. Update mode will read the issues that cover the other holidays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 1,
+          "said": "OUR MOTHER OF GOOD COUNSEL MASS SCHEDULE Saturday Vigil: 5:00pm Sunday: 8:00am, 10:00am, 7:00pm Daily Mass: Mon-Fri: 6:30am and 8:00am Saturday Morning Mass: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 1,
+          "said": "OUR MOTHER OF GOOD COUNSEL MASS SCHEDULE Saturday Vigil: 5:00pm Sunday: 8:00am, 10:00am, 7:00pm Daily Mass: Mon-Fri: 6:30am and 8:00am Saturday Morning Mass: 8:00am"
+        }
+      ],
+      "rationale": "R22: Our Mother of Good Counsel, Bryn Mawr is another parish's listed church (our-mother-of-good-counsel-bryn-mawr). Its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "rosemont-chapel",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mansion at Rosemont"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 3,
+          "said": "Tuesday, November 17, 2026 ... Mansion at Rosemont Mass 2:00PM"
+        }
+      ],
+      "rationale": "R22, R24: the Mansion at Rosemont is a residence and not on the church list. It is not the Rosemont Chapel; the slug is only a placeholder. A Mass at a residence is for its residents (POLICY, What to extract), and it is listed beside the parish's outreach ministries there.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 1,
+          "said": "Reconciliation: ... or call the Parish Center to make an appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "52fe4640",
+          "page": 3,
+          "said": "Recitation of the Rosary after the daily Liturgy."
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3258fe2",
+          "page": 5,
+          "said": "CALLING ALL MEN! Join Us for Our Monthly Men's Gathering Mass and Fellowship Thursday, November 12th @ 6:30 AM ... Men's Gathering Mass in the Rosemont Chapel ... We have Mass, Fellowship, and often a guest speaker on the second Thursday of each month, from September through June."
+        }
+      ],
+      "rationale": "R30: POLICY leaves out a Mass limited to a group, and this is a men's-group Mass ('Calling all men', 'Gentlemen, mark your calendar'), though it says 'invite a friend' and nothing turns others away. Leaning to leave out because a wrong time is worse than a missing one (POLICY). If it is included, R12 applies: the newest issue's week holds no second Thursday, so the Nov 8 issue (second week) is the one that prints it, and page is null. Not in the newest issue.",
+      "question": "Add the monthly Men's Gathering Mass (2nd Thursday, Sept-June, 6:30 AM, Rosemont Chapel)?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "2nd Thursdays 6:30 AM, Sept-June",
+          "entry": {
+            "church_slug": "rosemont-chapel",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "second"
+            ],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": "Men's Gathering Mass"
+          }
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
