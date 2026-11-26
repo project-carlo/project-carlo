@@ -1,0 +1,1470 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-isaac-jogues-wayne",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:45:44Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T19:32:02Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church; no history stored. Masses, weekday chapel exposition and Confession agree in the schedule box of both issues (Nov 8, Nov 15) and the website; Thanksgiving 9 AM replaces the 12:05 that day. Open: weekend Adoration times (bulletin vs website), a website-only first-Friday 9 PM Night of Reparation Mass, and the undated Christmas/New Year times in the standing box.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4d8e36d3fbdb42643e48455aa37e7782dc2ba80c1490abe473c147512fe510a0",
+      "fetched_at": "2026-11-15T16:45:44Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "5f04ba4a48023b99eaf827a203bf20cd90866bf19bb8a98ad088675ff0ef21f8",
+      "fetched_at": "2026-11-08T15:54:25Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Daily Mass Mon.-Fri.12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Daily Mass Mon.-Fri.12:05pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list a 12:05pm Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Daily Mass Mon.-Fri.12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Daily Mass Mon.-Fri.12:05pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list a 12:05pm Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Daily Mass Mon.-Fri.12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Daily Mass Mon.-Fri.12:05pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list a 12:05pm Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Daily Mass Mon.-Fri.12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Daily Mass Mon.-Fri.12:05pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list a 12:05pm Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Daily Mass Mon.-Fri.12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Daily Mass Mon.-Fri.12:05pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list a 12:05pm Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Saturday: 8am Daily & 5pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Saturday: 8am Daily & 5pm Vigil"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues and the Saturday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Saturday: 8am Daily & 5pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Saturday: 8am Daily & 5pm Vigil"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues and the Saturday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Sunday: 8 & 10:30am, 12 Noon & 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Sunday: 8 & 10:30am, 12 Noon & 5pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues and the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Sunday: 8 & 10:30am, 12 Noon & 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Sunday: 8 & 10:30am, 12 Noon & 5pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues and the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Sunday: 8 & 10:30am, 12 Noon & 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Sunday: 8 & 10:30am, 12 Noon & 5pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues and the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Youth Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Sunday: 8 & 10:30am, 12 Noon & 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Sunday: 8 & 10:30am, 12 Noon & 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 5,
+          "said": "our Mass Schedule includes a weekly Youth Mass, every Sunday evening at 5:00 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; POLICY keeps a Mass 'with' a group open, and p5 calls it part of the Mass Schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "The Chapel will open at 8:00am with Exposition from 8:30am to 8pm Mon.-Fri."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "The Chapel will open at 8:00am with Exposition from 8:30am to 8pm Mon.-Fri."
+        }
+      ],
+      "rationale": "R1, R38: exposition hours in the schedule box of both issues. The chapel is taken to be on the parish's one campus at 50 West Walker Road: the parish prints no other address and the website pairs it with the main church ('The Adoration Chapel is open... The main Church is open daily'); POLICY, Churches and chapels.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "The Chapel will open at 8:00am with Exposition from 8:30am to 8pm Mon.-Fri."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "The Chapel will open at 8:00am with Exposition from 8:30am to 8pm Mon.-Fri."
+        }
+      ],
+      "rationale": "R1, R38: exposition hours in the schedule box of both issues. The chapel is taken to be on the parish's one campus at 50 West Walker Road: the parish prints no other address and the website pairs it with the main church ('The Adoration Chapel is open... The main Church is open daily'); POLICY, Churches and chapels.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "The Chapel will open at 8:00am with Exposition from 8:30am to 8pm Mon.-Fri."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "The Chapel will open at 8:00am with Exposition from 8:30am to 8pm Mon.-Fri."
+        }
+      ],
+      "rationale": "R1, R38: exposition hours in the schedule box of both issues. The chapel is taken to be on the parish's one campus at 50 West Walker Road: the parish prints no other address and the website pairs it with the main church ('The Adoration Chapel is open... The main Church is open daily'); POLICY, Churches and chapels.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "The Chapel will open at 8:00am with Exposition from 8:30am to 8pm Mon.-Fri."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "The Chapel will open at 8:00am with Exposition from 8:30am to 8pm Mon.-Fri."
+        }
+      ],
+      "rationale": "R1, R38: exposition hours in the schedule box of both issues. The chapel is taken to be on the parish's one campus at 50 West Walker Road: the parish prints no other address and the website pairs it with the main church ('The Adoration Chapel is open... The main Church is open daily'); POLICY, Churches and chapels.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel; Holy Hour for Life 11 AM-12 PM"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "The Chapel will open at 8:00am with Exposition from 8:30am to 8pm Mon.-Fri."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "The Chapel will open at 8:00am with Exposition from 8:30am to 8pm Mon.-Fri."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 2,
+          "said": "Every Monday the Legion of Mary will lead a Holy Hour for Life from 11 am to 12 pm in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 2,
+          "said": "Every Monday the Legion of Mary will lead a Holy Hour for Life from 11 am to 12 pm in the Chapel"
+        }
+      ],
+      "rationale": "R1, R38 as for Tue-Fri; R37: the Monday 11-12 Holy Hour lies inside this exposition, so it is a note, not a second slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Open Sat. & Sun. 7:30am exposition after the 8:00 am Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Open Sat. & Sun. 7:30am exposition after the 8:00 am Mass."
+        },
+        {
+          "source": "website",
+          "url": "https://stisaac.org/",
+          "said": "Adoration in Chapel: Every day 8:30 AM - 8 PM"
+        }
+      ],
+      "rationale": "R6, R30: the bulletin gives no clock time or end; POLICY, Times puts it 30 min after the Saturday 8am Mass (the box calls it 'Daily'). The website gives 8:30-8 every day but also says weekday exposition 'begins after the 8AM Mass', a weekday Mass the revised schedule no longer has, so it is partly stale. Leaning to the bulletin's own timing.",
+      "question": "Weekend Adoration in the chapel: which times?",
+      "options": [
+        {
+          "label": "Bulletin, POLICY timing: Sat from 8:30 AM, Sun from 9:00 AM, no end",
+          "entry": {
+            "church_slug": "st-isaac-jogues-wayne",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel; after the 8:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Website: 8:30 AM-8:00 PM",
+          "entry": {
+            "church_slug": "st-isaac-jogues-wayne",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekend-adoration"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Open Sat. & Sun. 7:30am exposition after the 8:00 am Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Open Sat. & Sun. 7:30am exposition after the 8:00 am Mass."
+        },
+        {
+          "source": "website",
+          "url": "https://stisaac.org/",
+          "said": "Adoration in Chapel: Every day 8:30 AM - 8 PM"
+        }
+      ],
+      "rationale": "R6, R30: the bulletin gives no clock time or end; POLICY, Times puts it an hour after the Sunday 8am Mass. The website gives 8:30-8 every day but also says weekday exposition 'begins after the 8AM Mass', a weekday Mass the revised schedule no longer has, so it is partly stale. Leaning to the bulletin's own timing.",
+      "question": "Weekend Adoration in the chapel: which times?",
+      "options": [
+        {
+          "label": "Bulletin, POLICY timing: Sat from 8:30 AM, Sun from 9:00 AM, no end",
+          "entry": {
+            "church_slug": "st-isaac-jogues-wayne",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel; after the 8:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Website: 8:30 AM-8:00 PM",
+          "entry": {
+            "church_slug": "st-isaac-jogues-wayne",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekend-adoration"
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturday 3:45 to 4:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturday 3:45 to 4:45pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the website gives the same 'Saturdays: 3:45 - 4:45 PM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 12:05 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "and after the 12:05pm Mass on First Friday only."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "and after the 12:05pm Mass on First Friday only."
+        }
+      ],
+      "rationale": "R1, R10: printed in the schedule box of both issues; POLICY, Times puts it 30 minutes after the weekday 12:05 Mass. The website's silence on it is no conflict (R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Night of Reparation – 1st Friday 7:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Night of Reparation – 1st Friday 7:30 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stisaac.org/",
+          "said": "1st Friday Night of Reparation: Begins at 7:30 PM, Mass at 9:00 PM"
+        }
+      ],
+      "rationale": "R6, R29: the bulletin prints only 'Night of Reparation – 1st Friday 7:30 pm' under MASS SCHEDULE; the website's schedule adds 'Mass at 9:00 PM' and fits it (same start). Asked because the site is partly stale (Holy Day 7:30 PM vs the bulletin's 7:00pm; its Night of Reparation page now returns 'page not found'). Leaning include: the bulletin still lists the Night of Reparation in Nov 2026 and the site's weekend, weekday and Thanksgiving times match it.",
+      "question": "Add a first-Friday 9:00 PM Mass (Night of Reparation)?",
+      "options": [
+        {
+          "label": "First Fridays 9:00 PM",
+          "entry": {
+            "church_slug": "st-isaac-jogues-wayne",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "21:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Night of Reparation"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Night of Reparation"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Night of Reparation – 1st Friday 7:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Night of Reparation – 1st Friday 7:30 pm"
+        }
+      ],
+      "rationale": "R24: neither the bulletin nor the website calls the 7:30 PM Night of Reparation a Mass, Confession or Adoration; its Mass is the separate question above.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 4,
+          "said": "There will be only one Mass on Thanksgiving, Thursday, November 26th, at 9:00 AM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Only Memorial Day, Independence Day, & Labor Day, Thanksgiving, National Holidays: are at 9:00 am"
+        }
+      ],
+      "rationale": "R1, R16: dated Mass on or after as_of; the website's notice agrees ('Mass on Thanksgiving Day at 9 AM').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-wayne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 4,
+          "said": "There will be only one Mass on Thanksgiving, Thursday, November 26th, at 9:00 AM."
+        }
+      ],
+      "rationale": "R16, POLICY Weekly or dated: 'only one Mass ... at 9:00 AM' says the Thursday 12:05 Mass does not take place that day (moved to 9:00).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Holy Day: 8am, 12:05pm & 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: a generic holy-day line pins no date, so no entry. Note the website gives 'Holy Day Masses: 8:00 AM, 12:05 PM & 7:30 PM' (7:30 vs 7:00); update mode should read the dated notices.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 5,
+          "said": "Youth Nights will be held every Thursday from 6:30 PM - 9 PM. The evening includes ... Adoration in the Chapel"
+        }
+      ],
+      "rationale": "R24, R26: Adoration within a youth-group evening, with no time of its own (POLICY, Final source checks).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Christmas Eve: 5 pm & 8 pm Christmas Day : 8am, 10:30am, & 12pm New Years Eve:8am, 12:05pm & 5pm New Years Day 8am & 12:05"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Christmas Eve: 5 pm & 8 pm Christmas Day : 8am, 10:30am, & 12pm New Years Eve:8am, 12:05pm & 5pm New Years Day 8am & 12:05"
+        }
+      ],
+      "rationale": "R30: the times sit in the year-round schedule box with no year or date, beside a generic Holy Day line; POLICY, Dates is unclear whether a named feast pins its date. Leaning leave out: the box is not this year's notice (it does not say whether the Friday 12:05 Mass yields on Christmas Day), and update mode will read December's dated schedule. The 12:05 Masses on Dec 31 and Jan 1 are the weekly slots.",
+      "question": "Add the Christmas and New Year Masses from the standing schedule box?",
+      "options": [
+        {
+          "label": "Add them",
+          "entry": {
+            "church_slug": "st-isaac-jogues-wayne",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s28",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Christmas Eve: 5 pm & 8 pm Christmas Day : 8am, 10:30am, & 12pm New Years Eve:8am, 12:05pm & 5pm New Years Day 8am & 12:05"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Christmas Eve: 5 pm & 8 pm Christmas Day : 8am, 10:30am, & 12pm New Years Eve:8am, 12:05pm & 5pm New Years Day 8am & 12:05"
+        }
+      ],
+      "rationale": "R30: the times sit in the year-round schedule box with no year or date, beside a generic Holy Day line; POLICY, Dates is unclear whether a named feast pins its date. Leaning leave out: the box is not this year's notice (it does not say whether the Friday 12:05 Mass yields on Christmas Day), and update mode will read December's dated schedule. The 12:05 Masses on Dec 31 and Jan 1 are the weekly slots.",
+      "question": "Add the Christmas and New Year Masses from the standing schedule box?",
+      "options": [
+        {
+          "label": "Add them",
+          "entry": {
+            "church_slug": "st-isaac-jogues-wayne",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "20:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s29",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Christmas Eve: 5 pm & 8 pm Christmas Day : 8am, 10:30am, & 12pm New Years Eve:8am, 12:05pm & 5pm New Years Day 8am & 12:05"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Christmas Eve: 5 pm & 8 pm Christmas Day : 8am, 10:30am, & 12pm New Years Eve:8am, 12:05pm & 5pm New Years Day 8am & 12:05"
+        }
+      ],
+      "rationale": "R30: the times sit in the year-round schedule box with no year or date, beside a generic Holy Day line; POLICY, Dates is unclear whether a named feast pins its date. Leaning leave out: the box is not this year's notice (it does not say whether the Friday 12:05 Mass yields on Christmas Day), and update mode will read December's dated schedule. The 12:05 Masses on Dec 31 and Jan 1 are the weekly slots.",
+      "question": "Add the Christmas and New Year Masses from the standing schedule box?",
+      "options": [
+        {
+          "label": "Add them",
+          "entry": {
+            "church_slug": "st-isaac-jogues-wayne",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s30",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Christmas Eve: 5 pm & 8 pm Christmas Day : 8am, 10:30am, & 12pm New Years Eve:8am, 12:05pm & 5pm New Years Day 8am & 12:05"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Christmas Eve: 5 pm & 8 pm Christmas Day : 8am, 10:30am, & 12pm New Years Eve:8am, 12:05pm & 5pm New Years Day 8am & 12:05"
+        }
+      ],
+      "rationale": "R30: the times sit in the year-round schedule box with no year or date, beside a generic Holy Day line; POLICY, Dates is unclear whether a named feast pins its date. Leaning leave out: the box is not this year's notice (it does not say whether the Friday 12:05 Mass yields on Christmas Day), and update mode will read December's dated schedule. The 12:05 Masses on Dec 31 and Jan 1 are the weekly slots.",
+      "question": "Add the Christmas and New Year Masses from the standing schedule box?",
+      "options": [
+        {
+          "label": "Add them",
+          "entry": {
+            "church_slug": "st-isaac-jogues-wayne",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s31",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Christmas Eve: 5 pm & 8 pm Christmas Day : 8am, 10:30am, & 12pm New Years Eve:8am, 12:05pm & 5pm New Years Day 8am & 12:05"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Christmas Eve: 5 pm & 8 pm Christmas Day : 8am, 10:30am, & 12pm New Years Eve:8am, 12:05pm & 5pm New Years Day 8am & 12:05"
+        }
+      ],
+      "rationale": "R30: the times sit in the year-round schedule box with no year or date, beside a generic Holy Day line; POLICY, Dates is unclear whether a named feast pins its date. Leaning leave out: the box is not this year's notice (it does not say whether the Friday 12:05 Mass yields on Christmas Day), and update mode will read December's dated schedule. The 12:05 Masses on Dec 31 and Jan 1 are the weekly slots.",
+      "question": "Add the Christmas and New Year Masses from the standing schedule box?",
+      "options": [
+        {
+          "label": "Add them",
+          "entry": {
+            "church_slug": "st-isaac-jogues-wayne",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s32",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Christmas Eve: 5 pm & 8 pm Christmas Day : 8am, 10:30am, & 12pm New Years Eve:8am, 12:05pm & 5pm New Years Day 8am & 12:05"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Christmas Eve: 5 pm & 8 pm Christmas Day : 8am, 10:30am, & 12pm New Years Eve:8am, 12:05pm & 5pm New Years Day 8am & 12:05"
+        }
+      ],
+      "rationale": "R30: the times sit in the year-round schedule box with no year or date, beside a generic Holy Day line; POLICY, Dates is unclear whether a named feast pins its date. Leaning leave out: the box is not this year's notice (it does not say whether the Friday 12:05 Mass yields on Christmas Day), and update mode will read December's dated schedule. The 12:05 Masses on Dec 31 and Jan 1 are the weekly slots.",
+      "question": "Add the Christmas and New Year Masses from the standing schedule box?",
+      "options": [
+        {
+          "label": "Add them",
+          "entry": {
+            "church_slug": "st-isaac-jogues-wayne",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-31",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s33",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Christmas Eve: 5 pm & 8 pm Christmas Day : 8am, 10:30am, & 12pm New Years Eve:8am, 12:05pm & 5pm New Years Day 8am & 12:05"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Christmas Eve: 5 pm & 8 pm Christmas Day : 8am, 10:30am, & 12pm New Years Eve:8am, 12:05pm & 5pm New Years Day 8am & 12:05"
+        }
+      ],
+      "rationale": "R30: the times sit in the year-round schedule box with no year or date, beside a generic Holy Day line; POLICY, Dates is unclear whether a named feast pins its date. Leaning leave out: the box is not this year's notice (it does not say whether the Friday 12:05 Mass yields on Christmas Day), and update mode will read December's dated schedule. The 12:05 Masses on Dec 31 and Jan 1 are the weekly slots.",
+      "question": "Add the Christmas and New Year Masses from the standing schedule box?",
+      "options": [
+        {
+          "label": "Add them",
+          "entry": {
+            "church_slug": "st-isaac-jogues-wayne",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-31",
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s34",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d8e36d3",
+          "page": 1,
+          "said": "Christmas Eve: 5 pm & 8 pm Christmas Day : 8am, 10:30am, & 12pm New Years Eve:8am, 12:05pm & 5pm New Years Day 8am & 12:05"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f04ba4a",
+          "page": 1,
+          "said": "Christmas Eve: 5 pm & 8 pm Christmas Day : 8am, 10:30am, & 12pm New Years Eve:8am, 12:05pm & 5pm New Years Day 8am & 12:05"
+        }
+      ],
+      "rationale": "R30: the times sit in the year-round schedule box with no year or date, beside a generic Holy Day line; POLICY, Dates is unclear whether a named feast pins its date. Leaning leave out: the box is not this year's notice (it does not say whether the Friday 12:05 Mass yields on Christmas Day), and update mode will read December's dated schedule. The 12:05 Masses on Dec 31 and Jan 1 are the weekly slots.",
+      "question": "Add the Christmas and New Year Masses from the standing schedule box?",
+      "options": [
+        {
+          "label": "Add them",
+          "entry": {
+            "church_slug": "st-isaac-jogues-wayne",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2027-01-01",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    }
+  ]
+}
