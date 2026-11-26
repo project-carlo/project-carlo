@@ -1,0 +1,784 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-colman-ardmore",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:54Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T21:11:01Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both issues (Nov 8, Nov 15) and the website agree: Sat 4 PM vigil, Sun 8, 9:30 and 12, Mon-Sat 8 AM Mass, Sat 3-3:45 PM confession. Open: the Immaculate Conception vigil and noon Mass from the standing Holy Days line, and Nov 30 6 PM Exposition/Benediction at the St. Francis evening.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ed63cf958ca13796b9582628280dda540d6955b4f3212f7690b6d294bd3198ef",
+      "fetched_at": "2026-11-15T16:44:54Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "21b3b3e9fadf13df4078a4d5fa4abbe2a9f8af3f069b80b9d23331a1498ceee5",
+      "fetched_at": "2026-11-08T15:53:48Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-colman-ardmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 1,
+          "said": "SUNDAY: 4:00 PM Vigil, 8:00 AM, 9:30 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 1,
+          "said": "SUNDAY: 4:00 PM Vigil, 8:00 AM, 9:30 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 2,
+          "said": "Sunday, November 15 4:00 P.M. James and Mary McBride"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcolmanardmore.com/mass-times",
+          "said": "Saturday Vigil: 4:00 PM"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues prints the 4:00 PM Vigil under SUNDAY; a Sunday vigil is the Saturday evening Mass, as the website's 'Saturday Vigil: 4:00 PM' says.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-colman-ardmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 1,
+          "said": "SUNDAY: 4:00 PM Vigil, 8:00 AM, 9:30 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 1,
+          "said": "SUNDAY: 4:00 PM Vigil, 8:00 AM, 9:30 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 2,
+          "said": "8:00 A.M. ... 9:30 A.M. ... 12:00 P.M."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-colman-ardmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 1,
+          "said": "SUNDAY: 4:00 PM Vigil, 8:00 AM, 9:30 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 1,
+          "said": "SUNDAY: 4:00 PM Vigil, 8:00 AM, 9:30 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 2,
+          "said": "8:00 A.M. ... 9:30 A.M. ... 12:00 P.M."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-colman-ardmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 1,
+          "said": "SUNDAY: 4:00 PM Vigil, 8:00 AM, 9:30 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 1,
+          "said": "SUNDAY: 4:00 PM Vigil, 8:00 AM, 9:30 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 2,
+          "said": "8:00 A.M. ... 9:30 A.M. ... 12:00 P.M."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-colman-ardmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 1,
+          "said": "WEEKDAYS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 1,
+          "said": "WEEKDAYS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 2,
+          "said": "Saturday, November 21 ... 8:00 A.M. Anthony Piergiovanni"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 2,
+          "said": "Saturday, November 14 BVM 8:00 A.M. Marie C. Palmarino +"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcolmanardmore.com/mass-times",
+          "said": "Weekday Mass: Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: the box's WEEKDAYS 8:00 AM and both weeks' intentions list 8:00 AM Monday through Saturday; the Rosary note says 'before the 8:00 A.M. Weekday Mass, Monday through Saturday'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-colman-ardmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 1,
+          "said": "WEEKDAYS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 1,
+          "said": "WEEKDAYS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 2,
+          "said": "Saturday, November 21 ... 8:00 A.M. Anthony Piergiovanni"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 2,
+          "said": "Saturday, November 14 BVM 8:00 A.M. Marie C. Palmarino +"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcolmanardmore.com/mass-times",
+          "said": "Weekday Mass: Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: the box's WEEKDAYS 8:00 AM and both weeks' intentions list 8:00 AM Monday through Saturday; the Rosary note says 'before the 8:00 A.M. Weekday Mass, Monday through Saturday'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-colman-ardmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 1,
+          "said": "WEEKDAYS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 1,
+          "said": "WEEKDAYS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 2,
+          "said": "Saturday, November 21 ... 8:00 A.M. Anthony Piergiovanni"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 2,
+          "said": "Saturday, November 14 BVM 8:00 A.M. Marie C. Palmarino +"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcolmanardmore.com/mass-times",
+          "said": "Weekday Mass: Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: the box's WEEKDAYS 8:00 AM and both weeks' intentions list 8:00 AM Monday through Saturday; the Rosary note says 'before the 8:00 A.M. Weekday Mass, Monday through Saturday'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-colman-ardmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 1,
+          "said": "WEEKDAYS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 1,
+          "said": "WEEKDAYS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 2,
+          "said": "Saturday, November 21 ... 8:00 A.M. Anthony Piergiovanni"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 2,
+          "said": "Saturday, November 14 BVM 8:00 A.M. Marie C. Palmarino +"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcolmanardmore.com/mass-times",
+          "said": "Weekday Mass: Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: the box's WEEKDAYS 8:00 AM and both weeks' intentions list 8:00 AM Monday through Saturday; the Rosary note says 'before the 8:00 A.M. Weekday Mass, Monday through Saturday'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-colman-ardmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 1,
+          "said": "WEEKDAYS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 1,
+          "said": "WEEKDAYS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 2,
+          "said": "Saturday, November 21 ... 8:00 A.M. Anthony Piergiovanni"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 2,
+          "said": "Saturday, November 14 BVM 8:00 A.M. Marie C. Palmarino +"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcolmanardmore.com/mass-times",
+          "said": "Weekday Mass: Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: the box's WEEKDAYS 8:00 AM and both weeks' intentions list 8:00 AM Monday through Saturday; the Rosary note says 'before the 8:00 A.M. Weekday Mass, Monday through Saturday'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-colman-ardmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 1,
+          "said": "WEEKDAYS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 1,
+          "said": "WEEKDAYS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 2,
+          "said": "Saturday, November 21 ... 8:00 A.M. Anthony Piergiovanni"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 2,
+          "said": "Saturday, November 14 BVM 8:00 A.M. Marie C. Palmarino +"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcolmanardmore.com/mass-times",
+          "said": "Weekday Mass: Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: the box's WEEKDAYS 8:00 AM and both weeks' intentions list 8:00 AM Monday through Saturday; the Rosary note says 'before the 8:00 A.M. Weekday Mass, Monday through Saturday'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-colman-ardmore",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE (Confession) Saturdays: 3:00 PM - 3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE (Confession) Saturdays: 3:00 PM - 3:45 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcolmanardmore.com/confession-times",
+          "said": "Saturdays: 3:00 P.M. - 3:45 P.M."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 1,
+          "said": "HOLY DAYS: 6:00 PM Vigil, 8:00 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 4,
+          "said": "SAVE THE DATES IMMACULATE CONCEPTION -December 8"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 3,
+          "said": "-December 7: Vigil for Immaculate Conception"
+        }
+      ],
+      "rationale": "R30: the times come from the standing Holy Days line; the dated notices (newest p4, older p3) tie it to this year's Dec 7 vigil and Dec 8 solemnity. Leaning per precedent our-lady-of-consolation-parkesburg s12. The Dec 8 8:00 AM Mass is the weekly Tuesday 8 AM slot, so it is not repeated (POLICY, Weekly or dated rule 6).",
+      "question": "Add the Immaculate Conception Masses from the standing Holy Days line: Mon Dec 7 6:00 PM vigil and Tue Dec 8 12:00 PM?",
+      "options": [
+        {
+          "label": "Include Dec 7 6 PM and Dec 8 12 PM",
+          "entry": {
+            "church_slug": "st-colman-ardmore",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Vigil of the Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "immaculate"
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 1,
+          "said": "HOLY DAYS: 6:00 PM Vigil, 8:00 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 4,
+          "said": "SAVE THE DATES IMMACULATE CONCEPTION -December 8"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 3,
+          "said": "-December 7: Vigil for Immaculate Conception"
+        }
+      ],
+      "rationale": "R30: the times come from the standing Holy Days line; the dated notices (newest p4, older p3) tie it to this year's Dec 7 vigil and Dec 8 solemnity. Leaning per precedent our-lady-of-consolation-parkesburg s12. The Dec 8 8:00 AM Mass is the weekly Tuesday 8 AM slot, so it is not repeated (POLICY, Weekly or dated rule 6).",
+      "question": "Add the Immaculate Conception Masses from the standing Holy Days line: Mon Dec 7 6:00 PM vigil and Tue Dec 8 12:00 PM?",
+      "options": [
+        {
+          "label": "Include Dec 7 6 PM and Dec 8 12 PM",
+          "entry": {
+            "church_slug": "st-colman-ardmore",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "immaculate"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 4,
+          "said": "SAINT FRANCS OF ASSISI AT CHRISTMAS NOVEMBER 30 - 6:00 P.M. ... Exposition of the Blessed Sacrament / Litany of Saint Francis / Presentation on Saint Francis / Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 3,
+          "said": "-November 30: An Evening with Saint Franics of Assisi on the 800th Anniversary of his death."
+        }
+      ],
+      "rationale": "R30: Exposition and Benediction are Adoration (POLICY), and Exposition is the first item of an evening that starts at 6:00 PM, but POLICY's final checks say a larger event doesn't time its components. No place is printed; the parish has one church. Leaning include at the printed start, as st-aloysius-pottstown s17 did for a penance service, with no end.",
+      "question": "Add Adoration on Mon Nov 30 at 6:00 PM (Exposition and Benediction at the Saint Francis of Assisi at Christmas evening)?",
+      "options": [
+        {
+          "label": "Nov 30 6:00 PM, no end",
+          "entry": {
+            "church_slug": "st-colman-ardmore",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-30",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction; Saint Francis of Assisi at Christmas evening"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed63cf95",
+          "page": 4,
+          "said": "PENANCE SERVICE -December 14"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21b3b3e9",
+          "page": 3,
+          "said": "-December 14: Advent Penance Service Guest Priests available for Confessions"
+        }
+      ],
+      "rationale": "R26: the Dec 14 penance service has no time in either issue; update mode will read the issue that times it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stcolmanardmore.com/mass-times",
+          "said": "Exceptions: Christmas - 4:00 PM Vigil, 8:00 AM, 9:30 AM and 11:00 AM and New Years Day - 9:00 AM Only"
+        }
+      ],
+      "rationale": "R16, R6: the website's Christmas and New Year exceptions carry no year and no read bulletin prints them; left out as in precedent st-isaac-jogues-wayne s27. December issues will print this year's schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
