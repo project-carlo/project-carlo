@@ -1,0 +1,521 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-of-the-assumption-phoenixville",
+  "status": "ready",
+  "as_of": "2026-11-15T16:46:24Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T19:02:15Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: Sat 4 PM vigil, weekday 8 AM Mass (Mon-Thu), Wed Adoration 8:30 AM-6:30 PM and Confession 6:30-7 PM, Sat Adoration 3-3:45 PM at Holy Trinity; Sunday 8:15 and 10:45 AM at St. Mary. The schedule box is identical in both bulletins (Nov 8, Nov 15); no history stored. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6d5a158acab695b10d9d8b947122d8def54dde2726caae234637850e7eab915f",
+      "fetched_at": "2026-11-15T16:46:24Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c725ca2531505a03276955fa6fe2386000886ed6ba43933fb66b9e8e3f1d65ba",
+      "fetched_at": "2026-11-08T15:54:59Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 2,
+          "said": "Mass Schedule Sat: 4:00 PM (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c725ca25",
+          "page": 2,
+          "said": "Mass Schedule Sat: 4:00 PM (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 4,
+          "said": "11/21 Sat 4:00 PM Edmund Yenchick; 11/28 Sat 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read (HT = Holy Trinity), and in each week's Upcoming Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 2,
+          "said": "Sun: 8:15 AM, 10:45 AM (STM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c725ca25",
+          "page": 2,
+          "said": "Sun: 8:15 AM, 10:45 AM (STM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 4,
+          "said": "11/15 Sun 8:15 AM ... 10:45 AM; 11/22 Sun 8:15 AM ... 10:45 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read (STM = St. Mary), and in Upcoming Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 2,
+          "said": "Sun: 8:15 AM, 10:45 AM (STM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c725ca25",
+          "page": 2,
+          "said": "Sun: 8:15 AM, 10:45 AM (STM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 4,
+          "said": "11/15 Sun 8:15 AM ... 10:45 AM; 11/22 Sun 8:15 AM ... 10:45 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read (STM = St. Mary), and in Upcoming Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 2,
+          "said": "Daily: Mon-Thu: 8:00 AM (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c725ca25",
+          "page": 2,
+          "said": "Daily: Mon-Thu: 8:00 AM (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 4,
+          "said": "11/16 Mon 8:00 AM ... 11/19 Thu 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; Upcoming Masses lists 8:00 AM Mon-Thu both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 2,
+          "said": "Daily: Mon-Thu: 8:00 AM (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c725ca25",
+          "page": 2,
+          "said": "Daily: Mon-Thu: 8:00 AM (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 4,
+          "said": "11/16 Mon 8:00 AM ... 11/19 Thu 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; Upcoming Masses lists 8:00 AM Mon-Thu both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 2,
+          "said": "Daily: Mon-Thu: 8:00 AM (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c725ca25",
+          "page": 2,
+          "said": "Daily: Mon-Thu: 8:00 AM (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 4,
+          "said": "11/16 Mon 8:00 AM ... 11/19 Thu 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; Upcoming Masses lists 8:00 AM Mon-Thu both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 2,
+          "said": "Daily: Mon-Thu: 8:00 AM (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c725ca25",
+          "page": 2,
+          "said": "Daily: Mon-Thu: 8:00 AM (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 4,
+          "said": "11/16 Mon 8:00 AM ... 11/19 Thu 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; Upcoming Masses lists 8:00 AM Mon-Thu both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-phoenixville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 4,
+          "said": "11/20 Fri 8:00 AM No Mass; 11/27 Fri 8:00 AM No Mass"
+        }
+      ],
+      "rationale": "R39, R17: the intentions list's Friday 8:00 AM line reads 'No Mass' every week (also c725ca253150 p4); the schedule box gives daily Mass Mon-Thu only, so it is a template line, not a Mass or a dated cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-phoenixville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 2,
+          "said": "Confessions Wed: 6:30 PM to 7:00 PM (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c725ca25",
+          "page": 2,
+          "said": "Confessions Wed: 6:30 PM to 7:00 PM (HT)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-phoenixville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 2,
+          "said": "Adoration Wed: 8:30 AM to 6:30 PM (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c725ca25",
+          "page": 2,
+          "said": "Adoration Wed: 8:30 AM to 6:30 PM (HT)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-phoenixville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d5a158a",
+          "page": 2,
+          "said": "Adoration Sat: 3:00 PM to 3:45 PM (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c725ca25",
+          "page": 2,
+          "said": "Adoration Sat: 3:00 PM to 3:45 PM (HT)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c725ca25",
+          "page": 6,
+          "said": "Every month, we offer a Mass and a Communion Service for the Catholic residents of Parkhouse"
+        }
+      ],
+      "rationale": "R22, R26, POLICY: a Mass for the residents of Parkhouse Nursing and Rehab Center, off-site and limited to residents, with no time given (the 2:30pm third Thursday is the Communion Service and Rosary).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c725ca25",
+          "page": 5,
+          "said": "This Wednesday, 11/11, the Phoenixville Hub is hosting a Young Adult Adoration and Happy Hour at 6:30 P.M. in our Holy Trinity Church"
+        }
+      ],
+      "rationale": "R16: a dated event before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
