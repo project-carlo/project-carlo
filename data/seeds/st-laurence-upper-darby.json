@@ -1,0 +1,864 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-laurence-upper-darby",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T23:40:35Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: St. Laurence (all English and Spanish Masses, Saturday confession) and St. Alice (Sunday 10 AM Vietnamese). Both bulletins (Nov 8, Nov 15; image-only) print the same schedule box. Open: Wednesday Adoration start (box 9:30 vs 9:00 elsewhere) and a Dec 11 Guadalupe Mass with no church named; the website's Wednesday 6:30 PM Spanish Mass is left out as contradicted by the intentions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c5b5eebc75214c0f4ad1f13ba5c687cd8748b90bf4fb3942fafcb8f15b46ceea",
+      "fetched_at": "2026-11-15T16:46:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c25a4c91f16827a7e3e921da632a48cbdd7c58f81ba8ff0765c709a4dba09253",
+      "fetched_at": "2026-11-08T15:54:47Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 1,
+          "said": "Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 1,
+          "said": "Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 3,
+          "said": "8:30 AM listed Mon Nov 16 - Sat Nov 21"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read and in each weekday's intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 1,
+          "said": "Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 1,
+          "said": "Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 3,
+          "said": "8:30 AM listed Mon Nov 16 - Sat Nov 21"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read and in each weekday's intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 1,
+          "said": "Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 1,
+          "said": "Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 3,
+          "said": "8:30 AM listed Mon Nov 16 - Sat Nov 21"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read and in each weekday's intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 1,
+          "said": "Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 1,
+          "said": "Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 3,
+          "said": "8:30 AM listed Mon Nov 16 - Sat Nov 21"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read and in each weekday's intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 1,
+          "said": "Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 1,
+          "said": "Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 3,
+          "said": "8:30 AM listed Mon Nov 16 - Sat Nov 21"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read and in each weekday's intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 1,
+          "said": "Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 1,
+          "said": "Monday - Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 3,
+          "said": "8:30 AM listed Mon Nov 16 - Sat Nov 21"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read and in each weekday's intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 1,
+          "said": "Saturday Vigil/Vigilia del sábado 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 1,
+          "said": "Saturday Vigil/Vigilia del sábado 4:30PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the Sat Nov 21 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 1,
+          "said": "Saturday Vigil/Vigilia del sábado ... 7:00PM en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 1,
+          "said": "Saturday Vigil/Vigilia del sábado ... 7:00PM en Español"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; intentions list Sat 7:00 PM Misa Comunitaria.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 1,
+          "said": "Sunday 7:30AM & 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 1,
+          "said": "Sunday 7:30AM & 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the Sunday intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 1,
+          "said": "Sunday 7:30AM & 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 1,
+          "said": "Sunday 7:30AM & 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the Sunday intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 1,
+          "said": "Domingo 9:00AM en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 1,
+          "said": "Domingo 9:00AM en Español"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; Sunday intentions list 9:00 AM Misa Comunitaria.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-alice-church-upper-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 1,
+          "said": "St. Alice Sunday 10:00AM in Vietnamese"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 1,
+          "said": "St. Alice Sunday 10:00AM in Vietnamese"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintlaurencedelco.org/",
+          "said": "St. Alice, Sunday — 10:00 AM in Vietnamese"
+        }
+      ],
+      "rationale": "R1: printed under St. Alice in the p1 box of both issues. The website's body says 10:30AM but its own footer says 10:00 AM, agreeing with the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 1,
+          "said": "Confessions/Confesiones Saturdays 3:30PM or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 1,
+          "said": "Confessions/Confesiones Saturdays 3:30PM or by appointment."
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintlaurencedelco.org/",
+          "said": "Saturday — Saturdays 3:30 PM."
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues; no end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 1,
+          "said": "Confessions ... or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintlaurencedelco.org/",
+          "said": "Wednesday — 6:30PM en español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 3,
+          "said": "WEDNESDAY, NOVEMBER 18 8:30 AM Jim Black"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 3,
+          "said": "WEDNESDAY, NOVEMBER 11 ... 8:30 AM All Veterans"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 2,
+          "said": "ROSARIO Y CLASE BÍBLICA Miércoles, 7:00PM, Iglesia"
+        }
+      ],
+      "rationale": "R6: website-only Wednesday Spanish Mass conflicts with the bulletins. Neither issue's schedule box prints it, both weeks' intentions list only 8:30 AM on Wednesday while they do list the Saturday 7 PM Spanish Mass, and the Spanish Rosary and Bible class holds the church Wednesdays at 7 PM. The website's other block is partly inconsistent (St. Alice 10:30 vs its footer's 10:00). On a public site a wrong time is worse than a missing one; update mode will catch it if bulletins print it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": "23:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigilia en Español"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintlaurencedelco.org/",
+          "said": "Vigilia en Español: primer Sabado del mes de 8:00PM - 11:00 PM"
+        }
+      ],
+      "rationale": "R24: a prayer vigil listed under Devotions; nothing calls it Adoration, Exposition or a Holy Hour (POLICY), and no bulletin prints it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 1,
+          "said": "Adoración del Santísimo Sacramento Wednesdays 9:30AM – 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 1,
+          "said": "Adoración del Santísimo Sacramento Wednesdays 9:30AM – 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 2,
+          "said": "WEDNESDAY ADORATION is offered each Wednesday, 9:00AM to 7:00PM. Adoration ends with benediction."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 2,
+          "said": "WEDNESDAY ADORATION is offered each Wednesday, 9:00AM to 7:00PM. Adoration ends with benediction."
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintlaurencedelco.org/",
+          "said": "Wednesday — 9:00AM (following 8:30AM Mass) - 7:00PM"
+        }
+      ],
+      "rationale": "R28: both issues' p1 box says 9:30 AM, while their p2 Weekly Meetings and the website say 9:00 AM. Leaning 9:00: two of three statements, and the website ties it to the end of the 8:30 AM Mass (POLICY would time 'after a weekday Mass' at 9:00). Weekly on Wednesday and end 7:00 PM are agreed by all three.",
+      "question": "Wednesday Adoration at St. Laurence: start at 9:00 AM or 9:30 AM (end 7:00 PM, Benediction)?",
+      "options": [
+        {
+          "label": "Wed 9:00 AM-7:00 PM",
+          "entry": {
+            "church_slug": "st-laurence-church-upper-darby",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Wed 9:30 AM-7:00 PM",
+          "entry": {
+            "church_slug": "st-laurence-church-upper-darby",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance for Miscarriage and Infant Loss (English)"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5b5eebc",
+          "page": 6,
+          "said": "invites mothers and families grieving the loss of a child through miscarriage or infant loss to a Mass of Remembrance on Saturday, November 21, at 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 4,
+          "said": "La Misa se celebrará en inglés, pero todos son bienvenidos a asistir."
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass after as_of at the parish church, outside the weekly schedule; not a memorial for one person, and the 8 Nov issue says all are welcome (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 4,
+          "said": "Parish Patronal Feast of Our Lady of Guadalupe ... Save the Date! Friday, December 11th @ 7 PM Mass in Honor to our Patroness, Our Lady of Guadalupe. Feast Day Social after Mass in Saint John XXIII Social Hall"
+        }
+      ],
+      "rationale": "R32: the flyer names no church; St. Laurence's patron is St. Laurence, and no St. John XXIII Social Hall is identified at St. Laurence (seed church finds none in Upper Darby), so it may be another parish's flyer. Not repeated in the 15 Nov issue (R19 would otherwise apply). Leaning leave out: a wrong time is worse than a missing one (POLICY); December issues will say where.",
+      "question": "Add the Our Lady of Guadalupe patronal-feast Mass, Fri Dec 11, 7:00 PM, at St. Laurence?",
+      "options": [
+        {
+          "label": "Dec 11 7:00 PM",
+          "entry": {
+            "church_slug": "st-laurence-church-upper-darby",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-11",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Guadalupe"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-13",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c25a4c91",
+          "page": 6,
+          "said": "NOVEMBER 13, 2026 ... ADORATION (ENGLISH) - 7:00PM; NOVEMBER 14, 2026 MASS (SPANISH) - 7:00PM ADORATION (BILINGUAL) - 8:00 PM"
+        }
+      ],
+      "rationale": "R16: Novum Nights dated Nov 13-14, before as_of (2026-11-15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
