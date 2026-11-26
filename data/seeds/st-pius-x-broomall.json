@@ -1,0 +1,1497 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-pius-x-broomall",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:51Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T23:10:42Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday and Saturday confession times agree in both image-only issues (Nov 8 and Nov 15), the intentions and the website; the newest adds dated Advent evenings (Dec 1/15 Adoration, Dec 8 7 PM Mass, Dec 22 penance). Open: whether the Divine Mercy Adoration Chapel (no address printed) is at the church, the holy-day box's Dec 7 vigil and Dec 8 12:05 Masses, and the Over 50 Club's Nov 17 memorial Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7a67428887f977dc01313346990e012dedd51b44fc76f31d3ea5418a85e3e1d6",
+      "fetched_at": "2026-11-15T16:46:51Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "42d93ebdade6c1ca1226b1536da18e45c0b05901c00e9b75f01e79d786d31be8",
+      "fetched_at": "2026-11-08T15:55:22Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "SUNDAY MASS SCHEDULE 5:15p.m. – Saturday evening Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "SUNDAY MASS SCHEDULE 5:15p.m. – Saturday evening Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Sunday, November 22, 2026 Vigil John & Bernice Leonarski"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; the intentions and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "SUNDAY MASS SCHEDULE 7:30a.m., 9:30a.m., 11:30 a.m. and 5:15 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "SUNDAY MASS SCHEDULE 7:30a.m., 9:30a.m., 11:30 a.m. and 5:15 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Sunday, November 22, 2026 7:30 ... 9:30 ... 11:30 ... 5:15"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; the intentions and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "SUNDAY MASS SCHEDULE 7:30a.m., 9:30a.m., 11:30 a.m. and 5:15 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "SUNDAY MASS SCHEDULE 7:30a.m., 9:30a.m., 11:30 a.m. and 5:15 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Sunday, November 22, 2026 7:30 ... 9:30 ... 11:30 ... 5:15"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; the intentions and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "SUNDAY MASS SCHEDULE 7:30a.m., 9:30a.m., 11:30 a.m. and 5:15 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "SUNDAY MASS SCHEDULE 7:30a.m., 9:30a.m., 11:30 a.m. and 5:15 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Sunday, November 22, 2026 7:30 ... 9:30 ... 11:30 ... 5:15"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; the intentions and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "SUNDAY MASS SCHEDULE 7:30a.m., 9:30a.m., 11:30 a.m. and 5:15 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "SUNDAY MASS SCHEDULE 7:30a.m., 9:30a.m., 11:30 a.m. and 5:15 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Sunday, November 22, 2026 7:30 ... 9:30 ... 11:30 ... 5:15"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; the intentions and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Monday, November 16, 2026 6:30 ... 8:00 (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; each weekday's intentions list 6:30 and 8:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Monday, November 16, 2026 6:30 ... 8:00 (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; each weekday's intentions list 6:30 and 8:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Monday, November 16, 2026 6:30 ... 8:00 (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; each weekday's intentions list 6:30 and 8:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Monday, November 16, 2026 6:30 ... 8:00 (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; each weekday's intentions list 6:30 and 8:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Monday, November 16, 2026 6:30 ... 8:00 (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; each weekday's intentions list 6:30 and 8:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Monday, November 16, 2026 6:30 ... 8:00 (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; each weekday's intentions list 6:30 and 8:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Monday, November 16, 2026 6:30 ... 8:00 (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; each weekday's intentions list 6:30 and 8:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Monday, November 16, 2026 6:30 ... 8:00 (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; each weekday's intentions list 6:30 and 8:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Monday, November 16, 2026 6:30 ... 8:00 (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; each weekday's intentions list 6:30 and 8:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE 6:30a.m. and 8:00a.m. — Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Monday, November 16, 2026 6:30 ... 8:00 (same each weekday)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; each weekday's intentions list 6:30 and 8:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "8:00a.m. only on Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "8:00a.m. only on Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Saturday, November 21, 2026 8:00 Souls in Purgatory"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "SACRAMENT OF PENANCE 4:00 to 5:00 p.m. Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "SACRAMENT OF PENANCE 4:00 to 5:00 p.m. Saturday"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "Any time by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-19",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent retreat at Daylesford Abbey, Paoli"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 7,
+          "said": "ADVENT RETREAT ... Saturday, December 19, 2026 ... Daylesford Abbey 220 S. Valley Road, Paoli ... An opportunity for Confessions ... Mass at 4:00 PM"
+        }
+      ],
+      "rationale": "R22: a paid retreat at Daylesford Abbey in Paoli, not at the parish church; its confessions have no time of their own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pro-Life Prayers in the Adoration Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "Pro-Life Prayers are said in the Adoration Chapel at 7p.m. on the Third Monday of each month. They conclude with Evening Prayer at 7:30p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "Pro-Life Prayers are said in the Adoration Chapel at 7p.m. on the Third Monday of each month. They conclude with Evening Prayer at 7:30p.m."
+        }
+      ],
+      "rationale": "R24: prayers in the chapel; the bulletin doesn't call them Adoration, Exposition or a Holy Hour (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-01",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent evening: Adoration, Night Prayer and Reflection"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 4,
+          "said": "Tuesday, December 1 7:00pm Adoration, Night Prayer, and Reflection by Fr. Windle"
+        }
+      ],
+      "rationale": "R1, R16: a dated Advent evening of Adoration (POLICY, Weekly or dated rule 3); no end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-15",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent evening: Adoration, Night Prayer and Reflection"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 4,
+          "said": "Tuesday, December 15 7:00pm Adoration, Night Prayer, and Reflection by Fr. Monica"
+        }
+      ],
+      "rationale": "R1, R16: a dated Advent evening of Adoration (POLICY, Weekly or dated rule 3); no end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Solemnity of the Immaculate Conception"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 4,
+          "said": "Tuesday, December 8 7:00pm Mass for the Solemnity of the Immaculate Coneption"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "HOLY DAY SCHEDULE 5:15p.m. Vigil 6:30, 8:00 a.m., 12:05 p.m. and 7:00 p.m."
+        }
+      ],
+      "rationale": "R1, R16: a dated notice in the newest issue; it matches the holy-day box's 7:00 p.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-22",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Advent Penance Opportunity"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 4,
+          "said": "Tuesday, December 22 7:00pm Parish Advent Penance Opportunity"
+        }
+      ],
+      "rationale": "R1, R16: a dated parish penance opportunity, i.e. confession (POLICY counts Penance); no end printed. Like st-aloysius-pottstown s17's penance service.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon. thru Fri. in the Divine Mercy Adoration Chapel from 8:30a.m. to 5:00p.m., Sat. 8:30am to 4:00pm and Sun. 12p.m. to 5p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon. thru Fri. in the Divine Mercy Adoration Chapel from 8:30a.m. to 5:00p.m., Sat. 8:30am to 4:00pm and Sun. 12p.m. to 5p.m."
+        }
+      ],
+      "rationale": "R32/R38: the devotions box in both issues gives the chapel's hours as Eucharistic Adoration but no address; the parish has one church, Pro-Life prayers and the Respect Life rosary meet in 'the chapel', and nothing places it elsewhere. No church-list entry or website page names it (saintpius.net has no adoration page). Leaning per precedent ss-philip-and-james-exton s15 (a chapel named in the parish's own schedule box placed at its church). No exposition claimed (R38).",
+      "question": "Is the Divine Mercy Adoration Chapel at St. Pius X Church, so its Adoration hours go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-pius-x-broomall",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s26",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon. thru Fri. in the Divine Mercy Adoration Chapel from 8:30a.m. to 5:00p.m., Sat. 8:30am to 4:00pm and Sun. 12p.m. to 5p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon. thru Fri. in the Divine Mercy Adoration Chapel from 8:30a.m. to 5:00p.m., Sat. 8:30am to 4:00pm and Sun. 12p.m. to 5p.m."
+        }
+      ],
+      "rationale": "R32/R38: the devotions box in both issues gives the chapel's hours as Eucharistic Adoration but no address; the parish has one church, Pro-Life prayers and the Respect Life rosary meet in 'the chapel', and nothing places it elsewhere. No church-list entry or website page names it (saintpius.net has no adoration page). Leaning per precedent ss-philip-and-james-exton s15 (a chapel named in the parish's own schedule box placed at its church). No exposition claimed (R38).",
+      "question": "Is the Divine Mercy Adoration Chapel at St. Pius X Church, so its Adoration hours go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-pius-x-broomall",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s27",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon. thru Fri. in the Divine Mercy Adoration Chapel from 8:30a.m. to 5:00p.m., Sat. 8:30am to 4:00pm and Sun. 12p.m. to 5p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon. thru Fri. in the Divine Mercy Adoration Chapel from 8:30a.m. to 5:00p.m., Sat. 8:30am to 4:00pm and Sun. 12p.m. to 5p.m."
+        }
+      ],
+      "rationale": "R32/R38: the devotions box in both issues gives the chapel's hours as Eucharistic Adoration but no address; the parish has one church, Pro-Life prayers and the Respect Life rosary meet in 'the chapel', and nothing places it elsewhere. No church-list entry or website page names it (saintpius.net has no adoration page). Leaning per precedent ss-philip-and-james-exton s15 (a chapel named in the parish's own schedule box placed at its church). No exposition claimed (R38).",
+      "question": "Is the Divine Mercy Adoration Chapel at St. Pius X Church, so its Adoration hours go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-pius-x-broomall",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s28",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon. thru Fri. in the Divine Mercy Adoration Chapel from 8:30a.m. to 5:00p.m., Sat. 8:30am to 4:00pm and Sun. 12p.m. to 5p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon. thru Fri. in the Divine Mercy Adoration Chapel from 8:30a.m. to 5:00p.m., Sat. 8:30am to 4:00pm and Sun. 12p.m. to 5p.m."
+        }
+      ],
+      "rationale": "R32/R38: the devotions box in both issues gives the chapel's hours as Eucharistic Adoration but no address; the parish has one church, Pro-Life prayers and the Respect Life rosary meet in 'the chapel', and nothing places it elsewhere. No church-list entry or website page names it (saintpius.net has no adoration page). Leaning per precedent ss-philip-and-james-exton s15 (a chapel named in the parish's own schedule box placed at its church). No exposition claimed (R38).",
+      "question": "Is the Divine Mercy Adoration Chapel at St. Pius X Church, so its Adoration hours go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-pius-x-broomall",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s29",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon. thru Fri. in the Divine Mercy Adoration Chapel from 8:30a.m. to 5:00p.m., Sat. 8:30am to 4:00pm and Sun. 12p.m. to 5p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon. thru Fri. in the Divine Mercy Adoration Chapel from 8:30a.m. to 5:00p.m., Sat. 8:30am to 4:00pm and Sun. 12p.m. to 5p.m."
+        }
+      ],
+      "rationale": "R32/R38: the devotions box in both issues gives the chapel's hours as Eucharistic Adoration but no address; the parish has one church, Pro-Life prayers and the Respect Life rosary meet in 'the chapel', and nothing places it elsewhere. No church-list entry or website page names it (saintpius.net has no adoration page). Leaning per precedent ss-philip-and-james-exton s15 (a chapel named in the parish's own schedule box placed at its church). No exposition claimed (R38).",
+      "question": "Is the Divine Mercy Adoration Chapel at St. Pius X Church, so its Adoration hours go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-pius-x-broomall",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s30",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon. thru Fri. in the Divine Mercy Adoration Chapel from 8:30a.m. to 5:00p.m., Sat. 8:30am to 4:00pm and Sun. 12p.m. to 5p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon. thru Fri. in the Divine Mercy Adoration Chapel from 8:30a.m. to 5:00p.m., Sat. 8:30am to 4:00pm and Sun. 12p.m. to 5p.m."
+        }
+      ],
+      "rationale": "R32/R38: the devotions box in both issues gives the chapel's hours as Eucharistic Adoration but no address; the parish has one church, Pro-Life prayers and the Respect Life rosary meet in 'the chapel', and nothing places it elsewhere. No church-list entry or website page names it (saintpius.net has no adoration page). Leaning per precedent ss-philip-and-james-exton s15 (a chapel named in the parish's own schedule box placed at its church). No exposition claimed (R38).",
+      "question": "Is the Divine Mercy Adoration Chapel at St. Pius X Church, so its Adoration hours go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-pius-x-broomall",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s31",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon. thru Fri. in the Divine Mercy Adoration Chapel from 8:30a.m. to 5:00p.m., Sat. 8:30am to 4:00pm and Sun. 12p.m. to 5p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon. thru Fri. in the Divine Mercy Adoration Chapel from 8:30a.m. to 5:00p.m., Sat. 8:30am to 4:00pm and Sun. 12p.m. to 5p.m."
+        }
+      ],
+      "rationale": "R32/R38: the devotions box in both issues gives the chapel's hours as Eucharistic Adoration but no address; the parish has one church, Pro-Life prayers and the Respect Life rosary meet in 'the chapel', and nothing places it elsewhere. No church-list entry or website page names it (saintpius.net has no adoration page). Leaning per precedent ss-philip-and-james-exton s15 (a chapel named in the parish's own schedule box placed at its church). No exposition claimed (R38).",
+      "question": "Is the Divine Mercy Adoration Chapel at St. Pius X Church, so its Adoration hours go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-pius-x-broomall",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s32",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "HOLY DAY SCHEDULE 5:15p.m. Vigil 6:30, 8:00 a.m., 12:05 p.m. and 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "HOLY DAY SCHEDULE 5:15p.m. Vigil 6:30, 8:00 a.m., 12:05 p.m. and 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 4,
+          "said": "Tuesday, December 8 7:00pm Mass for the Solemnity of the Immaculate Coneption"
+        }
+      ],
+      "rationale": "R30: the standing HOLY DAY SCHEDULE box has no date, but p4's dated notice (Tue Dec 8 7:00pm Mass for the Solemnity) ties the holy day to this year, and its 7:00 matches the box. 6:30 and 8:00 are the regular Tuesday Masses. Leaning per precedent our-lady-of-consolation-parkesburg s12.",
+      "question": "Add the Immaculate Conception vigil (Mon Dec 7, 5:15 PM) and Dec 8 12:05 PM Masses from the holy-day box?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-pius-x-broomall",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "17:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Vigil of the Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s33",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 2,
+          "said": "HOLY DAY SCHEDULE 5:15p.m. Vigil 6:30, 8:00 a.m., 12:05 p.m. and 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "42d93ebd",
+          "page": 2,
+          "said": "HOLY DAY SCHEDULE 5:15p.m. Vigil 6:30, 8:00 a.m., 12:05 p.m. and 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 4,
+          "said": "Tuesday, December 8 7:00pm Mass for the Solemnity of the Immaculate Coneption"
+        }
+      ],
+      "rationale": "R30: the standing HOLY DAY SCHEDULE box has no date, but p4's dated notice (Tue Dec 8 7:00pm Mass for the Solemnity) ties the holy day to this year, and its 7:00 matches the box. 6:30 and 8:00 are the regular Tuesday Masses. Leaning per precedent our-lady-of-consolation-parkesburg s12.",
+      "question": "Add the Immaculate Conception vigil (Mon Dec 7, 5:15 PM) and Dec 8 12:05 PM Masses from the holy-day box?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-pius-x-broomall",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "12:05",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Solemnity of the Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s34",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Next meeting is Tuesday November 17th. We will have a Mass said at 11:am for all the deceased members of the Over 50 Club."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a674288",
+          "page": 3,
+          "said": "Tuesday, November 17, 2026 ... 11am Dec'd mmbrs of the Over 50's Club"
+        }
+      ],
+      "rationale": "R30: a club's memorial Mass on its meeting day, announced only in the club's notice; POLICY treats memorial Masses as closed unless everyone is invited, and nothing invites the parish. Leaning like st-thomas-of-villanova-villanova s19 (a group's own Mass). No place named. The date has passed, so it has little effect.",
+      "question": "Add the Over 50 Club's Tue Nov 17, 11:00 AM Mass for its deceased members?",
+      "options": [
+        {
+          "label": "Include Nov 17 11 AM",
+          "entry": {
+            "church_slug": "st-pius-x-broomall",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-17",
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "For deceased members of the Over 50 Club"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
