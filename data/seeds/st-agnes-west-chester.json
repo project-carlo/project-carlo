@@ -1,0 +1,987 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-agnes-west-chester",
+  "status": "needs_review",
+  "as_of": "2026-11-15T15:59:19Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T18:29:32Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The weekly Mass, Confession and Wednesday chapel Adoration schedule is identical in both issues read (Nov 1 and Nov 15), all pages images; plus a Thanksgiving 9:00 AM Mass. Perpetual Adoration announced for May 30, 2027 is left out (R20). Open: whether the Spanish Advent retreat's Nov 29 4-5 PM Holy Hour and confessions are public.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0a0b26fccd7e9c5cecdaad6a70ed55014ae222ee756595a6be9b0b0c398c936c",
+      "fetched_at": "2026-11-15T15:59:19Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e4506448cdd497907f988c2ba34e6bb5a4f33ce395aa98692202fe3cfe0192f1",
+      "fetched_at": "2026-11-08T15:28:08Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession box of both bulletins read; the intentions (p4) list 6:30 and 8:00 Masses each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession box of both bulletins read; the intentions (p4) list 6:30 and 8:00 Masses each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession box of both bulletins read; the intentions (p4) list 6:30 and 8:00 Masses each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession box of both bulletins read; the intentions (p4) list 6:30 and 8:00 Masses each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession box of both bulletins read; the intentions (p4) list 6:30 and 8:00 Masses each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession box of both bulletins read; the intentions (p4) list 6:30 and 8:00 Masses each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession box of both bulletins read; the intentions (p4) list 6:30 and 8:00 Masses each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession box of both bulletins read; the intentions (p4) list 6:30 and 8:00 Masses each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession box of both bulletins read; the intentions (p4) list 6:30 and 8:00 Masses each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Monday-Friday Mass 6:30 am & 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession box of both bulletins read; the intentions (p4) list 6:30 and 8:00 Masses each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Saturday Mass 8:00 am 5:15 pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Saturday Mass 8:00 am 5:15 pm (Vigil)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Saturday Mass 8:00 am 5:15 pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Saturday Mass 8:00 am 5:15 pm (Vigil)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Sunday Mass 7:00 am 9:00 am 10:30 am 12:00 pm (Spanish) 5:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Sunday Mass 7:00 am 9:00 am 10:30 am 12:00 pm (Spanish) 5:15 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Sunday Mass 7:00 am 9:00 am 10:30 am 12:00 pm (Spanish) 5:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Sunday Mass 7:00 am 9:00 am 10:30 am 12:00 pm (Spanish) 5:15 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Sunday Mass 7:00 am 9:00 am 10:30 am 12:00 pm (Spanish) 5:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Sunday Mass 7:00 am 9:00 am 10:30 am 12:00 pm (Spanish) 5:15 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Sunday Mass 7:00 am 9:00 am 10:30 am 12:00 pm (Spanish) 5:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Sunday Mass 7:00 am 9:00 am 10:30 am 12:00 pm (Spanish) 5:15 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Sunday Mass ... 12:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Sunday Mass ... 12:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 9,
+          "said": "MISA EN ESPAÑOL: Todos los domingos a las 12:00pm en la Iglesia."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box and the Hispanic page. The bilingual Dorothy Day Mass on Sunday Nov 22 at 12:00 PM (p3, p5) is held at this regular Mass, so POLICY, Weekly or dated rule 7 records no separate entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Confessions Saturday: 4:00-5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Confessions Saturday: 4:00-5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "11:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Confessions ... Sunday: 11:30-11:55 am (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Confessions ... Sunday: 11:30-11:55 am (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 9,
+          "said": "CONFESIONES: Domingos de 11:30 -11:55am en la Iglesia."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and on the Hispanic page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel (lower church)"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Adoration Wednesday: 8:30 am-8:00 pm in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 2,
+          "said": "Adoration Wednesday: 8:30 am-8:00 pm in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 9,
+          "said": "ADORACIÓN AL SANTÍSIMO SACRAMENTO: Todos los miércoles de 8:30 am – 8:00 pm en la Capilla."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins. The chapel is the lower church of St. Agnes (p3: 'our lower church (chapel)'), so POLICY, Churches and chapels attaches it to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 3,
+          "said": "MASS ON THANKSGIVING DAY: Mass will be celebrated on Thanksgiving Day, Thursday, November 26 at 9:00 AM."
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass on or after as_of. R17: the bulletin does not say the 6:30 and 8:00 AM Masses are cancelled, so the weekly slots are left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 3,
+          "said": "On Sunday, May 30 at 2PM, Saint Agnes Parish will begin Perpetual Adoration of the Blessed Sacrament in our lower church (chapel)... 24 hours a day, 7 days a week"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 5,
+          "said": "Perpetual Adoration beginning 05.30.2027"
+        }
+      ],
+      "rationale": "R20: perpetual adoration starts May 30, 2027; the current Wednesday Adoration is kept and update mode will read the change when it begins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 2,
+          "said": "Rosary Mon-Sat following the 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 9,
+          "said": "CÍRCULO DE ORACIÓN: Todos los martes a las 7:00 pm en TPH 206."
+        }
+      ],
+      "rationale": "R24: the Rosary and the Spanish prayer circle are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 9,
+          "said": "IGLESIA 4:00-5:00 Hora Santa y confesiones. Para inscribirse, llama a 610 235-7294."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 9,
+          "said": "retiro anual de Adviento en español, de las 1:15 hasta a las 5:00 pm... concluirá con una hora santa y la confesión. Para inscribirse, llame al: 610-235-7294."
+        }
+      ],
+      "rationale": "R30: the times are clear (Nov 1 issue) and in the church, but they close a retreat that asks people to register, so it may not be open to the public. Leaning leave out as a retreat component rather than a public service.",
+      "question": "Include the Spanish Advent retreat's closing Holy Hour and confessions on Sunday Nov 29, 4:00-5:00 PM?",
+      "options": [
+        {
+          "label": "Include 4:00-5:00 PM",
+          "entry": {
+            "church_slug": "st-agnes-west-chester",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-29",
+            "start_time": "16:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Hora Santa, Spanish Advent retreat"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "advent-retreat"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4506448",
+          "page": 9,
+          "said": "IGLESIA 4:00-5:00 Hora Santa y confesiones. Para inscribirse, llama a 610 235-7294."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0a0b26fc",
+          "page": 9,
+          "said": "retiro anual de Adviento en español, de las 1:15 hasta a las 5:00 pm... concluirá con una hora santa y la confesión."
+        }
+      ],
+      "rationale": "R30: same question as the retreat's Holy Hour; confessions are heard during it (POLICY, Times). Leaning leave out as a registered retreat component.",
+      "question": "Include the Spanish Advent retreat's closing Holy Hour and confessions on Sunday Nov 29, 4:00-5:00 PM?",
+      "options": [
+        {
+          "label": "Include 4:00-5:00 PM",
+          "entry": {
+            "church_slug": "st-agnes-west-chester",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-29",
+            "start_time": "16:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "During Adoration; Spanish Advent retreat"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "advent-retreat"
+    }
+  ]
+}
