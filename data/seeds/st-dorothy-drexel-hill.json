@@ -1,0 +1,624 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-dorothy-drexel-hill",
+  "status": "ready",
+  "as_of": "2026-11-15T16:45:07Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T23:35:53Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The page 1 schedule box (Sat 4:00 PM Vigil; Sun 7:30, 9:30, 11:00; Mon-Fri 7:00; Sat 8:00; Sat confession 8:30-9:15) matches both issues' intentions and the website. Wednesday 1-5 PM Adoration is weekly from the notice repeated in both issues (R35); a Thanksgiving 8:00 AM Mass comes from the homepage. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8d8f2a31324bc069a8f1011a0bd05040ec7a7f6ea8363f568a6ce434aa39817d",
+      "fetched_at": "2026-11-15T16:45:07Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "dc5e136e881abf8c11ad503fd935473b66d0c2ae78bd8717c6c63ef61d8a3ac1",
+      "fetched_at": "2026-11-08T15:54:01Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dorothy-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d8f2a31",
+          "page": 1,
+          "said": "Mass Schedule Saturday: 4:00 PM Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc5e136e",
+          "page": 1,
+          "said": "Mass Schedule Saturday: 4:00 PM Vigil"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both issues; the intentions (p3) list a 4:00 Saturday Mass each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dorothy-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d8f2a31",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc5e136e",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both issues and in each week's intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dorothy-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d8f2a31",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc5e136e",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both issues and in each week's intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dorothy-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d8f2a31",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc5e136e",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both issues and in each week's intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dorothy-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d8f2a31",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc5e136e",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both issues; each weekday has a 7:00 intention (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dorothy-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d8f2a31",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc5e136e",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both issues; each weekday has a 7:00 intention (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dorothy-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d8f2a31",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc5e136e",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both issues; each weekday has a 7:00 intention (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dorothy-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d8f2a31",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc5e136e",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both issues; each weekday has a 7:00 intention (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dorothy-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d8f2a31",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc5e136e",
+          "page": 1,
+          "said": "Monday - Friday: 7:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both issues; each weekday has a 7:00 intention (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dorothy-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d8f2a31",
+          "page": 1,
+          "said": "Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc5e136e",
+          "page": 1,
+          "said": "Saturday: 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both issues; the Saturday intentions list 8:00 (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dorothy-church-drexel-hill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d8f2a31",
+          "page": 1,
+          "said": "Confessions Saturday: 8:30 AM - 9:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc5e136e",
+          "page": 1,
+          "said": "Confessions Saturday: 8:30 AM - 9:15 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both issues; the website's Mass page says the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dorothy-church-drexel-hill",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Solemn Exposition of the Most Blessed Sacrament"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d8f2a31",
+          "page": 5,
+          "said": "Solemn Exposition of the Most Blessed Sacrament There will be Adoration of the Blessed Sacrament this Wednesday from 1-5 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc5e136e",
+          "page": 5,
+          "said": "Solemn Exposition of the Most Blessed Sacrament There will be Adoration of the Blessed Sacrament this Wednesday from 1-5 PM."
+        }
+      ],
+      "rationale": "R35: the same Wednesday 1-5 PM Adoration notice is printed in two issues covering different weeks (Nov 11 and Nov 18), not marked special, so it is weekly. The website lists only Masses and confession, a missing mention rather than a conflict (R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dorothy-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stdotsdrexelhill.org/",
+          "said": "You are warmly invited to join us for our Thanksgiving Mass ... Join us on Thursday, November 26, 2026 8:00AM",
+          "schedule_check": {
+            "checked_at": "2026-11-26T23:38:57Z",
+            "current_because": "The homepage notice names Thursday, November 26, 2026, this year's Thanksgiving; read 2026-11-26, and its Mass Schedule matches the Nov 15 bulletin exactly.",
+            "bulletin": "8d8f2a31",
+            "fits_because": "8d8f2a31 p1 prints 'National Holidays 8:00 AM' in the schedule box without a date; the dated homepage notice pins that line to this Thanksgiving."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish homepage gives a dated Thanksgiving Mass on or after as_of that fits the bulletin's 'National Holidays 8:00 AM'. The weekly Thursday 7:00 AM is left alone (R17: no cancellation is printed).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d8f2a31",
+          "page": 1,
+          "said": "Holy Days: 7:00 AM, 10:00 AM, 7:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: the standing Holy Days line names no date, so no dated Mass can be pinned (as with the undated Holy Day/Christmas lines left out per precedent st-isaac-jogues-wayne s27). December issues will print the Immaculate Conception times for update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dorothy-church-drexel-hill",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-30",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pro-Life Memorial Mass at St. Anastasia Church"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d8f2a31",
+          "page": 4,
+          "said": "The Mass will be held at St. Anastasia Church on Monday, November 30, at 7:00 p.m."
+        }
+      ],
+      "rationale": "R22: held at St. Anastasia Church, another parish's church, not at St. Dorothy.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dorothy-church-drexel-hill",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "14:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour at Annunciation BVM Church, Havertown"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "dc5e136e",
+          "page": 5,
+          "said": "Grace-Filled Holy Hour ... Sunday, November 15th, from 2:00-3:00 PM ... Adoration, Confessions, and Benediction ... Annunciation BVM Church, 400 Brookline Boulevard, Havertown, PA"
+        }
+      ],
+      "rationale": "R22, R16: held at another parish's church (Annunciation BVM, Havertown), and its date is not after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d8f2a31",
+          "page": 4,
+          "said": "Saturday, November 21th at 4:00 PM 7th, 8th, & High School (Saturday evening Mass followed by pizza)"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the Class Mass is the regular Saturday 4:00 PM Vigil, already weekly; no separate slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
