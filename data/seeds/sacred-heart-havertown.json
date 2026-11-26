@@ -1,0 +1,930 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-havertown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:16Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T21:05:50Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Sacred Heart, Havertown. Weekend (Sat 5:00 PM; Sun 7:30, 9:30, 11:30 AM), weekday 8:00 AM Mass and Sat 4:00-4:45 PM confession agree in both issues and the website; Thanksgiving Mass 9:00 AM Nov 26. Open: whether the Eucharistic Adoration Chapel (Mon-Fri 9-7, Sat 9-3:30) is at the church, and the May 2, 2027 centennial Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8bc03744a8004f7583393a059a59e1606e6ae88acc4726fb2dd5d43131f7f5b9",
+      "fetched_at": "2026-11-15T16:44:16Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b80039dd6e7452a6d413dd5ed253e2cab8c126267cfd28d905e1e402f20821c1",
+      "fetched_at": "2026-11-08T15:53:19Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "MASS SCHEDULE WEEKEND MASS Saturday Vigil | 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 1,
+          "said": "MASS SCHEDULE WEEKEND MASS Saturday Vigil | 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 2,
+          "said": "Saturday, November 21 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read and in the intentions; the website gives 5:00 pm Vigil.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "Sunday | 7:30am - 9:30am* - 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 1,
+          "said": "Sunday | 7:30am - 9:30am* - 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 2,
+          "said": "Sunday, November 22 7:30am ... 9:30am ... 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "Sunday | 7:30am - 9:30am* - 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 1,
+          "said": "Sunday | 7:30am - 9:30am* - 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 2,
+          "said": "Sunday, November 22 7:30am ... 9:30am ... 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "Sunday | 7:30am - 9:30am* - 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 1,
+          "said": "Sunday | 7:30am - 9:30am* - 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 2,
+          "said": "Sunday, November 22 7:30am ... 9:30am ... 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 2,
+          "said": "Monday, November 16 8:00am ... Friday, November 20 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and every weekday of the intentions; the website agrees (no Saturday morning).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 2,
+          "said": "Monday, November 16 8:00am ... Friday, November 20 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and every weekday of the intentions; the website agrees (no Saturday morning).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 2,
+          "said": "Monday, November 16 8:00am ... Friday, November 20 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and every weekday of the intentions; the website agrees (no Saturday morning).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 2,
+          "said": "Monday, November 16 8:00am ... Friday, November 20 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and every weekday of the intentions; the website agrees (no Saturday morning).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 2,
+          "said": "Monday, November 16 8:00am ... Friday, November 20 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and every weekday of the intentions; the website agrees (no Saturday morning).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "RECONCILIATION Saturday | 4:00 - 4:45pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 1,
+          "said": "RECONCILIATION Saturday | 4:00 - 4:45pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 2,
+          "said": "RECONCILIATION (Confession) Saturday: 4:00 - 4:45pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box and p2 Sacraments column of both issues; the website gives Saturdays 4:00-4:45pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-havertown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 3,
+          "said": "Mass on THANKSGIVING will be celebrated at 9:00am Please plan now to join us!"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass in the newest issue; Thanksgiving pins Thursday Nov 26, 2026 (POLICY, Dates), on or after as_of. The usual 8:00 AM Thursday Mass is not said to be cancelled, so no cancellation is recorded (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION CHAPEL MONDAY - FRIDAY 9:00am - 7:00pm SATURDAY 9:00am - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION CHAPEL MONDAY - FRIDAY 9:00am - 7:00pm SATURDAY 9:00am - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 7,
+          "said": "EUCHARISTIC ADORATION CHAPEL All are Welcome to spend time with Jesus in private prayer Our Adoration Chapel is open: Monday- Friday 9:00am - 7:00pm Saturday 9:00am - 3:30pm"
+        }
+      ],
+      "rationale": "R32/R38, leaning per precedent ss-philip-and-james-exton s15: the chapel's hours sit in the church's own schedule box beside its Mass times, and the parish has one listed church, but no page names the chapel's address and the website (sacredheartmanoa.org, read 2026-11-26) doesn't mention it. Exposition isn't stated (a monstrance is pictured), so no Exposition note (R38).",
+      "question": "Is the parish's Eucharistic Adoration Chapel at Sacred Heart Church, so its hours (Mon-Fri 9:00 AM-7:00 PM, Sat 9:00 AM-3:30 PM) go there?",
+      "options": [
+        {
+          "label": "Include at Sacred Heart Church, in the Adoration Chapel",
+          "entry": {
+            "church_slug": "sacred-heart-havertown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION CHAPEL MONDAY - FRIDAY 9:00am - 7:00pm SATURDAY 9:00am - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION CHAPEL MONDAY - FRIDAY 9:00am - 7:00pm SATURDAY 9:00am - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 7,
+          "said": "EUCHARISTIC ADORATION CHAPEL All are Welcome to spend time with Jesus in private prayer Our Adoration Chapel is open: Monday- Friday 9:00am - 7:00pm Saturday 9:00am - 3:30pm"
+        }
+      ],
+      "rationale": "R32/R38, leaning per precedent ss-philip-and-james-exton s15: the chapel's hours sit in the church's own schedule box beside its Mass times, and the parish has one listed church, but no page names the chapel's address and the website (sacredheartmanoa.org, read 2026-11-26) doesn't mention it. Exposition isn't stated (a monstrance is pictured), so no Exposition note (R38).",
+      "question": "Is the parish's Eucharistic Adoration Chapel at Sacred Heart Church, so its hours (Mon-Fri 9:00 AM-7:00 PM, Sat 9:00 AM-3:30 PM) go there?",
+      "options": [
+        {
+          "label": "Include at Sacred Heart Church, in the Adoration Chapel",
+          "entry": {
+            "church_slug": "sacred-heart-havertown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION CHAPEL MONDAY - FRIDAY 9:00am - 7:00pm SATURDAY 9:00am - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION CHAPEL MONDAY - FRIDAY 9:00am - 7:00pm SATURDAY 9:00am - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 7,
+          "said": "EUCHARISTIC ADORATION CHAPEL All are Welcome to spend time with Jesus in private prayer Our Adoration Chapel is open: Monday- Friday 9:00am - 7:00pm Saturday 9:00am - 3:30pm"
+        }
+      ],
+      "rationale": "R32/R38, leaning per precedent ss-philip-and-james-exton s15: the chapel's hours sit in the church's own schedule box beside its Mass times, and the parish has one listed church, but no page names the chapel's address and the website (sacredheartmanoa.org, read 2026-11-26) doesn't mention it. Exposition isn't stated (a monstrance is pictured), so no Exposition note (R38).",
+      "question": "Is the parish's Eucharistic Adoration Chapel at Sacred Heart Church, so its hours (Mon-Fri 9:00 AM-7:00 PM, Sat 9:00 AM-3:30 PM) go there?",
+      "options": [
+        {
+          "label": "Include at Sacred Heart Church, in the Adoration Chapel",
+          "entry": {
+            "church_slug": "sacred-heart-havertown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION CHAPEL MONDAY - FRIDAY 9:00am - 7:00pm SATURDAY 9:00am - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION CHAPEL MONDAY - FRIDAY 9:00am - 7:00pm SATURDAY 9:00am - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 7,
+          "said": "EUCHARISTIC ADORATION CHAPEL All are Welcome to spend time with Jesus in private prayer Our Adoration Chapel is open: Monday- Friday 9:00am - 7:00pm Saturday 9:00am - 3:30pm"
+        }
+      ],
+      "rationale": "R32/R38, leaning per precedent ss-philip-and-james-exton s15: the chapel's hours sit in the church's own schedule box beside its Mass times, and the parish has one listed church, but no page names the chapel's address and the website (sacredheartmanoa.org, read 2026-11-26) doesn't mention it. Exposition isn't stated (a monstrance is pictured), so no Exposition note (R38).",
+      "question": "Is the parish's Eucharistic Adoration Chapel at Sacred Heart Church, so its hours (Mon-Fri 9:00 AM-7:00 PM, Sat 9:00 AM-3:30 PM) go there?",
+      "options": [
+        {
+          "label": "Include at Sacred Heart Church, in the Adoration Chapel",
+          "entry": {
+            "church_slug": "sacred-heart-havertown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION CHAPEL MONDAY - FRIDAY 9:00am - 7:00pm SATURDAY 9:00am - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION CHAPEL MONDAY - FRIDAY 9:00am - 7:00pm SATURDAY 9:00am - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 7,
+          "said": "EUCHARISTIC ADORATION CHAPEL All are Welcome to spend time with Jesus in private prayer Our Adoration Chapel is open: Monday- Friday 9:00am - 7:00pm Saturday 9:00am - 3:30pm"
+        }
+      ],
+      "rationale": "R32/R38, leaning per precedent ss-philip-and-james-exton s15: the chapel's hours sit in the church's own schedule box beside its Mass times, and the parish has one listed church, but no page names the chapel's address and the website (sacredheartmanoa.org, read 2026-11-26) doesn't mention it. Exposition isn't stated (a monstrance is pictured), so no Exposition note (R38).",
+      "question": "Is the parish's Eucharistic Adoration Chapel at Sacred Heart Church, so its hours (Mon-Fri 9:00 AM-7:00 PM, Sat 9:00 AM-3:30 PM) go there?",
+      "options": [
+        {
+          "label": "Include at Sacred Heart Church, in the Adoration Chapel",
+          "entry": {
+            "church_slug": "sacred-heart-havertown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION CHAPEL MONDAY - FRIDAY 9:00am - 7:00pm SATURDAY 9:00am - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION CHAPEL MONDAY - FRIDAY 9:00am - 7:00pm SATURDAY 9:00am - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 7,
+          "said": "Our Adoration Chapel is open: Monday- Friday 9:00am - 7:00pm Saturday 9:00am - 3:30pm"
+        }
+      ],
+      "rationale": "R32/R38, leaning per precedent ss-philip-and-james-exton s15: the chapel's hours sit in the church's own schedule box beside its Mass times, and the parish has one listed church, but no page names the chapel's address and the website (sacredheartmanoa.org, read 2026-11-26) doesn't mention it. Exposition isn't stated (a monstrance is pictured), so no Exposition note (R38).",
+      "question": "Is the parish's Eucharistic Adoration Chapel at Sacred Heart Church, so its hours (Mon-Fri 9:00 AM-7:00 PM, Sat 9:00 AM-3:30 PM) go there?",
+      "options": [
+        {
+          "label": "Include at Sacred Heart Church, in the Adoration Chapel",
+          "entry": {
+            "church_slug": "sacred-heart-havertown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "15:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 5,
+          "said": "Save the date! SUNDAY, MAY 2, 2027 12:00PM MASS OF THANKSGIVING CELEBRANT: ARCHBISHOP NELSON PEREZ CELEBRATION RECEPTION AT DREXELBROOK 2:30 - 6:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b80039dd",
+          "page": 5,
+          "said": "Save the date! SUNDAY, MAY 2, 2027 12:00PM MASS OF THANKSGIVING CELEBRANT: ARCHBISHOP NELSON PEREZ CELEBRATION RECEPTION AT DREXELBROOK 2:30 - 6:30PM"
+        }
+      ],
+      "rationale": "R32/R30, leaning per precedent our-lady-of-consolation-parkesburg s13 (leave out until details are printed): a save-the-date five months off that names no place for the Mass (the reception is at Drexelbrook) and says nothing of the usual 11:30 AM Sunday Mass that day. Update mode will read the issues that give the details.",
+      "question": "Add the centennial Mass of Thanksgiving, Sunday May 2, 2027, 12:00 PM, at Sacred Heart Church?",
+      "options": [
+        {
+          "label": "Leave out until details are printed",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include May 2, 2027 12:00 PM",
+          "entry": {
+            "church_slug": "sacred-heart-havertown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2027-05-02",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Centennial Mass of Thanksgiving"
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "14:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Meet the Father Ministry Holy Hour"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bc03744",
+          "page": 10,
+          "said": "Please join us this Sunday, November 15, from 2:00-3:00 PM at Annunciation BVM Church. During this grace-filled Holy Hour, we will have Adoration, Confessions, and Benediction"
+        }
+      ],
+      "rationale": "R22: held at Annunciation BVM Church, another parish's listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
