@@ -1,0 +1,1440 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-downingtown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:00:27Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T19:56:09Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Joseph, Downingtown. Mass, Wednesday/Saturday Confession and the 24/7 Adoration chapel agree in both bulletins read and on the parish website; holy-day and Christmas Masses come from the website under R6. Open: the Adoration chapel (asked only because seed check crashes on a settled 24h slot; include it) and the Advent Penance Service (Dec 21, website only, no year).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b03c4d98231043af9d7e1954102c8d5254b04d35a935935e2c57e2c94f83c141",
+      "fetched_at": "2026-11-15T16:00:27Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3711dec1eef475446f3503b42d7ddfce5d18bf287412f06c2351a83855e9da03",
+      "fetched_at": "2026-11-08T15:28:44Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Daily Mass (M-F): 7AM & 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 2,
+          "said": "intentions list 7am and 9am Monday-Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Saturday: 8AM & 5:00PM Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Saturday: 8AM & 5:00PM Vigil Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Saturday: 8AM & 5:00PM Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Saturday: 8AM & 5:00PM Vigil Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Sunday: 6AM, 7:30AM, 9:00AM, 10:30AM, 12:00PM, and 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Sunday: 6AM, 7:30AM, 9:00AM, 10:30AM, 12:00PM, and 4:00PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Sunday: 6AM, 7:30AM, 9:00AM, 10:30AM, 12:00PM, and 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Sunday: 6AM, 7:30AM, 9:00AM, 10:30AM, 12:00PM, and 4:00PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Sunday: 6AM, 7:30AM, 9:00AM, 10:30AM, 12:00PM, and 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Sunday: 6AM, 7:30AM, 9:00AM, 10:30AM, 12:00PM, and 4:00PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Sunday: 6AM, 7:30AM, 9:00AM, 10:30AM, 12:00PM, and 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Sunday: 6AM, 7:30AM, 9:00AM, 10:30AM, 12:00PM, and 4:00PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Sunday: 6AM, 7:30AM, 9:00AM, 10:30AM, 12:00PM, and 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Sunday: 6AM, 7:30AM, 9:00AM, 10:30AM, 12:00PM, and 4:00PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Sunday: 6AM, 7:30AM, 9:00AM, 10:30AM, 12:00PM, and 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Sunday: 6AM, 7:30AM, 9:00AM, 10:30AM, 12:00PM, and 4:00PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both issues read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Reconciliation Saturday: 3:30PM-4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Reconciliation Saturday: 3:30PM-4:30PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Reconciliation box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Reconciliation Wednesdays: 6:30AM, 8:30AM, 6:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Reconciliation Wednesdays: 6:30AM, 8:30AM, 6:30PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Reconciliation box of both issues read; no end time is given, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Reconciliation Wednesdays: 6:30AM, 8:30AM, 6:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Reconciliation Wednesdays: 6:30AM, 8:30AM, 6:30PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Reconciliation box of both issues read; no end time is given, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Reconciliation Wednesdays: 6:30AM, 8:30AM, 6:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Reconciliation Wednesdays: 6:30AM, 8:30AM, 6:30PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Reconciliation box of both issues read; no end time is given, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament Available 24/7 in the Perpetual Adoration Chapel, located in the Parish Office building."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament Available 24/7 in the Perpetual Adoration Chapel, located in the Parish Office building."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephrc.org/adoration-faq",
+          "said": "The Chapel is in the Holy Family Center (parish office), located behind the church, near the rectory and convent. It has a separate driveway off Manor Ave."
+        }
+      ],
+      "rationale": "R46, R1: settled on the evidence — a standing chapel open 24/7 in both issues; the website places it in the parish office building behind the church on the same campus, and its FAQ says no sign-up is needed (access not stated in the bulletin). Asked only because seed check crashes on a settled continuous inclusion (checks.py compares its null date with as_of); please include.",
+      "question": "Include the 24/7 Perpetual Adoration Chapel (Holy Family Center, behind the church)?",
+      "options": [
+        {
+          "label": "Include, open 24 hours",
+          "entry": {
+            "church_slug": "st-joseph-downingtown",
+            "event_type": "adoration",
+            "event_kind": "continuous",
+            "day_of_week": null,
+            "date": null,
+            "start_time": null,
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration Chapel, Holy Family Center",
+            "access": "not_stated",
+            "open_from": null,
+            "open_until": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b03c4d98",
+          "page": 1,
+          "said": "Daily Devotions: ... Sacred Heart Litany: First Fridays after 9AM Mass. First Saturday: First Saturdays at 830AM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3711dec1",
+          "page": 1,
+          "said": "Daily Devotions: ... Sacred Heart Litany: First Fridays after 9AM Mass. First Saturday: First Saturdays at 830AM."
+        }
+      ],
+      "rationale": "R24: devotions (Rosary, novenas, Sacred Heart Litany, First Saturday devotion) are not called a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephrc.org/mass-times",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 7:00 AM 9:00 AM 12:05 PM 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-26T19:59:34Z",
+            "current_because": "Checked 2026-11-26: the Mass Times page lists it under 'Upcoming Holy Days' beside this year's Christmas Masses, whose page gives Thursday, December 24 and Friday, December 25, the 2026 weekdays; its weekly times match the bulletin exactly.",
+            "bulletin": "b03c4d98",
+            "fits_because": "The newest bulletin (Nov 15) prints the same weekly schedule and no holy-day times; Dec 8, 2026 is a Tuesday, so the 7 and 9 AM Masses are the weekly ones and only 12:05 and 7 PM are added."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's own current schedule supplies the holy-day Masses the bulletin doesn't yet print; the 7 and 9 AM Masses are already weekly (POLICY, Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephrc.org/mass-times",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 7:00 AM 9:00 AM 12:05 PM 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-26T19:59:34Z",
+            "current_because": "Checked 2026-11-26: the Mass Times page lists it under 'Upcoming Holy Days' beside this year's Christmas Masses, whose page gives Thursday, December 24 and Friday, December 25, the 2026 weekdays; its weekly times match the bulletin exactly.",
+            "bulletin": "b03c4d98",
+            "fits_because": "The newest bulletin (Nov 15) prints the same weekly schedule and no holy-day times; Dec 8, 2026 is a Tuesday, so the 7 and 9 AM Masses are the weekly ones and only 12:05 and 7 PM are added."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's own current schedule supplies the holy-day Masses the bulletin doesn't yet print; the 7 and 9 AM Masses are already weekly (POLICY, Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephrc.org/christmas-mass-schedule-1",
+          "said": "Christmas Eve Vigil Masses Thursday, December 24 4:00 PM 6:00 PM 8:00 PM Midnight",
+          "schedule_check": {
+            "checked_at": "2026-11-26T19:59:34Z",
+            "current_because": "Checked 2026-11-26: the page gives Thursday, December 24 and Friday, December 25, the weekdays of 2026, and the Mass Times page lists the same times under Upcoming Holy Days.",
+            "bulletin": "b03c4d98",
+            "fits_because": "The newest bulletin (Nov 15) prints no Christmas times yet; these are additional to its weekly schedule."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's own 2026 Christmas schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephrc.org/christmas-mass-schedule-1",
+          "said": "Christmas Eve Vigil Masses Thursday, December 24 4:00 PM 6:00 PM 8:00 PM Midnight",
+          "schedule_check": {
+            "checked_at": "2026-11-26T19:59:34Z",
+            "current_because": "Checked 2026-11-26: the page gives Thursday, December 24 and Friday, December 25, the weekdays of 2026, and the Mass Times page lists the same times under Upcoming Holy Days.",
+            "bulletin": "b03c4d98",
+            "fits_because": "The newest bulletin (Nov 15) prints no Christmas times yet; these are additional to its weekly schedule."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's own 2026 Christmas schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephrc.org/christmas-mass-schedule-1",
+          "said": "Christmas Eve Vigil Masses Thursday, December 24 4:00 PM 6:00 PM 8:00 PM Midnight",
+          "schedule_check": {
+            "checked_at": "2026-11-26T19:59:34Z",
+            "current_because": "Checked 2026-11-26: the page gives Thursday, December 24 and Friday, December 25, the weekdays of 2026, and the Mass Times page lists the same times under Upcoming Holy Days.",
+            "bulletin": "b03c4d98",
+            "fits_because": "The newest bulletin (Nov 15) prints no Christmas times yet; these are additional to its weekly schedule."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's own 2026 Christmas schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "00:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephrc.org/christmas-mass-schedule-1",
+          "said": "Christmas Day Masses Friday, December 25 8:00 AM 10:00 AM 12:00 Noon; Christmas Eve Vigil Masses ... Midnight",
+          "schedule_check": {
+            "checked_at": "2026-11-26T19:59:34Z",
+            "current_because": "Checked 2026-11-26: the page gives Thursday, December 24 and Friday, December 25, the weekdays of 2026, and the Mass Times page lists December 25 12:00 AM, 8:00 AM, 10:00 AM, 12:00 PM.",
+            "bulletin": "b03c4d98",
+            "fits_because": "The newest bulletin (Nov 15) prints no Christmas times yet; these are additional to its weekly schedule. No cancellation of the weekly Friday Masses is stated, so none is recorded (R17)."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's own 2026 Christmas schedule; Midnight Mass is recorded at 12:00 AM on Dec 25 as the Mass Times page lists it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephrc.org/christmas-mass-schedule-1",
+          "said": "Christmas Day Masses Friday, December 25 8:00 AM 10:00 AM 12:00 Noon; Christmas Eve Vigil Masses ... Midnight",
+          "schedule_check": {
+            "checked_at": "2026-11-26T19:59:34Z",
+            "current_because": "Checked 2026-11-26: the page gives Thursday, December 24 and Friday, December 25, the weekdays of 2026, and the Mass Times page lists December 25 12:00 AM, 8:00 AM, 10:00 AM, 12:00 PM.",
+            "bulletin": "b03c4d98",
+            "fits_because": "The newest bulletin (Nov 15) prints no Christmas times yet; these are additional to its weekly schedule. No cancellation of the weekly Friday Masses is stated, so none is recorded (R17)."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's own 2026 Christmas schedule; Midnight Mass is recorded at 12:00 AM on Dec 25 as the Mass Times page lists it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephrc.org/christmas-mass-schedule-1",
+          "said": "Christmas Day Masses Friday, December 25 8:00 AM 10:00 AM 12:00 Noon; Christmas Eve Vigil Masses ... Midnight",
+          "schedule_check": {
+            "checked_at": "2026-11-26T19:59:34Z",
+            "current_because": "Checked 2026-11-26: the page gives Thursday, December 24 and Friday, December 25, the weekdays of 2026, and the Mass Times page lists December 25 12:00 AM, 8:00 AM, 10:00 AM, 12:00 PM.",
+            "bulletin": "b03c4d98",
+            "fits_because": "The newest bulletin (Nov 15) prints no Christmas times yet; these are additional to its weekly schedule. No cancellation of the weekly Friday Masses is stated, so none is recorded (R17)."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's own 2026 Christmas schedule; Midnight Mass is recorded at 12:00 AM on Dec 25 as the Mass Times page lists it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-downingtown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephrc.org/christmas-mass-schedule-1",
+          "said": "Christmas Day Masses Friday, December 25 8:00 AM 10:00 AM 12:00 Noon; Christmas Eve Vigil Masses ... Midnight",
+          "schedule_check": {
+            "checked_at": "2026-11-26T19:59:34Z",
+            "current_because": "Checked 2026-11-26: the page gives Thursday, December 24 and Friday, December 25, the weekdays of 2026, and the Mass Times page lists December 25 12:00 AM, 8:00 AM, 10:00 AM, 12:00 PM.",
+            "bulletin": "b03c4d98",
+            "fits_because": "The newest bulletin (Nov 15) prints no Christmas times yet; these are additional to its weekly schedule. No cancellation of the weekly Friday Masses is stated, so none is recorded (R17)."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's own 2026 Christmas schedule; Midnight Mass is recorded at 12:00 AM on Dec 25 as the Mass Times page lists it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjosephrc.org/advent-services",
+          "said": "Penance Service December 21st at 7:00 PM The Sacrament of Reconciliation will be celebrated in the Church."
+        }
+      ],
+      "rationale": "R29, R6: only the website's Advent Services page gives it, with no year or weekday, so nothing shows the page is this year's rather than last year's (Lessons & Carols, Dec 13, is the only other item). The bulletins read print no Advent penance service yet. Leaning leave out: a wrong time is worse than a missing one, and update mode will read it from a December bulletin.",
+      "question": "Add the Advent Penance Service, Monday Dec 21, 7:00 PM in the church?",
+      "options": [
+        {
+          "label": "Dec 21 7:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-downingtown",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-21",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Advent Penance Service"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
