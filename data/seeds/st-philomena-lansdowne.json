@@ -1,0 +1,591 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-philomena-lansdowne",
+  "status": "ready",
+  "as_of": "2026-11-15T16:16:42Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T23:47:27Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Philomena, Lansdowne. Both November issues (Nov 8, Nov 15) print the same schedule box: Sat 5:15 PM vigil, Sun 7:30/10/12, Mon-Sat 8:00 AM, confessions Mon 4-5 PM and Sat 3:45-4:45 PM, Monday Adoration after the 8 AM Mass (8:30 AM, no end; Benediction 5:30 PM). The undated Holy Day line is left out. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "abdc67570eb3c26e2aec226ac3e418162722b3711fc91b39f451194ebba56a4e",
+      "fetched_at": "2026-11-15T16:16:42Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "fc9bb17264d2bf9e7f262de410046d2b0a988cb3812932298e7a04643b6197bc",
+      "fetched_at": "2026-11-08T15:41:55Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-church-lansdowne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday | 8:00am, 5:15pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc9bb172",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday | 8:00am, 5:15pm Vigil"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read; both weeks' intentions list a 5:15pm Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-church-lansdowne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 1,
+          "said": "Sunday | 7:30am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc9bb172",
+          "page": 1,
+          "said": "Sunday | 7:30am, 10:00am, 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-church-lansdowne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 1,
+          "said": "Sunday | 7:30am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc9bb172",
+          "page": 1,
+          "said": "Sunday | 7:30am, 10:00am, 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-church-lansdowne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 1,
+          "said": "Sunday | 7:30am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc9bb172",
+          "page": 1,
+          "said": "Sunday | 7:30am, 10:00am, 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-church-lansdowne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday | 8:00am ... Saturday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc9bb172",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday | 8:00am ... Saturday | 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read (Saturday 8:00am also under Weekend Masses); every day's intentions list 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-church-lansdowne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday | 8:00am ... Saturday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc9bb172",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday | 8:00am ... Saturday | 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read (Saturday 8:00am also under Weekend Masses); every day's intentions list 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-church-lansdowne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday | 8:00am ... Saturday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc9bb172",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday | 8:00am ... Saturday | 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read (Saturday 8:00am also under Weekend Masses); every day's intentions list 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-church-lansdowne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday | 8:00am ... Saturday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc9bb172",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday | 8:00am ... Saturday | 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read (Saturday 8:00am also under Weekend Masses); every day's intentions list 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-church-lansdowne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday | 8:00am ... Saturday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc9bb172",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday | 8:00am ... Saturday | 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read (Saturday 8:00am also under Weekend Masses); every day's intentions list 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-church-lansdowne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday | 8:00am ... Saturday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc9bb172",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday | 8:00am ... Saturday | 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read (Saturday 8:00am also under Weekend Masses); every day's intentions list 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-church-lansdowne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 1,
+          "said": "CONFESSIONS Monday | 4:00pm - 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc9bb172",
+          "page": 1,
+          "said": "CONFESSIONS Monday | 4:00pm - 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 2,
+          "said": "Monday ... Confessions 4:00pm, Rosary 5:00pm, Benediction 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc9bb172",
+          "page": 2,
+          "said": "Monday ... Confessions 4:00pm, Rosary 5:00pm, Benediction 5:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the Monday intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-church-lansdowne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 1,
+          "said": "Saturday | 3:45pm - 4:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc9bb172",
+          "page": 1,
+          "said": "Saturday | 3:45pm - 4:45pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-church-lansdowne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass; Benediction 5:30 PM"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Mondays following the 8 a.m. Mass Rosary and Evening Prayer at 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc9bb172",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Mondays following the 8 a.m. Mass Rosary and Evening Prayer at 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 2,
+          "said": "Monday ... Confessions 4:00pm, Rosary 5:00pm, Benediction 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc9bb172",
+          "page": 2,
+          "said": "Monday ... Confessions 4:00pm, Rosary 5:00pm, Benediction 5:30pm"
+        }
+      ],
+      "rationale": "R1, R10: both issues; 'following the 8 a.m. Mass' on a weekday starts at 8:30 AM. No end time is printed, so none is recorded (POLICY, Times); the 5:30pm Benediction lies inside this period and is a note, not a second slot (POLICY/R37).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 1,
+          "said": "CONFESSIONS ... Other | By Appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "abdc6757",
+          "page": 1,
+          "said": "HOLY DAYS OF OBLIGATION Vigil at 7:00pm Night Before 8:00a.m., 12 Noon the Day of"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc9bb172",
+          "page": 1,
+          "said": "HOLY DAYS OF OBLIGATION Vigil at 7:00pm Night Before 8:00a.m., 12 Noon the Day of"
+        }
+      ],
+      "rationale": "POLICY, Dates; R24: a generic standing Holy Day line with no date. Neither issue prints a dated notice for the Immaculate Conception (Dec 8) or Christmas, so no date can be pinned; update mode will read December issues. Same treatment as st-isaac-jogues-wayne s27.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
