@@ -1,0 +1,641 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-patrick-kennett-square",
+  "status": "ready",
+  "as_of": "2026-11-15T16:46:40Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T21:01:47Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Patrick, Kennett Square. Both issues read (Nov 8 and Nov 15, 2026, image-only PDFs) print the same schedule box: Sat 5 PM vigil, Sun 7:30/9/11, weekday Masses, Wed and Sat confessions, Monday all-day and First Friday evening Adoration, all matched by intentions and calendar. No open questions; no holy-day or Advent times printed yet.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2248dbe7f85816926cfb9da6c05240fc3db4716d9da004e35afe4e8371544492",
+      "fetched_at": "2026-11-15T16:46:40Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "90ffc45eb6234630ddb9df87eff41593293d25ba8e70733c6d21014c85341223",
+      "fetched_at": "2026-11-08T15:55:11Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-kennett-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday Vigil: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90ffc45e",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday Vigil: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 2,
+          "said": "Vigil, Our Lord Jesus Christ, King of the Universe 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-kennett-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:00 AM, 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90ffc45e",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:00 AM, 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 2,
+          "said": "Sunday, November 22 ... 7:30AM Parishioners 9:00AM William Hardy Eyre, Jr."
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-kennett-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:00 AM, 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90ffc45e",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:00 AM, 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 2,
+          "said": "Sunday, November 22 ... 7:30AM Parishioners 9:00AM William Hardy Eyre, Jr."
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-kennett-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:00 AM, 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90ffc45e",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:00 AM, 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90ffc45e",
+          "page": 2,
+          "said": "Sunday, November 15 ... 11:00AM Special Intention"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; the older issue's intentions list it. The newest intentions list no 11:00 AM for Nov 22, which R39 treats as no proof of no Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-kennett-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 AM — Monday, Tuesday, Thursday, Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90ffc45e",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 AM — Monday, Tuesday, Thursday, Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 2,
+          "said": "Monday, November 16 ... 7:30AM (likewise Tue 17, Thu 19, Fri 20)"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues, matched by the intentions and the p6 calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-kennett-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 AM — Monday, Tuesday, Thursday, Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90ffc45e",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 AM — Monday, Tuesday, Thursday, Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 2,
+          "said": "Monday, November 16 ... 7:30AM (likewise Tue 17, Thu 19, Fri 20)"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues, matched by the intentions and the p6 calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-kennett-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 AM — Monday, Tuesday, Thursday, Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90ffc45e",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 AM — Monday, Tuesday, Thursday, Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 2,
+          "said": "Monday, November 16 ... 7:30AM (likewise Tue 17, Thu 19, Fri 20)"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues, matched by the intentions and the p6 calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-kennett-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 AM — Monday, Tuesday, Thursday, Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90ffc45e",
+          "page": 1,
+          "said": "Weekday Mass: 7:30 AM — Monday, Tuesday, Thursday, Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 2,
+          "said": "Monday, November 16 ... 7:30AM (likewise Tue 17, Thu 19, Fri 20)"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues, matched by the intentions and the p6 calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-kennett-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 1,
+          "said": "7:15 PM - Wednesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90ffc45e",
+          "page": 1,
+          "said": "7:15 PM - Wednesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 2,
+          "said": "Wednesday, November 18 ... 7:15PM Carole Scalia"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues and the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-kennett-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 1,
+          "said": "*8:00 AM - Saturday *(Subject to change for funerals or weddings)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90ffc45e",
+          "page": 1,
+          "said": "*8:00 AM - Saturday *(Subject to change for funerals or weddings)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 2,
+          "said": "Saturday, November 21 ... 8:00AM Special Intention"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues and the intentions; the funeral/wedding caveat doesn't make it irregular.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-kennett-square",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Reconciliation Room in the Narthex"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 1,
+          "said": "CONFESSIONS Reconciliation Room located in Narthex Wednesday: 6:00 PM to 6:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90ffc45e",
+          "page": 1,
+          "said": "CONFESSIONS Reconciliation Room located in Narthex Wednesday: 6:00 PM to 6:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 6,
+          "said": "Wednesday, November 18 Confession 6:00PM Narthex"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues and the p6 calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-kennett-square",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Reconciliation Room in the Narthex"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 1,
+          "said": "Saturday: 3:30 PM to 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90ffc45e",
+          "page": 1,
+          "said": "Saturday: 3:30 PM to 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 6,
+          "said": "Saturday, November 21 Confession 3:30PM Narthex"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues and the p6 calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-kennett-square",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT *Mondays: 8:00 AM - 7:00 PM in Church *(Subject to change for funerals)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90ffc45e",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT *Mondays: 8:00 AM - 7:00 PM in Church *(Subject to change for funerals)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 6,
+          "said": "Monday, November 16 Adoration 8:00AM C"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues and the p6 calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-kennett-square",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90ffc45e",
+          "page": 1,
+          "said": "First Fridays: 7:00 PM - 8:30 PM in Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2248dbe7",
+          "page": 1,
+          "said": "First Fridays: 7:00 PM - 8:30 PM in Church"
+        }
+      ],
+      "rationale": "R12, R11: a named First Friday slot in the standing schedule box of both issues; neither issue's week (Nov 8-15, Nov 15-22) holds a first Friday, so neither calendar can show it. POLICY Weekly rule 2 makes it weekly with weeks_of_month.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
