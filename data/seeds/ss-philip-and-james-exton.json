@@ -1,0 +1,867 @@
+{
+  "schema_version": 1,
+  "parish_slug": "ss-philip-and-james-exton",
+  "status": "needs_review",
+  "as_of": "2026-11-15T15:59:11Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T19:46:52Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, two issues read (Nov 8 and Nov 15, 2026, image-only PDFs); the p1 Mass Schedule box is identical in both and matches the website and the intentions. Open: whether St. Mary's Chapel (weekday Adoration 9 AM-7 PM, exposed) is at the church; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6e15f3934c6079ee5affd6a8659405fa5d6762ab7fc592dad8a6667cf3b0fea0",
+      "fetched_at": "2026-11-15T15:59:11Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "93b56d55ab063f6d039398c028466b248cfdb577be89c27b23d1a72c579b9776",
+      "fetched_at": "2026-11-08T15:28:04Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 3,
+          "said": "Monday, November 16 8:30 AM | Leonard Morawski"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read; the p3 intentions list 8:30 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 3,
+          "said": "Monday, November 16 8:30 AM | Leonard Morawski"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read; the p3 intentions list 8:30 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 3,
+          "said": "Monday, November 16 8:30 AM | Leonard Morawski"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read; the p3 intentions list 8:30 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 3,
+          "said": "Monday, November 16 8:30 AM | Leonard Morawski"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read; the p3 intentions list 8:30 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 3,
+          "said": "Monday, November 16 8:30 AM | Leonard Morawski"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read; the p3 intentions list 8:30 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 3,
+          "said": "Monday, November 16 8:30 AM | Leonard Morawski"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read; the p3 intentions list 8:30 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read; p3 intentions list Saturday 4:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Sunday: 8:30am, 10:30am, 12:00pm & 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Sunday: 8:30am, 10:30am, 12:00pm & 5:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read; p3 intentions match (Noon = 12:00 PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Sunday: 8:30am, 10:30am, 12:00pm & 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Sunday: 8:30am, 10:30am, 12:00pm & 5:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read; p3 intentions match (Noon = 12:00 PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Sunday: 8:30am, 10:30am, 12:00pm & 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Sunday: 8:30am, 10:30am, 12:00pm & 5:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read; p3 intentions match (Noon = 12:00 PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Sunday: 8:30am, 10:30am, 12:00pm & 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Sunday: 8:30am, 10:30am, 12:00pm & 5:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read; p3 intentions match (Noon = 12:00 PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Confession Monday: 7:00 - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Confession Monday: 7:00 - 8:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Confession Saturday: 3:00 - 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Confession Saturday: 3:00 - 4:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-philip-and-james-exton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Confession Sunday: 8:00 - 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Confession Sunday: 8:00 - 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Adoration in St. Mary's Chapel Monday through Friday: 9:00 AM - 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Adoration in St. Mary's Chapel Monday through Friday: 9:00 AM - 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sspj.net/mass-times",
+          "said": "Adoration Times Mon Fri 9:00 AM to 7:00 PM St. Mary's Chapel is open for adoration of the Exposed Most Blessed Sacrament."
+        }
+      ],
+      "rationale": "R32 / POLICY, Churches and chapels: the hours are clear in both issues and on the website, but neither says where St. Mary's Chapel is. The parish has one listed church (723 E. Lincoln Hwy); the rectory is at another address (107 N. Ship Road). Leaning include: the chapel heads the church's own schedule box and the website's Mass Times page lists it with that one church's Mass and Confession times and directions only to 723 E. Lincoln Hwy, so it reads as the church's chapel. seed church finds no separate St. Mary's Chapel.",
+      "question": "Is St. Mary's Chapel at SS. Philip and James Church, so its weekday Adoration 9 AM-7 PM goes there?",
+      "options": [
+        {
+          "label": "Mon-Fri 9:00 AM-7:00 PM at the church, in St. Mary's Chapel",
+          "entry": {
+            "church_slug": "ss-philip-and-james-exton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Mary's Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "st-marys-chapel"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Adoration in St. Mary's Chapel Monday through Friday: 9:00 AM - 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Adoration in St. Mary's Chapel Monday through Friday: 9:00 AM - 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sspj.net/mass-times",
+          "said": "Adoration Times Mon Fri 9:00 AM to 7:00 PM St. Mary's Chapel is open for adoration of the Exposed Most Blessed Sacrament."
+        }
+      ],
+      "rationale": "R32 / POLICY, Churches and chapels: the hours are clear in both issues and on the website, but neither says where St. Mary's Chapel is. The parish has one listed church (723 E. Lincoln Hwy); the rectory is at another address (107 N. Ship Road). Leaning include: the chapel heads the church's own schedule box and the website's Mass Times page lists it with that one church's Mass and Confession times and directions only to 723 E. Lincoln Hwy, so it reads as the church's chapel. seed church finds no separate St. Mary's Chapel.",
+      "question": "Is St. Mary's Chapel at SS. Philip and James Church, so its weekday Adoration 9 AM-7 PM goes there?",
+      "options": [
+        {
+          "label": "Mon-Fri 9:00 AM-7:00 PM at the church, in St. Mary's Chapel",
+          "entry": {
+            "church_slug": "ss-philip-and-james-exton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Mary's Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "st-marys-chapel"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Adoration in St. Mary's Chapel Monday through Friday: 9:00 AM - 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Adoration in St. Mary's Chapel Monday through Friday: 9:00 AM - 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sspj.net/mass-times",
+          "said": "Adoration Times Mon Fri 9:00 AM to 7:00 PM St. Mary's Chapel is open for adoration of the Exposed Most Blessed Sacrament."
+        }
+      ],
+      "rationale": "R32 / POLICY, Churches and chapels: the hours are clear in both issues and on the website, but neither says where St. Mary's Chapel is. The parish has one listed church (723 E. Lincoln Hwy); the rectory is at another address (107 N. Ship Road). Leaning include: the chapel heads the church's own schedule box and the website's Mass Times page lists it with that one church's Mass and Confession times and directions only to 723 E. Lincoln Hwy, so it reads as the church's chapel. seed church finds no separate St. Mary's Chapel.",
+      "question": "Is St. Mary's Chapel at SS. Philip and James Church, so its weekday Adoration 9 AM-7 PM goes there?",
+      "options": [
+        {
+          "label": "Mon-Fri 9:00 AM-7:00 PM at the church, in St. Mary's Chapel",
+          "entry": {
+            "church_slug": "ss-philip-and-james-exton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Mary's Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "st-marys-chapel"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Adoration in St. Mary's Chapel Monday through Friday: 9:00 AM - 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Adoration in St. Mary's Chapel Monday through Friday: 9:00 AM - 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sspj.net/mass-times",
+          "said": "Adoration Times Mon Fri 9:00 AM to 7:00 PM St. Mary's Chapel is open for adoration of the Exposed Most Blessed Sacrament."
+        }
+      ],
+      "rationale": "R32 / POLICY, Churches and chapels: the hours are clear in both issues and on the website, but neither says where St. Mary's Chapel is. The parish has one listed church (723 E. Lincoln Hwy); the rectory is at another address (107 N. Ship Road). Leaning include: the chapel heads the church's own schedule box and the website's Mass Times page lists it with that one church's Mass and Confession times and directions only to 723 E. Lincoln Hwy, so it reads as the church's chapel. seed church finds no separate St. Mary's Chapel.",
+      "question": "Is St. Mary's Chapel at SS. Philip and James Church, so its weekday Adoration 9 AM-7 PM goes there?",
+      "options": [
+        {
+          "label": "Mon-Fri 9:00 AM-7:00 PM at the church, in St. Mary's Chapel",
+          "entry": {
+            "church_slug": "ss-philip-and-james-exton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Mary's Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "st-marys-chapel"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e15f393",
+          "page": 1,
+          "said": "Adoration in St. Mary's Chapel Monday through Friday: 9:00 AM - 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93b56d55",
+          "page": 1,
+          "said": "Adoration in St. Mary's Chapel Monday through Friday: 9:00 AM - 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sspj.net/mass-times",
+          "said": "Adoration Times Mon Fri 9:00 AM to 7:00 PM St. Mary's Chapel is open for adoration of the Exposed Most Blessed Sacrament."
+        }
+      ],
+      "rationale": "R32 / POLICY, Churches and chapels: the hours are clear in both issues and on the website, but neither says where St. Mary's Chapel is. The parish has one listed church (723 E. Lincoln Hwy); the rectory is at another address (107 N. Ship Road). Leaning include: the chapel heads the church's own schedule box and the website's Mass Times page lists it with that one church's Mass and Confession times and directions only to 723 E. Lincoln Hwy, so it reads as the church's chapel. seed church finds no separate St. Mary's Chapel.",
+      "question": "Is St. Mary's Chapel at SS. Philip and James Church, so its weekday Adoration 9 AM-7 PM goes there?",
+      "options": [
+        {
+          "label": "Mon-Fri 9:00 AM-7:00 PM at the church, in St. Mary's Chapel",
+          "entry": {
+            "church_slug": "ss-philip-and-james-exton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Mary's Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "st-marys-chapel"
+    }
+  ]
+}
