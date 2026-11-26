@@ -1,0 +1,988 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-rosary-coatesville",
+  "status": "ready",
+  "as_of": "2026-11-15T15:58:42Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T20:10:14Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both issues read (Nov 8 and Nov 15, 2026) print the same Mass, Confession and Adoration box; weekly listings confirm it and add a Thursday 6:00 PM Holy Hour in both weeks (R35). The Tree of Love Mass on Sat Nov 28 is the regular 5:00 PM vigil, so it gets no slot. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "961423779a43d6663691b5a58ab78e5361097eef8cef50b8fa50803fe1782e12",
+      "fetched_at": "2026-11-15T15:58:42Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4326aac0a9db33cdb59e210fedd7c6150174267fdb4818141ee1788675da0977",
+      "fetched_at": "2026-11-08T15:27:33Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "MASS TIMES Saturday Vigil: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "MASS TIMES Saturday Vigil: 5:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues read, and in each week's listing (5:00 pm Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Sunday: 8:30 AM 10:30 AM 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Sunday: 8:30 AM 10:30 AM 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues read, and in each week's listing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Sunday: 8:30 AM 10:30 AM 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Sunday: 8:30 AM 10:30 AM 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues read, and in each week's listing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Sunday: 8:30 AM 10:30 AM 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Sunday: 8:30 AM 10:30 AM 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues read, and in each week's listing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Mon & Wed.: 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Mon & Wed.: 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues read, and in each week's listing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Mon & Wed.: 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Mon & Wed.: 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues read, and in each week's listing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Tues, Thurs, Friday & Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Tues, Thurs, Friday & Saturday: 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues read, and in each week's listing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Tues, Thurs, Friday & Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Tues, Thurs, Friday & Saturday: 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues read, and in each week's listing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Tues, Thurs, Friday & Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Tues, Thurs, Friday & Saturday: 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues read, and in each week's listing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Tues, Thurs, Friday & Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Tues, Thurs, Friday & Saturday: 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues read, and in each week's listing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "17:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "CONFESSION Mon & Wed.: 5:30 - 5:50 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "CONFESSION Mon & Wed.: 5:30 - 5:50 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "17:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "CONFESSION Mon & Wed.: 5:30 - 5:50 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "CONFESSION Mon & Wed.: 5:30 - 5:50 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Tues, Thurs, Friday & Saturday: 7:30 - 7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Tues, Thurs, Friday & Saturday: 7:30 - 7:50 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Tues, Thurs, Friday & Saturday: 7:30 - 7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Tues, Thurs, Friday & Saturday: 7:30 - 7:50 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Tues, Thurs, Friday & Saturday: 7:30 - 7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Tues, Thurs, Friday & Saturday: 7:30 - 7:50 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Tues, Thurs, Friday & Saturday: 7:30 - 7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Tues, Thurs, Friday & Saturday: 7:30 - 7:50 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "16:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Saturday: 4:30 - 4:50 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Saturday: 4:30 - 4:50 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Sunday: 8:00 - 8:20 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Sunday: 8:00 - 8:20 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "10:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Sunday: 10:00 - 10:20 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Sunday: 10:00 - 10:20 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "17:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Sunday: 5:30 - 5:50 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Sunday: 5:30 - 5:50 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "ADORATION Last Monday of the month: 9:00 am - 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "ADORATION Last Monday of the month: 9:00 am - 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 4,
+          "said": "all-day Eucharistic Adoration of the Blessed Sacrament will be held on, Monday, November 30th"
+        }
+      ],
+      "rationale": "R1, R11: the Adoration box of both issues names the last Monday (POLICY, Weekly or dated rule 2); the p4 notice for Nov 30 is that month's last Monday, so it is not a separate dated entry (rule 6). The newest week (Nov 16-22) holds no last Monday, but the box prints the standing schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "ST. JUDE & BENEDICTION: Last Monday of the month after 6:00 pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "ST. JUDE & BENEDICTION: Last Monday of the month after 6:00 pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 4,
+          "said": "The Rosary will be prayed in common prior to the 6:00 pm Mass, followed by St. Jude Novena and Benediction."
+        }
+      ],
+      "rationale": "POLICY, What to extract (Benediction implies Adoration) and R10: no clock time, so 30 minutes after the 6:00 PM weekday Mass starts; no end time given. Last-Monday pattern named in both issues' box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "Every Saturday: 8:30 am - Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "Every Saturday: 8:30 am - Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Adoration box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-coatesville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 2,
+          "said": "Thursday November 19 ... 8:00 am Mass ... 6:00 pm Holy Hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 2,
+          "said": "Thursday November 12 ... 8:00 am Mass ... 6:00 pm Holy Hour"
+        }
+      ],
+      "rationale": "R35: the same Thursday 6:00 pm Holy Hour is printed in the This Week listing of two issues covering different weeks, not marked special; POLICY makes a Holy Hour Adoration. No end time or duration is printed, so none is recorded. The cover box lists only Monday and Saturday Adoration, but a box does not disprove times printed elsewhere (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 1,
+          "said": "NOVENAS SACRED HEART: First Friday after the 8:00 am Mass; MIRACULOUS MEDAL: Every Saturday after the 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4326aac0",
+          "page": 1,
+          "said": "NOVENAS SACRED HEART: First Friday after the 8:00 am Mass; MIRACULOUS MEDAL: Every Saturday after the 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96142377",
+          "page": 2,
+          "said": "8:00 am Rosary ... 10:00 am Rosary"
+        }
+      ],
+      "rationale": "R24: novenas and the Rosary are devotions, not Mass, Confession or Adoration (the St. Jude novena's Benediction is recorded separately).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
