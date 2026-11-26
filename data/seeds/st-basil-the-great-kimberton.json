@@ -1,0 +1,952 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-basil-the-great-kimberton",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:40Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T18:52:48Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday, Wednesday evening, Confession and Wednesday Adoration times match in both issues (Nov 8, Nov 15) and the website; a dated Thanksgiving 10:00 Mass. Open: a First Saturday 8:45 Mass and 9:15 Confession printed once in the calendar, and Tuesday Adoration that only the website gives.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "73b513ed2f8de669cc737d024ba9036c2d831ea267dd28d9e294932d161bced5",
+      "fetched_at": "2026-11-15T16:44:40Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ae0bdeddf7e3a2414efe3ac53e22ee1636744a8608f424ca602db1425c2ddb7b",
+      "fetched_at": "2026-11-08T15:53:38Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-basil-the-great-kimberton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Mass Sunday: 8:30 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae0bdedd",
+          "page": 10,
+          "said": "Mass Sunday: 8:30 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "8:30 Mass (w/ childrens liturgy of the word) 11:00 Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of both issues and on every Sunday of the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-basil-the-great-kimberton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Mass Sunday: 8:30 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae0bdedd",
+          "page": 10,
+          "said": "Mass Sunday: 8:30 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "8:30 Mass (w/ childrens liturgy of the word) 11:00 Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of both issues and on every Sunday of the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-basil-the-great-kimberton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Saturday: 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae0bdedd",
+          "page": 10,
+          "said": "Saturday: 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "5:00 Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of both issues and on every Saturday of the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-basil-the-great-kimberton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Weekdays: 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae0bdedd",
+          "page": 10,
+          "said": "Weekdays: 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "8:45 Mass"
+        }
+      ],
+      "rationale": "R1: Weekdays 8:45 in the schedule box of both issues; the calendar prints 8:45 Mass Monday to Friday (not Saturday), as does the website (Monday—Friday: 8.45 am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-basil-the-great-kimberton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Weekdays: 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae0bdedd",
+          "page": 10,
+          "said": "Weekdays: 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "8:45 Mass"
+        }
+      ],
+      "rationale": "R1: Weekdays 8:45 in the schedule box of both issues; the calendar prints 8:45 Mass Monday to Friday (not Saturday), as does the website (Monday—Friday: 8.45 am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-basil-the-great-kimberton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Weekdays: 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae0bdedd",
+          "page": 10,
+          "said": "Weekdays: 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "8:45 Mass"
+        }
+      ],
+      "rationale": "R1: Weekdays 8:45 in the schedule box of both issues; the calendar prints 8:45 Mass Monday to Friday (not Saturday), as does the website (Monday—Friday: 8.45 am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-basil-the-great-kimberton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Weekdays: 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae0bdedd",
+          "page": 10,
+          "said": "Weekdays: 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "8:45 Mass"
+        }
+      ],
+      "rationale": "R1: Weekdays 8:45 in the schedule box of both issues; the calendar prints 8:45 Mass Monday to Friday (not Saturday), as does the website (Monday—Friday: 8.45 am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-basil-the-great-kimberton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Weekdays: 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae0bdedd",
+          "page": 10,
+          "said": "Weekdays: 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "8:45 Mass"
+        }
+      ],
+      "rationale": "R1: Weekdays 8:45 in the schedule box of both issues; the calendar prints 8:45 Mass Monday to Friday (not Saturday), as does the website (Monday—Friday: 8.45 am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-basil-the-great-kimberton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Wednesday Evening: 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae0bdedd",
+          "page": 10,
+          "said": "Wednesday Evening: 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "6:30 Mass"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every Wednesday of the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-basil-the-great-kimberton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Sacrament of Penance Mondays, Tuesdays,Wednesday: 9:15-10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae0bdedd",
+          "page": 10,
+          "said": "Sacrament of Penance Mondays, Tuesdays,Wednesday: 9:15-10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "9:15 Confession"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the calendar prints 9:15 Confession Mon-Wed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-basil-the-great-kimberton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Sacrament of Penance Mondays, Tuesdays,Wednesday: 9:15-10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae0bdedd",
+          "page": 10,
+          "said": "Sacrament of Penance Mondays, Tuesdays,Wednesday: 9:15-10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "9:15 Confession"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the calendar prints 9:15 Confession Mon-Wed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-basil-the-great-kimberton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Sacrament of Penance Mondays, Tuesdays,Wednesday: 9:15-10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae0bdedd",
+          "page": 10,
+          "said": "Sacrament of Penance Mondays, Tuesdays,Wednesday: 9:15-10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "9:15 Confession"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the calendar prints 9:15 Confession Mon-Wed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-basil-the-great-kimberton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Wednesdays: 5:30-6:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae0bdedd",
+          "page": 10,
+          "said": "Wednesdays: 5:30-6:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "5:30 Confession"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every Wednesday of the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-basil-the-great-kimberton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Saturday: 4:00-4:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae0bdedd",
+          "page": 10,
+          "said": "Saturday: 4:00-4:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "4:00 Confession"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every Saturday of the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-basil-the-great-kimberton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": "18:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Adoration of the Blessed Sacrament Wednesdays: 9:15am-6:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae0bdedd",
+          "page": 10,
+          "said": "Adoration of the Blessed Sacrament Wednesdays: 9:15am-6:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website gives the same Wednesday hours. The Wednesday confessions inside it have their own clock times, so they stay separate slots.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-basil-the-great-kimberton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "26 10:00 Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sbgparish.org/",
+          "said": "Nov. 26th | Thanksgiving Day 10.00am Mass [Church]"
+        }
+      ],
+      "rationale": "R1, R40, R16: the newest calendar prints a 10:00 Mass on Thanksgiving (Nov 26), correcting the 8:45 the Nov 8 calendar showed; the website agrees. Dated, after as_of. No cancellation of the weekly 8:45 is stated (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "5 8:45 First Sat. Mass"
+        }
+      ],
+      "rationale": "R30: POLICY rule 2 makes a named First Saturday slot weekly, but it is printed only once, in the Dec 5 calendar cell; neither issue's schedule box nor the website's Mass list mentions it, and no other read issue covers a first Saturday (R11: the Nov 8 calendar starts Nov 8). Leaning to POLICY rule 2.",
+      "question": "Add a First Saturday 8:45 AM Mass?",
+      "options": [
+        {
+          "label": "First Saturdays 8:45 AM",
+          "entry": {
+            "church_slug": "st-basil-the-great-kimberton",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:45",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Only Dec 5, 2026",
+          "entry": {
+            "church_slug": "st-basil-the-great-kimberton",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-05",
+            "start_time": "08:45",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "first-sat"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 5,
+          "said": "9:15 First Sat. Confession"
+        }
+      ],
+      "rationale": "R30: same case as the First Saturday Mass: printed only in the Dec 5 calendar cell, no end time; leaning to POLICY rule 2. Answer it alike.",
+      "question": "Add First Saturday Confession at 9:15 AM?",
+      "options": [
+        {
+          "label": "First Saturdays 9:15 AM",
+          "entry": {
+            "church_slug": "st-basil-the-great-kimberton",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Only Dec 5, 2026",
+          "entry": {
+            "church_slug": "st-basil-the-great-kimberton",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-05",
+            "start_time": "09:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "first-sat-conf"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 10,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sbgparish.org/",
+          "said": "Adoration of the Blessed Sacrament Tuesdays: 9.15 am–8.00 pm Wednesdays: 9.15am–6.15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Adoration of the Blessed Sacrament Wednesdays: 9:15am-6:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae0bdedd",
+          "page": 10,
+          "said": "Adoration of the Blessed Sacrament Wednesdays: 9:15am-6:15pm"
+        }
+      ],
+      "rationale": "R6, R28: the homepage, current (it reports a Nov 24 update and lists Thanksgiving 2026), gives Tuesday Adoration 9:15 AM-8 PM; both bulletins' schedule boxes list only Wednesday. The calendars print no Adoration on either day, so they don't settle it. Leaning include because the website is maintained this week and its other times match the bulletin exactly.",
+      "question": "Add Tuesday Adoration 9:15 AM-8:00 PM from the website?",
+      "options": [
+        {
+          "label": "Tuesdays 9:15 AM-8:00 PM",
+          "entry": {
+            "church_slug": "st-basil-the-great-kimberton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:15",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sbgparish.org/",
+          "said": "Open for private prayer Weekdays: 8.30 am–4.00 pm"
+        }
+      ],
+      "rationale": "R38: chapel open for private prayer is not an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sbgparish.org/",
+          "said": "Perpetual Adoration ... Delivery is expected in early December."
+        }
+      ],
+      "rationale": "R20: a future perpetual Adoration chapel with no start date or hours; update mode will read it when announced.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73b513ed",
+          "page": 10,
+          "said": "Holy Days: see announcements"
+        }
+      ],
+      "rationale": "R26: no Holy Day times printed in either issue (calendar ends Dec 5).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
