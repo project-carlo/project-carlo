@@ -1,0 +1,725 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-monica-berwyn",
+  "status": "ready",
+  "as_of": "2026-11-15T16:46:33Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T19:21:31Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both issues read (Nov 8 and Nov 15, 2026; all pages images) print the same standing box: Mon-Sat 8:30 AM Mass, Sat 5:00 PM vigil, Sun 7:30/9:30/11:30 AM, Monday Adoration 9:00-4:30, Confessions Mon 6:45-7:45 PM and Sat 3:45-4:45 PM. No history stored; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c9b19c2306f974ec90a1a067569537cf0869d51e9eb7fb00b2c2aac28e7407f1",
+      "fetched_at": "2026-11-15T16:46:33Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d55cc81f7ad63be5c82b376277846effab032ad1de00a245e58390a314118327",
+      "fetched_at": "2026-11-08T15:55:07Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica-berwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 1,
+          "said": "Mass Times: Daily Mass (Mon - Sat) 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 1,
+          "said": "Mass Times: Daily Mass (Mon - Sat) 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 3,
+          "said": "Across Campus: Monday-Saturday - 8:30 am | Mass / Rosary | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 3,
+          "said": "Across Campus: Monday-Saturday - 8:30 am | Mass / Rosary | Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and the week's campus calendar of both issues read; the intentions list an 8:30 am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica-berwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 1,
+          "said": "Mass Times: Daily Mass (Mon - Sat) 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 1,
+          "said": "Mass Times: Daily Mass (Mon - Sat) 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 3,
+          "said": "Across Campus: Monday-Saturday - 8:30 am | Mass / Rosary | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 3,
+          "said": "Across Campus: Monday-Saturday - 8:30 am | Mass / Rosary | Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and the week's campus calendar of both issues read; the intentions list an 8:30 am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica-berwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 1,
+          "said": "Mass Times: Daily Mass (Mon - Sat) 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 1,
+          "said": "Mass Times: Daily Mass (Mon - Sat) 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 3,
+          "said": "Across Campus: Monday-Saturday - 8:30 am | Mass / Rosary | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 3,
+          "said": "Across Campus: Monday-Saturday - 8:30 am | Mass / Rosary | Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and the week's campus calendar of both issues read; the intentions list an 8:30 am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica-berwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 1,
+          "said": "Mass Times: Daily Mass (Mon - Sat) 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 1,
+          "said": "Mass Times: Daily Mass (Mon - Sat) 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 3,
+          "said": "Across Campus: Monday-Saturday - 8:30 am | Mass / Rosary | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 3,
+          "said": "Across Campus: Monday-Saturday - 8:30 am | Mass / Rosary | Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and the week's campus calendar of both issues read; the intentions list an 8:30 am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica-berwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 1,
+          "said": "Mass Times: Daily Mass (Mon - Sat) 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 1,
+          "said": "Mass Times: Daily Mass (Mon - Sat) 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 3,
+          "said": "Across Campus: Monday-Saturday - 8:30 am | Mass / Rosary | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 3,
+          "said": "Across Campus: Monday-Saturday - 8:30 am | Mass / Rosary | Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and the week's campus calendar of both issues read; the intentions list an 8:30 am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica-berwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 1,
+          "said": "Mass Times: Daily Mass (Mon - Sat) 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 1,
+          "said": "Mass Times: Daily Mass (Mon - Sat) 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 3,
+          "said": "Across Campus: Monday-Saturday - 8:30 am | Mass / Rosary | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 3,
+          "said": "Across Campus: Monday-Saturday - 8:30 am | Mass / Rosary | Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and the week's campus calendar of both issues read; the intentions list an 8:30 am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica-berwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 1,
+          "said": "Saturday Vigil 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 1,
+          "said": "Saturday Vigil 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues; the intentions list the 5:00 pm Mass under each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica-berwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 1,
+          "said": "Sunday 7:30 am 9:30 am 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 1,
+          "said": "Sunday 7:30 am 9:30 am 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 3,
+          "said": "Sunday - 7:30 am, 9:30 am, 11:30 am Mass | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 3,
+          "said": "Sunday - 7:30 am, 9:30 am, 11:30 am Mass | Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and campus calendar of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica-berwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 1,
+          "said": "Sunday 7:30 am 9:30 am 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 1,
+          "said": "Sunday 7:30 am 9:30 am 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 3,
+          "said": "Sunday - 7:30 am, 9:30 am, 11:30 am Mass | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 3,
+          "said": "Sunday - 7:30 am, 9:30 am, 11:30 am Mass | Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and campus calendar of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica-berwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 1,
+          "said": "Sunday 7:30 am 9:30 am 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 1,
+          "said": "Sunday 7:30 am 9:30 am 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 3,
+          "said": "Sunday - 7:30 am, 9:30 am, 11:30 am Mass | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 3,
+          "said": "Sunday - 7:30 am, 9:30 am, 11:30 am Mass | Church"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and campus calendar of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica-berwyn",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 1,
+          "said": "Adoration Mondays 9:00 am - 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 1,
+          "said": "Adoration Mondays 9:00 am - 4:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the campus calendar lists Monday 8:30 am Mass / Rosary/ Adoration | Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica-berwyn",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:45",
+        "end_time": "19:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 1,
+          "said": "Confessions Mondays 6:45 pm - 7:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 1,
+          "said": "Confessions Mondays 6:45 pm - 7:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 3,
+          "said": "Monday - ... 6:45 - 7:45 pm | Confession | Church"
+        }
+      ],
+      "rationale": "R1: printed in the Confessions box of both issues and the newest week's campus calendar (the Nov 8 week's calendar omits it, but its standing box still prints it).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica-berwyn",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 1,
+          "said": "Saturdays 3:45 pm - 4:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 1,
+          "said": "Saturdays 3:45 pm - 4:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 3,
+          "said": "Saturday - 3:45 - 4:45 pm | Confession | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d55cc81f",
+          "page": 3,
+          "said": "Saturday - 3:45 - 4:45 pm | Confession | Church"
+        }
+      ],
+      "rationale": "R1: printed in the Confessions box and campus calendar of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 1,
+          "said": "Confessions ... Anytime by Appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 1,
+          "said": "Holy Days as Announced"
+        }
+      ],
+      "rationale": "R26: no holy-day times are printed in either issue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 2,
+          "said": "join us for coffee ... in the School Cafeteria after Mass on Thanksgiving Day, Thursday, November 26"
+        }
+      ],
+      "rationale": "R26: the Thanksgiving Day Mass is mentioned with no time in either issue; POLICY skips events without a definite start time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c9b19c23",
+          "page": 2,
+          "said": "On Sunday, November 15 at 2:00 pm, there will be music, prayers and reflections at Saint Monica Cemetery"
+        }
+      ],
+      "rationale": "R24, R22: a memorial prayer service, not a Mass, held at the cemetery, and dated before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
