@@ -1,0 +1,495 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-eugene-primos",
+  "status": "ready",
+  "as_of": "2026-11-15T16:45:13Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T23:29:56Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Eugene, Primos. Both issues read (Nov 8 and Nov 15) print the same schedule box: Sat 5:00 PM, Sun 8:00 and 11:30 AM, weekdays 8:00 AM (Mon-Fri per the intentions), Saturday confession 4:00-4:30 PM; the intentions agree. No open questions; the generic holy-day line and an off-site Mass at St. Laurence are left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6a7b91a13e64349cf8bfd45be24f6fd39bf5944afd3f7f081f611687e91f9d7f",
+      "fetched_at": "2026-11-15T16:45:13Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6f32473fbaf5eee345a4c2ff096de175561c92958754877077f3eebd296e3eb4",
+      "fetched_at": "2026-11-08T15:54:04Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eugene-primos",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 1,
+          "said": "Saturday: Evening Mass: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f32473f",
+          "page": 1,
+          "said": "Saturday: Evening Mass: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 2,
+          "said": "SATURDAY – November 21, 2026 – 5:00PM – Gerry Gannon"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eugene-primos",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 1,
+          "said": "Masses: Sunday: 8:00, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f32473f",
+          "page": 1,
+          "said": "Masses: Sunday: 8:00, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 2,
+          "said": "SUNDAY – November 22, 2026 8:00AM – People of the Parish 11:30AM – Louise Panko"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eugene-primos",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 1,
+          "said": "Masses: Sunday: 8:00, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f32473f",
+          "page": 1,
+          "said": "Masses: Sunday: 8:00, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 2,
+          "said": "SUNDAY – November 22, 2026 8:00AM – People of the Parish 11:30AM – Louise Panko"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eugene-primos",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f32473f",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 2,
+          "said": "MONDAY: 8:00AM ... FRIDAY: 8:00AM"
+        }
+      ],
+      "rationale": "R1: schedule box 'Weekdays: 8:00 AM' in both issues; both weeks' intentions list 8:00AM Monday through Friday and none on Saturday morning, so weekdays are Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eugene-primos",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f32473f",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 2,
+          "said": "MONDAY: 8:00AM ... FRIDAY: 8:00AM"
+        }
+      ],
+      "rationale": "R1: schedule box 'Weekdays: 8:00 AM' in both issues; both weeks' intentions list 8:00AM Monday through Friday and none on Saturday morning, so weekdays are Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eugene-primos",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f32473f",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 2,
+          "said": "MONDAY: 8:00AM ... FRIDAY: 8:00AM"
+        }
+      ],
+      "rationale": "R1: schedule box 'Weekdays: 8:00 AM' in both issues; both weeks' intentions list 8:00AM Monday through Friday and none on Saturday morning, so weekdays are Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eugene-primos",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f32473f",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 2,
+          "said": "MONDAY: 8:00AM ... FRIDAY: 8:00AM"
+        }
+      ],
+      "rationale": "R1: schedule box 'Weekdays: 8:00 AM' in both issues; both weeks' intentions list 8:00AM Monday through Friday and none on Saturday morning, so weekdays are Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eugene-primos",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f32473f",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 2,
+          "said": "MONDAY: 8:00AM ... FRIDAY: 8:00AM"
+        }
+      ],
+      "rationale": "R1: schedule box 'Weekdays: 8:00 AM' in both issues; both weeks' intentions list 8:00AM Monday through Friday and none on Saturday morning, so weekdays are Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eugene-primos",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 1,
+          "said": "Confessions: 4:00 to 4:30 PM on Saturdays, or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f32473f",
+          "page": 1,
+          "said": "Confessions: 4:00 to 4:30 PM on Saturdays, or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 1,
+          "said": "Confessions: ... or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 1,
+          "said": "Masses for Holydays: Mass on the eve of Holydays is at 6:00 PM Mass on the Holyday is at 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f32473f",
+          "page": 1,
+          "said": "Masses for Holydays: Mass on the eve of Holydays is at 6:00 PM Mass on the Holyday is at 8:00AM"
+        }
+      ],
+      "rationale": "R24, POLICY Dates: a generic standing holy-day line with no holy day or date pinned down in either issue (no Immaculate Conception or Christmas notice); dates aren't projected. Decided like st-isaac-jogues-wayne s27. Update mode will read December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eugene-primos",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance at Saint Laurence Church, Upper Darby"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6a7b91a1",
+          "page": 5,
+          "said": "Saturday, November 21, 2026 - 10:30 AM Event: Mass of Remembrance for Miscarriage and Infant Loss ... Location: Saint Laurence Church, 8245 West Chester Pike, Upper Darby PA"
+        }
+      ],
+      "rationale": "R22: listed under 'Outside the Parish Events'; held at another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
