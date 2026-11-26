@@ -1,0 +1,734 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-neumann-bryn-mawr",
+  "status": "ready",
+  "as_of": "2026-11-15T16:45:53Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T21:29:30Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. John Neumann, Bryn Mawr). Both issues read (Nov 8 and Nov 15, image-only) print the same schedule box: Sat 5:15 PM vigil, Sun 7:30/9/10:30/12, Mon-Fri 7:30 AM and Sat 8 AM Masses, Tue 6 PM confession, Sat 8:30-9:30 AM Adoration. Thanksgiving Nov 26 has a single 9 AM Mass, recorded with the 7:30 cancellation. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8d5ec88bedde1dbdf90515d4992715c731972f4fb0b1f9da188bea9a4447bdb0",
+      "fetched_at": "2026-11-15T16:45:53Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c4f6c08c2bdc5a78433a499d83293dc4a7fed0f935e837d541ae1d0c381cc6ef",
+      "fetched_at": "2026-11-08T15:54:33Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 1,
+          "said": "Saturday Vigil: 5:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c4f6c08c",
+          "page": 1,
+          "said": "Saturday Vigil: 5:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 14 5:15 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 1,
+          "said": "Sunday Mass: 7:30 am, 9:00 am, 10:30 am, and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c4f6c08c",
+          "page": 1,
+          "said": "Sunday Mass: 7:30 am, 9:00 am, 10:30 am, and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 15 7:30 am / 9:00 am / 10:30 am / 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass box of both issues read and in the intentions. The 9:00 has Little Church School alongside; nothing limits the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 1,
+          "said": "Sunday Mass: 7:30 am, 9:00 am, 10:30 am, and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c4f6c08c",
+          "page": 1,
+          "said": "Sunday Mass: 7:30 am, 9:00 am, 10:30 am, and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 15 7:30 am / 9:00 am / 10:30 am / 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass box of both issues read and in the intentions. The 9:00 has Little Church School alongside; nothing limits the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 1,
+          "said": "Sunday Mass: 7:30 am, 9:00 am, 10:30 am, and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c4f6c08c",
+          "page": 1,
+          "said": "Sunday Mass: 7:30 am, 9:00 am, 10:30 am, and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 15 7:30 am / 9:00 am / 10:30 am / 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass box of both issues read and in the intentions. The 9:00 has Little Church School alongside; nothing limits the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 1,
+          "said": "Sunday Mass: 7:30 am, 9:00 am, 10:30 am, and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c4f6c08c",
+          "page": 1,
+          "said": "Sunday Mass: 7:30 am, 9:00 am, 10:30 am, and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 15 7:30 am / 9:00 am / 10:30 am / 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass box of both issues read and in the intentions. The 9:00 has Little Church School alongside; nothing limits the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 1,
+          "said": "Monday—Friday: 7:30 am ^ During construction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c4f6c08c",
+          "page": 1,
+          "said": "Monday—Friday: 7:30 am ^ During construction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... 7:30 am (each day to FRIDAY, NOVEMBER 20)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass box of both issues and in each weekday's intentions. The caret 'During construction' marks only where/how it is held now, not a season with dates (R15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 1,
+          "said": "Monday—Friday: 7:30 am ^ During construction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c4f6c08c",
+          "page": 1,
+          "said": "Monday—Friday: 7:30 am ^ During construction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... 7:30 am (each day to FRIDAY, NOVEMBER 20)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass box of both issues and in each weekday's intentions. The caret 'During construction' marks only where/how it is held now, not a season with dates (R15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 1,
+          "said": "Monday—Friday: 7:30 am ^ During construction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c4f6c08c",
+          "page": 1,
+          "said": "Monday—Friday: 7:30 am ^ During construction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... 7:30 am (each day to FRIDAY, NOVEMBER 20)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass box of both issues and in each weekday's intentions. The caret 'During construction' marks only where/how it is held now, not a season with dates (R15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 1,
+          "said": "Monday—Friday: 7:30 am ^ During construction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c4f6c08c",
+          "page": 1,
+          "said": "Monday—Friday: 7:30 am ^ During construction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... 7:30 am (each day to FRIDAY, NOVEMBER 20)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass box of both issues and in each weekday's intentions. The caret 'During construction' marks only where/how it is held now, not a season with dates (R15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 1,
+          "said": "Monday—Friday: 7:30 am ^ During construction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c4f6c08c",
+          "page": 1,
+          "said": "Monday—Friday: 7:30 am ^ During construction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... 7:30 am (each day to FRIDAY, NOVEMBER 20)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass box of both issues and in each weekday's intentions. The caret 'During construction' marks only where/how it is held now, not a season with dates (R15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 1,
+          "said": "Saturday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c4f6c08c",
+          "page": 1,
+          "said": "Saturday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-bryn-mawr",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Gathering Room Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 1,
+          "said": "CONFESSIONS Tuesdays, 6:00 pm—in the Gathering Room Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c4f6c08c",
+          "page": 1,
+          "said": "CONFESSIONS Tuesdays, 6:00 pm—in the Gathering Room Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 2,
+          "said": "Make Confession a Routine! Tuesdays at 6:00 PM in the Gathering Room Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues and in a p2 notice. No end time is given (POLICY, Times). The Gathering Room Chapel is part of the parish's own campus at 380 Highland Lane (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-bryn-mawr",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 1,
+          "said": "Adoration — Saturdays 8:30 — 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c4f6c08c",
+          "page": 1,
+          "said": "Adoration — Saturdays 8:30 — 9:30 am"
+        }
+      ],
+      "rationale": "R1: printed under Devotional Prayer in the p1 box of both issues, after the Saturday 8:00 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 2,
+          "said": "THANKSGIVING DAY MASS SCHEDULE Thursday, November 26 9:00 AM Our only Mass on this Day"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass outside the weekly schedule, on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 2,
+          "said": "Thursday, November 26 9:00 AM Our only Mass on this Day"
+        }
+      ],
+      "rationale": "R16, R17: the notice says the 9:00 AM is the only Mass that day, which states that the regular Thursday 7:30 AM Mass is replaced, so the cancellation is recorded (on or after as_of).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 1,
+          "said": "Rosary — Daily after morning Mass — Mondays at 7:00 pm (in the chapel); Divine Mercy Chaplet —Fridays at 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c4f6c08c",
+          "page": 1,
+          "said": "Rosary — Daily after morning Mass — Mondays at 7:00 pm (in the chapel); Divine Mercy Chaplet —Fridays at 8:00 am"
+        }
+      ],
+      "rationale": "R24: Rosary and Divine Mercy Chaplet are devotions POLICY leaves out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 1,
+          "said": "THE SACRAMENTS— Anointing of the Sick ... Please contact the Parish Office."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c4f6c08c",
+          "page": 1,
+          "said": "THE SACRAMENTS— Anointing of the Sick ... Please contact the Parish Office."
+        }
+      ],
+      "rationale": "R26: by arrangement with the office; no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d5ec88b",
+          "page": 1,
+          "said": "Baptisms are held on the first and third Sundays of the month following the 12pm Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c4f6c08c",
+          "page": 1,
+          "said": "Baptisms are held on the first and third Sundays of the month following the 12pm Mass."
+        }
+      ],
+      "rationale": "R24: baptisms are not Mass, Confession or Adoration; the Sunday 12:00 PM Mass itself is already weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
