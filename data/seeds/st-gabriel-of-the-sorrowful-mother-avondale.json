@@ -1,0 +1,537 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-gabriel-of-the-sorrowful-mother-avondale",
+  "status": "ready",
+  "as_of": "2026-11-15T16:45:33Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T20:58:30Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both issues (Nov 8 and Nov 15, 2026) and the website agree: Mon-Thu 9:00 AM, Sat 4:15 PM vigil, Sun 8:00 and 10:00 AM, Saturday confession 3:15-4:00 PM in the chapel. A one-off Nov 9 Adoration and the undated holy-day line are left out; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "392af5a9677939259be12d2b912db47602b57a3b987557d647bff930e5c717f5",
+      "fetched_at": "2026-11-15T16:45:33Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1f5c9fd94a99c5eb70d6585b2eb103d5f93ab5662b72c9e15e4cf78e170ef1f6",
+      "fetched_at": "2026-11-08T15:54:17Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-avondale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 1,
+          "said": "Mass Times Monday—Thursday: 9:00 am Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 1,
+          "said": "Mass Times Monday—Thursday: 9:00 am Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 4,
+          "said": "9:00am Mass (intentions, Mon-Thu each week)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 4,
+          "said": "9:00am Mass (intentions, Mon-Thu each week)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues and in each week's intentions; Friday's intentions say 'No Mass'. The website's Liturgical Schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-avondale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 1,
+          "said": "Mass Times Monday—Thursday: 9:00 am Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 1,
+          "said": "Mass Times Monday—Thursday: 9:00 am Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 4,
+          "said": "9:00am Mass (intentions, Mon-Thu each week)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 4,
+          "said": "9:00am Mass (intentions, Mon-Thu each week)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues and in each week's intentions; Friday's intentions say 'No Mass'. The website's Liturgical Schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-avondale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 1,
+          "said": "Mass Times Monday—Thursday: 9:00 am Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 1,
+          "said": "Mass Times Monday—Thursday: 9:00 am Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 4,
+          "said": "9:00am Mass (intentions, Mon-Thu each week)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 4,
+          "said": "9:00am Mass (intentions, Mon-Thu each week)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues and in each week's intentions; Friday's intentions say 'No Mass'. The website's Liturgical Schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-avondale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 1,
+          "said": "Mass Times Monday—Thursday: 9:00 am Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 1,
+          "said": "Mass Times Monday—Thursday: 9:00 am Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 4,
+          "said": "9:00am Mass (intentions, Mon-Thu each week)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 4,
+          "said": "9:00am Mass (intentions, Mon-Thu each week)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues and in each week's intentions; Friday's intentions say 'No Mass'. The website's Liturgical Schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-avondale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 1,
+          "said": "Saturday: 4:15 pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 1,
+          "said": "Saturday: 4:15 pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 4,
+          "said": "4:15pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 4,
+          "said": "4:15pm Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and intentions of both issues. The Dec 5 Family Mass at 4:15 PM (latest p5) is this regular vigil (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-avondale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 1,
+          "said": "Sunday: 8:00 am | 10:00 am; 3rd Sundays of the month—8:00 am Sensory-friendly Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 1,
+          "said": "Sunday: 8:00 am | 10:00 am; 3rd Sundays of the month—8:00 am Sensory-friendly Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 4,
+          "said": "8:00 am—Celebrant's Intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 4,
+          "said": "8:00 am—Celebrant's Intentions"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues. The third-Sunday Sensory-friendly Mass is this regular 8:00 AM Mass (POLICY, Weekly or dated rule 7; the website calls it 'this regularly scheduled Mass'), so no separate slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-avondale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 1,
+          "said": "Sunday: 8:00 am | 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 1,
+          "said": "Sunday: 8:00 am | 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 4,
+          "said": "10:00 am—Celebrant's Intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 4,
+          "said": "10:00 am—Celebrant's Intentions"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both issues. The first-Sunday Family Mass (latest p5) is this regular 10 AM Mass (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-avondale",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 1,
+          "said": "Confessions: 3:15 pm—4:00 pm Saturday | Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 1,
+          "said": "Confessions: 3:15 pm—4:00 pm Saturday | Chapel"
+        }
+      ],
+      "rationale": "R1: printed in both issues' box; the Chapel is in the church (POLICY, Churches and chapels). The website says 'Saturdays from 3:15-4:00 pm in our Chapel'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 1,
+          "said": "Holy Days of Obligation: 9:00 am | 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 1,
+          "said": "Holy Days of Obligation: 9:00 am | 7:00 pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: a generic holy-day line with no holy day or date printed; no read issue gives this year's Dec 8 schedule, so nothing is projected (like st-isaac-jogues-wayne s27). Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-of-the-sorrowful-mother-avondale",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-09",
+        "start_time": "09:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 2,
+          "said": "Eucharistic Adoration Monday, November 9, 9:30 AM to 12:00 PM"
+        }
+      ],
+      "rationale": "R13, R16: printed once as a dated event, not named by a week of the month, and its date is before as_of. The newest issue and the website give no Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 4,
+          "said": "Local Confession Times St. Rocco: During All Masses; St. Patrick: Wed 6:00 & Sat 3:30; Sacred Heart ...; Assumption BVM: Sat 3:15; St. Cornelius: Sat 2:30; St. Mary: Sat 3:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f5c9fd9",
+          "page": 4,
+          "said": "Local Confession Times St. Rocco: During All Masses; St. Patrick: Wed 6:00 & Sat 3:30; Sacred Heart ...; Assumption BVM: Sat 3:15; St. Cornelius: Sat 2:30; St. Mary: Sat 3:30"
+        }
+      ],
+      "rationale": "R22: confession times at other parishes' churches, listed for reference.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 1,
+          "said": "Rosary: 8:30 am (before daily Mass) | Main Church; Miraculous Medal Novena: 9:00 am (after Monday daily Mass)"
+        }
+      ],
+      "rationale": "R24: a Rosary and a Novena are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392af5a9",
+          "page": 1,
+          "said": "Church Hours Monday-Friday: During Business Hours; Saturday: Open at 3:10 pm; Sunday: Open at 7:30 am"
+        }
+      ],
+      "rationale": "POLICY, Churches and chapels: a church open for prayer is not an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
