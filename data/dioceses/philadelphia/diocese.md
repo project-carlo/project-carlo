@@ -249,6 +249,13 @@ Decisions that apply to more than one record, and who made them.
 - **A Mass one parish staffs at another parish's church is that church's row only.** It appears in both bulletins, but it is not a worship site of the staffing parish (St. Rocco's Sunday 2:00 PM Spanish Mass at Sacred Heart, Oxford is on Sacred Heart's church row). (map batch `southern-chester`, 2026-10-28)
 - **A directory "parish" page with only a rectory address and phone**, no pastor, Mass times or website, and a "where all spiritual records are kept" link to another parish, is a former parish or worship-site entry, not a bulletin publisher: make no parish row, and decide its church as a worship site of the records parish (Sacred Heart of Jesus, Tullytown under St. Mark, Bristol). Its rectory phone can be a neighbouring church's. (map batch `bristol-levittown`, 2026-10-29)
 
+## Seeding precedents
+
+Seed questions `seed-review` settled that no rule covered: the situation, the choice and the parishes. Later reviews in this diocese follow them; only the owner turns one into a rule.
+
+- Include the Spanish Advent retreat's closing Holy Hour and confessions on Sunday Nov 29, 4:00-5:00 PM? → Leave out. With the lean. The Holy Hour and confessions are the close of a registered retreat: 0a0b26fc p9 says 'El retiro incluirá dos charlas, un almuerzo y concluirá con una hora santa y la confesión. Para inscribirse, llame al: 610-235-7294', and e4506448 p9 prints the agenda line 'IGLESIA 4:00-5:00 Hora Santa y confesiones. Para inscribirse...'. Neither issue invites people who haven't registered. On a public site a wrong time is worse than a missing one (POLICY). What made it hard: the session is in the church and nothing says non-registrants are turned away. (st-agnes-west-chester s24; 033-seed-review, 2026-11-26)
+
+
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.

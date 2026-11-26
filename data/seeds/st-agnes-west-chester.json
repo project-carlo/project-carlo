@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-agnes-west-chester",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T15:59:19Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-26T18:29:32Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@87b266ed476b",
+  "approved_at": "2026-11-26T18:47:14Z",
   "summary": "One church. The weekly Mass, Confession and Wednesday chapel Adoration schedule is identical in both issues read (Nov 1 and Nov 15), all pages images; plus a Thanksgiving 9:00 AM Mass. Perpetual Adoration announced for May 30, 2027 is left out (R20). Open: whether the Spanish Advent retreat's Nov 29 4-5 PM Holy Hour and confessions are public.",
   "blocked_reason": null,
   "bulletins": [
@@ -887,9 +887,22 @@
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-29",
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Hora Santa, Spanish Advent retreat"
+      },
       "page": 9,
       "sources": [
         {
@@ -931,14 +944,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@87b266ed476b",
+        "at": "2026-11-26T18:47:14Z"
+      },
       "group": "advent-retreat"
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-west-chester",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-29",
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration; Spanish Advent retreat"
+      },
       "page": 9,
       "sources": [
         {
@@ -980,7 +1010,11 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@87b266ed476b",
+        "at": "2026-11-26T18:47:14Z"
+      },
       "group": "advent-retreat"
     }
   ]
