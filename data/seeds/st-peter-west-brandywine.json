@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "parish_slug": "st-peter-west-brandywine",
-  "status": "needs_review",
+  "status": "blocked",
   "as_of": "2026-11-15T16:46:48Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-26T20:01:27Z",
   "reviewer": null,
   "approved_at": null,
   "summary": "One church (St. Peter, West Brandywine). Weekend Masses Sat 8:30/5:00, Sun 7/9/11; weekday 8:30 Mon/Tue/Thu (no Wednesday Mass) and First Friday 9:30; Confession Tue 6:15-7 and Sat 3:30-4:30. Two bulletins and the website agree. Open: the perpetual Adoration chapel (asked only because of a checker crash; include), whether Friday 8:30 Mass also happens on first Fridays (C4), and a one-off youth Holy Hour on Nov 18.",
-  "blocked_reason": null,
+  "blocked_reason": "R34: approval cannot succeed. The 24-hour Perpetual Adoration Chapel (s13) is supported by both bulletins (p5) and the website, and seed-review chose to include it, but seed approve/check crash with a TypeError on any included continuous slot (src/pdf_extract/seeding/checks.py:343 compares its null date with as_of). Once the checker skips the as_of comparison for an entry without a date, clear the block (seed block --clear) and approve s13 as include. The rest of the draft is ready.",
   "bulletins": [
     {
       "content_hash": "2f66858484ade0d5d4b2530ac593405b4248ec6b8f9d99cb704149cccea25ce1",
