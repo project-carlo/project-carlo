@@ -1,0 +1,724 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-consolation-parkesburg",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:42:44Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T20:06:04Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three sites: OLC Parkesburg (weekday 8:30 Mass Mon/Wed-Fri, Sat 3:30-4:30 Confession, Sat 5:00 PM vigil, First Saturday 8:30, Sun 8:00), St. Malachy (Sun 9:30) and the Schneider Parish Center (Sun 11:15); both read issues (Nov 8, Nov 15) agree. Open: the Dec 8 holy-day Mass, whose date the bulletin implies but doesn't print, and the 40 Hours Adoration Dec 5-7, whose hours are still to be announced.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8de65ed12224feadf30dd2dba13623ac965e0e5fb068e014a0bb92ed6fff9b39",
+      "fetched_at": "2026-11-15T16:42:44Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "df099cad17653c0d5ef84cfecac3f61b6ad0a882e43408afae0d47bc290f8b9e",
+      "fetched_at": "2026-11-08T15:52:58Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-parkesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:30 am Monday, Wednesday, Thursday, Friday (OLC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df099cad",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:30 am Monday, Wednesday, Thursday, Friday (OLC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 4,
+          "said": "Monday, November 16 8:30 am Mass (OLC)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule box of both issues and in each week's calendar and intentions; Tuesday is printed as No Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-parkesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:30 am Monday, Wednesday, Thursday, Friday (OLC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df099cad",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:30 am Monday, Wednesday, Thursday, Friday (OLC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 4,
+          "said": "Monday, November 16 8:30 am Mass (OLC)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule box of both issues and in each week's calendar and intentions; Tuesday is printed as No Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-parkesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:30 am Monday, Wednesday, Thursday, Friday (OLC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df099cad",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:30 am Monday, Wednesday, Thursday, Friday (OLC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 4,
+          "said": "Monday, November 16 8:30 am Mass (OLC)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule box of both issues and in each week's calendar and intentions; Tuesday is printed as No Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-parkesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:30 am Monday, Wednesday, Thursday, Friday (OLC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df099cad",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:30 am Monday, Wednesday, Thursday, Friday (OLC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 4,
+          "said": "Monday, November 16 8:30 am Mass (OLC)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule box of both issues and in each week's calendar and intentions; Tuesday is printed as No Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-parkesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 1,
+          "said": "5:00 pm Vigil Mass (OLC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df099cad",
+          "page": 1,
+          "said": "5:00 pm Vigil Mass (OLC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 4,
+          "said": "Saturday, November 21 ... 5:00 pm Vigil Mass (OLC)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass Schedule box of both issues and in the calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-parkesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 1,
+          "said": "8:30 am First Saturday Mass (OLC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df099cad",
+          "page": 1,
+          "said": "8:30 am First Saturday Mass (OLC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df099cad",
+          "page": 3,
+          "said": "SATURDAY, NOVEMBER 7 8:30 am First Saturday Mass"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: the standing schedule box of both issues names it First Saturday; the Nov 8 issue's intentions show it on Nov 7, a first Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-parkesburg",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 1,
+          "said": "Saturday 3:30-4:30 pm Confessions (OLC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df099cad",
+          "page": 1,
+          "said": "Saturday 3:30-4:30 pm Confessions (OLC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 2,
+          "said": "Confessions-3:30-4:30 pm on Saturdays (OLC) or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df099cad",
+          "page": 2,
+          "said": "Confessions-3:30-4:30 pm on Saturdays (OLC) or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box, the sacraments column and the calendar of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-parkesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 1,
+          "said": "Sunday 8:00 am-OLC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df099cad",
+          "page": 1,
+          "said": "Sunday 8:00 am-OLC"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass Schedule box and the calendars of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-malachy-cochranville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 1,
+          "said": "9:30 am St. Malachi Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df099cad",
+          "page": 1,
+          "said": "9:30 am St. Malachi Church"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass Schedule box and calendars of both issues; St. Malachi, 76 St. Malachi Road, Cochranville is the listed st-malachy-cochranville.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "schneider-parish-center-parkesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 1,
+          "said": "11:15 am Schneider Parish Center"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df099cad",
+          "page": 1,
+          "said": "11:15 am Schneider Parish Center"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 4,
+          "said": "11:15 am Mass (SPC)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass Schedule box and calendars of both issues; the Schneider Parish Center, 2995 Cemetery Rd, is on the parish's church list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-parkesburg",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of the Immaculate Conception"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 4,
+          "said": "We will conclude at 7:00 pm with the Vigil Mass for the Solemnity of the Immaculate Conception of the Blessed Virgin Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 1,
+          "said": "Holy Days ... Vigil Mass-7:00 pm (OLC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df099cad",
+          "page": 6,
+          "said": "We will conclude at 7:00 pm with the Vigil Mass for the Solemnity of the Immaculate Conception"
+        }
+      ],
+      "rationale": "R1, R16: Monday December 7 at 7:00 PM is printed in both issues' 40 Hours notice; the holy-day line places the 7:00 pm vigil at OLC.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 1,
+          "said": "Holy Days-8:30 am (OLC) Vigil Mass-7:00 pm (OLC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 4,
+          "said": "conclude at 7:00 pm with the Vigil Mass for the Solemnity of the Immaculate Conception"
+        }
+      ],
+      "rationale": "R30: the standing Holy Days line gives 8:30 am at OLC, and the 40 Hours notice puts the solemnity's vigil on Monday Dec 7, so the day is Tuesday Dec 8 (a day with no regular Mass). The bulletin never prints 'December 8' itself (POLICY, Dates). Leaning include: the vigil date pins the solemnity and the holy-day time is printed in both issues.",
+      "question": "Add the Immaculate Conception Mass Tue Dec 8, 8:30 AM at OLC?",
+      "options": [
+        {
+          "label": "Dec 8 8:30 AM",
+          "entry": {
+            "church_slug": "our-lady-of-consolation-parkesburg",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 4,
+          "said": "40 Hours of Eucharistic Adoration, beginning Saturday, December 5, immediately following the 5:00 pm Vigil Mass, and continuing through Monday, December 7. We will conclude at 7:00 pm ... More details and information will be forthcoming."
+        }
+      ],
+      "rationale": "R30: dated and announced in both issues, but the notice gives no place or hours within the three days (the parish has Sunday Masses at two other sites) and says details are forthcoming; 6:00 PM start is POLICY's after-weekend-Mass rule. Leaning leave out: update mode will read the issues that print the details.",
+      "question": "Add the 40 Hours of Adoration, Sat Dec 5 after the 5:00 PM Mass through Mon Dec 7 at 7:00 PM?",
+      "options": [
+        {
+          "label": "Include as dated Adoration",
+          "entry": {
+            "church_slug": "our-lady-of-consolation-parkesburg",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-05",
+            "start_time": "18:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "40 Hours of Adoration, after the 5:00 PM Mass"
+          }
+        },
+        {
+          "label": "Leave out until details are printed",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "forty-hours"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 4,
+          "said": "continuing through Monday, December 7"
+        }
+      ],
+      "rationale": "R30: see the Dec 5 slot of this group; Sunday Dec 6 is inside the announced 40 Hours but no hours are printed.",
+      "question": "Add the 40 Hours of Adoration, Sat Dec 5 after the 5:00 PM Mass through Mon Dec 7 at 7:00 PM?",
+      "options": [
+        {
+          "label": "Include as dated Adoration",
+          "entry": {
+            "church_slug": "our-lady-of-consolation-parkesburg",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-06",
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "40 Hours of Adoration"
+          }
+        },
+        {
+          "label": "Leave out until details are printed",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "forty-hours"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 4,
+          "said": "We will conclude at 7:00 pm with the Vigil Mass"
+        }
+      ],
+      "rationale": "R30: see the Dec 5 slot of this group.",
+      "question": "Add the 40 Hours of Adoration, Sat Dec 5 after the 5:00 PM Mass through Mon Dec 7 at 7:00 PM?",
+      "options": [
+        {
+          "label": "Include as dated Adoration",
+          "entry": {
+            "church_slug": "our-lady-of-consolation-parkesburg",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "00:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "40 Hours of Adoration, ends with the 7:00 PM Mass"
+          }
+        },
+        {
+          "label": "Leave out until details are printed",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "forty-hours"
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 2,
+          "said": "Confessions-3:30-4:30 pm on Saturdays (OLC) or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8de65ed1",
+          "page": 1,
+          "said": "Rosary and Divine Mercy Chaplet following Mass on Friday"
+        }
+      ],
+      "rationale": "R24: a Rosary and Chaplet are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
