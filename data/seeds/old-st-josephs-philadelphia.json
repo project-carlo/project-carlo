@@ -1,0 +1,552 @@
+{
+  "schema_version": 1,
+  "parish_slug": "old-st-josephs-philadelphia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T15:58:32Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T18:17:25Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, two bulletins read (Nov 8 and Nov 15, 2026) with identical Mass Times boxes: Sunday 7:30, 9:30, 11:30 AM and Tue-Thu 12:05 PM; no Saturday or Mon/Fri Mass printed anywhere. Thanksgiving Mass Nov 26 at 10:00 AM is included as dated. Open: confession on request after the Tue-Thu 12:05 Mass (C5, leaning include at 12:35 PM).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ebd0347bb716770d0df0366ae323b3d473a2510fccdc670c61ab8bc070fbf324",
+      "fetched_at": "2026-11-15T15:58:32Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "22864237acd5cc1782200a975ea30510cec5ddc6ba5d7edf66101c8dd7d7141b",
+      "fetched_at": "2026-11-08T15:27:26Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "old-st-josephs-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 4,
+          "said": "Mass Times ... Sunday: 7:30, 9:30, and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22864237",
+          "page": 4,
+          "said": "Mass Times ... Sunday: 7:30, 9:30, and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 2,
+          "said": "Sun 22 7:30 AM 9:30 AM 11:30 AM (This Week at Old St. Joseph's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22864237",
+          "page": 2,
+          "said": "Sun 15 7:30 AM 9:30 AM 11:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box (p4) and the week's calendar (p2) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "old-st-josephs-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 4,
+          "said": "Mass Times ... Sunday: 7:30, 9:30, and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22864237",
+          "page": 4,
+          "said": "Mass Times ... Sunday: 7:30, 9:30, and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 2,
+          "said": "Sun 22 7:30 AM 9:30 AM 11:30 AM (This Week at Old St. Joseph's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22864237",
+          "page": 2,
+          "said": "Sun 15 7:30 AM 9:30 AM 11:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box (p4) and the week's calendar (p2) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "old-st-josephs-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 4,
+          "said": "Mass Times ... Sunday: 7:30, 9:30, and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22864237",
+          "page": 4,
+          "said": "Mass Times ... Sunday: 7:30, 9:30, and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 2,
+          "said": "Sun 22 7:30 AM 9:30 AM 11:30 AM (This Week at Old St. Joseph's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22864237",
+          "page": 2,
+          "said": "Sun 15 7:30 AM 9:30 AM 11:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box (p4) and the week's calendar (p2) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "old-st-josephs-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 4,
+          "said": "Mass Times Tuesday, Wednesday, Thursday: 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22864237",
+          "page": 4,
+          "said": "Mass Times Tuesday, Wednesday, Thursday: 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 2,
+          "said": "Tues 17 / Wed 18 / Thurs 19 12:05 PM (with intentions and presider)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22864237",
+          "page": 2,
+          "said": "Tues 10 / Wed 11 / Thurs 12 12:05 PM"
+        }
+      ],
+      "rationale": "R1, R35: the Mass Times box and the week's calendar of both bulletins give weekday Mass only Tuesday to Thursday at 12:05 PM; no Monday, Friday or Saturday Mass is printed anywhere.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "old-st-josephs-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 4,
+          "said": "Mass Times Tuesday, Wednesday, Thursday: 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22864237",
+          "page": 4,
+          "said": "Mass Times Tuesday, Wednesday, Thursday: 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 2,
+          "said": "Tues 17 / Wed 18 / Thurs 19 12:05 PM (with intentions and presider)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22864237",
+          "page": 2,
+          "said": "Tues 10 / Wed 11 / Thurs 12 12:05 PM"
+        }
+      ],
+      "rationale": "R1, R35: the Mass Times box and the week's calendar of both bulletins give weekday Mass only Tuesday to Thursday at 12:05 PM; no Monday, Friday or Saturday Mass is printed anywhere.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "old-st-josephs-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 4,
+          "said": "Mass Times Tuesday, Wednesday, Thursday: 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22864237",
+          "page": 4,
+          "said": "Mass Times Tuesday, Wednesday, Thursday: 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 2,
+          "said": "Tues 17 / Wed 18 / Thurs 19 12:05 PM (with intentions and presider)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22864237",
+          "page": 2,
+          "said": "Tues 10 / Wed 11 / Thurs 12 12:05 PM"
+        }
+      ],
+      "rationale": "R1, R35: the Mass Times box and the week's calendar of both bulletins give weekday Mass only Tuesday to Thursday at 12:05 PM; no Monday, Friday or Saturday Mass is printed anywhere.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "old-st-josephs-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 5,
+          "said": "Old St. Joseph's Thanksgiving Schedule Thursday, November 26th MASS at 10:00 AM"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass after as_of. R17: the bulletin does not say the usual Thursday 12:05 PM Mass is cancelled, so no cancellation is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 4,
+          "said": "Sunday: 7:30, 9:30, and 11:30 AM / Holy Days: 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22864237",
+          "page": 4,
+          "said": "Sunday: 7:30, 9:30, and 11:30 AM / Holy Days: 12:05 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: the generic Holy Days 12:05 PM line pins no date, and no holy day falls in the weeks printed; update mode will pick up dated holy days (e.g. Dec 8) from later bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 4,
+          "said": "The anointing of the sick takes place during the 7:30 Mass on the First Sunday of each month."
+        }
+      ],
+      "rationale": "R24: Anointing of the Sick is not Mass, Confession or Adoration; the 7:30 AM Sunday Mass itself is already included.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 4,
+          "said": "Sacrament of Reconciliation Tues., Wed., & Thurs: Please approach the presiding priest directly after the 12:05 Mass to request reconciliation."
+        },
+        {
+          "source": "agent",
+          "bulletin": "22864237",
+          "page": 4,
+          "said": "Sacrament of Reconciliation Tues., Wed., & Thurs: Please approach the presiding priest directly after the 12:05 Mass to request reconciliation."
+        }
+      ],
+      "rationale": "C5: confession after Mass on request is not 'by appointment'; leaning to include at POLICY's time, 30 minutes after a weekday Mass (R10: 12:05 + 30 = 12:35 PM), with a note. No end time given. Printed identically in both bulletins.",
+      "question": "Add confession after the Tue-Thu 12:05 PM Mass (approach the priest), at 12:35 PM?",
+      "options": [
+        {
+          "label": "Tue-Thu 12:35 PM, on request",
+          "entry": {
+            "church_slug": "old-st-josephs-philadelphia",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "12:35",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 12:05 PM Mass; approach the presiding priest"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confession"
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 4,
+          "said": "Sacrament of Reconciliation Tues., Wed., & Thurs: Please approach the presiding priest directly after the 12:05 Mass to request reconciliation."
+        },
+        {
+          "source": "agent",
+          "bulletin": "22864237",
+          "page": 4,
+          "said": "Sacrament of Reconciliation Tues., Wed., & Thurs: Please approach the presiding priest directly after the 12:05 Mass to request reconciliation."
+        }
+      ],
+      "rationale": "C5: confession after Mass on request is not 'by appointment'; leaning to include at POLICY's time, 30 minutes after a weekday Mass (R10: 12:05 + 30 = 12:35 PM), with a note. No end time given. Printed identically in both bulletins.",
+      "question": "Add confession after the Tue-Thu 12:05 PM Mass (approach the priest), at 12:35 PM?",
+      "options": [
+        {
+          "label": "Tue-Thu 12:35 PM, on request",
+          "entry": {
+            "church_slug": "old-st-josephs-philadelphia",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "12:35",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 12:05 PM Mass; approach the presiding priest"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confession"
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ebd0347b",
+          "page": 4,
+          "said": "Sacrament of Reconciliation Tues., Wed., & Thurs: Please approach the presiding priest directly after the 12:05 Mass to request reconciliation."
+        },
+        {
+          "source": "agent",
+          "bulletin": "22864237",
+          "page": 4,
+          "said": "Sacrament of Reconciliation Tues., Wed., & Thurs: Please approach the presiding priest directly after the 12:05 Mass to request reconciliation."
+        }
+      ],
+      "rationale": "C5: confession after Mass on request is not 'by appointment'; leaning to include at POLICY's time, 30 minutes after a weekday Mass (R10: 12:05 + 30 = 12:35 PM), with a note. No end time given. Printed identically in both bulletins.",
+      "question": "Add confession after the Tue-Thu 12:05 PM Mass (approach the priest), at 12:35 PM?",
+      "options": [
+        {
+          "label": "Tue-Thu 12:35 PM, on request",
+          "entry": {
+            "church_slug": "old-st-josephs-philadelphia",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "12:35",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 12:05 PM Mass; approach the presiding priest"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confession"
+    }
+  ]
+}
