@@ -38,7 +38,7 @@ class StageSpec:
     gates: list[str] = field(default_factory=list)
     # Files the worker must read first, repo-relative: a whole file (`path`), or one section
     # (`path#Heading`), which the dispatcher copies into the job's scratch folder.
-    # `deny` adds permission rules (`Bash(pnpm seed extract:*)`) to the workers' own; the
+    # `deny` adds permission rules (`Bash(pnpm seed approve:*)`) to the workers' own; the
     # seed CLI also refuses a seed command one names, however it is spelled (workers.py).
     reads: list[str] = field(default_factory=list)
     deny: list[str] = field(default_factory=list)

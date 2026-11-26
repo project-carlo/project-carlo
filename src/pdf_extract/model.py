@@ -7,6 +7,12 @@ lists the weeks an event happens on, or, with `exclude_weeks` true, the weeks
 it doesn't: "every Sunday except the last" is `["last"]` excluded, which no
 list of the weeks that remain can say.
 
+One more kind is Adoration only: a `continuous` entry is a standing chapel open
+every day around the clock. It has no day, date or times; `access` says how a
+visitor gets in (`ACCESS_KINDS`), and `open_from`/`open_until` the hours it is
+unlocked when a door code is needed at the others. The site words these itself,
+so nothing a person types is shown for them but a short `note`.
+
 A schedule entry is one event written down this way (`ENTRY_KEYS`,
 `validate_entry`). A seed (`pdf_extract.seeding`) holds entries in this shape,
 and a label event (`pdf_extract.labeling.labels`) is an entry plus the keys
@@ -31,6 +37,15 @@ from pdf_extract.timeparse import normalize_event_date, time_to_minutes
 EVENT_TYPES = ("mass", "confession", "adoration")
 EVENT_TYPE_LABELS = {"mass": "Mass", "confession": "Confession", "adoration": "Adoration"}
 EVENT_KINDS = ("weekly", "specific_date")
+# A standing chapel open around the clock, every day (docs/believed-schedules.md,
+# "Chapels open 24 hours"). Adoration only, at most one per church. Kept out of
+# EVENT_KINDS, which are the kinds with a day or a date and a start time.
+CONTINUOUS = "continuous"
+ENTRY_KINDS = (*EVENT_KINDS, CONTINUOUS)
+# How a visitor gets into a continuous chapel: the bulletin says nothing; a code
+# is needed outside its unlocked hours (`open_from`-`open_until`, when given); a
+# code is needed at every hour; or only by arrangement with the parish.
+ACCESS_KINDS = ("not_stated", "code_after_hours", "code", "arrangement")
 DAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 WEEKS_OF_MONTH = ("first", "second", "third", "fourth", "fifth", "last")
 # The ordinals a month can have of a weekday; "last" is the fourth or the fifth.
@@ -52,10 +67,12 @@ SEASON_KEYS = ("start_month", "start_day", "end_month", "end_day")
 ENTRY_KEYS = (
     "church_slug", "event_type", "event_kind", "day_of_week", "date", "start_time",
     "end_time", "cancelled", "weeks_of_month", "exclude_weeks", "season", "note",
+    "access", "open_from", "open_until",
 )
 # Keys an entry written before they existed may lack; a missing one reads as
-# false.
-ENTRY_KEYS_ADDED_LATER = ("exclude_weeks",)
+# false (`exclude_weeks`) or null (the continuous chapel's access fields).
+ENTRY_KEYS_ADDED_LATER = ("exclude_weeks", "access", "open_from", "open_until")
+CONTINUOUS_KEYS = ("access", "open_from", "open_until")
 
 # An event as the extraction compares it: church slug, event type, event kind,
 # day of week, date, start time, end time, cancelled.
@@ -159,8 +176,10 @@ def entry_value_errors(entry: dict[str, Any], where: str) -> list[str]:
     if entry["event_type"] not in EVENT_TYPES:
         errors.append(f"{where}.event_type must be one of {', '.join(EVENT_TYPES)}")
     kind = entry["event_kind"]
+    if kind == CONTINUOUS:
+        return errors + _continuous_errors(entry, where)
     if kind not in EVENT_KINDS:
-        errors.append(f"{where}.event_kind must be one of {', '.join(EVENT_KINDS)}")
+        errors.append(f"{where}.event_kind must be one of {', '.join(ENTRY_KINDS)}")
     elif kind == "weekly":
         if entry["day_of_week"] not in DAYS:
             errors.append(f"{where}.day_of_week must be a weekday name for a weekly event")
@@ -197,10 +216,117 @@ def entry_value_errors(entry: dict[str, Any], where: str) -> list[str]:
     errors.extend(_validate_season(entry["season"], where))
     if entry["season"] is not None and kind == "specific_date":
         errors.append(f"{where}.season applies to weekly events only")
+    for key in CONTINUOUS_KEYS:
+        if entry.get(key) is not None:
+            errors.append(f"{where}.{key} is for a continuous chapel only")
 
-    if entry["note"] is not None and not isinstance(entry["note"], str):
-        errors.append(f"{where}.note must be null or a string")
+    errors.extend(_note_errors(entry["note"], where))
     return errors
+
+
+def _continuous_errors(entry: dict[str, Any], where: str) -> list[str]:
+    """Why a `continuous` entry, its type and church already checked, is not one."""
+    errors = []
+    if entry["event_type"] != "adoration":
+        errors.append(f"{where}: a continuous entry is Adoration only")
+    for key in ("day_of_week", "date", "start_time", "end_time", "season"):
+        if entry.get(key) is not None:
+            errors.append(f"{where}.{key} must be null for a continuous entry")
+    if entry.get("cancelled") is not False:
+        errors.append(f"{where}.cancelled must be false for a continuous entry")
+    if entry.get("weeks_of_month") != [] or entry.get("exclude_weeks", False) is not False:
+        errors.append(f"{where}: a continuous entry has no weeks of the month")
+    errors.extend(continuous_access_errors(
+        entry.get("access"), entry.get("open_from"), entry.get("open_until"), where,
+    ))
+    errors.extend(_note_errors(entry["note"], where))
+    return errors
+
+
+def continuous_access_errors(
+    access: Any, open_from: Any, open_until: Any, where: str,
+) -> list[str]:
+    """Why a continuous chapel's access fields (times as HH:MM) don't fit together."""
+    if access not in ACCESS_KINDS:
+        return [f"{where}.access must be one of {', '.join(ACCESS_KINDS)}"]
+    errors = []
+    for key, value in (("open_from", open_from), ("open_until", open_until)):
+        if value is not None and (not isinstance(value, str) or not _TIME_RE.match(value)):
+            errors.append(f"{where}.{key} must be null or HH:MM (24-hour)")
+    if (open_from is None) != (open_until is None):
+        errors.append(f"{where}: give both open_from and open_until, or neither")
+    elif open_from is not None and access != "code_after_hours":
+        errors.append(f"{where}: open_from and open_until are the unlocked hours of a "
+                      "code_after_hours chapel")
+    elif open_from is not None and open_from == open_until:
+        errors.append(f"{where}: open_from and open_until must differ")
+    return errors
+
+
+def _note_errors(note: Any, where: str) -> list[str]:
+    if note is None:
+        return []
+    if not isinstance(note, str):
+        return [f"{where}.note must be null or a string"]
+    private = private_detail(note)
+    return [f"{where}.note {private}"] if private else []
+
+
+# ── Keeping people's details out of notes ───────────────────────────────────
+# A note is shown on the site as written, so it never holds a phone number, an
+# email address or a door code (docs/believed-schedules.md, "Notes"). Names
+# can't be told apart from a chapel's or a saint's: seed review is their check.
+_PHONE_RE = re.compile(r"(?<!\d)(?:\+?1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]\d{4}(?!\d)")
+# "code 4321", "code: 12#", "PIN is 0420", "combination 1-2-3", "4321#": three
+# digits or more after the word, or digits ending in # or *. "code needed, 2
+# doors" and "Room #205" name none.
+_CODE_RE = re.compile(
+    r"\b(?:code|pin|combination|keypad|passcode)\b\W{0,3}(?:\w+\W{1,3}){0,2}?"
+    r"(?:\d(?:[\s-]?\d){2,}|\d+\s?[#*])"
+    r"|\b\d{3,}#",
+    re.IGNORECASE,
+)
+
+
+# Clock times and round-the-clock hours, taken out before looking for a code:
+# "code needed 9 PM-6 AM" and "access code required, 24/7" name none.
+_CLOCK_RE = re.compile(
+    r"\b\d{1,2}(?::\d{2})?\s{0,3}(?:a\.?\s?m\b\.?|p\.?\s?m\b\.?|noon|midnight)"
+    r"|\b\d{1,2}:\d{2}\b"
+    r"|\b24\s?(?:/\s?7|-?\s?(?:hours?|hrs?)\b)",
+    re.IGNORECASE,
+)
+
+
+def _holds_email(text: str) -> bool:
+    """Whether `text` holds `name@domain.tld`.
+
+    Read from each "@", without a regular expression: a search for the whole
+    address would try every character as the start of its name.
+    """
+    at = text.find("@")
+    while at != -1:
+        named = at > 0 and (text[at - 1].isalnum() or text[at - 1] in "_.+-")
+        end = at + 1
+        while end < len(text) and (text[end].isalnum() or text[end] in "_.-"):
+            end += 1
+        # The domain: a label, a dot and another label ("example.org").
+        label, dot, rest = text[at + 1:end].partition(".")
+        if named and label and dot and rest[:1] not in ("", "."):
+            return True
+        at = text.find("@", at + 1)
+    return False
+
+
+def private_detail(text: str) -> str | None:
+    """What in `text` looks like a person's contact or a door code, as an error's tail."""
+    if _holds_email(text):
+        return "holds an email address; notes never carry contact details"
+    if _PHONE_RE.search(text):
+        return "holds a phone number; notes never carry contact details"
+    if _CODE_RE.search(_CLOCK_RE.sub(" ", text)):
+        return "holds what looks like a door code; notes never carry one"
+    return None
 
 
 def validate_entry(entry: Any, where: str) -> list[str]:
@@ -290,6 +416,9 @@ def gemini_rows(events: list[Any]) -> list[dict[str, Any]]:
             continue
         event_type = ev.get("type", ev.get("event_type"))
         kind = ev.get("kind", ev.get("event_kind"))
+        if kind == CONTINUOUS:
+            out.append(_continuous_row(i, ev, event_type))
+            continue
         weekly = kind == "weekly"
         weeks, exclude_weeks = canonical_weeks(
             _weeks(ev.get("weeks_of_month")), ev.get("exclude_weeks") is True,
@@ -330,6 +459,41 @@ def gemini_rows(events: list[Any]) -> list[dict[str, Any]]:
         row["problems"] = problems
         out.append(row)
     return out
+
+
+def _continuous_row(i: int, ev: dict[str, Any], event_type: Any) -> dict[str, Any]:
+    """A continuous chapel from a classifier, in the label's row shape (see `gemini_rows`)."""
+    access = ev.get("access")
+    hours = {key: _hhmm(ev.get(key)) for key in ("open_from", "open_until")}
+    problems = []
+    if event_type != "adoration":
+        problems.append(f"a continuous entry must be adoration, not {event_type!r}")
+    if access not in ACCESS_KINDS:
+        problems.append(f"unknown access {access!r}")
+    for key, value in hours.items():
+        if ev.get(key) and value is None:
+            problems.append(f"unreadable {key} {ev.get(key)!r}")
+    note = ev.get("note")
+    return {
+        "id": f"g{i}",
+        "church_slug": ev.get("church_slug") if isinstance(ev.get("church_slug"), str) else "",
+        "event_type": "adoration",
+        "event_kind": CONTINUOUS,
+        "day_of_week": None,
+        "date": None,
+        "start_time": None,
+        "end_time": None,
+        "cancelled": False,
+        "weeks_of_month": [],
+        "exclude_weeks": False,
+        "season": None,
+        "page_number": ev.get("page_number") if isinstance(ev.get("page_number"), int) else None,
+        "note": note if isinstance(note, str) and note.strip() else None,
+        "access": access if access in ACCESS_KINDS else None,
+        **hours,
+        "raw": {k: ev.get(k) for k in ("open_from", "open_until") if ev.get(k) is not None},
+        "problems": problems,
+    }
 
 
 _FACEBOOK_HOSTS = ("facebook.com", "fb.com", "fb.me")

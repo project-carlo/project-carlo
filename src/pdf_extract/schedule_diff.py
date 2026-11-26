@@ -11,6 +11,8 @@ season become the exact set of month-days the slot can fall on
 (`qualifiers.recurrence_mask`), so "every Sunday except the last" and "first
 to fourth Sunday" compare equal while "every Friday" and "first Friday" don't.
 A cancellation is its date plus the fingerprint of the weekly row it cancels.
+A chapel open 24 hours (a `continuous` row) is recurring: its church, access and
+dates, and it can be visited on every date of the window (with no start time).
 
 Two views come out of it:
 
@@ -35,7 +37,7 @@ from datetime import date, timedelta
 from typing import Any
 
 from pdf_extract.bulletin_week import parse_iso_date
-from pdf_extract.model import DAYS, EVENT_TYPE_LABELS
+from pdf_extract.model import CONTINUOUS, DAYS, EVENT_TYPE_LABELS
 from pdf_extract.schedule.qualifiers import (
     QualifierError,
     columns_to_season,
@@ -80,10 +82,21 @@ class Item:
     cancelled: bool
     note: str | None
     cancels: int | None
+    access: str | None = None
+    open_from: int | None = None
+    open_until: int | None = None
 
     @property
     def weekly(self) -> bool:
         return self.kind == "weekly"
+
+    @property
+    def continuous(self) -> bool:
+        return self.kind == CONTINUOUS
+
+    @property
+    def recurring(self) -> bool:
+        return self.weekly or self.continuous
 
     @property
     def cancellation(self) -> bool:
@@ -141,6 +154,9 @@ def _item(row: dict[str, Any], church: dict[str, Any]) -> Item:
         cancelled=bool(row.get("cancelled")),
         note=row.get("note") or None,
         cancels=row.get("cancels_event_id"),
+        access=row.get("access"),
+        open_from=row.get("open_from"),
+        open_until=row.get("open_until"),
     )
 
 
@@ -152,7 +168,7 @@ def current_rows(tables: Tables, as_of: date) -> list[dict[str, Any]]:
     today = as_of.isoformat()
     return [
         row for row in tables.get("events", [])
-        if (str(row.get("event_kind") or "").lower() == "weekly"
+        if (str(row.get("event_kind") or "").lower() in ("weekly", CONTINUOUS)
             or (row.get("date") or "") >= today)
         and (row.get("valid_until") is None or row["valid_until"] >= today)
     ]
@@ -184,13 +200,13 @@ def canonicalize(tables: Tables, as_of: date) -> Projection:
     all_by_id = {item.id: item for item in items}
     kept = [
         item for item in items
-        if (item.weekly or (item.date or "") >= today)
+        if (item.recurring or (item.date or "") >= today)
         and (item.valid_until is None or item.valid_until >= today)
     ]
     by_id = {item.id: item for item in kept}
     out: list[Item] = []
     for item in kept:
-        if item.cancels is not None and item.cancelled and not item.weekly:
+        if item.cancels is not None and item.cancelled and not item.recurring:
             target = all_by_id.get(item.cancels)
             if target is None or not target.weekly:
                 errors.append(
@@ -247,7 +263,18 @@ def slot_fingerprint(item: Item, as_of: date) -> tuple:
     )
 
 
+def continuous_fingerprint(item: Item, as_of: date) -> tuple:
+    """A continuous chapel's meaning: its church, how a visitor gets in, from when, until when."""
+    valid_from = item.valid_from
+    if valid_from is not None and valid_from <= as_of.isoformat():
+        valid_from = None
+    return ("continuous", item.church, item.event_type, item.access, item.open_from,
+            item.open_until, valid_from, item.valid_until)
+
+
 def fingerprint(item: Item, projection: Projection) -> tuple:
+    if item.continuous:
+        return continuous_fingerprint(item, projection.as_of)
     if item.weekly:
         return slot_fingerprint(item, projection.as_of)
     if item.cancellation:
@@ -258,7 +285,7 @@ def fingerprint(item: Item, projection: Projection) -> tuple:
 
 
 def _section(item: Item) -> str:
-    if item.weekly:
+    if item.recurring:
         return "recurring"
     return "cancellations" if item.cancellation else "dated"
 
@@ -274,6 +301,12 @@ def item_occurrences(
     """The dates in `dates` a visitor could go to this row, as the web app reads it."""
     if item.cancelled:
         return []
+    if item.continuous:
+        return [
+            (item.church, item.event_type, day.isoformat(), None) for day in dates
+            if (item.valid_from is None or day.isoformat() >= item.valid_from)
+            and (item.valid_until is None or day.isoformat() <= item.valid_until)
+        ]
     if not item.weekly:
         day = parse_iso_date(item.date)
         if day is None or day not in dates:
@@ -326,7 +359,17 @@ def _pattern(item: Item) -> str:
 def describe_parts(item: Item, projection: Projection | None = None) -> tuple[str, list[str]]:
     """(head, details): "Adoration · Fri", ["7:00 PM–8:00 PM", "every Friday"]."""
     label = EVENT_TYPE_LABELS.get(item.event_type, item.event_type or "Event")
-    if item.weekly:
+    if item.continuous:
+        head = f"{label} · daily"
+        details = ["24 hours", f"access {item.access or '?'}"]
+        if item.open_from is not None:
+            details.append(f"unlocked {minutes_to_time(item.open_from)}–"
+                           f"{minutes_to_time(item.open_until)}")
+        if item.valid_from:
+            details.append(f"from {item.valid_from}")
+        if item.valid_until:
+            details.append(f"through {item.valid_until}")
+    elif item.weekly:
         head = f"{label} · {(item.day or '?').strip().capitalize()[:3]}"
         details = [_time_range(item), _pattern(item)]
         if item.valid_from:
@@ -382,6 +425,8 @@ def _item_dict(
         "valid_until": item.valid_until,
         "cancelled": item.cancelled,
         "note": item.note,
+        **({"access": item.access, "open_from": minutes_to_time(item.open_from),
+            "open_until": minutes_to_time(item.open_until)} if item.continuous else {}),
         "summary": describe(item, projection),
         "window_dates": len(occurrences),
     }
@@ -577,7 +622,8 @@ def compare(
         parish(parish_id)["availability"]["lost"] += 1
         group = groups[(parish_id, occurrence[0], occurrence[1])]
         group["lost"] += 1
-        group["lost_dates"].append(f"{occurrence[2]} {minutes_to_time(occurrence[3])}")
+        group["lost_dates"].append(
+            f"{occurrence[2]} {minutes_to_time(occurrence[3]) or 'all day'}")
         lost_on[(parish_id, *occurrence[:3])] += 1
     for occurrence in gained:
         parish_id = avail_a[occurrence]
@@ -594,7 +640,7 @@ def compare(
         group["lost_dates"].sort()
         parish(parish_id)["availability"]["groups"].append(group)
 
-    recurring_before = len([i for i in firsts_b.values() if i.weekly])
+    recurring_before = len([i for i in firsts_b.values() if i.recurring])
     matched = sum(p["recurring_matched"] for p in parishes.values())
     return {
         "as_of": as_of.isoformat(),
@@ -605,7 +651,7 @@ def compare(
         },
         "recurring": {
             "before": recurring_before,
-            "after": len([i for i in firsts_a.values() if i.weekly]),
+            "after": len([i for i in firsts_a.values() if i.recurring]),
             "matched": matched,
             "removed": recurring_before - matched,
             "added": sum(p["recurring_added"] for p in parishes.values()),

@@ -1,3 +1,4 @@
+import { countChurches } from "@carlo/core";
 import { useLayoutEffect, useRef } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { ChurchIndexContent } from "@/components/ChurchIndexContent";
@@ -23,7 +24,7 @@ export function ChurchIndexPage() {
 
   useDocumentMeta({
     title: CHURCH_INDEX_TITLE,
-    description: data ? buildChurchIndexDescription(data.churches.length) : undefined,
+    description: data ? buildChurchIndexDescription(countChurches(data.churches)) : undefined,
     canonicalUrl: canonicalForPath(CHURCH_INDEX_PATH),
   });
 

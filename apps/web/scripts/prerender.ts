@@ -8,6 +8,7 @@ import { createElement } from "react";
 import {
   churchCity,
   churchMapData,
+  churchContinuous,
   churchSchedule,
   cityIndex,
   cityPageData,
@@ -16,6 +17,7 @@ import {
 import { cityPath, type CityCenters } from "../src/lib/cities";
 import { ANALYTICS_ENTRY, CHURCH_INDEX_ENTRY, CITY_MAP_ENTRY } from "../src/lib/cityMapEntry";
 import { ANALYTICS_DASHBOARD_PATH } from "../src/lib/analyticsReports";
+import { EMBED_PATH } from "../src/lib/embed";
 import { HOME_LINK_ATTRIBUTE, HOME_SEARCH_KEY } from "../src/hooks/useHomeHref";
 import cityCentersJson from "../src/data/cityCenters.json";
 import { EVENT_TYPE_ORDER, parseSnapshot, SNAPSHOT_FILE } from "@carlo/core";
@@ -230,7 +232,8 @@ function noindexShell(shell: string): string {
  * Writes the copies of the SPA shell (dist/client/index.html) that the
  * client-rendered routes are served from. wrangler.jsonc serves 404.html,
  * with a 404 status, for any URL no file matches, so every page the app
- * routes to needs a file of its own: `/landing` is served from landing.html.
+ * routes to needs a file of its own: `/landing` is served from landing.html,
+ * and `/embed`, the map other sites frame, from embed.html.
  *
  * /landing, an alternate entry point that overlaps the homepage, is noindex,
  * as is the analytics dashboard (admin/analytics.html), which Cloudflare
@@ -240,6 +243,9 @@ function noindexShell(shell: string): string {
 function writeShellCopies(distDir: string, origin: string): void {
   const shell = readFileSync(resolve(distDir, "index.html"), "utf-8");
   writeFileSync(resolve(distDir, "landing.html"), noindexShell(shell), "utf-8");
+  // The map other sites frame (docs/embed.md): noindex, as it repeats the
+  // homepage, and served at /embed without a redirect, as /landing is.
+  writeFileSync(resolve(distDir, `${EMBED_PATH.slice(1)}.html`), noindexShell(shell), "utf-8");
   mkdirSync(resolve(distDir, "admin"), { recursive: true });
   writeFileSync(resolve(distDir, `${ANALYTICS_DASHBOARD_PATH.slice(1)}.html`), noindexShell(shell), "utf-8");
   if (isAboutPageEnabledAtBuild()) {
@@ -337,6 +343,7 @@ async function main() {
         renderToStaticMarkup(
           createElement(StaticChurchPage, {
             church,
+            continuous: churchContinuous(snapshot, church.id),
             city: churchCity(snapshot, church),
             map: churchMapData(snapshot, church),
             events,

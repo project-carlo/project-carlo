@@ -10,7 +10,7 @@ import type { FilterState } from "./filterState";
 import { useDocumentLinks } from "../lib/documentLinks";
 import { isAboutPageEnabled } from "../lib/featureFlags";
 import { CHURCH_INDEX_PATH } from "../lib/seo";
-import { CHURCH_LIST } from "../copy";
+import { CHURCH_LIST, EMBED_HEADING, POWERED_BY } from "../copy";
 import { EVENT_TYPE_LABELS } from "@carlo/core";
 import type { LatLng } from "../lib/cities";
 import type { PlaceSearchResult } from "../placeSearch";
@@ -35,6 +35,11 @@ interface MapOverlayProps {
   onClearPlace: () => void;
   /** Lines under the search box, above a pinned place's. */
   children?: ReactNode;
+  /**
+   * The embed (src/lib/embed.ts): no masthead or site links, just a
+   * "Powered by" link to this map on the full site, at `fullSiteHref`.
+   */
+  embed?: { fullSiteHref: string; diocese: string | null };
 }
 
 /**
@@ -48,6 +53,9 @@ interface MapOverlayProps {
  *
  * On a phone the card is kept short for the map's sake: the wordmark and the
  * links share one line, and the filter button names what the map shows.
+ *
+ * In the embed the card has no masthead or site links: the host page is the
+ * frame's context, and a line under the filters credits the full site.
  */
 export function MapOverlay({
   isDesktop,
@@ -63,6 +71,7 @@ export function MapOverlay({
   pinnedPlaceTitle,
   onClearPlace,
   children,
+  embed,
 }: MapOverlayProps) {
   const documentLinks = useDocumentLinks();
   const eventLabel = EVENT_TYPE_LABELS[appliedFilters.eventType];
@@ -73,35 +82,42 @@ export function MapOverlay({
           data-map-overlay
           className="pointer-events-auto rise-in shrink-0 border border-rule-strong bg-paper/96 px-4 pt-3 pb-3 shadow-missal-floating backdrop-blur-sm md:px-6 md:pt-5 md:pb-4"
         >
-          <Masthead
-            aside={
-              // Beside the wordmark only, so the tagline keeps one line. The
-              // index is also the homepage's one crawlable path into the
-              // church and city pages. On a phone the links sit in a row,
-              // level with the wordmark, so the card stays one line deep.
-              <div className="flex shrink-0 items-center gap-3 md:mt-1 md:flex-col md:items-end md:gap-1">
-                <Link
-                  to={CHURCH_INDEX_PATH}
-                  reloadDocument={documentLinks}
-                  className="rubric-link font-serif text-[0.9375rem]"
-                >
-                  <ListIcon aria-hidden className="size-3.5 self-center md:hidden" />
-                  {CHURCH_LIST}
-                </Link>
-                {aboutPageEnabled ? (
+          {embed ? (
+            // The host page names what the map is; a heading is still owed
+            // to a screen reader landing in the frame.
+            <h1 className="sr-only">{EMBED_HEADING}</h1>
+          ) : (
+            <Masthead
+              aside={
+                // Beside the wordmark only, so the tagline keeps one line. The
+                // index is also the homepage's one crawlable path into the
+                // church and city pages. On a phone the links sit in a row,
+                // level with the wordmark, so the card stays one line deep.
+                <div className="flex shrink-0 items-center gap-3 md:mt-1 md:flex-col md:items-end md:gap-1">
                   <Link
-                    to="/about"
+                    to={CHURCH_INDEX_PATH}
                     reloadDocument={documentLinks}
                     className="rubric-link font-serif text-[0.9375rem]"
                   >
-                    About
+                    <ListIcon aria-hidden className="size-3.5 self-center md:hidden" />
+                    {CHURCH_LIST}
                   </Link>
-                ) : null}
-              </div>
-            }
-          />
-          <div className="mt-3 md:mt-5">
+                  {aboutPageEnabled ? (
+                    <Link
+                      to="/about"
+                      reloadDocument={documentLinks}
+                      className="rubric-link font-serif text-[0.9375rem]"
+                    >
+                      About
+                    </Link>
+                  ) : null}
+                </div>
+              }
+            />
+          )}
+          <div className={embed ? undefined : "mt-3 md:mt-5"}>
             <SearchTypeahead
+              diocese={embed?.diocese}
               placeholder={isDesktop ? undefined : "City, ZIP, or church…"}
               onChurchSelect={onChurchSelect}
               onPlaceSelect={onPlaceSelect}
@@ -139,6 +155,22 @@ export function MapOverlay({
             </div>
           ) : null}
           <FilterPills filters={appliedFilters} />
+          {embed ? (
+            <p className="mt-2 text-right font-serif text-[0.8125rem] text-ink-soft">
+              <a
+                href={embed.fullSiteHref}
+                target="_blank"
+                rel="noopener"
+                className="rubric-link"
+              >
+                {POWERED_BY}{" "}
+                <span className="font-display">
+                  Project <span className="italic">Carlo</span>
+                </span>
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+            </p>
+          ) : null}
         </div>
 
         <div

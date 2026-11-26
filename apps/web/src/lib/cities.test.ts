@@ -13,6 +13,7 @@ function church(overrides: Partial<ChurchBase> & { id: number }): ChurchBase {
   return {
     parish_id: 1,
     slug: `church-${overrides.id}`,
+    kind: "church",
     name: `Church ${overrides.id}`,
     address_line1: null,
     address_line2: null,

@@ -4,8 +4,8 @@ One Run is active at a time, and one job runs at a time within it. Everything af
 job's gates is recorded in the ledger as it completes, so a dispatcher restarted partway
 through skips what's done instead of committing or appending twice.
 
-The stage-specific branches (seed parking, reviewer verdicts, integrate's rules check, the
-code stages) are here until each stage gets its own module.
+The stage-specific branches (seed parking, a seed's second opinion, reviewer verdicts,
+integrate's rules check, the code stages) are here until each stage gets its own module.
 """
 
 from __future__ import annotations
@@ -20,6 +20,7 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.factory import git, playbook, render, report
+from pdf_extract.factory import opinions as op
 from pdf_extract.factory.answers import Answers
 from pdf_extract.factory.attempts import Attempts, Ended
 from pdf_extract.factory.backup import copy_database
@@ -62,12 +63,20 @@ from pdf_extract.factory.ledger import (
     Ledger,
     now,
     pending,
+    stamp,
 )
 from pdf_extract.factory.outcome import Outcome
 from pdf_extract.factory.plan import diocese_dir, next_job, read_seed, seed_status
 from pdf_extract.factory.secrets import Secrets, pick
 from pdf_extract.factory.spec import CODE, StageSpec, fill, in_scope, load_stage, placeholders
 from pdf_extract.factory.workers import CRASH, OK, PARTIAL, SANDBOX, TIMEOUT
+from pdf_extract.seeding import second_opinion
+from pdf_extract.seeding.files import (
+    is_source_seed,
+    newest_read_bulletin,
+    validate_seed,
+    write_seed_file,
+)
 
 LOGGER = logging.getLogger(__name__)
 # What a git, gh or command call raises when it fails; a job's tick waits and tries again.
@@ -108,12 +117,14 @@ class Engine:
     def __init__(self, ledger: Ledger, config: Config, *, repo: Path, forge: Forge,
                  attempts: Attempts, answers: Answers, clock: Callable[[], datetime],
                  commands: Callable[..., tuple[bool, str]], secrets: Secrets,
-                 db_path: Path, queue_path: Path | None, push: bool) -> None:
+                 db_path: Path, queue_path: Path | None, push: bool,
+                 opinions: op.Opinions | None = None) -> None:
         self.ledger, self.config, self.repo, self.forge = ledger, config, repo, forge
         self.attempts, self.answers = attempts, answers
         self.clock, self.commands = clock, commands
         self.secrets = secrets  # the dispatcher's .env; a stage's `gate_secrets:` pick
         self.db_path, self.queue_path, self.push_enabled = db_path, queue_path, push
+        self.opinions = opinions  # None: seeds get no second opinion (tests, the stub)
 
     def run_job(self, job: Any) -> Outcome:
         """Take the job one step on: a job waiting on usage or a sandbox retry waits, and a
@@ -177,6 +188,8 @@ class Engine:
             active = self.ledger.runs(ACTIVE)
             if active:
                 run = active[0]
+                if run["kind"] == SEED:
+                    self._fire_opinions(run)
                 job = self.ledger.unfinished_job(run["id"])
                 if job is not None:
                     return job
@@ -185,8 +198,11 @@ class Engine:
                 except FactoryError as exc:
                     self._block_run(run, None, f"Can't set up the Run's worktree: {exc}")
                     continue
+                if run["kind"] == SEED:
+                    self._fire_opinions(run)  # a new Run's checkout exists only now
                 nxt = next_job(self.ledger, run,
-                               lessons_before_integrate=self.config.lessons_before_integrate)
+                               lessons_before_integrate=self.config.lessons_before_integrate,
+                               seed_review_questions=self.config.seed_review_questions)
                 if nxt is not None:
                     return self.ledger.job(self.ledger.add_job(run["id"], nxt.stage, nxt.inputs))
                 self.ledger.set_run(run["id"], status=IN_REVIEW)
@@ -195,6 +211,15 @@ class Engine:
                 continue
             return None
         return None
+
+    def _fire_opinions(self, run: Any) -> None:
+        """Ask for the Run's second opinions in the background; never stops a tick."""
+        if self.opinions is None:
+            return
+        try:
+            self.opinions.fire(run)
+        except Exception:
+            LOGGER.exception("firing the second opinions of %s failed", run["id"])
 
     def _activate_answered(self) -> bool:
         for run in self.ledger.runs(BLOCKED):
@@ -447,13 +472,26 @@ class Engine:
                 continue  # e.g. no approved seeds to check
             command = fill(gate, values)
             ok, out = self.commands(command, worktree,
-                                    secrets=pick(self.secrets, spec.gate_secrets))
+                                    secrets=pick(self.secrets, spec.gate_secrets)
+                                    | self._opinion_env(job, values, worktree))
             self.ledger.add_gate(job["id"], attempt, command, ok, out)
             if not ok:
                 problems.append(f"`{command}` failed:\n\n```\n{out[-2500:]}\n```")
                 if first_failure:
                     break
         return problems
+
+    def _opinion_env(self, job: Any, values: dict[str, str], worktree: Path) -> dict[str, str]:
+        """For a seed job's `seed check`: the hash of the second opinion's entries the
+        dispatcher revealed, so a drafter's edit to them fails the check."""
+        parish = values.get("parish")
+        if self.opinions is None or job["stage"] != "seed" or not parish:
+            return {}
+        sec = second_opinion.section(read_seed(worktree, parish) or {})
+        row = self.opinions.revealed(parish, (sec or {}).get("request_key"))
+        if row is None or not row["entries_sha256"]:
+            return {}
+        return {second_opinion.OPINION_SHA_ENV: f"{parish}={row['entries_sha256']}"}
 
     def _send_back(self, run: Any, job: Any, problems: list[str]) -> Outcome:
         if job["send_backs"] >= self.config.max_send_backs:
@@ -513,6 +551,10 @@ class Engine:
 
     def _finish(self, run: Any, job: Any, spec: StageSpec, worktree: Path,
                 handoff: Handoff) -> Outcome:
+        if job["stage"] == "seed":
+            held = self._second_opinion(run, job, worktree)
+            if held is not None:
+                return held
         self.ledger.set_job(job["id"], handoff=handoff.model_dump_json())
         job = self.ledger.job(job["id"])
         if isinstance(handoff, Integrate):
@@ -554,6 +596,114 @@ class Engine:
             self.ledger.set_run(run["id"], status=BLOCKED, blocked_reason="a worker's blocking flag")
             return Outcome("blocked", f"job {job['id']} raised a Run-level flag")
         return Outcome("ran", f"job {job['id']} {job['stage']} done")
+
+    # ── A seed's second opinion ─────────────────────────────────────────────
+    def _second_opinion(self, run: Any, job: Any, worktree: Path) -> Outcome | None:
+        """Reveal the parish's second opinion once the seed's gates pass, and compare.
+
+        The first time, the job waits for its opinion (up to `opinion_timeout_minutes`),
+        asking again on the drafter's own bulletins when the one asked at the Run's start
+        read another newest bulletin. Then it writes it into the seed file. With
+        differences to resolve, the same session gets an `opinion` prompt, which isn't a
+        send-back; with none, the job goes on to commit. Each later submission compares
+        again; `seed check` (its gate) has already refused any difference left open.
+
+        Returns an Outcome while the job waits or goes back to its drafter; None to go on.
+        A seed never waits on luna for longer than that: an opinion that can't be had is
+        recorded for the PR, and the job goes on without it.
+        """
+        parish = json.loads(job["input"]).get("parish")
+        if self.opinions is None or not parish or not op.supported(worktree):
+            return None
+        seed = read_seed(worktree, parish)
+        # A source seed has no bulletins for luna to read (docs/source-schedules-plan.md).
+        if seed is None or seed.get("status") == "approved" or is_source_seed(seed):
+            return None
+        try:
+            return self._opinion_step(run, job, worktree, parish, seed)
+        except Exception as exc:  # anything at all: a seed is never blocked on luna
+            LOGGER.exception("the second opinion of %s failed", parish)
+            self._no_opinion(run, parish, f"could not be revealed: {exc}")
+            return None
+
+    def _opinion_step(self, run: Any, job: Any, worktree: Path, parish: str,
+                      seed: dict[str, Any]) -> Outcome | None:
+        newest = newest_read_bulletin(seed)
+        sec = second_opinion.section(seed)
+        if sec is not None:
+            shown = self.opinions.revealed(parish, sec.get("request_key"))
+            listed = [b.get("content_hash") for b in sec.get("bulletins") or []]
+            if shown is not None and (newest is None or listed[:1] == [newest["content_hash"]]
+                                      or shown["drafter_newest"] == newest["content_hash"]):
+                self._compare_again(worktree, parish, seed, shown)
+                return None
+        wait_key = f"opinion_wait:{job['id']}"
+        row = self.opinions.latest(run["id"], parish)
+        # Asked again on the drafter's bulletins: when there's no request yet (a Run that
+        # started before the second opinion), when the one asked read another newest
+        # bulletin, and once when the Run's first request failed (luna briefly unreachable).
+        if row is None or not _fits(row, newest) or (
+                row["status"] == op.FAILED and row["drafter_newest"] is None
+                and newest is not None):
+            row = self.opinions.ask(run["id"], parish, seed, newest)
+            self.ledger.set(wait_key, stamp(self.clock))
+        if row["status"] in op.WAITING:
+            started = self.ledger.get(wait_key)
+            if started is None:
+                started = stamp(self.clock)
+                self.ledger.set(wait_key, started)
+            waited = self.clock() - datetime.fromisoformat(started)
+            if waited < timedelta(minutes=self.config.opinion_timeout_minutes):
+                return Outcome("waiting", f"job {job['id']}: waiting for {parish}'s second "
+                               "opinion", self.clock() + timedelta(seconds=30))
+            self._no_opinion(run, parish, f"no reply within "
+                             f"{self.config.opinion_timeout_minutes} minutes")
+            return None
+        if row["status"] != op.DONE:
+            self._no_opinion(run, parish, row["error"] or row["status"])
+            return None
+        return self._reveal(run, job, worktree, parish, seed, row)
+
+    def _reveal(self, run: Any, job: Any, worktree: Path, parish: str, seed: dict[str, Any],
+                row: Any) -> Outcome | None:
+        record = {**json.loads(row["reply"]), "cached": row["reused_from"] is not None,
+                  "cost_usd": row["cost_usd"]}
+        revealed = second_opinion.reveal(seed, record, at=now())
+        problems = validate_seed(revealed, parish_slug=parish)
+        if problems:
+            raise second_opinion.OpinionError("; ".join(problems[:3]))
+        write_seed_file(revealed, worktree / "data" / "seeds")
+        sec = second_opinion.section(revealed)
+        assert sec is not None
+        stats = second_opinion.stats(revealed)
+        self.ledger.run_sql("UPDATE seed_opinion SET revealed_at = ?, job_id = ?, "
+                            "entries_sha256 = ?, stats = ? WHERE id = ?", now(), job["id"],
+                            sec["entries_sha256"], json.dumps(stats), row["id"])
+        self.ledger.set(f"opinion_missing:{run['id']}:{parish}", None)
+        open_ = [d for d in sec["differences"] if d.get("resolution") is None]
+        if not open_:
+            return None
+        # Its own attempt, not a send-back: the gates run again on what it hands back.
+        self.ledger.clear_action(job["id"], "gates")
+        self.ledger.set_job(job["id"], status=SENT_BACK, pending_prompt=pending(
+            "opinion", render.opinion_prompt(parish, sec, open_, stats,
+                                             render.handoff_rel(run["id"], job["name"]))))
+        return Outcome("ran", f"job {job['id']}: {len(open_)} differences from the second "
+                       "opinion to resolve")
+
+    def _compare_again(self, worktree: Path, parish: str, seed: dict[str, Any],
+                       shown: Any) -> None:
+        """A later submission: the comparison as the draft now stands, written in."""
+        again = second_opinion.refresh(seed)
+        if again != seed and not validate_seed(again, parish_slug=parish):
+            write_seed_file(again, worktree / "data" / "seeds")
+        self.ledger.run_sql("UPDATE seed_opinion SET stats = ? WHERE id = ?",
+                            json.dumps(second_opinion.stats(again)), shown["id"])
+
+    def _no_opinion(self, run: Any, parish: str, why: str) -> None:
+        """Going on without one; the PR lists it."""
+        LOGGER.warning("%s goes on without a second opinion: %s", parish, why)
+        self.ledger.set(f"opinion_missing:{run['id']}:{parish}", why[:300])
 
     def _subject(self, run: Any, job: Any) -> str:
         data = json.loads(job["input"])
@@ -756,6 +906,15 @@ class Engine:
             git.commit(worktree, f"{run['diocese']}: leave out seeds not approved ({run['id']})",
                        _trailers(run, job))
         return dropped
+
+
+def _fits(row: Any, newest: dict[str, Any] | None) -> bool:
+    """Whether a request is on the drafter's newest read bulletin, or may be: one still
+    waiting for its bulletins is waited for, and one that read none is as good as any."""
+    if newest is None or row["drafter_newest"] == newest["content_hash"]:
+        return True
+    first = op.newest_bulletin(row)
+    return first is None or first == newest["content_hash"]
 
 
 def _trailers(run: Any, job: Any) -> dict[str, str]:

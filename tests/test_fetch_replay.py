@@ -24,7 +24,15 @@ from pathlib import Path
 
 import pytest
 
-from pdf_extract.fetch import _PROVIDERS
+from pdf_extract.bulletin_week import nearest_sunday
+from pdf_extract.fetch import (
+    _PROVIDERS,
+    PARISHES_ONLINE_ORG_URL_TEMPLATE,
+    PARISHES_ONLINE_TYPE,
+    FetchSource,
+    _extract_parishes_online_pdf_url_from_href,
+    _predict_parishes_online_link,
+)
 from pdf_extract.fetch_check import (
     SNAPSHOT_SUFFIX,
     PageSnapshot,
@@ -79,6 +87,66 @@ def test_johnstown_recipes_keep_the_latest_own_issue_after_the_current_window(sl
     delayed = replace(recording, reference_date=date(2026, 10, 26))
     link = delayed.resolve(recipe=_current_recipe(slug, recording.provider))
     assert link.source_url == EXPECTED[slug]["source_url"]
+
+
+PARISHES_ONLINE_RECORDINGS = [
+    path for path in RECORDINGS if load_recording(path).provider == PARISHES_ONLINE_TYPE
+]
+
+
+def _listed_parishes_online_issues(recording) -> list[tuple[str, str]]:
+    """Every issue the recorded organization page links, as (page, PDF)."""
+    org_url = PARISHES_ONLINE_ORG_URL_TEMPLATE.format(provider_id=recording.provider_id)
+    page = recording.page()
+    page.goto(org_url)
+    return [
+        urls for anchor in page.query_selector_all("a[href*='selectedPublication=']")
+        if (urls := _extract_parishes_online_pdf_url_from_href(
+            href=anchor.get_attribute("href") or "", provider_id=recording.provider_id,
+            base_url=org_url,
+        ))
+    ]
+
+
+def test_parishes_online_predicted_address_leads_to_the_pages_bulletin() -> None:
+    """On each recorded organization page, with the file host holding exactly
+    the issues listed and the oldest of them stored, a predicted bulletin
+    taken directly is the one the page resolves to."""
+    predicted_count = hits = 0
+    for path in PARISHES_ONLINE_RECORDINGS:
+        recording = load_recording(path)
+        listed = _listed_parishes_online_issues(recording)
+        on_host = {pdf for _, pdf in listed}
+        oldest = min(listed, key=lambda urls: urls[1].rsplit("/", 1)[-1])
+        stored = [{
+            "id": 1, "source_url": oldest[0], "content_hash": "h", "published_date": None,
+            "fetched_at": f"{recording.reference_date.isoformat()}T09:00:00Z",
+            "wrong_bulletin": 0,
+        }]
+        sunday = nearest_sunday(recording.reference_date)
+        predicted = _predict_parishes_online_link(
+            FetchSource(PARISHES_ONLINE_TYPE, recording.provider_id), stored, sunday,
+            recording.reference_date,
+        )
+        # Recorded on a Saturday and a Friday, before the run's Sunday.
+        assert (predicted is None) == (recording.reference_date < sunday), recording.slug
+        if predicted is None:
+            continue
+        predicted_count += 1
+        if any(url in on_host for url in predicted.later):
+            continue
+        if predicted.link.fetch_url not in on_host:
+            continue
+        hits += 1
+        resolved = recording.resolve()
+        assert (predicted.link.source_url, predicted.link.fetch_url) == (
+            resolved.source_url, resolved.fetch_url,
+        ), recording.slug
+    assert len(PARISHES_ONLINE_RECORDINGS) >= 90
+    # Recorded on a Monday and a Wednesday: most pages had the weekend's
+    # bulletin, so the comparison is not empty.
+    assert predicted_count >= 30
+    assert hits >= predicted_count * 3 // 4, (hits, predicted_count)
 
 
 def test_snapshot_page_matches_the_selectors_resolvers_use() -> None:

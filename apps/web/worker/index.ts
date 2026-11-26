@@ -3,6 +3,9 @@
  * only `/api/*` reaches it first (see `run_worker_first` in wrangler.jsonc).
  * Requests no file matches arrive here too and go back to the assets, which
  * answer with 404.html.
+ *
+ * Nothing here sets X-Frame-Options or a CSP frame-ancestors rule, and nothing
+ * should: dioceses frame /embed on their own sites (docs/embed.md).
  */
 
 import { ACCESS_JWT_HEADER, verifyAccessJwt } from "../src/lib/accessAuth";

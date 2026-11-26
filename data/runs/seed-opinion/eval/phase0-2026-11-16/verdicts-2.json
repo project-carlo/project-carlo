@@ -1,0 +1,322 @@
+[
+ {
+  "n": 1,
+  "parish": "enchanted-mountains-catholic",
+  "kind": "extra",
+  "verdict": "structural",
+  "failure_mode": "bulletin-luna-did-not-see",
+  "why": "The seed's only print of '1st Friday Adoration - BSMA 1:00 pm' is the Sept 27 issue (cd1b60de p4), which luna was not given. A grep of luna's four bulletins (Oct 4-25) finds no '1st Friday'. R12 kept it from an older issue."
+ },
+ {
+  "n": 2,
+  "parish": "wheat-family-east-aurora",
+  "kind": "extra",
+  "verdict": "seed_right",
+  "failure_mode": "missed-line-outside-schedule-box",
+  "why": "B1 (8949be0c) p2, an image, 'Other Faith-Forming Opportunities' sidebar: '1st Friday Family Devotions at St. Vincent's: 5:30 pm pizza..., 6:15 Confession, 6:30 Rosary, 7 Mass'. Luna had no First Friday entry at St. Vincent's."
+ },
+ {
+  "n": 3,
+  "parish": "catholic-family-holy-rosary",
+  "kind": "extra",
+  "verdict": "seed_right",
+  "failure_mode": "missed-line-outside-schedule-box",
+  "why": "B1 (62933e4b) p3, an image, 'Upcoming Events' list: 'November 6th First Friday Eucharistic Adoration ICC after 8:00 am Mass until noon, STJ after 9:15 Mass until noon'. Luna had no Friday Adoration at either church and no dated entries at all."
+ },
+ {
+  "n": 4,
+  "parish": "most-holy-name-of-jesus",
+  "kind": "extra",
+  "verdict": "seed_right",
+  "failure_mode": "nonweekly-as-weekly",
+  "why": "B1 p2: 'October Confessions / Tuesdays, October 13 & 27 / 4:30 to 5:30pm in St. Mary's' (B3: 'September 29'). These are alternate Tuesdays with the dates printed (R14). Luna made it weekly, and did the same with 'Wednesdays, October 7 & 21' at St. Patrick's."
+ },
+ {
+  "n": 5,
+  "parish": "st-mary-of-the-assumption-oswego",
+  "kind": "extra",
+  "verdict": "structural",
+  "failure_mode": "end-time-diff-as-extra",
+  "why": "Luna has Sun 10:30-10:55, the seed 10:30-11:00, for the same line ('30 minutes before the start of all Latin Masses (ending approximately 5 minutes before Mass begins)', B1 p4). Only the end differs, and luna's end follows the printed 'about 5 minutes before'. A same-slot end-time difference was reported as extra rather than differs (known artefact)."
+ },
+ {
+  "n": 6,
+  "parish": "mater-christi-albany",
+  "kind": "extra",
+  "verdict": "seed_right",
+  "failure_mode": "missed-line-outside-schedule-box",
+  "why": "B1 (4cda8986) p3, an image, notice box: 'on Mondays October 5, 12, 19, and 26 we will have Adoration from 4:30 to 5:00 pm, recitation of the Rosary at 5:00 pm and Mass at 5:30 pm'. Luna recorded none of these dates."
+ },
+ {
+  "n": 7,
+  "parish": "st-john-the-baptist-walton",
+  "kind": "extra",
+  "verdict": "seed_right",
+  "failure_mode": "shared-heading-applied-to-one-line",
+  "why": "B1 p1 box: 'Daily Masses / Tuesday, Wednesday & First Friday / 8:00 am at St. Peter's / 9:30 am at St. John's'. Luna applied First Friday to St. Peter's only. Its evidence for St. John's, 'Tuesday and Wednesday 9:30 am at St. John's', is not what the bulletin prints."
+ },
+ {
+  "n": 8,
+  "parish": "st-mary-nassau",
+  "kind": "extra",
+  "verdict": "structural",
+  "failure_mode": "reviewer-rule-not-in-policy",
+  "why": "B1 p2: '*Tuesday Morning Mass 9:30 am / St. Anthony Novena and Adoration until 10:30 am'. No start is printed. The seed's 10:00 start comes from the reviewer's 2026-10-14 timing rule, which luna did not have. Luna left the slot out, which POLICY allows ('Skip anything without a definite start time')."
+ },
+ {
+  "n": 9,
+  "parish": "holy-family-catholic-community",
+  "kind": "extra",
+  "verdict": "structural",
+  "failure_mode": "bulletin-luna-did-not-see",
+  "why": "'Reconciliation: Saturday, 3:00 - 3:45pm at St. Mary Church' appears only in the Sept 20 and 27 issues (2c63d12a p4), which luna was not given. The Oct 4-25 issues carry no such box, and the owner chose to include it under R29."
+ },
+ {
+  "n": 10,
+  "parish": "catholic-family-cheektowaga",
+  "kind": "extra",
+  "verdict": "seed_right",
+  "failure_mode": "implied-cancellation-not-recorded",
+  "why": "B1 p4: 'November 26 Thanksgiving. The only Mass for our Family of Parishes is at Resurrection at 8:30am.' Luna added the Resurrection Mass but did not cancel the regular Thursday Masses it replaces (OLHC 8:30, Resurrection 12:00)."
+ },
+ {
+  "n": 11,
+  "parish": "sacred-heart-stamford",
+  "kind": "extra",
+  "verdict": "seed_right",
+  "failure_mode": "relative-to-mass-not-derived",
+  "why": "B1 p1: 'SHC in Stamford - After Sunday Mass or Before or After Mass on Monday'. Luna applied POLICY's 'after a Mass' rule to Sunday (1:30 PM) but skipped Monday, where the same rule gives 9:30 after the 9:00 Mass."
+ },
+ {
+  "n": 12,
+  "parish": "st-francis-of-assisi-binghamton",
+  "kind": "extra",
+  "verdict": "structural",
+  "failure_mode": "orphan-cancellation",
+  "why": "B1 p2: 'Wednesday, October 14 - (NOTE: time change) 8:00 a.m.'. The seed cancels a Wednesday noon Mass that it excludes as a weekly slot (s8 exclude). Luna has the 8:00 dated Mass and no noon slot, so neither schedule changes. A cancellation that cancels no included slot should not count as a difference."
+ },
+ {
+  "n": 13,
+  "parish": "prince-of-peace-our-lady-of-good-counsel-endicott",
+  "kind": "extra",
+  "verdict": "judgment",
+  "failure_mode": "",
+  "why": "B1 p4 flyer: 'Family Holy ½ Hour; Sunday, October 25; 4:30pm - 5:00pm ... Additional Dates: 12/13, 2/21, 4/18, 6/13'. No time is printed for 12/13. The seed assumed the same time (R30, owner chose include). Luna kept only Oct 25, as POLICY's 'definite start time' rule reads."
+ },
+ {
+  "n": 14,
+  "parish": "st-catherine-of-siena-ithaca",
+  "kind": "extra",
+  "verdict": "seed_right",
+  "failure_mode": "missed-line-outside-schedule-box",
+  "why": "B1 (c6a2ce77) p8, an image, under 'Mass of Remembrance Planning Meeting': 'we will be having our Mass of Remembrance on November 2 at 7 p.m.'. Luna returned no dated entries for this parish."
+ },
+ {
+  "n": 15,
+  "parish": "st-malachy-sherburne",
+  "kind": "missing",
+  "verdict": "structural",
+  "failure_mode": "orphan-cancellation",
+  "why": "B1 p2 lists 'Wednesday, October 14th / 9:00am- No Mass'. Luna has no weekly Wednesday 9:00 Mass at St. Malachy's, and the seed has none either, so this cancellation cancels nothing (Tue Oct 13 likewise). Luna is harmlessly literal; the matcher should drop cancellations that match no weekly slot on either side."
+ },
+ {
+  "n": 16,
+  "parish": "cathedral-st-mary-albany",
+  "kind": "missing",
+  "verdict": "seed_right",
+  "failure_mode": "dated-duplicate-of-weekly",
+  "why": "B1 p1 'ALL SOULS SPECIAL MASSES / Monday, November 2nd / ... 12:05 pm at St. Mary's'. Luna also has weekly Mon 12:05 at St. Mary's (p2), so this is the regular Mass on a feast. POLICY rules 6-7 say not to duplicate it."
+ },
+ {
+  "n": 17,
+  "parish": "st-marys-st-matthew",
+  "kind": "missing",
+  "verdict": "seed_right",
+  "failure_mode": "invalid-church-slug",
+  "why": "Luna used 'st-mary-honeoye', which is not in the church list (the slug is 'st-marys-honeoye'), for all three St. Mary's entries. The Mass itself (B1 p3 'St. Mary's - 8:30 am - Mass - Live Streamed') matches the seed's s3."
+ },
+ {
+  "n": 18,
+  "parish": "st-john-the-baptist-greenville",
+  "kind": "missing",
+  "verdict": "judgment",
+  "failure_mode": "",
+  "why": "B1 p5: 'This Tuesday, October 27th at Sacred Heart Church Adoration begins at 1:00, Holy Hour with Fr. Russ at 6:00'. B2: 'holy hour with adoration and benediction ... from 6-7 PM. Adoration will also be available starting at 1:00'. Luna has one period 1:00-7:00, the seed 1:00 (no end) plus 6:00-7:00. POLICY's Holy-Hour-inside-Adoration rule supports luna's merge, if the 1:00 Adoration runs on to the Holy Hour. The pairing also failed because the seed has two slots on that date."
+ },
+ {
+  "n": 19,
+  "parish": "st-joseph-st-patrick-utica",
+  "kind": "missing",
+  "verdict": "judgment",
+  "failure_mode": "",
+  "why": "B1 p2: 'Monday, October 12th 5:30 pm NO MASS - HOLIDAY'. The Monday Mass is 'in Chapel' and B3 says 'Daily Liturgies are held in the Chapel'. The reviewer excluded the weekly Mass and this cancellation because the chapel's location is unconfirmed (R32). Luna placed the chapel at the church. This is a venue call."
+ },
+ {
+  "n": 20,
+  "parish": "northern-points-cluster-st-cecilia-chestertown",
+  "kind": "missing",
+  "verdict": "seed_right",
+  "failure_mode": "nonweekly-as-weekly",
+  "why": "'Daily Mass: Thursday, October 1st at 9:30 am, followed by Adoration' (B4 p2) and 'Thursday, October 15th ... followed by Adoration' (B2 p2). B3 (Oct 8) and B1 (Oct 22) print the Thursday Mass without Adoration, so it is every other week. Luna made it weekly from two non-consecutive sightings."
+ },
+ {
+  "n": 21,
+  "parish": "st-daniel-syracuse",
+  "kind": "missing",
+  "verdict": "structural",
+  "failure_mode": "24h-encoding",
+  "why": "Luna's Mon 00:00-00:00 ('Adoration Chapel is open 24 hours 7 days a week', p2) is the seed's settled exclusion s13, 00:00-23:59, excluded because the chapel's location is unknown (owner answer). The two encodings of 24 hours kept the entry from matching the exclusion. The exclusion itself is a venue decision luna could not see."
+ },
+ {
+  "n": 22,
+  "parish": "st-luke-schenectady",
+  "kind": "missing",
+  "verdict": "seed_right",
+  "failure_mode": "ignored-same-bulletin-exception",
+  "why": "B1 p2: 'Eucharistic Adoration will follow the 11am Mass on Fridays and continue until 1pm ... on days other than First Fridays'. Luna made it every Friday and quoted only the first half. The seed has weeks 2-5 (s9) plus a separate first-Friday slot (s11). Two seed slots on Friday at 11:30 also kept the matcher from pairing them."
+ },
+ {
+  "n": 23,
+  "parish": "sts-isidore-maria-torribia",
+  "kind": "missing",
+  "verdict": "seed_right",
+  "failure_mode": "nonweekly-as-weekly",
+  "why": "B1-B4 p1 confession rotation table: 'November 8th / St. Stanislaus | Following 11:30 Mass' (B3/B4: 'October 11th'), and 'November 1st / St. Catherine', 'November 14th / St. Joseph'. These are monthly rotation dates. Luna made St. Stanislaus and St. Catherine weekly every Sunday."
+ },
+ {
+  "n": 24,
+  "parish": "our-lady-of-hope-whitehall",
+  "kind": "missing",
+  "verdict": "seed_right",
+  "failure_mode": "signup-or-nonservice-as-service",
+  "why": "B1 p5: 'Adorers Needed: Wednesdays from 11 a.m. to Noon & 6 p.m. to 7 p.m.'. This is an appeal for adorers. The Adoration box gives Wednesday 9 AM-7 PM (seed s21), which already covers these hours."
+ },
+ {
+  "n": 25,
+  "parish": "eternal-flame-catholic-community",
+  "kind": "missing",
+  "verdict": "structural",
+  "failure_mode": "24h-encoding",
+  "why": "Luna's Fri 00:00-00:00 at Nativity ('24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE', p9) is the seed's s41, 00:00-23:59. The difference is only the encoding."
+ },
+ {
+  "n": 26,
+  "parish": "ss-columba-and-brigid-buffalo",
+  "kind": "missing",
+  "verdict": "seed_right",
+  "failure_mode": "ignored-same-bulletin-exception",
+  "why": "p1 box: 'Sunday: 9 a.m. (Spanish/Español) 11 a.m. / Last Sunday of Month: 10 a.m. (bilingual)'. p2 intentions in both bulletins luna saw ('Sunday, September 27, 2026 Bilingual 10:00 a.m.'; 'Sunday, August 30 ... Bilingual 10:00') list no 9:00 or 11:00 on the last Sunday. So the 9:00 skips the last Sunday, and luna made it every Sunday. Three seed slots on Sunday also kept the matcher from pairing it as a difference."
+ },
+ {
+  "n": 27,
+  "parish": "blessed-trinity-st-patrick",
+  "kind": "differs",
+  "verdict": "seed_right",
+  "failure_mode": "relative-to-mass-not-derived",
+  "why": "p3: 'The sacrament of reconciliation is also available 1/2 hour before weekday Masses.' POLICY says 'N minutes before Mass' ends when the Mass starts, so 11:30-12:00. Luna gave no end."
+ },
+ {
+  "n": 28,
+  "parish": "our-lady-of-victory-basilica",
+  "kind": "differs",
+  "verdict": "structural",
+  "failure_mode": "website-source",
+  "why": "p3: 'each Friday afternoon, following the 12:10 p.m. Mass, until Benediction at 5:00 p.m.'. Luna's 12:40 is POLICY's 30 minutes after a weekday Mass. The seed's 1:30 start comes from the parish website (R6), which luna never saw."
+ },
+ {
+  "n": 29,
+  "parish": "st-peters-ontario-county",
+  "kind": "differs",
+  "verdict": "seed_right",
+  "failure_mode": "benediction-time-as-start",
+  "why": "B1 p1: 'Adoration of the Blessed Sacrament / Following the Noon Mass / ... Thursday, St. Francis, Benediction at 6:00pm'. Luna made the Benediction time the Adoration's start (6:00 PM, no end), and did the same for Wednesday at St. Felix and Friday at St. Dominic. The period runs from after the noon Mass to Benediction."
+ },
+ {
+  "n": 30,
+  "parish": "parish-of-the-holy-family",
+  "kind": "differs",
+  "verdict": "seed_right",
+  "failure_mode": "missed-line-outside-schedule-box",
+  "why": "B1 (1f4726b4, Oct 4 issue) p6 calendar: 'Saturday- October 10 / 9:30AM Second Saturday Adoration-CH'. B2 p6 has 'First Saturday Adoration-CH'. Luna cited only B2 and missed the second-Saturday line in B1."
+ },
+ {
+  "n": 31,
+  "parish": "st-kateri-tekakwitha",
+  "kind": "differs",
+  "verdict": "seed_right",
+  "failure_mode": "silently-repaired-misprint",
+  "why": "B1 p1, an image, prints 'Saturday: 3:00 pm - 3:4pm' (checked by rendering). Luna quoted it as '3:00 pm - 3:45pm', an end the bulletin does not print. The seed's 3:40 rests on the September issue and the website, which luna lacked, but luna should not have invented the digit; it should have left the end null."
+ },
+ {
+  "n": 32,
+  "parish": "chautauqua-family-catholic",
+  "kind": "differs",
+  "verdict": "luna_right",
+  "failure_mode": "",
+  "why": "The seed's 'every Saturday except the first' for Westfield 4:00 PM is wrong. B4 p2 lists 'SATURDAY, OCTOBER 3 - 27TH SUNDAY IN ORDINARY TIME ... [W] 4:00PM', so the vigil was held on a first Saturday. The Nov 1 issue (0907add3 p2) lists 'SATURDAY, NOVEMBER 7 - 32ND SUNDAY ... [W] 4:00PM' on the very first Saturday that '11/7 FIRST SATURDAY - NO MASS' refers to. The discontinued 'First Saturday Masses' are a separate devotional Mass, not the Sunday vigil."
+ },
+ {
+  "n": 33,
+  "parish": "olg-ic-sj-glenville",
+  "kind": "differs",
+  "verdict": "judgment",
+  "failure_mode": "",
+  "why": "p5: 'Exposition ..., Eucharistic Adoration, and Rosary at 7:30 am; Benediction and Holy Mass at 8:30 am'. Luna ends at Benediction (8:30), and the seed leaves the end null. This is the same question as sample-1 #21: is a printed Benediction time an end time?"
+ },
+ {
+  "n": 34,
+  "parish": "three-catholic-sisters-foothills",
+  "kind": "differs",
+  "verdict": "seed_right",
+  "failure_mode": "ended-at-following-mass",
+  "why": "p3: 'SP-Every Wednesday Adoration 10:00 am Followed by 11:00 am Mass'. POLICY, Times: a clock time that runs until a Mass, with no end of its own, has no end_time ('do not end it at the Mass'). Luna ended it at 11:00."
+ },
+ {
+  "n": 35,
+  "parish": "st-francis-xavier-marcellus",
+  "kind": "differs",
+  "verdict": "seed_right",
+  "failure_mode": "missed-end-time-elsewhere",
+  "why": "B1 p1 box: 'Penance Tuesday 5:30 pm'. B2 (3406666f) p2, in the pastor's column: 'On Tuesday we have Mass at 6:00 PM with Confession from 5:30 to 6 PM.' Luna did not carry over the end time from the second source."
+ },
+ {
+  "n": 36,
+  "parish": "our-lady-of-good-counsel-verona",
+  "kind": "differs",
+  "verdict": "judgment",
+  "failure_mode": "",
+  "why": "Fri 8 AM appears in two weeks' intentions (B1, B2 p1), but the one first Friday luna saw (B3 p1, Oct 2) lists only '7 PM First Friday of the Month', with no 8 AM. The owner chose weeks 2-5 from that one sighting. Every week (luna) is also defensible."
+ },
+ {
+  "n": 37,
+  "parish": "assumption-resurrection",
+  "kind": "excluded",
+  "verdict": "judgment",
+  "failure_mode": "",
+  "why": "B1 p4 'PARISH OFFICES CLOSED MONDAY 10/12 / Mass at Church of the Resurrection at 9:00 AM' and p5 'Monday 10/12 - Columbus Day / 9:00 AM (R) Daily Mass'. Luna read this as the 8:30 Daily Mass moved to 9:00 (POLICY: a moved event is a cancellation plus a single event). The seed applied R17 (no cancellation unless stated) and kept both 8:30 and 9:00. Both have support, so this is worth a question."
+ },
+ {
+  "n": 38,
+  "parish": "transfiguration-troy",
+  "kind": "excluded",
+  "verdict": "luna_right",
+  "failure_mode": "",
+  "why": "Rendered B1 (b5eb1494) p5: the 'Sacramental Celebrations' box prints 'Sacrament of Reconciliaion / Available after the 4PM and 9AM Masses'. The page's text layer holds only the ads, so the drafter's 'no page ... prints Confession' was wrong. Luna's Sunday 10:00 at Schaghticoke and Saturday 5:00 PM at Speigletown (1 hour after each weekend Mass) are POLICY-correct. The seed's s4 and s5 both exclude them on the same mistaken ground."
+ },
+ {
+  "n": 39,
+  "parish": "all-saints-corning",
+  "kind": "excluded",
+  "verdict": "judgment",
+  "failure_mode": "",
+  "why": "p2 intentions list 'Sunday Vigil 4:00pm' and '5:00pm' each week, with 'Mass Attendance: 4:00pm: 54'. The p1 box says 'Saturday Vigil: 5pm' only. The owner dropped the 4:00 as an unplaced, possibly off-site Mass. Luna followed rule 4 (two weeks of intentions)."
+ },
+ {
+  "n": 40,
+  "parish": "st-paul-whitesboro",
+  "kind": "excluded",
+  "verdict": "judgment",
+  "failure_mode": "",
+  "why": "B1 p4 flyer: 'Deacon Speakin, The How, the Why and the What of Adoration, NOV. 3rd 6:00 - 7:00pm. Join us ... with Eucharistic Adoration. *We are moving to one hour'. POLICY's final check says not to give a talk-plus-Adoration event's hours to the Adoration. The drafter leaned include and the owner dropped it."
+ }
+]

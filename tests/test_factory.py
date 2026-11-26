@@ -118,9 +118,15 @@ def survey_files() -> dict[str, str]:
     }
 
 
-def parish_record(roster: str) -> str:
-    return (f"---\nname: Parish\nbulletin_provider: parishes_online\nprovider_id: x\n"
-            f"roster: ['{roster}']\n---\nNotes.\n")
+def parish_record() -> str:
+    """A parish record as the map Run writes it: no `roster`, which its churches carry."""
+    return "---\nname: Parish\nbulletin_provider: parishes_online\nprovider_id: x\n---\nNotes.\n"
+
+
+def church_record(parish: str, *roster: str, kind: str = "church") -> str:
+    """A church (or an `excluded` or `open` record) of `parish`, with its roster refs."""
+    refs = ", ".join(f"'{r}'" for r in roster)
+    return f"---\nparish: {parish}\nname: Church\nroster: [{refs}]\n---\nNotes ({kind}).\n"
 
 
 def seed_file(parish: str, status: str = "needs_review") -> str:
@@ -259,7 +265,7 @@ def map_script(**overrides: Callable[[WorkerRequest, int], StubAction]):
                                            rules=["Campus Masses are left out."]))
         if req.stage == "map":
             return StubAction(
-                files={"data/dioceses/{diocese}/parishes/p-{job}.md": parish_record("x:1")},
+                files={"data/dioceses/{diocese}/parishes/p-{job}.md": parish_record()},
                 handoff=done(lessons=[f"Lesson from {req.job_name}"],
                              leads=[{"touches": "b1", "note": "St. Ann may share St. Bede's"}]))
         return StubAction(handoff=done())
@@ -383,7 +389,8 @@ def test_prompt_previews_the_next_job_without_changing_the_ledger(env: Env) -> N
     ro = Ledger(env.ledger.path, read_only=True)
     with pytest.raises(sqlite3.OperationalError):
         ro.set("paused", {"reason": "a preview mustn't write"})
-    preview = report.preview(ro, "map", None, repo=env.repo, lessons_before_integrate=8)
+    preview = report.preview(ro, "map", None, repo=env.repo, lessons_before_integrate=8,
+                             seed_review_questions=20)
     assert (preview["job"], preview["kind"], preview["existing"]) == ("004-map", "start", False)
     assert preview["input"] == {"batch": "b1"}
     assert "St. Ann may share" in preview["first_message"]  # shown, but not claimed
@@ -397,7 +404,8 @@ def test_prompt_previews_the_next_job_without_changing_the_ledger(env: Env) -> N
     assert "## First message" in report.text_preview(preview)
     # Even integrate due first, the map preview shows the next batch.
     assert report.preview(ro, "map", run["id"], repo=env.repo,
-                          lessons_before_integrate=0)["input"] == {"batch": "b1"}
+                          lessons_before_integrate=0,
+                          seed_review_questions=20)["input"] == {"batch": "b1"}
     assert _dump(env.ledger) == before
 
     drive(d)
@@ -540,7 +548,7 @@ def test_a_failing_gate_sends_the_job_back_to_its_session(env: Env) -> None:
 
 def test_out_of_scope_changes_are_reverted_and_sent_back(env: Env) -> None:
     def mapping(req: WorkerRequest, attempt: int) -> StubAction:
-        files = {"data/dioceses/{diocese}/parishes/p.md": parish_record("x:1")}
+        files = {"data/dioceses/{diocese}/parishes/p.md": parish_record()}
         if attempt == 1:
             files["data/parishes.csv"] = "slug\nsneaky\n"
         return StubAction(files=files, handoff=done())
@@ -559,7 +567,7 @@ def test_out_of_scope_changes_are_reverted_and_sent_back(env: Env) -> None:
 def test_changes_a_sandbox_refused_are_recorded_and_sent_back(env: Env) -> None:
     def mapping(req: WorkerRequest, attempt: int) -> StubAction:
         refused = ["data/parishes.csv (outside your write boundaries)"] if attempt == 1 else []
-        return StubAction(files={"data/dioceses/{diocese}/parishes/p.md": parish_record("x:1")},
+        return StubAction(files={"data/dioceses/{diocese}/parishes/p.md": parish_record()},
                           handoff=done(), refused=refused)
 
     d = env.dispatcher(map_script(map=mapping))
@@ -925,7 +933,7 @@ GAP = ("fetch_gap:\n  kind: solutio-file-403\n  seen: 2026-10-21\n"
 
 def test_reconcile_settles_earlier_flags_and_the_pr_lists_the_rest(env: Env) -> None:
     def mapping(req: WorkerRequest, attempt: int) -> StubAction:
-        parish = parish_record("x:1")
+        parish = parish_record()
         if req.job_name == "003-map":
             parish = parish.replace("---\nNotes", GAP + "---\nNotes")
         return StubAction(
@@ -1228,13 +1236,17 @@ def test_csv_conflicts_take_mains_version_and_promote_again(env: Env) -> None:
 
 
 # ── Seed Runs ────────────────────────────────────────────────────────────────
-def seed_env(env: Env) -> Any:
+def seed_env(env: Env, extra: dict[str, str] | None = None) -> Any:
+    extra = extra or {}
     env.commit_main({
         f"data/dioceses/{D}/diocese.md": META,
         f"data/dioceses/{D}/batches.json": json.dumps(BATCHES),
         f"data/dioceses/{D}/rosters/directory.json": json.dumps(ROSTER),
-        f"data/dioceses/{D}/parishes/st-ann.md": parish_record("directory:1"),
-        f"data/dioceses/{D}/parishes/st-clare.md": parish_record("directory:3"),
+        f"data/dioceses/{D}/parishes/st-ann.md": parish_record(),
+        f"data/dioceses/{D}/parishes/st-clare.md": parish_record(),
+        f"data/dioceses/{D}/churches/st-ann.md": church_record("st-ann", "directory:1"),
+        f"data/dioceses/{D}/churches/st-clare.md": church_record("st-clare", "directory:3"),
+        **extra,
     }, "mapped")
     (env.repo / "factory" / "queue.json").write_text("[]")
     run_id = env.ledger.add_run(diocese=D, kind=SEED, worktrees_dir=env.config.worktrees_dir,
@@ -1288,6 +1300,12 @@ def test_seed_run_reviews_approves_and_records_decisions(env: Env) -> None:
     precedents = playbook.bullets(wt / "data" / "dioceses" / D / "diocese.md",
                                   playbook.PRECEDENTS)
     assert len(precedents) == 2 and "Leave out" in precedents[0]
+    # A drafter is shown the precedents earlier reviews in the diocese set.
+    clare, ann_first = (env.ledger.all("SELECT prompt FROM attempt WHERE job_id = ? ORDER BY n",
+                                       j["id"])[0]["prompt"]
+                        for j in env.ledger.jobs(run["id"], "seed"))
+    assert "*Seeding precedents*):\n(none yet)" in clare
+    assert precedents[0].removeprefix("- ") in ann_first
     # Seed lessons stay in the ledger, out of diocese.md.
     assert not playbook.bullets(wt / "data" / "dioceses" / D / "diocese.md",
                                 playbook.NEW_LESSONS)
@@ -1298,6 +1316,195 @@ def test_seed_run_reviews_approves_and_records_decisions(env: Env) -> None:
     assert answers[0]["slot"] == "s1" and answers[0]["choice"] == 1
 
 
+def test_seed_batches_follow_the_roster_refs_of_each_parishs_churches(tmp_path: Path) -> None:
+    from pdf_extract.factory import plan
+
+    folder = tmp_path / "data" / "dioceses" / D
+    files = {
+        "batches.json": json.dumps(BATCHES),
+        # Real parish records carry no roster: their churches do.
+        "parishes/st-ann.md": parish_record(),
+        "churches/st-ann.md": church_record("st-ann", "directory:1"),
+        # An open record in b2 (planned first) loses to the parish's own church in b1.
+        "open/st-ann-chapel.md": church_record("st-ann", "directory:3", kind="open"),
+        "parishes/st-bede.md": parish_record(),
+        "churches/st-bede.md": church_record("st-bede", "gcatholic:9"),
+        # A parish whose churches are in no batch falls back to its excluded records.
+        "excluded/old-st-bede.md": church_record("st-bede", "directory:2", kind="excluded"),
+        "parishes/st-clare.md": parish_record(),
+        "churches/st-clare-a.md": church_record("st-clare", "gcatholic:3"),
+        "churches/st-clare-b.md": church_record("st-clare", "directory:3"),
+        # A roster on the parish record itself still counts.
+        "parishes/st-dom.md": parish_record().replace("---\nNotes", "roster: ['directory:2']\n"
+                                                                     "---\nNotes"),
+        "parishes/st-eve.md": parish_record(),
+        "churches/st-eve.md": church_record("st-eve", "gcatholic:7"),
+    }
+    for name, text in files.items():
+        (folder / name).parent.mkdir(parents=True, exist_ok=True)
+        (folder / name).write_text(text)
+    parishes = ["st-eve", "st-dom", "st-clare", "st-bede", "st-ann"]
+    assert plan.seed_batches(tmp_path, D, parishes) == [
+        ("b2", ["st-clare"]), ("b1", ["st-dom", "st-bede", "st-ann"]),
+        (plan.OTHER_BATCH, ["st-eve"])]
+    assert plan.seed_batches(tmp_path, D, ["st-ann"]) == [("b1", ["st-ann"])]
+
+
+def test_seeds_drafted_under_no_batch_are_reviewed_per_batch_and_not_reseeded(
+        env: Env) -> None:
+    """A Run whose seeds an older plan drafted as "(no batch)" picks up per batch."""
+    run = seed_env(env, {"data/seeds/st-ann.json": seed_file("st-ann")})
+    old = env.ledger.add_job(run["id"], "seed", {"parish": "st-ann", "batch": "(no batch)"})
+    env.ledger.set_job(old, status=DONE, finished_at=env.now.isoformat())
+
+    def approve_all(req: WorkerRequest, attempt: int) -> StubAction:
+        if req.stage == "seed-review":
+            return StubAction(handoff=done(seeds=[{"parish": p, "verdict": "approve"}
+                                                  for p in req.values["parishes"].split()]))
+        return seed_script(req, attempt)
+
+    drive(env.dispatcher(approve_all))
+    stages = [(j["stage"], json.loads(j["input"]).get("parish") or
+               json.loads(j["input"]).get("parishes")) for j in env.ledger.jobs(run["id"])]
+    assert stages == [("seed", "st-ann"), ("seed", "st-clare"), ("seed-review", ["st-clare"]),
+                      ("seed-review", ["st-ann"]), ("pr", None)]
+    reviews = [json.loads(j["input"])["batch"] for j in env.ledger.jobs(run["id"], "seed-review")]
+    assert reviews == ["b2", "b1"]
+
+
+# Five batches, b1 first, and each parish's open questions once drafted.
+CHUNK_BATCHES = {"version": 1, "diocese": D, "first_batch": "b1", "batches": [
+    {"id": f"b{n}", "name": f"Town {n}", "entries": [f"directory:{n}"]} for n in range(1, 6)]}
+CHUNK_PARISHES = {"p1": (1, 3), "p2": (2, 8), "p3": (3, 8), "p4": (3, 0), "p5": (4, 6),
+                  "p6": (5, 2)}  # slug: (batch, open questions)
+
+
+def seed_with_questions(parish: str, questions: int) -> str:
+    entry = {"church": "c", "day": "sunday", "start": "09:00"}
+    slots = [{"id": f"s{n}", "status": "needs_human", "question": f"Is Mass {n} weekly?",
+              "options": [{"label": "Include", "entry": entry, "leaning": True},
+                          {"label": "Leave out", "entry": None, "leaning": False}]}
+             for n in range(1, questions + 1)]
+    return json.dumps({"parish_slug": parish, "status": "needs_review", "slots": slots})
+
+
+def chunk_run(tmp_path: Path) -> tuple[Ledger, str]:
+    ledger = Ledger(tmp_path / "ledger.db")
+    run_id = ledger.add_run(diocese=D, kind=SEED, worktrees_dir=tmp_path / "wt",
+                            parishes=list(CHUNK_PARISHES))
+    folder = Path(ledger.run(run_id)["worktree"]) / "data" / "dioceses" / D
+    (folder / "churches").mkdir(parents=True)
+    (folder / "parishes").mkdir()
+    (folder / "batches.json").write_text(json.dumps(CHUNK_BATCHES))
+    for parish, (batch, _) in CHUNK_PARISHES.items():
+        (folder / "parishes" / f"{parish}.md").write_text(parish_record())
+        (folder / "churches" / f"{parish}.md").write_text(
+            church_record(parish, f"directory:{batch}"))
+    return ledger, run_id
+
+
+def plan_seed_run(ledger: Ledger, run_id: str, *, send_back: tuple[str, ...] = (),
+                  stop_after: int | None = None) -> list[tuple[str, Any]]:
+    """Runs the seed plan to the end (or `stop_after` jobs), doing each job as the
+    dispatcher would: a seed writes its file, a review approves (or sends back `send_back`
+    once, and the seed is redrafted at once). Each step, a second read-only ledger on the
+    same file, as after a restart, must plan the same job."""
+    from pdf_extract.factory import plan
+
+    worktree = Path(ledger.run(run_id)["worktree"])
+    seeds = worktree / "data" / "seeds"
+    seeds.mkdir(parents=True, exist_ok=True)
+    tick = iter(range(1, 1000))
+    clock = lambda: (datetime(2026, 11, 2, tzinfo=UTC)  # noqa: E731
+                     + timedelta(minutes=next(tick))).isoformat()
+    sent: set[str] = set()
+    done: list[tuple[str, Any]] = []
+    while stop_after is None or len(done) < stop_after:
+        nxt = plan.next_job(ledger, ledger.run(run_id), lessons_before_integrate=15,
+                            seed_review_questions=20)
+        again = Ledger(ledger.path, read_only=True)
+        assert plan.next_job(again, again.run(run_id), lessons_before_integrate=15,
+                             seed_review_questions=20) == nxt
+        again.close()
+        if nxt is None:
+            break
+        job = ledger.add_job(run_id, nxt.stage, nxt.inputs)
+        if nxt.stage == "seed":
+            parish = nxt.inputs["parish"]
+            (seeds / f"{parish}.json").write_text(
+                seed_with_questions(parish, CHUNK_PARISHES[parish][1]))
+            done.append(("seed", parish))
+        elif nxt.stage == "seed-review":
+            redraft = []
+            for parish in nxt.inputs["parishes"]:
+                seed_job = [j for j in ledger.jobs(run_id, "seed")
+                            if json.loads(j["input"])["parish"] == parish][-1]
+                verdict = "approve"
+                if parish in send_back and parish not in sent:
+                    sent.add(parish)
+                    verdict = "send_back"
+                    redraft.append(seed_job["id"])
+                else:
+                    path = seeds / f"{parish}.json"
+                    path.write_text(json.dumps(json.loads(path.read_text())
+                                               | {"status": "approved"}))
+                ledger.run_sql("INSERT INTO verdict (job_id, reviewed_job, subject, verdict, "
+                               "problems, at) VALUES (?,?,?,?,?,?)", job, seed_job["id"],
+                               parish, verdict, "[]", clock())
+            for seed_job in redraft:  # the drafter's session fixes it and finishes again
+                ledger.set_job(seed_job, finished_at=clock())
+            done.append(("seed-review", (nxt.inputs["batch"], nxt.inputs["parishes"],
+                                         nxt.inputs["redrafted"])))
+        else:
+            done.append((nxt.stage, None))
+        ledger.set_job(job, status=DONE, finished_at=clock())
+    return done
+
+
+def test_seed_reviews_take_the_first_batch_alone_then_chunks_of_questions(
+        tmp_path: Path) -> None:
+    ledger, run_id = chunk_run(tmp_path)
+    assert plan_seed_run(ledger, run_id) == [
+        ("seed", "p1"),
+        ("seed-review", ("b1", ["p1"], [])),  # alone, though only 3 questions
+        # 8, 16 (p4 is ready: 0, still reviewed), then 22 >= 20 at the end of b4.
+        ("seed", "p2"), ("seed", "p3"), ("seed", "p4"), ("seed", "p5"),
+        ("seed-review", ("b2 +2 more", ["p2", "p3", "p4", "p5"], [])),
+        # The tail: nothing left to draft, so 2 questions are reviewed.
+        ("seed", "p6"),
+        ("seed-review", ("b5", ["p6"], [])),
+        ("pr", None)]
+    review = [j for j in ledger.jobs(run_id, "seed-review")][1]
+    assert json.loads(review["input"])["batches"] == ["b2", "b3", "b4"]
+
+
+def test_a_redrafted_seed_is_reviewed_again_without_waiting(tmp_path: Path) -> None:
+    ledger, run_id = chunk_run(tmp_path)
+    assert plan_seed_run(ledger, run_id, send_back=("p1", "p3")) == [
+        ("seed", "p1"),
+        ("seed-review", ("b1", ["p1"], [])),
+        ("seed-review", ("b1", ["p1"], ["p1"])),
+        ("seed", "p2"), ("seed", "p3"), ("seed", "p4"), ("seed", "p5"),
+        ("seed-review", ("b2 +2 more", ["p2", "p3", "p4", "p5"], [])),
+        # p3's 8 questions alone, before p6 is drafted.
+        ("seed-review", ("b3", ["p3"], ["p3"])),
+        ("seed", "p6"),
+        ("seed-review", ("b5", ["p6"], [])),
+        ("pr", None)]
+
+
+def test_a_restarted_seed_plan_neither_reseeds_nor_rereviews(tmp_path: Path) -> None:
+    ledger, run_id = chunk_run(tmp_path)
+    first = plan_seed_run(ledger, run_id, stop_after=4)  # mid-chunk: p2 and p3 drafted
+    assert first[-1] == ("seed", "p3")
+    rest = plan_seed_run(Ledger(ledger.path), run_id)  # a new dispatcher on the same files
+    jobs = first + rest
+    assert [p for stage, p in jobs if stage == "seed"] == list(CHUNK_PARISHES)
+    reviewed = [p for stage, r in jobs if stage == "seed-review" for p in r[1]]
+    assert sorted(reviewed) == sorted(CHUNK_PARISHES)
+    assert jobs == plan_seed_run(*chunk_run(tmp_path / "again"))
+
+
 def test_each_stage_gets_only_the_secrets_its_spec_names(env: Env) -> None:
     secrets = {"R2_ACCESS_KEY_ID": "r2", "GEMINI_API_KEY": "g", "OPENAI_API_KEY": "o",
                "CLOUDFLARE_API_TOKEN": "cf", "GH_TOKEN": "gh", "OTHER": "x"}
@@ -1305,9 +1512,8 @@ def test_each_stage_gets_only_the_secrets_its_spec_names(env: Env) -> None:
     d = env.dispatcher(seed_script, secrets=secrets)
     drive(d)
     seen = {r.stage: r.secrets for r in env.worker.calls}
-    assert seen["seed"] == {
-        "R2_ACCESS_KEY_ID": "r2", "GEMINI_API_KEY": "g", "OPENAI_API_KEY": "o"}
-    # The reviewer can't run `seed ask` or `seed extract`, so it gets no model keys.
+    # No seed worker holds a model key: the dispatcher makes the second-opinion call.
+    assert seen["seed"] == {"R2_ACCESS_KEY_ID": "r2"}
     assert seen["seed-review"] == {"R2_ACCESS_KEY_ID": "r2"}
     check = next(c for c in env.command_secrets if c.startswith("pnpm seed check"))
     assert env.command_secrets[check] == {"R2_ACCESS_KEY_ID": "r2"}
@@ -1514,7 +1720,7 @@ def merged_map(env: Env, parishes: list[str], merged_at: datetime) -> None:
     """A merged map Run: its records are in main, and its worktree is gone."""
     run_id = env.ledger.add_run(diocese=D, kind=MAP, worktrees_dir=env.tmp / "wt", status=MERGED)
     folder = f"data/dioceses/{D}/parishes"
-    env.commit_main({**{f"{folder}/{p}.md": parish_record("directory:1") for p in parishes},
+    env.commit_main({**{f"{folder}/{p}.md": parish_record() for p in parishes},
                      f"{folder}/gone.md": "---\nname: Gone\nbulletin_provider: no_bulletin\n---\n"},
                     "mapped")
     env.ledger.set_run(run_id, merged_at=merged_at.isoformat())
@@ -1580,32 +1786,32 @@ def test_unsupported_parishes_wait_on_a_collector_until_their_provider_is_set(
 
     folder = tmp_path / "data" / "dioceses" / D / "parishes"
     folder.mkdir(parents=True)
-    (folder / "live.md").write_text(parish_record("directory:1"))
-    (folder / "gap.md").write_text(parish_record("directory:2").replace(
+    (folder / "live.md").write_text(parish_record())
+    (folder / "gap.md").write_text(parish_record().replace(
         "parishes_online", "unsupported").replace("---\nNotes", GAP + "---\nNotes"))
     # No fetch_gap (validate refuses that): still never seeded, still waiting.
-    (folder / "bare.md").write_text(parish_record("directory:3").replace(
+    (folder / "bare.md").write_text(parish_record().replace(
         "parishes_online", "unsupported"))
-    (folder / "none.md").write_text(parish_record("directory:4").replace(
+    (folder / "none.md").write_text(parish_record().replace(
         "parishes_online", "no_bulletin"))
     # No bulletin to wait for: its source seed is drafted outside seed Runs.
-    (folder / "sourced.md").write_text(parish_record("directory:5").replace(
+    (folder / "sourced.md").write_text(parish_record().replace(
         "parishes_online", "website_schedule"))
     assert plan.seedable_parishes(tmp_path, D) == ["live"]
     assert plan.fetch_gap_parishes(tmp_path, D) == ["bare", "gap"]
     # Flipping the provider and clearing the gap seeds it like any other.
-    (folder / "gap.md").write_text(parish_record("directory:2"))
+    (folder / "gap.md").write_text(parish_record())
     assert plan.seedable_parishes(tmp_path, D) == ["gap", "live"]
 
 
 def test_the_pr_says_which_fetch_gap_rows_go_live(tmp_path: Path) -> None:
     folder = tmp_path / "data" / "dioceses" / D / "parishes"
     folder.mkdir(parents=True)
-    (folder / "kept.md").write_text(parish_record("directory:1").replace(
+    (folder / "kept.md").write_text(parish_record().replace(
         "parishes_online", "unsupported").replace("---\nNotes", GAP + "---\nNotes"))
-    (folder / "live.md").write_text(parish_record("directory:2").replace(
+    (folder / "live.md").write_text(parish_record().replace(
         "---\nNotes", GAP + "---\nNotes"))
-    (folder / "new.md").write_text(parish_record("directory:3").replace(
+    (folder / "new.md").write_text(parish_record().replace(
         "bulletin_provider: parishes_online\n", "").replace("---\nNotes", GAP + "---\nNotes"))
     [line] = report._fetch_gaps(tmp_path, D)
     assert line.startswith("- `solutio-file-403` (3): `kept`, `live` (live as parishes_online), "
@@ -1615,7 +1821,7 @@ def test_the_pr_says_which_fetch_gap_rows_go_live(tmp_path: Path) -> None:
 def test_a_parish_waiting_on_a_collector_isnt_seeded_until_its_gap_is_cleared(env: Env) -> None:
     merged_map(env, ["a", "b"], env.now - timedelta(weeks=7))
     path = f"data/dioceses/{D}/parishes/g.md"
-    gap = parish_record("directory:1").replace("---\nNotes", GAP + "---\nNotes")
+    gap = parish_record().replace("---\nNotes", GAP + "---\nNotes")
     env.commit_main({path: gap}, "g waits on a collector")
     env.ledger.add_run(diocese=D, kind=SEED, worktrees_dir=env.tmp / "wt", status=MERGED,
                        parishes=[])
@@ -1626,7 +1832,7 @@ def test_a_parish_waiting_on_a_collector_isnt_seeded_until_its_gap_is_cleared(en
     assert json.loads(run["parishes"]) == ["a", "b"]
     assert "1 wait on a collector" in run["notes"]
     assert not list((env.forge.folder / "issues").glob("*.json"))  # g isn't overdue
-    env.commit_main({path: parish_record("directory:1")}, "collector landed")
+    env.commit_main({path: parish_record()}, "collector landed")
     r = readiness.assess(env.ledger, env.config, D, env.tmp / "parish_events.db", env.now,
                          repo=env.repo)
     assert r is not None and "g" in r.seedable and r.fetch_gaps == []
@@ -1954,7 +2160,7 @@ def test_deny_reaches_the_sdk_and_the_seed_cli(
                             "go", "", {})
     SdkWorker().run(request)  # through the launcher's environment, as a real attempt
     assert set(spec.deny) <= set(seen["disallowed_tools"])
-    assert seen["env"][SEED_REFUSE_ENV] == "approve ask extract"
+    assert seen["env"][SEED_REFUSE_ENV] == "approve"
     assert REFUSE_ENV == SEED_REFUSE_ENV
 
     # However it is spelled, the CLI refuses a denied command before touching anything.

@@ -1,0 +1,170 @@
+[
+ {
+  "n": 1,
+  "parish": "st-patricks-victor",
+  "kind": "extra",
+  "verdict": "structural",
+  "why": "Luna does have Sat confession 15:30-16:30 (POLICY: an hour before, ending at the 4:30 Mass, p7 'Generally offered an hour before each Mass'); the seed ends 16:15 because of the reviewer's 2026-10-14 timing rule. A same-slot end-time difference was reported as 'extra' rather than 'differs'."
+ },
+ {
+  "n": 2,
+  "parish": "transfiguration-st-catherine-mendon",
+  "kind": "extra",
+  "verdict": "judgment",
+  "why": "B1 p3 notice ('Saturday, 10/31/26 at 10AM ... Gathering Area') names no church; luna left it out (POLICY, unclear location) and the seed included it at Transfiguration only on the reviewer's lean from indirect clues (office phone, Gathering Area). This is an R32 venue call."
+ },
+ {
+  "n": 3,
+  "parish": "our-lady-of-the-lakes",
+  "kind": "extra",
+  "verdict": "seed_right",
+  "why": "p3 says 'first full Saturday and Sunday of the month ... St. Januarius 7:45-8:15 am ... November 7 & 8'. Luna's weekly 'first' Sunday would put it on Nov 1; the seed's dated Nov 8 entry (R33) is correct."
+ },
+ {
+  "n": 4,
+  "parish": "assumption-syracuse",
+  "kind": "extra",
+  "verdict": "seed_right",
+  "why": "B1 p4 prints Tue Oct 13 8:30 AM, and B2 p4 prints 'NO 8:30 AM MASS' on Mon/Tue/Wed of the novena week, which shows the 8:30 is the regular daily Mass. Luna kept Tuesday as a single dated entry. (Luna also put the '12:15 MASS - TFP', at Franciscan Place in Destiny USA, at the church, which is a separate luna error.)"
+ },
+ {
+  "n": 5,
+  "parish": "st-anthony-of-padua-syracuse",
+  "kind": "extra",
+  "verdict": "seed_right",
+  "why": "B1 p2 prints 'Miércoles 7 de Octubre ... No hay Adoración ni Misa, lo siento!' and B2 p2 gives the regular Wednesday 'adoración al Santísimo 6pm y Misa ... 6:30'. Luna missed both the Wednesday slot and this cancellation."
+ },
+ {
+  "n": 6,
+  "parish": "st-joseph-the-worker-west-winfield",
+  "kind": "extra",
+  "verdict": "seed_right",
+  "why": "B1 p2: 'West Winfield: During the last 2 Mondays of October, Mon. 1 p.m. - 8 p.m.'. Luna recorded only Richfield Springs and missed it; the seed's dated Oct 26 is the one on or after today."
+ },
+ {
+  "n": 7,
+  "parish": "our-lady-of-fatima-shrine-lewiston",
+  "kind": "extra",
+  "verdict": "judgment",
+  "why": "p1: 'CONFESSIONS 15 minutes before every Mass' and 'Tagalog Mass @1:30 pm Every Fourth Sunday'. POLICY says the general line does not cover 'a Mass in another language once a month', which supports luna's omission. The seed counts the Tagalog Mass as a regular box Mass, so this is a policy question."
+ },
+ {
+  "n": 8,
+  "parish": "holy-spirit-holy-trinity-gloversville",
+  "kind": "extra",
+  "verdict": "seed_right",
+  "why": "B1 p5 lists a second 'SUN. 9:00AM MASS AT HOLY SPIRIT' (Nov 1) under Holy Trinity, and p3 says the Mass stays at Holy Spirit until the painting is done. Luna cancelled only Oct 25."
+ },
+ {
+  "n": 9,
+  "parish": "central-niagara-catholic",
+  "kind": "missing",
+  "verdict": "seed_right",
+  "why": "Both luna and the seed have weekly Mon 7:30 at SJB. Luna duplicated it as a dated Nov 2 entry ('Mass Schedule for Monday, November 2nd; 7:30am at St. John's', B1 p3), which POLICY rule 6 forbids. The seed s26 says so explicitly. The matcher should treat a dated entry that coincides with an included weekly slot as covered."
+ },
+ {
+  "n": 10,
+  "parish": "st-augustine-baldwinsville",
+  "kind": "missing",
+  "verdict": "seed_right",
+  "why": "p2: 'Every Other Wednesday 10:30am-11:30am (see cover)'. Luna made it weekly, which R33/POLICY rule 4 rule out. The seed records the printed dated occurrence (Oct 14)."
+ },
+ {
+  "n": 11,
+  "parish": "spirit-of-hope-oneida",
+  "kind": "missing",
+  "verdict": "seed_right",
+  "why": "p1: '5:30PM at St. Mary - Memorial Day to Columbus Day Weekend'. Luna's season=5-10 would show it on Oct 24 and 31, which the bulletin lists as closed; the seed excludes it under R33 (slot s15). The matcher reported 'missing' although an excluded seed slot exists, because the season field differs."
+ },
+ {
+  "n": 12,
+  "parish": "holy-spirit-st-josephs",
+  "kind": "missing",
+  "verdict": "seed_right",
+  "why": "p8: 'Partner required: Friday 2-3 pm' sits under 'Hours which need to be filled' (adorer sign-up), inside 'Friday: 10:00 am-9:00 pm' Adoration. Luna turned the sign-up gaps (2-3 and 6-7) into slots and dropped the Friday 10-9 block."
+ },
+ {
+  "n": 13,
+  "parish": "st-michael-the-archangel-south-glens-falls",
+  "kind": "missing",
+  "verdict": "judgment",
+  "why": "B1 p6 calendar: '2 ALL SOULS' DAY MASS OF REMEMBRANCE - 7:00 pm', with no church named. The agent leaned St. Michael's, as luna did, but the reviewer excluded it as R32 (entry null, so the matcher could not pair them). This is a venue call; compare item 2, where a similar indirect-venue Mass was included."
+ },
+ {
+  "n": 14,
+  "parish": "st-mary-our-mother",
+  "kind": "missing",
+  "verdict": "luna_right",
+  "why": "B1 (d3be24ab) p3 Sheen Relic Tour graphic prints 'ST. MARY OUR MOTHER Horseheads Thursday, Oct. 29, 2026, 7:00pm', and B3 p3 says the parish hosts the regional Mass. The seed's s12 excluded it, saying 'no start time is printed in any stored bulletin', which is wrong: the time is in an image the text layer misses."
+ },
+ {
+  "n": 15,
+  "parish": "st-anthony-of-padua-buffalo",
+  "kind": "missing",
+  "verdict": "structural",
+  "why": "The seed's s12 has Sun 10:35-11:15 ('Confessions 40 min. before each Mass', p1), and luna has Sun 10:35 with no end. This is the same slot, unpaired by the matcher (luna's missing end time goes against POLICY but is minor)."
+ },
+ {
+  "n": 16,
+  "parish": "christ-our-light-family",
+  "kind": "differs",
+  "verdict": "structural",
+  "why": "All bulletins print only 'Immaculate Conception: Saturday 4:15pm' (p2). The seed's 17:00 end comes from the parish website (R6), which luna never saw."
+ },
+ {
+  "n": 17,
+  "parish": "light-of-christ-kenmore",
+  "kind": "differs",
+  "verdict": "judgment",
+  "why": "p2: 'Flame of Love Rosary Holy Hour - Tuesdays at 6pm in the Chapel'. The seed takes 'Holy Hour' as a one-hour duration (end 19:00); luna gives no end, because POLICY wants an end only when a duration is given. Either reading is defensible."
+ },
+ {
+  "n": 18,
+  "parish": "niagara-falls-rc-family",
+  "kind": "differs",
+  "verdict": "seed_right",
+  "why": "p7 (image) St. Joseph block: 'Confessions | Saturday 3pm-3:45pm'; St. Mary's block: 'Sat. 4:30pm-5:15pm'. Luna's '3:45pm-5:15pm' is a misread that blends the two."
+ },
+ {
+  "n": 19,
+  "parish": "transfiguration-syracuse",
+  "kind": "differs",
+  "verdict": "seed_right",
+  "why": "B2 p4: 'First Friday, OCT 2 at 7:00am until First Saturday, OCT 3, at 9:00am' (24 hours). Luna's Fri 07:00-09:00 turns this into two hours. The seed's open end is right, and its 07:05 start (p2 table) was the reviewer's choice over 07:00."
+ },
+ {
+  "n": 20,
+  "parish": "st-ann-manlius",
+  "kind": "differs",
+  "verdict": "structural",
+  "why": "Both encode p1 'Adoration Chapel 24 hours daily': luna as 00:00-00:00, the seed as 00:00-23:59. The two are equivalent and should be normalised before comparing."
+ },
+ {
+  "n": 21,
+  "parish": "our-lady-queen-of-peace-rotterdam",
+  "kind": "differs",
+  "verdict": "judgment",
+  "why": "p1: '7:30 am Exposition ... 7:45 am Rosary 8:15 am Benediction 8:30 am Holy Mass'. Luna ends at Benediction (08:15), and the seed records no end because none is printed. Benediction's time is a fair end marker, but not an explicit one."
+ },
+ {
+  "n": 22,
+  "parish": "st-agnes-paul-rose",
+  "kind": "excluded",
+  "verdict": "seed_right",
+  "why": "'3-4:30pm SR - Adoration & Confession' appears in the Oct 11 and Oct 25 issues (Oct 14 and Oct 28) but not in the Oct 4 and Oct 18 issues luna also saw, so it is alternate weeks. Luna's weekly slot is wrong under POLICY rule 4 and R33; the website confirms 'Alternating weeks'."
+ },
+ {
+  "n": 23,
+  "parish": "christ-our-hope-boonville",
+  "kind": "excluded",
+  "verdict": "seed_right",
+  "why": "p2 Mass Times: 'Monday through Friday 8:30AM (SJ) Boonville ... Wednesday 8:30AM (SP) Forestport', and the p1 intentions give 'Wednesday October 28th ... 8:30AM-(St.P)'. Luna missed the Wednesday exception."
+ },
+ {
+  "n": 24,
+  "parish": "st-leo-the-great",
+  "kind": "excluded",
+  "verdict": "seed_right",
+  "why": "B3 p2's intentions template lists 'First Friday - 8:30 AM - Rose Saracino', but the same issue's calendar says 'Friday - October 2nd 8:30 AM Communion Service' (and Tue/Thu are Communion Services too). POLICY says a Communion Service is not a Mass; luna relied on the template alone."
+ }
+]

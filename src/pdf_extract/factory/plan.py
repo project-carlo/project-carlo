@@ -3,7 +3,10 @@
 Map Run:  survey, survey-review, map × each batch (integrate whenever *New lessons*
           passes the threshold, and once more after the last batch if any wait),
           reconcile, promote, pr.
-Seed Run: for each batch, seed × each parish, then seed-review; then pr.
+Seed Run: seed × each parish, a batch at a time, then seed-review of the parishes drafted
+          since the last one: after the first batch, once they hold
+          seed_review_questions open questions, after a redraft, and after the last
+          batch; then pr.
 Follow-up Runs (parked parishes answered after the PR opened) start with their jobs
 queued, then go map → promote → pr, or seed → seed-review → pr.
 
@@ -20,8 +23,11 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.dioceses.records import (
+    CHURCH,
+    EXCLUDED,
     NO_BULLETIN_PROVIDERS,
     OFF_SITE_PROVIDERS,
+    OPEN,
     UNSUPPORTED,
     parse_file,
 )
@@ -123,20 +129,39 @@ def fetch_gaps_on_main(repo: Path, ref: str, diocese: str) -> list[str]:
     return _on_main(repo, ref, diocese, fetch_gap_parishes)
 
 
+def parish_roster_refs(worktree: Path, diocese: str) -> tuple[dict[str, set[str]],
+                                                               dict[str, set[str]]]:
+    """Each parish's roster refs: its churches' (and any on the parish record itself),
+    then, apart, those of the excluded and open records that name it as their `parish`."""
+    own: dict[str, set[str]] = {}
+    for slug, r in parish_records(worktree, diocese).items():
+        own.setdefault(slug, set()).update(r.get("roster") or [])
+    linked: dict[str, set[str]] = {}
+    for kind, into in ((CHURCH, own), (EXCLUDED, linked), (OPEN, linked)):
+        for path in sorted((diocese_dir(worktree, diocese) / kind.dir).glob("*.md")):
+            front, _ = parse_file(path)
+            if front.get("parish"):
+                into.setdefault(front["parish"], set()).update(front.get("roster") or [])
+    return own, linked
+
+
 def seed_batches(worktree: Path, diocese: str, parishes: list[str]) -> list[tuple[str, list[str]]]:
-    """The map Run's batches as parish slugs, keeping only `parishes`; the rest last."""
-    records = parish_records(worktree, diocese)
+    """The map Run's batches as parish slugs, keeping only `parishes`; the rest last.
+
+    A parish goes to the first batch holding one of its churches' roster refs. One whose
+    churches are in no batch falls back to the refs of its excluded and open records."""
+    own, linked = parish_roster_refs(worktree, diocese)
+    batches = [(b["id"], set(b.get("entries") or [])) for b in ordered_batches(worktree, diocese)]
     wanted = list(parishes)
-    placed: set[str] = set()
-    out = []
-    for batch in ordered_batches(worktree, diocese):
-        entries = set(batch.get("entries") or [])
-        slugs = [p for p in wanted if p not in placed
-                 and entries & set(records.get(p, {}).get("roster") or [])]
-        placed.update(slugs)
-        if slugs:
-            out.append((batch["id"], slugs))
-    rest = [p for p in wanted if p not in placed]
+    where: dict[str, str] = {}
+    for refs in (own, linked):
+        for batch_id, entries in batches:
+            for p in wanted:
+                if p not in where and entries & refs.get(p, set()):
+                    where[p] = batch_id
+    out = [(batch_id, slugs) for batch_id, _ in batches
+           if (slugs := [p for p in wanted if where.get(p) == batch_id])]
+    rest = [p for p in wanted if p not in where]
     if rest:
         out.append((OTHER_BATCH, rest))
     return out
@@ -163,11 +188,23 @@ def seed_status(worktree: Path, parish: str) -> str | None:
     return seed.get("status") if seed else None
 
 
-def next_job(ledger: Ledger, run: Any, *, lessons_before_integrate: int) -> Next | None:
+def open_questions(worktree: Path, parish: str) -> int:
+    """The questions a reviewer answers in the parish's seed, as `pnpm seed status` counts."""
+    seed = read_seed(worktree, parish)
+    return files.question_count(seed) if seed else 0
+
+
+def chunk_label(batches: list[str]) -> str:
+    """A seed-review's batches in a few words: `b3`, or `b3 +2 more`."""
+    return batches[0] + (f" +{len(batches) - 1} more" if len(batches) > 1 else "")
+
+
+def next_job(ledger: Ledger, run: Any, *, lessons_before_integrate: int,
+             seed_review_questions: int) -> Next | None:
     """The Run's next job, or None when it has nothing left (its PR is open)."""
     if run["kind"] == MAP:
         return _next_map(ledger, run, lessons_before_integrate)
-    return _next_seed(ledger, run)
+    return _next_seed(ledger, run, seed_review_questions)
 
 
 def _parked_subjects(ledger: Ledger, run_id: str) -> set[str]:
@@ -208,7 +245,12 @@ def _next_map(ledger: Ledger, run: Any, threshold: int) -> Next | None:
     return None
 
 
-def _next_seed(ledger: Ledger, run: Any) -> Next | None:
+def _next_seed(ledger: Ledger, run: Any, review_questions: int) -> Next | None:
+    """Seeds a batch at a time, in plan order. The parishes drafted and not reviewed since
+    go to seed-review together at the end of a batch: the first batch on its own, so the
+    diocese has precedents early; then once they hold `review_questions` open questions;
+    at once when one is a redraft; and whatever is left once nothing is left to draft.
+    Everything is read again each time, so a restarted dispatcher decides the same."""
     worktree, run_id = Path(run["worktree"]), run["id"]
     parishes = json.loads(run["parishes"] or "[]")
     parked = _parked_subjects(ledger, run_id)
@@ -217,9 +259,12 @@ def _next_seed(ledger: Ledger, run: Any) -> Next | None:
     for row in ledger.all("SELECT v.* FROM verdict v JOIN job j ON j.id = v.job_id "
                           "WHERE j.run_id = ? ORDER BY v.id", run_id):
         verdicts[row["subject"]] = row
-    for batch, slugs in seed_batches(worktree, run["diocese"], parishes):
-        pending_review = []
-        redrafted = []
+    chunk: list[str] = []
+    pending_review: list[str] = []
+    redrafted: list[str] = []
+    questions = 0
+    for n, (batch, slugs) in enumerate(seed_batches(worktree, run["diocese"], parishes)):
+        waiting = len(pending_review)
         for parish in slugs:
             if parish in parked or seed_status(worktree, parish) == "approved":
                 continue
@@ -232,11 +277,16 @@ def _next_seed(ledger: Ledger, run: Any) -> Next | None:
             seen = verdicts.get(parish)
             if seen is None or seen["at"] <= job["finished_at"]:
                 pending_review.append(parish)
+                questions += open_questions(worktree, parish)
                 if seen is not None:
                     redrafted.append(parish)
-        if pending_review:
-            return Next("seed-review", {"batch": batch, "parishes": pending_review,
-                                        "redrafted": redrafted})
+        if len(pending_review) > waiting:
+            chunk.append(batch)
+        if pending_review and (n == 0 or redrafted or questions >= review_questions):
+            break
+    if pending_review:
+        return Next("seed-review", {"batch": chunk_label(chunk), "batches": chunk,
+                                    "parishes": pending_review, "redrafted": redrafted})
     if not _done(ledger, run_id, "pr"):
         return Next("pr", {})
     return None

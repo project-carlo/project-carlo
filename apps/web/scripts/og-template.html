@@ -53,7 +53,9 @@
     </style>
   </head>
   <body>
-    <!-- Option 01 — Missal title page (docs/share-image-options.html) -->
+    <!-- Google Search crops this image to a centred square (x 285-915) for
+         its result thumbnails, so everything that matters stays inside it.
+         The mark is a copy of public/favicon.svg. -->
     <div
       id="og-frame"
       class="grain"
@@ -101,92 +103,57 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          text-align: center;
-          gap: 34px;
-          padding: 0 90px;
+          gap: 40px;
         "
       >
-        <div
-          style="
-            font-family: Cardo, Georgia, serif;
-            font-variant-caps: small-caps;
-            font-feature-settings: 'smcp' 1, 'c2sc' 0;
-            letter-spacing: 0.2em;
-            font-size: 24px;
-            color: oklch(0.4 0.018 50);
-          "
-        >
-          A Catholic parish finder
-        </div>
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            gap: 22px;
-            color: oklch(0.66 0.095 75);
-            width: 440px;
-          "
-        >
-          <span
-            style="
-              height: 1px;
-              flex: 1;
-              background: color-mix(
-                in oklch,
-                oklch(0.2 0.015 50) 26%,
-                transparent
-              );
-            "
-          ></span>
-          <svg
-            width="56"
-            height="28"
-            viewBox="0 0 48 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.1"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
+        <div style="display: flex; align-items: center; gap: 30px">
+          <svg width="200" height="200" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#9B2F25" />
+            <mask id="c-opening" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+              <rect width="64" height="64" fill="#fff" />
+              <path d="M32 26 68.94-21.28 90.46 12.5 85.93 52.3Z" />
+            </mask>
             <path
-              d="M18 12c0-3 2-5 4-5s4 2 4 5-2 5-4 5-4-2-4-5Z"
-            ></path>
-            <path d="M22 12c0-3-2-5-4-5"></path>
-            <path d="M26 12c0 3 2 5 4 5"></path>
-            <circle cx="24" cy="12" r="0.9" fill="currentColor" stroke="none"></circle>
+              mask="url(#c-opening)"
+              fill="none"
+              stroke="#F3ECD8"
+              stroke-width="7.5"
+              stroke-linejoin="round"
+              d="M32 9c-9.4 0-17 7.6-17 17 0 12 17 29 17 29s17-17 17-29c0-9.4-7.6-17-17-17Z"
+            />
+            <circle cx="42.46" cy="12.59" r="3.75" fill="#F3ECD8" />
+            <circle cx="47.31" cy="33.43" r="3.75" fill="#F3ECD8" />
+            <path fill="#E8C673" d="M30 16h4v5h5v4h-5v13h-4V25h-5v-4h5Z" />
           </svg>
-          <span
+          <!-- "Carlo" is indented so its short "a" and "r" sit under the
+               descender of "Project"'s j, not its tall "l". The P's cap top
+               and Carlo's baseline line up with the tile's top and bottom;
+               `top` nudges the ink, since the line box has extra room above. -->
+          <h2
             style="
-              height: 1px;
-              flex: 1;
-              background: color-mix(
-                in oklch,
-                oklch(0.2 0.015 50) 26%,
-                transparent
-              );
+              position: relative;
+              top: 4px;
+              font-family: Cardo, Georgia, serif;
+              font-weight: 400;
+              font-size: 120px;
+              line-height: 0.967;
+              letter-spacing: -0.02em;
+              color: oklch(0.2 0.015 50);
+              margin: 0;
             "
-          ></span>
+          >
+            Project<br />
+            <span style="font-style: italic; color: oklch(0.46 0.165 28); margin-left: 0.3em"
+              >Carlo</span
+            >
+          </h2>
         </div>
-        <h2
-          style="
-            font-family: Cardo, Georgia, serif;
-            font-weight: 400;
-            font-size: 124px;
-            line-height: 0.9;
-            letter-spacing: -0.02em;
-            color: oklch(0.2 0.015 50);
-            margin: 0;
-          "
-        >
-          Project
-          <span style="font-style: italic; color: oklch(0.46 0.165 28)">Carlo</span>
-        </h2>
         <div
           style="
             font-family: 'EB Garamond', Georgia, serif;
             font-style: italic;
             letter-spacing: 0.01em;
-            font-size: 36px;
+            font-size: 29px;
             color: oklch(0.4 0.018 50);
           "
         >

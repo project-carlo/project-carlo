@@ -1,3 +1,4 @@
+import { countChurches } from "@carlo/core";
 import { MemoryRouter } from "react-router-dom";
 import {
   ChurchIndexContent,
@@ -35,7 +36,7 @@ export function StaticChurchIndexPage({
   lastModified,
 }: StaticChurchIndexPageProps) {
   const title = CHURCH_INDEX_TITLE;
-  const description = buildChurchIndexDescription(churches.length);
+  const description = buildChurchIndexDescription(countChurches(churches));
   const origin = new URL(canonicalUrl).origin;
 
   const jsonLd = [

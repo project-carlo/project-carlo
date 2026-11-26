@@ -4,10 +4,19 @@
  * "Review in the labeler") and src/pdf_extract/seeding/files.py, which the
  * server validates every save against.
  */
-import type { EditorRow, SeedAnswer, SeedEntry, SeedFile, SeedQueueRow, SeedSlot, SeedStatus } from "../types";
+import type {
+  ChapelAccess,
+  EditorRow,
+  SeedAnswer,
+  SeedEntry,
+  SeedFile,
+  SeedQueueRow,
+  SeedSlot,
+  SeedStatus,
+} from "../types";
 import { formatDate } from "./dates";
 import { describeSeason, describeWeeks } from "./pattern";
-import { newId } from "./rows";
+import { newId, toLabelEvent } from "./rows";
 import { formatTime } from "./time";
 
 /** Ready seeds first, then questions; continue after the current parish and wrap. */
@@ -152,8 +161,24 @@ export function slotGroups(seed: SeedFile): { open: SeedSlot[]; settled: SeedSlo
 }
 
 /** "Mass · Sun 9:00 AM · first, third · Sep–May · note" */
+const ACCESS_LABELS: Record<ChapelAccess, string> = {
+  not_stated: "access not stated",
+  code_after_hours: "code after hours",
+  code: "code at all hours",
+  arrangement: "by arrangement",
+};
+
 export function describeEntry(entry: SeedEntry | null): string {
   if (!entry) return "Leave out";
+  if (entry.event_kind === "continuous") {
+    const access = ACCESS_LABELS[entry.access ?? "not_stated"];
+    const hours = entry.open_from && entry.open_until
+      ? ` (unlocked ${formatTime(entry.open_from)}–${formatTime(entry.open_until)})`
+      : "";
+    return ["Adoration · every day, 24 hours", `${access}${hours}`, entry.note]
+      .filter(Boolean)
+      .join(" · ");
+  }
   const when = entry.event_kind === "weekly" ? (entry.day_of_week ?? "?") : formatDate(entry.date);
   const end = entry.end_time ? `–${formatTime(entry.end_time)}` : "";
   const parts = [
@@ -200,6 +225,7 @@ export function resolveCapture(seed: SeedFile, ref: string | null | undefined): 
 export function toEditorRow(entry: SeedEntry, page: number | null): EditorRow {
   return {
     ...entry,
+    start_time: entry.start_time ?? "",
     exclude_weeks: entry.exclude_weeks ?? false,
     id: newId(),
     page_number: page,
@@ -209,6 +235,12 @@ export function toEditorRow(entry: SeedEntry, page: number | null): EditorRow {
 }
 
 export function fromEditorRow(row: EditorRow): { entry: SeedEntry; page: number | null } {
+  if (row.event_kind === "continuous") {
+    const { page_number: page, origin: _origin, optional: _optional, ...entry } = toLabelEvent(row);
+    void _origin;
+    void _optional;
+    return { entry, page };
+  }
   const weekly = row.event_kind === "weekly";
   return {
     entry: {

@@ -136,7 +136,8 @@ parish, with no bulletins, and its brief says so. `seed capture` adds to
 `captures`, `seed capture-text` prints one, and `seed current` sets
 `current_because` (and `--recheck-after`). The slot-writing commands take
 `cap <capture>: said` (or `cap primary`, and `cap <capture> image: said`) as a
-source. `extract` and `ask` refuse a source seed, since they read PDFs.
+source. A source seed gets no second opinion, which reads bulletins
+(docs/seed-second-opinion-plan.md).
 `finalize` adds no history sources, because such a parish has no extract-mode
 history.
 

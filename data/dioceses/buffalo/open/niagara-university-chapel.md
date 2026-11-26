@@ -19,6 +19,16 @@ line1: 5795 Lewiston Rd.
 city: Niagara University
 state: NY
 postal_code: '14109'
+research:
+- method: 'Checked whether the Campus Ministry page''s times are current: web search, the university catalog,
+    the Daily Post'
+  url: https://www.niagara.edu/current-students/student-life/campus-ministry/
+  checked: '2026-11-24'
+  outcome: not-found
+  next_action: 'Confirm the Sunday schedule with Campus Ministry (716-286-8400): the page gives only Sunday
+    11 a.m., while the catalog and directories also give a 7 p.m. in term and a 10 a.m. in summer; the
+    Daily Post (dailypost.niagara.edu), which announced changes, no longer resolves'
+  retry_when: A dated schedule appears on the Campus Ministry page or a university news post
 ---
 
 ## What is known

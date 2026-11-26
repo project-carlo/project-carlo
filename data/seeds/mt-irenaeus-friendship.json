@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "parish_slug": "mt-irenaeus-friendship",
+  "status": "approved",
+  "as_of": "2026-11-24T21:13:54+00:00",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-24T21:13:19Z",
+  "reviewer": "agent:claude-opus-5.5@55322860",
+  "approved_at": "2026-11-24T21:42:56Z",
+  "summary": "One church, Holy Peace Chapel at Mt. Irenaeus. Its own site gives one public Mass, Sunday 11 a.m., on its Mass event listing (22 November 2026) and its Visit Us page. No weekday Mass, Confession or Adoration times are published.",
+  "blocked_reason": null,
+  "bulletins": [],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mt-irenaeus-friendship",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "capture": "68d2a6d0",
+          "url": "https://mountainonline.org/events/category/mass/",
+          "said": "We welcome everyone to join us for Mass each Sunday at 11 a.m. held in Holy Peace Chapel."
+        },
+        {
+          "source": "website",
+          "capture": "22810a5f",
+          "url": "https://mountainonline.org/visit-us/",
+          "said": "We welcome you to visit us, especially for Mass on Sundays at 11 a.m."
+        }
+      ],
+      "rationale": "R43: a stated weekly schedule on the site's Mass event and its Visit Us page; public (\"We welcome everyone\").",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "kind": "source",
+  "captures": [
+    {
+      "content_hash": "68d2a6d00f5311461249e2222da2268c6445ef4e9d4faeafde13242eceb8bf04",
+      "url": "https://mountainonline.org/events/category/mass/",
+      "final_url": null,
+      "platform": "website",
+      "captured_at": "2026-11-24T21:13:35+00:00",
+      "screenshot_hash": "15941e18b5aa041b96a436bdcb0c27c1aca6fa434f37d22a9e203bf68c3cf5f7",
+      "primary": true
+    },
+    {
+      "content_hash": "22810a5f8ed04525e9639233d8aa3dcd1a5d973414a6491ef7d0a62569931d91",
+      "url": "https://mountainonline.org/visit-us/",
+      "final_url": null,
+      "platform": "website",
+      "captured_at": "2026-11-24T21:13:54+00:00",
+      "screenshot_hash": "c1111481ffbb46b412e8d2cde82d09f1b04a1425cb83224138bb0265642d3965",
+      "primary": false
+    }
+  ],
+  "current_because": "The site's Mass event, \"Mass at the Mountain – Every Sunday at 11 a.m.\", is listed for 22 November 2026 (captured 24 November), beside upcoming Advent 2026 events (Advent Overnight 5-6 December; a Zoom series from 9 December 2026); the Visit Us page gives the same Sunday 11 a.m. Mass. The page footer reads ©2026 Mt. Irenaeus.",
+  "recheck_after": "2027-02-24"
+}

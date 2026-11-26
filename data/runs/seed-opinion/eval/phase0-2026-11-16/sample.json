@@ -1,0 +1,1351 @@
+[
+ {
+  "parish": "st-patricks-victor",
+  "kind": "extra",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": null,
+  "luna_evidence": [],
+  "seed": "confession Sat 15:30-16:15 @st-patricks-victor",
+  "seed_slot": {
+   "id": "s16",
+   "decision": "include",
+   "page": 7,
+   "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass). Reviewer timing rule (2026-10-14): For confession before Mass, the bulletin explicitly asks for the priest to have 15 minutes to prepare. End confession 15 minutes before Mass, keeping the stated one-hour-before-Mass start.",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "632dcbdd",
+     "page": 7,
+     "said": "Sacrament of Reconciliation: Generally offered an hour before each Mass - daily and weekend. Please give the priest fifteen minutes before Mass to prepare for Mass."
+    },
+    {
+     "source": "agent",
+     "bulletin": "4ba13eb4",
+     "page": 7,
+     "said": "Sacrament of Reconciliation: Generally offered an hour before each Mass - daily and weekend. Please give the priest fifteen minutes before Mass to prepare for Mass."
+    },
+    {
+     "source": "agent",
+     "bulletin": "55175549",
+     "page": 7,
+     "said": "Sacrament of Reconciliation: Generally offered an hour before each Mass - daily and weekend. Please give the priest fifteen minutes before Mass to prepare for Mass."
+    },
+    {
+     "source": "history",
+     "bulletin": "632dcbdd5f26",
+     "said": "weekly confession Saturday 15:30\u201316:30 st-patricks-victor  \u201cGenerally offered an hour before each Mass\u201d",
+     "page": 7
+    },
+    {
+     "source": "history",
+     "bulletin": "4ba13eb4fe3a",
+     "said": "weekly confession Saturday 15:30\u201316:15 st-patricks-victor",
+     "page": 7
+    },
+    {
+     "source": "history",
+     "bulletin": "551755498729",
+     "said": "weekly confession Saturday 15:30\u201316:15 st-patricks-victor  \u201cStarts one hour before Mass; ends 15 mins before\u201d",
+     "page": 7
+    }
+   ],
+   "answer": {
+    "choice": 1,
+    "by": "codex/user-timing-rules",
+    "at": "2026-10-14T21:10:25Z"
+   }
+  },
+  "bulletins_luna_saw": {
+   "B1": "632dcbdd5f26",
+   "B2": "4ba13eb4fe3a",
+   "B3": "551755498729"
+  },
+  "today": "2026-10-11",
+  "n": 1
+ },
+ {
+  "parish": "transfiguration-st-catherine-mendon",
+  "kind": "extra",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": null,
+  "luna_evidence": [],
+  "seed": "mass 2026-10-31 10:00 @transfiguration",
+  "seed_slot": {
+   "id": "s13",
+   "decision": "include",
+   "page": 3,
+   "rationale": "R32: the notice names no church. The Transfiguration office number (248-2427) is given, and the 'Gathering Area' is Transfiguration's (Sharing Tree p4: Gathering Area at Transfiguration), so I lean Transfiguration. It is open to all (Mass for all deceased of the past year, not one person).\n\nReview 2026-10-22: Lean Transfiguration for Oct 31, 10 AM remembrance Mass: the office number and Gathering Area context support it. Verify the venue before treating those indirect clues as conclusive.",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "54e286e5",
+     "page": 3,
+     "said": "Join us on Saturday, 10/31/26 at 10AM ... A light reception follows in our Gathering Area. ... contact Betsy Yerves ... parish office at 248-2427"
+    }
+   ],
+   "answer": {
+    "choice": 0,
+    "by": "lyonsl2 (via Codex)",
+    "at": "2026-10-22T20:42:31Z"
+   }
+  },
+  "bulletins_luna_saw": {
+   "B1": "54e286e56d2c",
+   "B2": "0a0141239a47",
+   "B3": "74e9373d46a1"
+  },
+  "today": "2026-10-11",
+  "n": 2
+ },
+ {
+  "parish": "our-lady-of-the-lakes",
+  "kind": "extra",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": null,
+  "luna_evidence": [],
+  "seed": "confession 2026-11-08 07:45-08:15 @st-januarius",
+  "seed_slot": {
+   "id": "s14",
+   "decision": "include",
+   "page": 3,
+   "rationale": "R14, R33: the first full Sunday is not always the first Sunday (November 1 is a Sunday, and the printed date is November 8), so only the printed dated occurrence on or after as_of is recorded.",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "fd002b65",
+     "page": 3,
+     "said": "first full Saturday and Sunday of the month at St. Patrick's and St. Januarius. St. Januarius - 7:45-8:15 am in the Chapel. November 7 & 8"
+    },
+    {
+     "source": "history",
+     "bulletin": "db7c6596ff1b",
+     "said": "specific_date confession 2026-11-08 07:45\u201308:15 st-januarius  \u201cIn the Chapel\u201d",
+     "page": 3
+    }
+   ],
+   "answer": null
+  },
+  "bulletins_luna_saw": {
+   "B1": "fd002b65149d",
+   "B2": "db7c6596ff1b",
+   "B3": "ca3470cbff91",
+   "B4": "8c651fa8faee"
+  },
+  "today": "2026-10-25",
+  "n": 3
+ },
+ {
+  "parish": "assumption-syracuse",
+  "kind": "extra",
+  "days_in_group": 2,
+  "fields": null,
+  "luna": null,
+  "luna_evidence": [],
+  "seed": "mass Tue 08:30 @assumption-syracuse",
+  "seed_slot": {
+   "id": "s3",
+   "decision": "include",
+   "page": 4,
+   "rationale": "Weekday 8:30 AM Mass at the church printed in the newest weekly calendar; the 09-27 bulletin shows Thursday Oct 1 at 8:30 and cancels the 8:30 Mass on Tuesday and Wednesday, so the slot is regular.",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "402615eeacaf",
+     "page": 4,
+     "said": "TUESDAY, OCTOBER 13 - 8:30 AM"
+    },
+    {
+     "source": "agent",
+     "bulletin": "74635fdd22e1",
+     "page": 4,
+     "said": "NO 8:30 AM MASS (that week's Tuesday/Wednesday, cancelled for the novena)"
+    },
+    {
+     "source": "history",
+     "bulletin": "402615eeacaf",
+     "said": "weekly mass Tuesday 08:30 assumption-syracuse",
+     "page": 4
+    },
+    {
+     "source": "history",
+     "bulletin": "74635fdd22e1",
+     "said": "weekly mass Tuesday 08:30 assumption-syracuse",
+     "page": 4
+    }
+   ],
+   "answer": null
+  },
+  "bulletins_luna_saw": {
+   "B1": "402615eeacaf",
+   "B2": "74635fdd22e1"
+  },
+  "today": "2026-10-04",
+  "n": 4
+ },
+ {
+  "parish": "st-anthony-of-padua-syracuse",
+  "kind": "extra",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": null,
+  "luna_evidence": [],
+  "seed": "adoration 2026-10-07 18:00 cancelled @st-anthony-of-padua-syracuse",
+  "seed_slot": {
+   "id": "s8",
+   "decision": "include",
+   "page": 2,
+   "rationale": "R1, R16, R18: the newest bulletin says there is no Adoration or Mass on Wed Oct 7 (on or after as_of). The retreat is named in the notice for Monday and in the website, not on the Wednesday line.",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "e47a210c",
+     "page": 2,
+     "said": "Wednesday | Miercoles 7 de Octubre: No hay Adoracion ni Misa, lo siento!"
+    }
+   ],
+   "answer": null
+  },
+  "bulletins_luna_saw": {
+   "B1": "e47a210c115c",
+   "B2": "4299fce4fad7"
+  },
+  "today": "2026-10-04",
+  "n": 5
+ },
+ {
+  "parish": "st-joseph-the-worker-west-winfield",
+  "kind": "extra",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": null,
+  "luna_evidence": [],
+  "seed": "adoration 2026-10-26 13:00-20:00 @st-joseph-the-worker-west-winfield",
+  "seed_slot": {
+   "id": "s18",
+   "decision": "include",
+   "page": 2,
+   "rationale": "R1, R14, R16: the last two Mondays of October are Oct 19 and Oct 26; only Oct 26 is on or after as_of. Dated because the pattern is a one-month series that the format cannot express as weekly (R33).",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "aac3ebc9",
+     "page": 2,
+     "said": "West Winfield: During the last 2 Mondays of October, Mon. 1 p.m. - 8 p.m. After the Noon Mass"
+    },
+    {
+     "source": "history",
+     "bulletin": "aac3ebc9ba8d",
+     "said": "specific_date adoration 2026-10-26 13:00\u201320:00 st-joseph-the-worker-west-winfield  \u201cFollowing 12:00 PM Mass\u201d",
+     "page": 2
+    },
+    {
+     "source": "history",
+     "bulletin": "e784284e1bcf",
+     "said": "specific_date adoration 2026-10-26 13:00\u201320:00 st-joseph-the-worker-west-winfield  \u201cAfter the Noon Mass\u201d",
+     "page": 2
+    }
+   ],
+   "answer": null
+  },
+  "bulletins_luna_saw": {
+   "B1": "aac3ebc9ba8d",
+   "B2": "e784284e1bcf",
+   "B3": "b5cd6f478503",
+   "B4": "252971077934"
+  },
+  "today": "2026-10-25",
+  "n": 6
+ },
+ {
+  "parish": "our-lady-of-fatima-shrine-lewiston",
+  "kind": "extra",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": null,
+  "luna_evidence": [],
+  "seed": "confession Sun 13:15-13:30 @our-lady-of-fatima-shrine-lewiston fourth",
+  "seed_slot": {
+   "id": "s38",
+   "decision": "include",
+   "page": 1,
+   "rationale": "The Tagalog Mass is a regular Mass in the same schedule box, so the 15-minutes-before-every-Mass rule applies.",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "6049701b",
+     "page": 1,
+     "said": "CONFESSIONS 15 minutes before every Mass; Tagalog Mass @1:30 pm Every Fourth Sunday"
+    },
+    {
+     "source": "history",
+     "bulletin": "6049701b35ac",
+     "said": "weekly confession Sunday 13:15 our-lady-of-fatima-shrine-lewiston  \u201c15 minutes before Tagalog Mass\u201d",
+     "page": 1
+    },
+    {
+     "source": "history",
+     "bulletin": "c2a4753ece12",
+     "said": "weekly confession Sunday 13:15 our-lady-of-fatima-shrine-lewiston  \u201cEvery fourth Sunday of the month\u201d",
+     "page": 1
+    }
+   ],
+   "answer": null
+  },
+  "bulletins_luna_saw": {
+   "B1": "6049701b35ac",
+   "B2": "c2a4753ece12",
+   "B3": "0336b2ad7c49",
+   "B4": "da7cbd744020"
+  },
+  "today": "2026-10-11",
+  "n": 7
+ },
+ {
+  "parish": "holy-spirit-holy-trinity-gloversville",
+  "kind": "extra",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": null,
+  "luna_evidence": [],
+  "seed": "mass 2026-11-01 09:00 cancelled @holy-trinity-johnstown",
+  "seed_slot": {
+   "id": "s16",
+   "decision": "include",
+   "page": 3,
+   "rationale": "R16, R17, R40: the Nov 1 9:00 AM Mass is listed at Holy Spirit, so the Holy Trinity occurrence does not take place.",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "90db4a56",
+     "page": 3,
+     "said": "... will continue to be at Holy Spirit until the painting and carpeting is completed"
+    },
+    {
+     "source": "agent",
+     "bulletin": "90db4a56",
+     "page": 5,
+     "said": "SUN. 9:00AM MASS AT HOLY SPIRIT (second listing)"
+    },
+    {
+     "source": "history",
+     "bulletin": "90db4a560cf7",
+     "said": "specific_date mass 2026-11-01 09:00 holy-trinity-johnstown  CANCELLED; \u201cRelocated to Holy Spirit due to painting\u201d",
+     "page": 5
+    }
+   ],
+   "answer": null
+  },
+  "bulletins_luna_saw": {
+   "B1": "90db4a560cf7",
+   "B2": "7a9401c2fe08",
+   "B3": "e31539612deb",
+   "B4": "d3606706f4cf"
+  },
+  "today": "2026-10-25",
+  "n": 8
+ },
+ {
+  "parish": "central-niagara-catholic",
+  "kind": "missing",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": "mass 2026-11-02 07:30 @st-john-baptist-lockport",
+  "luna_evidence": [
+   {
+    "bulletin": "B1",
+    "page": 3,
+    "quote": "Mass Schedule for Monday, November 2nd; 7:30am at St. John\u2019s",
+    "bulletin_hash": "96643f86360d"
+   }
+  ],
+  "seed": null,
+  "seed_slot": null,
+  "bulletins_luna_saw": {
+   "B1": "96643f86360d",
+   "B2": "3132cecda06f",
+   "B3": "e3dfdead8705",
+   "B4": "23c17e5338d5"
+  },
+  "today": "2026-10-25",
+  "n": 9
+ },
+ {
+  "parish": "st-augustine-baldwinsville",
+  "kind": "missing",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": "confession Wed 10:30-11:30 @st-augustine-baldwinsville",
+  "luna_evidence": [
+   {
+    "bulletin": "B1",
+    "page": 2,
+    "quote": "Every Other Wednesday 10:30am-11:30am (see cover)",
+    "bulletin_hash": "46e2e6ed0181"
+   },
+   {
+    "bulletin": "B2",
+    "page": 2,
+    "quote": "Every Other Wednesday 10:30am-11:30am (see cover)",
+    "bulletin_hash": "4b5307121e33"
+   },
+   {
+    "bulletin": "B3",
+    "page": 2,
+    "quote": "Every Other Wednesday 10:30am-11:30am (see cover)",
+    "bulletin_hash": "ed89f2a9d283"
+   }
+  ],
+  "seed": null,
+  "seed_slot": null,
+  "bulletins_luna_saw": {
+   "B1": "46e2e6ed0181",
+   "B2": "4b5307121e33",
+   "B3": "ed89f2a9d283"
+  },
+  "today": "2026-10-11",
+  "n": 10
+ },
+ {
+  "parish": "spirit-of-hope-oneida",
+  "kind": "missing",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": "mass Sat 17:30 @st-mary-of-the-lake-verona-beach season=5-10",
+  "luna_evidence": [
+   {
+    "bulletin": "B1",
+    "page": 1,
+    "quote": "5:30PM at St. Mary \u2013 Memorial Day to Columbus Day Weekend",
+    "bulletin_hash": "ec90a9882aae"
+   },
+   {
+    "bulletin": "B2",
+    "page": 1,
+    "quote": "5:30PM at St. Mary \u2013 Memorial Day to Columbus Day Weekend",
+    "bulletin_hash": "86e47a993b7b"
+   },
+   {
+    "bulletin": "B3",
+    "page": 1,
+    "quote": "5:30PM at St. Mary \u2013 Memorial Day to Columbus Day Weekend",
+    "bulletin_hash": "6a65a3373371"
+   },
+   {
+    "bulletin": "B4",
+    "page": 1,
+    "quote": "5:30PM at St. Mary \u2013 Memorial Day to Columbus Day Weekend",
+    "bulletin_hash": "ac0c4dd3ff54"
+   }
+  ],
+  "seed": null,
+  "seed_slot": null,
+  "bulletins_luna_saw": {
+   "B1": "ec90a9882aae",
+   "B2": "86e47a993b7b",
+   "B3": "6a65a3373371",
+   "B4": "ac0c4dd3ff54"
+  },
+  "today": "2026-10-25",
+  "n": 11
+ },
+ {
+  "parish": "holy-spirit-st-josephs",
+  "kind": "missing",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": "adoration Fri 14:00-15:00 @holy-spirit",
+  "luna_evidence": [
+   {
+    "bulletin": "B1",
+    "page": 8,
+    "quote": "Partner required: Friday 2-3 pm",
+    "bulletin_hash": "1ac0a75ba3e9"
+   },
+   {
+    "bulletin": "B2",
+    "page": 8,
+    "quote": "Partner required: Friday 2-3 pm",
+    "bulletin_hash": "7ebaeb9849c8"
+   },
+   {
+    "bulletin": "B3",
+    "page": 8,
+    "quote": "Partner required: Friday 2-3 pm",
+    "bulletin_hash": "48d2882a9b97"
+   }
+  ],
+  "seed": null,
+  "seed_slot": null,
+  "bulletins_luna_saw": {
+   "B1": "1ac0a75ba3e9",
+   "B2": "7ebaeb9849c8",
+   "B3": "48d2882a9b97"
+  },
+  "today": "2026-10-11",
+  "n": 12
+ },
+ {
+  "parish": "st-michael-the-archangel-south-glens-falls",
+  "kind": "missing",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": "mass 2026-11-02 19:00 @st-michael-the-archangel-south-glens-falls",
+  "luna_evidence": [
+   {
+    "bulletin": "B1",
+    "page": 6,
+    "quote": "ALL SOULS\u2019 DAY MASS OF REMEMBRANCE \u2013 7:00 pm",
+    "bulletin_hash": "7a683b410224"
+   }
+  ],
+  "seed": null,
+  "seed_slot": null,
+  "bulletins_luna_saw": {
+   "B1": "7a683b410224",
+   "B2": "6ebba735c958",
+   "B3": "020a18c91cd4"
+  },
+  "today": "2026-10-11",
+  "n": 13
+ },
+ {
+  "parish": "st-mary-our-mother",
+  "kind": "missing",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": "mass 2026-10-29 19:00 @st-mary-our-mother",
+  "luna_evidence": [
+   {
+    "bulletin": "B1",
+    "page": 3,
+    "quote": "Thursday, Oct. 29, 2026, 7:00pm",
+    "bulletin_hash": "d3be24ab3a96"
+   },
+   {
+    "bulletin": "B3",
+    "page": 3,
+    "quote": "Saint Mary Our Mother will be hosting the regional Mass for the Southern Tier on Thursday, October 29, 2026.",
+    "bulletin_hash": "cb91b809bd8d"
+   }
+  ],
+  "seed": null,
+  "seed_slot": null,
+  "bulletins_luna_saw": {
+   "B1": "d3be24ab3a96",
+   "B2": "dd5c3fa624e8",
+   "B3": "cb91b809bd8d"
+  },
+  "today": "2026-10-11",
+  "n": 14
+ },
+ {
+  "parish": "st-anthony-of-padua-buffalo",
+  "kind": "missing",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": "confession Sun 10:35 @st-anthony-of-padua-buffalo",
+  "luna_evidence": [
+   {
+    "bulletin": "B1",
+    "page": 1,
+    "quote": "Confessions 40 min. before each Mass",
+    "bulletin_hash": "3fa1a118f53b"
+   },
+   {
+    "bulletin": "B2",
+    "page": 1,
+    "quote": "Confessions 40 min. before each Mass",
+    "bulletin_hash": "8fc7ae8773e7"
+   }
+  ],
+  "seed": null,
+  "seed_slot": null,
+  "bulletins_luna_saw": {
+   "B1": "3fa1a118f53b",
+   "B2": "8fc7ae8773e7"
+  },
+  "today": "2026-10-04",
+  "n": 15
+ },
+ {
+  "parish": "christ-our-light-family",
+  "kind": "differs",
+  "days_in_group": 1,
+  "fields": [
+   "end time"
+  ],
+  "luna": "confession Sat 16:15 @immaculate-conception-wellsville",
+  "luna_evidence": [
+   {
+    "bulletin": "B1",
+    "page": 2,
+    "quote": "Immaculate Conception: Saturday 4:15pm",
+    "bulletin_hash": "e0b8b2949d85"
+   },
+   {
+    "bulletin": "B2",
+    "page": 2,
+    "quote": "Immaculate Conception: Saturday 4:15pm",
+    "bulletin_hash": "d6827cb8a178"
+   },
+   {
+    "bulletin": "B3",
+    "page": 2,
+    "quote": "Immaculate Conception: Saturday 4:15pm",
+    "bulletin_hash": "026abfd7ac0b"
+   },
+   {
+    "bulletin": "B4",
+    "page": 2,
+    "quote": "Immaculate Conception: Saturday 4:15pm",
+    "bulletin_hash": "57ead4eadbcf"
+   }
+  ],
+  "seed": "confession Sat 16:15-17:00 @immaculate-conception-wellsville",
+  "seed_slot": {
+   "id": "s18",
+   "decision": "include",
+   "page": 2,
+   "rationale": "R1, R6: the start is printed in all five bulletins; the end time comes from the parish website, which agrees on the start.",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "e0b8b294",
+     "page": 2,
+     "said": "Immaculate Conception: Saturday 4:15pm"
+    },
+    {
+     "source": "agent",
+     "bulletin": "d6827cb8",
+     "page": 2,
+     "said": "Immaculate Conception: Saturday 4:15pm"
+    },
+    {
+     "source": "agent",
+     "bulletin": "026abfd7",
+     "page": 2,
+     "said": "Immaculate Conception: Saturday 4:15pm"
+    },
+    {
+     "source": "agent",
+     "bulletin": "57ead4ea",
+     "page": 2,
+     "said": "Immaculate Conception: Saturday 4:15pm"
+    },
+    {
+     "source": "agent",
+     "bulletin": "17e6d67d",
+     "page": 2,
+     "said": "Immaculate Conception: Saturday 4:15pm"
+    },
+    {
+     "source": "website",
+     "url": "https://icc-ics.com/confession-times",
+     "said": "Confession Times 4:15 PM to 5:00 PM Immaculate Conception (Before Mass or by Appointment)",
+     "schedule_check": {
+      "checked_at": "2026-10-26T12:14:20Z",
+      "current_because": "Parish's own site, branded Christ Our Light Family; its Mass Times page matches the bulletin cover for every church it lists, and the 4:15 start matches the bulletin.",
+      "bulletin": "e0b8b294",
+      "fits_because": "The bulletin prints only the 4:15pm start; the site's window 4:15-5:00 PM ends when the 5:00 PM Saturday Mass at Immaculate Conception starts."
+     }
+    },
+    {
+     "source": "history",
+     "bulletin": "e0b8b2949d85",
+     "said": "weekly confession Saturday 16:15 immaculate-conception-wellsville",
+     "page": 2
+    },
+    {
+     "source": "history",
+     "bulletin": "d6827cb8a178",
+     "said": "weekly confession Saturday 16:15 immaculate-conception-wellsville",
+     "page": 2
+    },
+    {
+     "source": "history",
+     "bulletin": "026abfd7ac0b",
+     "said": "weekly confession Saturday 16:15 immaculate-conception-wellsville",
+     "page": 2
+    },
+    {
+     "source": "history",
+     "bulletin": "57ead4eadbcf",
+     "said": "weekly confession Saturday 16:15 immaculate-conception-wellsville",
+     "page": 2
+    },
+    {
+     "source": "history",
+     "bulletin": "17e6d67d97f5",
+     "said": "weekly confession Saturday 16:15 immaculate-conception-wellsville",
+     "page": 2
+    }
+   ],
+   "answer": null
+  },
+  "bulletins_luna_saw": {
+   "B1": "e0b8b2949d85",
+   "B2": "d6827cb8a178",
+   "B3": "026abfd7ac0b",
+   "B4": "57ead4eadbcf"
+  },
+  "today": "2026-10-25",
+  "n": 16
+ },
+ {
+  "parish": "light-of-christ-kenmore",
+  "kind": "differs",
+  "days_in_group": 1,
+  "fields": [
+   "end time"
+  ],
+  "luna": "adoration Tue 18:00 @blessed-sacrament-tonawanda",
+  "luna_evidence": [
+   {
+    "bulletin": "B1",
+    "page": 2,
+    "quote": "Flame of Love Rosary Holy Hour \u2013 Tuesdays at 6pm in the Chapel",
+    "bulletin_hash": "ba7f2ea27155"
+   },
+   {
+    "bulletin": "B2",
+    "page": 2,
+    "quote": "Flame of Love Rosary Holy Hour \u2013 Tuesdays at 6pm in the Chapel",
+    "bulletin_hash": "791225457c30"
+   },
+   {
+    "bulletin": "B3",
+    "page": 2,
+    "quote": "Flame of Love Rosary Holy Hour \u2013 Tuesdays at 6pm in the Chapel",
+    "bulletin_hash": "6fa016a5877b"
+   },
+   {
+    "bulletin": "B4",
+    "page": 2,
+    "quote": "Flame of Love Rosary Holy Hour \u2013 Tuesdays at 6pm in the Chapel",
+    "bulletin_hash": "3cf26281a939"
+   }
+  ],
+  "seed": "adoration Tue 18:00-19:00 @blessed-sacrament-tonawanda",
+  "seed_slot": {
+   "id": "s47",
+   "decision": "include",
+   "page": 2,
+   "rationale": "R1, R35, POLICY What to extract: a Holy Hour is Adoration even when other prayer (a Rosary) goes with it, and the bulletin does not say the Blessed Sacrament is not exposed; it is listed under Eucharistic Adoration & Devotions. End 7:00 PM from the one-hour length.",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "ba7f2ea2",
+     "page": 2,
+     "said": "Blessed Sacrament: Flame of Love Rosary Holy Hour \u2013 Tuesdays at 6pm in the Chapel"
+    },
+    {
+     "source": "agent",
+     "bulletin": "79122545",
+     "page": 2,
+     "said": "Blessed Sacrament: Flame of Love Rosary Holy Hour \u2013 Tuesdays at 6pm in the Chapel"
+    },
+    {
+     "source": "agent",
+     "bulletin": "6fa016a5",
+     "page": 2,
+     "said": "Blessed Sacrament: Flame of Love Rosary Holy Hour \u2013 Tuesdays at 6pm in the Chapel"
+    },
+    {
+     "source": "agent",
+     "bulletin": "3cf26281",
+     "page": 2,
+     "said": "Blessed Sacrament: Flame of Love Rosary Holy Hour \u2013 Tuesdays at 6pm in the Chapel"
+    },
+    {
+     "source": "agent",
+     "bulletin": "aff84ee1",
+     "page": 2,
+     "said": "Blessed Sacrament: Flame of Love Rosary Holy Hour \u2013 Tuesdays at 6pm in the Chapel"
+    },
+    {
+     "source": "history",
+     "bulletin": "ba7f2ea27155",
+     "said": "weekly adoration Tuesday 18:00 blessed-sacrament-tonawanda  \u201cFlame of Love Rosary Holy Hour in the Chapel\u201d",
+     "page": 2
+    },
+    {
+     "source": "history",
+     "bulletin": "791225457c30",
+     "said": "weekly adoration Tuesday 18:00\u201319:00 blessed-sacrament-tonawanda  \u201cFlame of Love Rosary Holy Hour in the Chapel\u201d",
+     "page": 2
+    },
+    {
+     "source": "history",
+     "bulletin": "6fa016a5877b",
+     "said": "weekly adoration Tuesday 18:00 blessed-sacrament-tonawanda  \u201cFlame of Love Rosary Holy Hour\u201d",
+     "page": 2
+    },
+    {
+     "source": "history",
+     "bulletin": "3cf26281a939",
+     "said": "weekly adoration Tuesday 18:00\u201319:00 blessed-sacrament-tonawanda  \u201cFlame of Love Rosary Holy Hour in the Chapel\u201d",
+     "page": 2
+    },
+    {
+     "source": "history",
+     "bulletin": "aff84ee13699",
+     "said": "weekly adoration Tuesday 18:00 blessed-sacrament-tonawanda  \u201cFlame of Love Rosary Holy Hour\u201d",
+     "page": 2
+    }
+   ],
+   "answer": null
+  },
+  "bulletins_luna_saw": {
+   "B1": "ba7f2ea27155",
+   "B2": "791225457c30",
+   "B3": "6fa016a5877b",
+   "B4": "3cf26281a939"
+  },
+  "today": "2026-10-25",
+  "n": 17
+ },
+ {
+  "parish": "niagara-falls-rc-family",
+  "kind": "differs",
+  "days_in_group": 1,
+  "fields": [
+   "start time",
+   "end time"
+  ],
+  "luna": "confession Sat 15:45-17:15 @st-joseph-niagara-falls",
+  "luna_evidence": [
+   {
+    "bulletin": "B1",
+    "page": 7,
+    "quote": "Confessions | Saturday 3:45pm-5:15pm",
+    "bulletin_hash": "390d2f2e0f16"
+   },
+   {
+    "bulletin": "B2",
+    "page": 7,
+    "quote": "Confessions | Saturday 3:45pm-5:15pm",
+    "bulletin_hash": "64b96a397fd8"
+   },
+   {
+    "bulletin": "B3",
+    "page": 7,
+    "quote": "Confessions | Saturday 3:45pm-5:15pm",
+    "bulletin_hash": "64a7b59d5116"
+   },
+   {
+    "bulletin": "B4",
+    "page": 7,
+    "quote": "Confessions | Saturday 3:45pm-5:15pm",
+    "bulletin_hash": "4b1bd217f67d"
+   }
+  ],
+  "seed": "confession Sat 15:00-15:45 @st-joseph-niagara-falls",
+  "seed_slot": {
+   "id": "s23",
+   "decision": "include",
+   "page": 7,
+   "rationale": "R1: printed on p7 in the St. Joseph site block.",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "390d2f2e",
+     "page": 7,
+     "said": "St. Joseph Church Site ... Confessions | Saturday 3pm-3:45pm"
+    },
+    {
+     "source": "history",
+     "bulletin": "390d2f2e0f16",
+     "said": "weekly confession Saturday 15:00\u201315:45 st-joseph-niagara-falls",
+     "page": 7
+    },
+    {
+     "source": "history",
+     "bulletin": "64b96a397fd8",
+     "said": "weekly confession Saturday 15:00\u201315:45 st-joseph-niagara-falls",
+     "page": 7
+    },
+    {
+     "source": "history",
+     "bulletin": "64a7b59d5116",
+     "said": "weekly confession Saturday 15:00\u201315:45 st-joseph-niagara-falls",
+     "page": 7
+    },
+    {
+     "source": "history",
+     "bulletin": "4b1bd217f67d",
+     "said": "weekly confession Saturday 15:00\u201315:45 st-joseph-niagara-falls",
+     "page": 7
+    },
+    {
+     "source": "history",
+     "bulletin": "f4b8b997c0fb",
+     "said": "weekly confession Saturday 15:00\u201315:45 st-joseph-niagara-falls",
+     "page": 7
+    }
+   ],
+   "answer": null
+  },
+  "bulletins_luna_saw": {
+   "B1": "390d2f2e0f16",
+   "B2": "64b96a397fd8",
+   "B3": "64a7b59d5116",
+   "B4": "4b1bd217f67d"
+  },
+  "today": "2026-10-25",
+  "n": 18
+ },
+ {
+  "parish": "transfiguration-syracuse",
+  "kind": "differs",
+  "days_in_group": 1,
+  "fields": [
+   "start time",
+   "end time"
+  ],
+  "luna": "adoration Fri 07:00-09:00 @transfiguration-syracuse first",
+  "luna_evidence": [
+   {
+    "bulletin": "B1",
+    "page": 3,
+    "quote": "24-Hour Adoration, Mass, & Confessions",
+    "bulletin_hash": "4711490a5071"
+   },
+   {
+    "bulletin": "B2",
+    "page": 4,
+    "quote": "First Friday, OCT 2 at 7:00am until First Saturday, OCT 3, at 9:00am.",
+    "bulletin_hash": "56b8a9743213"
+   }
+  ],
+  "seed": "adoration Fri 07:05 @transfiguration-syracuse first",
+  "seed_slot": {
+   "id": "s20",
+   "decision": "include",
+   "page": null,
+   "rationale": "R12, R30: the newest bulletin's week (Oct 11-18) holds no first Friday or Saturday, so the slot rests on the Sept 27 bulletin, whose week holds Oct 2-3, and on the devotion box in both. It runs overnight, which one slot cannot hold, so it is split at midnight; the table says 7:05 AM and page 4 and the website say 7:00 AM. Leaning toward the table's 7:05, and an open end on Friday.",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "56b8a9743213",
+     "page": 2,
+     "said": "FRIDAY, OCTOBER 2: 7:05am 24 hr adoration begins ... adoration continues; SATURDAY, OCTOBER 3: 24 hr adoration ends at 9 am"
+    },
+    {
+     "source": "agent",
+     "bulletin": "56b8a9743213",
+     "page": 4,
+     "said": "24-Hour Adoration will take place from First Friday, OCT 2 at 7:00am until First Saturday, OCT 3, at 9:00am."
+    },
+    {
+     "source": "agent",
+     "bulletin": "4711490a5071",
+     "page": 3,
+     "said": "FIRST FRIDAYS & FIRST SATURDAYS 24-Hour Adoration, Mass, & Confessions"
+    },
+    {
+     "source": "website",
+     "url": "https://www.transfigurationsyr.com/first-fridays-first-saturdays",
+     "said": "24-Hour Perpetual Adoration is available on this weekend, usually from 7:00am on First Friday, thru 9:00am on First Saturday."
+    },
+    {
+     "source": "history",
+     "bulletin": "4711490a5071",
+     "said": "weekly adoration Friday 07:05\u201308:00 transfiguration-syracuse",
+     "page": 2
+    },
+    {
+     "source": "history",
+     "bulletin": "56b8a9743213",
+     "said": "specific_date adoration 2026-10-02 07:05 transfiguration-syracuse  \u201c24-hour adoration begins\u201d",
+     "page": 2
+    }
+   ],
+   "answer": {
+    "choice": 0,
+    "by": "lyonsl2",
+    "at": "2026-10-15T11:53:13Z"
+   }
+  },
+  "bulletins_luna_saw": {
+   "B1": "4711490a5071",
+   "B2": "56b8a9743213"
+  },
+  "today": "2026-10-11",
+  "n": 19
+ },
+ {
+  "parish": "st-ann-manlius",
+  "kind": "differs",
+  "days_in_group": 7,
+  "fields": [
+   "end time"
+  ],
+  "luna": "adoration Mon 00:00-00:00 @st-ann-manlius",
+  "luna_evidence": [
+   {
+    "bulletin": "B1",
+    "page": 1,
+    "quote": "24 hours daily",
+    "bulletin_hash": "8465796b4f4d"
+   },
+   {
+    "bulletin": "B2",
+    "page": 1,
+    "quote": "24 hours daily",
+    "bulletin_hash": "f2c26864af82"
+   }
+  ],
+  "seed": "adoration Mon 00:00-23:59 @st-ann-manlius",
+  "seed_slot": {
+   "id": "s9",
+   "decision": "include",
+   "page": 1,
+   "rationale": "The parish's own Adoration Chapel, listed in the church's cover schedule box in both bulletins as open 24 hours daily, with the after-hours entrance code from the parish office; this one-church parish gives no other address, so the chapel is taken to be at St. Ann's. Recorded 00:00-23:59 each day, as the labels record continuous exposition.",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "8465796b4f4d",
+     "page": 1,
+     "said": "Adoration Chapel 24 hours daily (Please call office for after hours entrance code.)"
+    },
+    {
+     "source": "agent",
+     "bulletin": "f2c26864af82",
+     "page": 1,
+     "said": "Adoration Chapel 24 hours daily (Please call office for after hours entrance code.)"
+    },
+    {
+     "source": "history",
+     "bulletin": "8465796b4f4d",
+     "said": "weekly Monday 00:00 adoration '24 hours daily'"
+    }
+   ],
+   "answer": null
+  },
+  "bulletins_luna_saw": {
+   "B1": "8465796b4f4d",
+   "B2": "f2c26864af82"
+  },
+  "today": "2026-10-04",
+  "n": 20
+ },
+ {
+  "parish": "our-lady-queen-of-peace-rotterdam",
+  "kind": "differs",
+  "days_in_group": 1,
+  "fields": [
+   "end time"
+  ],
+  "luna": "adoration Sat 07:30-08:15 @our-lady-queen-of-peace-rotterdam first",
+  "luna_evidence": [
+   {
+    "bulletin": "B1",
+    "page": 1,
+    "quote": "7:30 am Exposition of the Blessed Sacrament 7:45 am Rosary 8:15 am Benediction",
+    "bulletin_hash": "6d0368e07ea0"
+   },
+   {
+    "bulletin": "B2",
+    "page": 1,
+    "quote": "7:30 am Exposition of the Blessed Sacrament 7:45 am Rosary 8:15 am Benediction",
+    "bulletin_hash": "dfe72e171a88"
+   },
+   {
+    "bulletin": "B3",
+    "page": 1,
+    "quote": "7:30 am Exposition of the Blessed Sacrament 7:45 am Rosary 8:15 am Benediction",
+    "bulletin_hash": "d6b78e0ec6ea"
+   },
+   {
+    "bulletin": "B4",
+    "page": 1,
+    "quote": "7:30 am Exposition of the Blessed Sacrament 7:45 am Rosary 8:15 am Benediction",
+    "bulletin_hash": "6ad95faca13e"
+   }
+  ],
+  "seed": "adoration Sat 07:30 @our-lady-queen-of-peace-rotterdam first",
+  "seed_slot": {
+   "id": "s9",
+   "decision": "include",
+   "page": 1,
+   "rationale": "R1, R11: the newest bulletin prints the monthly devotion, and the three older ones agree; Oct 3 (Sept 27 issue) was a first Saturday. POLICY: exposition with Benediction is Adoration. No end time is printed (Benediction is at 8:15), so none is recorded.",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "6d0368e0",
+     "page": 1,
+     "said": "First Saturday Devotion: Each first Saturday the following will take place at Our Lady Queen of Peace: 7:30 am Exposition of the Blessed Sacrament, 7:45 am Rosary, 8:15 am Benediction, 8:30 am Holy Mass"
+    },
+    {
+     "source": "agent",
+     "bulletin": "dfe72e17",
+     "page": 1,
+     "said": "First Saturday Devotion: Each first Saturday the following will take place at Our Lady Queen of Peace: 7:30 am Exposition of the Blessed Sacrament, 7:45 am Rosary, 8:15 am Benediction, 8:30 am Holy Mass"
+    },
+    {
+     "source": "agent",
+     "bulletin": "d6b78e0e",
+     "page": 1,
+     "said": "First Saturday Devotion: Each first Saturday the following will take place at Our Lady Queen of Peace: 7:30 am Exposition of the Blessed Sacrament, 7:45 am Rosary, 8:15 am Benediction, 8:30 am Holy Mass"
+    },
+    {
+     "source": "agent",
+     "bulletin": "6ad95fac",
+     "page": 1,
+     "said": "First Saturday Devotion: Each first Saturday the following will take place at Our Lady Queen of Peace: 7:30 am Exposition of the Blessed Sacrament, 7:45 am Rosary, 8:15 am Benediction, 8:30 am Holy Mass"
+    },
+    {
+     "source": "history",
+     "bulletin": "6d0368e07ea0",
+     "said": "weekly adoration Saturday 07:30\u201308:15 our-lady-queen-of-peace-rotterdam  \u201cFirst Saturday of the month; includes Benediction\u201d",
+     "page": 1
+    },
+    {
+     "source": "history",
+     "bulletin": "dfe72e171a88",
+     "said": "weekly adoration Saturday 07:30\u201308:15 our-lady-queen-of-peace-rotterdam  \u201cFirst Saturday of the month; includes Benediction\u201d",
+     "page": 1
+    },
+    {
+     "source": "history",
+     "bulletin": "d6b78e0ec6ea",
+     "said": "specific_date adoration 2026-11-07 07:30\u201308:15 our-lady-queen-of-peace-rotterdam  \u201cFirst Saturday Devotion; includes Rosary and Benediction\u201d",
+     "page": 1
+    },
+    {
+     "source": "history",
+     "bulletin": "6ad95faca13e",
+     "said": "weekly adoration Saturday 07:30\u201308:15 our-lady-queen-of-peace-rotterdam  \u201cFirst Saturday of the month\u201d",
+     "page": 1
+    }
+   ],
+   "answer": null
+  },
+  "bulletins_luna_saw": {
+   "B1": "6d0368e07ea0",
+   "B2": "dfe72e171a88",
+   "B3": "d6b78e0ec6ea",
+   "B4": "6ad95faca13e"
+  },
+  "today": "2026-10-18",
+  "n": 21
+ },
+ {
+  "parish": "st-agnes-paul-rose",
+  "kind": "excluded",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": "adoration Wed 15:00-16:30 @st-rose",
+  "luna_evidence": [
+   {
+    "bulletin": "B1",
+    "page": 2,
+    "quote": "3-4:30pm SR - Adoration & Confession",
+    "bulletin_hash": "edfa8e849542"
+   },
+   {
+    "bulletin": "B3",
+    "page": 2,
+    "quote": "3-4:30pm SR - Adoration & Confession",
+    "bulletin_hash": "7f77fcd9f3fd"
+   }
+  ],
+  "seed": "adoration Wed 15:00-16:30 @st-rose",
+  "seed_slot": {
+   "id": "s13",
+   "decision": "exclude",
+   "page": 2,
+   "rationale": "R33: St. Rose Wednesday Adoration is on alternating weeks (website; bulletins show Sep 30, Oct 14, Oct 28 but not Oct 7 or Oct 21), which a weekly slot would misstate. Only the Oct 28 occurrence is recorded as dated. History reads it as weekly.",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "edfa8e84",
+     "page": 2,
+     "said": "3-4:30pm SR - Adoration & Confession (Oct 28, Oct 14, Sep 30)"
+    },
+    {
+     "source": "agent",
+     "bulletin": "7f77fcd9",
+     "page": 2,
+     "said": "3-4:30pm SR - Adoration & Confession (Oct 28, Oct 14, Sep 30)"
+    },
+    {
+     "source": "agent",
+     "bulletin": "1bb5d911",
+     "page": 2,
+     "said": "3-4:30pm SR - Adoration & Confession (Oct 28, Oct 14, Sep 30)"
+    },
+    {
+     "source": "website",
+     "url": "https://www.saintagnespaulrose.org/",
+     "said": "Confession & Adoration: Wednesday: 3:00-4:30pm St. Rose (Alternating weeks, see Calendar)"
+    },
+    {
+     "source": "history",
+     "bulletin": "edfa8e849542",
+     "said": "weekly adoration Wednesday 15:00\u201316:30 st-rose",
+     "page": 2
+    },
+    {
+     "source": "history",
+     "bulletin": "7f77fcd9f3fd",
+     "said": "specific_date adoration 2026-10-14 15:00\u201316:30 st-rose",
+     "page": 2
+    },
+    {
+     "source": "history",
+     "bulletin": "1bb5d9110fc5",
+     "said": "weekly adoration Wednesday 15:00\u201316:30 st-rose",
+     "page": 2
+    }
+   ],
+   "answer": null
+  },
+  "bulletins_luna_saw": {
+   "B1": "edfa8e849542",
+   "B2": "fbee97aa1a87",
+   "B3": "7f77fcd9f3fd",
+   "B4": "d1310844a82a"
+  },
+  "today": "2026-10-25",
+  "n": 22
+ },
+ {
+  "parish": "christ-our-hope-boonville",
+  "kind": "excluded",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": "mass Wed 08:30 @st-joseph-boonville",
+  "luna_evidence": [
+   {
+    "bulletin": "B1",
+    "page": 2,
+    "quote": "Monday through Friday 8:30AM (SJ) Boonville",
+    "bulletin_hash": "958948df87d6"
+   },
+   {
+    "bulletin": "B2",
+    "page": 2,
+    "quote": "Monday through Friday 8:30AM (SJ) Boonville",
+    "bulletin_hash": "7fb8b8a76143"
+   },
+   {
+    "bulletin": "B3",
+    "page": 2,
+    "quote": "Monday through Friday 8:30AM (SJ) Boonville",
+    "bulletin_hash": "0d4872102891"
+   },
+   {
+    "bulletin": "B4",
+    "page": 2,
+    "quote": "Monday through Friday 8:30AM (SJ) Boonville",
+    "bulletin_hash": "1047fd4d9a55"
+   }
+  ],
+  "seed": "mass Wed 08:30 @st-joseph-boonville",
+  "seed_slot": {
+   "id": "s10",
+   "decision": "exclude",
+   "page": 1,
+   "rationale": "R7, R9: the Mass times box moves Wednesday's 8:30 Mass to St. Patrick, and every Wednesday's intentions (Oct 7, 14, 21, 28) list only (St.P) at 8:30, with St. J holding a Holy Hour at 7:30. History put a Wednesday 8:30 Mass at St. Joseph in two of four bulletins; that misreads Monday through Friday.",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "958948df",
+     "page": 1,
+     "said": "Wednesday October 28th 7:30AM-(St.J) Holy Hour. 8:30AM-(St.P)"
+    },
+    {
+     "source": "agent",
+     "bulletin": "958948df",
+     "page": 2,
+     "said": "Monday through Friday 8:30AM (SJ) Boonville ... Wednesday 8:30AM (SP) Forestport"
+    },
+    {
+     "source": "history",
+     "bulletin": "958948df87d6",
+     "said": "weekly mass Wednesday 08:30 st-joseph-boonville",
+     "page": 2
+    },
+    {
+     "source": "history",
+     "bulletin": "1047fd4d9a55",
+     "said": "weekly mass Wednesday 08:30 st-joseph-boonville",
+     "page": 2
+    },
+    {
+     "source": "history",
+     "bulletin": "3e04cec625ea",
+     "said": "weekly mass Wednesday 08:30 st-joseph-boonville",
+     "page": 2
+    }
+   ],
+   "answer": null
+  },
+  "bulletins_luna_saw": {
+   "B1": "958948df87d6",
+   "B2": "7fb8b8a76143",
+   "B3": "0d4872102891",
+   "B4": "1047fd4d9a55"
+  },
+  "today": "2026-10-25",
+  "n": 23
+ },
+ {
+  "parish": "st-leo-the-great",
+  "kind": "excluded",
+  "days_in_group": 1,
+  "fields": null,
+  "luna": "mass Fri 08:30 @st-leo-the-great first",
+  "luna_evidence": [
+   {
+    "bulletin": "B3",
+    "page": 2,
+    "quote": "First Friday - 8:30 AM - Rose Saracino (Fr. Joe)",
+    "bulletin_hash": "326659af65b0"
+   }
+  ],
+  "seed": "mass Fri 08:30 @st-leo-the-great first",
+  "seed_slot": {
+   "id": "s15",
+   "decision": "exclude",
+   "page": null,
+   "rationale": "Only the Sep 27 intentions box labels the first Friday 8:30 AM as an intention (Mass), contradicting its own calendar. No bulletin read covers a first Friday after that; the newest bulletin does not print it.\n\nReview 2026-10-22: Exclude a first-Friday Mass until the same issue\u2019s \u201cMass intention\u201d versus \u201cCommunion Service\u201d contradiction is resolved. Do not treat a Communion Service as Mass.",
+   "sources": [
+    {
+     "source": "agent",
+     "bulletin": "326659af",
+     "page": 2,
+     "said": "Intentions box: 'First Friday - 8:30 AM - Rose Saracino (Fr. Joe)'; the same bulletin's calendar says Friday October 2nd 8:30 AM Communion Service"
+    },
+    {
+     "source": "agent",
+     "bulletin": "66096605",
+     "page": 2,
+     "said": "Friday - 8:30 AM - Communion Service (Oct 16, not a first Friday)"
+    },
+    {
+     "source": "history",
+     "bulletin": "326659af65b0",
+     "said": "weekly mass Friday 08:30 st-leo-the-great",
+     "page": 2
+    }
+   ],
+   "answer": {
+    "choice": 0,
+    "by": "lyonsl2 (via Codex)",
+    "at": "2026-10-22T20:42:31Z"
+   }
+  },
+  "bulletins_luna_saw": {
+   "B1": "66096605166a",
+   "B2": "c6fb30a5623c",
+   "B3": "326659af65b0"
+  },
+  "today": "2026-10-11",
+  "n": 24
+ }
+]

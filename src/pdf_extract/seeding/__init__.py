@@ -13,7 +13,8 @@ switches a parish to update mode (docs/schedule-state-plan.md).
   mode's history and churches.
 - `coverage`: a file's slots against extract mode's history (`seed diff`, and
   the history sources `finalize` attaches).
-- `calls`: second opinions from external models (`seed extract`, `seed ask`).
+- `second_opinion`: the dispatcher's blind second reading in a file, and its differences
+  (`opinion` compares the two).
 - `loader`: approved files into the database.
 - `cli`: `pnpm seed`.
 """

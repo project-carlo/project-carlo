@@ -19,8 +19,8 @@ import { MapContainer, Marker, Polygon, Popup, TileLayer } from "./Leaflet";
 import { useMap, useMapEvents } from "../lib/leafletMap";
 import {
   type ChurchMapItem,
+  continuousRow,
   EVENT_TYPE_LABELS,
-  type EventSummary,
   formatAddress,
   rollUpEventsByDay,
 } from "@carlo/core";
@@ -176,6 +176,42 @@ interface ChurchMapProps {
   /** Church pins open a small card with only the church's name, for a map
    *  too small to hold the full one (the city and church pages' previews). */
   compactPopups?: boolean;
+  /** Framed on another site's page (the embed): the map leaves the page's
+   *  scrolling alone; see FramedGestures. */
+  framed?: boolean;
+}
+
+/**
+ * The gestures of a map framed on another site's page, which mustn't take
+ * the page's scrolling: the wheel zooms only once the map has been clicked,
+ * until the pointer leaves it, and on a touch screen one finger scrolls the
+ * page while two move and zoom the map (Leaflet's pinch pans too).
+ */
+function FramedGestures() {
+  const map = useMap();
+  useEffect(() => {
+    const container = map.getContainer();
+    const wheelOn = () => map.scrollWheelZoom.enable();
+    const wheelOff = () => map.scrollWheelZoom.disable();
+    wheelOff();
+    container.addEventListener("pointerdown", wheelOn);
+    container.addEventListener("mouseleave", wheelOff);
+    const touchOnly = window.matchMedia("(hover: none) and (pointer: coarse)");
+    // Without Leaflet's dragging the container takes `touch-action: pan-x
+    // pan-y`, so the browser scrolls the page for one finger.
+    const syncDragging = () => {
+      if (touchOnly.matches) map.dragging.disable();
+      else map.dragging.enable();
+    };
+    syncDragging();
+    touchOnly.addEventListener("change", syncDragging);
+    return () => {
+      container.removeEventListener("pointerdown", wheelOn);
+      container.removeEventListener("mouseleave", wheelOff);
+      touchOnly.removeEventListener("change", syncDragging);
+    };
+  }, [map]);
+  return null;
 }
 
 /**
@@ -447,8 +483,9 @@ function ViewReporter({ onViewChange }: { onViewChange: (view: MapView) => void 
  * one service at a time, so every time in a popup is the same service; the
  * caption says which, since the rows themselves are only days and times.
  */
-function scheduleCaption(events: EventSummary[]): string {
-  const types = new Set(events.map((event) => event.type));
+function scheduleCaption(church: ChurchMapItem): string {
+  const types = new Set(church.upcoming_events.map((event) => event.type));
+  if (church.continuous) types.add("adoration");
   if (types.size === 1) {
     const [type] = types;
     return EVENT_TYPE_LABELS[type];
@@ -467,11 +504,15 @@ function scheduleCaption(events: EventSummary[]): string {
 function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
   const documentLinks = useDocumentLinks();
   // upcoming_events arrives pre-sorted from fetchChurches; rolling it up keeps
-  // that order while collapsing each day's several times onto one row.
-  const dayRows = useMemo(
-    () => rollUpEventsByDay(church.upcoming_events),
-    [church.upcoming_events],
-  );
+  // that order while collapsing each day's several times onto one row. A
+  // chapel open 24 hours is always the first row, so the row limit never
+  // hides it.
+  const dayRows = useMemo(() => {
+    const rows = rollUpEventsByDay(church.upcoming_events);
+    return church.continuous
+      ? [continuousRow(church.continuous, { compact: true }), ...rows]
+      : rows;
+  }, [church.upcoming_events, church.continuous]);
   const visibleRows = dayRows.slice(0, POPUP_DAY_ROWS);
   const hiddenRowCount = dayRows.length - visibleRows.length;
   const addressLine = formatAddress(church);
@@ -496,7 +537,7 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
         {/* The caption rides in the rule rather than sitting on its own line
             below it — one divider instead of two in a 250px-wide card. */}
         <Fleuron
-          label={scheduleCaption(church.upcoming_events)}
+          label={scheduleCaption(church)}
           className="mb-2.5"
         />
 
@@ -975,6 +1016,7 @@ export const ChurchMap = memo(function ChurchMap({
   mapRef,
   currentChurchId,
   compactPopups = false,
+  framed = false,
 }: ChurchMapProps) {
   const withCoords = useMemo(() => churches.filter(hasCoords), [churches]);
   const clusterIndex = useMemo(
@@ -1022,6 +1064,7 @@ export const ChurchMap = memo(function ChurchMap({
       whenReady={handleReady}
     >
       {onViewChange && <ViewReporter onViewChange={onViewChange} />}
+      {framed && <FramedGestures />}
       <PopupPaneElevator />
       <TileLayer
         attribution={OSM_ATTRIBUTION}

@@ -171,7 +171,7 @@ CHURCH = Kind(
         "latitude", "longitude", "coordinates_from", "name_verified", "address_verified",
         "roster", "evidence",
     ),
-    optional=("replaces", *_REVISIT, "promoted", "research"),
+    optional=("replaces", *_REVISIT, "promoted", "research", "kind"),
     template="""\
 ## Holds Mass
 
@@ -776,6 +776,10 @@ def _check_church(label: str, r: Mapping[str, Any], p: Problems) -> None:
         p.errors.append(f"{label}: latitude must be between -90 and 90")
     if isinstance(lng, int | float) and not isinstance(lng, bool) and not -180 <= lng <= 180:
         p.errors.append(f"{label}: longitude must be between -180 and 180")
+    kind = r.get("kind")
+    if kind not in (None, "", "church", "adoration_chapel"):
+        p.errors.append(f"{label}: kind must be church or adoration_chapel (an Adoration "
+                        f"chapel at its own address), not {kind!r}")
     source = r.get("coordinates_from") or ""
     if lat is not None and not source:
         p.warnings.append(f"{label}: say where the coordinates came from (coordinates_from)")
@@ -1010,7 +1014,7 @@ def export_rows(d: Diocese) -> tuple[list[dict[str, str]], list[dict[str, str]]]
     parishes = [
         {"slug": slug, "name": cell(r.get("name")), "website": cell(r.get("website")),
          "bulletin_provider": cell(r.get("bulletin_provider")),
-         "provider_id": cell(r.get("provider_id"))}
+         "provider_id": cell(r.get("provider_id")), "diocese": d.slug}
         for slug, r in sorted(d.of(PARISH).items()) if slug not in skip_p
     ]
     churches = [
@@ -1022,10 +1026,12 @@ def export_rows(d: Diocese) -> tuple[list[dict[str, str]], list[dict[str, str]]]
     return parishes, churches
 
 
-PARISH_CSV_FIELDS = ["slug", "name", "website", "bulletin_provider", "provider_id"]
+# `diocese` is the folder under data/dioceses/ the parish's record is in; the
+# snapshot carries it to each church for the embed's `diocese=` filter.
+PARISH_CSV_FIELDS = ["slug", "name", "website", "bulletin_provider", "provider_id", "diocese"]
 CHURCH_CSV_FIELDS = [
     "parish_id", "slug", "name", "line1", "line2", "city", "state", "postal_code",
-    "name_verified", "address_verified", "latitude", "longitude",
+    "name_verified", "address_verified", "latitude", "longitude", "kind",
 ]
 
 
@@ -1643,7 +1649,7 @@ def export_csv(diocese: str, out_dir: Path) -> dict[str, Any]:
     return {"diocese": diocese, "written": written}
 
 
-def _write_live_csv(path: Path, columns: list[str], rows: list[dict[str, str]]) -> None:
+def write_live_csv(path: Path, columns: list[str], rows: list[dict[str, str]]) -> None:
     """Write `rows` under the file's own header, adding any of `columns` it lacks."""
     with open(path, encoding="utf-8", newline="") as f:
         header = next(csv.reader(f), [])
@@ -1740,8 +1746,8 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
                     r.pop("promoted", None)
                 else:
                     r["promoted"] = r.get("promoted") or stamp
-        _write_live_csv(storage.PARISHES_CSV_PATH, PARISH_CSV_FIELDS, new_p)
-        _write_live_csv(storage.CHURCHES_CSV_PATH, CHURCH_CSV_FIELDS, new_c)
+        write_live_csv(storage.PARISHES_CSV_PATH, PARISH_CSV_FIELDS, new_p)
+        write_live_csv(storage.CHURCHES_CSV_PATH, CHURCH_CSV_FIELDS, new_c)
         _save(d, after)
         meta_path = diocese_dir(diocese) / META_FILE
         front, body = parse_file(meta_path)

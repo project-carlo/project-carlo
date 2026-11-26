@@ -1,4 +1,4 @@
-import type { ChurchBase } from "@carlo/core";
+import { type ChurchBase, countChurches } from "@carlo/core";
 import { isNearAnyChurch } from "./approximateLocation";
 import { foldSearchText, searchHaystack } from "./churchIndexSearch";
 import {
@@ -302,7 +302,7 @@ function matchCities(
 }
 
 function cityPlace(city: City): PlaceSearchResult {
-  const count = city.churches.length;
+  const count = countChurches(city.churches);
   return {
     id: `city-${city.slug}`,
     title: city.label,

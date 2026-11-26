@@ -12,7 +12,7 @@ from collections.abc import Callable, Collection, Iterator
 from concurrent.futures import ThreadPoolExecutor
 from contextlib import ExitStack, closing
 from dataclasses import dataclass, replace
-from datetime import date
+from datetime import date, timedelta
 from http import HTTPStatus
 from http.client import HTTPException
 from typing import Any, NamedTuple
@@ -57,6 +57,7 @@ from pdf_extract.runs import (
     FETCH_CURRENT,
     FETCH_DOWNLOAD_FAILED,
     FETCH_NEW,
+    FETCH_PAUSED,
     FETCH_RECHECK_FAILED,
     FETCH_RESOLVE_FAILED,
     FETCH_SAVE_FAILED,
@@ -91,6 +92,25 @@ PARISHES_ONLINE_ISSUE_FILE = re.compile(r"/(\d{8})([A-Z])\.pdf$", re.IGNORECASE)
 # How much older than the newest issue listed a bulletin may be and still be
 # preferred to it. Past that, the parish has stopped posting "B" issues.
 PARISHES_ONLINE_BULLETIN_LAG_DAYS = 7
+# ParishesOnline's file host: Amazon S3 behind CloudFront, not the directory's
+# servers. It answers 403 for a file that is not there.
+PARISHES_ONLINE_FILES_HOST = "container.parishesonline.com"
+PARISHES_ONLINE_PUBLICATION_URL_TEMPLATE = (
+    "https://parishesonline.com/publication-page/{provider_id}?selectedPublication={pdf_url}"
+)
+# A ParishesOnline bulletin as the fetch stage stores it: the publication page,
+# naming the issue's file under the parish's account (`14/1225`), which stays
+# the same from week to week.
+_PARISHES_ONLINE_STORED_LINK = re.compile(
+    r"https://parishesonline\.com/publication-page/(?P<provider_id>[^/?#]+)"
+    rf"\?selectedPublication=https://{re.escape(PARISHES_ONLINE_FILES_HOST)}"
+    r"/bulletins/(?P<account>\d{2}/\d{4})/\d{8}[A-Z]\.pdf",
+)
+# How many Sundays past the run's are checked for an issue posted early. Of
+# 1,458 stored ParishesOnline bulletins, 15 were for the Sunday after the
+# run's and none further ahead; the 2026-11-15 run picked 47 of 556 a week
+# ahead and none two weeks ahead.
+PARISHES_ONLINE_WEEKS_AHEAD = 1
 DISCOVER_MASS_BULLETIN_URL_TEMPLATE = "https://discovermass.com/church/{provider_id}/"
 
 # Per-request timeout for direct PDF downloads over HTTP.
@@ -353,6 +373,78 @@ def build_latest_parishes_online_bulletin_links(
     source_url, fetch_url = _resolve_parishes_online_latest_link(provider_id=provider_id, page=page)
     _ = reference_date
     return BulletinLink(source_url=source_url, fetch_url=fetch_url)
+
+
+@dataclass(frozen=True)
+class _Prediction:
+    """Where a ParishesOnline parish's bulletin for the run's Sunday would be."""
+
+    link: BulletinLink
+    """The weekly bulletin for the run's Sunday, linked as the organization page links it."""
+    later: tuple[str, ...]
+    """The addresses later Sundays' bulletins would have, which must not be on
+    the file host for `link` to be the one the page leads to."""
+
+
+def _predict_parishes_online_link(
+    source: FetchSource, stored: list[dict], sunday: date, today: date,
+) -> _Prediction | None:
+    """This Sunday's ParishesOnline bulletin address, if it can stand in for the page.
+
+    Built from the account in the parish's newest stored bulletin. None when
+    that is not a ParishesOnline issue of this parish's organization, or when
+    the run comes before its Sunday (`nearest_sunday` rounds Thursday on).
+
+    The organization page lists an issue once it is uploaded and its display
+    date has passed, and leads to the newest weekly ("B") issue listed
+    (`_pick_parishes_online_issue`). A display date is set by the parish:
+    some are months early, most the Thursday before the issue's Sunday. So
+    this Sunday's bulletin on the file host is the page's pick when:
+
+    - it is listed: on or after its Sunday, its display date has passed;
+    - no later weekly bulletin is listed. A later one is on the file host
+      before it is listed, if it is listed at all, and only the page can say
+      which; so if one is there (`later`), the page is read instead. None
+      has been more than `PARISHES_ONLINE_WEEKS_AHEAD` weeks ahead;
+    - the page does not prefer a "Special" insert, which it does only to a
+      bulletin more than `PARISHES_ONLINE_BULLETIN_LAG_DAYS` older: an insert
+      posted two weeks ahead.
+
+    The file host keeps old issues for years, but an address names its
+    issue's date, so an old one is never taken for this week's. When this
+    Sunday's is not there, the newest the page lists may be an older one,
+    which only the page can tell.
+    """
+    if source.provider != PARISHES_ONLINE_TYPE or today < sunday:
+        return None
+    newest = newest_bulletin(stored)
+    if newest is None or newest.get("wrong_bulletin"):
+        return None
+    match = _PARISHES_ONLINE_STORED_LINK.fullmatch(newest["source_url"])
+    # A parish moved to another organization page may still have bulletins
+    # posted under its old one.
+    if match is None or match["provider_id"] != source.provider_id:
+        return None
+
+    def address(day: date) -> str:
+        return (
+            f"https://{PARISHES_ONLINE_FILES_HOST}/bulletins/{match['account']}/{day:%Y%m%d}B.pdf"
+        )
+
+    pdf_url = address(sunday)
+    return _Prediction(
+        link=BulletinLink(
+            source_url=PARISHES_ONLINE_PUBLICATION_URL_TEMPLATE.format(
+                provider_id=source.provider_id, pdf_url=pdf_url,
+            ),
+            fetch_url=pdf_url,
+            how="predicted from the stored bulletin's address",
+        ),
+        later=tuple(
+            address(sunday + timedelta(weeks=weeks))
+            for weeks in range(PARISHES_ONLINE_WEEKS_AHEAD, 0, -1)
+        ),
+    )
 
 
 def build_latest_discover_mass_bulletin_links(
@@ -649,11 +741,14 @@ class Download:
 
 def _download_bulletin(
     *, fetch_url: str, source_url: str, validators: Validators | None = None,
+    source_fallback: bool = True,
 ) -> Download:
     """Download a bulletin, asking first whether `validators` still name it.
 
     Raises `NotABulletin` when what came back, from either address, is
-    neither a PDF nor an image.
+    neither a PDF nor an image. Without `source_fallback`, a fetch URL that
+    fails is not followed by the source URL: for a predicted address that is
+    a page on another site, which could only say the file is not there.
     """
     conditional = validators.request_headers() if validators else {}
 
@@ -678,6 +773,8 @@ def _download_bulletin(
         if conditional and isinstance(exc, HTTPError) and exc.code == HTTPStatus.NOT_MODIFIED:
             LOGGER.info("Not modified since the copy we have: %s", fetch_url)
             return Download(pdf=None)
+        if not source_fallback:
+            raise
         LOGGER.warning("Primary fetch failed (%s), falling back to source URL: %s", exc, source_url)
         # The validators belong to the fetch URL, so none are kept from here.
         pdf = as_bulletin_pdf(_http_get(source_url, referer=source_url).body)
@@ -726,7 +823,7 @@ FETCH_WORKERS = 6
 
 # Domains that serve many parishes' pages and bulletins, mapped to the
 # provider they belong to. A provider's own directory and its PDF host
-# (parishesonline.com, container.parishesonline.com) are one site.
+# (files.ecatholic.com) are one site, unless `_OWN_SITE_HOSTS` says otherwise.
 _PROVIDER_DOMAINS: dict[str, str] = {
     "parishesonline.com": PARISHES_ONLINE_TYPE,
     "ecatholic.com": ECATHOLIC_TYPE,
@@ -735,6 +832,11 @@ _PROVIDER_DOMAINS: dict[str, str] = {
 # Providers whose parish pages all come from the provider's servers, whatever
 # domain the parish uses (an eCatholic parish's /bulletins is eCatholic's).
 _HOSTED_PROVIDERS = frozenset(_PROVIDER_DOMAINS.values())
+# Hosts that are a site of their own, apart from their domain's provider.
+# ParishesOnline's file host is CloudFront, not the servers behind the
+# organization pages, so a worker can download one parish's bulletin while
+# another reads a page; each still sees one of our requests at a time.
+_OWN_SITE_HOSTS = frozenset({PARISHES_ONLINE_FILES_HOST})
 # Sites so large that our requests are nothing to them: never held, so no
 # worker waits for one.
 _UNLIMITED_SITES = frozenset({
@@ -743,13 +845,34 @@ _UNLIMITED_SITES = frozenset({
 })
 
 
+# Sites the fetch sends no request to, for now: their parishes are reported
+# `paused` and keep their last bulletin. Bon Venture sent bulletins at a few
+# dozen KB/s on 2026-11-22 (one took 19 minutes), five of the six workers
+# waited on it, and the weekly run timed out (#262). Take it out once a
+# download has a deadline (#264).
+_PAUSED_SITES = frozenset({"bonventure.net"})
+_URL_IN_TEXT = re.compile(r"https?://\S+")
+
+
+def _paused_site(*texts: str) -> str | None:
+    """The paused site any URL in `texts` lands on, if one does."""
+    for text in texts:
+        for url in _URL_IN_TEXT.findall(text):
+            if (site := _site_for_url(url)) in _PAUSED_SITES:
+                return site
+    return None
+
+
 def _site_for_url(url: str) -> str:
     """The site a request to `url` lands on: its provider, else its domain.
 
     The domain is the one its owner registered, so a diocese's shared parish
     host (parishes.rcda.org) and its main site (www.rcda.org) are one site.
     """
-    domain = registrable_domain(url_host(url))
+    host = url_host(url)
+    if host in _OWN_SITE_HOSTS:
+        return host
+    domain = registrable_domain(host)
     return _PROVIDER_DOMAINS.get(domain, domain)
 
 
@@ -770,6 +893,23 @@ class _FetchJob:
     """The parish's stored bulletins. Read-only until the job is recorded."""
     retried: bool = False
     """Whether the job is being tried again, its browser having broken under it."""
+    predicted: _Prediction | None = None
+    """Where the bulletin would be, to try before resolving the link in the
+    browser (see `_predict_parishes_online_link`)."""
+    missed: bool = False
+    """Whether the job is back in line for the browser, its predicted address
+    having missed."""
+
+
+# How a ParishesOnline parish's bulletin was found, for the run summary: at
+# its predicted address, in the browser after that did not serve it (or a
+# later issue was posted), or in the browser with no address to predict.
+DIRECT_HIT = "direct_hit"
+DIRECT_MISS = "direct_miss"
+NOT_PREDICTED = "not_predicted"
+# Not a recorded status: the job goes back in line on its own site, for the
+# browser, rather than its worker waiting for that site.
+_PREDICTION_MISSED = "prediction_missed"
 
 
 @dataclass(frozen=True)
@@ -787,6 +927,8 @@ class _Fetched:
     duplicate: Duplicate | None = None
     """The stored bulletin the download turned out to be."""
     seen_at: str | None = None
+    route: str | None = None
+    """For a ParishesOnline parish, how its bulletin was found (`DIRECT_HIT`...)."""
 
 
 class _SiteLanes:
@@ -794,7 +936,9 @@ class _SiteLanes:
 
     A worker holds one site at a time: its parish's site while its tab
     resolves the bulletin link (`take`), then the PDF's site while it
-    downloads (`switch`), until it lets go (`release`) before compacting.
+    downloads (`switch`), until it lets go (`release`) before compacting. A
+    parish with a predicted address starts on that address's site instead,
+    and goes back in line on its own site if the prediction misses (`done`).
     Holding only one, a worker never waits for a site while another waits
     for one it holds, so the lanes cannot deadlock. A page's requests to
     other sites (a flipbook, a redirect) are not waited for; there are only
@@ -979,6 +1123,7 @@ def fetch_bulletins(
     sunday = nearest_sunday(today or date.today())
 
     tally: Counter[str] = Counter()
+    routes: Counter[str] = Counter()
     attempted_slugs: list[str] = []
 
     conn = connect_db()
@@ -1008,9 +1153,21 @@ def fetch_bulletins(
                     detail=f"already have the bulletin for {sunday.isoformat()}",
                 )
                 continue
+            # A recipe that reads a paused site's page: not even resolved.
+            if paused := _paused_site(fetch_source.provider_id, fetch_source.recipe):
+                LOGGER.info("Not fetching parish %s: %s is paused", slug, paused)
+                tally[FETCH_PAUSED] += 1
+                record_parish_result(
+                    conn, run_id, slug, "fetch", FETCH_PAUSED, detail=f"{paused} is paused",
+                )
+                continue
+            predicted = _predict_parishes_online_link(
+                fetch_source, stored, sunday, today or date.today(),
+            )
             jobs.append((
-                _site_for_source(fetch_source),
-                _FetchJob(parish=parish, source=fetch_source, stored=stored),
+                _site_for_url(predicted.link.fetch_url) if predicted
+                else _site_for_source(fetch_source),
+                _FetchJob(parish=parish, source=fetch_source, stored=stored, predicted=predicted),
             ))
 
         # Closed on the way out, so a failure here stops the workers too.
@@ -1019,6 +1176,8 @@ def fetch_bulletins(
         )) as results:
             for fetched in results:
                 tally[_record_fetched(conn, run_id, fetched)] += 1
+                if fetched.route is not None:
+                    routes[fetched.route] += 1
     finally:
         conn.close()
 
@@ -1038,11 +1197,15 @@ def fetch_bulletins(
         "already_current": tally[FETCH_CURRENT],
         "unchanged_bulletins": tally[FETCH_UNCHANGED],
         "recheck_failed": tally[FETCH_RECHECK_FAILED],
+        "paused_parishes": tally[FETCH_PAUSED],
         "failed_parishes": (
             tally[FETCH_RESOLVE_FAILED] + tally[FETCH_DOWNLOAD_FAILED]
             + tally[FETCH_SAVE_FAILED] + tally[FETCH_TOO_LARGE]
         ),
         "stale_parishes": len(stale),
+        "parishes_online_direct_hits": routes[DIRECT_HIT],
+        "parishes_online_direct_misses": routes[DIRECT_MISS],
+        "parishes_online_not_predicted": routes[NOT_PREDICTED],
     }
     LOGGER.info("Fetch stage finished: %s", result)
     return result
@@ -1089,7 +1252,15 @@ def _fetch_in_parallel(
                     fetched = _fetch_one(
                         job, lanes=lanes, tab=tab, store=store, sunday=sunday, today=today,
                     )
-                    if tab.broken and fetched.status == FETCH_RESOLVE_FAILED and not job.retried:
+                    if fetched.status == _PREDICTION_MISSED:
+                        # Whichever worker next finds the directory free reads
+                        # the page; this one takes another parish meanwhile, so
+                        # misses do not pile up workers waiting for it.
+                        again = (
+                            _site_for_source(job.source),
+                            replace(job, predicted=None, missed=True),
+                        )
+                    elif tab.broken and fetched.status == FETCH_RESOLVE_FAILED and not job.retried:
                         # The browser broke under this parish: it is tried
                         # again, by whichever worker has a browser first.
                         LOGGER.warning(
@@ -1152,53 +1323,79 @@ def _fetch_one(
     """Resolve, download and store one parish's bulletin; no database access.
 
     Holds the parish's site (taken from `lanes`) while resolving, then the
-    PDF's site while downloading, and neither while compacting.
+    PDF's site while downloading, and neither while compacting. A parish with
+    a predicted address holds its site while trying it, and comes back
+    `_PREDICTION_MISSED` when that misses, to be resolved as any other.
     """
     slug = job.parish["slug"]
+    route = None
+    if job.source.provider == PARISHES_ONLINE_TYPE:
+        route = DIRECT_MISS if job.missed else NOT_PREDICTED
+
+    def result(status: str, **fields: Any) -> _Fetched:
+        return _Fetched(job, status, route=route, **fields)
+
     try:
         LOGGER.info("Fetching parish %s (%s)", slug, job.source.provider)
-        try:
-            link = _build_bulletin_link(
-                job.source.provider, job.source.provider_id, page=tab.page,
-                recipe=job.source.recipe, reference_date=today,
-            )
-        except ValueError as exc:
-            LOGGER.warning("Skipping parish %s: %s", slug, exc)
-            return _Fetched(job, FETCH_RESOLVE_FAILED, detail=str(exc))
-        except Exception as exc:
-            LOGGER.warning(
-                "Failed resolving bulletin link for parish %s: %s", slug, exc, exc_info=True,
-            )
-            return _Fetched(job, FETCH_RESOLVE_FAILED, detail=f"{type(exc).__name__}: {exc}")
-        finally:
-            tab.park()
+        found = _download_predicted(job)
+        if found is not None:
+            route = DIRECT_HIT
+            link, known, download = found
+            LOGGER.info("Parish %s: bulletin at its predicted address %s", slug, link.fetch_url)
+        elif job.predicted:
+            LOGGER.info("Parish %s: prediction missed; resolving in the browser", slug)
+            return result(_PREDICTION_MISSED)
+        else:
+            if route == NOT_PREDICTED:
+                LOGGER.info(
+                    "Parish %s: no stored ParishesOnline address to predict from;"
+                    " resolving in the browser", slug,
+                )
+            try:
+                link = _build_bulletin_link(
+                    job.source.provider, job.source.provider_id, page=tab.page,
+                    recipe=job.source.recipe, reference_date=today,
+                )
+            except ValueError as exc:
+                LOGGER.warning("Skipping parish %s: %s", slug, exc)
+                return result(FETCH_RESOLVE_FAILED, detail=str(exc))
+            except Exception as exc:
+                LOGGER.warning(
+                    "Failed resolving bulletin link for parish %s: %s", slug, exc, exc_info=True,
+                )
+                return result(FETCH_RESOLVE_FAILED, detail=f"{type(exc).__name__}: {exc}")
+            finally:
+                tab.park()
 
-        # The address is never taken to mean we have the bulletin: one
-        # address can carry a new issue each week, and one issue can
-        # come from a new address each time. It only lets the server
-        # say the copy we have from it is current.
-        known = validators_for(link.source_url, job.stored)
-        try:
-            lanes.switch(_site_for_url(link.fetch_url))
-            download = _download_bulletin(
-                fetch_url=link.fetch_url, source_url=link.source_url,
-                validators=None if known is None else Validators(
-                    known.bulletin.get("etag"), known.bulletin.get("last_modified"),
-                ),
-            )
-        except (OSError, HTTPException) as exc:
-            LOGGER.warning("Failed downloading bulletin for %s: %s", slug, exc)
-            # A re-check of this week's bulletin, which we already have from
-            # this address but could not trust the date of, is not a failure
-            # to fetch. A bulletin from an earlier week at the same address is
-            # no such thing: the site may have this week's issue there now.
-            if _rechecks_this_weeks_bulletin(job.stored, link.source_url, sunday):
-                status = FETCH_RECHECK_FAILED
-            elif isinstance(exc, DownloadTooLarge):
-                status = FETCH_TOO_LARGE
-            else:
-                status = FETCH_DOWNLOAD_FAILED
-            return _Fetched(job, status, detail=f"{type(exc).__name__}: {exc}", link=link)
+            # A parish site that links its bulletin on a paused site.
+            if paused := _paused_site(link.fetch_url):
+                LOGGER.info("Not fetching parish %s: %s is paused", slug, paused)
+                return result(FETCH_PAUSED, detail=f"{paused} is paused", link=link)
+
+            # The address is never taken to mean we have the bulletin: one
+            # address can carry a new issue each week, and one issue can
+            # come from a new address each time. It only lets the server
+            # say the copy we have from it is current.
+            known = validators_for(link.source_url, job.stored)
+            try:
+                lanes.switch(_site_for_url(link.fetch_url))
+                download = _download_bulletin(
+                    fetch_url=link.fetch_url, source_url=link.source_url,
+                    validators=_validators_of(known),
+                )
+            except (OSError, HTTPException) as exc:
+                LOGGER.warning("Failed downloading bulletin for %s: %s", slug, exc)
+                # A re-check of this week's bulletin, which we already have from
+                # this address but could not trust the date of, is not a failure
+                # to fetch. A bulletin from an earlier week at the same address is
+                # no such thing: the site may have this week's issue there now.
+                if _rechecks_this_weeks_bulletin(job.stored, link.source_url, sunday):
+                    status = FETCH_RECHECK_FAILED
+                elif isinstance(exc, DownloadTooLarge):
+                    status = FETCH_TOO_LARGE
+                else:
+                    status = FETCH_DOWNLOAD_FAILED
+                return result(status, detail=f"{type(exc).__name__}: {exc}", link=link)
     finally:
         lanes.release()
 
@@ -1211,8 +1408,8 @@ def _fetch_one(
         duplicate = find_duplicate(content_hash, job.stored)
     validators = replace(download, pdf=None)
     if duplicate is not None:
-        return _Fetched(
-            job, FETCH_UNCHANGED, link=link, download=validators, duplicate=duplicate,
+        return result(
+            FETCH_UNCHANGED, link=link, download=validators, duplicate=duplicate,
             seen_at=seen_at,
         )
     assert download.pdf is not None and content_hash is not None
@@ -1232,17 +1429,86 @@ def _fetch_one(
                     f" {MAX_STORED_BULLETIN_BYTES / 1e6:.0f} MB limit, so not stored"
                 )
                 LOGGER.warning("Parish %s: %s", slug, detail)
-                return _Fetched(job, FETCH_TOO_LARGE, detail=detail, link=link)
+                return result(FETCH_TOO_LARGE, detail=detail, link=link)
             store.put(key, compacted, content_type="application/pdf")
     except Exception as exc:
         LOGGER.warning("Failed saving bulletin for parish %s: %s", slug, exc, exc_info=True)
-        return _Fetched(
-            job, FETCH_SAVE_FAILED, detail=f"{type(exc).__name__}: {exc}", link=link,
+        return result(
+            FETCH_SAVE_FAILED, detail=f"{type(exc).__name__}: {exc}", link=link,
         )
-    return _Fetched(
-        job, FETCH_NEW, link=link, download=validators, content_hash=content_hash,
+    return result(
+        FETCH_NEW, link=link, download=validators, content_hash=content_hash,
         seen_at=seen_at,
     )
+
+
+def _validators_of(known: Duplicate | None) -> Validators | None:
+    """What to ask the server whether `known`, a stored bulletin, is still current."""
+    if known is None:
+        return None
+    return Validators(known.bulletin.get("etag"), known.bulletin.get("last_modified"))
+
+
+def _download_predicted(job: _FetchJob) -> tuple[BulletinLink, Duplicate | None, Download] | None:
+    """The job's predicted bulletin, its stored copy to compare with, and the
+    download; None when the prediction misses.
+
+    It is downloaded as a resolved link would be, so a 304 or a page served
+    in a PDF's place is judged the same way. Any failure is a miss, and the
+    browser's link gets the failure its usual status.
+    """
+    if job.predicted is None:
+        return None
+    link = job.predicted.link
+    for later in job.predicted.later:
+        if not _missing_from_file_host(later, referer=link.source_url):
+            LOGGER.info(
+                "A later issue may be posted (%s); only the organization page says if it"
+                " is listed", later,
+            )
+            return None
+    known = validators_for(link.source_url, job.stored)
+    try:
+        download = _download_bulletin(
+            fetch_url=link.fetch_url, source_url=link.source_url,
+            validators=_validators_of(known), source_fallback=False,
+        )
+    except (OSError, HTTPException) as exc:
+        LOGGER.info("No bulletin at predicted address %s (%s)", link.fetch_url, exc)
+        return None
+    return link, known, download
+
+
+# S3 answers a missing key with an XML error naming one of these codes:
+# AccessDenied when the bucket does not let us list it (ParishesOnline's,
+# checked 2026-11-24), NoSuchKey when it does.
+_S3_ERROR_CODE = re.compile(rb"<Code>(?:AccessDenied|NoSuchKey)</Code>")
+_S3_ERROR_BYTES = 4096
+
+
+def _missing_from_file_host(url: str, *, referer: str) -> bool:
+    """Whether ParishesOnline's file host says it has no file at `url`.
+
+    Asks for the first byte only. Only S3's own answer for a missing key
+    counts: a 403 from CloudFront in front of it (a bot check, say) could be
+    hiding a file that is there. Anything else (the file, an error, no
+    answer) is not taken to mean the file is missing.
+    """
+    try:
+        _http_get(url, referer=referer, extra_headers={"Range": "bytes=0-0"})
+    except HTTPError as exc:
+        if exc.code not in (HTTPStatus.FORBIDDEN, HTTPStatus.NOT_FOUND):
+            return False
+        if (exc.headers or {}).get("Server") != "AmazonS3":
+            return False
+        try:
+            body = exc.read(_S3_ERROR_BYTES)
+        except (OSError, HTTPException):
+            return False
+        return _S3_ERROR_CODE.search(body or b"") is not None
+    except (OSError, HTTPException):
+        return False
+    return False
 
 
 def _record_fetched(conn, run_id: str | None, fetched: _Fetched) -> str:

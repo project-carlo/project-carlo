@@ -49,11 +49,20 @@ questions` lists answered questions, their leanings and what they cite.
   or the newest bulletin looks like an old issue or another parish's.
 - Do: read the older bulletins on that point and cite each in an `agent` source.
 
-**R4. Model calls are a last resort.**
-- When: your reading and history still leave doubt.
-- Do: ask a targeted question (`seed ask`). Use a full extraction (`seed extract`) only for
-  a bulletin you can't make sense of. Cite the call by its id. A clear parish needs no
-  call.
+**R4. The second opinion: answer each difference from the bulletin.**
+- When: your draft passed its checks and the dispatcher's second opinion differs from it.
+  A model of another family (gpt-6-luna) read the newest few bulletins with POLICY, on its
+  own: without your draft, history, the website or precedents. Model calls are the
+  dispatcher's; you make none.
+- Do: re-read the page the difference quotes, and your own source, then change the slot,
+  ask (a `needs_human` question with its reading as an option, when R28–R32 apply), or
+  keep the draft with `seed opinion keep`, citing the bulletin page that supports it and
+  the rule. It is a second reader, not an authority: it is often wrong where these rules
+  settle a case (R6 website times, R12 and R19 older evidence, R23 unlisted chapels, R33
+  patterns the file can't express), and those are quick keeps. Never change a slot only
+  because it disagrees, and never keep one without re-reading the page. Don't edit
+  `second_opinion`: only `seed opinion keep` writes there, and the dispatcher's sources
+  on slots it agrees with ("gpt-6-luna read the same") are its own.
 
 **R5. The website: when to look.**
 - When: a slot needs it: the bulletins disagree, or a slot's location or regularity is
@@ -265,14 +274,32 @@ venue from it. Ask when it is unclear which listed church is intended (R32).
   reason can share one rationale.
 
 **R26. Nothing to record.**
-- When: something you leave out has no time (a chapel open only by arrangement,
-  confession by appointment).
+- When: something you leave out has no time (confession by appointment, a chapel open
+  only by appointment for set hours). A chapel open around the clock is R46, not this.
 - Do: `"entry": null`. Never make up a time to fill it.
 
 **R37. A Holy Hour inside an Adoration period already recorded.**
 - When: the Holy Hour is entirely inside Adoration at the same church on the same days.
 - Do: keep the longer Adoration period. Mention the Holy Hour in a note when useful;
   do not add a second overlapping Adoration slot for the same availability.
+- Not for a chapel open 24 hours (R46): a scheduled Holy Hour or Benediction at that
+  church keeps its own weekly slot.
+
+**R46. A chapel open 24 hours.**
+- When: the parish has a standing Adoration chapel open every day around the clock
+  ("Perpetual Adoration Chapel, open 24 hours", "24/7 Adoration"), at a listed church
+  under the chapel rules (R38, R22, R23).
+- Do: one `include` slot, `adoration 24h`, never seven 00:00–23:59 weekly slots. Set
+  `access` from what the source says: `not-stated` when it says nothing (never assume no
+  code is needed); `code-after-hours` when a code is needed at some hours only, with
+  `open=HH:MM-HH:MM` for the unlocked hours when given ("access code needed 9:00 PM-6:00
+  AM" is `open=06:00-21:00`); `code` when a code is needed at every hour; `arrangement`
+  when it is open only to those who arrange it with the parish ("for access contact the
+  Rectory Office"). A note names the chapel or a short exception ("closed during Mass"),
+  never a person, phone number, email address or code.
+- Not this: Adoration around the clock on some days only is weekly slots; a one-off
+  24-hour or Forty Hours devotion is dated; a chapel only "open for prayer" is R38's.
+  Don't write "Perpetual Adoration" in a note unless the source does.
 
 **R38. A parish's Eucharistic chapel hours can be Adoration.**
 - When: the parish identifies prayer before the Blessed Sacrament in an on-site chapel
@@ -292,8 +319,8 @@ venue from it. Ask when it is unclear which listed church is intended (R32).
 ## Asking
 
 **R27. One decision, one question.**
-- When: one answer decides several slots (the seven days of a chapel, a confession window
-  before every Mass).
+- When: one answer decides several slots (the days of a weekday Adoration schedule, a
+  confession window before every Mass).
 - Do: give the slots one `group`, with the same question and the same options in the
   same order, leaning the same way. Do not group uncertain weekly recurrence with an
   explicit dated cancellation: rejecting the weekly pattern must not discard that

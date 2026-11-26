@@ -10,6 +10,7 @@ others keep working. The parts, each in its own module:
 - `usage.Poller`: every usage reading, shared, spaced and cooled down per account.
 - `answers`: issues for blocking flags, and what the owner's answers do.
 - `housekeeping`: readings, issues, merged Runs, seed readiness and backups between jobs.
+- `opinions`: a seed Run's second opinions, asked in the background (engine reveals them).
 - `metrics.readings`: the quota readings for measuring. The rest of `metrics` (tokens,
   attempt metadata, the reports) is called from these parts, never the other way round.
 """
@@ -32,6 +33,7 @@ from pdf_extract.factory.forge import Forge
 from pdf_extract.factory.housekeeping import Housekeeping
 from pdf_extract.factory.ledger import Ledger
 from pdf_extract.factory.metrics.readings import Readings
+from pdf_extract.factory.opinions import Opinions
 from pdf_extract.factory.outcome import Outcome
 from pdf_extract.factory.secrets import Secrets, command_env
 from pdf_extract.factory.usage import Fetch, Poller, fetch_usage
@@ -73,6 +75,7 @@ class Dispatcher:
         cleanup: Callable[[], None] | None = None,
         sandbox_dir: Path | None = None,
         push: bool = True,
+        opinions: Opinions | None = None,
     ) -> None:
         self.ledger, self.config, self.clock = ledger, config, clock
         self.usage = Poller(ledger, config, fetch_usage, clock)
@@ -86,7 +89,7 @@ class Dispatcher:
         self.engine = Engine(ledger, config, repo=repo, forge=forge, attempts=self.attempts,
                              answers=self.answers, clock=clock, commands=commands,
                              secrets=secrets, db_path=db_path, queue_path=queue_path,
-                             push=push)
+                             push=push, opinions=opinions)
         # Sandboxed workers' workspaces, one per Run, go when the Run is retired.
         self.housekeeping = Housekeeping(ledger, config, repo=repo, forge=forge,
                                          readings=self.readings, answers=self.answers,

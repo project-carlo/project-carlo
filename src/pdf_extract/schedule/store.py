@@ -147,13 +147,13 @@ def live_entries(conn: sqlite3.Connection, parish_id: int) -> dict[int, Entry]:
 
 
 def retire_ended(live: dict[int, Entry], today: date) -> list[Change]:
-    """Deletes for the weekly entries whose `valid_until` is before `today`, taken out of `live`.
+    """Deletes for the recurring entries whose `valid_until` is before `today`, taken out of `live`.
 
     An ended entry is hidden from the view, the snapshot and the model, so it
     must not count toward the checks or block a new entry for its slot. A
     revision written on `today` starts with these deletes.
     """
-    ended = sorted(i for i, e in live.items() if e.weekly and e.expired_before(today))
+    ended = sorted(i for i, e in live.items() if e.recurring and e.expired_before(today))
     for entry_id in ended:
         del live[entry_id]
     return [Change(DELETE, before_entry_id=entry_id) for entry_id in ended]
@@ -168,11 +168,14 @@ def current_revision(conn: sqlite3.Connection, parish_id: int) -> int:
 
 
 def _view_order(entry: Entry, slug: str) -> tuple:
+    """A church's continuous chapel first, then weekly entries, then dated ones."""
+    if entry.continuous:
+        return (slug, -1, (-1, ""), -1, entry.event_type, entry.valid_from or "")
     anchor = (
         (DAYS.index(entry.day_of_week), "") if entry.weekly
         else (len(DAYS), entry.date or "")
     )
-    return (slug, 0 if entry.weekly else 1, anchor, entry.start_time, entry.event_type)
+    return (slug, 0 if entry.weekly else 1, anchor, entry.start_time, entry.event_type, "")
 
 
 def render_view(
@@ -182,7 +185,8 @@ def render_view(
 
     Dated entries before `call_date` are left out. Entries are grouped by
     church (every non-retired church is listed, even with no entries), then
-    ordered weekly before dated, by weekday or date, then time.
+    ordered: a continuous chapel, then weekly before dated, by weekday or date,
+    then time.
     """
     live = live_entries(conn, parish_id)
     churches = parish_churches(conn, parish_id)

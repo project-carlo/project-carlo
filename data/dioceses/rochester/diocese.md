@@ -4,7 +4,7 @@ state: NY
 website: https://www.dor.org
 status: promoted
 gcatholic: roch0
-promoted: 2026-10-07
+promoted: 2026-11-24
 ---
 
 Twelve counties of western and central New York: Monroe (Rochester), Livingston, Ontario,
@@ -198,3 +198,8 @@ Newest first: date, what was done, and the `pnpm diocese coverage` numbers after
   senior-living Masses of Eastern Wayne (DeMay Living Center, The Terrace) or Auburn's "FLCL"
   nursing-home Mass; explained in the parish records. Nothing to promote. Coverage: directory
   168/168; GCatholic 165/165; parish-directory 134/134.
+- 2026-11-24: Peace of Christ's Perpetual Adoration Chapel (123 Whittington Rd.) is a church
+  row again, `peace-of-christ-adoration-chapel-rochester` ("Peace of Christ Perpetual
+  Adoration Chapel") with `kind: adoration_chapel`, replacing its `no-public-mass` exclusion
+  `perpetual-adoration-chapel-rochester`: a parish's Adoration chapel at its own address is now
+  a row. Its 24-hour Adoration and Tuesday Holy Hours come from a correction file. Promoted.

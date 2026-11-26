@@ -2,7 +2,11 @@ import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import {
   type ChurchDetail,
+  type ContinuousAdoration,
+  continuousAccessLine,
+  continuousTimes,
   DAY_ORDER,
+  EVERY_DAY,
   EVENT_TYPE_LABELS,
   EVENT_TYPE_ORDER,
   type EventSummary,
@@ -251,8 +255,68 @@ function churchCrumbs(church: ChurchDetail, city: CityLink | null): Crumb[] {
   return crumbs;
 }
 
+/**
+ * A chapel open 24 hours, as the first row of the Adoration grid: "Every day
+ * — Open 24 hours", its name, and how to get in, in the site's own words.
+ */
+function ContinuousRow({
+  chapel,
+  church,
+  sectionPage,
+}: {
+  chapel: ContinuousAdoration;
+  church: ChurchDetail;
+  sectionPage: number | null;
+}) {
+  const source = church.schedule_source
+    ? titleCase(SOURCE_NAMES[church.schedule_source])
+    : "The bulletin";
+  const access = continuousAccessLine(chapel, { source });
+  const page = chapel.page_number;
+  return (
+    <div className="grid grid-cols-[6rem_1fr] items-baseline gap-4 py-2.5">
+      <dt className="smallcaps text-[0.875rem] text-ink-soft">{EVERY_DAY}</dt>
+      <dd className="font-serif text-[1.05rem] leading-snug text-ink">
+        <span>{continuousTimes(chapel)}</span>
+        <EventNote note={chapel.note} />
+        {page != null && page !== sectionPage ? (
+          <ChapelPageRef page={page} bulletinUrl={church.bulletin_url} />
+        ) : null}
+        {access ? (
+          <span className={`block ${ANNOTATION_CLASS} text-ink-soft`}>{access}</span>
+        ) : null}
+      </dd>
+    </div>
+  );
+}
+
+function ChapelPageRef({ page, bulletinUrl }: { page: number; bulletinUrl: string | null }) {
+  const title = `Open bulletin at page ${page}`;
+  if (!bulletinUrl) {
+    return (
+      <span className={`ml-2.5 ${ANNOTATION_CLASS} text-ink-soft`} title={title}>
+        page {page}
+      </span>
+    );
+  }
+  return (
+    <a
+      href={`${bulletinUrl}#page=${page}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      data-track="bulletin_page"
+      title={title}
+      className={`ml-2.5 ${ANNOTATION_CLASS} ${ANNOTATION_LINK_CLASS}`}
+    >
+      page {page}
+    </a>
+  );
+}
+
 interface ChurchPageContentProps {
   church: ChurchDetail;
+  /** Its chapel open 24 hours, or null. */
+  continuous?: ContinuousAdoration | null;
   /** The city page the church is listed on, as that page names it. */
   city: CityLink | null;
   /** The church's map as it opens; null for a church with no known position. */
@@ -267,6 +331,7 @@ interface ChurchPageContentProps {
 
 export function ChurchPageContent({
   church,
+  continuous = null,
   city,
   map,
   events,
@@ -274,6 +339,8 @@ export function ChurchPageContent({
 }: ChurchPageContentProps) {
   const byType = partitionEventsByType(events);
   const name = church.name ?? UNNAMED_CHURCH;
+  // A church whose only Adoration is its chapel open 24 hours still has times.
+  const hasTimes = events.length > 0 || continuous !== null;
 
   return (
     <>
@@ -354,7 +421,7 @@ export function ChurchPageContent({
           </div>
         </section>
 
-        {events.length === 0 ? (
+        {!hasTimes ? (
           <p className="mx-auto mt-6 max-w-2xl text-center font-serif text-sm text-ink-soft md:mt-8">
             {church.schedule_source
               ? `No times listed yet. ${titleCase(SOURCE_NAMES[church.schedule_source])} may not include them, or we couldn’t read it.`
@@ -365,7 +432,7 @@ export function ChurchPageContent({
           </p>
         ) : null}
 
-        {events.length > 0 ? (
+        {hasTimes ? (
           <div className="mx-auto mt-6 max-w-4xl md:mt-8">
             <div className="rise-in space-y-12" style={{ animationDelay: "80ms" }}>
               {EVENT_TYPE_ORDER.map((eventType) => {
@@ -374,11 +441,13 @@ export function ChurchPageContent({
                 const hasWeekly = DAY_ORDER.some(
                   (d) => (weeklyByDay[d]?.length ?? 0) > 0,
                 );
-                const hasAny = hasWeekly || specificDate.length > 0;
+                const chapel = eventType === "adoration" ? continuous : null;
+                const hasAny = hasWeekly || specificDate.length > 0 || chapel !== null;
                 if (!hasAny) return null;
 
                 const sectionEvents = collectSectionEvents(section);
-                const sectionPage = mostCommonPageNumber(sectionEvents);
+                const sectionPage =
+                  mostCommonPageNumber(sectionEvents) ?? chapel?.page_number ?? null;
 
                 return (
                   <section key={eventType}>
@@ -395,6 +464,13 @@ export function ChurchPageContent({
                     </div>
 
                     <dl className="divide-y divide-rule">
+                      {chapel ? (
+                        <ContinuousRow
+                          chapel={chapel}
+                          church={church}
+                          sectionPage={sectionPage}
+                        />
+                      ) : null}
                       {DAY_ORDER.map((day) => {
                         const dayEvents = weeklyByDay[day];
                         if (!dayEvents || dayEvents.length === 0)

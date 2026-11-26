@@ -72,10 +72,10 @@ You keep a Catholic parish's Mass, Confession, and Adoration schedule up to date
 
 - Only Mass, Confession (Reconciliation, Penance), and Adoration (Exposition, Holy Hour) events. Ignore every other kind of event or activity in the bulletin.
 - Benediction implies Adoration: record Benediction as an Adoration entry with the note `Benediction`. "Adoration and Benediction" or "Holy Hour with Benediction" is one Adoration entry with that note, not two entries.
-- If a Holy Hour is entirely inside an Adoration period already recorded at the same church on the same days, keep the longer period and mention the Holy Hour in a note when useful. Do not add a second overlapping Adoration entry for the same availability.
+- If a Holy Hour is entirely inside an Adoration period already recorded at the same church on the same days, keep the longer period and mention the Holy Hour in a note when useful. Do not add a second overlapping Adoration entry for the same availability. A 24-hour chapel is not such a period.
 - A Communion Service (a Liturgy of the Word with Communion, led by a deacon or lay minister) is not a Mass: never record one as a Mass. When the bulletin says a Communion Service replaces a Mass on a date, that Mass is cancelled on that date.
 - Leave out a Mass that is closed to the public: a private Mass, or one the bulletin limits to a group (a school Mass for students only, a Mass for residents only, a Mass by invitation).
-- Leave out anything without a definite start time, such as "Confession by appointment" or "call the office".
+- Leave out anything without a definite start time, such as "Confession by appointment" or "call the office", except a 24-hour chapel (below).
 
 # Churches and chapels
 
@@ -85,6 +85,17 @@ You keep a Catholic parish's Mass, Confession, and Adoration schedule up to date
 - A parish adoration chapel belongs to the church it is at. When it is at the same location as a listed church (inside it, attached to it, or on the same grounds), record its times at that church and name the chapel in a short `note`. Leave it out when it is somewhere else you would need to drive to, or when it is unclear where it is.
 - When the parish identifies an on-site Eucharistic chapel's hours as Adoration, those hours can include prayer before the reserved Blessed Sacrament. Do not claim exposition unless the source says so. A church or chapel merely being open for prayer does not establish an Adoration schedule.
 - An event at a separate chapel at another address (a convent, school, hospital, nursing home or mission chapel), or one whose location is unclear, is left out unless the known-churches list includes that chapel or its address. If you leave out such a chapel that clearly has its own Mass, Confession or Adoration times, or a listed church's name or address is obviously wrong, set `church_list_needs_review` to true.
+
+# Chapels open 24 hours
+
+- An Adoration chapel open every day around the clock ("Perpetual Adoration Chapel", "open 24 hours", "24/7 Adoration") is one `continuous` entry at its church, with no day, date or times, never seven weekly entries. The chapel rules above apply.
+- `access`, as the bulletin says:
+  - `not_stated`: nothing about getting in.
+  - `code_after_hours`: a door code at some hours only; `open_from` and `open_until` are the unlocked hours when stated ("code needed 9:00 PM-6:00 AM" is 6:00 AM to 9:00 PM).
+  - `code`: a code at every hour.
+  - `arrangement`: open to whoever arranges it with the parish ("for access contact the Rectory Office", "sign up for an hour"); record it all the same.
+- A chapel closed only during Mass still counts; say so in the `note`. Round-the-clock Adoration on some days only is weekly; a one-off 24-hour devotion is dated.
+- A closure ends the entry with `valid_until`; a reopening adds one with `valid_from`.
 
 # Entries: weekly or dated
 
@@ -128,6 +139,8 @@ Never project dates in any other way: do not work a date out from a weeks-of-the
 # Notes
 
 Only add a `note` when there is genuinely special context worth surfacing: language, location within the church or the adoration chapel's name, `Benediction`, a relative timing you converted ("after the 4:00 PM Mass"), the occasion of a dated special service. Do not write 'Vigil Mass', and do not repeat what `weeks_of_month`, `exclude_weeks` or `season` already say.
+
+Never put a person's name, phone number, email address or door code in a note.
 
 # Changes
 
@@ -257,20 +270,23 @@ class ScheduleEntry(BaseModel):
 
     church_slug: str = Field(description="Exactly a `slug` from the known-churches list.")
     event_type: Literal["mass", "confession", "adoration"]
-    event_kind: Literal["weekly", "specific_date"]
+    event_kind: Literal["weekly", "specific_date", "continuous"]
     valid_from: str | None = Field(
-        default=None, description="Weekly only: inclusive absolute YYYY-MM-DD start, if stated.",
+        default=None,
+        description="Weekly or continuous only: inclusive absolute YYYY-MM-DD start, if stated.",
     )
     valid_until: str | None = Field(
-        default=None, description="Weekly only: inclusive absolute YYYY-MM-DD end, if stated.",
+        default=None,
+        description="Weekly or continuous only: inclusive absolute YYYY-MM-DD end, if stated.",
     )
     day_of_week: str | None = Field(
         default=None, description="weekly only: full English weekday name, e.g. `Sunday`.",
     )
     date: str | None = Field(default=None, description="specific_date only: `YYYY-MM-DD`.")
-    start_time: str = Field(description="`h:MM AM` or `h:MM PM`.")
+    start_time: str | None = Field(description="`h:MM AM` or `h:MM PM`; null when continuous.")
     end_time: str | None = Field(
-        default=None, description="Null for Mass; for Confession and Adoration when given.",
+        default=None,
+        description="Null for Mass and continuous; for Confession and Adoration when given.",
     )
     cancelled: bool = Field(default=False, description="specific_date only: a cancellation.")
     weeks_of_month: list[WeekOfMonth] = Field(
@@ -310,6 +326,18 @@ class ScheduleEntry(BaseModel):
             "`weeks_of_month` or `season` already say, and do not describe an "
             "exclusion: say it with `weeks_of_month` and `exclude_weeks`."
         ),
+    )
+    access: Literal["not_stated", "code_after_hours", "code", "arrangement"] | None = Field(
+        default=None,
+        description="continuous only.",
+    )
+    open_from: str | None = Field(
+        default=None,
+        description="`code_after_hours` only: unlocked from, `h:MM AM` or `h:MM PM`.",
+    )
+    open_until: str | None = Field(
+        default=None,
+        description="`code_after_hours` only: unlocked until, `h:MM AM` or `h:MM PM`.",
     )
 
 
@@ -510,6 +538,7 @@ class OpenAIScheduleUpdater:
         file_detail: ImageDetail = UPDATE_FILE_DETAIL,
         service_tier: str = UPDATE_SERVICE_TIER,
         max_retries: int = 5,
+        api_key: str | None = None,
     ) -> None:
         if reasoning_effort not in REASONING_EFFORTS:
             raise ClassifierOptionError(f"Unknown reasoning effort {reasoning_effort!r}")
@@ -523,6 +552,9 @@ class OpenAIScheduleUpdater:
         }
         self.service_tier = service_tier
         self._max_retries = max_retries
+        # None: the client reads OPENAI_API_KEY. The factory's dispatcher passes its .env's,
+        # which it keeps out of its own environment.
+        self._api_key = api_key
         self._clients: dict[str, OpenAI] = {}
 
     @property
@@ -538,9 +570,11 @@ class OpenAIScheduleUpdater:
         # Built on first use, so a run with no update-mode parish needs no API key.
         if tier not in self._clients:
             if tier == "flex":
-                client = OpenAI(max_retries=FLEX_MAX_RETRIES, timeout=FLEX_TIMEOUT_SECONDS)
+                client = OpenAI(api_key=self._api_key, max_retries=FLEX_MAX_RETRIES,
+                                timeout=FLEX_TIMEOUT_SECONDS)
             else:
-                client = OpenAI(max_retries=self._max_retries, timeout=REQUEST_TIMEOUT_SECONDS)
+                client = OpenAI(api_key=self._api_key, max_retries=self._max_retries,
+                                timeout=REQUEST_TIMEOUT_SECONDS)
             self._clients[tier] = client
         return self._clients[tier]
 
@@ -587,7 +621,10 @@ class OpenAIScheduleUpdater:
         }
 
     def call(self, pdf_bytes: bytes, context: str) -> RawReply:
-        request = self.request(pdf_bytes, context)
+        return self.send(self.request(pdf_bytes, context))
+
+    def send(self, request: dict[str, Any]) -> RawReply:
+        """One `responses.create`, at flex first, then at the standard tier if flex has no room."""
         tier = self.service_tier
         started = time.monotonic()
         if tier != "flex":

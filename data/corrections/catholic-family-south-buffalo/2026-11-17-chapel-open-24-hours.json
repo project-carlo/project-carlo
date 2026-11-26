@@ -1,0 +1,104 @@
+{
+  "parish": "catholic-family-south-buffalo",
+  "actor": "lyonsl2 (via Claude)",
+  "note": "Chapel open 24 hours (#111): the seven 12:00 AM–11:59 PM weekly entries become one continuous entry. The 15 November 2026 bulletin, p. 3: \"The Adoration Chapel at St. Martin of Tours is open for prayer 24/7. A code is needed to access the Chapel. Call the Central Office if you would like to sign up.\"",
+  "as_of": "2026-11-15T17:18:13Z",
+  "operations": [
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Adoration chapel, open 24/7; a code is needed",
+        "day_of_week": "Friday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Adoration chapel, open 24/7; a code is needed",
+        "day_of_week": "Monday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Adoration chapel, open 24/7; a code is needed",
+        "day_of_week": "Saturday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Adoration chapel, open 24/7; a code is needed",
+        "day_of_week": "Sunday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Adoration chapel, open 24/7; a code is needed",
+        "day_of_week": "Thursday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Adoration chapel, open 24/7; a code is needed",
+        "day_of_week": "Tuesday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Adoration chapel, open 24/7; a code is needed",
+        "day_of_week": "Wednesday"
+      }
+    },
+    {
+      "op": "add",
+      "after": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "adoration",
+        "event_kind": "continuous",
+        "open_from": null,
+        "open_until": null,
+        "access": "code",
+        "note": "Adoration Chapel"
+      }
+    }
+  ]
+}

@@ -3,6 +3,8 @@ import {
   type ChurchDetail,
   type ChurchMapItem,
   compareSchedule,
+  type ContinuousAdoration,
+  currentContinuous,
   dateInSeason,
   dateInValidity,
   EVENT_TYPE_ORDER,
@@ -68,6 +70,16 @@ export interface ChurchFilters {
   daysOfWeek?: number[];
   timeFrom?: number;
   timeTo?: number;
+  /** Only this diocese's churches (the embed's `diocese=`); every church when unset. */
+  diocese?: string | null;
+}
+
+/** Whether `church` is in `diocese`; every church is when no diocese is given. */
+export function inDiocese(
+  church: Pick<ChurchBase, "diocese">,
+  diocese: string | null | undefined,
+): boolean {
+  return !diocese || church.diocese === diocese;
 }
 
 // The snapshot is loaded once and never mutated, so every church and event is
@@ -200,6 +212,7 @@ function overlapsTimeWindow(
 function buildMapItem(
   church: ChurchBase,
   churchEvents: RawEvent[],
+  continuous: ContinuousAdoration | null = null,
 ): ChurchMapItem {
   const weeklyEvents = churchEvents.filter(
     (e) => e.event_kind === "weekly" && e.day_of_week && !e.cancelled,
@@ -223,21 +236,44 @@ function buildMapItem(
       return true;
     })
     .sort((a, b) => compareSchedule(a, b));
-  if (popupSchedule.length === 0) {
+  if (popupSchedule.length === 0 && !continuous) {
     popupSchedule = churchEvents
       .filter((e) => e.occurrence !== null)
       .sort((a, b) => a.occurrence!.localeCompare(b.occurrence!))
       .slice(0, 5)
       .map(toEventSummary);
   }
-  const eventTypes = [
-    ...new Set(churchEvents.map((e) => e.event_type)),
-  ].sort() as EventType[];
+  const types = new Set(churchEvents.map((e) => e.event_type));
+  if (continuous) types.add("adoration");
+  const eventTypes = [...types].sort() as EventType[];
   return {
     ...church,
     event_types: eventTypes,
     upcoming_events: popupSchedule,
+    continuous,
   };
+}
+
+/**
+ * Each church's chapel open 24 hours on `today`, by church id. A chapel matches
+ * every Adoration search, whatever day or time is chosen: it is open then.
+ */
+function continuousByChurch(
+  chapels: readonly ContinuousAdoration[],
+  today: Date,
+): Map<number, ContinuousAdoration> {
+  const byChurch = new Map<number, ContinuousAdoration[]>();
+  for (const chapel of chapels) {
+    const list = byChurch.get(chapel.church_id);
+    if (list) list.push(chapel);
+    else byChurch.set(chapel.church_id, [chapel]);
+  }
+  const open = new Map<number, ContinuousAdoration>();
+  for (const [churchId, list] of byChurch) {
+    const chapel = currentContinuous(list, today);
+    if (chapel) open.set(churchId, chapel);
+  }
+  return open;
 }
 
 // Per-church memo of the last map item handed out, keyed by the church row and
@@ -272,6 +308,7 @@ export function collectMapItems(
   churches: ChurchBase[],
   allEvents: RawEvent[],
   filters: ChurchFilters,
+  chapels: readonly ContinuousAdoration[] = [],
 ): ChurchMapItem[] {
   const types = filters.types.length > 0 ? filters.types : EVENT_TYPE_ORDER;
   const typeSet = new Set<EventType>(types);
@@ -290,16 +327,23 @@ export function collectMapItems(
     }
     list.push(ev);
   }
+  // A chapel open 24 hours answers every Adoration search, so it ignores the
+  // day and time filters; it is left out only when Adoration isn't searched.
+  const open = typeSet.has("adoration")
+    ? continuousByChurch(chapels, today)
+    : new Map<number, ContinuousAdoration>();
 
   const items: ChurchMapItem[] = [];
   for (const church of churches) {
-    const churchEvents = grouped.get(church.id);
+    if (!inDiocese(church, filters.diocese)) continue;
+    const churchEvents = grouped.get(church.id) ?? [];
+    const chapel = open.get(church.id) ?? null;
     // No matching events means no event types, which the map never showed.
-    if (!churchEvents || churchEvents.length === 0) continue;
+    if (churchEvents.length === 0 && !chapel) continue;
 
-    // Events are grouped in a stable order, so their ids fully describe the
-    // item this church produces.
-    let signature = "";
+    // Events are grouped in a stable order, so their ids (and the chapel's)
+    // fully describe the item this church produces.
+    let signature = chapel ? `c${chapel.id};` : "";
     for (const ev of churchEvents) signature += `${ev.id},`;
 
     const cached = mapItemCache.get(church.id);
@@ -307,7 +351,7 @@ export function collectMapItems(
       items.push(cached.item);
       continue;
     }
-    const item = buildMapItem(church, churchEvents);
+    const item = buildMapItem(church, churchEvents, chapel);
     mapItemCache.set(church.id, { church, signature, item });
     items.push(item);
   }
@@ -317,18 +361,20 @@ export function collectMapItems(
 export async function fetchChurches(
   filters: ChurchFilters,
 ): Promise<ChurchMapItem[]> {
-  const { churches, events } = await getSnapshot();
-  return collectMapItems(churches, events, filters);
+  const { churches, events, continuous } = await getSnapshot();
+  return collectMapItems(churches, events, filters, continuous);
 }
 
 /** What the typeahead gets back: the shared church row, geocoded ones only. */
 export type ChurchSearchResult = ChurchBase;
 
-export async function fetchAllChurchesForSearch(): Promise<
-  ChurchSearchResult[]
-> {
+export async function fetchAllChurchesForSearch(
+  diocese?: string | null,
+): Promise<ChurchSearchResult[]> {
   const { churches } = await getSnapshot();
-  return churches.filter((c) => c.latitude !== null && c.longitude !== null);
+  return churches.filter(
+    (c) => c.latitude !== null && c.longitude !== null && inDiocese(c, diocese),
+  );
 }
 
 /** One church with its parish links; shared with the prerenderer. */
@@ -363,6 +409,18 @@ export function churchSchedule(
   types: EventType[],
 ): EventSummary[] {
   return upcomingSchedule(snapshot, findChurch(snapshot, slug).id, types);
+}
+
+/**
+ * A church's chapel open 24 hours today, or null. Shared with the prerenderer,
+ * so a static church page shows the same chapel as the live one.
+ */
+export function churchContinuous(
+  snapshot: Snapshot,
+  churchId: number,
+  today: Date = new Date(),
+): ContinuousAdoration | null {
+  return currentContinuous(snapshot.continuousOf(churchId), today);
 }
 
 // The city index is derived from the (immutable) church list and the
@@ -405,6 +463,8 @@ export interface CityChurchEntry {
   /** Miles from the city's center; set on nearby churches only. */
   distanceMiles: number | null;
   schedule: EventSummary[];
+  /** The church's chapel open 24 hours, or null. */
+  continuous: ContinuousAdoration | null;
 }
 
 export interface CityPageData {
@@ -433,6 +493,7 @@ export function cityPageData(
     citySlug: citySlugFor(church),
     distanceMiles,
     schedule: upcomingSchedule(snapshot, church.id, EVENT_TYPE_ORDER),
+    continuous: churchContinuous(snapshot, church.id),
   });
   const view = cityMapView(city);
   return {
@@ -467,6 +528,7 @@ function defaultMapIndex(snapshot: Snapshot): ClusterIndex<MappedItem> {
       snapshot.churches,
       snapshot.events,
       churchFiltersFor(DEFAULT_FILTER_STATE),
+      snapshot.continuous,
     ).filter(
       (item): item is MappedItem =>
         item.latitude !== null && item.longitude !== null,
@@ -514,6 +576,7 @@ export async function fetchMapChurch(
   return buildMapItem(
     church,
     snapshot.eventsOf(church.id).filter((e) => !e.cancelled),
+    churchContinuous(snapshot, church.id),
   );
 }
 
@@ -546,6 +609,8 @@ export async function fetchChurchIndex(): Promise<ChurchIndexData> {
  */
 export interface ChurchWithCity {
   church: ChurchDetail;
+  /** Its chapel open 24 hours, or null. */
+  continuous: ContinuousAdoration | null;
   city: CityLink | null;
   map: CityMapData | null;
 }
@@ -555,6 +620,7 @@ export async function fetchChurch(slug: string): Promise<ChurchWithCity> {
   const church = findChurch(snapshot, slug);
   return {
     church,
+    continuous: churchContinuous(snapshot, church.id),
     city: churchCity(snapshot, church),
     map: churchMapData(snapshot, church),
   };

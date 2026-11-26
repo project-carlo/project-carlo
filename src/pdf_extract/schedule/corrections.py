@@ -517,10 +517,10 @@ def entry_content(conn: sqlite3.Connection, entry_id: int) -> dict[str, Any]:
     entry = entries[entry_id]
     slug = church_slugs(conn, [entry.church_id])[entry.church_id]
     form = entry.labels_form(slug)
-    if not entry.weekly and not form.get("cancelled"):
-        del form["cancelled"]
-    if entry.weekly and not form.get("exclude_weeks"):
-        del form["exclude_weeks"]
+    if not form.get("cancelled"):
+        form.pop("cancelled", None)
+    if not form.get("exclude_weeks"):
+        form.pop("exclude_weeks", None)
     return _without_nulls(form)
 
 
