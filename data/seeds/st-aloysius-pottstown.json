@@ -1,0 +1,1123 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-aloysius-pottstown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:24Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T19:06:11Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Aloysius, Pottstown); both bulletins (Nov 8, Nov 15) are image-only and print the same schedule box. Weekday 8:30 AM Mass Mon/Tue/Thu/Fri, Sat 9 AM; winter 4 PM vigil and 3-3:45 PM confession (Nov 7-Apr 3 per the Nov 8 notice); Sunday 7:30, 10:15, 11:30 Spanish; Thursday Adoration 9 AM-6 PM; Advent/Christmas dated Masses from p6. Open: whether the Dec 15 penance service counts as a 6 PM confession.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "51bbd1fcb06a6cb87e0a49916e8dc33c2abc5fab063d08e1f92fbabe7da883cd",
+      "fetched_at": "2026-11-15T16:44:24Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "01ab0db63143f3833a9e538060cb86c3b91007ce4581cd9bf8c092158b88055b",
+      "fetched_at": "2026-11-08T15:53:25Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 1,
+          "said": "Daily Mass: M, Tu, Th, Fri: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01ab0db6",
+          "page": 1,
+          "said": "Daily Mass: M, Tu, Th, Fri: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 3,
+          "said": "Monday, November 16 8:30 AM + Caroline Norman"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on p1 of both bulletins read; the intentions on p3 list 8:30 AM Masses those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 1,
+          "said": "Daily Mass: M, Tu, Th, Fri: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01ab0db6",
+          "page": 1,
+          "said": "Daily Mass: M, Tu, Th, Fri: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 3,
+          "said": "Monday, November 16 8:30 AM + Caroline Norman"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on p1 of both bulletins read; the intentions on p3 list 8:30 AM Masses those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 1,
+          "said": "Daily Mass: M, Tu, Th, Fri: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01ab0db6",
+          "page": 1,
+          "said": "Daily Mass: M, Tu, Th, Fri: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 3,
+          "said": "Monday, November 16 8:30 AM + Caroline Norman"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on p1 of both bulletins read; the intentions on p3 list 8:30 AM Masses those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 1,
+          "said": "Daily Mass: M, Tu, Th, Fri: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01ab0db6",
+          "page": 1,
+          "said": "Daily Mass: M, Tu, Th, Fri: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 3,
+          "said": "Monday, November 16 8:30 AM + Caroline Norman"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on p1 of both bulletins read; the intentions on p3 list 8:30 AM Masses those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 1,
+          "said": "Sat: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01ab0db6",
+          "page": 1,
+          "said": "Sat: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 3,
+          "said": "Saturday, November 21 9:00 AM + Rose Marie Critzer"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on p1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 11,
+          "start_day": 7,
+          "end_month": 4,
+          "end_day": 3
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01ab0db6",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01ab0db6",
+          "page": 7,
+          "said": "Beginning this Saturday, November 7, the Vigil Mass will move to: Saturday Vigil Mass: from 5:00 PM to 4:00 PM ... Winter hours remain in effect through April 3, 2027, and return to the regular 5:00 PM Vigil Mass time on April 10, 2027."
+        }
+      ],
+      "rationale": "R1, R3, POLICY Weekly qualifiers (season): the p1 box of both issues prints 4:00 PM; the Nov 8 issue limits it to winter hours, Nov 7 through April 3. The 5:00 PM vigil from April 10 is a change announced for later and is left out (R20); update mode reads it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 10:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01ab0db6",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 10:15 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on p1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 10:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01ab0db6",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 10:15 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on p1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 1,
+          "said": "11:30 AM Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01ab0db6",
+          "page": 1,
+          "said": "11:30 AM Misa en Español"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on p1 of both bulletins read; in Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 1,
+          "said": "Confessions/Confesiones Saturdays: 9:30-10:00 AM / 3:00-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01ab0db6",
+          "page": 1,
+          "said": "Confessions/Confesiones Saturdays: 9:30-10:00 AM / 3:00-3:45 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 11,
+          "start_day": 7,
+          "end_month": 4,
+          "end_day": 3
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 1,
+          "said": "Confessions/Confesiones Saturdays: 9:30-10:00 AM / 3:00-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01ab0db6",
+          "page": 1,
+          "said": "Confessions/Confesiones Saturdays: 9:30-10:00 AM / 3:00-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01ab0db6",
+          "page": 7,
+          "said": "Confessions: from 4:00 PM to 3:00 PM ... Winter hours remain in effect through April 3, 2027"
+        }
+      ],
+      "rationale": "R1, R3, POLICY Weekly qualifiers (season): both p1 boxes print 3:00-3:45 PM; the Nov 8 notice moves confessions from 4:00 to 3:00 PM with the vigil for winter hours, Nov 7 through April 3. The later 4:00 PM time is left out (R20).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chaplet at 3:00 PM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 2,
+          "said": "Eucharistic Adoration Held each Thursday following the 8:30 AM Mass until 6:00 PM. *Unless otherwise stated or a funeral.*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01ab0db6",
+          "page": 2,
+          "said": "Eucharistic Adoration Held each Thursday following the 8:30 AM Mass until 6:00 PM. *Unless otherwise stated or a funeral.*"
+        }
+      ],
+      "rationale": "R1, R10: printed in the p2 box of both issues; following a weekday 8:30 AM Mass starts 30 minutes after it, 9:00 AM, ending at the printed 6:00 PM. The 3:00-3:15 Divine Mercy Chaplet is prayed during it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of the Immaculate Conception"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 6,
+          "said": "Monday, December 7 Solemnity of the Immaculate Conception 6:00 PM Vigil Mass"
+        }
+      ],
+      "rationale": "R1, R16: a dated holy-day Mass in the Advent & Christmas Schedule 2026, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 6,
+          "said": "Tuesday, December 8 - Solemnity of the Immaculate Conception Mass - 7:00 AM ... Mass - 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Masses in the Advent & Christmas Schedule. The weekly Tue 8:30 AM is not said to be cancelled, so it is left alone (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 6,
+          "said": "Tuesday, December 8 - Solemnity of the Immaculate Conception Mass - 7:00 AM ... Mass - 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Masses in the Advent & Christmas Schedule. The weekly Tue 8:30 AM is not said to be cancelled, so it is left alone (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, with the school children"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 6,
+          "said": "Mass - 9:00 AM (with School Children)"
+        }
+      ],
+      "rationale": "R1, POLICY (a Mass 'with' a school is open unless limited): nothing limits it to students.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 6,
+          "said": "Tuesday, December 15 Liturgy of Penance and Reconciliation - 6:00 PM; Confessions"
+        }
+      ],
+      "rationale": "R30: a penance service at 6:00 PM with confessions listed under it. POLICY's final source checks say a larger event doesn't set its components' times, but a Liturgy of Penance is itself the communal celebration of the sacrament and individual confessions are its heart, so I lean to recording it at 6:00 PM with no end.",
+      "question": "Add the Dec 15 Liturgy of Penance and Reconciliation, 6:00 PM, as a confession?",
+      "options": [
+        {
+          "label": "Confession Dec 15 6:00 PM",
+          "entry": {
+            "church_slug": "st-aloysius-pottstown",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-15",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Liturgy of Penance and Reconciliation"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-20",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:30 AM Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 6,
+          "said": "Sunday, December 20 Confessions Following Masses"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 'following' a Sunday Mass with no clock time is one hour after it starts; the Sunday Masses are 7:30, 10:15 and 11:30 (p1).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-20",
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 10:15 AM Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 6,
+          "said": "Sunday, December 20 Confessions Following Masses"
+        }
+      ],
+      "rationale": "R10, POLICY Times: one hour after the 10:15 AM Sunday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-20",
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 11:30 AM Spanish Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 6,
+          "said": "Sunday, December 20 Confessions Following Masses"
+        }
+      ],
+      "rationale": "R10, POLICY Times: one hour after the 11:30 AM Sunday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve Children's Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 6,
+          "said": "CHRISTMAS EVE - THURSDAY, DECEMBER 24 4:00 PM - Children's Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Mass, open to all.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 6,
+          "said": "6:00 PM - Christmas Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve, Spanish"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 6,
+          "said": "8:00 PM - Spanish Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Mass in Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "22:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve Candlelight Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 6,
+          "said": "10:00 PM - Candlelight Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At Saint Aloysius School"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 6,
+          "said": "4:30 PM - Mass at Saint Aloysius School"
+        }
+      ],
+      "rationale": "R22, POLICY Churches and chapels: held at the parish school, 844 N. Keim St. (p5), a separate address from the church at 223 Beech St.; not on the church list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 6,
+          "said": "CHRISTMAS DAY - FRIDAY, DECEMBER 25 7:30 AM - Christmas Mass 10:15 AM - Christmas Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Day Masses. The weekly Fri 8:30 AM is not said to be cancelled, so it is left alone (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 6,
+          "said": "CHRISTMAS DAY - FRIDAY, DECEMBER 25 7:30 AM - Christmas Mass 10:15 AM - Christmas Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Day Masses. The weekly Fri 8:30 AM is not said to be cancelled, so it is left alone (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-pottstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of Mary, Mother of God"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 6,
+          "said": "SOLEMNITY OF MARY, MOTHER OF GOD Thursday, December 31 5:00 PM - Vigil Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day vigil Mass. The Jan 1 8:30 AM Mass on the same list is the weekly Friday 8:30 AM slot and is not duplicated (POLICY Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-calcutta-limerick",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Flame of Love Mass"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 9,
+          "said": "Tuesday, November 24, 2026 St. Teresa of Calcutta 256 Swamp Pike Schwenksville ... 6:15 PM Adoration, Flame of Love Rosary, Confessions 7:00 PM Procession, Holy Mass"
+        }
+      ],
+      "rationale": "R22: held at St. Teresa of Calcutta, another parish's church; its 6:15 PM Adoration/Confessions are left out for the same reason.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-calcutta-limerick",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorial Mass for parents of deceased children"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "51bbd1fc",
+          "page": 9,
+          "said": "Saint Teresa of Calcutta Parish will host a special Mass in memory of deceased children ... Wednesday, November 18th at 7:00 PM at 256 Swamp Pike, Limerick Township"
+        }
+      ],
+      "rationale": "R22: another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
