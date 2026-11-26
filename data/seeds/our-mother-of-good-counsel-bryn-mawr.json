@@ -1,0 +1,1137 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-mother-of-good-counsel-bryn-mawr",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:02Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T21:20:47Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Our Mother of Good Counsel, Bryn Mawr. The schedule box (Sat 5 PM; Sun 8, 10, 11:30 AM, 7 PM; Mon-Fri 6:30 and 8 AM; Sat 8 AM; Sat confession 11:30-12) is identical in both image-only issues and matches the calendars and intentions; St. Thomas of Villanova's Masses in the same box are left out. Dated: Thanksgiving 9 AM, Dec 8 7 PM, Dec 9 Taizé Adoration. Open: whether Thanksgiving week's 'One Mass' days cancel the other weekday Masses.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "aaa9dec569ba135bd74108cd0d0df4a20af78d8a1d209625610630456e2729e2",
+      "fetched_at": "2026-11-15T16:44:02Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "36e8c8ab2c8eaad1f48e80c34a32c20e5d4c81f8b820d2a9b0116201ca1a21bd",
+      "fetched_at": "2026-11-08T15:53:11Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "OUR MOTHER OF GOOD COUNSEL (OMGC) 5:00 P.M. Saturday Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "OUR MOTHER OF GOOD COUNSEL (OMGC) 5:00 P.M. Saturday Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 6,
+          "said": "Nov 21 MASS 5:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass schedule box of both issues and in the calendar's Saturday cells.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "OMGC 8:00 A.M., 10:00 A.M., 11:30 A.M. AND 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "OMGC 8:00 A.M., 10:00 A.M., 11:30 A.M. AND 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 6,
+          "said": "Nov 15 MASSES 8:00 AM, 10:00 AM, 11:30 AM, 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass schedule box of both issues and every Sunday cell of the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "OMGC 8:00 A.M., 10:00 A.M., 11:30 A.M. AND 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "OMGC 8:00 A.M., 10:00 A.M., 11:30 A.M. AND 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 6,
+          "said": "Nov 15 MASSES 8:00 AM, 10:00 AM, 11:30 AM, 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass schedule box of both issues and every Sunday cell of the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "OMGC 8:00 A.M., 10:00 A.M., 11:30 A.M. AND 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "OMGC 8:00 A.M., 10:00 A.M., 11:30 A.M. AND 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 6,
+          "said": "Nov 15 MASSES 8:00 AM, 10:00 AM, 11:30 AM, 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass schedule box of both issues and every Sunday cell of the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "OMGC 8:00 A.M., 10:00 A.M., 11:30 A.M. AND 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "OMGC 8:00 A.M., 10:00 A.M., 11:30 A.M. AND 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 6,
+          "said": "Nov 15 MASSES 8:00 AM, 10:00 AM, 11:30 AM, 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass schedule box of both issues and every Sunday cell of the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 7,
+          "said": "MONDAY, NOVEMBER 16 6:30 AM ... 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box of both issues; the intentions list both times each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 7,
+          "said": "MONDAY, NOVEMBER 16 6:30 AM ... 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box of both issues; the intentions list both times each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 7,
+          "said": "MONDAY, NOVEMBER 16 6:30 AM ... 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box of both issues; the intentions list both times each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 7,
+          "said": "MONDAY, NOVEMBER 16 6:30 AM ... 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box of both issues; the intentions list both times each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 7,
+          "said": "MONDAY, NOVEMBER 16 6:30 AM ... 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box of both issues; the intentions list both times each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 7,
+          "said": "MONDAY, NOVEMBER 16 6:30 AM ... 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box of both issues; the intentions list both times each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 7,
+          "said": "MONDAY, NOVEMBER 16 6:30 AM ... 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box of both issues; the intentions list both times each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 7,
+          "said": "MONDAY, NOVEMBER 16 6:30 AM ... 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box of both issues; the intentions list both times each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 7,
+          "said": "MONDAY, NOVEMBER 16 6:30 AM ... 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box of both issues; the intentions list both times each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "OMGC Monday - Friday 6:30 A.M., 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 7,
+          "said": "MONDAY, NOVEMBER 16 6:30 AM ... 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box of both issues; the intentions list both times each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "Saturday 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "Saturday 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 7,
+          "said": "SATURDAY, NOVEMBER 21 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION: Saturday: 11:30 - 12:00 Noon or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36e8c8ab",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION: Saturday: 11:30 - 12:00 Noon or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 6,
+          "said": "Nov 21 11:30 AM CONFESSIONS"
+        }
+      ],
+      "rationale": "R1: the sacraments column of both issues gives the window; the calendar's Saturday cells print 11:30 AM Confessions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "Saturday: 11:30 - 12:00 Noon or by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Thomas of Villanova, Rosemont Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 1,
+          "said": "ST. THOMAS OF VILLANOVA PARISH(STOV) 4:30 P.M. Saturday Vigil Rosemont Chapel"
+        }
+      ],
+      "rationale": "R22: the box also lists the neighbouring St. Thomas of Villanova parish's Masses (Rosemont Chapel, Villanova Church, University Masses, weekday 12:05 PM and Sat 9:00 AM); they belong to that parish, not OMGC.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 6,
+          "said": "Nov 26 Happy Thanksgiving ... One Mass 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 2,
+          "said": "Thanksgiving: one Mass at 9 AM"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass outside the weekly schedule, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 6,
+          "said": "Nov 26 Parish Office Closed One Mass 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 2,
+          "said": "Thanksgiving: one Mass at 9 AM"
+        }
+      ],
+      "rationale": "R17 vs POLICY cancellations: the bulletin doesn't say 'cancelled', but 'One Mass' says only that Mass takes place that day, so the usual 6:30 and 8:00 do not. Leaning to record them, since update mode won't re-read this issue (R16).",
+      "question": "Record Thanksgiving week's 'One Mass' days as cancelling the other weekday Masses (Thu Nov 26 6:30 and 8:00 AM; Fri Nov 27 6:30 AM)?",
+      "options": [
+        {
+          "label": "Record the cancellations",
+          "entry": {
+            "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving: one Mass at 9 AM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "one-mass"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 6,
+          "said": "Nov 26 Parish Office Closed One Mass 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 2,
+          "said": "Thanksgiving: one Mass at 9 AM"
+        }
+      ],
+      "rationale": "R17 vs POLICY cancellations: the bulletin doesn't say 'cancelled', but 'One Mass' says only that Mass takes place that day, so the usual 6:30 and 8:00 do not. Leaning to record them, since update mode won't re-read this issue (R16).",
+      "question": "Record Thanksgiving week's 'One Mass' days as cancelling the other weekday Masses (Thu Nov 26 6:30 and 8:00 AM; Fri Nov 27 6:30 AM)?",
+      "options": [
+        {
+          "label": "Record the cancellations",
+          "entry": {
+            "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving: one Mass at 9 AM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "one-mass"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 6,
+          "said": "Nov 27 Parish Office Closed One Mass 8AM"
+        }
+      ],
+      "rationale": "R17 vs POLICY cancellations: the bulletin doesn't say 'cancelled', but 'One Mass 8AM' says only the 8:00 takes place that Friday, so the usual 6:30 does not. Leaning to record it, since update mode won't re-read this issue (R16).",
+      "question": "Record Thanksgiving week's 'One Mass' days as cancelling the other weekday Masses (Thu Nov 26 6:30 and 8:00 AM; Fri Nov 27 6:30 AM)?",
+      "options": [
+        {
+          "label": "Record the cancellations",
+          "entry": {
+            "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-27",
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "One Mass at 8 AM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "one-mass"
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 6,
+          "said": "Dec 8 Immaculate Conception of the BVM Masses 6:30AM 8AM 7PM"
+        }
+      ],
+      "rationale": "R1, R16: holy-day Mass outside the weekly schedule; the 6:30 and 8 AM are the weekly Tuesday Masses (POLICY, Weekly or dated rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-09",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Taizé Prayer, in the church"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 6,
+          "said": "Dec 9 Taize Prayer Adoration 7PM Church"
+        }
+      ],
+      "rationale": "R1, R16: a dated Adoration at the church, after as_of; no end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 4,
+          "said": "Millions of Monica's Thursdays at 7:00PM in the Daily Mass Chapel"
+        }
+      ],
+      "rationale": "R24: a prayer group meeting in the chapel, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aaa9dec5",
+          "page": 3,
+          "said": "The Rosary is prayed in the OMGC Chapel/Meditation Room ... every third Wednesday at noon and every fourth Wednesday at 7:30 PM"
+        }
+      ],
+      "rationale": "R24: a Rosary, not Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
