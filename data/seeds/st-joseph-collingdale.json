@@ -1,0 +1,584 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-collingdale",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:00Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T00:42:16Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Joseph, Collingdale. Both issues read (Nov 8, Nov 15) agree: Sat 4:30 PM vigil, Sun 8 & 11 AM, Mon-Sat 8 AM (from both weeks' intentions; website confirms), Sat confession 3-4 PM. No Adoration printed. Open: the website's Sunday 6 PM Mass (Sept-May), which neither issue's box nor intentions show; leaning leave out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "852441c746136fdaa8e428fa842126f67f03e4ec79de3c1a67f624198e31e3f1",
+      "fetched_at": "2026-11-15T16:46:00Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "bb396426c83fb8bbc0b1d9fa1beda7de268a3aa19c7012807acecc2a3ecf0b51",
+      "fetched_at": "2026-11-08T15:54:39Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-collingdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 1,
+          "said": "MASS SCHEDULE SATURDAY: 4:30PM VIGIL"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb396426",
+          "page": 1,
+          "said": "SATURDAY: 4:30PM VIGIL"
+        },
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 2,
+          "said": "Sat. 21 ... 4:30PM – Pro Populo"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoecollingdale.com/",
+          "said": "Saturday Vigil , 4:30pm;"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read (Nov 15, Nov 8) and in both weeks' intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-collingdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 1,
+          "said": "SUNDAY: 8:00AM & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb396426",
+          "page": 1,
+          "said": "SUNDAY: 8:00AM & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 2,
+          "said": "Sun. 15 8AM – ... 11AM – Pro Populo"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoecollingdale.com/",
+          "said": "Sunday , 8:00am & 11:00am;"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read and in both weeks' intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-collingdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 1,
+          "said": "SUNDAY: 8:00AM & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb396426",
+          "page": 1,
+          "said": "SUNDAY: 8:00AM & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 2,
+          "said": "Sun. 15 8AM – ... 11AM – Pro Populo"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoecollingdale.com/",
+          "said": "Sunday , 8:00am & 11:00am;"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read and in both weeks' intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-collingdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 2,
+          "said": "Mon. 16 8AM ... Tues. 17 8AM ... Wed. 18 8AM ... Thur. 19 8AM ... Fri. 20 8AM ... Sat. 21 8AM – Joseph Larsen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb396426",
+          "page": 2,
+          "said": "Mon. 09 8AM ... Tues. 10 8AM ... Wed. 11 8AM ... Thur. 12 8AM ... Fri. 13 8AM ... Sat. 14 8AM – Priest Intention"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoecollingdale.com/",
+          "said": "Weekday Mass - Monday to Saturday , 8:00am"
+        }
+      ],
+      "rationale": "R35: an 8AM Mass every day Monday-Saturday in the Mass intentions of both issues read (weeks of Nov 8 and Nov 15), none marked special; the parish website's Mass Schedule gives the same 'Monday to Saturday, 8:00am'. The p1 box lists only weekend Masses, which R35 says doesn't disprove weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-collingdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 2,
+          "said": "Mon. 16 8AM ... Tues. 17 8AM ... Wed. 18 8AM ... Thur. 19 8AM ... Fri. 20 8AM ... Sat. 21 8AM – Joseph Larsen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb396426",
+          "page": 2,
+          "said": "Mon. 09 8AM ... Tues. 10 8AM ... Wed. 11 8AM ... Thur. 12 8AM ... Fri. 13 8AM ... Sat. 14 8AM – Priest Intention"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoecollingdale.com/",
+          "said": "Weekday Mass - Monday to Saturday , 8:00am"
+        }
+      ],
+      "rationale": "R35: an 8AM Mass every day Monday-Saturday in the Mass intentions of both issues read (weeks of Nov 8 and Nov 15), none marked special; the parish website's Mass Schedule gives the same 'Monday to Saturday, 8:00am'. The p1 box lists only weekend Masses, which R35 says doesn't disprove weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-collingdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 2,
+          "said": "Mon. 16 8AM ... Tues. 17 8AM ... Wed. 18 8AM ... Thur. 19 8AM ... Fri. 20 8AM ... Sat. 21 8AM – Joseph Larsen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb396426",
+          "page": 2,
+          "said": "Mon. 09 8AM ... Tues. 10 8AM ... Wed. 11 8AM ... Thur. 12 8AM ... Fri. 13 8AM ... Sat. 14 8AM – Priest Intention"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoecollingdale.com/",
+          "said": "Weekday Mass - Monday to Saturday , 8:00am"
+        }
+      ],
+      "rationale": "R35: an 8AM Mass every day Monday-Saturday in the Mass intentions of both issues read (weeks of Nov 8 and Nov 15), none marked special; the parish website's Mass Schedule gives the same 'Monday to Saturday, 8:00am'. The p1 box lists only weekend Masses, which R35 says doesn't disprove weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-collingdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 2,
+          "said": "Mon. 16 8AM ... Tues. 17 8AM ... Wed. 18 8AM ... Thur. 19 8AM ... Fri. 20 8AM ... Sat. 21 8AM – Joseph Larsen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb396426",
+          "page": 2,
+          "said": "Mon. 09 8AM ... Tues. 10 8AM ... Wed. 11 8AM ... Thur. 12 8AM ... Fri. 13 8AM ... Sat. 14 8AM – Priest Intention"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoecollingdale.com/",
+          "said": "Weekday Mass - Monday to Saturday , 8:00am"
+        }
+      ],
+      "rationale": "R35: an 8AM Mass every day Monday-Saturday in the Mass intentions of both issues read (weeks of Nov 8 and Nov 15), none marked special; the parish website's Mass Schedule gives the same 'Monday to Saturday, 8:00am'. The p1 box lists only weekend Masses, which R35 says doesn't disprove weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-collingdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 2,
+          "said": "Mon. 16 8AM ... Tues. 17 8AM ... Wed. 18 8AM ... Thur. 19 8AM ... Fri. 20 8AM ... Sat. 21 8AM – Joseph Larsen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb396426",
+          "page": 2,
+          "said": "Mon. 09 8AM ... Tues. 10 8AM ... Wed. 11 8AM ... Thur. 12 8AM ... Fri. 13 8AM ... Sat. 14 8AM – Priest Intention"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoecollingdale.com/",
+          "said": "Weekday Mass - Monday to Saturday , 8:00am"
+        }
+      ],
+      "rationale": "R35: an 8AM Mass every day Monday-Saturday in the Mass intentions of both issues read (weeks of Nov 8 and Nov 15), none marked special; the parish website's Mass Schedule gives the same 'Monday to Saturday, 8:00am'. The p1 box lists only weekend Masses, which R35 says doesn't disprove weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-collingdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 2,
+          "said": "Mon. 16 8AM ... Tues. 17 8AM ... Wed. 18 8AM ... Thur. 19 8AM ... Fri. 20 8AM ... Sat. 21 8AM – Joseph Larsen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb396426",
+          "page": 2,
+          "said": "Mon. 09 8AM ... Tues. 10 8AM ... Wed. 11 8AM ... Thur. 12 8AM ... Fri. 13 8AM ... Sat. 14 8AM – Priest Intention"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoecollingdale.com/",
+          "said": "Weekday Mass - Monday to Saturday , 8:00am"
+        }
+      ],
+      "rationale": "R35: an 8AM Mass every day Monday-Saturday in the Mass intentions of both issues read (weeks of Nov 8 and Nov 15), none marked special; the parish website's Mass Schedule gives the same 'Monday to Saturday, 8:00am'. The p1 box lists only weekend Masses, which R35 says doesn't disprove weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-collingdale",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 1,
+          "said": "CONFESSIONS: Saturday: 3:00 - 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 2,
+          "said": "Saturday: 3:00PM - 4:00PM Confessions (in church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb396426",
+          "page": 1,
+          "said": "CONFESSIONS: Saturday: 3:00 - 4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoecollingdale.com/",
+          "said": "Confessions Saturday , 3:00-4:00pm"
+        }
+      ],
+      "rationale": "R1: printed on p1 and in the 'This week' list of both issues read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjoecollingdale.com/",
+          "said": "Sunday , 8:00am & 11:00am; 6:00pm (except June thru August)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 1,
+          "said": "SUNDAY: 8:00AM & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 2,
+          "said": "Sun. 15 8AM – ... 11AM – Pro Populo"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb396426",
+          "page": 2,
+          "said": "Sun. 08 8AM – Darlene Daniels 11AM – Harold & Mary Pacheli-Marino"
+        }
+      ],
+      "rationale": "R29/R6: only the website (stjoecollingdale.com homepage, read 2026-11-27) lists a Sunday 6 PM Mass, Sept-May. Both issues read (Nov 8, Nov 15) print only 8 and 11 AM for Sunday in the Mass Schedule box and in the intentions, in November when the website says the 6 PM runs. Box and intentions both silent is more than a missing mention, so I lean to leave it out (POLICY: a wrong time is worse than a missing one). Hard because the website's other times match the bulletin exactly.",
+      "question": "Add the website's Sunday 6:00 PM Mass (except June-August)?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Sundays 6:00 PM, September-May",
+          "entry": {
+            "church_slug": "st-joseph-collingdale",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": null
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjoecollingdale.com/",
+          "said": "Holy Days - 8:00am; 4:30pm;"
+        }
+      ],
+      "rationale": "POLICY, Dates: the website's generic Holy Days line gives no date, and no read issue names a holy day on or after as_of (Dec 8 not mentioned); like st-isaac-jogues-wayne s27, an undated standing holy-day line is left out. Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "852441c7",
+          "page": 1,
+          "said": "Baptisms celebrated on the first and third Sundays of the month after the 11AM Mass"
+        }
+      ],
+      "rationale": "R24: Baptisms, the Anointing of the Sick and the Divine Mercy Cenacle (latest p2, 2nd & 4th Saturday 9:30AM, rectory basement) are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
