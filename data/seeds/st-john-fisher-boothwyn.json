@@ -1,0 +1,1113 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-fisher-boothwyn",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:16:24Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T01:04:16Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday and confession times agree in both issues (Nov 8, Nov 15) and on the website; Monday Adoration (bulletin calendars) takes its hours from the website. Open: the website's Tue-Thu Adoration, which the bulletin calendars don't list, and the 11 AM Mass of a paid Advent Day of Reflection on Nov 21.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "36f2452b579f16ef78d0ef4ccfdf2dd65e6417f796ed034f43ec067675707124",
+      "fetched_at": "2026-11-15T16:16:24Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4c1540103f6b7950a4e0f55317ad9e4487b7570b7c22d9fc0f91575df9708fbe",
+      "fetched_at": "2026-11-08T15:41:37Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 1,
+          "said": "SATURDAY VIGIL: 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c154010",
+          "page": 1,
+          "said": "SATURDAY VIGIL: 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 3,
+          "said": "Saturday, November 21 4:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 1,
+          "said": "SUNDAY: 8:00, 9:30, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c154010",
+          "page": 1,
+          "said": "SUNDAY: 8:00, 9:30, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 3,
+          "said": "Next Sunday, November 22 8:00am / 9:30am / 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 1,
+          "said": "SUNDAY: 8:00, 9:30, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c154010",
+          "page": 1,
+          "said": "SUNDAY: 8:00, 9:30, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 3,
+          "said": "Next Sunday, November 22 8:00am / 9:30am / 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 1,
+          "said": "SUNDAY: 8:00, 9:30, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c154010",
+          "page": 1,
+          "said": "SUNDAY: 8:00, 9:30, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 3,
+          "said": "Next Sunday, November 22 8:00am / 9:30am / 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 1,
+          "said": "WEEKDAYS: Monday - Friday, 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c154010",
+          "page": 1,
+          "said": "WEEKDAYS: Monday - Friday, 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 3,
+          "said": "Monday, November 16 7:30am ... Friday, November 20 7:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 1,
+          "said": "WEEKDAYS: Monday - Friday, 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c154010",
+          "page": 1,
+          "said": "WEEKDAYS: Monday - Friday, 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 3,
+          "said": "Monday, November 16 7:30am ... Friday, November 20 7:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 1,
+          "said": "WEEKDAYS: Monday - Friday, 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c154010",
+          "page": 1,
+          "said": "WEEKDAYS: Monday - Friday, 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 3,
+          "said": "Monday, November 16 7:30am ... Friday, November 20 7:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 1,
+          "said": "WEEKDAYS: Monday - Friday, 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c154010",
+          "page": 1,
+          "said": "WEEKDAYS: Monday - Friday, 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 3,
+          "said": "Monday, November 16 7:30am ... Friday, November 20 7:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 1,
+          "said": "WEEKDAYS: Monday - Friday, 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c154010",
+          "page": 1,
+          "said": "WEEKDAYS: Monday - Friday, 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 3,
+          "said": "Monday, November 16 7:30am ... Friday, November 20 7:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 1,
+          "said": "CONFESSION: Sat. 3:00-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c154010",
+          "page": 1,
+          "said": "CONFESSION: Sat. 3:00-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 2,
+          "said": "SACRAMENT OF RECONCILIATION: Saturdays, 3:00 - 3:45pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and sacraments page of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 1,
+          "said": "CONFESSION: ... Tue/Thur 8:00 AM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c154010",
+          "page": 1,
+          "said": "CONFESSION: ... Tue/Thur 8:00 AM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 2,
+          "said": "Tue/Th after Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 5,
+          "said": "17 ... 8:00am Confession; 19 ... 8:00am Confession"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the box's clock time 8:00 AM wins; no end time is given, so none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 1,
+          "said": "CONFESSION: ... Tue/Thur 8:00 AM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c154010",
+          "page": 1,
+          "said": "CONFESSION: ... Tue/Thur 8:00 AM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 2,
+          "said": "Tue/Th after Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 5,
+          "said": "17 ... 8:00am Confession; 19 ... 8:00am Confession"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the box's clock time 8:00 AM wins; no end time is given, so none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 1,
+          "said": "or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 4,
+          "said": "THANKSGIVING DAY MASS November 26 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass on or after as_of. R17: the bulletin doesn't say the 7:30 AM Mass is cancelled that day, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 5,
+          "said": "(Mon calendar cell) 8:00am Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c154010",
+          "page": 5,
+          "said": "(Mon calendar cell) 8:00am Adoration"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohnfisherchurch.com/",
+          "said": "Eucharistic Adoration Monday | 8:00am–12:00pm, 1:00pm - 4:30pm",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:06:01Z",
+            "current_because": "Homepage checked 2026-11-27: its Mass times, Tue/Thu and Sat confession times and office hours (Mon-Thu 8:30-4:30, closed Fri, Sun 9-1) match the Nov 15, 2026 bulletin word for word, and its readings links are for this November.",
+            "bulletin": "36f2452b",
+            "fits_because": "The Nov 15 bulletin (36f2452b p5) lists 8:00am Adoration on Monday; the site gives that same start and the hours the bulletin lacks."
+          }
+        }
+      ],
+      "rationale": "R35, R6: both issues' calendars list Monday 8:00am Adoration; the parish website, which matches the bulletin's other times, gives its hours 8:00am-12:00pm and 1:00-4:30pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjohnfisherchurch.com/",
+          "said": "Eucharistic Adoration Monday | 8:00am–12:00pm, 1:00pm - 4:30pm",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:06:01Z",
+            "current_because": "Homepage checked 2026-11-27: its Mass times, Tue/Thu and Sat confession times and office hours (Mon-Thu 8:30-4:30, closed Fri, Sun 9-1) match the Nov 15, 2026 bulletin word for word, and its readings links are for this November.",
+            "bulletin": "36f2452b",
+            "fits_because": "The Nov 15 bulletin (36f2452b p5) lists 8:00am Adoration on Monday; the site gives that same start and the hours the bulletin lacks."
+          }
+        }
+      ],
+      "rationale": "R6: the afternoon part of the Monday Adoration the bulletin calendars list at 8:00am; the website's schedule matches the bulletin's other times exactly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjohnfisherchurch.com/",
+          "said": "Tuesady | 8:00am–12:00pm, 1:00pm - 4:30pm Wednesday | 8:00am–12:00pm, 1:00pm - 4:30pm Thursday | 8:00am–12:00pm, 1:00pm - 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 5,
+          "said": "(Tue/Thu cells) 8:00am Confession; Monday cell: 8:00am Adoration"
+        }
+      ],
+      "rationale": "R6 / R29, leaning per precedent st-basil-the-great-kimberton s19: the homepage matches the bulletin's Mass, confession and office times exactly, but both issues' weekly calendars (36f2452b, 4c154010 p5) list Adoration only on Monday, while listing Tue/Thu 8:00 confession; that calendar silence is more than a missing mention, so asked.",
+      "question": "Add the website's Tue-Thu Adoration, 8:00 AM-12:00 PM and 1:00-4:30 PM?",
+      "options": [
+        {
+          "label": "Tue-Thu 8-12 and 1-4:30",
+          "entry": {
+            "church_slug": "st-john-fisher-boothwyn",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "web-adoration"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjohnfisherchurch.com/",
+          "said": "Tuesady | 8:00am–12:00pm, 1:00pm - 4:30pm Wednesday | 8:00am–12:00pm, 1:00pm - 4:30pm Thursday | 8:00am–12:00pm, 1:00pm - 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 5,
+          "said": "(Tue/Thu cells) 8:00am Confession; Monday cell: 8:00am Adoration"
+        }
+      ],
+      "rationale": "R6 / R29, leaning per precedent st-basil-the-great-kimberton s19: the homepage matches the bulletin's Mass, confession and office times exactly, but both issues' weekly calendars (36f2452b, 4c154010 p5) list Adoration only on Monday, while listing Tue/Thu 8:00 confession; that calendar silence is more than a missing mention, so asked.",
+      "question": "Add the website's Tue-Thu Adoration, 8:00 AM-12:00 PM and 1:00-4:30 PM?",
+      "options": [
+        {
+          "label": "Tue-Thu 8-12 and 1-4:30",
+          "entry": {
+            "church_slug": "st-john-fisher-boothwyn",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "web-adoration"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjohnfisherchurch.com/",
+          "said": "Tuesady | 8:00am–12:00pm, 1:00pm - 4:30pm Wednesday | 8:00am–12:00pm, 1:00pm - 4:30pm Thursday | 8:00am–12:00pm, 1:00pm - 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 5,
+          "said": "(Tue/Thu cells) 8:00am Confession; Monday cell: 8:00am Adoration"
+        }
+      ],
+      "rationale": "R6 / R29, leaning per precedent st-basil-the-great-kimberton s19: the homepage matches the bulletin's Mass, confession and office times exactly, but both issues' weekly calendars (36f2452b, 4c154010 p5) list Adoration only on Monday, while listing Tue/Thu 8:00 confession; that calendar silence is more than a missing mention, so asked.",
+      "question": "Add the website's Tue-Thu Adoration, 8:00 AM-12:00 PM and 1:00-4:30 PM?",
+      "options": [
+        {
+          "label": "Tue-Thu 8-12 and 1-4:30",
+          "entry": {
+            "church_slug": "st-john-fisher-boothwyn",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "web-adoration"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjohnfisherchurch.com/",
+          "said": "Tuesady | 8:00am–12:00pm, 1:00pm - 4:30pm Wednesday | 8:00am–12:00pm, 1:00pm - 4:30pm Thursday | 8:00am–12:00pm, 1:00pm - 4:30pm"
+        }
+      ],
+      "rationale": "R6 / R29, leaning per precedent st-basil-the-great-kimberton s19: the afternoon half of the same website schedule; see the morning slots.",
+      "question": "Add the website's Tue-Thu Adoration, 8:00 AM-12:00 PM and 1:00-4:30 PM?",
+      "options": [
+        {
+          "label": "Tue-Thu 8-12 and 1-4:30",
+          "entry": {
+            "church_slug": "st-john-fisher-boothwyn",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "13:00",
+            "end_time": "16:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "web-adoration"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjohnfisherchurch.com/",
+          "said": "Tuesady | 8:00am–12:00pm, 1:00pm - 4:30pm Wednesday | 8:00am–12:00pm, 1:00pm - 4:30pm Thursday | 8:00am–12:00pm, 1:00pm - 4:30pm"
+        }
+      ],
+      "rationale": "R6 / R29, leaning per precedent st-basil-the-great-kimberton s19: the afternoon half of the same website schedule; see the morning slots.",
+      "question": "Add the website's Tue-Thu Adoration, 8:00 AM-12:00 PM and 1:00-4:30 PM?",
+      "options": [
+        {
+          "label": "Tue-Thu 8-12 and 1-4:30",
+          "entry": {
+            "church_slug": "st-john-fisher-boothwyn",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "13:00",
+            "end_time": "16:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "web-adoration"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjohnfisherchurch.com/",
+          "said": "Tuesady | 8:00am–12:00pm, 1:00pm - 4:30pm Wednesday | 8:00am–12:00pm, 1:00pm - 4:30pm Thursday | 8:00am–12:00pm, 1:00pm - 4:30pm"
+        }
+      ],
+      "rationale": "R6 / R29, leaning per precedent st-basil-the-great-kimberton s19: the afternoon half of the same website schedule; see the morning slots.",
+      "question": "Add the website's Tue-Thu Adoration, 8:00 AM-12:00 PM and 1:00-4:30 PM?",
+      "options": [
+        {
+          "label": "Tue-Thu 8-12 and 1-4:30",
+          "entry": {
+            "church_slug": "st-john-fisher-boothwyn",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "13:00",
+            "end_time": "16:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "web-adoration"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 2,
+          "said": "ST. JOHN FISHER CHURCH | ADVENT DAY OF REFLECTION ... Saturday, November 21st 9:00 AM - 2:00 PM COST: $40 ... MASS AT 11:00 AM ... TO PICK UP A REGISTRATION FORM: Visit the tables by the doors in church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 5,
+          "said": "21 9:00am Dr Cookie's Advent retreat"
+        }
+      ],
+      "rationale": "R30, leaning per precedent st-agnes-west-chester s24: the Mass is part of a registered, paid retreat day, and nothing invites non-registrants; the Reconciliation 'opportunity' in the same program has no time (POLICY, Final source checks).",
+      "question": "Include the 11:00 AM Mass of the paid Advent Day of Reflection, Sat Nov 21?",
+      "options": [
+        {
+          "label": "Nov 21 11:00 AM",
+          "entry": {
+            "church_slug": "st-john-fisher-boothwyn",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-21",
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Advent Day of Reflection"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-14",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c154010",
+          "page": 5,
+          "said": "14 10:00am Mass of Remembrance"
+        }
+      ],
+      "rationale": "R16: dated before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 2,
+          "said": "ANOINTING OF THE SICK: Third Wednesday of each month after Daily Mass."
+        }
+      ],
+      "rationale": "R24: Anointing of the Sick is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 1,
+          "said": "HOLIDAYS: 9:00 AM"
+        }
+      ],
+      "rationale": "POLICY, Dates: a generic holiday line names no date; only Thanksgiving's dated 9:00 AM Mass (latest p4) is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36f2452b",
+          "page": 1,
+          "said": "HOLY DAYS: Vigil - 5:00 PM; 9:00 AM and 7:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: the standing holy-day line gives no date and no read issue announces Dec 8 this year; update mode will read the December bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
