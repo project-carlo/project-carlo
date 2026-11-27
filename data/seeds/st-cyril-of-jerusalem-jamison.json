@@ -1,0 +1,2524 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-cyril-of-jerusalem-jamison",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:55Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T22:15:39Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Cyril of Jerusalem, Jamison. Weekend (Sat 4 PM; Sun 8, 10, Noon), daily 9 AM Mon-Sat, Saturday 3-3:45 confession and Adoration (Mon-Fri 9:30-12:30, Wed 7:30-8:30 PM, Daily Mass Chapel) agree in both issues and on the website. Dated Advent penance service, Dec 23 confessions and the 2026 Christmas/New Year schedule are recorded; open: whether to add the Christmas Eve Mass after the 3:30 PM tableau (leaning leave out).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+      "fetched_at": "2026-11-15T16:44:55Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2daee2558ae3aca9d7b500cdb153415c194b27308aa8fd6fb834ce104b511424",
+      "fetched_at": "2026-11-08T15:53:51Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+      "bulletins": [
+        "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+        "2daee2558ae3aca9d7b500cdb153415c194b27308aa8fd6fb834ce104b511424"
+      ],
+      "cached": false,
+      "cost_usd": 0.008637,
+      "at": "2026-11-27T22:20:15.069756+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 1,
+          "said": "Mass Schedule - Regular Hours Saturday - 4:00 PM *livestreamed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 1,
+          "said": "Mass Schedule - Regular Hours Saturday - 4:00 PM *livestreamed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 2,
+          "said": "Sunday November 22, 2026 4:00PM Henry Doehne"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday - 4:00 PM *livestreamed”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the intentions; the website gives Saturday Vigil 4 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 1,
+          "said": "Sunday: 8:00am-10:00am-Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 1,
+          "said": "Sunday: 8:00am-10:00am-Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 2,
+          "said": "Sunday November 22, 2026 ... 8:00AM ... 10:00AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:00am-10:00am-Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and the intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 1,
+          "said": "Sunday: 8:00am-10:00am-Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 1,
+          "said": "Sunday: 8:00am-10:00am-Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 2,
+          "said": "Sunday November 22, 2026 ... 8:00AM ... 10:00AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:00am-10:00am-Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and the intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 1,
+          "said": "Sunday: 8:00am-10:00am-Noon; Youth Mass - 12:00 PM, First and Third Sunday of the Month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 1,
+          "said": "Sunday: 8:00am-10:00am-Noon; Youth Mass - 12:00 PM, First and Third Sunday of the Month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 2,
+          "said": "Sunday November 22, 2026 ... 12:00PM David Donde"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:00am-10:00am-Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues. The Youth Mass on first and third Sundays is this same Noon Mass, so it gets no slot of its own (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 1,
+          "said": "Daily Masses: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 1,
+          "said": "Daily Masses: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 2,
+          "said": "Monday ... Saturday 9:00AM (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 2,
+          "said": "Monday ... Saturday 9:00AM (Mass Intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Masses: 9:00 AM”"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Masses 9:00 AM and both weeks' intentions list a 9:00 AM Mass Monday through Saturday; p1 also has a novena after 9am Mass on Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 1,
+          "said": "Daily Masses: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 1,
+          "said": "Daily Masses: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 2,
+          "said": "Monday ... Saturday 9:00AM (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 2,
+          "said": "Monday ... Saturday 9:00AM (Mass Intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Masses: 9:00 AM”"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Masses 9:00 AM and both weeks' intentions list a 9:00 AM Mass Monday through Saturday; p1 also has a novena after 9am Mass on Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 1,
+          "said": "Daily Masses: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 1,
+          "said": "Daily Masses: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 2,
+          "said": "Monday ... Saturday 9:00AM (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 2,
+          "said": "Monday ... Saturday 9:00AM (Mass Intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Masses: 9:00 AM”"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Masses 9:00 AM and both weeks' intentions list a 9:00 AM Mass Monday through Saturday; p1 also has a novena after 9am Mass on Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 1,
+          "said": "Daily Masses: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 1,
+          "said": "Daily Masses: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 2,
+          "said": "Monday ... Saturday 9:00AM (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 2,
+          "said": "Monday ... Saturday 9:00AM (Mass Intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Masses: 9:00 AM”"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Masses 9:00 AM and both weeks' intentions list a 9:00 AM Mass Monday through Saturday; p1 also has a novena after 9am Mass on Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 1,
+          "said": "Daily Masses: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 1,
+          "said": "Daily Masses: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 2,
+          "said": "Monday ... Saturday 9:00AM (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 2,
+          "said": "Monday ... Saturday 9:00AM (Mass Intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Masses: 9:00 AM”"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Masses 9:00 AM and both weeks' intentions list a 9:00 AM Mass Monday through Saturday; p1 also has a novena after 9am Mass on Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 1,
+          "said": "Daily Masses: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 1,
+          "said": "Daily Masses: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 2,
+          "said": "Monday ... Saturday 9:00AM (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 2,
+          "said": "Monday ... Saturday 9:00AM (Mass Intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Masses: 9:00 AM”"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Masses 9:00 AM and both weeks' intentions list a 9:00 AM Mass Monday through Saturday; p1 also has a novena after 9am Mass on Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 1,
+          "said": "Confessions Saturday 3:00-3:45, or anytime by request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 1,
+          "said": "Confessions Saturday 3:00-3:45, or anytime by request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 6,
+          "said": "Confessions Saturday, December 5, 12, 19 and 26, 2026 3:00pm - 3:45pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday 3:00-3:45, or anytime by request”"
+        }
+      ],
+      "rationale": "R1: printed in both issues; the website agrees (Saturday 3-3:45 pm). 'By request' has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "12:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Daily Mass Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 3,
+          "said": "Eucharistic Adoration Join us in the Daily Mass Chapel Monday through Friday 9:30 AM - 12:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 3,
+          "said": "Eucharistic Adoration Join us in the Daily Mass Chapel Monday through Friday 9:30 AM - 12:30 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Join us in the Daily Mass Chapel\nMonday through Friday\n9:30 AM — 12:30 PM”"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: printed in both issues; the Daily Mass Chapel, where the parish's daily Mass is said, is part of its one church. The website gives Daily 9:30-12:30 pm. Exposition not claimed beyond 'Eucharistic Adoration' (R38).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "12:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Daily Mass Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 3,
+          "said": "Eucharistic Adoration Join us in the Daily Mass Chapel Monday through Friday 9:30 AM - 12:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 3,
+          "said": "Eucharistic Adoration Join us in the Daily Mass Chapel Monday through Friday 9:30 AM - 12:30 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Join us in the Daily Mass Chapel\nMonday through Friday\n9:30 AM — 12:30 PM”"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: printed in both issues; the Daily Mass Chapel, where the parish's daily Mass is said, is part of its one church. The website gives Daily 9:30-12:30 pm. Exposition not claimed beyond 'Eucharistic Adoration' (R38).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "12:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Daily Mass Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 3,
+          "said": "Eucharistic Adoration Join us in the Daily Mass Chapel Monday through Friday 9:30 AM - 12:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 3,
+          "said": "Eucharistic Adoration Join us in the Daily Mass Chapel Monday through Friday 9:30 AM - 12:30 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Join us in the Daily Mass Chapel\nMonday through Friday\n9:30 AM — 12:30 PM”"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: printed in both issues; the Daily Mass Chapel, where the parish's daily Mass is said, is part of its one church. The website gives Daily 9:30-12:30 pm. Exposition not claimed beyond 'Eucharistic Adoration' (R38).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "12:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Daily Mass Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 3,
+          "said": "Eucharistic Adoration Join us in the Daily Mass Chapel Monday through Friday 9:30 AM - 12:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 3,
+          "said": "Eucharistic Adoration Join us in the Daily Mass Chapel Monday through Friday 9:30 AM - 12:30 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Join us in the Daily Mass Chapel\nMonday through Friday\n9:30 AM — 12:30 PM”"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: printed in both issues; the Daily Mass Chapel, where the parish's daily Mass is said, is part of its one church. The website gives Daily 9:30-12:30 pm. Exposition not claimed beyond 'Eucharistic Adoration' (R38).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "12:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Daily Mass Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 3,
+          "said": "Eucharistic Adoration Join us in the Daily Mass Chapel Monday through Friday 9:30 AM - 12:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 3,
+          "said": "Eucharistic Adoration Join us in the Daily Mass Chapel Monday through Friday 9:30 AM - 12:30 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Join us in the Daily Mass Chapel\nMonday through Friday\n9:30 AM — 12:30 PM”"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: printed in both issues; the Daily Mass Chapel, where the parish's daily Mass is said, is part of its one church. The website gives Daily 9:30-12:30 pm. Exposition not claimed beyond 'Eucharistic Adoration' (R38).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Daily Mass Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 3,
+          "said": "Eucharistic Adoration Join us in the Daily Mass Chapel ... Wednesday Evenings 7:30 PM - 8:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 3,
+          "said": "Eucharistic Adoration Join us in the Daily Mass Chapel ... Wednesday Evenings 7:30 PM - 8:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 4,
+          "said": "every First Wednesday of the month from 7:30PM to 8:30PM in the Adoration Chapel (during Adoration)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Wednesday Evenings\n7:30 PM - 8:30 PM”"
+        }
+      ],
+      "rationale": "R1: printed in both issues and on the website (Wednesday Evenings 7:30-8:30 pm). The first-Wednesday prayer ministry is held during this Adoration and needs no slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-10",
+        "start_time": "19:00",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Penance Service"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 6,
+          "said": "Parish Advent Penance Service Thursday, December 10, 2026 - 7:00pm - 8:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 5,
+          "said": "December 10, 2026 Advent Penance Service 7:00PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “Parish Advent Penance Service\nThursday, December 10, 2026 - 7:00pm – 8:30pm\nConfessions”"
+        }
+      ],
+      "rationale": "R1, R16: a dated penance service, itself a celebration of the sacrament, with its own times; as st-aloysius-pottstown s17.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-23",
+        "start_time": "19:00",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 6,
+          "said": "Confessions ... Wednesday, December 23, 7:00pm - 8:30pm (last Opportunity for Confessions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 5,
+          "said": "December 23, 2026 Last Chance for Confession 7-8:30PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 5,
+          "said": "gpt-6-luna read the same: B1 p5 “December 23, 2026\nLast Chance for Confession\n7-8:30PM”"
+        }
+      ],
+      "rationale": "R1, R16: dated confessions in the Christmas schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 6,
+          "said": "Vigil of Christmas Thursday, December 24 ... 5:30pm ~ Mass ... 8:30 pm Choral concert 9:00pm ~ Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “Thursday, December 24\n5:30pm ~ Mass”"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Masses in the parish's CHRISTMAS SCHEDULE FOR 2026. The Dec 24 9:00am Mass is the weekly Thursday slot (POLICY rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "21:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 6,
+          "said": "Vigil of Christmas Thursday, December 24 ... 5:30pm ~ Mass ... 8:30 pm Choral concert 9:00pm ~ Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “8:30 pm Choral concert 9:00pm ~ Mass”"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Masses in the parish's CHRISTMAS SCHEDULE FOR 2026. The Dec 24 9:00am Mass is the weekly Thursday slot (POLICY rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 6,
+          "said": "Christmas Day Friday, December 25 8:00am~10:00am~12:00 noon Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “Christmas Day\nFriday, December 25\n8:00am~10:00am~12:00 noon Mass”"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Day Masses. No cancellation of the Friday 9 AM is printed, so the weekly slot is left alone (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 6,
+          "said": "Christmas Day Friday, December 25 8:00am~10:00am~12:00 noon Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “Christmas Day\nFriday, December 25\n8:00am~10:00am~12:00 noon Mass”"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Day Masses. No cancellation of the Friday 9 AM is printed, so the weekly slot is left alone (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 6,
+          "said": "Christmas Day Friday, December 25 8:00am~10:00am~12:00 noon Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “Christmas Day\nFriday, December 25\n8:00am~10:00am~12:00 noon Mass”"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Day Masses. No cancellation of the Friday 9 AM is printed, so the weekly slot is left alone (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of Mary, Mother of God"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 6,
+          "said": "Thursday, December 31, 4:00pm Vigil Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “Thursday, December 31, 4:00pm Vigil Mass”"
+        }
+      ],
+      "rationale": "R1, R16: dated vigil for the holy day of obligation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mary, Mother of God"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 6,
+          "said": "Friday, JANUARY 1, 2027 8:00am~10:00am~12noon ~ Mass in Church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “Friday, JANUARY 1, 2027\n8:00am~10:00am~12noon ~ Mass in Church”"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Masses. No cancellation of the Friday 9 AM is printed (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mary, Mother of God"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 6,
+          "said": "Friday, JANUARY 1, 2027 8:00am~10:00am~12noon ~ Mass in Church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “Friday, JANUARY 1, 2027\n8:00am~10:00am~12noon ~ Mass in Church”"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Masses. No cancellation of the Friday 9 AM is printed (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mary, Mother of God"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 6,
+          "said": "Friday, JANUARY 1, 2027 8:00am~10:00am~12noon ~ Mass in Church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “Friday, JANUARY 1, 2027\n8:00am~10:00am~12noon ~ Mass in Church”"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Masses. No cancellation of the Friday 9 AM is printed (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 6,
+          "said": "Thursday, December 24 3:30pm ~Tableau followed by Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 3,
+          "said": "participate in the childrens choir or Christmas tableau on Christmas eve, December 24 at 3:30PM"
+        }
+      ],
+      "rationale": "R30: 3:30 PM is the Tableau's time; the Mass follows it and has no start of its own (POLICY, Final source checks; as queen-of-peace-ardsley s16). Unlike immaculate-conception-bvm-jenkintown s21, where the parish dated the Mass itself at 3:30 after a short procession, here p3 dates only the tableau, a children's pageant that may run some time. Leaning to leave out: a wrong time is worse than a missing one.",
+      "question": "Add a Christmas Eve Mass at 3:30 PM, which follows the children's Tableau?",
+      "options": [
+        {
+          "label": "Dec 24 3:30 PM, with a note",
+          "entry": {
+            "church_slug": "st-cyril-of-jerusalem-jamison",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "15:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Children's Tableau, followed by Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 1,
+          "said": "Holy Days: 6:30 AM, 9:00 AM & 7:00 PM - Vigil: 5:30 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no date. No read issue dates the Immaculate Conception (Dec 8); the dated Christmas schedule (p6) gives Jan 1 different times (8, 10, 12 and a 4 PM vigil), so the generic line can't be projected. As st-isaac-jogues-wayne s27; update mode will read December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 4,
+          "said": "Mother of Sorrows Retreat Saturday December 12, 2026 starting with the 9:00AM Mass in the Chapel ... Eucharistic Adoration and Confession will be available"
+        },
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 5,
+          "said": "December 12, 2026 Mother of Sorrows Retreat-9am-12Noon"
+        }
+      ],
+      "rationale": "POLICY, Final source checks: the retreat's Adoration and Confession have no times of their own, so the retreat's 9-12 hours aren't copied onto them (as our-lady-of-fatima-secane s16). Its 9:00 AM Mass is the weekly Saturday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 5,
+          "said": "November 30, 2026 PREP Confessions"
+        }
+      ],
+      "rationale": "R24, R26: confessions for religious-education children, with no time printed; not open to all penitents (as st-luke-the-evangelist-glenside s25).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "789b4712",
+          "page": 3,
+          "said": "Our Mother of Perpetual Help Novena Join us on Wednesday evening at 7:00 PM in St. Cyril of Jerusalem Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 3,
+          "said": "Our Mother of Perpetual Help Novena Join us on Wednesday evening at 7:00 PM in St. Cyril of Jerusalem Church"
+        }
+      ],
+      "rationale": "R24: a novena devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2daee255",
+          "page": 3,
+          "said": "40 Hours Saturday November 7, 2026 ... Monday, November 9, 2026 ... 6:45PM: Evening Prayer, Procession & Benadiction"
+        }
+      ],
+      "rationale": "R16: the Forty Hours (Nov 7-9) ended before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "60dd072b8920a55915482e80ca816f65",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T22:20:15.069756+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "789b471244dc2fd977535cb6119fd528da785b60756ca05e34a1da0fb0d0d621",
+        "fetched_at": "2026-11-15T16:44:55Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "2daee2558ae3aca9d7b500cdb153415c194b27308aa8fd6fb834ce104b511424",
+        "fetched_at": "2026-11-08T15:53:51Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.008637,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday - 4:00 PM *livestreamed"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday - 4:00 PM *livestreamed"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Masses: 9:00 AM"
+          },
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saturday November 21, 2026\n9:00AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Masses: 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saturday November 14, 2026\n9:00AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:00am-10:00am-Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:00am-10:00am-Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:00am-10:00am-Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:00am-10:00am-Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:00am-10:00am-Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:00am-10:00am-Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Masses: 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Masses: 9:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Masses: 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Masses: 9:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Masses: 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Masses: 9:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Masses: 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Masses: 9:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Masses: 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Masses: 9:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:00",
+          "end_time": "15:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday 3:00-3:45, or anytime by request"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday 3:00-3:45, or anytime by request"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "12:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Daily Mass Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Join us in the Daily Mass Chapel\nMonday through Friday\n9:30 AM — 12:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Join us in the Daily Mass Chapel\nMonday through Friday\n9:30 AM — 12:30 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "12:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Daily Mass Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Join us in the Daily Mass Chapel\nMonday through Friday\n9:30 AM — 12:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Join us in the Daily Mass Chapel\nMonday through Friday\n9:30 AM — 12:30 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "12:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Daily Mass Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Join us in the Daily Mass Chapel\nMonday through Friday\n9:30 AM — 12:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Join us in the Daily Mass Chapel\nMonday through Friday\n9:30 AM — 12:30 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "12:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Daily Mass Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Join us in the Daily Mass Chapel\nMonday through Friday\n9:30 AM — 12:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Join us in the Daily Mass Chapel\nMonday through Friday\n9:30 AM — 12:30 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "12:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Daily Mass Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Join us in the Daily Mass Chapel\nMonday through Friday\n9:30 AM — 12:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Join us in the Daily Mass Chapel\nMonday through Friday\n9:30 AM — 12:30 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "19:30",
+          "end_time": "20:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Daily Mass Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Wednesday Evenings\n7:30 PM - 8:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Wednesday Evenings\n7:30 PM - 8:30 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o18",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-24",
+          "start_time": "17:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Christmas Eve",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Thursday, December 24\n5:30pm ~ Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o19",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-24",
+          "start_time": "21:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Christmas Eve",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "8:30 pm Choral concert 9:00pm ~ Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o20",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-25",
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Christmas Day",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Christmas Day\nFriday, December 25\n8:00am~10:00am~12:00 noon Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o21",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-25",
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Christmas Day",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Christmas Day\nFriday, December 25\n8:00am~10:00am~12:00 noon Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o22",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-25",
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Christmas Day",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Christmas Day\nFriday, December 25\n8:00am~10:00am~12:00 noon Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o23",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-31",
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "New Year's Eve",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Thursday, December 31, 4:00pm Vigil Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o24",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2027-01-01",
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Mary, Mother of God",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Friday, JANUARY 1, 2027\n8:00am~10:00am~12noon ~ Mass in Church"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o25",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2027-01-01",
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Mary, Mother of God",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Friday, JANUARY 1, 2027\n8:00am~10:00am~12noon ~ Mass in Church"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o26",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2027-01-01",
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Mary, Mother of God",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Friday, JANUARY 1, 2027\n8:00am~10:00am~12noon ~ Mass in Church"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o27",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "confession",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-10",
+          "start_time": "19:00",
+          "end_time": "20:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Parish Advent Penance Service\nThursday, December 10, 2026 - 7:00pm – 8:30pm\nConfessions"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o28",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "confession",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-23",
+          "start_time": "19:00",
+          "end_time": "20:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "December 23, 2026\nLast Chance for Confession\n7-8:30PM"
+          },
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Wednesday, December 23, 7:00pm – 8:30pm (last Opportunity for Confessions)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o29",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-25",
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": true,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Masses: 9:00 AM"
+          },
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Christmas Day\nFriday, December 25\n8:00am~10:00am~12:00 noon Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o30",
+        "entry": {
+          "church_slug": "st-cyril-of-jerusalem-jamison",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2027-01-01",
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": true,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Masses: 9:00 AM"
+          },
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Friday, JANUARY 1, 2027\n8:00am~10:00am~12noon ~ Mass in Church"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "3c7d5b3f67a2c258700c42ba9548b741b9963d5d38ff4de6ea863a2a404745cf",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "missing",
+        "fields": [],
+        "opinion": [
+          "o29"
+        ],
+        "slots": [],
+        "opinion_said": "mass 2026-12-25 09:00 cancelled @st-cyril-of-jerusalem-jamison",
+        "seed_said": "-",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "789b4712",
+              "page": 6,
+              "said": "Christmas Day Friday, December 25 8:00am~10:00am~12:00 noon Mass"
+            }
+          ],
+          "why": "R17: the Christmas schedule lists the day's Masses but never says the 9 AM daily Mass is cancelled, moved or replaced; a holiday listing that omits the usual time is not a stated cancellation, so the weekly Friday slot is left alone.",
+          "at": "2026-11-27T22:20:44Z"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "missing",
+        "fields": [],
+        "opinion": [
+          "o30"
+        ],
+        "slots": [],
+        "opinion_said": "mass 2027-01-01 09:00 cancelled @st-cyril-of-jerusalem-jamison",
+        "seed_said": "-",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "789b4712",
+              "page": 6,
+              "said": "Friday, JANUARY 1, 2027 8:00am~10:00am~12noon ~ Mass in Church"
+            }
+          ],
+          "why": "R17: the holy-day listing doesn't say the 9 AM daily Mass is cancelled or replaced; an omitted usual time is not a stated cancellation, so the weekly Friday slot is left alone.",
+          "at": "2026-11-27T22:20:48Z"
+        }
+      }
+    ]
+  }
+}
