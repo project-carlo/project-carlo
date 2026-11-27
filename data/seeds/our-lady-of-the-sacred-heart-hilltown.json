@@ -1,0 +1,1780 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-sacred-heart-hilltown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:43:55Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T16:23:16Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Hilltown. Weekend (Sat 4, Sun 8/9:30/11), daily 7:30 AM, Saturday confession 8:00-8:30 and 3:15-3:45 PM and Wednesday Adoration 8 AM-6 PM agree in both issues (all pages are images) and on the website; the website supplies the First Friday 6 PM Holy Hour with confession and 7 PM Mass and the 8:30 confession end (R6). Open: the standing Holy Days line for Dec 8, and November's Monday 6 PM All Souls' Day Masses.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+      "fetched_at": "2026-11-15T16:43:55Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f0cc0a830268ce8dded4c579a4619de926eab0d427c96a12bead63cdbc537bd3",
+      "fetched_at": "2026-11-08T15:53:09Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+      "bulletins": [
+        "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+        "f0cc0a830268ce8dded4c579a4619de926eab0d427c96a12bead63cdbc537bd3"
+      ],
+      "cached": false,
+      "cost_usd": 0.002379,
+      "at": "2026-11-27T16:32:02.406011+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Mass Schedule ... Saturday Vigil: 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 1,
+          "said": "Mass Schedule ... Saturday Vigil: 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 7,
+          "said": "Saturday, November 21st: 4:00 p.m. Vigil Mass - (Church)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil: 4:00 p.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read and in both weekly calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Sunday: 8:00, 9:30 & 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 1,
+          "said": "Sunday: 8:00, 9:30 & 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 7,
+          "said": "Sunday, November 22nd: 8:00 a.m. Sunday Mass ... 9:30 a.m. Mass - (Church) ... 11:00 a.m. Mass - (Church)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:00, 9:30 & 11:00 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read and in both weekly calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Sunday: 8:00, 9:30 & 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 1,
+          "said": "Sunday: 8:00, 9:30 & 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 7,
+          "said": "Sunday, November 22nd: 8:00 a.m. Sunday Mass ... 9:30 a.m. Mass - (Church) ... 11:00 a.m. Mass - (Church)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:00, 9:30 & 11:00 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read and in both weekly calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Sunday: 8:00, 9:30 & 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 1,
+          "said": "Sunday: 8:00, 9:30 & 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 7,
+          "said": "Sunday, November 22nd: 8:00 a.m. Sunday Mass ... 9:30 a.m. Mass - (Church) ... 11:00 a.m. Mass - (Church)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:00, 9:30 & 11:00 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read and in both weekly calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Weekdays: 7:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 1,
+          "said": "Weekdays: 7:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 5,
+          "said": "Daily Mass is celebrated in the Church at 7:30 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: 7:30 a.m.”"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues, the Mass intentions and the weekly calendars all give a 7:30 AM daily Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Weekdays: 7:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 1,
+          "said": "Weekdays: 7:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 5,
+          "said": "Daily Mass is celebrated in the Church at 7:30 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: 7:30 a.m.”"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues, the Mass intentions and the weekly calendars all give a 7:30 AM daily Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Weekdays: 7:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 1,
+          "said": "Weekdays: 7:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 5,
+          "said": "Daily Mass is celebrated in the Church at 7:30 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: 7:30 a.m.”"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues, the Mass intentions and the weekly calendars all give a 7:30 AM daily Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Weekdays: 7:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 1,
+          "said": "Weekdays: 7:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 5,
+          "said": "Daily Mass is celebrated in the Church at 7:30 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: 7:30 a.m.”"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues, the Mass intentions and the weekly calendars all give a 7:30 AM daily Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Weekdays: 7:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 1,
+          "said": "Weekdays: 7:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 5,
+          "said": "Daily Mass is celebrated in the Church at 7:30 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: 7:30 a.m.”"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues, the Mass intentions and the weekly calendars all give a 7:30 AM daily Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Saturdays: 7:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 1,
+          "said": "Saturdays: 7:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 7,
+          "said": "Saturday, November 21st: 7:30 a.m. Daily Mass - (Church)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturdays: 7:30 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read and in both weekly calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays: 8:00 a.m. and 3:15-3:45 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays: 8:00 a.m. and 3:15-3:45 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 7,
+          "said": "3:15 p.m. Confessions - (Church)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sacrament of Reconciliation\nSaturdays: 8:00 a.m. and 3:15-3:45 p.m.”"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues gives 3:15-3:45 p.m.; the website grid agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Also available by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Cry Room of the church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament Wednesdays: 8:00 a.m. to 6:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament Wednesdays: 8:00 a.m. to 6:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament takes place on Wednesdays in the Cry Room of the Church beginning at 8:00 AM until 6:00 PM."
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Adoration of the Blessed Sacrament takes place on Wednesdays in the Cry Room of the Church beginning at 8:00 AM until 6:00 PM.”"
+        }
+      ],
+      "rationale": "R1: the schedule box and the Adoration notice of both issues agree; the Cry Room is in the church (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 3,
+          "said": "Thanksgiving Day Mass in Church Thursday, November 26, 2026 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 3,
+          "said": "Thanksgiving Day Mass in Church Thursday, November 26, 2026 9:00 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Thanksgiving Day Mass\nin Church\nThursday, November 26, 2026\n9:00 a.m.”"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass after as_of, printed in both issues. R17: no cancellation of the weekly Thursday 7:30 AM Mass is printed, so that slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays: 8:00 a.m. and 3:15-3:45 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays: 8:00 a.m. and 3:15-3:45 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 7,
+          "said": "Saturday, November 21st: 8:00 a.m. Confessions - (Church)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olsh-hilltown.com/",
+          "said": "Saturday 8:00 AM to 8:30 AM 3:15 PM to 3:45 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:27:49Z",
+            "current_because": "Checked 2026-11-27: the homepage grid's weekend, daily, Saturday-confession and Wednesday-Adoration times match the Nov 15, 2026 bulletin exactly, it names the current pastor (Fr. Tadeusz Lizinczyk, also in the bulletin) and its event calendar lists confessions on 2026-11-28.",
+            "bulletin": "ee619bbb",
+            "fits_because": "The bulletin prints the 8:00 a.m. Saturday confession with no end; the site gives the same start and the same 3:15-3:45 afternoon window, so its 8:30 end fills a time the bulletin lacks (R6)."
+          }
+        }
+      ],
+      "rationale": "R1 for the 8:00 AM start (schedule box and calendar of both issues); R6 for the 8:30 AM end, from the parish website's confession grid, which matches the bulletin's other times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Friday Worship"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olsh-hilltown.com/",
+          "said": "Daily Mass Schedule Mon Sat 7:30 AM English 1st Friday : 7:00 PM English",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:27:53Z",
+            "current_because": "Checked 2026-11-27: the homepage grid's weekend, daily, Saturday-confession and Wednesday-Adoration times match the Nov 15, 2026 bulletin exactly, it names the current pastor (Fr. Tadeusz Lizinczyk, also in the bulletin) and its event calendar lists confessions on 2026-11-28.",
+            "bulletin": "ee619bbb",
+            "fits_because": "The Nov 15 bulletin covers the third week and the Nov 8 one the second, so neither would print a first-Friday service; a missing mention is not a conflict (R6)."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.olsh-hilltown.com/first-friday-holy-hour",
+          "said": "Our First Friday Worship which begins at 6:00 PM includes an hour of prayer with Adoration of the Blessed Sacrament. ... Afterward, the Mass will be celebrated with music",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:27:53Z",
+            "current_because": "Checked 2026-11-27: the homepage grid's weekend, daily, Saturday-confession and Wednesday-Adoration times match the Nov 15, 2026 bulletin exactly, it names the current pastor (Fr. Tadeusz Lizinczyk, also in the bulletin) and its event calendar lists confessions on 2026-11-28.",
+            "bulletin": "ee619bbb",
+            "fits_because": "The Nov 15 bulletin covers the third week and the Nov 8 one the second, so neither would print a first-Friday service; a missing mention is not a conflict (R6)."
+          }
+        }
+      ],
+      "rationale": "R6, R12: the parish website gives a 1st Friday 7:00 PM Mass after the 6:00 PM Holy Hour; no read issue's week holds a first Friday. The site notes Stations of the Cross replace First Friday Worship in Lent, which the file can't express (no month season); update mode will read Lent's bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Friday Holy Hour"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olsh-hilltown.com/",
+          "said": "Adoration ... 1st Friday 6:00 PM to 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:27:58Z",
+            "current_because": "Checked 2026-11-27: the homepage grid's weekend, daily, Saturday-confession and Wednesday-Adoration times match the Nov 15, 2026 bulletin exactly, it names the current pastor (Fr. Tadeusz Lizinczyk, also in the bulletin) and its event calendar lists confessions on 2026-11-28.",
+            "bulletin": "ee619bbb",
+            "fits_because": "The Nov 15 bulletin covers the third week and the Nov 8 one the second, so neither would print a first-Friday service; a missing mention is not a conflict (R6)."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.olsh-hilltown.com/first-friday-holy-hour",
+          "said": "Our First Friday Worship which begins at 6:00 PM includes an hour of prayer with Adoration of the Blessed Sacrament.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:27:58Z",
+            "current_because": "Checked 2026-11-27: the homepage grid's weekend, daily, Saturday-confession and Wednesday-Adoration times match the Nov 15, 2026 bulletin exactly, it names the current pastor (Fr. Tadeusz Lizinczyk, also in the bulletin) and its event calendar lists confessions on 2026-11-28.",
+            "bulletin": "ee619bbb",
+            "fits_because": "The Nov 15 bulletin covers the third week and the Nov 8 one the second, so neither would print a first-Friday service; a missing mention is not a conflict (R6)."
+          }
+        }
+      ],
+      "rationale": "R6, R12: the website's Adoration grid gives 1st Friday 6:00-7:00 PM and its First Friday page calls the hour Adoration of the Blessed Sacrament. Same Lent caveat as the 7 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During the First Friday Holy Hour"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olsh-hilltown.com/",
+          "said": "Confession ... 1st Friday 6:00 PM to 6:45 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:28:02Z",
+            "current_because": "Checked 2026-11-27: the homepage grid's weekend, daily, Saturday-confession and Wednesday-Adoration times match the Nov 15, 2026 bulletin exactly, it names the current pastor (Fr. Tadeusz Lizinczyk, also in the bulletin) and its event calendar lists confessions on 2026-11-28.",
+            "bulletin": "ee619bbb",
+            "fits_because": "The Nov 15 bulletin covers the third week and the Nov 8 one the second, so neither would print a first-Friday service; a missing mention is not a conflict (R6)."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.olsh-hilltown.com/first-friday-holy-hour",
+          "said": "The opportunity to receive the Sacrament of Reconciliation will be available during this time.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:28:02Z",
+            "current_because": "Checked 2026-11-27: the homepage grid's weekend, daily, Saturday-confession and Wednesday-Adoration times match the Nov 15, 2026 bulletin exactly, it names the current pastor (Fr. Tadeusz Lizinczyk, also in the bulletin) and its event calendar lists confessions on 2026-11-28.",
+            "bulletin": "ee619bbb",
+            "fits_because": "The Nov 15 bulletin covers the third week and the Nov 8 one the second, so neither would print a first-Friday service; a missing mention is not a conflict (R6)."
+          }
+        }
+      ],
+      "rationale": "R6, R12: the website's confession grid gives 1st Friday 6:00-6:45 PM, a clock time of its own (POLICY, Times), during the Holy Hour. Same Lent caveat as the 7 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Holy Days: 6:30, 9:00 a.m. & 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 1,
+          "said": "Holy Days: 6:30, 9:00 a.m. & 7:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olsh-hilltown.com/mass-times",
+          "said": "Holy days: 6:30 AM | 9:00 AM | 7:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: neither the bulletin's standing Holy Days line nor the website's names a date or this year, and no read issue prints a Dec 8 notice. Leaning per precedent st-isaac-jogues-wayne s27 (an undated standing box left out); unlike our-lady-of-consolation-parkesburg s12 and st-matthias-bala-cynwyd s17, nothing dated ties the times to Dec 8, 2026. Hard because Dec 8 is a fixed holy day and both sources agree on the times; December issues will likely print them.",
+      "question": "Add the Immaculate Conception Masses on Tue Dec 8 (6:30, 9:00 AM, 7:00 PM) from the standing Holy Days line?",
+      "options": [
+        {
+          "label": "Dec 8 at the standing holy-day times",
+          "entry": {
+            "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Holy Days: 6:30, 9:00 a.m. & 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 1,
+          "said": "Holy Days: 6:30, 9:00 a.m. & 7:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olsh-hilltown.com/mass-times",
+          "said": "Holy days: 6:30 AM | 9:00 AM | 7:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: neither the bulletin's standing Holy Days line nor the website's names a date or this year, and no read issue prints a Dec 8 notice. Leaning per precedent st-isaac-jogues-wayne s27 (an undated standing box left out); unlike our-lady-of-consolation-parkesburg s12 and st-matthias-bala-cynwyd s17, nothing dated ties the times to Dec 8, 2026. Hard because Dec 8 is a fixed holy day and both sources agree on the times; December issues will likely print them.",
+      "question": "Add the Immaculate Conception Masses on Tue Dec 8 (6:30, 9:00 AM, 7:00 PM) from the standing Holy Days line?",
+      "options": [
+        {
+          "label": "Dec 8 at the standing holy-day times",
+          "entry": {
+            "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 1,
+          "said": "Holy Days: 6:30, 9:00 a.m. & 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 1,
+          "said": "Holy Days: 6:30, 9:00 a.m. & 7:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olsh-hilltown.com/mass-times",
+          "said": "Holy days: 6:30 AM | 9:00 AM | 7:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: neither the bulletin's standing Holy Days line nor the website's names a date or this year, and no read issue prints a Dec 8 notice. Leaning per precedent st-isaac-jogues-wayne s27 (an undated standing box left out); unlike our-lady-of-consolation-parkesburg s12 and st-matthias-bala-cynwyd s17, nothing dated ties the times to Dec 8, 2026. Hard because Dec 8 is a fixed holy day and both sources agree on the times; December issues will likely print them.",
+      "question": "Add the Immaculate Conception Masses on Tue Dec 8 (6:30, 9:00 AM, 7:00 PM) from the standing Holy Days line?",
+      "options": [
+        {
+          "label": "Dec 8 at the standing holy-day times",
+          "entry": {
+            "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 7,
+          "said": "Monday, November 16th: 6:00 p.m. All Souls' Day Mass - (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0cc0a83",
+          "page": 7,
+          "said": "Monday, November 9th: 6:00 p.m. All Souls' Day Mass - (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 3,
+          "said": "The All Souls' Day envelopes that you returned, will be placed on the Altar and your intentions will be remembered in the Masses for the month of November."
+        }
+      ],
+      "rationale": "R35 would make matching times weekly, but the name marks it as a special November Mass for the All Souls intentions, not part of the box's schedule (POLICY, Weekly or dated rule 4). Nov 9 is before as_of; Nov 16 is recorded as its own dated slot (R16). Nothing prints Nov 23 or 30 or says it runs every November Monday, so a November season would be inferred (R33). Hard because it is printed in two consecutive weeks at the same time and is open.",
+      "question": "Add the Monday 6:00 PM 'All Souls' Day Mass' as a weekly November Mass?",
+      "options": [
+        {
+          "label": "Mondays 6:00 PM in November",
+          "entry": {
+            "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 11,
+              "start_day": null,
+              "end_month": 11,
+              "end_day": null
+            },
+            "note": "All Souls' Day Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-16",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day Mass"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee619bbb",
+          "page": 7,
+          "said": "Monday, November 16th: 6:00 p.m. All Souls' Day Mass - (Church)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “6:00 p.m. All Souls' Day Mass – (Church)”"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass in the church on Nov 16, after as_of (Nov 15 fetch), not limited to any group (POLICY: open unless limited); the weekly question is s22.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "9ad76306cbb8257fab6224971483ba79",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T16:32:02.406011+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "ee619bbb6aa8809368a05267bc7a51c7ed10bb3452961ac44376b5c4eebba20d",
+        "fetched_at": "2026-11-15T16:43:55Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "f0cc0a830268ce8dded4c579a4619de926eab0d427c96a12bead63cdbc537bd3",
+        "fetched_at": "2026-11-08T15:53:09Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002379,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: 7:30 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: 7:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: 7:30 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: 7:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: 7:30 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: 7:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: 7:30 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: 7:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: 7:30 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: 7:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays: 7:30 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays: 7:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil: 4:00 p.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil: 4:00 p.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:00, 9:30 & 11:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:00, 9:30 & 11:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:00, 9:30 & 11:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:00, 9:30 & 11:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:00, 9:30 & 11:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:00, 9:30 & 11:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sacrament of Reconciliation\nSaturdays: 8:00 a.m. and 3:15-3:45 p.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sacrament of Reconciliation\nSaturdays: 8:00 a.m. and 3:15-3:45 p.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:15",
+          "end_time": "15:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sacrament of Reconciliation\nSaturdays: 8:00 a.m. and 3:15-3:45 p.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sacrament of Reconciliation\nSaturdays: 8:00 a.m. and 3:15-3:45 p.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": "18:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Cry Room",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Adoration of the Blessed Sacrament takes place on Wednesdays in the Cry Room of the Church beginning at 8:00 AM until 6:00 PM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Adoration of the Blessed Sacrament takes place on Wednesdays in the Cry Room of the Church beginning at 8:00 AM until 6:00 PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-16",
+          "start_time": "18:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "All Souls' Day",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "6:00 p.m. All Souls' Day Mass – (Church)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "our-lady-of-the-sacred-heart-hilltown",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Thanksgiving Day",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Thanksgiving Day Mass\nin Church\nThursday, November 26, 2026\n9:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Thanksgiving Day Mass\nin Church\nThursday, November 26, 2026\n9:00 a.m."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "b3ce04785fea51aa7760460df570d73103f8a40fdba5ec39b204e55143009a3e",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "differs",
+        "fields": [
+          "end time"
+        ],
+        "opinion": [
+          "o11"
+        ],
+        "slots": [
+          "s15"
+        ],
+        "opinion_said": "confession Sat 08:00 @our-lady-of-the-sacred-heart-hilltown",
+        "seed_said": "confession Sat 08:00-08:30 @our-lady-of-the-sacred-heart-hilltown",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "missing",
+        "fields": [],
+        "opinion": [
+          "o14"
+        ],
+        "slots": [],
+        "opinion_said": "mass 2026-11-16 18:00 @our-lady-of-the-sacred-heart-hilltown",
+        "seed_said": "-",
+        "resolution": {
+          "how": "changed"
+        }
+      },
+      {
+        "id": "d3",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s16"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Fri 19:00 @our-lady-of-the-sacred-heart-hilltown first",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d4",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s17"
+        ],
+        "opinion_said": "-",
+        "seed_said": "adoration Fri 18:00-19:00 @our-lady-of-the-sacred-heart-hilltown first",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d5",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s18"
+        ],
+        "opinion_said": "-",
+        "seed_said": "confession Fri 18:00-18:45 @our-lady-of-the-sacred-heart-hilltown first",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      }
+    ]
+  }
+}
