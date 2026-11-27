@@ -1,0 +1,1569 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-jude-chalfont",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:03Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T22:06:51Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Jude Church and Shrine). Both November issues (image-only, read by render) print the same schedule box, which the website matches: Sat 4:30 PM, Sun 8:30/10:30, Mon-Sat 9:00, Tue/Thu 6:30 AM, Sat confession 3:15-4:15, Thursday Adoration 9:30 AM-7 PM; Thanksgiving cancels the 6:30 Mass and Adoration. Open: whether the 6:30 AM Mass, 'suspended during summer' with no months, is year-round, and a website-only Dec 8 7:00 PM Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+      "fetched_at": "2026-11-15T16:46:03Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "5b364c95f01775f435dcae9d85633d655882421a447736c573e63a9a8997c34e",
+      "fetched_at": "2026-11-08T15:54:45Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+      "bulletins": [
+        "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+        "5b364c95f01775f435dcae9d85633d655882421a447736c573e63a9a8997c34e"
+      ],
+      "cached": false,
+      "cost_usd": 0.003051,
+      "at": "2026-11-27T22:14:05.820946+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30pm (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30pm (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 2,
+          "said": "Saturday November 21 ... 4:30 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil: 4:30pm (livestreamed)”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues and in the Nov 15 intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "Sunday: 8:30am, 10:30am (10:30am livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "Sunday: 8:30am, 10:30am (10:30am livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 2,
+          "said": "Sunday November 15 8:30 AM ... 10:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:30am, 10:30am (10:30am livestreamed)”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "Sunday: 8:30am, 10:30am (10:30am livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "Sunday: 8:30am, 10:30am (10:30am livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 2,
+          "said": "Sunday November 15 8:30 AM ... 10:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:30am, 10:30am (10:30am livestreamed)”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00am (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00am (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 2,
+          "said": "intentions list a 9:00 AM Mass Monday Nov 16 through Saturday Nov 21"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 9:00am (livestreamed)”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues and in each day's intentions; the website agrees. Thanksgiving's 9:00am Mass (p3) is this weekly Thursday slot (POLICY, Weekly rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00am (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00am (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 2,
+          "said": "intentions list a 9:00 AM Mass Monday Nov 16 through Saturday Nov 21"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 9:00am (livestreamed)”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues and in each day's intentions; the website agrees. Thanksgiving's 9:00am Mass (p3) is this weekly Thursday slot (POLICY, Weekly rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00am (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00am (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 2,
+          "said": "intentions list a 9:00 AM Mass Monday Nov 16 through Saturday Nov 21"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 9:00am (livestreamed)”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues and in each day's intentions; the website agrees. Thanksgiving's 9:00am Mass (p3) is this weekly Thursday slot (POLICY, Weekly rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00am (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00am (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 2,
+          "said": "intentions list a 9:00 AM Mass Monday Nov 16 through Saturday Nov 21"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 9:00am (livestreamed)”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues and in each day's intentions; the website agrees. Thanksgiving's 9:00am Mass (p3) is this weekly Thursday slot (POLICY, Weekly rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00am (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00am (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 2,
+          "said": "intentions list a 9:00 AM Mass Monday Nov 16 through Saturday Nov 21"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 9:00am (livestreamed)”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues and in each day's intentions; the website agrees. Thanksgiving's 9:00am Mass (p3) is this weekly Thursday slot (POLICY, Weekly rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00am (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00am (livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 2,
+          "said": "intentions list a 9:00 AM Mass Monday Nov 16 through Saturday Nov 21"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 9:00am (livestreamed)”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues and in each day's intentions; the website agrees. Thanksgiving's 9:00am Mass (p3) is this weekly Thursday slot (POLICY, Weekly rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "Tuesday, Thursday: 6:30am (suspended during summer)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "Tuesday, Thursday: 6:30am (suspended during summer)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 2,
+          "said": "Tuesday November 17 6:30 AM; Thursday November 19 6:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjudechalfont.org/mass-times",
+          "said": "Mass on Tues, Thurs; Communion Service on Mon, Wed, Fri; NO 6:30am services or Masses during the summer."
+        }
+      ],
+      "rationale": "R30/R15: the box, intentions and website all give the 6:30 AM Mass, but 'summer' names no months, so no season can be written (POLICY, Weekly qualifiers; R33). Leaning per precedent st-rose-of-lima-north-wales s10: year-round when the summer break names no months; update mode will read the summer bulletins.",
+      "question": "Tue/Thu 6:30 AM Mass is 'suspended during summer' with no months: record it year-round?",
+      "options": [
+        {
+          "label": "Year-round",
+          "entry": {
+            "church_slug": "st-jude-chalfont",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "summer630"
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "Tuesday, Thursday: 6:30am (suspended during summer)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "Tuesday, Thursday: 6:30am (suspended during summer)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 2,
+          "said": "Tuesday November 17 6:30 AM; Thursday November 19 6:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjudechalfont.org/mass-times",
+          "said": "Mass on Tues, Thurs; Communion Service on Mon, Wed, Fri; NO 6:30am services or Masses during the summer."
+        }
+      ],
+      "rationale": "R30/R15: the box, intentions and website all give the 6:30 AM Mass, but 'summer' names no months, so no season can be written (POLICY, Weekly qualifiers; R33). Leaning per precedent st-rose-of-lima-north-wales s10: year-round when the summer break names no months; update mode will read the summer bulletins.",
+      "question": "Tue/Thu 6:30 AM Mass is 'suspended during summer' with no months: record it year-round?",
+      "options": [
+        {
+          "label": "Year-round",
+          "entry": {
+            "church_slug": "st-jude-chalfont",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "summer630"
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday 3:15 - 4:15pm and by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday 3:15 - 4:15pm and by appointment"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday 3:15 - 4:15pm and by appointment”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues; the website's mass-times page gives Saturday 3:15 PM to 4:15 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "and by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel; Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "Eucharistic Adoration begins after 9:00am Mass and ends with Benediction at 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "Eucharistic Adoration begins after 9:00am Mass and ends with Benediction at 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 5,
+          "said": "joining Him in Adoration every Thursday in the chapel between 9:30am - 7:00pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Eucharistic Adoration begins after 9:00am Mass and ends with Benediction at 7:00pm”"
+        }
+      ],
+      "rationale": "R1, R10: the box ties the start to the weekday 9:00 AM Mass (9:30 per POLICY, Times) and the Nov 8 p5 notice prints 9:30am-7:00pm in the chapel; the website gives Thursday 9:30 AM to 7:00 PM, ending with Benediction. The chapel is part of the parish's one church (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "(Monday, Wednesday, Friday: Communion Service 6:30am) (suspended during summer)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "(Monday, Wednesday, Friday: Communion Service 6:30am) (suspended during summer)"
+        }
+      ],
+      "rationale": "R25, POLICY: a Communion Service is not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "(Monday, Wednesday, Friday: Communion Service 6:30am) (suspended during summer)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "(Monday, Wednesday, Friday: Communion Service 6:30am) (suspended during summer)"
+        }
+      ],
+      "rationale": "R25, POLICY: a Communion Service is not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "(Monday, Wednesday, Friday: Communion Service 6:30am) (suspended during summer)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "(Monday, Wednesday, Friday: Communion Service 6:30am) (suspended during summer)"
+        }
+      ],
+      "rationale": "R25, POLICY: a Communion Service is not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 1,
+          "said": "Chapel & Shrine Hours Monday through Friday: 7:00am to 7:00pm; Saturday: 8:00am to the 4:30pm Vigil Mass; Sunday: 8:00am to Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 1,
+          "said": "Chapel & Shrine Hours Monday through Friday: 7:00am to 7:00pm; Saturday: 8:00am to the 4:30pm Vigil Mass; Sunday: 8:00am to Noon"
+        }
+      ],
+      "rationale": "R38, R40: building opening hours for prayer, not an Adoration schedule; the box gives Adoration separately (Thursday only).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 3,
+          "said": "No 6:30am Mass on Thanksgiving"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 3,
+          "said": "No 6:30am Mass on Thanksgiving"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “No 6:30am Mass on Thanksgiving”"
+        }
+      ],
+      "rationale": "R16, R18: the bulletin cancels the weekly Thursday 6:30 AM Mass on Thanksgiving, Nov 26 (after as_of); the 9:00am Mass is kept (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:30",
+        "end_time": "19:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fb7c8c05",
+          "page": 3,
+          "said": "No Adoration or novena on Thanksgiving."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b364c95",
+          "page": 3,
+          "said": "No Adoration or novena on Thanksgiving."
+        },
+        {
+          "source": "c1",
+          "bulletin": "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “No Adoration or novena on Thanksgiving.”"
+        }
+      ],
+      "rationale": "R16, R18: the bulletin cancels the weekly Thursday Adoration on Thanksgiving, Nov 26 (after as_of).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjudechalfont.org/mass-times",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 6:30 AM 9:00 AM 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjudechalfont.org/",
+          "said": "HOLY DAYS OF OBLIGATION : 6:30am, 9am, 7pm"
+        }
+      ],
+      "rationale": "R29/R6: no read bulletin prints Dec 8. The website's Upcoming Holy Days block and standing holy-day line both give 7:00 PM, and every other time on the site matches both bulletins' p1 box word for word (fetched 2026-11-27). Dec 8 2026 is a Tuesday, so the 6:30 and 9:00 are the weekly slots; only 7 PM is new. Leaning per precedent st-matthias-bala-cynwyd s17 (holy-day Mass from a current site's Upcoming Holy Days).",
+      "question": "Add an Immaculate Conception Mass Tue Dec 8 at 7:00 PM, from the website?",
+      "options": [
+        {
+          "label": "Dec 8 7:00 PM",
+          "entry": {
+            "church_slug": "st-jude-chalfont",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "82887406debf2ae3c78bff55515c4d91",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T22:14:05.820946+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "fb7c8c0589b2c21f1b91e83e6c0b829c2fa479810b889f7ed01dcb2bde85ed24",
+        "fetched_at": "2026-11-15T16:46:03Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "5b364c95f01775f435dcae9d85633d655882421a447736c573e63a9a8997c34e",
+        "fetched_at": "2026-11-08T15:54:45Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.003051,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-jude-chalfont",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil: 4:30pm (livestreamed)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil: 4:30pm (livestreamed)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-jude-chalfont",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:30am, 10:30am (10:30am livestreamed)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:30am, 10:30am (10:30am livestreamed)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-jude-chalfont",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:30am, 10:30am (10:30am livestreamed)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:30am, 10:30am (10:30am livestreamed)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-jude-chalfont",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:00am (livestreamed)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:00am (livestreamed)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-jude-chalfont",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:00am (livestreamed)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:00am (livestreamed)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-jude-chalfont",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:00am (livestreamed)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:00am (livestreamed)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-jude-chalfont",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:00am (livestreamed)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:00am (livestreamed)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-jude-chalfont",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:00am (livestreamed)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:00am (livestreamed)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-jude-chalfont",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:00am (livestreamed)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:00am (livestreamed)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-jude-chalfont",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:15",
+          "end_time": "16:15",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday 3:15 - 4:15pm and by appointment"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday 3:15 - 4:15pm and by appointment"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-jude-chalfont",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "in the chapel; Benediction",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Eucharistic Adoration begins after 9:00am Mass and ends with Benediction at 7:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Eucharistic Adoration begins after 9:00am Mass and ends with Benediction at 7:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 5,
+            "quote": "Adoration every Thursday in the chapel between 9:30am - 7:00pm."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-jude-chalfont",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-17",
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Tuesday November 17\n6:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-jude-chalfont",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-19",
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Thursday November 19\n6:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-jude-chalfont",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": true,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "No 6:30am Mass on Thanksgiving"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-jude-chalfont",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "09:30",
+          "end_time": "19:00",
+          "cancelled": true,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "No Adoration or novena on Thanksgiving."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "05330304db046e8a4c3ffea7112e4f66d3e9d27437516fec62972f811ebbe69a",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "missing",
+        "fields": [],
+        "opinion": [
+          "o12"
+        ],
+        "slots": [],
+        "opinion_said": "mass 2026-11-17 06:30 @st-jude-chalfont",
+        "seed_said": "-",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "fb7c8c05",
+              "page": 2,
+              "said": "Tuesday November 17 6:30 AM"
+            }
+          ],
+          "why": "POLICY, Weekly or dated rule 6: this intentions line is a dated sighting of the weekly 'Tuesday, Thursday: 6:30am' Mass in the fb7c8c05 p1 box, which slots s10-s11 (group summer630) already ask about as a weekly slot; a weekly slot is not duplicated as a dated entry.",
+          "at": "2026-11-27T22:14:27Z"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "missing",
+        "fields": [],
+        "opinion": [
+          "o13"
+        ],
+        "slots": [],
+        "opinion_said": "mass 2026-11-19 06:30 @st-jude-chalfont",
+        "seed_said": "-",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "fb7c8c05",
+              "page": 2,
+              "said": "Thursday November 19 6:30 AM"
+            }
+          ],
+          "why": "POLICY, Weekly or dated rule 6: this intentions line is a dated sighting of the weekly 'Tuesday, Thursday: 6:30am' Mass in the fb7c8c05 p1 box, which slots s10-s11 (group summer630) already ask about as a weekly slot; a weekly slot is not duplicated as a dated entry.",
+          "at": "2026-11-27T22:14:31Z"
+        }
+      }
+    ]
+  }
+}
