@@ -1,0 +1,1392 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-patrick-norristown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:42Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T05:06:13Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Patrick, Norristown); both November bulletins are image-only and print the same weekend, confession and weekday-intention block (the intentions are the Nov 9-13 week in both). Weekday Masses and Wednesday Adoration come from the website (R6), whose times otherwise match. Dated: Thanksgiving 9 AM, Dec 8 5 PM/7 PM, Christmas Eve 4 PM/6 PM. Open: Saturday confession start (bulletin 2:25 vs website 2:45).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e93ce8adaa5d4e5a518c16d01620f2a9636856b701a45ca71e6916beaa649d64",
+      "fetched_at": "2026-11-15T16:46:42Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "01a05f18a54496e7b0aea2793294e1c904d59f93d9b6ee1533923b34667842d4",
+      "fetched_at": "2026-11-08T15:55:12Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "e93ce8adaa5d4e5a518c16d01620f2a9636856b701a45ca71e6916beaa649d64",
+      "bulletins": [
+        "e93ce8adaa5d4e5a518c16d01620f2a9636856b701a45ca71e6916beaa649d64",
+        "01a05f18a54496e7b0aea2793294e1c904d59f93d9b6ee1533923b34667842d4"
+      ],
+      "cached": false,
+      "cost_usd": 0.003873,
+      "at": "2026-11-27T14:59:30.981923+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 4,
+          "said": "Mass Schedule Saturday Vigil: 4:00pm - English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01a05f18",
+          "page": 4,
+          "said": "Mass Schedule Saturday Vigil: 4:00pm - English"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e93ce8adaa5d4e5a518c16d01620f2a9636856b701a45ca71e6916beaa649d64",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “Saturday Vigil: 4:00pm - English”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 4,
+          "said": "Saturday Vigil: 6:00pm - Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01a05f18",
+          "page": 4,
+          "said": "Saturday Vigil: 6:00pm - Español"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e93ce8adaa5d4e5a518c16d01620f2a9636856b701a45ca71e6916beaa649d64",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “6:00pm - Español”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 4,
+          "said": "Sunday: 8:00am - Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01a05f18",
+          "page": 4,
+          "said": "Sunday: 8:00am - Español"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e93ce8adaa5d4e5a518c16d01620f2a9636856b701a45ca71e6916beaa649d64",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “Sunday: 8:00am - Español”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 4,
+          "said": "Sunday: 10:00am - English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01a05f18",
+          "page": 4,
+          "said": "Sunday: 10:00am - English"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e93ce8adaa5d4e5a518c16d01620f2a9636856b701a45ca71e6916beaa649d64",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “10:00am - English”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 4,
+          "said": "Sunday: 12:00pm - Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01a05f18",
+          "page": 4,
+          "said": "Sunday: 12:00pm - Español"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e93ce8adaa5d4e5a518c16d01620f2a9636856b701a45ca71e6916beaa649d64",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “12:00pm - Español”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintpatrick-norristown.net/",
+          "said": "Daily Mass (Weekdays) Mondays 6:00 PM (Spanish)",
+          "schedule_check": {
+            "checked_at": "2026-11-27T14:57:28Z",
+            "current_because": "Homepage read 2026-11-27; its weekend Mass and Wednesday confession times match both November 2026 bulletins exactly and it names the current parochial administrator era livestream; no dated stale clues",
+            "bulletin": "e93ce8ad",
+            "fits_because": "Fits e93ce8ad p4: the intentions list Mon 6:00 pm and Tue-Fri 8:00 am Masses, the same days and times, and Wednesday confession 8:30-9:00 follows the Wednesday 8:00 Mass"
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 4,
+          "said": "Monday, November 09 6:00 pm TODAS LAS ALMAS DEL PURGATORIO"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01a05f18",
+          "page": 4,
+          "said": "Monday, November 09 6:00 pm TODAS LAS ALMAS DEL PURGATORIO"
+        }
+      ],
+      "rationale": "R6: the website's weekday schedule gives it; both bulletins print the same week's intentions (Nov 9-13), so the bulletins alone show one dated week, which fits it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintpatrick-norristown.net/",
+          "said": "Tuesdays 8:00 AM (English)",
+          "schedule_check": {
+            "checked_at": "2026-11-27T14:57:28Z",
+            "current_because": "Homepage read 2026-11-27; its weekend Mass and Wednesday confession times match both November 2026 bulletins exactly and it names the current parochial administrator era livestream; no dated stale clues",
+            "bulletin": "e93ce8ad",
+            "fits_because": "Fits e93ce8ad p4: the intentions list Mon 6:00 pm and Tue-Fri 8:00 am Masses, the same days and times, and Wednesday confession 8:30-9:00 follows the Wednesday 8:00 Mass"
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 4,
+          "said": "Tuesday, November 10 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01a05f18",
+          "page": 4,
+          "said": "Tuesday, November 10 8:00 am"
+        }
+      ],
+      "rationale": "R6: the website's weekday schedule gives it; both bulletins' intentions (same week, Nov 9-13) print Tue 8:00 am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bilingual"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintpatrick-norristown.net/",
+          "said": "Wednesdays 8:00 AM (Bilingual) – English during Summer",
+          "schedule_check": {
+            "checked_at": "2026-11-27T14:57:28Z",
+            "current_because": "Homepage read 2026-11-27; its weekend Mass and Wednesday confession times match both November 2026 bulletins exactly and it names the current parochial administrator era livestream; no dated stale clues",
+            "bulletin": "e93ce8ad",
+            "fits_because": "Fits e93ce8ad p4: the intentions list Mon 6:00 pm and Tue-Fri 8:00 am Masses, the same days and times, and Wednesday confession 8:30-9:00 follows the Wednesday 8:00 Mass"
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 4,
+          "said": "Wednesday, November 11 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01a05f18",
+          "page": 4,
+          "said": "Wednesday, November 11 8:00 am"
+        }
+      ],
+      "rationale": "R6: the website's weekday schedule gives it; both bulletins' intentions (Nov 9-13) print Wed 8:00 am. The summer language change has no months (R15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintpatrick-norristown.net/",
+          "said": "Thursdays 8:00 AM (Spanish)",
+          "schedule_check": {
+            "checked_at": "2026-11-27T14:57:28Z",
+            "current_because": "Homepage read 2026-11-27; its weekend Mass and Wednesday confession times match both November 2026 bulletins exactly and it names the current parochial administrator era livestream; no dated stale clues",
+            "bulletin": "e93ce8ad",
+            "fits_because": "Fits e93ce8ad p4: the intentions list Mon 6:00 pm and Tue-Fri 8:00 am Masses, the same days and times, and Wednesday confession 8:30-9:00 follows the Wednesday 8:00 Mass"
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 4,
+          "said": "Thursday, November 12 8:00 am TODAS LAS ALMAS DEL PURGATORIO"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01a05f18",
+          "page": 4,
+          "said": "Thursday, November 12 8:00 am TODAS LAS ALMAS DEL PURGATORIO"
+        }
+      ],
+      "rationale": "R6: the website's weekday schedule gives it; both bulletins' intentions (Nov 9-13) print Thu 8:00 am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintpatrick-norristown.net/",
+          "said": "Fridays 8:00 AM (English) – No Friday Mass during Summer",
+          "schedule_check": {
+            "checked_at": "2026-11-27T14:57:28Z",
+            "current_because": "Homepage read 2026-11-27; its weekend Mass and Wednesday confession times match both November 2026 bulletins exactly and it names the current parochial administrator era livestream; no dated stale clues",
+            "bulletin": "e93ce8ad",
+            "fits_because": "Fits e93ce8ad p4: the intentions list Mon 6:00 pm and Tue-Fri 8:00 am Masses, the same days and times, and Wednesday confession 8:30-9:00 follows the Wednesday 8:00 Mass"
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 4,
+          "said": "Friday, November 13 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01a05f18",
+          "page": 4,
+          "said": "Friday, November 13 8:00 am"
+        }
+      ],
+      "rationale": "R6: the website's weekday schedule gives it; both bulletins' intentions (Nov 9-13) print Fri 8:00 am. 'No Friday Mass during Summer' names no months, so no season is recorded (R15); update mode will read the summer change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 4,
+          "said": "Confessions Wednesday 8:30 am - 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01a05f18",
+          "page": 4,
+          "said": "Confessions Wednesday 8:30 am - 9:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e93ce8adaa5d4e5a518c16d01620f2a9636856b701a45ca71e6916beaa649d64",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “Wednesday 8:30 am - 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the Confessions box of both bulletins; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 4,
+          "said": "Confessions Saturday 2:25 pm - 3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01a05f18",
+          "page": 4,
+          "said": "Confessions Saturday 2:25 pm - 3:45 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://saintpatrick-norristown.net/",
+          "said": "Confession ... Saturdays 2:45 PM – 3:45 PM (3:45 PM – 4:45 PM during the Summer)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e93ce8adaa5d4e5a518c16d01620f2a9636856b701a45ca71e6916beaa649d64",
+          "page": 4,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p4 “Saturday 2:25 pm - 3:45 pm”"
+        }
+      ],
+      "rationale": "R28/C8: both bulletins print 2:25 (zoomed, the digit is clear) while the website, whose other times all match, gives 2:45; 2:25 is an unusual start and could be a typo carried in the template. Leaning to the bulletin as annunciation-bvm-havertown s9 and st-john-chrysostom-wallingford s10 did; an earlier start does less harm than a missing slot.",
+      "question": "Saturday confession: bulletins 2:25-3:45 PM or website 2:45-3:45 PM?",
+      "options": [
+        {
+          "label": "Saturdays 2:25-3:45 PM (bulletin)",
+          "entry": {
+            "church_slug": "st-patrick-church-norristown",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "14:25",
+            "end_time": "15:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Saturdays 2:45-3:45 PM (website)",
+          "entry": {
+            "church_slug": "st-patrick-church-norristown",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "14:45",
+            "end_time": "15:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintpatrick-norristown.net/",
+          "said": "Adoration Wednesdays 8:30 AM – 6:00 PM (Concludes with Benediction at 5:50 PM)",
+          "schedule_check": {
+            "checked_at": "2026-11-27T14:57:28Z",
+            "current_because": "Homepage read 2026-11-27; its weekend Mass and Wednesday confession times match both November 2026 bulletins exactly and it names the current parochial administrator era livestream; no dated stale clues",
+            "bulletin": "e93ce8ad",
+            "fits_because": "Fits e93ce8ad p4: the bulletin prints no Adoration but nothing contrary; its Wednesday 8:00 Mass and 8:30-9:00 confession fit Adoration from 8:30. A missing mention is not a conflict (R6)"
+          }
+        }
+      ],
+      "rationale": "R6: the website's current schedule (other times match both bulletins) gives Wednesday Adoration; the bulletins don't mention it, which R6 treats as a missing mention, as st-basil-the-great-kimberton s19 did.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving; bilingual"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 4,
+          "said": "Thanksgiving Day November 26th 9:00am Bilingual Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01a05f18",
+          "page": 4,
+          "said": "Thanksgiving Day November 26th 9:00am Bilingual Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e93ce8adaa5d4e5a518c16d01620f2a9636856b701a45ca71e6916beaa649d64",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “Thanksgiving Day November 26th 9:00am Bilingual Mass”"
+        }
+      ],
+      "rationale": "R1, R16: a dated notice in both issues; no cancellation of the Thursday 8:00 AM is printed, so the weekly slot stays (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 4,
+          "said": "Holy Day of Obligation December 08 5pm Mass 7pm Misa Feast of the Immaculate Conception"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e93ce8adaa5d4e5a518c16d01620f2a9636856b701a45ca71e6916beaa649d64",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “HOLY DAY OF OBLIGATION DECEMBER 08 5pm Mass 7pm Misa”"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day notice in the newest bulletin; 'Mass' (English) beside '7pm Misa'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception; Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 4,
+          "said": "Holy Day of Obligation December 08 5pm Mass 7pm Misa"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e93ce8adaa5d4e5a518c16d01620f2a9636856b701a45ca71e6916beaa649d64",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “HOLY DAY OF OBLIGATION DECEMBER 08 5pm Mass 7pm Misa”"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day notice in the newest bulletin; 'Misa' is the Spanish Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve; English"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 5,
+          "said": "Christmas Tableau on the Christmas Eve Vigil Mass at 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01a05f18",
+          "page": 3,
+          "said": "Christmas Tableau on Christmas Eve right before our Christmas Eve Vigil Mass at 4pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e93ce8adaa5d4e5a518c16d01620f2a9636856b701a45ca71e6916beaa649d64",
+          "page": 5,
+          "said": "gpt-6-luna read the same: B1 p5 “on the Christmas Eve Vigil Mass at 4pm.”"
+        }
+      ],
+      "rationale": "R1, R16: both issues' Christmas Tableau notice (practices Dec 3, 10, 17, so this year's) names the Christmas Eve 4 PM Vigil Mass; Christmas Eve pins Dec 24.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve; Spanish"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 5,
+          "said": "Dramatizacion del Nacimiento del Niño Jesus en la Misa Vespertina de la Nochebuena a las 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01a05f18",
+          "page": 3,
+          "said": "en la Misa Vespertina a las 6pm"
+        }
+      ],
+      "rationale": "R1, R16: the Spanish notice in both issues (practices Dic. 3 y 10, so this year's) names the Nochebuena 6 PM Mass; Nochebuena pins Dec 24.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "08:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Retiro de Sanación Interior (registered retreat)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e93ce8ad",
+          "page": 3,
+          "said": "Retiro de Sanación Interior SAB 21 NOV 2026 8:00 am - 3:30 pm DOM 22 NOV 9:00 am - 4:30 pm ... Culminaremos con una Hora Santa ... Costo $25 Por los dos días"
+        }
+      ],
+      "rationale": "R24, POLICY Final source checks: a paid retreat in the parish hall whose closing Holy Hour has no time of its own; left out as st-agnes-west-chester s24 left out a registered retreat's Holy Hour.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bilingual vigil during summer"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintpatrick-norristown.net/",
+          "said": "(5:00 PM Bilingual Vigil during Summer)"
+        }
+      ],
+      "rationale": "R15, R33: the summer schedule names no months, so it can't be recorded as a season; the current November schedule is 4 PM and 6 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "678c2fadcf67dd73ec5e1d11c991c03b",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T14:59:30.981923+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "e93ce8adaa5d4e5a518c16d01620f2a9636856b701a45ca71e6916beaa649d64",
+        "fetched_at": "2026-11-15T16:46:42Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "01a05f18a54496e7b0aea2793294e1c904d59f93d9b6ee1533923b34667842d4",
+        "fetched_at": "2026-11-08T15:55:12Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.003873,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-patrick-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "Saturday Vigil: 4:00pm - English"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "Saturday Vigil: 4:00pm - English"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-patrick-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "18:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spanish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "6:00pm - Español"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "6:00pm - Español"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-patrick-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spanish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "Sunday: 8:00am - Español"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "Sunday: 8:00am - Español"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-patrick-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "10:00am - English"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "10:00am - English"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-patrick-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spanish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "12:00pm - Español"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "12:00pm - Español"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-patrick-church-norristown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "09:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "Wednesday 8:30 am - 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "Wednesday 8:30 am - 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-patrick-church-norristown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "14:25",
+          "end_time": "15:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "Saturday 2:25 pm - 3:45 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "Saturday 2:25 pm - 3:45 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-patrick-church-norristown",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Bilingual",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "Thanksgiving Day November 26th 9:00am Bilingual Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-patrick-church-norristown",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-08",
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "HOLY DAY OF OBLIGATION DECEMBER 08 5pm Mass 7pm Misa"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-patrick-church-norristown",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-08",
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spanish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "HOLY DAY OF OBLIGATION DECEMBER 08 5pm Mass 7pm Misa"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-patrick-church-norristown",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-24",
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "on the Christmas Eve Vigil Mass at 4pm."
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Christmas Eve Vigil Mass at 4pm."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "3231c914e29fc17140ff2e5fe6d5f1a57581a2f046e544bf5edde7ce311b31ce",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s6"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Mon 18:00 @st-patrick-church-norristown",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s7",
+          "s8",
+          "s9",
+          "s10"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Tue,Wed,Thu,Fri 08:00 @st-patrick-church-norristown",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d3",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s13"
+        ],
+        "opinion_said": "-",
+        "seed_said": "adoration Wed 08:30-18:00 @st-patrick-church-norristown",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d4",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s18"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-12-24 18:00 @st-patrick-church-norristown",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "e93ce8ad",
+              "page": 5,
+              "said": "Dramatizacion del Nacimiento del Niño Jesus en la Misa Vespertina de la Nochebuena a las 6pm"
+            }
+          ],
+          "why": "R1, R16: the Spanish notice on p5 (practices Dic. 3 y 10, so this year's) names the Christmas Eve 6 PM Mass, distinct from the English column's 4 PM Vigil; the same words are in 01a05f18 p3. Nochebuena pins Dec 24.",
+          "at": "2026-11-27T15:00:10Z"
+        }
+      }
+    ]
+  }
+}
