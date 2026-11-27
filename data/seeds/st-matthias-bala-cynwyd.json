@@ -1,0 +1,1006 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-matthias-bala-cynwyd",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:31Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T04:31:16Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend and weekday Masses agree in both November issues, the intentions and the website; Thanksgiving 9 AM and Fri Nov 27 8 AM are dated (R17, no cancellation stated). Open: Saturday confession end (4:45 bulletin vs 4:30 website), Wednesday Adoration end (6:45 vs 7:00), the Nov 15 prayer-group Holy Hour, and website-only Dec 8 noon and Christmas Masses.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "649db1e02efcd1de0cb9b8607847f2879df36e3539a55e62e9ab99525e83e016",
+      "fetched_at": "2026-11-15T16:46:31Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1f9f5278e85294ce42c745413755a2641c61833630f34b52e76e4141e787cb8e",
+      "fetched_at": "2026-11-08T15:55:04Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-bala-cynwyd",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 1,
+          "said": "MASS SCHEDULE SATURDAY VIGIL: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f9f5278",
+          "page": 1,
+          "said": "MASS SCHEDULE SATURDAY VIGIL: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 2,
+          "said": "Saturday, November 14, 2026 ... 5:00 PM In Thanksgiving for Favors Received"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions; the website's mass-times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-bala-cynwyd",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 1,
+          "said": "SUNDAY: 8:30 AM 10:30 AM 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f9f5278",
+          "page": 1,
+          "said": "SUNDAY: 8:30 AM 10:30 AM 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 2,
+          "said": "Sunday, November 15, 2026 ... 8:30 AM ... 10:30 AM ... 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-bala-cynwyd",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 1,
+          "said": "SUNDAY: 8:30 AM 10:30 AM 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f9f5278",
+          "page": 1,
+          "said": "SUNDAY: 8:30 AM 10:30 AM 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 2,
+          "said": "Sunday, November 15, 2026 ... 8:30 AM ... 10:30 AM ... 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-bala-cynwyd",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 1,
+          "said": "SUNDAY: 8:30 AM 10:30 AM 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f9f5278",
+          "page": 1,
+          "said": "SUNDAY: 8:30 AM 10:30 AM 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 2,
+          "said": "Sunday, November 15, 2026 ... 8:30 AM ... 10:30 AM ... 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-bala-cynwyd",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 1,
+          "said": "MONDAY - FRIDAY: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f9f5278",
+          "page": 1,
+          "said": "MONDAY - FRIDAY: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 2,
+          "said": "Monday, November 16 ... Friday, November 20, 2026 ... 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and every weekday in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-bala-cynwyd",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 1,
+          "said": "MONDAY - FRIDAY: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f9f5278",
+          "page": 1,
+          "said": "MONDAY - FRIDAY: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 2,
+          "said": "Monday, November 16 ... Friday, November 20, 2026 ... 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and every weekday in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-bala-cynwyd",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 1,
+          "said": "MONDAY - FRIDAY: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f9f5278",
+          "page": 1,
+          "said": "MONDAY - FRIDAY: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 2,
+          "said": "Monday, November 16 ... Friday, November 20, 2026 ... 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and every weekday in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-bala-cynwyd",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 1,
+          "said": "MONDAY - FRIDAY: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f9f5278",
+          "page": 1,
+          "said": "MONDAY - FRIDAY: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 2,
+          "said": "Monday, November 16 ... Friday, November 20, 2026 ... 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and every weekday in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-bala-cynwyd",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 1,
+          "said": "MONDAY - FRIDAY: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f9f5278",
+          "page": 1,
+          "said": "MONDAY - FRIDAY: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 2,
+          "said": "Monday, November 16 ... Friday, November 20, 2026 ... 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and every weekday in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-bala-cynwyd",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 1,
+          "said": "SATURDAY: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f9f5278",
+          "page": 1,
+          "said": "SATURDAY: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 2,
+          "said": "Saturday, November 21, 2026 Presentation of the Blessed Virgin Mary 8:00 AM In Thanksgiving"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE: SATURDAY 4:00 PM TO 4:45 PM, ALSO BY APPOINTMENT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f9f5278",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE: SATURDAY 4:00 PM TO 4:45 PM, ALSO BY APPOINTMENT"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintmatthias.org/confessions",
+          "said": "Confessions are being heard in the confessional on the Mary side of the church every Saturday 4-4:30pm regularly or by appointment."
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintmatthias.org/",
+          "said": "Saturday 4:00 PM to 4:30 PM Other times by appointment."
+        }
+      ],
+      "rationale": "R6/R28: the website's confession page and homepage widget say 4:00-4:30, both bulletins' schedule box says 4:45. Leaning per precedent annunciation-bvm-havertown s9: the current bulletins over the website; the 5:00 PM vigil follows, so 4:45 is plausible.",
+      "question": "Saturday confession: bulletin 4:00-4:45 PM or website 4:00-4:30 PM?",
+      "options": [
+        {
+          "label": "Bulletin: Saturdays 4:00-4:45 PM",
+          "entry": {
+            "church_slug": "st-matthias-bala-cynwyd",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "16:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Website: Saturdays 4:00-4:30 PM",
+          "entry": {
+            "church_slug": "st-matthias-bala-cynwyd",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "16:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 5,
+          "said": "Every Wednesday following the 7:30 AM Mass, Eucharistic Adoration takes place in the church. Benediction follows at 6:45 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f9f5278",
+          "page": 5,
+          "said": "Every Wednesday following the 7:30 AM Mass, Eucharistic Adoration takes place in the church. Benediction follows at 6:45 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 3,
+          "said": "11/18 Eucharistic Adoration 8:00 AM Benediction at 6:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f9f5278",
+          "page": 3,
+          "said": "11/11 Eucharistic Adoration 8:00 AM Benediction at 6:45 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintmatthias.org/adoration",
+          "said": "ALL DAY on Wednesdays beginning after 7:30am daily Mass ending with Benediction at 6:45pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintmatthias.org/",
+          "said": "Wednesday 8:00 AM to 7:00 PM Benediction @ 6:45pm (subject to change-check Facebook page)"
+        }
+      ],
+      "rationale": "Start 8:00 AM is printed in both issues' p3 calendars and matches POLICY's 30 minutes after the 7:30 weekday Mass (R10). End: both bulletins and the adoration page end with Benediction at 6:45; only the homepage widget says 7:00 PM. Leaning per precedent st-thomas-the-apostle-glen-mills s13 (Benediction 6:45 over a 7:00 box).",
+      "question": "Wednesday Adoration in the church: end at 6:45 PM (Benediction) or 7:00 PM?",
+      "options": [
+        {
+          "label": "Wednesdays 8:00 AM-6:45 PM",
+          "entry": {
+            "church_slug": "st-matthias-bala-cynwyd",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "18:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Wednesdays 8:00 AM-7:00 PM",
+          "entry": {
+            "church_slug": "st-matthias-bala-cynwyd",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-bala-cynwyd",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 4,
+          "said": "November 26, 2026 Thanksgiving Day Mass at 9:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintmatthias.org/mass-times",
+          "said": "Thanksgiving Day Mass: 9:00 a.m."
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass on or after as_of. R17: the notice doesn't say the 7:30 AM is cancelled, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-bala-cynwyd",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Day after Thanksgiving"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 4,
+          "said": "Friday, Nov. 27 - Mass at 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintmatthias.org/mass-times",
+          "said": "Friday (after Thanksgiving) Mass: 8:00 a.m."
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass on or after as_of. R17: the notice doesn't say the 7:30 AM is cancelled, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f9f5278",
+          "page": 3,
+          "said": "Eileen George Prayer Group Sunday, November 15, 2026 Join us for a grace-filled Holy Hour from 2-3 PM. We will have Adoration, Confessions, and Benediction along with our Novena to Eileen George ... A social gathering will follow in the parish hall."
+        }
+      ],
+      "rationale": "R19: announced only in the Nov 8 issue; the newest doesn't repeat it. 'Join us' invites all, but it is a prayer group's event and no place is printed (one church; social in the parish hall). Leaning include as st-colman-ardmore s14 did with no place printed. The date has passed, so it has little effect.",
+      "question": "Add the Eileen George Prayer Group Holy Hour, Sun Nov 15, 2-3 PM (Adoration, Confessions, Benediction)?",
+      "options": [
+        {
+          "label": "Include Nov 15 2:00-3:00 PM",
+          "entry": {
+            "church_slug": "st-matthias-bala-cynwyd",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-15",
+            "start_time": "14:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour with Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "eileen"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f9f5278",
+          "page": 3,
+          "said": "Holy Hour from 2-3 PM. We will have Adoration, Confessions, and Benediction"
+        }
+      ],
+      "rationale": "Same event as the Adoration slot; POLICY, Times: confession heard during Adoration takes the Adoration's times.",
+      "question": "Add the Eileen George Prayer Group Holy Hour, Sun Nov 15, 2-3 PM (Adoration, Confessions, Benediction)?",
+      "options": [
+        {
+          "label": "Include Nov 15 2:00-3:00 PM",
+          "entry": {
+            "church_slug": "st-matthias-bala-cynwyd",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-15",
+            "start_time": "14:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "During Adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "eileen"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintmatthias.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 7:30 AM 12:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintmatthias.org/mass-times",
+          "said": "Holy Days (Ascension Thursday, Assumption (Aug 15), All Saints Day (Nov 1) and Immaculate Conception (Dec 9): 7:30 AM; 12:00 PM"
+        }
+      ],
+      "rationale": "R6/R29: no read bulletin prints Dec 8. The homepage's 'Upcoming Holy Days' block and the standing holy-day line agree on 7:30 AM (the weekly Tuesday slot) and 12:00 PM, and the site's other times, Thanksgiving included, match the Nov 15 bulletin. Leaning include: unlike st-joseph-coatesville s45, nothing in the bulletin contradicts the site. Doubt: the block has no year, and update mode will read December issues.",
+      "question": "Add an Immaculate Conception Mass on Tue Dec 8 at 12:00 PM, from the website?",
+      "options": [
+        {
+          "label": "Dec 8 12:00 PM",
+          "entry": {
+            "church_slug": "st-matthias-bala-cynwyd",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintmatthias.org/",
+          "said": "December 24 : 4:00 PM ... December 25 : 12:00 AM 8:30 AM 10:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintmatthias.org/mass-times",
+          "said": "Christmas Eve Mass: 4:00 p.m. and 10:00 p.m. Christmas Day Mass: 8:30 a.m. and 10:30 a.m."
+        }
+      ],
+      "rationale": "R29: no read bulletin prints Christmas times, and the website's two pages disagree on the late Mass (10 PM vs midnight), so the block may be last year's. Leaning per precedents st-joseph-coatesville s45 and st-isaac-jogues-wayne s27: leave out; update mode will read the December issues.",
+      "question": "Add the website's Christmas Masses (Dec 24 4 PM and 10 PM or midnight; Dec 25 8:30 and 10:30 AM)?",
+      "options": [
+        {
+          "label": "Dec 24 4 PM; Dec 25 8:30, 10:30 AM",
+          "entry": {
+            "church_slug": "st-matthias-bala-cynwyd",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Eve"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintmatthias.org/mass-times",
+          "said": "Christmas Day Mass: 8:30 a.m. and 10:30 a.m."
+        }
+      ],
+      "rationale": "Same question as the Dec 24 slot.",
+      "question": "Add the website's Christmas Masses (Dec 24 4 PM and 10 PM or midnight; Dec 25 8:30 and 10:30 AM)?",
+      "options": [
+        {
+          "label": "Dec 24 4 PM; Dec 25 8:30, 10:30 AM",
+          "entry": {
+            "church_slug": "st-matthias-bala-cynwyd",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Day"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintmatthias.org/mass-times",
+          "said": "Christmas Day Mass: 8:30 a.m. and 10:30 a.m."
+        }
+      ],
+      "rationale": "Same question as the Dec 24 slot.",
+      "question": "Add the website's Christmas Masses (Dec 24 4 PM and 10 PM or midnight; Dec 25 8:30 and 10:30 AM)?",
+      "options": [
+        {
+          "label": "Dec 24 4 PM; Dec 25 8:30, 10:30 AM",
+          "entry": {
+            "church_slug": "st-matthias-bala-cynwyd",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Day"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE ... ALSO BY APPOINTMENT"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "649db1e0",
+          "page": 3,
+          "said": "Rosary every weekday morning at 8AM"
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
