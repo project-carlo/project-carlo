@@ -8,7 +8,7 @@
   "reviewer": null,
   "approved_at": null,
   "summary": "One church, St. Joseph, Downingtown. Mass, Wednesday/Saturday Confession and the 24/7 Adoration chapel agree in both bulletins read and on the parish website; holy-day and Christmas Masses come from the website under R6. Open: the Adoration chapel (asked only because seed check crashes on a settled 24h slot; include it) and the Advent Penance Service (Dec 21, website only, no year).",
-  "blocked_reason": "seed check (checks.py:343) crashes with a TypeError on any included continuous 24h Adoration slot, so the parish's Perpetual Adoration Chapel (s23, R46) can be neither settled nor approved: pnpm seed approve failed on the reviewer's answers. Representing it as seven weekly slots is forbidden (R46) and leaving it out would drop a real schedule. Unblock once the checker skips the as_of comparison for undated entries; then settle s23 as include.",
+  "blocked_reason": "Waiting for #282 to reach branch factory/philadelphia-seed-1: seed check (checks.py:343) still crashes on an included continuous 24h slot, so s23 (Perpetual Adoration Chapel) can't be settled as include, as the owner answered. Once the fix is merged, clear this block, settle s23 as include and finalize.",
   "bulletins": [
     {
       "content_hash": "b03c4d98231043af9d7e1954102c8d5254b04d35a935935e2c57e2c94f83c141",
@@ -1006,7 +1006,7 @@
           "said": "The Chapel is in the Holy Family Center (parish office), located behind the church, near the rectory and convent. It has a separate driveway off Manor Ave."
         }
       ],
-      "rationale": "R46, R1: settled on the evidence — a standing chapel open 24/7 in both issues; the website places it in the parish office building behind the church on the same campus, and its FAQ says no sign-up is needed (access not stated in the bulletin). Asked only because seed check crashes on a settled continuous inclusion (checks.py compares its null date with as_of); please include.",
+      "rationale": "R46, R1: a standing chapel open 24/7 in both issues; the website places it in the Holy Family Center behind the church on the same campus, and its FAQ says no sign-up is needed (the bulletin says nothing about access). The owner answered to settle it as include once seed check stops crashing on continuous entries (#282); that fix is not yet on this Run's branch, so it stays a question leaning include until it is.",
       "question": "Include the 24/7 Perpetual Adoration Chapel (Holy Family Center, behind the church)?",
       "options": [
         {
