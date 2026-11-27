@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-philip-neri-lafayette-hill",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:46:48Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T19:50:39Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@ddeda096e4c7",
+  "approved_at": "2026-11-27T20:11:39Z",
   "summary": "One church. Weekend (Sat 5 PM; Sun 7:30, 9:30, 11), daily 8:30 AM Mon-Sat and Saturday 3:45-4:45 PM confession agree in both November issues and the website. Dated: Thanksgiving Mass moved 8:30 to 9:00 (website notice), Children's Vigil Mass Dec 7 7 PM, Adoration Dec 14 9-5. Open: whether the undated Holy Day line gives Dec 8 Masses at 6:30 AM and 7 PM.",
   "blocked_reason": null,
   "bulletins": [
@@ -716,9 +716,22 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
       "page": 2,
       "sources": [
         {
@@ -766,13 +779,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:39Z"
+      }
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
       "page": 2,
       "sources": [
         {
@@ -820,7 +850,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:39Z"
+      }
     }
   ],
   "second_opinion": {

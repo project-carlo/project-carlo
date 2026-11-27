@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-eleanor-collegeville",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:45:08Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T16:04:31Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@ddeda096e4c7",
+  "approved_at": "2026-11-27T20:11:14Z",
   "summary": "One church. Neither image-only bulletin (Nov 15, Nov 8) prints a schedule box or Mass intentions, so the weekly Masses come from the parish's Mass & Confession Times page, confirmed by its live calendar for Nov 27-Dec 1, 2026 (R6). Open: whether 'the Chapel' is at the church (Saturday and Wednesday confessions, the dated Nov 20 Family Holy Half Hour), and weekday Adoration 7 AM-9 PM seen only in the website calendar (Mon, Tue, Fri; Wed/Thu unseen).",
   "blocked_reason": null,
   "bulletins": [
@@ -810,9 +810,22 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -852,14 +865,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:14Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -894,14 +924,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:14Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel, after the 6:30 AM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -936,14 +983,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:14Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel, after the 9:00 AM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -978,14 +1042,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:14Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-20",
+        "start_time": "17:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel; Family Noisy Holy Half Hour"
+      },
       "page": 5,
       "sources": [
         {
@@ -1033,7 +1114,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:14Z"
+      },
       "group": "chapel"
     },
     {
@@ -1088,9 +1173,22 @@
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -1125,14 +1223,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:14Z"
+      },
       "group": "adoration-seen"
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -1167,14 +1282,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:14Z"
+      },
       "group": "adoration-seen"
     },
     {
       "id": "s26",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -1209,14 +1341,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:14Z"
+      },
       "group": "adoration-seen"
     },
     {
       "id": "s27",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -1251,14 +1400,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:14Z"
+      },
       "group": "adoration-unseen"
     },
     {
       "id": "s28",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -1293,7 +1459,11 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:14Z"
+      },
       "group": "adoration-unseen"
     }
   ],

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-genevieve-flourtown",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:45:35Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T17:12:01Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@ddeda096e4c7",
+  "approved_at": "2026-11-27T20:11:37Z",
   "summary": "One church. Weekend (Sat 5 PM; Sun 7:30, 10:30, 5 PM), Tue 6:30 AM, Tue-Fri 8 AM Masses and Sat 3:30-4:30 PM confession agree in both November issues and on the website; Monday 8 AM is a Communion Service. Open: whether the Tue 6:30 AM is September-May only (website), the Thanksgiving 8 AM cancellation, the Dec 8 9 AM school Mass, and a Jan 21 Holy Hour-format faith session.",
   "blocked_reason": null,
   "bulletins": [
@@ -570,9 +570,22 @@
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-church-flourtown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass moved to 9 AM for Thanksgiving"
+      },
       "page": 1,
       "sources": [
         {
@@ -620,13 +633,35 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:37Z"
+      }
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-church-flourtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -703,13 +738,30 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:37Z"
+      }
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-church-flourtown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception; school Mass"
+      },
       "page": 4,
       "sources": [
         {
@@ -751,13 +803,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:37Z"
+      }
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-church-flourtown",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-21",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Faith formation in Holy Hour format"
+      },
       "page": 3,
       "sources": [
         {
@@ -805,7 +874,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:37Z"
+      }
     },
     {
       "id": "s18",

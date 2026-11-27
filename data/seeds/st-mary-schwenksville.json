@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-mary-schwenksville",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:46:27Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T16:11:18Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@ddeda096e4c7",
+  "approved_at": "2026-11-27T20:11:16Z",
   "summary": "One church (St. Mary, Schwenksville). Both November issues print the same box: Sat 4:00 PM, Sun 7:30/9:00/10:30/12:00, Mon-Sat 9:00 AM, Saturday confession 9:30-10:00 AM and 2:45-3:45 PM (the website agrees). Open: how to record the on-campus Divine Mercy perpetual-adoration chapel, public 6 AM-9 PM and scheduled adorers only overnight (group 'chapel' vs the 24-hour question).",
   "blocked_reason": null,
   "bulletins": [
@@ -715,9 +715,22 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
       "page": 5,
       "sources": [
         {
@@ -770,14 +783,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:16Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
       "page": 5,
       "sources": [
         {
@@ -830,14 +860,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:16Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
       "page": 5,
       "sources": [
         {
@@ -890,14 +937,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:16Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
       "page": 5,
       "sources": [
         {
@@ -950,14 +1014,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:16Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
       "page": 5,
       "sources": [
         {
@@ -1010,14 +1091,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:16Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
       "page": 5,
       "sources": [
         {
@@ -1070,14 +1168,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:16Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
       "page": 5,
       "sources": [
         {
@@ -1130,14 +1245,34 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:16Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "adoration",
+        "event_kind": "continuous",
+        "day_of_week": null,
+        "date": null,
+        "start_time": null,
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel",
+        "access": "arrangement",
+        "open_from": null,
+        "open_until": null
+      },
       "page": 5,
       "sources": [
         {
@@ -1193,7 +1328,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@ddeda096e4c7",
+        "at": "2026-11-27T20:11:16Z"
+      }
     }
   ],
   "second_opinion": {
