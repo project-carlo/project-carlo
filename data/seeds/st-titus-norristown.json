@@ -1,0 +1,1337 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-titus-norristown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:47:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T15:23:37Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both November issues (image-only) agree: Sat 4:30 PM, Sun 10 AM, Mon/Tue/Thu/Fri 8 AM Masses, Sat 3:30 PM confession, First Friday Adoration 8:30 AM-3:30 PM. The Nov 27 Night of Reparation Masses (9 PM, midnight) are dated. Open: a weekly First Friday 9 PM Mass, a Dec 8 holy-day Mass (bulletin 7 PM vs website 10 AM), and the website's Christmas Masses.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6c937ee6c9fa6b26fdff966b553631fe560cca598ec864f6f2da633ef32532b4",
+      "fetched_at": "2026-11-15T16:47:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f7ef87868d6d218514b7403b4a2a612bd1b61886b1ebda4ed4db8c2b17df8b93",
+      "fetched_at": "2026-11-08T15:55:33Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "6c937ee6c9fa6b26fdff966b553631fe560cca598ec864f6f2da633ef32532b4",
+      "bulletins": [
+        "6c937ee6c9fa6b26fdff966b553631fe560cca598ec864f6f2da633ef32532b4",
+        "f7ef87868d6d218514b7403b4a2a612bd1b61886b1ebda4ed4db8c2b17df8b93"
+      ],
+      "cached": false,
+      "cost_usd": 0.003054,
+      "at": "2026-11-27T15:35:44.996345+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 2,
+          "said": "Weekend Mass Schedule: Saturday: 4:30pm Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ef8786",
+          "page": 2,
+          "said": "Weekend Mass Schedule: Saturday: 4:30pm Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 4,
+          "said": "SATURDAY, NOVEMBER 20 ... 4:30pm Vigil Mass, Church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6c937ee6c9fa6b26fdff966b553631fe560cca598ec864f6f2da633ef32532b4",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saturday: 4:30pm Vigil Mass”"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both issues and in each week's calendar (p4) and intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 2,
+          "said": "Sunday: 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ef8786",
+          "page": 2,
+          "said": "Sunday: 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 4,
+          "said": "SUNDAY, NOVEMBER 22 ... 10am Mass, Church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6c937ee6c9fa6b26fdff966b553631fe560cca598ec864f6f2da633ef32532b4",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday: 10:00am”"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both issues and in each week's calendar and intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 2,
+          "said": "Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ef8786",
+          "page": 2,
+          "said": "Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 4,
+          "said": "Mass, 8am followed by Miraculous Medal Novena (Mon); Mass 8am followed by Rosary (Tue, Thu); Mass, 8am followed by Divine Mercy Devotions (Fri)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6c937ee6c9fa6b26fdff966b553631fe560cca598ec864f6f2da633ef32532b4",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass”"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both issues; each week's calendar (p4) and intentions (p3) list the 8 AM Mass on these days and NO MASS on Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 2,
+          "said": "Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ef8786",
+          "page": 2,
+          "said": "Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 4,
+          "said": "Mass, 8am followed by Miraculous Medal Novena (Mon); Mass 8am followed by Rosary (Tue, Thu); Mass, 8am followed by Divine Mercy Devotions (Fri)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6c937ee6c9fa6b26fdff966b553631fe560cca598ec864f6f2da633ef32532b4",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass”"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both issues; each week's calendar (p4) and intentions (p3) list the 8 AM Mass on these days and NO MASS on Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 2,
+          "said": "Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ef8786",
+          "page": 2,
+          "said": "Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 4,
+          "said": "Mass, 8am followed by Miraculous Medal Novena (Mon); Mass 8am followed by Rosary (Tue, Thu); Mass, 8am followed by Divine Mercy Devotions (Fri)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6c937ee6c9fa6b26fdff966b553631fe560cca598ec864f6f2da633ef32532b4",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass”"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both issues; each week's calendar (p4) and intentions (p3) list the 8 AM Mass on these days and NO MASS on Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 2,
+          "said": "Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ef8786",
+          "page": 2,
+          "said": "Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 4,
+          "said": "Mass, 8am followed by Miraculous Medal Novena (Mon); Mass 8am followed by Rosary (Tue, Thu); Mass, 8am followed by Divine Mercy Devotions (Fri)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6c937ee6c9fa6b26fdff966b553631fe560cca598ec864f6f2da633ef32532b4",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass”"
+        }
+      ],
+      "rationale": "R1: printed in the p2 schedule box of both issues; each week's calendar (p4) and intentions (p3) list the 8 AM Mass on these days and NO MASS on Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 2,
+          "said": "SACRAMENT OF RECONCILIATION: Saturday afternoons 3:30 or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ef8786",
+          "page": 2,
+          "said": "SACRAMENT OF RECONCILIATION: Saturday afternoons 3:30 or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 4,
+          "said": "3:30pm Confessions, Church"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sttitus.org/",
+          "said": "Confession Times Saturday 3:30 PM to 4:00 PM or by appointment."
+        },
+        {
+          "source": "c1",
+          "bulletin": "6c937ee6c9fa6b26fdff966b553631fe560cca598ec864f6f2da633ef32532b4",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saturday afternoons 3:30 or by appointment.”"
+        }
+      ],
+      "rationale": "R1: printed in the p2 box and the p4 calendar of both issues. No end recorded: the bulletin gives none; the website's 4:00 PM end is not printed in any bulletin and the 4:30 Mass follows (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At St. Helena"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 2,
+          "said": "Also available at St. Helena, Saturdays, 3:00pm"
+        }
+      ],
+      "rationale": "R22: St. Helena, Blue Bell is the partner parish (st-helena-blue-bell), not this parish's church; its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 2,
+          "said": "Eucharistic Adoration: 1st Friday of month, 8:30am-3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ef8786",
+          "page": 2,
+          "said": "Eucharistic Adoration: 1st Friday of month, 8:30am-3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 5,
+          "said": "Friday, December 4, 2026 Exposition of the Blessed Sacrament following 8am Mass till 3:30pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sttitus.org/adore",
+          "said": "First Friday of every month following 8am Mass until 3:30pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6c937ee6c9fa6b26fdff966b553631fe560cca598ec864f6f2da633ef32532b4",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Eucharistic Adoration: 1st Friday of month, 8:30am-3:30pm”"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly rule 2: the p2 box names the week (first Friday); the p5 Dec 4 notice and the website agree (8:30 = 30 minutes after the 8 AM weekday Mass, R10). The newest week holds no first Friday; the box still prints it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Miraculous Medal Novena"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 2,
+          "said": "Miraculous Medal Novena: Mondays after 8am Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sttitus.org/",
+          "said": "Miraculous Medal Devotions and Benediction (menu title)"
+        }
+      ],
+      "rationale": "R24: a novena is not Mass, Confession or Adoration. The website's menu title mentions Benediction but its page gives no schedule text, and no bulletin mentions Benediction or exposition, so no Adoration time is established.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "21:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Night of Reparation, Mass to the Sacred Heart"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 7,
+          "said": "Novena of this all-night vigil ... Fridays, 8pm—Saturdays, 2am at St. Titus Church ... November 2026 dates are: NOV 6, 13 & 27 · Mass to the Sacred Heart begins at 9:00pm ... Open to all"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ef8786",
+          "page": 8,
+          "said": "same notice"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6c937ee6c9fa6b26fdff966b553631fe560cca598ec864f6f2da633ef32532b4",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “Fridays, 8pm—Saturdays, 2am at St. Titus Church\nContinues First Friday of each month: November 2026 dates are: NOV 6, 13 & 27\nMass to the Sacred Heart begins at 9:00pm”"
+        }
+      ],
+      "rationale": "R1, R16, POLICY Dates: a dated Mass on a printed date on or after as_of, at St. Titus Church, 'Open to all'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-28",
+        "start_time": "00:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Night of Reparation, Mass to the Immaculate Heart of Mary"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 7,
+          "said": "Fridays, 8pm—Saturdays, 2am ... NOV 6, 13 & 27 ... Mass to the Immaculate Heart of Mary begins at 12:00midnight ... Open to all"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6c937ee6c9fa6b26fdff966b553631fe560cca598ec864f6f2da633ef32532b4",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “Fridays, 8pm—Saturdays, 2am at St. Titus Church\nContinues First Friday of each month: November 2026 dates are: NOV 6, 13 & 27\nMass to the Immaculate Heart of Mary begins at 12:00midnight”"
+        }
+      ],
+      "rationale": "R1, R16: the midnight Mass of the printed Nov 27 vigil falls at 00:00 on Saturday Nov 28; open to all.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 7,
+          "said": "Continues First Friday of each month: November 2026 dates are: NOV 6, 13 & 27 · Mass to the Sacred Heart begins at 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ef8786",
+          "page": 4,
+          "said": "8pm Friday-2am Saturday, Night of Reparation, Church (Nov 13)"
+        }
+      ],
+      "rationale": "POLICY Weekly rule 2 makes a named First Friday slot weekly, and the notice says the novena 'Continues First Friday of each month'; leaning per precedent st-isaac-jogues-wayne s21 (first-Friday Night of Reparation Mass included). Hard because November's dates (6, 13, 27) aren't first Fridays, so the pattern after the novena is only implied; Nov 27 is recorded separately as dated.",
+      "question": "Add a First Friday 9:00 PM Mass (Night of Reparation vigil) as a weekly slot?",
+      "options": [
+        {
+          "label": "First Fridays 9:00 PM",
+          "entry": {
+            "church_slug": "st-titus-church-norristown",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "21:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Night of Reparation, Mass to the Sacred Heart"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Night of Reparation, Mass to the Immaculate Heart of Mary"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 7,
+          "said": "Mass to the Immaculate Heart of Mary begins at 12:00midnight"
+        }
+      ],
+      "rationale": "R33: the midnight Mass is on the Saturday after a first Friday, which is not always the first Saturday; the format can't express it. Only the printed Nov 28 occurrence is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Night of Reparation vigil"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 7,
+          "said": "all-night vigil ... Fridays, 8pm—Saturdays, 2am ... Continued prayer throughout the night"
+        }
+      ],
+      "rationale": "R24, POLICY What to extract: neither issue calls the vigil Adoration, Exposition or a Holy Hour; decided like precedent st-thomas-more-south-coventry s18 (Night of Reparation left out as Adoration).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 2,
+          "said": "Holydays: 8:00am and 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ef8786",
+          "page": 2,
+          "said": "Holydays: 8:00am and 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sttitus.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 10:00 AM"
+        }
+      ],
+      "rationale": "The bulletins' holyday line 'Holydays: 8:00am and 7:00pm' is standing and undated (POLICY, Dates; like precedent st-isaac-jogues-wayne s27), and the website's 'Upcoming Holy Days' gives Dec 8 at 10:00 AM instead, with no year: a real conflict (R28, R6). A wrong time is worse than a missing one; leaning per precedent st-joseph-coatesville s45. The 8 AM is the weekly Tuesday Mass. The companion question asks the other source's time; December bulletins will settle it.",
+      "question": "Add a 7:00 PM Immaculate Conception Mass on Tue Dec 8 (bulletin holyday line; website says 10 AM)?",
+      "options": [
+        {
+          "label": "Dec 8 7:00 PM",
+          "entry": {
+            "church_slug": "st-titus-church-norristown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sttitus.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c937ee6",
+          "page": 2,
+          "said": "Holydays: 8:00am and 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ef8786",
+          "page": 2,
+          "said": "Holydays: 8:00am and 7:00pm"
+        }
+      ],
+      "rationale": "The bulletins' holyday line 'Holydays: 8:00am and 7:00pm' is standing and undated (POLICY, Dates; like precedent st-isaac-jogues-wayne s27), and the website's 'Upcoming Holy Days' gives Dec 8 at 10:00 AM instead, with no year: a real conflict (R28, R6). A wrong time is worse than a missing one; leaning per precedent st-joseph-coatesville s45. The 8 AM is the weekly Tuesday Mass. The companion question asks the other source's time; December bulletins will settle it.",
+      "question": "Add a 10:00 AM Immaculate Conception Mass on Tue Dec 8 (website; bulletin holyday line says 8 AM and 7 PM)?",
+      "options": [
+        {
+          "label": "Dec 8 10:00 AM",
+          "entry": {
+            "church_slug": "st-titus-church-norristown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sttitus.org/",
+          "said": "Nativity of Our Lord Jesus Christ December 24 : 4:30 PM Christmas Eve"
+        }
+      ],
+      "rationale": "R29/R6: only the website's 'Upcoming Holy Days' block has them, with no year, and its Dec 8 line conflicts with the bulletins' holyday line, so the block may be last year's. Leaning per precedent st-joseph-coatesville s45; no read bulletin prints Christmas times, and update mode will read December issues.",
+      "question": "Add the website's Christmas Masses (Dec 24 4:30 PM; Dec 25 12:00 midnight and 10:00 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-titus-church-norristown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Eve"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sttitus.org/",
+          "said": "December 25 : 12:00 AM Midnight Mass Dec 25 10:00 AM Christmas Day"
+        }
+      ],
+      "rationale": "R29/R6: only the website's 'Upcoming Holy Days' block has them, with no year, and its Dec 8 line conflicts with the bulletins' holyday line, so the block may be last year's. Leaning per precedent st-joseph-coatesville s45; no read bulletin prints Christmas times, and update mode will read December issues.",
+      "question": "Add the website's Christmas Masses (Dec 24 4:30 PM; Dec 25 12:00 midnight and 10:00 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-titus-church-norristown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "00:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sttitus.org/",
+          "said": "December 25 : 12:00 AM Midnight Mass Dec 25 10:00 AM Christmas Day"
+        }
+      ],
+      "rationale": "R29/R6: only the website's 'Upcoming Holy Days' block has them, with no year, and its Dec 8 line conflicts with the bulletins' holyday line, so the block may be last year's. Leaning per precedent st-joseph-coatesville s45; no read bulletin prints Christmas times, and update mode will read December issues.",
+      "question": "Add the website's Christmas Masses (Dec 24 4:30 PM; Dec 25 12:00 midnight and 10:00 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-titus-church-norristown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "79502cc3f63e68db6254274f472f4413",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T15:35:44.996345+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "6c937ee6c9fa6b26fdff966b553631fe560cca598ec864f6f2da633ef32532b4",
+        "fetched_at": "2026-11-15T16:47:10Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "f7ef87868d6d218514b7403b4a2a612bd1b61886b1ebda4ed4db8c2b17df8b93",
+        "fetched_at": "2026-11-08T15:55:33Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.003054,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": true,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-titus-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saturday: 4:30pm Vigil Mass"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saturday: 4:30pm Vigil Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-titus-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday: 10:00am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Sunday: 10:00am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-titus-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-titus-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-titus-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-titus-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Weekdays: Mon, Tues, Thurs, & Fri., 8:00am; Wednesday & Saturday No Morning Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-titus-church-norristown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saturday afternoons 3:30 or by appointment."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saturday afternoons 3:30 or by appointment."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-titus-church-norristown",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "15:30",
+          "cancelled": false,
+          "weeks_of_month": [
+            "first"
+          ],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Eucharistic Adoration: 1st Friday of month, 8:30am-3:30pm"
+          },
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "Friday, December 4, 2026\nExposition of the Blessed Sacrament\nfollowing 8am Mass till 3:30pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Eucharistic Adoration: 1st Friday of month, 8:30am-3:30pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 5,
+            "quote": "Friday, December 4, 2026\nExposition of the Blessed Sacrament\nfollowing 8am Mass till 3:30pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-titus-church-norristown",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-27",
+          "start_time": "21:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Mass to the Sacred Heart",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "Fridays, 8pm—Saturdays, 2am at St. Titus Church\nContinues First Friday of each month: November 2026 dates are: NOV 6, 13 & 27\nMass to the Sacred Heart begins at 9:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "Fridays, 8pm—Saturdays, 2am at St. Titus Church\nContinues First Friday of each month: November 2026 dates are: NOV 6, 13 & 27\nMass to the Sacred Heart begins at 9:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-titus-church-norristown",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-28",
+          "start_time": "00:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Mass to the Immaculate Heart of Mary",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "Fridays, 8pm—Saturdays, 2am at St. Titus Church\nContinues First Friday of each month: November 2026 dates are: NOV 6, 13 & 27\nMass to the Immaculate Heart of Mary begins at 12:00midnight"
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "Fridays, 8pm—Saturdays, 2am at St. Titus Church\nContinues First Friday of each month: November 2026 dates are: NOV 6, 13 & 27\nMass to the Immaculate Heart of Mary begins at 12:00midnight"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "e8f62f3150ba56ecc6405ef5ca06f17142cb780dea34add7d3b447499e1d78d2",
+    "differences": []
+  }
+}
