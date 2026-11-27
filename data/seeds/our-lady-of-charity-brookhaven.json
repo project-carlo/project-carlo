@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-charity-brookhaven",
+  "status": "ready",
+  "as_of": "2026-11-15T16:42:37Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T01:01:05Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Our Lady of Charity, Brookhaven. Both issues read (Nov 8 and Nov 15, 2026) print the same box: Sat 4:00 PM Vigil, Sun 9:00 AM, Mon/Tue/Thu/Fri 8:00 AM, Confession Sat 3:00-3:45 PM; the intentions agree. No Adoration, holy-day or special times printed; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e17ad72fb212789ea15923167be781895344a6d631cdbb1564659d39b09d098b",
+      "fetched_at": "2026-11-15T16:42:37Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "fca2d767df347e16a5a2148f6bb987d2deddcbaa9b9d8ee4339cd016469061d9",
+      "fetched_at": "2026-11-08T15:52:58Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-charity-brookhaven",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e17ad72f",
+          "page": 1,
+          "said": "WEEKEND MASS Saturday Vigil | 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fca2d767",
+          "page": 1,
+          "said": "WEEKEND MASS Saturday Vigil | 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e17ad72f",
+          "page": 2,
+          "said": "Saturday, November 21, 2026 4:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-charity-brookhaven",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e17ad72f",
+          "page": 1,
+          "said": "WEEKEND MASS Sunday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fca2d767",
+          "page": 1,
+          "said": "WEEKEND MASS Sunday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e17ad72f",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-charity-brookhaven",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e17ad72f",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday, Tuesday, Thursday and Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fca2d767",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday, Tuesday, Thursday and Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e17ad72f",
+          "page": 2,
+          "said": "Monday ... Tuesday ... Thursday ... Friday, November 16-20, 2026 8:00am"
+        }
+      ],
+      "rationale": "R1: the p1 box of both issues gives Mon, Tue, Thu and Fri 8:00 AM; both weeks' intentions list exactly those days (no Wednesday Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-charity-brookhaven",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e17ad72f",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday, Tuesday, Thursday and Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fca2d767",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday, Tuesday, Thursday and Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e17ad72f",
+          "page": 2,
+          "said": "Monday ... Tuesday ... Thursday ... Friday, November 16-20, 2026 8:00am"
+        }
+      ],
+      "rationale": "R1: the p1 box of both issues gives Mon, Tue, Thu and Fri 8:00 AM; both weeks' intentions list exactly those days (no Wednesday Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-charity-brookhaven",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e17ad72f",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday, Tuesday, Thursday and Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fca2d767",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday, Tuesday, Thursday and Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e17ad72f",
+          "page": 2,
+          "said": "Monday ... Tuesday ... Thursday ... Friday, November 16-20, 2026 8:00am"
+        }
+      ],
+      "rationale": "R1: the p1 box of both issues gives Mon, Tue, Thu and Fri 8:00 AM; both weeks' intentions list exactly those days (no Wednesday Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-charity-brookhaven",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e17ad72f",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday, Tuesday, Thursday and Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fca2d767",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday, Tuesday, Thursday and Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e17ad72f",
+          "page": 2,
+          "said": "Monday ... Tuesday ... Thursday ... Friday, November 16-20, 2026 8:00am"
+        }
+      ],
+      "rationale": "R1: the p1 box of both issues gives Mon, Tue, Thu and Fri 8:00 AM; both weeks' intentions list exactly those days (no Wednesday Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-charity-brookhaven",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e17ad72f",
+          "page": 1,
+          "said": "CONFESSION Saturday| 3:00pm - 3:45pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fca2d767",
+          "page": 1,
+          "said": "CONFESSION Saturday| 3:00pm - 3:45pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e17ad72f",
+          "page": 1,
+          "said": "CONFESSION ... or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e17ad72f",
+          "page": 1,
+          "said": "HOLY DAYS AS ANNOUNCED IN THE BULLETIN"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time, and neither issue announces a holy-day Mass time (none falls in their weeks).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-fisher-boothwyn",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Day of Reflection"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fca2d767",
+          "page": 4,
+          "said": "ST. JOHN FISHER CHURCH | ADVENT DAY OF REFLECTION ... Saturday, November 21st 9:00 AM - 2:00 PM ... MASS AT 11:00 AM ... SACRAMENT OF RECONCILIATION OPPORTUNITY ... 4225 Chichester Ave, Boothwyn"
+        }
+      ],
+      "rationale": "R22: a flyer for another parish's registered day of reflection at St. John Fisher, Boothwyn ($40 cost); its Mass and confession belong to that parish, and the confession has no time of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
