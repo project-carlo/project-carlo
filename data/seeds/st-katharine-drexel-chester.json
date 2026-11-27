@@ -1,0 +1,680 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-katharine-drexel-chester",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:03Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T01:08:03Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both November issues print the same schedule box: Tue-Fri 7:30 AM, Sat 4:00 PM, Sun 9:30 and 11:30 AM (bilingual) Masses; confessions Sat 3:30-3:50 and Sun before each Mass; Thursday Adoration after the 7:30 Mass to 9:00. Dated: Nov 22 10:00 AM Harvest Mass (no stated cancellation of 9:30/11:30, R17) and Thanksgiving 9:00 AM. Open: the Guadalupe Dec 11 7 PM flyer (leaning leave out per precedent).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3ca7287f820f51a6e8b5ad25c9cdf1a58a7be74e945d7f427cb930b1f79bfb97",
+      "fetched_at": "2026-11-15T16:46:03Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e8779d9637b812abf1939f79ff141ee2c0d7b662ac35209dbfa0743ef602f45c",
+      "fetched_at": "2026-11-08T15:54:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 2,
+          "said": "Tuesday-Friday/Martes-Viernes 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8779d96",
+          "page": 2,
+          "said": "Tuesday-Friday/Martes-Viernes 7:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the intentions list 7:30 am Tue-Fri both weeks and no Monday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 2,
+          "said": "Tuesday-Friday/Martes-Viernes 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8779d96",
+          "page": 2,
+          "said": "Tuesday-Friday/Martes-Viernes 7:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the intentions list 7:30 am Tue-Fri both weeks and no Monday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 2,
+          "said": "Tuesday-Friday/Martes-Viernes 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8779d96",
+          "page": 2,
+          "said": "Tuesday-Friday/Martes-Viernes 7:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the intentions list 7:30 am Tue-Fri both weeks and no Monday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 2,
+          "said": "Tuesday-Friday/Martes-Viernes 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8779d96",
+          "page": 2,
+          "said": "Tuesday-Friday/Martes-Viernes 7:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the intentions list 7:30 am Tue-Fri both weeks and no Monday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 2,
+          "said": "Saturday/Sábado 4:00 pm Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8779d96",
+          "page": 2,
+          "said": "Saturday/Sábado 4:00 pm Vigil Mass"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 2,
+          "said": "Sunday/Domingo 9:30 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8779d96",
+          "page": 2,
+          "said": "Sunday/Domingo 9:30 am Mass"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bilingual"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 2,
+          "said": "& 11:30 am Bilingual Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8779d96",
+          "page": 2,
+          "said": "& 11:30 am Bilingual Mass"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "15:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 2,
+          "said": "Saturday/Sábado 3:30-3:50 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8779d96",
+          "page": 2,
+          "said": "Saturday/Sábado 3:30-3:50 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "09:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 2,
+          "said": "Sunday/Domingo 9-9:20 am & 11-11:20 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8779d96",
+          "page": 2,
+          "said": "Sunday/Domingo 9-9:20 am & 11-11:20 am"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "11:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 2,
+          "said": "Sunday/Domingo 9-9:20 am & 11-11:20 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8779d96",
+          "page": 2,
+          "said": "Sunday/Domingo 9-9:20 am & 11-11:20 am"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 2,
+          "said": "or by appointment/o por cita"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:30 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 2,
+          "said": "Thursday after 7:30 am Mass until 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8779d96",
+          "page": 2,
+          "said": "Thursday after 7:30 am Mass until 9:00 am"
+        }
+      ],
+      "rationale": "R1, R10: schedule box of both issues; 'after' a weekday Mass starts 30 minutes after it (POLICY, Times), and 9:00 am is the printed end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 4,
+          "said": "Thursday, November 26 You are invited to join all our parishioners for Mass at 9:00 AM on Thanksgiving Day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8779d96",
+          "page": 4,
+          "said": "Mass at 9:00 AM on Thanksgiving Day"
+        }
+      ],
+      "rationale": "R1, R16: a holiday Mass outside the weekly schedule is dated (POLICY rule 7). The Thursday 7:30 AM Mass is not said to be cancelled, so it stays weekly (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Harvest Festival Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 4,
+          "said": "November 22, 2026 10:00 AM Please join us in our Harvest Celebration ... During the offertory, food items will be placed at the altar ... All are welcome!"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 2,
+          "said": "Ministry Schedule Nov. 22, 10:00 am Lector"
+        }
+      ],
+      "rationale": "R1, R16: a Mass (offertory) at a time outside the weekly Sunday schedule, open to all; dated (POLICY rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 2,
+          "said": "Ministry Schedule lists only Nov. 21 4:00 pm and Nov. 22 10:00 am"
+        }
+      ],
+      "rationale": "R17: the 10:00 AM Harvest Mass likely replaces the 9:30 and 11:30 Masses that Sunday (the ministry schedule lists only 10:00), but no issue says they are cancelled, so no cancellation is recorded. The reviewer may prefer to record them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 2,
+          "said": "Ministry Schedule lists only Nov. 21 4:00 pm and Nov. 22 10:00 am"
+        }
+      ],
+      "rationale": "R17: the 10:00 AM Harvest Mass likely replaces the 9:30 and 11:30 Masses that Sunday (the ministry schedule lists only 10:00), but no issue says they are cancelled, so no cancellation is recorded. The reviewer may prefer to record them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ca7287f",
+          "page": 5,
+          "said": "Save the Date! Friday, December 11th @ 7 PM Mass in Honor to our Patroness, Our Lady of Guadalupe Feast Day Social after Mass in Saint John XXIII Social Hall"
+        }
+      ],
+      "rationale": "R32: the flyer names no church; its social hall (Saint John XXIII) is not this parish's, and Our Lady of Guadalupe is not SKD's patroness (St. Katharine Drexel, e8779d96 p3). Leaning per precedent st-laurence-upper-darby s19, the same flyer left out there.",
+      "question": "Add the Our Lady of Guadalupe feast Mass, Fri Dec 11, 7:00 PM?",
+      "options": [
+        {
+          "label": "Dec 11 7:00 PM",
+          "entry": {
+            "church_slug": "st-katharine-drexel-chester",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-11",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Guadalupe"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-13",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Novum Nights, St. Laurence Church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e8779d96",
+          "page": 4,
+          "said": "NOVUM NIGHTS ... ST. LAURENCE CATHOLIC CHURCH ... ADORATION (ENGLISH) 7:00PM"
+        }
+      ],
+      "rationale": "R22, R16: at another parish's church (Upper Darby), and dated before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
