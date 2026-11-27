@@ -1,0 +1,846 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-francis-of-assisi-norristown",
+  "status": "ready",
+  "as_of": "2026-11-15T16:45:19Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T04:49:43Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both November issues print the same schedule box (Sat 5:30 PM; Sun 7, 9 Spanish, 11:30; weekdays 8:30 AM except Wednesday, plus Saturday 8:30 from the intentions), Saturday confessions and 1st/3rd Sunday Spanish confession. Adoration Mon/Wed/Fri 9-6 in the St. Joseph Adoration Chapel, which the website places in the Parish Center (the former convent) on the church grounds; Fri Nov 27 Mass and Adoration cancelled. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "421a9bac4fc90e04a2ebb06a1d4e600d607aabd06e8ffbfd207f23ba865859c1",
+      "fetched_at": "2026-11-15T16:45:19Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "990be49b702bd183d0120177550448df7d89241ccf3661c7ca58b6d343d61bb1",
+      "fetched_at": "2026-11-08T15:54:08Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "MASS SCHEDULE Saturday Vigil: 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 2,
+          "said": "MASS SCHEDULE Saturday Vigil: 5:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues; the intentions list Sat 5:30 PM both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "Sunday: 7:00 AM, 9:00 AM (Spanish), and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 2,
+          "said": "Sunday: 7:00 AM, 9:00 AM (Spanish), and 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "Sunday: 7:00 AM, 9:00 AM (Spanish), and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 2,
+          "said": "Sunday: 7:00 AM, 9:00 AM (Spanish), and 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "Sunday: 7:00 AM, 9:00 AM (Spanish), and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 2,
+          "said": "Sunday: 7:00 AM, 9:00 AM (Spanish), and 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "Weekday Masses: 8:30 AM *No Mass on Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 2,
+          "said": "Weekday Masses: 8:30 AM *No Mass on Wednesdays"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list 8:30 AM on these days and 'No Mass' on Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "Weekday Masses: 8:30 AM *No Mass on Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 2,
+          "said": "Weekday Masses: 8:30 AM *No Mass on Wednesdays"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list 8:30 AM on these days and 'No Mass' on Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "Weekday Masses: 8:30 AM *No Mass on Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 2,
+          "said": "Weekday Masses: 8:30 AM *No Mass on Wednesdays"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list 8:30 AM on these days and 'No Mass' on Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "Weekday Masses: 8:30 AM *No Mass on Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 2,
+          "said": "Weekday Masses: 8:30 AM *No Mass on Wednesdays"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list 8:30 AM on these days and 'No Mass' on Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 3,
+          "said": "Saturday, November 21 ... 8:30 AM Kathy Coscia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 3,
+          "said": "Saturday, November 14 ... 8:30 AM Kathy Coscia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "Rosary: Monday thru Saturday at 8 AM (before morning Mass); Miraculous Medal Novena: Saturday after 8:30 AM Mass"
+        }
+      ],
+      "rationale": "R35: the Saturday 8:30 AM Mass is in the intentions of both weeks, and the devotions box ties the Saturday Rosary and Novena to it; the box's 'Weekday Masses' covers it (the website's MON-FRI line is a missing mention, R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "CONFESSIONS Saturdays: 9:00 AM; 4:00 - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 2,
+          "said": "CONFESSIONS Saturdays: 9:00 AM; 4:00 - 5:00 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; no end time given (POLICY, Times). Website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "CONFESSIONS Saturdays: 9:00 AM; 4:00 - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 2,
+          "said": "CONFESSIONS Saturdays: 9:00 AM; 4:00 - 5:00 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues. Website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; after the 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "1st & 3rd Sundays available in Spanish following 9AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 2,
+          "said": "1st & 3rd Sundays available in Spanish following 9AM Mass"
+        }
+      ],
+      "rationale": "R1, R10: named weeks (POLICY Weekly rule 2); 'following' a Sunday Mass is timed an hour after it starts, 10:00 AM, no end. Website: 'SUNDAY: 1st & 3rd Sundays following the 9:00 AM Mass (Spanish Confessions)'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Joseph Adoration Chapel (Parish Center); Benediction"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 5,
+          "said": "Adoration of the Blessed Sacrament is M/W/F 9:00 AM - 6:00 PM in the St. Joseph's Adoration Chapel, unless otherwise noted. Stop by the Parish Center for the code."
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 5,
+          "said": "Adoration of the Blessed Sacrament is M/W/F 9:00 AM - 6:00 PM in the St. Joseph's Adoration Chapel, unless otherwise noted. Stop by the Parish Center for the code."
+        },
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 5,
+          "said": "Monday Benediction | 6PM | Adoration Chapel; Wednesday Benediction | 6PM; Friday Benediction | 6 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "Adoration: Monday, Wednesday & Friday after 8:30 AM Mass until 6 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 2,
+          "said": "Adoration: Monday, Wednesday & Friday after 8:30 AM Mass until 6 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sfanorristown.com/st-joseph-chapel",
+          "said": "This chapel is located in the Parish Center, which was formerly the Convent for the Sisters of Saint Joseph who used to be here at St. Francis ... We currently have Adoration on Mondays, Wednesdays, and Fridays from 9AM to 6PM."
+        }
+      ],
+      "rationale": "R1, R38, POLICY Churches and chapels: the p5 clock time 9:00 AM-6:00 PM wins (POLICY, Times; Wednesday has no Mass, so 'after 8:30 AM Mass' can't time it), ending with the 6 PM Benediction. The parish's website puts the chapel in the Parish Center, the parish's former convent, and gives the church's own address as that building's (601 Buttonwood St.), so it is on the church's grounds.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Joseph Adoration Chapel (Parish Center); Benediction"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 5,
+          "said": "Adoration of the Blessed Sacrament is M/W/F 9:00 AM - 6:00 PM in the St. Joseph's Adoration Chapel, unless otherwise noted. Stop by the Parish Center for the code."
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 5,
+          "said": "Adoration of the Blessed Sacrament is M/W/F 9:00 AM - 6:00 PM in the St. Joseph's Adoration Chapel, unless otherwise noted. Stop by the Parish Center for the code."
+        },
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 5,
+          "said": "Monday Benediction | 6PM | Adoration Chapel; Wednesday Benediction | 6PM; Friday Benediction | 6 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "Adoration: Monday, Wednesday & Friday after 8:30 AM Mass until 6 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 2,
+          "said": "Adoration: Monday, Wednesday & Friday after 8:30 AM Mass until 6 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sfanorristown.com/st-joseph-chapel",
+          "said": "This chapel is located in the Parish Center, which was formerly the Convent for the Sisters of Saint Joseph who used to be here at St. Francis ... We currently have Adoration on Mondays, Wednesdays, and Fridays from 9AM to 6PM."
+        }
+      ],
+      "rationale": "R1, R38, POLICY Churches and chapels: the p5 clock time 9:00 AM-6:00 PM wins (POLICY, Times; Wednesday has no Mass, so 'after 8:30 AM Mass' can't time it), ending with the 6 PM Benediction. The parish's website puts the chapel in the Parish Center, the parish's former convent, and gives the church's own address as that building's (601 Buttonwood St.), so it is on the church's grounds.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Joseph Adoration Chapel (Parish Center); Benediction"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 5,
+          "said": "Adoration of the Blessed Sacrament is M/W/F 9:00 AM - 6:00 PM in the St. Joseph's Adoration Chapel, unless otherwise noted. Stop by the Parish Center for the code."
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 5,
+          "said": "Adoration of the Blessed Sacrament is M/W/F 9:00 AM - 6:00 PM in the St. Joseph's Adoration Chapel, unless otherwise noted. Stop by the Parish Center for the code."
+        },
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 5,
+          "said": "Monday Benediction | 6PM | Adoration Chapel; Wednesday Benediction | 6PM; Friday Benediction | 6 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "Adoration: Monday, Wednesday & Friday after 8:30 AM Mass until 6 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 2,
+          "said": "Adoration: Monday, Wednesday & Friday after 8:30 AM Mass until 6 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sfanorristown.com/st-joseph-chapel",
+          "said": "This chapel is located in the Parish Center, which was formerly the Convent for the Sisters of Saint Joseph who used to be here at St. Francis ... We currently have Adoration on Mondays, Wednesdays, and Fridays from 9AM to 6PM."
+        }
+      ],
+      "rationale": "R1, R38, POLICY Churches and chapels: the p5 clock time 9:00 AM-6:00 PM wins (POLICY, Times; Wednesday has no Mass, so 'after 8:30 AM Mass' can't time it), ending with the 6 PM Benediction. The parish's website puts the chapel in the Parish Center, the parish's former convent, and gives the church's own address as that building's (601 Buttonwood St.), so it is on the church's grounds.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Visits to the Blessed Sacrament"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "Visits to the Blessed Sacrament: Monday thru Friday after 8:30 AM Mass until 6 PM. Stop at the Parish Center for the keypad code."
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 2,
+          "said": "Visits to the Blessed Sacrament: Monday thru Friday after 8:30 AM Mass until 6 PM. Stop at the Parish Center for the keypad code."
+        },
+        {
+          "source": "website",
+          "url": "https://www.sfanorristown.com/st-joseph-chapel",
+          "said": "The chapel is accessible for prayer every day of the week."
+        }
+      ],
+      "rationale": "R38: the box lists 'Visits to the Blessed Sacrament' separately from 'Adoration' (Mon/Wed/Fri only), and the website calls it the chapel being accessible for prayer; the parish doesn't call it Adoration. Like st-john-chrysostom-wallingford s11 (left out).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Visits to the Blessed Sacrament"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 2,
+          "said": "Visits to the Blessed Sacrament: Monday thru Friday after 8:30 AM Mass until 6 PM. Stop at the Parish Center for the keypad code."
+        },
+        {
+          "source": "agent",
+          "bulletin": "990be49b",
+          "page": 2,
+          "said": "Visits to the Blessed Sacrament: Monday thru Friday after 8:30 AM Mass until 6 PM. Stop at the Parish Center for the keypad code."
+        },
+        {
+          "source": "website",
+          "url": "https://www.sfanorristown.com/st-joseph-chapel",
+          "said": "The chapel is accessible for prayer every day of the week."
+        }
+      ],
+      "rationale": "R38: the box lists 'Visits to the Blessed Sacrament' separately from 'Adoration' (Mon/Wed/Fri only), and the website calls it the chapel being accessible for prayer; the parish doesn't call it Adoration. Like st-john-chrysostom-wallingford s11 (left out).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Day after Thanksgiving"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 5,
+          "said": "THANKSGIVING SCHEDULE ... Friday, November 27 Parish Offices CLOSED No Daily Mass No Adoration"
+        }
+      ],
+      "rationale": "R1, R16: the newest issue cancels Friday's Mass on Nov 27, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Day after Thanksgiving"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 5,
+          "said": "THANKSGIVING SCHEDULE ... Friday, November 27 Parish Offices CLOSED No Daily Mass No Adoration"
+        }
+      ],
+      "rationale": "R1, R16: the newest issue cancels Friday's Adoration on Nov 27, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "421a9bac",
+          "page": 5,
+          "said": "Sunday Baptism | 12PM | Church"
+        }
+      ],
+      "rationale": "R24: a baptism is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
