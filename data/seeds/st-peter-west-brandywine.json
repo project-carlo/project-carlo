@@ -8,7 +8,7 @@
   "reviewer": null,
   "approved_at": null,
   "summary": "One church (St. Peter, West Brandywine). Weekend Masses Sat 8:30/5:00, Sun 7/9/11; weekday 8:30 Mon/Tue/Thu (no Wednesday Mass) and First Friday 9:30; Confession Tue 6:15-7 and Sat 3:30-4:30. Two bulletins and the website agree. Open: the perpetual Adoration chapel (asked only because of a checker crash; include), whether Friday 8:30 Mass also happens on first Fridays (C4), and a one-off youth Holy Hour on Nov 18.",
-  "blocked_reason": "R34: approval cannot succeed. The 24-hour Perpetual Adoration Chapel (s13) is supported by both bulletins (p5) and the website, and seed-review chose to include it, but seed approve/check crash with a TypeError on any included continuous slot (src/pdf_extract/seeding/checks.py:343 compares its null date with as_of). Once the checker skips the as_of comparison for an entry without a date, clear the block (seed block --clear) and approve s13 as include. The rest of the draft is ready.",
+  "blocked_reason": "R34: s13 (24-hour Perpetual Adoration Chapel) is settled include per the owner's answer, but this working copy's src/pdf_extract/seeding/checks.py:343 still compares a continuous entry's null date with as_of, so check/finalize crash. The #282 fix was said to be merged before this job; it is not present here. Once it is, clear the block (seed block --clear), finalize, and approve.",
   "bulletins": [
     {
       "content_hash": "2f66858484ade0d5d4b2530ac593405b4248ec6b8f9d99cb704149cccea25ce1",
@@ -601,9 +601,25 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-west-brandywine",
+        "event_type": "adoration",
+        "event_kind": "continuous",
+        "day_of_week": null,
+        "date": null,
+        "start_time": null,
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel",
+        "access": "not_stated",
+        "open_from": null,
+        "open_until": null
+      },
       "page": 5,
       "sources": [
         {
@@ -630,35 +646,9 @@
           "said": "Perpetual Adoration Chapel: 24 hour Adoration 2835 Manor Rd. West Brandywine, PA 19320"
         }
       ],
-      "rationale": "R46, R1: settled on the evidence: a standing perpetual Adoration chapel with exposition, in both issues; the parish website gives it as 24 hour Adoration at the church's own address, 2835 Manor Rd (R6 for location); access not stated. Asked only because seed check crashes on a settled continuous inclusion (checks.py compares its null date with as_of); please include.",
-      "question": "Include the 24-hour Perpetual Adoration Chapel at St. Peter?",
-      "options": [
-        {
-          "label": "Include, open 24 hours",
-          "entry": {
-            "church_slug": "st-peter-west-brandywine",
-            "event_type": "adoration",
-            "event_kind": "continuous",
-            "day_of_week": null,
-            "date": null,
-            "start_time": null,
-            "end_time": null,
-            "cancelled": false,
-            "weeks_of_month": [],
-            "exclude_weeks": false,
-            "season": null,
-            "note": "Adoration Chapel",
-            "access": "not_stated",
-            "open_from": null,
-            "open_until": null
-          },
-          "leaning": true
-        },
-        {
-          "label": "Leave out",
-          "entry": null
-        }
-      ],
+      "rationale": "R46, R1: a standing perpetual Adoration chapel with exposition, in both issues; the parish website gives it as 24 hour Adoration at the church's own address, 2835 Manor Rd (R6 for location); access not stated. Earlier asked only because of a checker crash; the owner answered to include it.",
+      "question": null,
+      "options": null,
       "answer": null
     },
     {
