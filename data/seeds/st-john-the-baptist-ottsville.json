@@ -1,0 +1,1067 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-the-baptist-ottsville",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:45:55Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T22:01:37Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: St. John the Baptist, Ottsville, and Old St. John's, Haycock (Thursday 9 AM Mass only). Weekend, weekday and Saturday confession times agree in both issues (Nov 8, Nov 15) and on the current website; the website adds Tuesday Benediction after the 9 AM Mass. Open: the website's monthly First Friday 24-hour Adoration in St. Joseph's Chapel (start time, location).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "fc22cf8a32ba9659ae71ef452ecb453fa3eefccf3da9a962e60da2b507ce50f2",
+      "fetched_at": "2026-11-15T16:45:55Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "30bd472c0e829e9b9097c0c9e9984208cdff452a91c472238aea88cac9278ec0",
+      "fetched_at": "2026-11-08T15:54:33Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "fc22cf8a32ba9659ae71ef452ecb453fa3eefccf3da9a962e60da2b507ce50f2",
+      "bulletins": [
+        "fc22cf8a32ba9659ae71ef452ecb453fa3eefccf3da9a962e60da2b507ce50f2",
+        "30bd472c0e829e9b9097c0c9e9984208cdff452a91c472238aea88cac9278ec0"
+      ],
+      "cached": false,
+      "cost_usd": 0.002647,
+      "at": "2026-11-27T22:06:35.179887+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-ottsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc22cf8a",
+          "page": 2,
+          "said": "MASS TIMES Saturday Vigil Mass: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30bd472c",
+          "page": 2,
+          "said": "MASS TIMES Saturday Vigil Mass: 4:30pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fc22cf8a32ba9659ae71ef452ecb453fa3eefccf3da9a962e60da2b507ce50f2",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saturday Vigil Mass: 4:30pm”"
+        }
+      ],
+      "rationale": "R1: printed in the MASS TIMES box of both issues and in both weeks' intentions (Saturday 4:30pm); the box singles out only Thursday as at Old St. John's, so the parish church holds the rest.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-ottsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc22cf8a",
+          "page": 2,
+          "said": "Sunday: 8:00am & 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30bd472c",
+          "page": 2,
+          "said": "Sunday: 8:00am & 10:30am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fc22cf8a32ba9659ae71ef452ecb453fa3eefccf3da9a962e60da2b507ce50f2",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday: 8:00am & 10:30am”"
+        }
+      ],
+      "rationale": "R1: printed in the MASS TIMES box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-ottsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc22cf8a",
+          "page": 2,
+          "said": "Sunday: 8:00am & 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30bd472c",
+          "page": 2,
+          "said": "Sunday: 8:00am & 10:30am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fc22cf8a32ba9659ae71ef452ecb453fa3eefccf3da9a962e60da2b507ce50f2",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday: 8:00am & 10:30am”"
+        }
+      ],
+      "rationale": "R1: printed in the MASS TIMES box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-ottsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc22cf8a",
+          "page": 2,
+          "said": "Mon- Fri: 9:00am (Thursday at old St. John's Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30bd472c",
+          "page": 2,
+          "said": "Mon- Fri: 9:00am (Thursday at old St. John's Church)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fc22cf8a32ba9659ae71ef452ecb453fa3eefccf3da9a962e60da2b507ce50f2",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Mon- Fri: 9:00am (Thursday at old St. John’s Church)”"
+        }
+      ],
+      "rationale": "R1: the box of both issues gives Mon-Fri 9:00am at the parish church, except Thursday; the intentions list a Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-ottsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc22cf8a",
+          "page": 2,
+          "said": "Mon- Fri: 9:00am (Thursday at old St. John's Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30bd472c",
+          "page": 2,
+          "said": "Mon- Fri: 9:00am (Thursday at old St. John's Church)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fc22cf8a32ba9659ae71ef452ecb453fa3eefccf3da9a962e60da2b507ce50f2",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Mon- Fri: 9:00am (Thursday at old St. John’s Church)”"
+        }
+      ],
+      "rationale": "R1: the box of both issues gives Mon-Fri 9:00am at the parish church, except Thursday; the intentions list a Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-ottsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc22cf8a",
+          "page": 2,
+          "said": "Mon- Fri: 9:00am (Thursday at old St. John's Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30bd472c",
+          "page": 2,
+          "said": "Mon- Fri: 9:00am (Thursday at old St. John's Church)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fc22cf8a32ba9659ae71ef452ecb453fa3eefccf3da9a962e60da2b507ce50f2",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Mon- Fri: 9:00am (Thursday at old St. John’s Church)”"
+        }
+      ],
+      "rationale": "R1: the box of both issues gives Mon-Fri 9:00am at the parish church, except Thursday; the intentions list a Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-ottsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc22cf8a",
+          "page": 2,
+          "said": "Mon- Fri: 9:00am (Thursday at old St. John's Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30bd472c",
+          "page": 2,
+          "said": "Mon- Fri: 9:00am (Thursday at old St. John's Church)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fc22cf8a32ba9659ae71ef452ecb453fa3eefccf3da9a962e60da2b507ce50f2",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Mon- Fri: 9:00am (Thursday at old St. John’s Church)”"
+        }
+      ],
+      "rationale": "R1: the box of both issues gives Mon-Fri 9:00am at the parish church, except Thursday; the intentions list a Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "old-st-johns-haycock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc22cf8a",
+          "page": 2,
+          "said": "Mon- Fri: 9:00am (Thursday at old St. John's Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30bd472c",
+          "page": 2,
+          "said": "Mon- Fri: 9:00am (Thursday at old St. John's Church)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "fc22cf8a32ba9659ae71ef452ecb453fa3eefccf3da9a962e60da2b507ce50f2",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Mon- Fri: 9:00am (Thursday at old St. John’s Church)”"
+        }
+      ],
+      "rationale": "R1: the box of both issues puts the Thursday 9:00am Mass at Old St. John's Church (Haycock), as the website's 'Thurs. 9am Mass at Old St. John Church, Haycock' confirms.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-ottsville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc22cf8a",
+          "page": 2,
+          "said": "CONFESSION: Saturdays 4:00pm - 4:20pm or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "30bd472c",
+          "page": 2,
+          "said": "CONFESSION: Saturdays 4:00pm - 4:20pm or by appt."
+        },
+        {
+          "source": "c1",
+          "bulletin": "fc22cf8a32ba9659ae71ef452ecb453fa3eefccf3da9a962e60da2b507ce50f2",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “CONFESSION: Saturdays 4:00pm - 4:20pm or by appt.”"
+        }
+      ],
+      "rationale": "R1: printed in the box of both issues, before the 4:30pm Vigil at the parish church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc22cf8a",
+          "page": 2,
+          "said": "CONFESSION: ... or by appt.; To plan a ... private Confession, please contact our Pastor"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-ottsville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc22cf8a",
+          "page": 2,
+          "said": "Holy Days: 9:00am & 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30bd472c",
+          "page": 2,
+          "said": "Holy Days: 9:00am & 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing Holy Days line with no date; neither issue names a holy day this year, so no date may be projected (as st-isaac-jogues-wayne s27 left out an undated standing line, unlike our-lady-of-consolation-parkesburg s12's dated notice). December issues will print it for update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-ottsville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc22cf8a",
+          "page": 2,
+          "said": "Holy Days: 9:00am & 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30bd472c",
+          "page": 2,
+          "said": "Holy Days: 9:00am & 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing Holy Days line with no date; neither issue names a holy day this year, so no date may be projected (as st-isaac-jogues-wayne s27 left out an undated standing line, unlike our-lady-of-consolation-parkesburg s12's dated notice). December issues will print it for update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc22cf8a",
+          "page": 3,
+          "said": "FATIMA HOUSE RETREAT CENTER On Mondays at 7 PM and Wednesdays at 10 AM we have an Hour of Adoration before the Blessed Sacrament ... JOIN US AT FATIMA HOUSE"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30bd472c",
+          "page": 3,
+          "said": "FATIMA HOUSE RETREAT CENTER On Mondays at 7 PM and Wednesdays at 10 AM we have an Hour of Adoration before the Blessed Sacrament ... JOIN US AT FATIMA HOUSE"
+        }
+      ],
+      "rationale": "R22: Fatima House is a separate retreat center, not a listed church (seed church finds none); its Adoration is held there.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc22cf8a",
+          "page": 3,
+          "said": "FATIMA HOUSE RETREAT CENTER On Mondays at 7 PM and Wednesdays at 10 AM we have an Hour of Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30bd472c",
+          "page": 3,
+          "said": "FATIMA HOUSE RETREAT CENTER On Mondays at 7 PM and Wednesdays at 10 AM we have an Hour of Adoration"
+        }
+      ],
+      "rationale": "R22: Fatima House is a separate retreat center, not a listed church; its Adoration is held there.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-ottsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction; St. Peregrine devotion after the 9:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stjohnsottsville.org/",
+          "said": "Each Tuesday, following morning Mass , the devotion to St. Peregrine is prayed before the Blessed Sacrament closing with Benediction.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T22:04:18Z",
+            "current_because": "Homepage read 2026-11-27 carries the First Sunday of Advent (Nov 29, 2026) homily and a Mass schedule identical to the Nov 15 bulletin box.",
+            "bulletin": "fc22cf8a",
+            "fits_because": "fc22cf8a p3 prints the same weekly Tuesday St. Peregrine prayers after the 9am Mass; the site adds that they are before the Blessed Sacrament with Benediction, a missing mention, not a conflict."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc22cf8a",
+          "page": 3,
+          "said": "Every Tuesday morning, following the 9am Mass, we will be praying to St. Peregrine"
+        }
+      ],
+      "rationale": "R6, POLICY (Benediction implies Adoration; R10 times 'following' a weekday Mass 30 minutes after it): the current website gives the Benediction the bulletin's notice omits. No end printed. The Tuesday Mass is at the parish church (only Thursday is at Old St. John's).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stjohnsottsville.org/",
+          "said": "MONTHLY 1st Friday – Saturday 24hr. ADORATION of the BLESSED SACRAMENT ... On the First Friday of each month, immediately following our morning Mass (approx. 10am) Adoration opens and closes with Benediction and Mass on Saturday at 9am. Where: St. Joseph's Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc22cf8a",
+          "page": 2,
+          "said": "Wed. Nov 18: Flame of Love - Chapel - 8am"
+        }
+      ],
+      "rationale": "R29/R32: only the website prints it (the homepage is current: Nov 29, 2026 homily, schedule identical to the fc22cf8a p2 box). Neither read issue covers a first Friday (Nov 8-22), so their silence is no conflict (R11). St. Joseph's Chapel has no address; the bulletin's ministry list meets in 'Chapel' beside campus rooms, so it looks on campus at the Ottsville church (like ss-philip-and-james-exton s15), but nothing says so. Leaning to the site's 'approx. 10am' clock time (POLICY: a stated clock time wins) with no end: the overnight run into Saturday can't be written, since the Saturday after a first Friday is not always a first Saturday (R33), and no overnight 00:00-23:59 is claimed (as our-lady-of-consolation-parkesburg s13).",
+      "question": "Add the website's First Friday Adoration in St. Joseph's Chapel, from about 10 AM after the 9 AM Mass?",
+      "options": [
+        {
+          "label": "First Fridays from 10:00 AM, no end",
+          "entry": {
+            "church_slug": "st-john-the-baptist-ottsville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph's Chapel; after the 9:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "First Fridays from 9:30 AM (POLICY timing), no end",
+          "entry": {
+            "church_slug": "st-john-the-baptist-ottsville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph's Chapel; after the 9:00 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stjohnsottsville.org/",
+          "said": "Adoration opens and closes with Benediction and Mass on Saturday at 9am. Where: St. Joseph's Chapel"
+        }
+      ],
+      "rationale": "R33: the 24-hour Adoration's Saturday part and its closing 9am Mass fall on the Saturday after the first Friday, which is not always a first Saturday; the format can't express it and no dated occurrence is printed, so it is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "083874978fb3f7df4c8b3d41bf5dcf3c",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T22:06:35.179887+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "fc22cf8a32ba9659ae71ef452ecb453fa3eefccf3da9a962e60da2b507ce50f2",
+        "fetched_at": "2026-11-15T16:45:55Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "30bd472c0e829e9b9097c0c9e9984208cdff452a91c472238aea88cac9278ec0",
+        "fetched_at": "2026-11-08T15:54:33Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002647,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-john-the-baptist-ottsville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saturday Vigil Mass: 4:30pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saturday Vigil Mass: 4:30pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-john-the-baptist-ottsville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday: 8:00am & 10:30am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Sunday: 8:00am & 10:30am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-john-the-baptist-ottsville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday: 8:00am & 10:30am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Sunday: 8:00am & 10:30am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-john-the-baptist-ottsville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Mon- Fri: 9:00am (Thursday at old St. John’s Church)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Mon- Fri: 9:00am (Thursday at old St. John’s Church)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-john-the-baptist-ottsville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Mon- Fri: 9:00am (Thursday at old St. John’s Church)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Mon- Fri: 9:00am (Thursday at old St. John’s Church)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-john-the-baptist-ottsville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Mon- Fri: 9:00am (Thursday at old St. John’s Church)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Mon- Fri: 9:00am (Thursday at old St. John’s Church)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "old-st-johns-haycock",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Mon- Fri: 9:00am (Thursday at old St. John’s Church)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Mon- Fri: 9:00am (Thursday at old St. John’s Church)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-john-the-baptist-ottsville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Mon- Fri: 9:00am (Thursday at old St. John’s Church)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Mon- Fri: 9:00am (Thursday at old St. John’s Church)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-john-the-baptist-ottsville",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": "16:20",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "CONFESSION: Saturdays 4:00pm - 4:20pm or by appt."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "CONFESSION: Saturdays 4:00pm - 4:20pm or by appt."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "48c420a1781ef381c52c0703f66966e35409db55eb478fca611008f69029681b",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s15"
+        ],
+        "opinion_said": "-",
+        "seed_said": "adoration Tue 09:30 @st-john-the-baptist-ottsville",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      }
+    ]
+  }
+}
