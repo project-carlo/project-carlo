@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-patrick-norristown",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:46:42Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T05:06:13Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@6772cf58aca0",
+  "approved_at": "2026-11-27T16:03:51Z",
   "summary": "One church (St. Patrick, Norristown); both November bulletins are image-only and print the same weekend, confession and weekday-intention block (the intentions are the Nov 9-13 week in both). Weekday Masses and Wednesday Adoration come from the website (R6), whose times otherwise match. Dated: Thanksgiving 9 AM, Dec 8 5 PM/7 PM, Christmas Eve 4 PM/6 PM. Open: Saturday confession start (bulletin 2:25 vs website 2:45).",
   "blocked_reason": null,
   "bulletins": [
@@ -551,9 +551,22 @@
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-church-norristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:25",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 4,
       "sources": [
         {
@@ -623,7 +636,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:51Z"
+      }
     },
     {
       "id": "s13",

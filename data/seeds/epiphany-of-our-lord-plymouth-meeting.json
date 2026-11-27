@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "epiphany-of-our-lord-plymouth-meeting",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:39:34Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T23:23:40Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@6772cf58aca0",
+  "approved_at": "2026-11-27T16:03:46Z",
   "summary": "One church. Weekend (Sat 5 PM; Sun 8, 10 AM, 4 PM), weekday 8:30 AM and Sunday 2:30-3:45 PM confession times agree in both bulletins read (Nov 8 and 15) and on the website. Open: how to record St. Joseph's perpetual Adoration Chapel (bulletin says only 'Open Daily'; website gives 24/7 with a door code after 8 PM).",
   "blocked_reason": null,
   "bulletins": [
@@ -494,9 +494,25 @@
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "adoration",
+        "event_kind": "continuous",
+        "day_of_week": null,
+        "date": null,
+        "start_time": null,
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Joseph's Adoration Chapel",
+        "access": "code_after_hours",
+        "open_from": "08:00",
+        "open_until": "20:00"
+      },
       "page": 1,
       "sources": [
         {
@@ -560,14 +576,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": "edited",
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:46Z"
+      },
       "group": "adoration-chapel"
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Joseph's Adoration Chapel; open 24 hours, door code needed after 8 PM"
+      },
       "page": 1,
       "sources": [
         {
@@ -631,14 +664,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 2,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:46Z"
+      },
       "group": "adoration-chapel"
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Joseph's Adoration Chapel; open 24 hours, door code needed after 8 PM"
+      },
       "page": 1,
       "sources": [
         {
@@ -702,14 +752,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 2,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:46Z"
+      },
       "group": "adoration-chapel"
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Joseph's Adoration Chapel; open 24 hours, door code needed after 8 PM"
+      },
       "page": 1,
       "sources": [
         {
@@ -773,14 +840,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 2,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:46Z"
+      },
       "group": "adoration-chapel"
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Joseph's Adoration Chapel; open 24 hours, door code needed after 8 PM"
+      },
       "page": 1,
       "sources": [
         {
@@ -844,14 +928,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 2,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:46Z"
+      },
       "group": "adoration-chapel"
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Joseph's Adoration Chapel; open 24 hours, door code needed after 8 PM"
+      },
       "page": 1,
       "sources": [
         {
@@ -915,14 +1016,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 2,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:46Z"
+      },
       "group": "adoration-chapel"
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Joseph's Adoration Chapel; open 24 hours, door code needed after 8 PM"
+      },
       "page": 1,
       "sources": [
         {
@@ -986,7 +1104,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 2,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:46Z"
+      },
       "group": "adoration-chapel"
     }
   ]

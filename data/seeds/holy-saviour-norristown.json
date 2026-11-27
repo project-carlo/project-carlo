@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-saviour-norristown",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:40:53Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T23:46:18Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@6772cf58aca0",
+  "approved_at": "2026-11-27T16:03:48Z",
   "summary": "Two churches: Holy Saviour (weekday, Saturday and Sunday Masses, Saturday confessions) and Our Lady of Mount Carmel (first-Sunday 10 AM Mass October-May and the Sunday 11:30 Traditional Latin Mass). Both bulletins read (all-image newest, text older) and the website's schedule page agree. Open: whether Saturday's 9 AM Mass and confessions keep a summer break, from a website note dated 2022.",
   "blocked_reason": null,
   "bulletins": [
@@ -477,9 +477,22 @@
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -556,14 +569,31 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:48Z"
+      },
       "group": "summer-saturday"
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-church-norristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -633,14 +663,31 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:48Z"
+      },
       "group": "summer-saturday"
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-church-norristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -705,7 +752,11 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:48Z"
+      },
       "group": "summer-saturday"
     },
     {

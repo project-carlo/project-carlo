@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-matthew-conshohocken",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:46:29Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T04:43:46Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@6772cf58aca0",
+  "approved_at": "2026-11-27T16:03:44Z",
   "summary": "One church. The schedule box (p9) and intentions agree in both November issues: Sat 4:30 PM Vigil and 3:30-4:15 PM Confession, Sun 7:30/9:30/11:30, Mon-Fri 8:15. Dated: Thanksgiving 9 AM, Dec 14 Advent Confessions 7 PM, and this year's Christmas/New Year Masses. Open: whether Thanksgiving's 9 AM cancels the 8:15.",
   "blocked_reason": null,
   "bulletins": [
@@ -499,9 +499,22 @@
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving: one Mass at 9 AM"
+      },
       "page": 6,
       "sources": [
         {
@@ -543,7 +556,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:44Z"
+      }
     },
     {
       "id": "s13",

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "visitation-bvm-norristown",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:47:12Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T15:36:07Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@6772cf58aca0",
+  "approved_at": "2026-11-27T16:03:59Z",
   "summary": "One church. Masses (Mon-Sat 8:15, Sat 4 PM, Sun 7:30/9/11) and Saturday confessions agree in both November issues, their intentions and the website. Open: whether the Adoration Chapel (behind the convent; Lower Church from Nov 29) is at the church, Sunday Adoration's end (8 vs 3 PM), two Holy Hours inside Adoration (R37), and Thanksgiving changes from the website.",
   "blocked_reason": null,
   "bulletins": [
@@ -709,9 +709,22 @@
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
       "page": 6,
       "sources": [
         {
@@ -769,14 +782,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:59Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
       "page": 6,
       "sources": [
         {
@@ -834,14 +864,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:59Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
       "page": 6,
       "sources": [
         {
@@ -899,14 +946,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:59Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
       "page": 6,
       "sources": [
         {
@@ -964,14 +1028,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:59Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
       "page": 6,
       "sources": [
         {
@@ -1029,14 +1110,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:59Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
       "page": 6,
       "sources": [
         {
@@ -1089,14 +1187,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:59Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
       "page": 6,
       "sources": [
         {
@@ -1171,13 +1286,32 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:59Z"
+      }
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour of Reparation, Lower Church"
+      },
       "page": 8,
       "sources": [
         {
@@ -1221,13 +1355,30 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:59Z"
+      }
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-15",
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Praise & Worship, Lower Church"
+      },
       "page": 8,
       "sources": [
         {
@@ -1274,13 +1425,30 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:59Z"
+      }
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
       "page": null,
       "sources": [
         {
@@ -1315,14 +1483,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": "edited",
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:59Z"
+      },
       "group": "thanksgiving"
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving: Mass at 9 AM"
+      },
       "page": null,
       "sources": [
         {
@@ -1357,14 +1542,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:59Z"
+      },
       "group": "thanksgiving"
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": "20:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel closed on Thanksgiving"
+      },
       "page": null,
       "sources": [
         {
@@ -1399,7 +1601,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@6772cf58aca0",
+        "at": "2026-11-27T16:03:59Z"
+      }
     }
   ],
   "second_opinion": {
