@@ -1,0 +1,1536 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-chrysostom-wallingford",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:45:52Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T01:18:56Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church; the bulletins print no schedule box, so the weekly times come from both issues' calendars (p10, p6), confirmed by the website. Dated Advent/Christmas Masses and cancellations come from the parish's own Christmas 2026 page, which the bulletin points to. Open: Tuesday exposition end (bulletin 3:30 vs website 2:30), the website-only weekday tabernacle Adoration, and Dec 8 (bulletin 8 AM & 6 PM vs website 9 AM).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "221666d2cc6f22f62f0a53996dd10383f5aa593deeb0f6acc7e2df69b9d9cd32",
+      "fetched_at": "2026-11-15T16:45:52Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "fac062a7560c9d48c7103296d48f3e272fc7a67243ec56977c75b00debf76213",
+      "fetched_at": "2026-11-08T15:54:32Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 10,
+          "said": "Saturday, November 14 ... 4 pm Vigil Mass (Fr. Mullin); Saturday, November 21 ... 4 pm Vigil Mass (Fr. Hallinan)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac062a7",
+          "page": 6,
+          "said": "Saturday, November 7 ... 4 pm Vigil Mass; Saturday, November 14 ... 4 pm Vigil Mass"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly rule 4: the same Saturday 4 PM Mass in every week of both issues' calendars; the website's Mass schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 10,
+          "said": "Sunday, November 15: 8 am Mass, 9:30 am Mass, 11:30 am Mass; Sunday, November 22: same"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac062a7",
+          "page": 6,
+          "said": "Sunday, November 8 and November 15: 8 am, 9:30 am, 11:30 am Mass"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly rule 4: printed for every Sunday in both issues' calendars; the website agrees (its 'No 11:30 Mass in July and August' is outside the season now and not printed in the bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 10,
+          "said": "Sunday, November 15: 8 am Mass, 9:30 am Mass, 11:30 am Mass; Sunday, November 22: same"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac062a7",
+          "page": 6,
+          "said": "Sunday, November 8 and November 15: 8 am, 9:30 am, 11:30 am Mass"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly rule 4: printed for every Sunday in both issues' calendars; the website agrees (its 'No 11:30 Mass in July and August' is outside the season now and not printed in the bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 10,
+          "said": "Sunday, November 15: 8 am Mass, 9:30 am Mass, 11:30 am Mass; Sunday, November 22: same"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac062a7",
+          "page": 6,
+          "said": "Sunday, November 8 and November 15: 8 am, 9:30 am, 11:30 am Mass"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly rule 4: printed for every Sunday in both issues' calendars; the website agrees (its 'No 11:30 Mass in July and August' is outside the season now and not printed in the bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 10,
+          "said": "Tuesday-Friday, November 17-20: 8 am Mass – Livestream"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac062a7",
+          "page": 6,
+          "said": "Tuesday-Friday, November 10-13: 8 am Mass – Livestream"
+        },
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 9,
+          "said": "Livestream: 8 am Tues-Fri"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly rule 4: an 8 AM Mass each Tuesday to Friday in both issues' calendars; Monday has none (and the website lists none).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 10,
+          "said": "Tuesday-Friday, November 17-20: 8 am Mass – Livestream"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac062a7",
+          "page": 6,
+          "said": "Tuesday-Friday, November 10-13: 8 am Mass – Livestream"
+        },
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 9,
+          "said": "Livestream: 8 am Tues-Fri"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly rule 4: an 8 AM Mass each Tuesday to Friday in both issues' calendars; Monday has none (and the website lists none).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 10,
+          "said": "Tuesday-Friday, November 17-20: 8 am Mass – Livestream"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac062a7",
+          "page": 6,
+          "said": "Tuesday-Friday, November 10-13: 8 am Mass – Livestream"
+        },
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 9,
+          "said": "Livestream: 8 am Tues-Fri"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly rule 4: an 8 AM Mass each Tuesday to Friday in both issues' calendars; Monday has none (and the website lists none).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 10,
+          "said": "Tuesday-Friday, November 17-20: 8 am Mass – Livestream"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac062a7",
+          "page": 6,
+          "said": "Tuesday-Friday, November 10-13: 8 am Mass – Livestream"
+        },
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 9,
+          "said": "Livestream: 8 am Tues-Fri"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly rule 4: an 8 AM Mass each Tuesday to Friday in both issues' calendars; Monday has none (and the website lists none).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 10,
+          "said": "Saturday, November 14: 3 pm Confessions (Fr. Mullin); Saturday, November 21: 3 pm Confessions (Fr. Hallinan)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac062a7",
+          "page": 6,
+          "said": "Saturday, November 7 and 14: 3 pm Confessions"
+        }
+      ],
+      "rationale": "R35: every Saturday in both calendars. No end recorded: the bulletins give none, and the website contradicts itself (mass-times block 3:00-3:45 PM, Christmas page '3 to 3:50 pm'), so it can't supply one (R6; as annunciation-bvm-havertown s9 distrusted a self-contradicting site).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 3,
+          "said": "Adoration: 12:30 - 3:30 pm Tuesdays in church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac062a7",
+          "page": 3,
+          "said": "Eucharistic Exposition (Adoration) 12:30-3:30 pm Tuesdays in church"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/",
+          "said": "Tuesday 12:30 PM to 2:30 PM Exposition of the Blessed Sacrament in church is held from 12:30 to 2:30 pm Tuesday."
+        }
+      ],
+      "rationale": "R6, R28: the website conflicts with the bulletin on the end. Leaning to the bulletin: both issues print 12:30-3:30 twice (p3 notice and Parish Life list), and the p10 calendar's '12:30-3:30 pm' line sits beside 'Adoration'.",
+      "question": "Tuesday exposition: bulletin 12:30-3:30 PM or website 12:30-2:30 PM?",
+      "options": [
+        {
+          "label": "Tue 12:30-3:30 PM (bulletin)",
+          "entry": {
+            "church_slug": "st-john-chrysostom-wallingford",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": "15:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Exposition in church"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Tue 12:30-2:30 PM (website)",
+          "entry": {
+            "church_slug": "st-john-chrysostom-wallingford",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": "14:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Exposition in church"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/",
+          "said": "Adoration of Christ in the tabernacle is available from 9 to 3 Monday through Friday."
+        }
+      ],
+      "rationale": "R38, R6: the website names prayer before the tabernacle as Adoration, but no bulletin mentions it and the same sentence's exposition hours (12:30-2:30) disagree with both bulletins (12:30-3:30), so the line may be stale; it reads close to the church simply being open for prayer. Leaning leave out: a wrong time is worse than a missing one (POLICY).",
+      "question": "Add the website's weekday 'Adoration of Christ in the tabernacle', Mon-Fri 9 AM-3 PM?",
+      "options": [
+        {
+          "label": "Mon-Fri 9:00 AM-3:00 PM",
+          "entry": {
+            "church_slug": "st-john-chrysostom-wallingford",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the tabernacle in church"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "s11"
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/",
+          "said": "Adoration of Christ in the tabernacle is available from 9 to 3 Monday through Friday."
+        }
+      ],
+      "rationale": "R38, R6: the website names prayer before the tabernacle as Adoration, but no bulletin mentions it and the same sentence's exposition hours (12:30-2:30) disagree with both bulletins (12:30-3:30), so the line may be stale; it reads close to the church simply being open for prayer. Leaning leave out: a wrong time is worse than a missing one (POLICY).",
+      "question": "Add the website's weekday 'Adoration of Christ in the tabernacle', Mon-Fri 9 AM-3 PM?",
+      "options": [
+        {
+          "label": "Mon-Fri 9:00 AM-3:00 PM",
+          "entry": {
+            "church_slug": "st-john-chrysostom-wallingford",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the tabernacle in church"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "s11"
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/",
+          "said": "Adoration of Christ in the tabernacle is available from 9 to 3 Monday through Friday."
+        }
+      ],
+      "rationale": "R38, R6: the website names prayer before the tabernacle as Adoration, but no bulletin mentions it and the same sentence's exposition hours (12:30-2:30) disagree with both bulletins (12:30-3:30), so the line may be stale; it reads close to the church simply being open for prayer. Leaning leave out: a wrong time is worse than a missing one (POLICY).",
+      "question": "Add the website's weekday 'Adoration of Christ in the tabernacle', Mon-Fri 9 AM-3 PM?",
+      "options": [
+        {
+          "label": "Mon-Fri 9:00 AM-3:00 PM",
+          "entry": {
+            "church_slug": "st-john-chrysostom-wallingford",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the tabernacle in church"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "s11"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/",
+          "said": "Adoration of Christ in the tabernacle is available from 9 to 3 Monday through Friday."
+        }
+      ],
+      "rationale": "R38, R6: the website names prayer before the tabernacle as Adoration, but no bulletin mentions it and the same sentence's exposition hours (12:30-2:30) disagree with both bulletins (12:30-3:30), so the line may be stale; it reads close to the church simply being open for prayer. Leaning leave out: a wrong time is worse than a missing one (POLICY).",
+      "question": "Add the website's weekday 'Adoration of Christ in the tabernacle', Mon-Fri 9 AM-3 PM?",
+      "options": [
+        {
+          "label": "Mon-Fri 9:00 AM-3:00 PM",
+          "entry": {
+            "church_slug": "st-john-chrysostom-wallingford",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the tabernacle in church"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "s11"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/",
+          "said": "Adoration of Christ in the tabernacle is available from 9 to 3 Monday through Friday."
+        }
+      ],
+      "rationale": "R38, R6: the website names prayer before the tabernacle as Adoration, but no bulletin mentions it and the same sentence's exposition hours (12:30-2:30) disagree with both bulletins (12:30-3:30), so the line may be stale; it reads close to the church simply being open for prayer. Leaning leave out: a wrong time is worse than a missing one (POLICY).",
+      "question": "Add the website's weekday 'Adoration of Christ in the tabernacle', Mon-Fri 9 AM-3 PM?",
+      "options": [
+        {
+          "label": "Mon-Fri 9:00 AM-3:00 PM",
+          "entry": {
+            "church_slug": "st-john-chrysostom-wallingford",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the tabernacle in church"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "s11"
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 2,
+          "said": "(Thanksgiving Mass is Nov. 26 at 9 am.)"
+        }
+      ],
+      "rationale": "R1, R16, R17: a dated holiday Mass outside the weekly times. The usual Thursday 8 AM isn't said to be cancelled, so it stays (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of the Immaculate Conception"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 2,
+          "said": "Our Holy Day Vigil Mass is 5 pm on Dec. 7"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "5 pm Vigil Mass Monday, Dec. 7"
+        }
+      ],
+      "rationale": "R1, R16: the bulletin's dated holy-day notice; the parish's Christmas 2026 page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 2,
+          "said": "our Holy Day Masses will be at 8 am and 6 pm."
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "9 am Holy Day Mass on Tuesday, Dec. 8"
+        }
+      ],
+      "rationale": "R28/R6: the newest bulletin and the parish's Christmas 2026 page (also its mass-times block: 'December 8: 9:00 AM, 5:00 PM') disagree; answer this and the companion Dec 8 question together. Leaning bulletin: a dated notice from the parish office; its 8 AM is the regular Tuesday Mass (weekly slot, POLICY Weekly rule 7); the mass-times block's 5:00 PM looks like the Dec 7 vigil misfiled. Hard because the website was read later (Nov 27) and two pages say 9 AM.",
+      "question": "Add a 6:00 PM Immaculate Conception Mass on Tue Dec 8 (bulletin; the website gives 9 AM instead)?",
+      "options": [
+        {
+          "label": "Dec 8 6:00 PM",
+          "entry": {
+            "church_slug": "st-john-chrysostom-wallingford",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "221666d2",
+          "page": 2,
+          "said": "our Holy Day Masses will be at 8 am and 6 pm."
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "9 am Holy Day Mass on Tuesday, Dec. 8"
+        }
+      ],
+      "rationale": "R28/R6: the newest bulletin and the parish's Christmas 2026 page (also its mass-times block: 'December 8: 9:00 AM, 5:00 PM') disagree; answer this and the companion Dec 8 question together. Leaning bulletin: a dated notice from the parish office; its 8 AM is the regular Tuesday Mass (weekly slot, POLICY Weekly rule 7); the mass-times block's 5:00 PM looks like the Dec 7 vigil misfiled. Hard because the website was read later (Nov 27) and two pages say 9 AM.",
+      "question": "Add a 9:00 AM Immaculate Conception Mass on Tue Dec 8 (website; the bulletin gives 8 AM and 6 PM)?",
+      "options": [
+        {
+          "label": "Dec 8 9:00 AM",
+          "entry": {
+            "church_slug": "st-john-chrysostom-wallingford",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-16",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Penance Service"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "PARISH PENANCE SERVICE with CONFESSIONS 6 pm Wednesday, Dec. 16",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's current Christmas 2026 page; a penance service is itself a celebration of the sacrament and starts at the printed time (decided as st-aloysius-pottstown s17). No end recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "CHRISTMAS EVE - THURSDAY, DEC. 24 4 pm Youth Choir (Livestream) ... 6 pm The Faithful Band (American Sign Language) 8 pm Cantor & Accompanist",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16: this year's Christmas Masses from the parish's own Christmas 2026 page, which the newest bulletin points to. Unlike st-joseph-coatesville s45, the page is dated this year (weekdays match 2026).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "CHRISTMAS EVE - THURSDAY, DEC. 24 4 pm Youth Choir (Livestream) ... 6 pm The Faithful Band (American Sign Language) 8 pm Cantor & Accompanist",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16: this year's Christmas Masses from the parish's own Christmas 2026 page, which the newest bulletin points to. Unlike st-joseph-coatesville s45, the page is dated this year (weekdays match 2026).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "CHRISTMAS EVE - THURSDAY, DEC. 24 4 pm Youth Choir (Livestream) ... 6 pm The Faithful Band (American Sign Language) 8 pm Cantor & Accompanist",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16: this year's Christmas Masses from the parish's own Christmas 2026 page, which the newest bulletin points to. Unlike st-joseph-coatesville s45, the page is dated this year (weekdays match 2026).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve, in the gym"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "4:15 pm Cantor & Accompanist - In the Gym",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16: on the parish's Christmas 2026 page; the gym is on the parish grounds (its own note: 'The 4:15 pm Mass on Christmas Eve will be in the gym'), so it belongs to the church (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "CHRISTMAS DAY - FRIDAY, DEC. 25 9 am Cantor & Accompanist 11 am Adult Choir",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16: this year's Christmas Day Masses from the parish's Christmas 2026 page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "CHRISTMAS DAY - FRIDAY, DEC. 25 9 am Cantor & Accompanist 11 am Adult Choir",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16: this year's Christmas Day Masses from the parish's Christmas 2026 page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "No 8 am Service or Mass on Dec. 24-25.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16: the page says the weekly 8 AM Thursday and Friday Masses won't take place those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "No 8 am Service or Mass on Dec. 24-25.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16: the page says the weekly 8 AM Thursday and Friday Masses won't take place those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-29",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "DEC. 29 - 31: 9 am Daily Mass (no 8 am Mass, no livestream)",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16, R40: dated exceptions to the weekday schedule for Christmas week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-30",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "DEC. 29 - 31: 9 am Daily Mass (no 8 am Mass, no livestream)",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16, R40: dated exceptions to the weekday schedule for Christmas week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "DEC. 29 - 31: 9 am Daily Mass (no 8 am Mass, no livestream)",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16, R40: dated exceptions to the weekday schedule for Christmas week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-29",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "DEC. 29 - 31: 9 am Daily Mass (no 8 am Mass, no livestream)",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16: the page says there is no 8 AM Mass these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-30",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "DEC. 29 - 31: 9 am Daily Mass (no 8 am Mass, no livestream)",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16: the page says there is no 8 AM Mass these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "DEC. 29 - 31: 9 am Daily Mass (no 8 am Mass, no livestream)",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16: the page says there is no 8 AM Mass these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of Mary, Mother of God"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "4 pm Vigil Mass Thursday, Dec. 31",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16: dated holy-day vigil on the parish's Christmas 2026 page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mary, Mother of God"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "9 am Holy Day Mass Fri day, Jan. 1, 2027",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16: dated holy-day Mass on the parish's Christmas 2026 page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcparish.org/christmas",
+          "said": "Daily Mass resumes at 8 am Tuesday, Jan. 5, 2027.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T01:22:58Z",
+            "current_because": "Page titled Christmas 2026; its dates fall on 2026 weekdays (Christmas Eve Thursday Dec 24, Holy Day Fri Jan 1 2027); fetched 2026-11-27",
+            "bulletin": "221666d2",
+            "fits_because": "Newest bulletin (221666d2 p5, p6) sends readers to sjcparish.org/christmas for the whole Advent & Christmas schedule; its regular schedule through Dec 23 matches the p10 calendar exactly"
+          }
+        }
+      ],
+      "rationale": "R6, R16: the 8 AM daily Mass resumes only Jan 5, so Friday Jan 1's 8 AM doesn't take place (the 9 AM holy-day Mass replaces it).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-chrysostom-wallingford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-14",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Novum Nights, St. Lawrence Upper Darby"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac062a7",
+          "page": 5,
+          "said": "Nov. 14: 7 pm Mass in Spanish; 8 pm Adoration (bilingual). St. Lawrence Catholic Church, 8245 West Chester Pike, Upper Darby"
+        }
+      ],
+      "rationale": "R22, R16: another parish's church (Around the Area), and before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
