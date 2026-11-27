@@ -1,0 +1,1242 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-magdalen-media",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:22Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T01:24:43Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church; both issues (Nov 8, Nov 15) are image-only and print the same schedule box: Sunday 7:30/9:30/11:30 AM & 7 PM, Mon 8:30, Tue-Fri 6:30 & 8:30, Sat 8:30 AM & 4:30 PM; confessions Sat 9-10 AM, Sun 6:15-6:45 PM; First Friday (Sept-June) confessions 6:15-6:45 and Adoration 7-8 PM. Open: whether the Adoration Chapel's exposition (Tue 9 AM-Thu 2 PM) and its 24-hour opening go at the church, and the website's first-Friday 7 PM Mass, which the bulletins replace with Adoration.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9eeb014fafab2b68e46a809a0583b5796d011675a5da8d16e6ec9f6c4dde1013",
+      "fetched_at": "2026-11-15T16:46:22Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e66af4d43f64146433e11503a87f119b5e362354eaec4394bed211b891948524",
+      "fetched_at": "2026-11-08T15:54:58Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Sunday 7:30 AM, 9:30 AM, 11:30 AM & 7 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Sunday 7:30 AM, 9:30 AM, 11:30 AM & 7 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 6,
+          "said": "SUNDAY, NOVEMBER 15 7:30 AM ... 9:30 AM ... 11:30 AM ... 7 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Parish Mass & Confession Schedule box of both issues; the Mass intentions list the same four Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Sunday 7:30 AM, 9:30 AM, 11:30 AM & 7 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Sunday 7:30 AM, 9:30 AM, 11:30 AM & 7 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 6,
+          "said": "SUNDAY, NOVEMBER 15 7:30 AM ... 9:30 AM ... 11:30 AM ... 7 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Parish Mass & Confession Schedule box of both issues; the Mass intentions list the same four Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Sunday 7:30 AM, 9:30 AM, 11:30 AM & 7 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Sunday 7:30 AM, 9:30 AM, 11:30 AM & 7 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 6,
+          "said": "SUNDAY, NOVEMBER 15 7:30 AM ... 9:30 AM ... 11:30 AM ... 7 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Parish Mass & Confession Schedule box of both issues; the Mass intentions list the same four Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Sunday 7:30 AM, 9:30 AM, 11:30 AM & 7 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Sunday 7:30 AM, 9:30 AM, 11:30 AM & 7 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 6,
+          "said": "SUNDAY, NOVEMBER 15 7:30 AM ... 9:30 AM ... 11:30 AM ... 7 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Parish Mass & Confession Schedule box of both issues; the Mass intentions list the same four Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Weekday Tuesday through Friday 6:30 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Weekday Tuesday through Friday 6:30 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 6,
+          "said": "TUESDAY, NOVEMBER 17 6:30 AM ... 8:30 AM (same Wed-Fri)"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list both Masses Tuesday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Weekday Tuesday through Friday 6:30 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Weekday Tuesday through Friday 6:30 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 6,
+          "said": "TUESDAY, NOVEMBER 17 6:30 AM ... 8:30 AM (same Wed-Fri)"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list both Masses Tuesday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Weekday Tuesday through Friday 6:30 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Weekday Tuesday through Friday 6:30 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 6,
+          "said": "TUESDAY, NOVEMBER 17 6:30 AM ... 8:30 AM (same Wed-Fri)"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list both Masses Tuesday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Weekday Tuesday through Friday 6:30 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Weekday Tuesday through Friday 6:30 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 6,
+          "said": "TUESDAY, NOVEMBER 17 6:30 AM ... 8:30 AM (same Wed-Fri)"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list both Masses Tuesday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Weekday Tuesday through Friday 6:30 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Weekday Tuesday through Friday 6:30 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 6,
+          "said": "TUESDAY, NOVEMBER 17 6:30 AM ... 8:30 AM (same Wed-Fri)"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list both Masses Tuesday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Weekday Tuesday through Friday 6:30 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Weekday Tuesday through Friday 6:30 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 6,
+          "said": "TUESDAY, NOVEMBER 17 6:30 AM ... 8:30 AM (same Wed-Fri)"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list both Masses Tuesday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Weekday Tuesday through Friday 6:30 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Weekday Tuesday through Friday 6:30 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 6,
+          "said": "TUESDAY, NOVEMBER 17 6:30 AM ... 8:30 AM (same Wed-Fri)"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list both Masses Tuesday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Weekday Tuesday through Friday 6:30 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Weekday Tuesday through Friday 6:30 AM & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 6,
+          "said": "TUESDAY, NOVEMBER 17 6:30 AM ... 8:30 AM (same Wed-Fri)"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list both Masses Tuesday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "On Mondays Mass is at 8:30 AM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "On Mondays Mass is at 8:30 AM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 6,
+          "said": "MONDAY, NOVEMBER 16 6:30 AM - No Mass 8:30 AM"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; Monday has no 6:30 AM Mass (the intentions' 'No Mass' line agrees).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Saturday 8:30 AM & 4:30 PM Anticipated Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Saturday 8:30 AM & 4:30 PM Anticipated Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 6,
+          "said": "SATURDAY, NOVEMBER 21 8:30 AM ... 4:30 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues and the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Saturday 8:30 AM & 4:30 PM Anticipated Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Saturday 8:30 AM & 4:30 PM Anticipated Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 6,
+          "said": "SATURDAY, NOVEMBER 21 8:30 AM ... 4:30 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues and the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Confessions from 9 to 10 AM on Saturdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Confessions from 9 to 10 AM on Saturdays"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "and 6:15 to 6:45 PM on Sundays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "and 6:15 to 6:45 PM on Sundays."
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "For a private confession time, please call the parish office."
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "First Friday Devotions (except July and August): 6:15 PM to 6:45 PM Confessions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "First Friday Devotions (except July and August): 6:15 PM to 6:45 PM Confessions"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly rule 2: named by its week in both issues' devotional schedule; 'except July and August' is season Sept-June. The website's confession list agrees (6:15-6:45); its homepage's 5:45 start contradicts its own Mass page, so the bulletin wins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "Benediction"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "followed by Prayer, Adoration & Benediction from 7 PM to 8 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "followed by Prayer, Adoration & Benediction from 7 PM to 8 PM"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly rule 2: First Friday Devotions in both issues, except July and August (season Sept-June); Benediction per POLICY.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stmarymagdalen.net/masstimes/masses",
+          "said": "First Fridays 6:30 AM in the Chapel, 8:30 AM and 7 PM in the Church. (Except July & August)."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmarymagdalen.net/",
+          "said": "FIRST FRIDAYS 5:45 to 6:45 PM Confessions and Holy Hour. Mass at 7 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "First Friday Devotions (except July and August): 6:15 PM to 6:45 PM Confessions, followed by Prayer, Adoration & Benediction from 7 PM to 8 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "First Friday Devotions (except July and August): 6:15 PM to 6:45 PM Confessions, followed by Prayer, Adoration & Benediction from 7 PM to 8 PM"
+        }
+      ],
+      "rationale": "R28/R6: the website has a 7 PM First Friday Mass, but both bulletins put Prayer, Adoration & Benediction at 7-8 PM and no Mass. The homepage's older pattern (Holy Hour 5:45-6:45, Mass at 7) looks replaced by the bulletin's (confessions 6:15-6:45, Adoration 7-8); the site also still shows Lent Vespers. Leaning per precedent st-charles-borromeo-drexel-hill s9 (bulletin over a stale-looking website for a first-Friday evening).",
+      "question": "Add a first-Friday 7:00 PM Mass from the website?",
+      "options": [
+        {
+          "label": "First Fridays 7 PM (Sept-June)",
+          "entry": {
+            "church_slug": "st-mary-magdalen-media",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Adoration Chapel: ... Our Exposition Hours are currently from Tuesday at 9 AM to Thursday at 2 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Adoration Chapel: ... Our Exposition Hours are currently from Tuesday at 9 AM to Thursday at 2 PM."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmarymagdalen.net/masstimes/masses",
+          "said": "Perpetual Exposition Hours (Chapel hours remain unchanged) are currently Tuesday from 9 AM through Thursday at 2 PM."
+        }
+      ],
+      "rationale": "R38/R32: the parish's own schedule box gives the chapel's exposition hours; the parish has one church, and the website puts weekday Masses 'in the chapel' while 'Friday Mass may be in the Church', so the chapel is on the grounds, but no page gives its address. Leaning per precedents ss-philip-and-james-exton s15, sacred-heart-havertown s13, st-pius-x-broomall s25. One continuous period is written as Tue 9:00-23:59, Wed all day, Thu 0:00-14:00.",
+      "question": "Is the Adoration Chapel at St. Mary Magdalen Church, so its exposition hours (Tuesday 9 AM through Thursday 2 PM) go there?",
+      "options": [
+        {
+          "label": "At the church, in the Adoration Chapel",
+          "entry": {
+            "church_slug": "st-mary-magdalen-media",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel; exposition runs continuously to Thursday 2 PM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "expo"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Our Exposition Hours are currently from Tuesday at 9 AM to Thursday at 2 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Our Exposition Hours are currently from Tuesday at 9 AM to Thursday at 2 PM."
+        }
+      ],
+      "rationale": "R38/R32: as for the Tuesday slot; the middle day of one continuous exposition period. Leaning per precedent ss-philip-and-james-exton s15.",
+      "question": "Is the Adoration Chapel at St. Mary Magdalen Church, so its exposition hours (Tuesday 9 AM through Thursday 2 PM) go there?",
+      "options": [
+        {
+          "label": "At the church, in the Adoration Chapel",
+          "entry": {
+            "church_slug": "st-mary-magdalen-media",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel; exposition from Tuesday 9 AM to Thursday 2 PM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "expo"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Our Exposition Hours are currently from Tuesday at 9 AM to Thursday at 2 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Our Exposition Hours are currently from Tuesday at 9 AM to Thursday at 2 PM."
+        }
+      ],
+      "rationale": "R38/R32: as for the Tuesday slot; the last day of one continuous exposition period. Leaning per precedent ss-philip-and-james-exton s15.",
+      "question": "Is the Adoration Chapel at St. Mary Magdalen Church, so its exposition hours (Tuesday 9 AM through Thursday 2 PM) go there?",
+      "options": [
+        {
+          "label": "At the church, in the Adoration Chapel",
+          "entry": {
+            "church_slug": "st-mary-magdalen-media",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "14:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel; exposition from Tuesday 9 AM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "expo"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 2,
+          "said": "Adoration Chapel: Chapel is open twenty-four hours a day, seven days a week for personal prayer."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 2,
+          "said": "Adoration Chapel: Chapel is open twenty-four hours a day, seven days a week for personal prayer."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmarymagdalen.net/masstimes/masses",
+          "said": "Enjoy our Adoration Chapel ... We invite you to spend time in prayer with Jesus, who is always present in the Tabernacle ... Chapel Hours Twenty-four hours, seven days a week for personal prayer"
+        }
+      ],
+      "rationale": "R46/R38/R30: the parish names it its Adoration Chapel and opens it around the clock for prayer before the reserved Sacrament (R38 allows that as Adoration, no exposition claimed), but 'for personal prayer' is close to R38's 'open for prayer alone'. Also turns on the chapel's location (group expo). Leaning include: the parish itself calls it Adoration and the website invites people to pray before the tabernacle there.",
+      "question": "Add the Adoration Chapel as open 24 hours (prayer before the tabernacle outside exposition)?",
+      "options": [
+        {
+          "label": "Chapel open 24 hours, access not stated",
+          "entry": {
+            "church_slug": "st-mary-magdalen-media",
+            "event_type": "adoration",
+            "event_kind": "continuous",
+            "day_of_week": null,
+            "date": null,
+            "start_time": null,
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel",
+            "access": "not_stated",
+            "open_from": null,
+            "open_until": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-19",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In Italian"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 7,
+          "said": "MASS IN ITALIAN SATURDAY, DECEMBER 19 + 7 PM Join us at 7 PM for Mass in Italian"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly rule 3: a dated Mass under Upcoming SMM Events, open ('Join us'), at the parish's one church; after as_of (R16). The Nov 8 issue (e66af4d43f64 p5) had one on Sat Nov 7, so it is occasional, not weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-media",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "We Remember ceremony"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 7,
+          "said": "'WE REMEMBER' CEREMONY & MASS SUNDAY, NOVEMBER 15 + 11 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e66af4d4",
+          "page": 7,
+          "said": "During the Candle Lighting Ceremony, which will begin at 11:10 AM, before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 6,
+          "said": "SUNDAY, NOVEMBER 15 ... 11:30 AM - Philip Cavalcanto"
+        }
+      ],
+      "rationale": "POLICY Weekly rule 7: the 11 AM is the ceremony before the regular 11:30 AM Sunday Mass (candle lighting at 11:10 'before Mass'; the intentions list 11:30), so only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9eeb014f",
+          "page": 7,
+          "said": "A MASS OF REMEMBRANCE FOR INFANTS SATURDAY, NOVEMBER 21 - 10:30 AM St. Laurence Church, located at 8245 West Chester Pike in Upper Darby"
+        }
+      ],
+      "rationale": "R22: at St. Laurence, Upper Darby, another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
