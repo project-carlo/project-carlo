@@ -1,0 +1,1516 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-guadalupe-doylestown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:43:27Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T21:44:57Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Buckingham/Doylestown). Both November issues (image-only) print the same weekend, Tue-Sat 8 a.m. and before-weekend-Mass confession times. Dated Thanksgiving, Advent confession, Dec 8 and Dec 11 times come from the parish's current events page (R6). Open: the website-only First Friday Adoration and 7 p.m. confession in the St. Juan Diego Chapel.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "df7f9d231494e81f95dd7602a4ca3c1d2448e824b50d91d1e627b637eff0dfc1",
+      "fetched_at": "2026-11-15T16:43:27Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d457b7f9c250063a76a4576f8b9eba5cd37b104b0e15d4546172b13b774bebf5",
+      "fetched_at": "2026-11-08T15:53:05Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "df7f9d231494e81f95dd7602a4ca3c1d2448e824b50d91d1e627b637eff0dfc1",
+      "bulletins": [
+        "df7f9d231494e81f95dd7602a4ca3c1d2448e824b50d91d1e627b637eff0dfc1",
+        "d457b7f9c250063a76a4576f8b9eba5cd37b104b0e15d4546172b13b774bebf5"
+      ],
+      "cached": false,
+      "cost_usd": 0.001826,
+      "at": "2026-11-27T21:52:20.367766+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 1,
+          "said": "Saturday Vigil: 5 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d457b7f9",
+          "page": 1,
+          "said": "Saturday Vigil: 5 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 2,
+          "said": "MASS SCHEDULE Saturday Vigil: 5 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d457b7f9",
+          "page": 2,
+          "said": "MASS SCHEDULE Saturday Vigil: 5 p.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "df7f9d231494e81f95dd7602a4ca3c1d2448e824b50d91d1e627b637eff0dfc1",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saturday Vigil: 5 p.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box and the p2 schedule of both issues read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 1,
+          "said": "Sunday: 9 a.m. and 11 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d457b7f9",
+          "page": 1,
+          "said": "Sunday: 9 a.m. and 11 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 2,
+          "said": "Sunday: 9 a.m. (Livestreamed) and 11 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d457b7f9",
+          "page": 2,
+          "said": "Sunday: 9 a.m. (Livestreamed) and 11 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "df7f9d231494e81f95dd7602a4ca3c1d2448e824b50d91d1e627b637eff0dfc1",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday: 9 a.m. (Livestreamed) and 11 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box and the p2 schedule of both issues read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 1,
+          "said": "Sunday: 9 a.m. and 11 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d457b7f9",
+          "page": 1,
+          "said": "Sunday: 9 a.m. and 11 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 2,
+          "said": "Sunday: 9 a.m. (Livestreamed) and 11 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d457b7f9",
+          "page": 2,
+          "said": "Sunday: 9 a.m. (Livestreamed) and 11 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "df7f9d231494e81f95dd7602a4ca3c1d2448e824b50d91d1e627b637eff0dfc1",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday: 9 a.m. (Livestreamed) and 11 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box and the p2 schedule of both issues read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 1,
+          "said": "Tuesday through Saturday: 8 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d457b7f9",
+          "page": 1,
+          "said": "Tuesday through Saturday: 8 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 4,
+          "said": "8 a.m. Tuesday, November 17 ... Saturday, November 21 (Monday: No Mass)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df7f9d231494e81f95dd7602a4ca3c1d2448e824b50d91d1e627b637eff0dfc1",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Tuesday through Saturday: 8 a.m. All weekday Masses are livestreamed on parish website.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box and p2 'WEEKDAY MASSES' of both issues; both weeks' intentions list 8 a.m. Tue-Sat and 'No Mass' Monday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 1,
+          "said": "Tuesday through Saturday: 8 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d457b7f9",
+          "page": 1,
+          "said": "Tuesday through Saturday: 8 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 4,
+          "said": "8 a.m. Tuesday, November 17 ... Saturday, November 21 (Monday: No Mass)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df7f9d231494e81f95dd7602a4ca3c1d2448e824b50d91d1e627b637eff0dfc1",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Tuesday through Saturday: 8 a.m. All weekday Masses are livestreamed on parish website.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box and p2 'WEEKDAY MASSES' of both issues; both weeks' intentions list 8 a.m. Tue-Sat and 'No Mass' Monday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 1,
+          "said": "Tuesday through Saturday: 8 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d457b7f9",
+          "page": 1,
+          "said": "Tuesday through Saturday: 8 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 4,
+          "said": "8 a.m. Tuesday, November 17 ... Saturday, November 21 (Monday: No Mass)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df7f9d231494e81f95dd7602a4ca3c1d2448e824b50d91d1e627b637eff0dfc1",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Tuesday through Saturday: 8 a.m. All weekday Masses are livestreamed on parish website.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box and p2 'WEEKDAY MASSES' of both issues; both weeks' intentions list 8 a.m. Tue-Sat and 'No Mass' Monday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 1,
+          "said": "Tuesday through Saturday: 8 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d457b7f9",
+          "page": 1,
+          "said": "Tuesday through Saturday: 8 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 4,
+          "said": "8 a.m. Tuesday, November 17 ... Saturday, November 21 (Monday: No Mass)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df7f9d231494e81f95dd7602a4ca3c1d2448e824b50d91d1e627b637eff0dfc1",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Tuesday through Saturday: 8 a.m. All weekday Masses are livestreamed on parish website.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box and p2 'WEEKDAY MASSES' of both issues; both weeks' intentions list 8 a.m. Tue-Sat and 'No Mass' Monday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 1,
+          "said": "Tuesday through Saturday: 8 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d457b7f9",
+          "page": 1,
+          "said": "Tuesday through Saturday: 8 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 4,
+          "said": "8 a.m. Tuesday, November 17 ... Saturday, November 21 (Monday: No Mass)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df7f9d231494e81f95dd7602a4ca3c1d2448e824b50d91d1e627b637eff0dfc1",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Tuesday through Saturday: 8 a.m. All weekday Masses are livestreamed on parish website.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box and p2 'WEEKDAY MASSES' of both issues; both weeks' intentions list 8 a.m. Tue-Sat and 'No Mass' Monday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 5:00 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 2,
+          "said": "CONFESSIONS Thirty minutes before weekend Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d457b7f9",
+          "page": 2,
+          "said": "CONFESSIONS Thirty minutes before weekend Masses."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olguadalupe.org/",
+          "said": "Confessions: Half hour before each weekend Mass, until 10 minutes before Mass begins."
+        },
+        {
+          "source": "c1",
+          "bulletin": "df7f9d231494e81f95dd7602a4ca3c1d2448e824b50d91d1e627b637eff0dfc1",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Thirty minutes before weekend Masses.”"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 'N minutes before Mass' runs to the Mass's start. The website ends confessions 10 minutes before; kept at POLICY timing as st-joseph-coatesville s32 did with a website :50 end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 2,
+          "said": "CONFESSIONS Thirty minutes before weekend Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d457b7f9",
+          "page": 2,
+          "said": "CONFESSIONS Thirty minutes before weekend Masses."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olguadalupe.org/",
+          "said": "Confessions: Half hour before each weekend Mass, until 10 minutes before Mass begins."
+        },
+        {
+          "source": "c1",
+          "bulletin": "df7f9d231494e81f95dd7602a4ca3c1d2448e824b50d91d1e627b637eff0dfc1",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Thirty minutes before weekend Masses.”"
+        }
+      ],
+      "rationale": "R10, POLICY Times: one entry per weekend Mass, ending at its start. The website's 10-minutes-before end not copied, as in st-joseph-coatesville s32.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 11:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 2,
+          "said": "CONFESSIONS Thirty minutes before weekend Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d457b7f9",
+          "page": 2,
+          "said": "CONFESSIONS Thirty minutes before weekend Masses."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olguadalupe.org/",
+          "said": "Confessions: Half hour before each weekend Mass, until 10 minutes before Mass begins."
+        },
+        {
+          "source": "c1",
+          "bulletin": "df7f9d231494e81f95dd7602a4ca3c1d2448e824b50d91d1e627b637eff0dfc1",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Thirty minutes before weekend Masses.”"
+        }
+      ],
+      "rationale": "R10, POLICY Times: one entry per weekend Mass, ending at its start. The website's 10-minutes-before end not copied, as in st-joseph-coatesville s32.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olguadalupe.org/events",
+          "said": "Thanksgiving Day Mass ... Thursday, November 26, 2026 Time: 9:00 a.m. Where: OLG Church All are welcome to join us for Mass on Thanksgiving Day.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T21:49:22Z",
+            "current_because": "Events page lists 2026-dated events (Nov 26, Nov 29 concert also printed in the newest bulletin p6, Dec 1, Dec 8, Dec 11); checked 2026-11-27.",
+            "bulletin": "df7f9d23",
+            "fits_because": "The bulletin's Thursday Mass is 8 a.m. (p1/p2); the page dates this year's Thanksgiving replacement, which a mid-November issue need not print."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's current events page dates Thanksgiving Mass at 9:00 a.m. at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olguadalupe.org/events",
+          "said": "Thanksgiving Day Mass ... Mass will NOT be celebrated at 8:00 a.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T21:49:22Z",
+            "current_because": "Events page lists 2026-dated events (Nov 26, Nov 29 concert also printed in the newest bulletin p6, Dec 1, Dec 8, Dec 11); checked 2026-11-27.",
+            "bulletin": "df7f9d23",
+            "fits_because": "Cancels the weekly Thursday 8 a.m. Mass printed in the bulletin (p1/p2) for one date."
+          }
+        }
+      ],
+      "rationale": "R6, R16, R17: the page states the 8:00 a.m. Mass will not be celebrated on Thanksgiving, an explicit cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-01",
+        "start_time": "18:15",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Advent Confessions"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olguadalupe.org/events",
+          "said": "Parish Advent Confessions ... Tuesday, December 1, 2026 Time: 6:15 to 7:30 p.m. Where: OLG Church All parishioners are invited",
+          "schedule_check": {
+            "checked_at": "2026-11-27T21:49:22Z",
+            "current_because": "Events page lists 2026-dated events, the Nov 29 concert matching the newest bulletin p6; also on the homepage's upcoming list (01 DEC ADVENT CONFESSIONS); checked 2026-11-27.",
+            "bulletin": "df7f9d23",
+            "fits_because": "An Advent penance evening outside the weekend confession times the bulletin prints; it does not contradict them."
+          }
+        }
+      ],
+      "rationale": "R6, R16: dated, open confession time at the church with start and end, from the parish's current events page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olguadalupe.org/events",
+          "said": "Feast of the Immaculate Conception ... Tuesday, December 08, 2026 Time: Masses at 8:00 a.m., 12:00 p.m. (noon) and 7:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T21:49:22Z",
+            "current_because": "Dated 2026 event on the current events page; the site's standing 'Holy Days Mass Times: 8:00 a.m., 12:00 noon and 7:00 p.m.' agrees; checked 2026-11-27.",
+            "bulletin": "df7f9d23",
+            "fits_because": "The 8:00 a.m. is the bulletin's weekly Tuesday Mass (p1/p2), so only the noon and 7 p.m. are added."
+          }
+        }
+      ],
+      "rationale": "R6, R16, POLICY Weekly or dated rule 7: dated holy-day Masses outside the weekly schedule; this year's date is printed (unlike st-isaac-jogues-wayne s27's undated box; compare st-matthias-bala-cynwyd s17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olguadalupe.org/events",
+          "said": "Feast of the Immaculate Conception ... Tuesday, December 08, 2026 Time: Masses at 8:00 a.m., 12:00 p.m. (noon) and 7:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T21:49:22Z",
+            "current_because": "Dated 2026 event on the current events page; the site's standing holy-day line agrees; checked 2026-11-27.",
+            "bulletin": "df7f9d23",
+            "fits_because": "Outside the bulletin's weekly schedule (p1/p2); a holy day the November issues don't reach."
+          }
+        }
+      ],
+      "rationale": "R6, R16: dated holy-day Mass with this year's date printed on the parish's events page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-11",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Patronal Feast of Our Lady of Guadalupe"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olguadalupe.org/",
+          "said": "Join us at Our Lady of Guadalupe Church on Friday, December 11, 2026, for our Patronal Feast Day celebration ... All are welcome! ... 7:00 p.m. — Solemn Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-27T21:49:22Z",
+            "current_because": "Homepage and events page both date it Friday, December 11, 2026; checked 2026-11-27.",
+            "bulletin": "df7f9d23",
+            "fits_because": "The newest bulletin p3 announces the Dec 11 patronal feast (Roses for Our Lady) without a time; the site gives the Mass time."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 3,
+          "said": "Friday, December 11th Roses for Our Lady ... on her Patronal Feast"
+        }
+      ],
+      "rationale": "R6, R16: open, dated feast-day Mass at the church; the St. Laurence flyer for the same 7 PM Mass was left out there (st-laurence-upper-darby s19) because it is this parish's feast.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 8,
+          "said": "Advent Retreat at the Daylesford Abbey, Saturday, December 19 ... Mass at 4 p.m."
+        }
+      ],
+      "rationale": "R22: a retreat at Daylesford Abbey, not one of the parish's churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df7f9d23",
+          "page": 8,
+          "said": "Mother Boniface Spirituality Center ... Advent Mini-Retreat, Waiting in Hope, Wednesday, December 9"
+        }
+      ],
+      "rationale": "R22: held at another address (Philadelphia).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olguadalupe.org/events",
+          "said": "First Friday Observation - 2026 December 04, 2026 ... Time: After the 8:00 a.m. Mass until Benediction at 8:00 p.m. (In September the Benediction will be at 4:00 p.m. ) In Oct it goes back to 8:00 p.m. and Confessions at 7:00 p.m. ... First Friday Mass, Adoration and Benediction will be held in the St. Juan Diego Chapel."
+        }
+      ],
+      "rationale": "R6, R12, leaning per precedent st-basil-the-great-kimberton s19 (website-only Adoration whose other times match the bulletin). Neither read issue's week holds a first Friday (Nov 8-14, Nov 15-21), so the bulletins can't show it; the site's Mass times match both issues exactly. Start 8:30 AM is POLICY's 30 minutes after the weekday Mass (R10); the chapel is in the church ('St. Juan Diego Chapel, OLG Church'). Hard because the page is a dated Dec 4 entry carrying an older September note, so the Sept 4 PM end and whether confession is skipped in September rest on that note alone; nothing prints First Friday in a bulletin read.",
+      "question": "Add the website's First Friday Adoration (after the 8 AM Mass to 8 PM Benediction; 4 PM in September) and 7 PM confession, St. Juan Diego Chapel?",
+      "options": [
+        {
+          "label": "Include as the website gives",
+          "entry": {
+            "church_slug": "our-lady-of-guadalupe-doylestown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 10,
+              "start_day": null,
+              "end_month": 8,
+              "end_day": null
+            },
+            "note": "St. Juan Diego Chapel; Benediction; after the 8:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "first-friday"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olguadalupe.org/events",
+          "said": "First Friday Observation - 2026 December 04, 2026 ... Time: After the 8:00 a.m. Mass until Benediction at 8:00 p.m. (In September the Benediction will be at 4:00 p.m. ) In Oct it goes back to 8:00 p.m. and Confessions at 7:00 p.m. ... First Friday Mass, Adoration and Benediction will be held in the St. Juan Diego Chapel."
+        }
+      ],
+      "rationale": "R6, R12, leaning per precedent st-basil-the-great-kimberton s19 (website-only Adoration whose other times match the bulletin). Neither read issue's week holds a first Friday (Nov 8-14, Nov 15-21), so the bulletins can't show it; the site's Mass times match both issues exactly. Start 8:30 AM is POLICY's 30 minutes after the weekday Mass (R10); the chapel is in the church ('St. Juan Diego Chapel, OLG Church'). Hard because the page is a dated Dec 4 entry carrying an older September note, so the Sept 4 PM end and whether confession is skipped in September rest on that note alone; nothing prints First Friday in a bulletin read.",
+      "question": "Add the website's First Friday Adoration (after the 8 AM Mass to 8 PM Benediction; 4 PM in September) and 7 PM confession, St. Juan Diego Chapel?",
+      "options": [
+        {
+          "label": "Include as the website gives",
+          "entry": {
+            "church_slug": "our-lady-of-guadalupe-doylestown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 9,
+              "end_day": null
+            },
+            "note": "St. Juan Diego Chapel; Benediction; after the 8:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "first-friday"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olguadalupe.org/events",
+          "said": "First Friday Observation - 2026 December 04, 2026 ... Time: After the 8:00 a.m. Mass until Benediction at 8:00 p.m. (In September the Benediction will be at 4:00 p.m. ) In Oct it goes back to 8:00 p.m. and Confessions at 7:00 p.m. ... First Friday Mass, Adoration and Benediction will be held in the St. Juan Diego Chapel."
+        }
+      ],
+      "rationale": "R6, R12, leaning per precedent st-basil-the-great-kimberton s19 (website-only Adoration whose other times match the bulletin). Neither read issue's week holds a first Friday (Nov 8-14, Nov 15-21), so the bulletins can't show it; the site's Mass times match both issues exactly. Start 8:30 AM is POLICY's 30 minutes after the weekday Mass (R10); the chapel is in the church ('St. Juan Diego Chapel, OLG Church'). Hard because the page is a dated Dec 4 entry carrying an older September note, so the Sept 4 PM end and whether confession is skipped in September rest on that note alone; nothing prints First Friday in a bulletin read.",
+      "question": "Add the website's First Friday Adoration (after the 8 AM Mass to 8 PM Benediction; 4 PM in September) and 7 PM confession, St. Juan Diego Chapel?",
+      "options": [
+        {
+          "label": "Include as the website gives",
+          "entry": {
+            "church_slug": "our-lady-of-guadalupe-doylestown",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 10,
+              "start_day": null,
+              "end_month": 8,
+              "end_day": null
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "first-friday"
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "d51ff029c9d0205f409da5457d16b173",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T21:52:20.367766+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "df7f9d231494e81f95dd7602a4ca3c1d2448e824b50d91d1e627b637eff0dfc1",
+        "fetched_at": "2026-11-15T16:43:27Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "d457b7f9c250063a76a4576f8b9eba5cd37b104b0e15d4546172b13b774bebf5",
+        "fetched_at": "2026-11-08T15:53:05Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.001826,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "our-lady-of-guadalupe-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saturday Vigil: 5 p.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saturday Vigil: 5 p.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "our-lady-of-guadalupe-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday: 9 a.m. (Livestreamed) and 11 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Sunday: 9 a.m. (Livestreamed) and 11 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "our-lady-of-guadalupe-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday: 9 a.m. (Livestreamed) and 11 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Sunday: 9 a.m. (Livestreamed) and 11 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "our-lady-of-guadalupe-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Tuesday through Saturday: 8 a.m. All weekday Masses are livestreamed on parish website."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Tuesday through Saturday: 8 a.m. All weekday Masses are livestreamed on parish website."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "our-lady-of-guadalupe-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Tuesday through Saturday: 8 a.m. All weekday Masses are livestreamed on parish website."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Tuesday through Saturday: 8 a.m. All weekday Masses are livestreamed on parish website."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "our-lady-of-guadalupe-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Tuesday through Saturday: 8 a.m. All weekday Masses are livestreamed on parish website."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Tuesday through Saturday: 8 a.m. All weekday Masses are livestreamed on parish website."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "our-lady-of-guadalupe-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Tuesday through Saturday: 8 a.m. All weekday Masses are livestreamed on parish website."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Tuesday through Saturday: 8 a.m. All weekday Masses are livestreamed on parish website."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "our-lady-of-guadalupe-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Tuesday through Saturday: 8 a.m. All weekday Masses are livestreamed on parish website."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Tuesday through Saturday: 8 a.m. All weekday Masses are livestreamed on parish website."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "our-lady-of-guadalupe-doylestown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": "17:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Thirty minutes before weekend Masses."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Thirty minutes before weekend Masses."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "our-lady-of-guadalupe-doylestown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "09:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Thirty minutes before weekend Masses."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Thirty minutes before weekend Masses."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "our-lady-of-guadalupe-doylestown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:30",
+          "end_time": "11:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Thirty minutes before weekend Masses."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Thirty minutes before weekend Masses."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "0d6fc52806bbd66bf3cbf8a87a28e0371c9c93ae91f06548f2d1443cab89330d",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s12"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-11-26 09:00 @our-lady-of-guadalupe-doylestown",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s13"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-11-26 08:00 cancelled @our-lady-of-guadalupe-doylestown",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d3",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s14"
+        ],
+        "opinion_said": "-",
+        "seed_said": "confession 2026-12-01 18:15-19:30 @our-lady-of-guadalupe-doylestown",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d4",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s15"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-12-08 12:00 @our-lady-of-guadalupe-doylestown",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d5",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s16"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-12-08 19:00 @our-lady-of-guadalupe-doylestown",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d6",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s17"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-12-11 19:00 @our-lady-of-guadalupe-doylestown",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      }
+    ]
+  }
+}
