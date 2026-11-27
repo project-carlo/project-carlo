@@ -1,0 +1,1989 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-luke-the-evangelist-glenside",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:00:37Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T21:07:14Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday and confession times agree in both issues (image-only bulletins, read by render) and on the website. Open: Friday 6:30 AM Mass vs the website's 'Communion Service'; Tuesday Adoration end (bulletin 7 PM vs website 6 PM) and its Sept-June season; the Thursday Eucharistic Prayer Meeting; the website's Dec 7/8 and Christmas Masses; a website-only school First Friday Mass; 2027 First Communion and First Reconciliation.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "53d80c795cc2f60c8f17d501f4b961baa56ab9a837f95c70d804009c68004591",
+      "fetched_at": "2026-11-15T16:00:37Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "21501869f2923bff2db612e1c9cfc0c8a39642182532c0cefc5c6bc6136f29ce",
+      "fetched_at": "2026-11-08T15:28:51Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "53d80c795cc2f60c8f17d501f4b961baa56ab9a837f95c70d804009c68004591",
+      "bulletins": [
+        "53d80c795cc2f60c8f17d501f4b961baa56ab9a837f95c70d804009c68004591",
+        "21501869f2923bff2db612e1c9cfc0c8a39642182532c0cefc5c6bc6136f29ce"
+      ],
+      "cached": false,
+      "cost_usd": 0.002412,
+      "at": "2026-11-27T21:15:02.249745+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-the-evangelist-glenside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday Vigil: 5:00 PM (Livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday Vigil: 5:00 PM (Livestreamed)"
+        },
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/mass-times",
+          "said": "Saturday : 5:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "53d80c795cc2f60c8f17d501f4b961baa56ab9a837f95c70d804009c68004591",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil: 5:00 PM (Livestreamed)”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-the-evangelist-glenside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 1,
+          "said": "Sunday: 7:30, 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 1,
+          "said": "Sunday: 7:30, 10:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/mass-times",
+          "said": "Sunday : 7:30 AM ... 10:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "53d80c795cc2f60c8f17d501f4b961baa56ab9a837f95c70d804009c68004591",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30, 10:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-the-evangelist-glenside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 1,
+          "said": "Sunday: 7:30, 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 1,
+          "said": "Sunday: 7:30, 10:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/mass-times",
+          "said": "Sunday : 7:30 AM ... 10:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "53d80c795cc2f60c8f17d501f4b961baa56ab9a837f95c70d804009c68004591",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30, 10:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-the-evangelist-glenside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday: 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday: 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 2,
+          "said": "Monday, November 16 ... 6:30 am Helen Donnelly; Wednesday, November 18 ... 6:30 am Holy Souls"
+        },
+        {
+          "source": "c1",
+          "bulletin": "53d80c795cc2f60c8f17d501f4b961baa56ab9a837f95c70d804009c68004591",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday, Wednesday, Friday: 6:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the p2 intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-the-evangelist-glenside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday: 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday: 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 2,
+          "said": "Monday, November 16 ... 6:30 am Helen Donnelly; Wednesday, November 18 ... 6:30 am Holy Souls"
+        },
+        {
+          "source": "c1",
+          "bulletin": "53d80c795cc2f60c8f17d501f4b961baa56ab9a837f95c70d804009c68004591",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday, Wednesday, Friday: 6:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the p2 intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-the-evangelist-glenside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 1,
+          "said": "Tuesday, Thursday, Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 1,
+          "said": "Tuesday, Thursday, Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 2,
+          "said": "Tuesday, November 17 ... 8:30 am Jim Graham; Thursday, November 19 ... 8:30 am Joe Duffy; Saturday, November 21 ... 8:30 am Robert Loesch"
+        },
+        {
+          "source": "c1",
+          "bulletin": "53d80c795cc2f60c8f17d501f4b961baa56ab9a837f95c70d804009c68004591",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday, Thursday, Saturday: 8:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the p2 intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-the-evangelist-glenside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 1,
+          "said": "Tuesday, Thursday, Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 1,
+          "said": "Tuesday, Thursday, Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 2,
+          "said": "Tuesday, November 17 ... 8:30 am Jim Graham; Thursday, November 19 ... 8:30 am Joe Duffy; Saturday, November 21 ... 8:30 am Robert Loesch"
+        },
+        {
+          "source": "c1",
+          "bulletin": "53d80c795cc2f60c8f17d501f4b961baa56ab9a837f95c70d804009c68004591",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday, Thursday, Saturday: 8:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the p2 intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-the-evangelist-glenside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 1,
+          "said": "Tuesday, Thursday, Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 1,
+          "said": "Tuesday, Thursday, Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 2,
+          "said": "Tuesday, November 17 ... 8:30 am Jim Graham; Thursday, November 19 ... 8:30 am Joe Duffy; Saturday, November 21 ... 8:30 am Robert Loesch"
+        },
+        {
+          "source": "c1",
+          "bulletin": "53d80c795cc2f60c8f17d501f4b961baa56ab9a837f95c70d804009c68004591",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday, Thursday, Saturday: 8:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the p2 intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday: 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday: 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 2,
+          "said": "Friday, November 20 - Weekday ... 6:30 am All Souls in Purgatory"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 2,
+          "said": "Friday, November 13 - Saint Frances Xavier Cabrini ... 6:30 am John Dominick"
+        },
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/mass-times",
+          "said": "Friday : 6:30 AM English English EN (Communion Service)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "53d80c795cc2f60c8f17d501f4b961baa56ab9a837f95c70d804009c68004591",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Monday, Wednesday, Friday: 6:30 AM”"
+        }
+      ],
+      "rationale": "R28/R6: the website's Daily Mass Schedule marks Friday 6:30 AM '(Communion Service)', which POLICY never records as a Mass. Leaning Mass: both issues' Mass schedule box lists Friday with Monday and Wednesday at 6:30 AM, and both weeks' intentions give a named Friday 6:30 intention, as on Mass days; a Communion Service normally carries no intention. The site's note may be stale or occasional.",
+      "question": "Friday 6:30 AM: a Mass (bulletin) or a Communion Service (website)?",
+      "options": [
+        {
+          "label": "Fridays 6:30 AM Mass",
+          "entry": {
+            "church_slug": "st-luke-the-evangelist-glenside",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (Communion Service)",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-the-evangelist-glenside",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Wednesday: 7:30 - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Wednesday: 7:30 - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 4,
+          "said": "Confessions Wednesdays 7:30 to 8pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/mass-times",
+          "said": "Confession Times Wednesday : 7:30 PM to 8:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "53d80c795cc2f60c8f17d501f4b961baa56ab9a837f95c70d804009c68004591",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Wednesday: 7:30 - 8:00 PM”"
+        }
+      ],
+      "rationale": "R1: printed on p1 and p4 of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-the-evangelist-glenside",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 1,
+          "said": "Saturday: 4:00 - 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 1,
+          "said": "Saturday: 4:00 - 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 4,
+          "said": "Saturdays 4:00 to 4:30pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/mass-times",
+          "said": "Saturday : 4:00 PM to 4:30 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "53d80c795cc2f60c8f17d501f4b961baa56ab9a837f95c70d804009c68004591",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday: 4:00 - 4:30 pm”"
+        }
+      ],
+      "rationale": "R1: printed on p1 and p4 of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament Tuesdays after the 8:30am Mass until 7:00pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament Tuesdays after the 8:30am Mass until 7:00pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 6,
+          "said": "Sessions held on Tuesday evenings at 7 PM after Exposition of the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 6,
+          "said": "Sessions held on Tuesday evenings at 7 PM after Exposition of the Most Blessed Sacrament."
+        },
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/1",
+          "said": "Adoration Times Tuesday : 9:00 AM to 6:00 PM Adoration in the Church (September 2026 - June 2027)"
+        }
+      ],
+      "rationale": "R6/C8: start 9:00 AM is POLICY's time 30 minutes after the 8:30 weekday Mass and matches the website. The end conflicts: both issues give 7:00 PM twice (p2 and the p6 Barron series 'at 7 PM after Exposition') against the website's 6:00 PM; leaning bulletin, as st-john-chrysostom-wallingford s10 kept the bulletin's end over the website. The website's 'September 2026 - June 2027' is a season a November bulletin can't show (R6 missing mention), so leaning to keep it, as st-genevieve-flourtown s15 and st-alphonsus-maple-glen s15 did.",
+      "question": "Tuesday Adoration in the church: which hours and season?",
+      "options": [
+        {
+          "label": "Tue 9:00 AM-7:00 PM, Sept-June",
+          "entry": {
+            "church_slug": "st-luke-the-evangelist-glenside",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": "After the 8:30 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Tue 9:00 AM-7:00 PM, year-round",
+          "entry": {
+            "church_slug": "st-luke-the-evangelist-glenside",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:30 AM Mass"
+          }
+        },
+        {
+          "label": "Tue 9:00 AM-6:00 PM, Sept-June (website)",
+          "entry": {
+            "church_slug": "st-luke-the-evangelist-glenside",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament ... Weekly Eucharistic Prayer Meeting Thursdays, 7:00pm to 8:00pm in church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament ... Weekly Eucharistic Prayer Meeting Thursdays, 7:00pm to 8:00pm in church."
+        },
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/events/eucharistic-prayer-meeting-1/20261203",
+          "said": "Eucharistic Prayer Meeting Thursday , December 3 , 2026 , 7:00 PM - 8:00 PM Repeats every Thursday Location: Sanctuary"
+        }
+      ],
+      "rationale": "R30: it is printed under the heading 'Exposition of the Blessed Sacrament', which could mean exposition, but neither the bulletin line nor the website calls the meeting Adoration, Exposition or a Holy Hour (POLICY), and the website's Adoration Times page lists only Tuesday. Leaning leave out, as st-thomas-more-south-coventry s18 left out a service not itself called Adoration; a wrong time is worse than a missing one.",
+      "question": "Count the weekly Thursday 7-8 PM Eucharistic Prayer Meeting in church as Adoration?",
+      "options": [
+        {
+          "label": "Thursdays 7:00-8:00 PM",
+          "entry": {
+            "church_slug": "st-luke-the-evangelist-glenside",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Prayer Meeting"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-the-evangelist-glenside",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 1,
+          "said": "Holy Days: varies; Holidays: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 2,
+          "said": "MARK YOUR CALENDAR ... November 26 Thanksgiving Day"
+        },
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/",
+          "said": "Thanksgiving Mass Broadcasted 11/26/26 8:59am - 11/26/26 10:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "53d80c795cc2f60c8f17d501f4b961baa56ab9a837f95c70d804009c68004591",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Holidays: 9:00 AM”"
+        }
+      ],
+      "rationale": "R1, R16: the schedule box gives Holidays 9:00 AM, and the same issue's calendar pins Thanksgiving Day to Nov 26; the website's livestream archive shows the Thanksgiving Mass broadcast from 8:59 AM on 11/26/26. The weekly Thursday 8:30 AM is left alone (R17: no cancellation printed). As nativity-bvm-media s22.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 1,
+          "said": "Holy Days: varies"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 2,
+          "said": "December 8 Immaculate Conception BVM"
+        },
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/mass-times",
+          "said": "Upcoming Holy Days Immaculate Conception December 7 : 6:30 PM ... December 8 : 6:30 AM ... 10:30 AM"
+        }
+      ],
+      "rationale": "R6: the bulletin's box says only 'Holy Days: varies', and its calendar names Dec 8. The website's Upcoming Holy Days list starts after All Saints, so it was updated this season, and its weekly Mass and confession times match both issues exactly, with this week's livestreams (Nov 26, Nov 28). Leaning include, as st-matthias-bala-cynwyd s17 took Dec 8 from a website list. Hard because no bulletin read prints the times and the list prints no year.",
+      "question": "Add the website's Immaculate Conception Masses (Mon Dec 7 6:30 PM vigil; Tue Dec 8 6:30 AM and 10:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-luke-the-evangelist-glenside",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception vigil"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 2,
+          "said": "December 8 Immaculate Conception BVM"
+        },
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/mass-times",
+          "said": "Upcoming Holy Days Immaculate Conception December 7 : 6:30 PM ... December 8 : 6:30 AM ... 10:30 AM"
+        }
+      ],
+      "rationale": "R6: the bulletin's box says only 'Holy Days: varies', and its calendar names Dec 8. The website's Upcoming Holy Days list starts after All Saints, so it was updated this season, and its weekly Mass and confession times match both issues exactly, with this week's livestreams (Nov 26, Nov 28). Leaning include, as st-matthias-bala-cynwyd s17 took Dec 8 from a website list. Hard because no bulletin read prints the times and the list prints no year.",
+      "question": "Add the website's Immaculate Conception Masses (Mon Dec 7 6:30 PM vigil; Tue Dec 8 6:30 AM and 10:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-luke-the-evangelist-glenside",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 2,
+          "said": "December 8 Immaculate Conception BVM"
+        },
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/mass-times",
+          "said": "Upcoming Holy Days Immaculate Conception December 7 : 6:30 PM ... December 8 : 6:30 AM ... 10:30 AM"
+        }
+      ],
+      "rationale": "R6: the bulletin's box says only 'Holy Days: varies', and its calendar names Dec 8. The website's Upcoming Holy Days list starts after All Saints, so it was updated this season, and its weekly Mass and confession times match both issues exactly, with this week's livestreams (Nov 26, Nov 28). Leaning include, as st-matthias-bala-cynwyd s17 took Dec 8 from a website list. Hard because no bulletin read prints the times and the list prints no year.",
+      "question": "Add the website's Immaculate Conception Masses (Mon Dec 7 6:30 PM vigil; Tue Dec 8 6:30 AM and 10:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-luke-the-evangelist-glenside",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 1,
+          "said": "Holy Days: varies"
+        },
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/mass-times",
+          "said": "Nativity of Our Lord Jesus Christ December 24 : 4:00 PM ... 7:00 PM ... 10:00 PM December 25 : 7:30 AM ... 11:30 AM"
+        }
+      ],
+      "rationale": "R6: same Upcoming Holy Days list as the Dec 8 question: updated after All Saints, weekly times matching both issues. Leaning include, as st-margaret-narberth s28 took a maintained website's Christmas list; unlike st-joseph-coatesville s45, nothing read contradicts it. Hard because no bulletin read prints Christmas times. The weekly Friday 6:30 AM stays on Dec 25 (R17).",
+      "question": "Add the website's Christmas Masses (Dec 24 4:00, 7:00, 10:00 PM; Dec 25 7:30, 11:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-luke-the-evangelist-glenside",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Eve"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 1,
+          "said": "Holy Days: varies"
+        },
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/mass-times",
+          "said": "Nativity of Our Lord Jesus Christ December 24 : 4:00 PM ... 7:00 PM ... 10:00 PM December 25 : 7:30 AM ... 11:30 AM"
+        }
+      ],
+      "rationale": "R6: same Upcoming Holy Days list as the Dec 8 question: updated after All Saints, weekly times matching both issues. Leaning include, as st-margaret-narberth s28 took a maintained website's Christmas list; unlike st-joseph-coatesville s45, nothing read contradicts it. Hard because no bulletin read prints Christmas times. The weekly Friday 6:30 AM stays on Dec 25 (R17).",
+      "question": "Add the website's Christmas Masses (Dec 24 4:00, 7:00, 10:00 PM; Dec 25 7:30, 11:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-luke-the-evangelist-glenside",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Eve"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 1,
+          "said": "Holy Days: varies"
+        },
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/mass-times",
+          "said": "Nativity of Our Lord Jesus Christ December 24 : 4:00 PM ... 7:00 PM ... 10:00 PM December 25 : 7:30 AM ... 11:30 AM"
+        }
+      ],
+      "rationale": "R6: same Upcoming Holy Days list as the Dec 8 question: updated after All Saints, weekly times matching both issues. Leaning include, as st-margaret-narberth s28 took a maintained website's Christmas list; unlike st-joseph-coatesville s45, nothing read contradicts it. Hard because no bulletin read prints Christmas times. The weekly Friday 6:30 AM stays on Dec 25 (R17).",
+      "question": "Add the website's Christmas Masses (Dec 24 4:00, 7:00, 10:00 PM; Dec 25 7:30, 11:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-luke-the-evangelist-glenside",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "22:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Eve"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/mass-times",
+          "said": "Nativity of Our Lord Jesus Christ December 24 : 4:00 PM ... 7:00 PM ... 10:00 PM December 25 : 7:30 AM ... 11:30 AM"
+        }
+      ],
+      "rationale": "R6: same Upcoming Holy Days list as the Dec 8 question: updated after All Saints, weekly times matching both issues. Leaning include, as st-margaret-narberth s28 took a maintained website's Christmas list; unlike st-joseph-coatesville s45, nothing read contradicts it. Hard because no bulletin read prints Christmas times. The weekly Friday 6:30 AM stays on Dec 25 (R17).",
+      "question": "Add the website's Christmas Masses (Dec 24 4:00, 7:00, 10:00 PM; Dec 25 7:30, 11:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-luke-the-evangelist-glenside",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Day"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/mass-times",
+          "said": "Nativity of Our Lord Jesus Christ December 24 : 4:00 PM ... 7:00 PM ... 10:00 PM December 25 : 7:30 AM ... 11:30 AM"
+        }
+      ],
+      "rationale": "R6: same Upcoming Holy Days list as the Dec 8 question: updated after All Saints, weekly times matching both issues. Leaning include, as st-margaret-narberth s28 took a maintained website's Christmas list; unlike st-joseph-coatesville s45, nothing read contradicts it. Hard because no bulletin read prints Christmas times. The weekly Friday 6:30 AM stays on Dec 25 (R17).",
+      "question": "Add the website's Christmas Masses (Dec 24 4:00, 7:00, 10:00 PM; Dec 25 7:30, 11:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-luke-the-evangelist-glenside",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Day"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlukeglenside.org/events/st-luke-school-first-friday-mass/20261204",
+          "said": "St. Luke School First Friday Mass Friday , December 4 , 2026 , 10:30 AM Repeats every first Friday of the month"
+        }
+      ],
+      "rationale": "R30/R6: only the website calendar lists it; neither bulletin nor the Mass Times page mentions it, and nothing invites the parish. POLICY leaves out a school Mass limited to students; leaning leave out because nothing says it is open, unlike st-genevieve-flourtown s16 ('all are welcome'). Hard because a school Mass in the parish church is often open.",
+      "question": "Add the St. Luke School First Friday Mass, 10:30 AM, from the website calendar?",
+      "options": [
+        {
+          "label": "First Fridays 10:30 AM",
+          "entry": {
+            "church_slug": "st-luke-the-evangelist-glenside",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Luke School First Friday Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 4,
+          "said": "SACRAMENTS 2027 ... First Communion Saturday, April 24th at 5pm Sunday, April 25th at 10:30am Saturday, May 1st at 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 4,
+          "said": "SACRAMENTS 2027 ... First Communion Saturday, April 24th at 5pm Sunday, April 25th at 10:30am Saturday, May 1st at 11:00am"
+        }
+      ],
+      "rationale": "R30: a dated Mass outside the weekly schedule, but a First Communion Mass for registered children is mainly for their families, and nothing invites the parish; leaning leave out until details print, as sacred-heart-havertown s19 left out an announced 2027 Mass. The Apr 24 5 PM and Apr 25 10:30 AM fall at weekly Masses (POLICY rule 7).",
+      "question": "Add the Saturday May 1, 2027, 11:00 AM First Communion Mass?",
+      "options": [
+        {
+          "label": "May 1, 2027 11:00 AM",
+          "entry": {
+            "church_slug": "st-luke-the-evangelist-glenside",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2027-05-01",
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "First Communion"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 4,
+          "said": "SACRAMENTS 2027 First Reconciliation Wednesday, February 24th at 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 4,
+          "said": "SACRAMENTS 2027 First Reconciliation Wednesday, February 24th at 6:30pm"
+        }
+      ],
+      "rationale": "R30: a sacramental celebration for the parish's second-grade candidates, not a confession time open to all; leaning leave out, as st-agnes-west-chester s24 left out confessions limited to a registered group.",
+      "question": "Add the First Reconciliation, Wednesday Feb 24, 2027, 6:30 PM, as a confession?",
+      "options": [
+        {
+          "label": "Feb 24, 2027 6:30 PM",
+          "entry": {
+            "church_slug": "st-luke-the-evangelist-glenside",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2027-02-24",
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "First Reconciliation"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 4,
+          "said": "Confirmation Saturday, Mary 6th at 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 4,
+          "said": "Confirmation Saturday, Mary 6th at 11:00am"
+        }
+      ],
+      "rationale": "POLICY, Dates: the date isn't pinned down: 'Saturday, Mary 6th' (May 6, 2027 is a Thursday), and a Confirmation Mass is for the candidates.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 5,
+          "said": "Queen of Peace Parish 820 North Hills Avenue, Ardsley ... November 20 - 22, 2026 Pilgrim Image of Our Lady of Fatima"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 5,
+          "said": "Queen of Peace Parish 820 North Hills Avenue, Ardsley ... November 20 - 22, 2026 Pilgrim Image of Our Lady of Fatima"
+        }
+      ],
+      "rationale": "R22: the Pilgrim Image Masses, exposition and confession are at Queen of Peace, Ardsley, another parish's listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 2,
+          "said": "December 6 CYO Mass"
+        }
+      ],
+      "rationale": "R24/R26: no time given; it is likely one of the regular Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53d80c79",
+          "page": 4,
+          "said": "Anointing of the Sick First Saturday of the month 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21501869",
+          "page": 4,
+          "said": "Anointing of the Sick First Saturday of the month 4:30pm"
+        }
+      ],
+      "rationale": "R24: Anointing of the Sick is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "121f5c07ffd3d4528a2f916a5421b091",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T21:15:02.249745+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "53d80c795cc2f60c8f17d501f4b961baa56ab9a837f95c70d804009c68004591",
+        "fetched_at": "2026-11-15T16:00:37Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "21501869f2923bff2db612e1c9cfc0c8a39642182532c0cefc5c6bc6136f29ce",
+        "fetched_at": "2026-11-08T15:28:51Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002412,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-luke-the-evangelist-glenside",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil: 5:00 PM (Livestreamed)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil: 5:00 PM (Livestreamed)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-luke-the-evangelist-glenside",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30, 10:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30, 10:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-luke-the-evangelist-glenside",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30, 10:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30, 10:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-luke-the-evangelist-glenside",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday, Wednesday, Friday: 6:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday, Wednesday, Friday: 6:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-luke-the-evangelist-glenside",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday, Wednesday, Friday: 6:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday, Wednesday, Friday: 6:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-luke-the-evangelist-glenside",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday, Wednesday, Friday: 6:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday, Wednesday, Friday: 6:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-luke-the-evangelist-glenside",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday, Thursday, Saturday: 8:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday, Thursday, Saturday: 8:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-luke-the-evangelist-glenside",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday, Thursday, Saturday: 8:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday, Thursday, Saturday: 8:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-luke-the-evangelist-glenside",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday, Thursday, Saturday: 8:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday, Thursday, Saturday: 8:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-luke-the-evangelist-glenside",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "19:30",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Wednesday: 7:30 - 8:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Wednesday: 7:30 - 8:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-luke-the-evangelist-glenside",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": "16:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday: 4:00 - 4:30 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday: 4:00 - 4:30 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-luke-the-evangelist-glenside",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "After the 8:30 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Exposition of the Blessed Sacrament\nTuesdays after the 8:30am Mass until 7:00pm."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Exposition of the Blessed Sacrament\nTuesdays after the 8:30am Mass until 7:00pm."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-luke-the-evangelist-glenside",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Thanksgiving Day",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Holidays: 9:00 AM"
+          },
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "November 26 Thanksgiving Day"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Holidays: 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "November 26 Thanksgiving Day"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-luke-the-evangelist-glenside",
+          "event_type": "confession",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2027-02-24",
+          "start_time": "18:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "First Reconciliation",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "First Reconciliation\nWednesday, February 24th at 6:30pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "First Reconciliation\nWednesday, February 24th at 6:30pm"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "2a6b4b75c7997b64733649276c86790bd45e71775151be503045f34a42806183",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o12"
+        ],
+        "slots": [
+          "s12"
+        ],
+        "opinion_said": "adoration Tue 09:00-19:00 @st-luke-the-evangelist-glenside",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o14"
+        ],
+        "slots": [
+          "s25"
+        ],
+        "opinion_said": "confession 2027-02-24 18:30 @st-luke-the-evangelist-glenside",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      }
+    ]
+  }
+}
