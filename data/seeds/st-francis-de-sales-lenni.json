@@ -1,0 +1,563 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-francis-de-sales-lenni",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:45:17Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T00:46:00Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Sat 5 PM, Sun 8 and 10:30 AM, Mon-Thu 8:30 AM Masses (no Friday Mass), Sat 4:00-4:45 PM Confession and Thu 9-10 AM Adoration agree in both bulletins (Nov 8, Nov 15) and the website. Open: whether the monthly 2nd-Friday 7:30 PM 'Praise on the Hill' evening counts as Adoration.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "90204cc47c76ddf8270930ab5a771f82a0d8af5c13623b8799487d2d93660094",
+      "fetched_at": "2026-11-15T16:45:17Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "aa98267f086f06e69e9b606b00a08d22c2ad8f2d1164e85beff179e966af6c57",
+      "fetched_at": "2026-11-08T15:54:07Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lenni",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90204cc4",
+          "page": 1,
+          "said": "Saturday, November 21 - 5:00pm: Steven & Sylvia Sunick"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa98267f",
+          "page": 1,
+          "said": "Saturday, November 7 - 5:00pm: Theresa & Alex Strollo"
+        },
+        {
+          "source": "website",
+          "url": "https://sfdslenni.org/",
+          "said": "Saturday : 5:00 PM"
+        }
+      ],
+      "rationale": "R35: the Saturday 5:00 PM Mass is in the intentions of both weeks read (Nov 14 and 21, Nov 7 and 14); the website's Mass Times give Saturday 5:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lenni",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90204cc4",
+          "page": 1,
+          "said": "Sunday, November 15 - 8:00am: Parishioners of St. Francis de Sales ... 10:30am: Frank Savistano"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa98267f",
+          "page": 1,
+          "said": "Sunday, November 8 - 8:00am ... 10:30am: Dorothy Doohan"
+        },
+        {
+          "source": "website",
+          "url": "https://sfdslenni.org/",
+          "said": "Sunday : 8:00 AM ... 10:30 AM"
+        }
+      ],
+      "rationale": "R35: both weeks' intentions list Sunday 8:00 and 10:30 AM; the website's Sunday Mass Schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lenni",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90204cc4",
+          "page": 1,
+          "said": "Sunday, November 15 - 8:00am: Parishioners of St. Francis de Sales ... 10:30am: Frank Savistano"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa98267f",
+          "page": 1,
+          "said": "Sunday, November 8 - 8:00am ... 10:30am: Dorothy Doohan"
+        },
+        {
+          "source": "website",
+          "url": "https://sfdslenni.org/",
+          "said": "Sunday : 8:00 AM ... 10:30 AM"
+        }
+      ],
+      "rationale": "R35: both weeks' intentions list Sunday 8:00 and 10:30 AM; the website's Sunday Mass Schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lenni",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90204cc4",
+          "page": 1,
+          "said": "Monday, November 16 - 8:30am ... Tuesday, November 17 - 8:30am ... Wednesday, November 18 - 8:30am ... Thursday, November 19 - 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa98267f",
+          "page": 1,
+          "said": "Monday, November 9 - 8:30am ... Thursday, November 12 - 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://sfdslenni.org/",
+          "said": "Daily Mass Schedule Mon Thu 8:30 AM"
+        }
+      ],
+      "rationale": "R35: Monday-Thursday 8:30 AM in both weeks' intentions; the website gives 'Mon Thu 8:30 AM' and 'No Daily Mass on Friday or Saturday'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lenni",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90204cc4",
+          "page": 1,
+          "said": "Monday, November 16 - 8:30am ... Tuesday, November 17 - 8:30am ... Wednesday, November 18 - 8:30am ... Thursday, November 19 - 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa98267f",
+          "page": 1,
+          "said": "Monday, November 9 - 8:30am ... Thursday, November 12 - 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://sfdslenni.org/",
+          "said": "Daily Mass Schedule Mon Thu 8:30 AM"
+        }
+      ],
+      "rationale": "R35: Monday-Thursday 8:30 AM in both weeks' intentions; the website gives 'Mon Thu 8:30 AM' and 'No Daily Mass on Friday or Saturday'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lenni",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90204cc4",
+          "page": 1,
+          "said": "Monday, November 16 - 8:30am ... Tuesday, November 17 - 8:30am ... Wednesday, November 18 - 8:30am ... Thursday, November 19 - 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa98267f",
+          "page": 1,
+          "said": "Monday, November 9 - 8:30am ... Thursday, November 12 - 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://sfdslenni.org/",
+          "said": "Daily Mass Schedule Mon Thu 8:30 AM"
+        }
+      ],
+      "rationale": "R35: Monday-Thursday 8:30 AM in both weeks' intentions; the website gives 'Mon Thu 8:30 AM' and 'No Daily Mass on Friday or Saturday'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lenni",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90204cc4",
+          "page": 1,
+          "said": "Monday, November 16 - 8:30am ... Tuesday, November 17 - 8:30am ... Wednesday, November 18 - 8:30am ... Thursday, November 19 - 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa98267f",
+          "page": 1,
+          "said": "Monday, November 9 - 8:30am ... Thursday, November 12 - 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://sfdslenni.org/",
+          "said": "Daily Mass Schedule Mon Thu 8:30 AM"
+        }
+      ],
+      "rationale": "R35: Monday-Thursday 8:30 AM in both weeks' intentions; the website gives 'Mon Thu 8:30 AM' and 'No Daily Mass on Friday or Saturday'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90204cc4",
+          "page": 1,
+          "said": "Friday, November 20 - No Mass/No Communion Service"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa98267f",
+          "page": 1,
+          "said": "Friday, November 13 - No Mass/No Communion Service"
+        },
+        {
+          "source": "website",
+          "url": "https://sfdslenni.org/",
+          "said": "No Daily Mass on Friday or Saturday"
+        }
+      ],
+      "rationale": "R24: there is no Friday Mass at all (both weeks and the website), so the Friday lines are not cancellations of a weekly slot (R17); nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lenni",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90204cc4",
+          "page": 1,
+          "said": "Confessions each Saturday afternoon 4:00 - 4:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa98267f",
+          "page": 1,
+          "said": "Confessions each Saturday afternoon 4:00 - 4:45pm"
+        },
+        {
+          "source": "website",
+          "url": "https://sfdslenni.org/",
+          "said": "Confession Times Saturday : 4:00 PM to 4:45 PM"
+        }
+      ],
+      "rationale": "R1: the standing confession line on p1 of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lenni",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90204cc4",
+          "page": 1,
+          "said": "Thursday, November 19 - 8:30am: Dennis H. Cannon III - ADORATION 9-10AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90204cc4",
+          "page": 3,
+          "said": "Eucharistic Adoration hours are every Thursday after the 8:30am Mass until 10:00am concluding with the Divine Mercy Chaplet and Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa98267f",
+          "page": 1,
+          "said": "Thursday, November 12 - 8:30am ... ADORATION 9-10AM"
+        }
+      ],
+      "rationale": "R1: p3 says every Thursday after the 8:30 Mass until 10:00 AM with Benediction; p1 gives the clock time 9-10AM (POLICY, Times: a printed clock time wins, and matches the 30-minute rule). Same in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90204cc4",
+          "page": 4,
+          "said": "ST. FRANCIS DE SALES CHURCH ASTON, PA PRAISE ON THE HILL Evening of Adoration, Praise and Worship, Confession and Fellowship ... 2ND FRIDAY OF EACH MONTH 7:30 PM 12/11 35 New Road Aston"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa98267f",
+          "page": 4,
+          "said": "PRAISE ON THE HILL ... 2ND FRIDAY OF EACH MONTH 7:30 PM 11/13, 12/11"
+        }
+      ],
+      "rationale": "R30: a named monthly evening at the parish church (POLICY Weekly rule 2: 2nd Friday is weekly with weeks_of_month). Adoration is named first and the flyer shows a monstrance, so exposition plausibly starts at 7:30; no end recorded, so the evening's length isn't copied onto it (POLICY, Final source checks). Leaning per precedent st-colman-ardmore s14 and our-lady-of-fatima-secane s15. Hard because it is a larger program with praise and fellowship. 35 New Road, Aston is the church's own grounds (church list: 33 New Rd, Lenni; the flyer is headed St. Francis de Sales Church).",
+      "question": "Add Praise on the Hill (2nd Friday of each month, 7:30 PM, 'Evening of Adoration, Praise and Worship, Confession and Fellowship') as Adoration starting 7:30 PM?",
+      "options": [
+        {
+          "label": "Second Fridays 7:30 PM, no end",
+          "entry": {
+            "church_slug": "st-francis-de-sales-lenni",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "second"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Praise on the Hill"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lenni",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Praise on the Hill"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90204cc4",
+          "page": 4,
+          "said": "Evening of Adoration, Praise and Worship, Confession and Fellowship ... 2ND FRIDAY OF EACH MONTH 7:30 PM"
+        }
+      ],
+      "rationale": "POLICY, Final source checks: confession is one part of the evening program with no start time of its own; left out as in precedent our-lady-of-fatima-secane s16.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lenni",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-13",
+        "start_time": "05:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "6abc TV Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90204cc4",
+          "page": 4,
+          "said": "Be sure to tune into 6abc (WPVI-TV) on Sunday, December 13th & again on Sunday, December 20th ... for the Masses at 5:30am ... taped at the Channel 6 studio"
+        }
+      ],
+      "rationale": "R22: a televised Mass taped at the TV studio, not at the parish church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
