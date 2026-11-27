@@ -1,0 +1,1342 @@
+{
+  "schema_version": 1,
+  "parish_slug": "queen-of-peace-ardsley",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T20:44:47Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Queen of Peace, Ardsley. Both November issues and the website agree: Sat 4:30 PM, Sun 7:30/9:30/11:00 AM, Mon-Sat 8:00 AM; confession Sat 3:30 PM and Sun 8:30 AM; Tuesday Adoration after the 8 AM Mass (8:30, no end). Dated: Nov 17 Sodality Benediction and the Nov 20 all-night Fatima vigil exposition. Open: whether the two Fatima-program Masses (Nov 20 evening, Nov 21 midnight), which have no start time of their own, are added. The pilgrimage's other Masses and the Thanksgiving 8 AM Mass are the regular slots (POLICY Weekly rule 7).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+      "fetched_at": "2026-11-15T16:44:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "72c546a6bd7833eae9131f2a2baa53a05ca90573167b7e7c19c3a0dcb34b5f35",
+      "fetched_at": "2026-11-08T15:53:15Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+      "bulletins": [
+        "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+        "72c546a6bd7833eae9131f2a2baa53a05ca90573167b7e7c19c3a0dcb34b5f35"
+      ],
+      "cached": false,
+      "cost_usd": 0.003468,
+      "at": "2026-11-27T20:51:21.344865+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-ardsley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 1,
+          "said": "Masses Saturday at 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72c546a6",
+          "page": 1,
+          "said": "Masses Saturday at 4:30 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday at 4:30 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions (p2); the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-ardsley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:30 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72c546a6",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:30 am, 11:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday 7:30 am, 9:30 am, 11:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions (p2); the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-ardsley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:30 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72c546a6",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:30 am, 11:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday 7:30 am, 9:30 am, 11:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions (p2); the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-ardsley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:30 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72c546a6",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:30 am, 11:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday 7:30 am, 9:30 am, 11:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions (p2); the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-ardsley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 1,
+          "said": "Daily Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72c546a6",
+          "page": 1,
+          "said": "Daily Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Monday – Saturday 8:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; both weeks' intentions (p2) list an 8:00 am Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-ardsley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 1,
+          "said": "Daily Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72c546a6",
+          "page": 1,
+          "said": "Daily Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Monday – Saturday 8:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; both weeks' intentions (p2) list an 8:00 am Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-ardsley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 1,
+          "said": "Daily Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72c546a6",
+          "page": 1,
+          "said": "Daily Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Monday – Saturday 8:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; both weeks' intentions (p2) list an 8:00 am Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-ardsley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 1,
+          "said": "Daily Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72c546a6",
+          "page": 1,
+          "said": "Daily Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Monday – Saturday 8:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; both weeks' intentions (p2) list an 8:00 am Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-ardsley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 1,
+          "said": "Daily Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72c546a6",
+          "page": 1,
+          "said": "Daily Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Monday – Saturday 8:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; both weeks' intentions (p2) list an 8:00 am Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-ardsley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 1,
+          "said": "Daily Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72c546a6",
+          "page": 1,
+          "said": "Daily Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Monday – Saturday 8:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; both weeks' intentions (p2) list an 8:00 am Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-ardsley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday: 3:30 pm, Sunday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72c546a6",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday: 3:30 pm, Sunday: 8:30 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday: 3:30 pm, Sunday: 8:30 am”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; no end printed (POLICY, Times), so none recorded. The website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-ardsley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday: 3:30 pm, Sunday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72c546a6",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday: 3:30 pm, Sunday: 8:30 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday: 3:30 pm, Sunday: 8:30 am”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; no end printed (POLICY, Times), so none recorded. The website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-ardsley",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 3,
+          "said": "Eucharistic Adoration every Tuesday, after the 8:00am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72c546a6",
+          "page": 3,
+          "said": "Eucharistic Adoration every Tuesday, after the 8:00am Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Eucharistic Adoration every Tuesday, after the 8:00am Mass.”"
+        }
+      ],
+      "rationale": "R10, POLICY Times: after a weekday Mass is 30 minutes after it starts; no end printed in either issue or on the website. 'Adorers are needed to ensure the Blessed Sacrament is never left unattended' shows exposition.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-ardsley",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction & Evening Prayer (Sodality), in church"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 5,
+          "said": "Sodality Meets on Tuesday at 7:00 pm in Church. All are welcome to join us! ... November 17 – Benediction & Evening Prayer"
+        },
+        {
+          "source": "agent",
+          "bulletin": "72c546a6",
+          "page": 5,
+          "said": "November 17 – Benediction & Evening Prayer"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+          "page": 5,
+          "said": "gpt-6-luna read the same: B1 p5 “Sodality Meets on Tuesday at 7:00 pm in Church.\nNovember 17 – Benediction & Evening Prayer”"
+        }
+      ],
+      "rationale": "R1, R16, POLICY (Benediction implies Adoration): the Sodality's open Tuesday 7:00 pm meeting in church is Benediction on Nov 17, on or after as_of; no end printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-ardsley",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-20",
+        "start_time": "21:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All-night vigil, Pilgrim Image of Our Lady of Fatima; ends with Procession and Benediction at midnight"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 9,
+          "said": "FRIDAY, NOVEMBER 20 ... 9:00 PM Exposition of the Blessed Sacrament Adoration and Nine Offices of the Sacred Heart (All-night vigil) / SATURDAY, NOVEMBER 21 12:00 AM Eucharistic Procession and Benediction"
+        }
+      ],
+      "rationale": "R1, R16: exposition has its own printed start in the parish's Fatima pilgrimage program (open to all, at the parish's church); dated, on or after as_of. No end recorded since it runs past midnight; the midnight Benediction closes the same period (R37).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 9,
+          "said": "7:15 PM Welcome Procession of the International Centennial Pilgrim Image, Imposition of the Scapular & Rosary, Coronation of Our Lady, St. John Paul II Consecration Prayer, Holy Mass in honor of the Sacred Heart of Jesus"
+        }
+      ],
+      "rationale": "R30: the Mass is the fifth item of a program that starts at 7:15 PM (procession, scapular, rosary, coronation first), so it has no start time of its own; POLICY, Final source checks: a larger event doesn't time its components, and a wrong time is worse than a missing one. Leaning leave out. Dated Nov 20, on or after as_of.",
+      "question": "Add the Fatima pilgrimage program's Masses (Fri Nov 20, in the 7:15 PM program; Sat Nov 21, in the 12:00 AM program) at their program's start time?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include at the program's start",
+          "entry": {
+            "church_slug": "queen-of-peace-ardsley",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-20",
+            "start_time": "19:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Mass in honor of the Sacred Heart of Jesus, Pilgrim Image of Our Lady of Fatima"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "fatima-program-mass"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1663da62",
+          "page": 9,
+          "said": "SATURDAY, NOVEMBER 21 12:00 AM Eucharistic Procession and Benediction, Holy Mass in honor of the Immaculate Heart of Mary, Office of the Blessed Virgin Mary, Rosaries, End of Vigil"
+        }
+      ],
+      "rationale": "R30: the Mass follows the 12:00 AM Eucharistic Procession and Benediction, so it has no start time of its own (POLICY, Final source checks); a wrong time is worse than a missing one. Leaning leave out. Dated Nov 21, on or after as_of.",
+      "question": "Add the Fatima pilgrimage program's Masses (Fri Nov 20, in the 7:15 PM program; Sat Nov 21, in the 12:00 AM program) at their program's start time?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include at the program's start",
+          "entry": {
+            "church_slug": "queen-of-peace-ardsley",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-21",
+            "start_time": "00:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Mass in honor of the Immaculate Heart of Mary, end of all-night vigil"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "fatima-program-mass"
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "c31d0ff6af03a9e47ac7fa328ba6a29c",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T20:51:21.344865+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "1663da621a4fb21c1ef2d40e534f0b3de5cc517001a920f75d9cde0e9493407d",
+        "fetched_at": "2026-11-15T16:44:10Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "72c546a6bd7833eae9131f2a2baa53a05ca90573167b7e7c19c3a0dcb34b5f35",
+        "fetched_at": "2026-11-08T15:53:15Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.003468,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "queen-of-peace-ardsley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Monday – Saturday 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Monday – Saturday 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "queen-of-peace-ardsley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Monday – Saturday 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Monday – Saturday 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "queen-of-peace-ardsley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Monday – Saturday 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Monday – Saturday 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "queen-of-peace-ardsley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Monday – Saturday 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Monday – Saturday 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "queen-of-peace-ardsley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Monday – Saturday 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Monday – Saturday 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "queen-of-peace-ardsley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Monday – Saturday 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Monday – Saturday 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "queen-of-peace-ardsley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday at 4:30 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday at 4:30 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "queen-of-peace-ardsley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday 7:30 am, 9:30 am, 11:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday 7:30 am, 9:30 am, 11:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "queen-of-peace-ardsley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday 7:30 am, 9:30 am, 11:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday 7:30 am, 9:30 am, 11:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "queen-of-peace-ardsley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday 7:30 am, 9:30 am, 11:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday 7:30 am, 9:30 am, 11:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "queen-of-peace-ardsley",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday: 3:30 pm, Sunday: 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday: 3:30 pm, Sunday: 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "queen-of-peace-ardsley",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday: 3:30 pm, Sunday: 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday: 3:30 pm, Sunday: 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "queen-of-peace-ardsley",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "After the 8:00 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Eucharistic Adoration every Tuesday, after the 8:00am Mass."
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Eucharistic Adoration every Tuesday, after the 8:00am Mass."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "queen-of-peace-ardsley",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-17",
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Benediction",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "Sodality Meets on Tuesday at 7:00 pm in Church.\nNovember 17 – Benediction & Evening Prayer"
+          },
+          {
+            "bulletin": "B2",
+            "page": 5,
+            "quote": "Sodality Meets on Tuesday at 7:00 pm in Church.\nNovember 17 – Benediction & Evening Prayer"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "queen-of-peace-ardsley",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-20",
+          "start_time": "21:00",
+          "end_time": "00:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "All-night vigil; Benediction",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "FRIDAY, NOVEMBER 20\n9:00 PM Exposition of the Blessed Sacrament\nAdoration and Nine Offices of the Sacred Heart (All-night vigil)\nSATURDAY, NOVEMBER 21\n12:00 AM Eucharistic Procession and Benediction"
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "FRIDAY, NOVEMBER 20\n9:00 PM Exposition of the Blessed Sacrament\nAdoration and Nine Offices of the Sacred Heart (All-night vigil)\nSATURDAY, NOVEMBER 21\n12:00 AM Eucharistic Procession and Benediction"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "9879d3b3b368323a6006afe1b01067039dbf8b644db7db596bd5330d03f7e457",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "differs",
+        "fields": [
+          "end time"
+        ],
+        "opinion": [
+          "o15"
+        ],
+        "slots": [
+          "s15"
+        ],
+        "opinion_said": "adoration 2026-11-20 21:00-00:00 @queen-of-peace-ardsley",
+        "seed_said": "adoration 2026-11-20 21:00 @queen-of-peace-ardsley",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "1663da62",
+              "page": 9,
+              "said": "9:00 PM Exposition of the Blessed Sacrament Adoration and Nine Offices of the Sacred Heart (All-night vigil) / SATURDAY, NOVEMBER 21 12:00 AM Eucharistic Procession and Benediction, Holy Mass ..., End of Vigil"
+            }
+          ],
+          "why": "POLICY, Times: the page prints no end for the exposition. 12:00 AM is when the Procession and Benediction begin, not when exposition ends (it closes after them, and the vigil runs on), so a 00:00 end would cut the period short. Start only, as precedent st-colman-ardmore s14 records.",
+          "at": "2026-11-27T20:51:42Z"
+        }
+      }
+    ]
+  }
+}
