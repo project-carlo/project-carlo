@@ -1,0 +1,800 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-swedesburg",
+  "status": "ready",
+  "as_of": "2026-11-15T16:44:20Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T04:36:18Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Sacred Heart, Swedesburg. Both November issues (image-only) print the same schedule box: Sat 4 PM, Sun 8 and 10:15, weekdays 8 AM; confession Sun, Wed (two) and Sat. Dated: Thanksgiving 9 AM Mass and Advent Eucharistic Wednesdays (Dec 2-23, noon-7 PM). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6395ae11d8fe748c687b888c53752f026fe74853aabc06496c2ac3f729fa4731",
+      "fetched_at": "2026-11-15T16:44:20Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ce416f6b983f6f1fdca587be4a442a8868e73c2254b100339561970f47cba809",
+      "fetched_at": "2026-11-08T15:53:21Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 1,
+          "said": "Holy Mass: Sat: Anticipated Mass 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce416f6b",
+          "page": 1,
+          "said": "Holy Mass: Sat: Anticipated Mass 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 4,
+          "said": "Saturday, November 21 4:00pm The Deceased Member of the Knights of Columbus"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 1,
+          "said": "Sunday: 8:00am & 10:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce416f6b",
+          "page": 1,
+          "said": "Sunday: 8:00am & 10:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 4,
+          "said": "Sunday, November 22 8:00am ... 10:15am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 1,
+          "said": "Sunday: 8:00am & 10:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce416f6b",
+          "page": 1,
+          "said": "Sunday: 8:00am & 10:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 4,
+          "said": "Sunday, November 22 8:00am ... 10:15am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 1,
+          "said": "Monday through Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce416f6b",
+          "page": 1,
+          "said": "Monday through Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 4,
+          "said": "Monday, November 16 8:00am ... Friday, November 20 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions for each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 1,
+          "said": "Monday through Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce416f6b",
+          "page": 1,
+          "said": "Monday through Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 4,
+          "said": "Monday, November 16 8:00am ... Friday, November 20 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions for each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 1,
+          "said": "Monday through Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce416f6b",
+          "page": 1,
+          "said": "Monday through Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 4,
+          "said": "Monday, November 16 8:00am ... Friday, November 20 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions for each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 1,
+          "said": "Monday through Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce416f6b",
+          "page": 1,
+          "said": "Monday through Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 4,
+          "said": "Monday, November 16 8:00am ... Friday, November 20 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions for each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 1,
+          "said": "Monday through Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce416f6b",
+          "page": 1,
+          "said": "Monday through Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 4,
+          "said": "Monday, November 16 8:00am ... Friday, November 20 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions for each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "09:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 1,
+          "said": "Sacrament of Penance: Sunday: 9:30 to 9:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce416f6b",
+          "page": 1,
+          "said": "Sacrament of Penance: Sunday: 9:30 to 9:50am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 1,
+          "said": "Wednesday: 7:30 to 7:50am, 6:30 to 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce416f6b",
+          "page": 1,
+          "said": "Wednesday: 7:30 to 7:50am, 6:30 to 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 1,
+          "said": "Wednesday: 7:30 to 7:50am, 6:30 to 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce416f6b",
+          "page": 1,
+          "said": "Wednesday: 7:30 to 7:50am, 6:30 to 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 1,
+          "said": "Saturday: 3:00 to 3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce416f6b",
+          "page": 1,
+          "said": "Saturday: 3:00 to 3:45pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 3,
+          "said": "Please join us for a Thanksgiving Day Mass on Thursday, November 26th at 9 a.m."
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass after as_of, at the parish's one church. R17: no cancellation of the weekly Thursday 8:00 AM Mass is stated, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "12:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Eucharistic Wednesdays"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 5,
+          "said": "Advent Eucharistic Wednesdays ~ December 2, 9, 16 & 23 held each Wednesday during Advent from Noon and ending at 7:00 p.m."
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 3: four printed dates in a season, so dated, not weekly. A parish notice with a monstrance; the parish has one church (POLICY: a parish adoration event belongs to its church). Wednesday 6:30-7:00 PM confession stays its own weekly slot; nothing says confession is heard during Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-09",
+        "start_time": "12:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Eucharistic Wednesdays"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 5,
+          "said": "Advent Eucharistic Wednesdays ~ December 2, 9, 16 & 23 held each Wednesday during Advent from Noon and ending at 7:00 p.m."
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 3: four printed dates in a season, so dated, not weekly. A parish notice with a monstrance; the parish has one church (POLICY: a parish adoration event belongs to its church). Wednesday 6:30-7:00 PM confession stays its own weekly slot; nothing says confession is heard during Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-16",
+        "start_time": "12:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Eucharistic Wednesdays"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 5,
+          "said": "Advent Eucharistic Wednesdays ~ December 2, 9, 16 & 23 held each Wednesday during Advent from Noon and ending at 7:00 p.m."
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 3: four printed dates in a season, so dated, not weekly. A parish notice with a monstrance; the parish has one church (POLICY: a parish adoration event belongs to its church). Wednesday 6:30-7:00 PM confession stays its own weekly slot; nothing says confession is heard during Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-23",
+        "start_time": "12:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Eucharistic Wednesdays"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 5,
+          "said": "Advent Eucharistic Wednesdays ~ December 2, 9, 16 & 23 held each Wednesday during Advent from Noon and ending at 7:00 p.m."
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 3: four printed dates in a season, so dated, not weekly. A parish notice with a monstrance; the parish has one church (POLICY: a parish adoration event belongs to its church). Wednesday 6:30-7:00 PM confession stays its own weekly slot; nothing says confession is heard during Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-swedesburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pro Life Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 2,
+          "said": "Pro Life Holy Hour at 12:00 noon each Wednesday. The location of this Wednesday's Holy Hour can be found by emailing"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce416f6b",
+          "page": 2,
+          "said": "Pro Life Holy Hour at 12:00 noon each Wednesday. The location of this Wednesday's Holy Hour can be found by emailing"
+        }
+      ],
+      "rationale": "R22: the bulletin says the location varies and must be asked for, so it is not known to be at the church (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 5,
+          "said": "Faith & Fellowship Young Adult Nights ... Parish Hall, located at Lakeview Academy 633 East Fourth Street, Bridgeport ... [No November Holy Hour]"
+        }
+      ],
+      "rationale": "R26, R22: the young adults' Holy Hour has no time printed, and the group meets at Lakeview Academy, not the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 6,
+          "said": "Day of Recollection ... Wednesday, December 9, 2026 9:00 - 3:00; includes time for Sacrament of Reconciliation and Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce416f6b",
+          "page": 6,
+          "said": "Day of Recollection ... Wednesday, December 9, 2026 9:00 - 3:00; includes time for Sacrament of Reconciliation and Mass"
+        }
+      ],
+      "rationale": "R22, R26: an IHM Spirituality Center retreat away from the church, paid registration; its Mass and Reconciliation have no times of their own (POLICY, Final source checks).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6395ae11",
+          "page": 2,
+          "said": "Monday Night Rosary will be recited in church each Monday at 7 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce416f6b",
+          "page": 2,
+          "said": "Monday Night Rosary will be recited in church each Monday at 7 p.m."
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
