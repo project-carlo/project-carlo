@@ -1,0 +1,728 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-kevin-springfield",
+  "status": "ready",
+  "as_of": "2026-11-15T16:46:09Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T00:00:31Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday and Saturday confession times match in the p1 schedule box of both issues read (Nov 8, Nov 15); Tuesday 9-5 Adoration is in both issues' Happenings (R35). No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a5bdde191e8b966907daadfe02dc8d9859b05e1f3d51642f0ca0c1513c938819",
+      "fetched_at": "2026-11-15T16:46:09Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "7d6d9ede174365540ce71ef8b96d98bfb24e2d77173d2f5db023ded66b81d872",
+      "fetched_at": "2026-11-08T15:54:47Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kevin-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 1,
+          "said": "Mass Times: Monday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 1,
+          "said": "Mass Times: Monday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 3,
+          "said": "8:30AM (Mass Intentions each day Mon-Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 3,
+          "said": "8:30AM (Mass Intentions each day Mon-Sat)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues, with intentions every day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kevin-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 1,
+          "said": "Mass Times: Monday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 1,
+          "said": "Mass Times: Monday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 3,
+          "said": "8:30AM (Mass Intentions each day Mon-Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 3,
+          "said": "8:30AM (Mass Intentions each day Mon-Sat)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues, with intentions every day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kevin-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 1,
+          "said": "Mass Times: Monday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 1,
+          "said": "Mass Times: Monday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 3,
+          "said": "8:30AM (Mass Intentions each day Mon-Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 3,
+          "said": "8:30AM (Mass Intentions each day Mon-Sat)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues, with intentions every day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kevin-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 1,
+          "said": "Mass Times: Monday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 1,
+          "said": "Mass Times: Monday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 3,
+          "said": "8:30AM (Mass Intentions each day Mon-Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 3,
+          "said": "8:30AM (Mass Intentions each day Mon-Sat)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues, with intentions every day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kevin-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 1,
+          "said": "Mass Times: Monday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 1,
+          "said": "Mass Times: Monday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 3,
+          "said": "8:30AM (Mass Intentions each day Mon-Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 3,
+          "said": "8:30AM (Mass Intentions each day Mon-Sat)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues, with intentions every day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kevin-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 1,
+          "said": "Mass Times: Monday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 1,
+          "said": "Mass Times: Monday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 3,
+          "said": "8:30AM (Mass Intentions each day Mon-Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 3,
+          "said": "8:30AM (Mass Intentions each day Mon-Sat)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues, with intentions every day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kevin-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 1,
+          "said": "Saturday: Vigil 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 1,
+          "said": "Saturday: Vigil 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 3,
+          "said": "Saturday, November 21, 2026 4:00PM – Ronald F. Honorowski"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues and the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kevin-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 11:00 AM & 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 11:00 AM & 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 3,
+          "said": "11/22/26 – 8:00am, *11:00am (11am Mass Livestreamed), 5:30pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues, Happenings and intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kevin-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 11:00 AM & 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 11:00 AM & 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 3,
+          "said": "11/22/26 – 8:00am, *11:00am (11am Mass Livestreamed), 5:30pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues, Happenings and intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kevin-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 11:00 AM & 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 11:00 AM & 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 3,
+          "said": "11/22/26 – 8:00am, *11:00am (11am Mass Livestreamed), 5:30pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues, Happenings and intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kevin-church-springfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 1,
+          "said": "Confessions: Saturdays 3:00 - 3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 1,
+          "said": "Confessions: Saturdays 3:00 - 3:45 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 1,
+          "said": "Or any time by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kevin-church-springfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 3,
+          "said": "11/17/26 – Eucharistic Adoration – 9am – 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d6d9ede",
+          "page": 3,
+          "said": "11/10/26 – Eucharistic Adoration – 9am – 5pm"
+        }
+      ],
+      "rationale": "R35: the same Tuesday 9 AM-5 PM Adoration is listed in the Happenings of both issues (Nov 10 and Nov 17), not marked special; the parish has one church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kevin-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. John Neumann residence"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 5,
+          "said": "SJN maintains regular Mass ... Typically, Mass is at 11AM Monday to Thursday, and Sunday Mass is usually at 2PM"
+        }
+      ],
+      "rationale": "R22: St. John Neumann is a residence elsewhere, no longer owned by the Church and not a parish church; its times are also hedged ('typically', 'usually').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kevin-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. John Neumann residence"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 5,
+          "said": "SJN maintains regular Mass ... Typically, Mass is at 11AM Monday to Thursday, and Sunday Mass is usually at 2PM"
+        }
+      ],
+      "rationale": "R22: St. John Neumann is a residence elsewhere, no longer owned by the Church and not a parish church; its times are also hedged ('typically', 'usually').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kevin-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. John Neumann residence"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 5,
+          "said": "SJN maintains regular Mass ... Typically, Mass is at 11AM Monday to Thursday, and Sunday Mass is usually at 2PM"
+        }
+      ],
+      "rationale": "R22: St. John Neumann is a residence elsewhere, no longer owned by the Church and not a parish church; its times are also hedged ('typically', 'usually').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kevin-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. John Neumann residence"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5bdde19",
+          "page": 5,
+          "said": "SJN maintains regular Mass ... Typically, Mass is at 11AM Monday to Thursday, and Sunday Mass is usually at 2PM"
+        }
+      ],
+      "rationale": "R22: St. John Neumann is a residence elsewhere, no longer owned by the Church and not a parish church; its times are also hedged ('typically', 'usually').",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
