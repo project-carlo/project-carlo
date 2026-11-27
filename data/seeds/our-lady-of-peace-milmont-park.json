@@ -1,0 +1,699 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-peace-milmont-park",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:43:44Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T00:38:21Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: Our Lady of Peace (Milmont Park) and the Notre Dame de Lourdes worship site (Swarthmore). The schedule box is identical in both issues (Nov 8, Nov 15) and matches olpparish.org/mass-times exactly; Tuesday Adoration 9:00 AM-6:30 PM per POLICY timing; a dated Youth Mass Dec 6, 6 PM. Open: whether Tue Nov 17's Mass moved to ND (intentions only; leaning no change).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "961ec21576fc70dd22cd48da719305ee2c1befed4d0413a6a06f33e85a011103",
+      "fetched_at": "2026-11-15T16:43:44Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "8d0a1c2ec13fc532adab96f227c990544a619765c6186019e080ab07df080724",
+      "fetched_at": "2026-11-08T15:53:07Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-milmont-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday - Thursday: 8:30 AM - OLP Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d0a1c2e",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday - Thursday: 8:30 AM - OLP Church"
+        },
+        {
+          "source": "website",
+          "url": "https://olpparish.org/mass-times/",
+          "said": "Mon-Thurs: 8:30 AM (OLP Church) preceded by Morning Prayer at 8:10 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website's Mass Schedule page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-milmont-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday - Thursday: 8:30 AM - OLP Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d0a1c2e",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday - Thursday: 8:30 AM - OLP Church"
+        },
+        {
+          "source": "website",
+          "url": "https://olpparish.org/mass-times/",
+          "said": "Mon-Thurs: 8:30 AM (OLP Church) preceded by Morning Prayer at 8:10 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website's Mass Schedule page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-milmont-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday - Thursday: 8:30 AM - OLP Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d0a1c2e",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday - Thursday: 8:30 AM - OLP Church"
+        },
+        {
+          "source": "website",
+          "url": "https://olpparish.org/mass-times/",
+          "said": "Mon-Thurs: 8:30 AM (OLP Church) preceded by Morning Prayer at 8:10 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website's Mass Schedule page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-milmont-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday - Thursday: 8:30 AM - OLP Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d0a1c2e",
+          "page": 1,
+          "said": "WEEKDAY MASS SCHEDULE Monday - Thursday: 8:30 AM - OLP Church"
+        },
+        {
+          "source": "website",
+          "url": "https://olpparish.org/mass-times/",
+          "said": "Mon-Thurs: 8:30 AM (OLP Church) preceded by Morning Prayer at 8:10 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website's Mass Schedule page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-de-lourdes-swarthmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 1,
+          "said": "Friday and Saturday 8:30AM - Notre Dame de Lourdes"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d0a1c2e",
+          "page": 1,
+          "said": "Friday and Saturday 8:30AM - Notre Dame de Lourdes"
+        },
+        {
+          "source": "website",
+          "url": "https://olpparish.org/mass-times/",
+          "said": "Friday & Saturday: 8:30 AM (ND Worship Site)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues (Saturday 8:30 also under WEEKEND MASS SCHEDULE); one slot per day. The intentions list Fri/Sat 8:30 ND in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-de-lourdes-swarthmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 1,
+          "said": "Friday and Saturday 8:30AM - Notre Dame de Lourdes"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d0a1c2e",
+          "page": 1,
+          "said": "Friday and Saturday 8:30AM - Notre Dame de Lourdes"
+        },
+        {
+          "source": "website",
+          "url": "https://olpparish.org/mass-times/",
+          "said": "Friday & Saturday: 8:30 AM (ND Worship Site)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues (Saturday 8:30 also under WEEKEND MASS SCHEDULE); one slot per day. The intentions list Fri/Sat 8:30 ND in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-milmont-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 1,
+          "said": "Saturday Vigil Mass 4:30 PM OLP Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d0a1c2e",
+          "page": 1,
+          "said": "Saturday Vigil Mass 4:30 PM OLP Church"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the weekend intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-milmont-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 1,
+          "said": "Sunday Masses 7:30 AM & 11:30 AM OLP Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d0a1c2e",
+          "page": 1,
+          "said": "Sunday Masses 7:30 AM & 11:30 AM OLP Church"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-milmont-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 1,
+          "said": "Sunday Masses 7:30 AM & 11:30 AM OLP Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d0a1c2e",
+          "page": 1,
+          "said": "Sunday Masses 7:30 AM & 11:30 AM OLP Church"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-de-lourdes-swarthmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 1,
+          "said": "Sunday Masses ... 9:30 AM Notre Dame de Lourdes"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d0a1c2e",
+          "page": 1,
+          "said": "Sunday Masses ... 9:30 AM Notre Dame de Lourdes"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-milmont-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 1,
+          "said": "CONFESSIONS Saturday: 3:30 -4:15 PM (OLP Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d0a1c2e",
+          "page": 1,
+          "said": "CONFESSIONS Saturday: 3:30 -4:15 PM (OLP Church)"
+        },
+        {
+          "source": "website",
+          "url": "https://olpparish.org/mass-times/",
+          "said": "Saturdays 3:30 PM – 4:15 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 1,
+          "said": "or by appointment, call the Parish Office."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-milmont-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass; Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament Tuesday after 8:30 AM Mass (OLP Church) Benediction will conclude the day at 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d0a1c2e",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament Tuesday after 8:30 AM Mass (OLP Church) Benediction will conclude the day at 6:30 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://olpparish.org/mass-times/",
+          "said": "Adoration begins following the OLP Tuesday 8:30 AM Mass Benediction begins at 6:30 PM"
+        }
+      ],
+      "rationale": "R1, R10: both issues' box; after a weekday 8:30 Mass POLICY starts it at 9:00, and Benediction concludes it at 6:30 PM. The Nov 10 cancellation (8d0a1c2e p4) is before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-milmont-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-06",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Youth Ministry Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 4,
+          "said": "Our Parish's Youth Ministry will celebrate a Sunday evening Mass on Sunday 6 December, the Second Sunday of Advent, at 6pm at Our Lady of Peace Church. Everyone is welcome to attend."
+        },
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 6,
+          "said": "OLP YOUTH MINISTRY ... Date: December 6, 2026 (Sunday) SCHEDULE: 6:00 PM – Holy Mass"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass outside the weekly schedule, at OLP Church, and 'Everyone is welcome' (POLICY: open unless limited).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 3,
+          "said": "WEEKDAY INTENTIONS AT OUR LADY OF PEACE ... Tuesday, November 17 ND 8:30 AM Scott Willoughby"
+        },
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 1,
+          "said": "Monday - Thursday: 8:30 AM - OLP Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d0a1c2e",
+          "page": 4,
+          "said": "the 8:30 am Mass for Tuesday, November 10 has been moved to Notre Dame de Lourdes Church"
+        }
+      ],
+      "rationale": "R28/R39: only the intentions put Nov 17 at ND, under the 'AT OUR LADY OF PEACE' heading and with no notice; the Nov 10 move had an explained one-day reason (film crew) and its intentions line read 'ND 8:30 AM' in the same position, so this looks like a carried-over template line. Box, website and the Tuesday Adoration 'after 8:30 AM Mass (OLP Church)' say OLP. Date has passed.",
+      "question": "Was Tue Nov 17's 8:30 AM Mass moved to Notre Dame de Lourdes, as the Nov 15 intentions print?",
+      "options": [
+        {
+          "label": "No change: keep OLP",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Moved to ND",
+          "entry": {
+            "church_slug": "our-lady-of-peace-milmont-park",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-17",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null,
+      "group": "nov17"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 3,
+          "said": "Tuesday, November 17 ND 8:30 AM Scott Willoughby"
+        }
+      ],
+      "rationale": "R28/R39: same question as the OLP cancellation slot; this slot holds the ND Mass a move would add.",
+      "question": "Was Tue Nov 17's 8:30 AM Mass moved to Notre Dame de Lourdes, as the Nov 15 intentions print?",
+      "options": [
+        {
+          "label": "No change: keep OLP",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Moved to ND",
+          "entry": {
+            "church_slug": "notre-dame-de-lourdes-swarthmore",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-17",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null,
+      "group": "nov17"
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "961ec215",
+          "page": 1,
+          "said": "Sodality Devotions & Miraculous Medal Novena Monday after the 8:30 AM Mass (OLP Church)"
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not a Mass, Confession or Adoration. Morning Prayer (8:10 AM) and the website's Divine Mercy Chaplet (Mon-Fri 3 PM) are left out alike.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
