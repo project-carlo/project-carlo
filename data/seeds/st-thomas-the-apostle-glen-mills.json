@@ -1,0 +1,1089 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-thomas-the-apostle-glen-mills",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:47:09Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T01:31:40Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Thomas the Apostle, Glen Mills); both read issues (Nov 8, Nov 15; image-only) print the same schedule box: Sat 5 PM, Sun 7:30/9:30/11:30, Mon/Tue/Wed/Fri 8 AM, Thu 9 AM; Confession Mon 6-6:45 PM, Sat 4-4:45 PM; Monday Adoration from 8:30 AM. Open: Monday Adoration's end (6:45 PM Benediction vs 7:00 PM), the third-Friday 4 PM Flame of Love Holy Hour (absent from the Nov 20 calendar), and the website's undated holy-day/Christmas times (leaning leave out).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f2d93b60ad1a9fa4e53ebb813cdb65e56079601e222f6d2116c552bb0714f011",
+      "fetched_at": "2026-11-15T16:47:09Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "052e8c56ee35a9a3658a5224680f8fb44355611c82cf25b24000746240b2a3c7",
+      "fetched_at": "2026-11-08T15:55:31Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-glen-mills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 1,
+          "said": "Saturday Vigil....5:00PM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "052e8c56",
+          "page": 1,
+          "said": "Saturday Vigil....5:00PM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 2,
+          "said": "Saturday, November 14 5:00PM ... Saturday, November 21 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both issues and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-glen-mills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 1,
+          "said": "Sunday....7:30AM 9:30AM 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "052e8c56",
+          "page": 1,
+          "said": "Sunday....7:30AM 9:30AM 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 2,
+          "said": "Sunday, November 15 7:30AM ... 9:30AM ... 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-glen-mills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 1,
+          "said": "Sunday....7:30AM 9:30AM 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "052e8c56",
+          "page": 1,
+          "said": "Sunday....7:30AM 9:30AM 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 2,
+          "said": "Sunday, November 15 7:30AM ... 9:30AM ... 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-glen-mills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 1,
+          "said": "Sunday....7:30AM 9:30AM 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "052e8c56",
+          "page": 1,
+          "said": "Sunday....7:30AM 9:30AM 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 2,
+          "said": "Sunday, November 15 7:30AM ... 9:30AM ... 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-glen-mills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday....8:00AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "052e8c56",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday....8:00AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 2,
+          "said": "Monday, November 16 8:00AM ... Tuesday, November 17 8:00AM ... Wednesday, November 18 8:00AM ... Friday, November 20 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both issues and in each week's intentions. The website's 'M W F 8:00 AM' omits Tuesday, but both boxes and both weeks' intentions (Nov 10, Nov 17) print the Tuesday 8:00 AM Mass; a missing mention is not a conflict (R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-glen-mills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday....8:00AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "052e8c56",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday....8:00AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 2,
+          "said": "Monday, November 16 8:00AM ... Tuesday, November 17 8:00AM ... Wednesday, November 18 8:00AM ... Friday, November 20 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both issues and in each week's intentions. The website's 'M W F 8:00 AM' omits Tuesday, but both boxes and both weeks' intentions (Nov 10, Nov 17) print the Tuesday 8:00 AM Mass; a missing mention is not a conflict (R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-glen-mills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday....8:00AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "052e8c56",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday....8:00AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 2,
+          "said": "Monday, November 16 8:00AM ... Tuesday, November 17 8:00AM ... Wednesday, November 18 8:00AM ... Friday, November 20 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both issues and in each week's intentions. The website's 'M W F 8:00 AM' omits Tuesday, but both boxes and both weeks' intentions (Nov 10, Nov 17) print the Tuesday 8:00 AM Mass; a missing mention is not a conflict (R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-glen-mills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday....8:00AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "052e8c56",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday....8:00AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 2,
+          "said": "Monday, November 16 8:00AM ... Tuesday, November 17 8:00AM ... Wednesday, November 18 8:00AM ... Friday, November 20 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both issues and in each week's intentions. The website's 'M W F 8:00 AM' omits Tuesday, but both boxes and both weeks' intentions (Nov 10, Nov 17) print the Tuesday 8:00 AM Mass; a missing mention is not a conflict (R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-glen-mills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 1,
+          "said": "Thursday....9:00AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "052e8c56",
+          "page": 1,
+          "said": "Thursday....9:00AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 2,
+          "said": "Thursday, November 19 9:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both issues and in the intentions; the website also gives Thursday 9:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-glen-mills",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Monday 6:00PM-6:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "052e8c56",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Monday 6:00PM-6:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 3,
+          "said": "Confession is held each Monday evening from 6:00PM to 6:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 2,
+          "said": "Confession....6:00PM - 6:45PM (C)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box, the p3 Sacraments text and the calendar of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-glen-mills",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 1,
+          "said": "Saturday 4:00PM-4:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "052e8c56",
+          "page": 1,
+          "said": "Saturday 4:00PM-4:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 3,
+          "said": "and each Saturday afternoon from 4:00PM to 4:45PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box and the p3 Sacraments text of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 1,
+          "said": "or call for an appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 3,
+          "said": "Confession is also available by appointment."
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 1,
+          "said": "Adoration/Exposition of the Most Blessed Sacrament Monday 8:30AM-7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "052e8c56",
+          "page": 1,
+          "said": "Adoration/Exposition of the Most Blessed Sacrament Monday 8:30AM-7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 2,
+          "said": "Eucharistic Adoration....8:30AM - 6:45PM (C)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "052e8c56",
+          "page": 2,
+          "said": "Eucharistic Adoration....8:30AM - 6:45PM (C)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staparishgm.org/",
+          "said": "Monday 8:30 AM to 6:45 PM Adoration is held each Monday (except National Holidays) in the Main Church following daily Mass and concludes with Benediction at 6:45PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staparishgm.org/",
+          "said": "Adoration Monday , November 30 , 8:30 AM - 7:00 PM"
+        }
+      ],
+      "rationale": "C8: the start (8:30 AM, after the 8:00 AM Mass) is agreed everywhere and the service is certain; only the end differs. The p1 box of both issues and the website's Nov 30 event say 7:00 PM; both issues' Monday calendar and the website's Mass Times section, which says it 'concludes with Benediction at 6:45PM', say 6:45 PM. Leaning 6:45 because the two service-specific statements name Benediction as the end; 7:00 may be when the church closes. Confession Mon 6:00-6:45 falls within it either way.",
+      "question": "Monday Adoration in the church: end at 6:45 PM (Benediction) or 7:00 PM?",
+      "options": [
+        {
+          "label": "Mondays 8:30 AM-6:45 PM",
+          "entry": {
+            "church_slug": "st-thomas-the-apostle-glen-mills",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "18:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mondays 8:30 AM-7:00 PM",
+          "entry": {
+            "church_slug": "st-thomas-the-apostle-glen-mills",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "mon-adoration"
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-glen-mills",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Flame of Love Holy Hour"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 9,
+          "said": "The Flame of Love Holy Hour is the first Saturday of each month at 8:00am and the third Friday at 4:00pm. Exposition of the Blessed Sacrament, the Flame of Love Rosary and prayers will be offered ... Devotion will be in the main Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "052e8c56",
+          "page": 9,
+          "said": "The Flame of Love Holy Hour is the first Saturday of each month at 8:00am and the third Friday at 4:00pm. Exposition of the Blessed Sacrament, the Flame of Love Rosary and prayers will be offered ... Devotion will be in the main Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "052e8c56",
+          "page": 2,
+          "said": "Saturday, November 7 · Flame of Love....7:00PM (C)"
+        }
+      ],
+      "rationale": "R1, R40; POLICY Weekly or dated rule 2: a Holy Hour with exposition, named by its week, in the main church, printed in both issues (052e8c56 numbers it p10). The Nov 8 issue's calendar lists the Nov 7 (a first Saturday) Flame of Love at 7:00 PM; under R40 a dated listing changes that occurrence only, and it is past. No end time printed, so none recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 9,
+          "said": "The Flame of Love Holy Hour is the first Saturday of each month at 8:00am and the third Friday at 4:00pm. Exposition of the Blessed Sacrament ... Devotion will be in the main Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 2,
+          "said": "Friday, November 20 · Chaplet of Divine Mercy 7:45AM (C) · The Rosary follows the 8:00AM Mass (C) · KoC BINGO 6:30PM (SH)"
+        }
+      ],
+      "rationale": "R30: the standing notice (both issues) names it by week, with exposition, in the main church, so POLICY rule 2 makes it weekly. But the newest bulletin's week holds the third Friday (Nov 20) and its calendar, which did list the Flame of Love on Sat Nov 7 in the prior issue, does not list it. The calendar omits other regular services too (Saturday confession, the Masses), so leaning include.",
+      "question": "Add the third-Friday 4:00 PM Flame of Love Holy Hour (exposition) in the church?",
+      "options": [
+        {
+          "label": "Third Fridays 4:00 PM",
+          "entry": {
+            "church_slug": "st-thomas-the-apostle-glen-mills",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "third"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Flame of Love Holy Hour"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.staparishgm.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 9:00 AM ... 12:00 PM ... 7:00 PM Holy Day of Obligation"
+        }
+      ],
+      "rationale": "R6, leaning per precedent st-joseph-coatesville s45 and st-isaac-jogues-wayne s27: the website's 'Upcoming Holy Days' block gives no year, and neither read bulletin prints holy-day or Christmas times. The site is otherwise current (its events list Nov 27-30, 2026, and its weekend times match), so these may well be right; update mode will read the December bulletins.",
+      "question": "Add the website's Immaculate Conception and Christmas Mass times (Dec 8 9 AM, 12 PM, 7 PM; Dec 24 4 PM, 7 PM; Dec 25 12 AM, 8 AM, 10 AM)?",
+      "options": [
+        {
+          "label": "Include the website's times",
+          "entry": {
+            "church_slug": "st-thomas-the-apostle-glen-mills",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.staparishgm.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 9:00 AM ... 12:00 PM ... 7:00 PM Holy Day of Obligation"
+        }
+      ],
+      "rationale": "R6, leaning per precedent st-joseph-coatesville s45 and st-isaac-jogues-wayne s27: the website's 'Upcoming Holy Days' block gives no year, and neither read bulletin prints holy-day or Christmas times. The site is otherwise current (its events list Nov 27-30, 2026, and its weekend times match), so these may well be right; update mode will read the December bulletins.",
+      "question": "Add the website's Immaculate Conception and Christmas Mass times (Dec 8 9 AM, 12 PM, 7 PM; Dec 24 4 PM, 7 PM; Dec 25 12 AM, 8 AM, 10 AM)?",
+      "options": [
+        {
+          "label": "Include the website's times",
+          "entry": {
+            "church_slug": "st-thomas-the-apostle-glen-mills",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.staparishgm.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 9:00 AM ... 12:00 PM ... 7:00 PM Holy Day of Obligation"
+        }
+      ],
+      "rationale": "R6, leaning per precedent st-joseph-coatesville s45 and st-isaac-jogues-wayne s27: the website's 'Upcoming Holy Days' block gives no year, and neither read bulletin prints holy-day or Christmas times. The site is otherwise current (its events list Nov 27-30, 2026, and its weekend times match), so these may well be right; update mode will read the December bulletins.",
+      "question": "Add the website's Immaculate Conception and Christmas Mass times (Dec 8 9 AM, 12 PM, 7 PM; Dec 24 4 PM, 7 PM; Dec 25 12 AM, 8 AM, 10 AM)?",
+      "options": [
+        {
+          "label": "Include the website's times",
+          "entry": {
+            "church_slug": "st-thomas-the-apostle-glen-mills",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.staparishgm.org/",
+          "said": "Nativity of Our Lord Jesus Christ December 24 : 4:00 PM ... 7:00 PM"
+        }
+      ],
+      "rationale": "R6, leaning per precedent st-joseph-coatesville s45 and st-isaac-jogues-wayne s27: the website's 'Upcoming Holy Days' block gives no year, and neither read bulletin prints holy-day or Christmas times. The site is otherwise current (its events list Nov 27-30, 2026, and its weekend times match), so these may well be right; update mode will read the December bulletins.",
+      "question": "Add the website's Immaculate Conception and Christmas Mass times (Dec 8 9 AM, 12 PM, 7 PM; Dec 24 4 PM, 7 PM; Dec 25 12 AM, 8 AM, 10 AM)?",
+      "options": [
+        {
+          "label": "Include the website's times",
+          "entry": {
+            "church_slug": "st-thomas-the-apostle-glen-mills",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.staparishgm.org/",
+          "said": "Nativity of Our Lord Jesus Christ December 24 : 4:00 PM ... 7:00 PM"
+        }
+      ],
+      "rationale": "R6, leaning per precedent st-joseph-coatesville s45 and st-isaac-jogues-wayne s27: the website's 'Upcoming Holy Days' block gives no year, and neither read bulletin prints holy-day or Christmas times. The site is otherwise current (its events list Nov 27-30, 2026, and its weekend times match), so these may well be right; update mode will read the December bulletins.",
+      "question": "Add the website's Immaculate Conception and Christmas Mass times (Dec 8 9 AM, 12 PM, 7 PM; Dec 24 4 PM, 7 PM; Dec 25 12 AM, 8 AM, 10 AM)?",
+      "options": [
+        {
+          "label": "Include the website's times",
+          "entry": {
+            "church_slug": "st-thomas-the-apostle-glen-mills",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.staparishgm.org/",
+          "said": "December 25 : 12:00 AM Midnight Mass ... 8:00 AM ... 10:00 AM"
+        }
+      ],
+      "rationale": "R6, leaning per precedent st-joseph-coatesville s45 and st-isaac-jogues-wayne s27: the website's 'Upcoming Holy Days' block gives no year, and neither read bulletin prints holy-day or Christmas times. The site is otherwise current (its events list Nov 27-30, 2026, and its weekend times match), so these may well be right; update mode will read the December bulletins.",
+      "question": "Add the website's Immaculate Conception and Christmas Mass times (Dec 8 9 AM, 12 PM, 7 PM; Dec 24 4 PM, 7 PM; Dec 25 12 AM, 8 AM, 10 AM)?",
+      "options": [
+        {
+          "label": "Include the website's times",
+          "entry": {
+            "church_slug": "st-thomas-the-apostle-glen-mills",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "00:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.staparishgm.org/",
+          "said": "December 25 : 12:00 AM Midnight Mass ... 8:00 AM ... 10:00 AM"
+        }
+      ],
+      "rationale": "R6, leaning per precedent st-joseph-coatesville s45 and st-isaac-jogues-wayne s27: the website's 'Upcoming Holy Days' block gives no year, and neither read bulletin prints holy-day or Christmas times. The site is otherwise current (its events list Nov 27-30, 2026, and its weekend times match), so these may well be right; update mode will read the December bulletins.",
+      "question": "Add the website's Immaculate Conception and Christmas Mass times (Dec 8 9 AM, 12 PM, 7 PM; Dec 24 4 PM, 7 PM; Dec 25 12 AM, 8 AM, 10 AM)?",
+      "options": [
+        {
+          "label": "Include the website's times",
+          "entry": {
+            "church_slug": "st-thomas-the-apostle-glen-mills",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.staparishgm.org/",
+          "said": "December 25 : 12:00 AM Midnight Mass ... 8:00 AM ... 10:00 AM"
+        }
+      ],
+      "rationale": "R6, leaning per precedent st-joseph-coatesville s45 and st-isaac-jogues-wayne s27: the website's 'Upcoming Holy Days' block gives no year, and neither read bulletin prints holy-day or Christmas times. The site is otherwise current (its events list Nov 27-30, 2026, and its weekend times match), so these may well be right; update mode will read the December bulletins.",
+      "question": "Add the website's Immaculate Conception and Christmas Mass times (Dec 8 9 AM, 12 PM, 7 PM; Dec 24 4 PM, 7 PM; Dec 25 12 AM, 8 AM, 10 AM)?",
+      "options": [
+        {
+          "label": "Include the website's times",
+          "entry": {
+            "church_slug": "st-thomas-the-apostle-glen-mills",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 2,
+          "said": "The Perpetual Adoration Chaplet & Rosary follow the 8:00AM Mass (C)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2d93b60",
+          "page": 2,
+          "said": "Holy Rosary/Chaplet of Divine Mercy...7:00PM (Ch)"
+        }
+      ],
+      "rationale": "R24: prayers (a chaplet, the Rosary), not Mass, Confession or Adoration; 'Perpetual Adoration Chaplet' names a prayer, and the parish has no adoration chapel schedule beyond Monday Adoration in the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
