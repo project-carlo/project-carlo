@@ -1,0 +1,1456 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-stanislaus-lansdale",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:47:01Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T16:33:34Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both November issues (Nov 8, Nov 15) print the same schedule box: Sat 4:30 PM vigil, Sun 7, 9 (ASL), 11 AM and 1 PM Spanish, Mon-Sat 8 AM, confession Mon 5-5:30 and Sat 3:30-4 PM; the website matches and adds Thanksgiving 9 AM and Advent confessions Dec 3, 7 PM. Open: whether the 24-hour adoration chapel (no address printed) is at the church, and whether Thanksgiving's 8 AM is cancelled.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+      "fetched_at": "2026-11-15T16:47:01Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9b98725b442a911fc646b0eaf5389f1e9984c07467b57fa2849df36abc73919e",
+      "fetched_at": "2026-11-08T15:55:26Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+      "bulletins": [
+        "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+        "9b98725b442a911fc646b0eaf5389f1e9984c07467b57fa2849df36abc73919e"
+      ],
+      "cached": false,
+      "cost_usd": 0.002117,
+      "at": "2026-11-27T16:42:03.007797+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 1,
+          "said": "REGULAR MASS SCHEDULE Saturday Vigil - 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b98725b",
+          "page": 1,
+          "said": "REGULAR MASS SCHEDULE Saturday Vigil - 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 2,
+          "said": "Saturday, November 21, 2026 ... 4:30pm The Parishioners of St. Stanislaus Parish"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil - 4:30PM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 1,
+          "said": "Sunday - 7:00AM, 9:00AM, 11:00AM 1:00PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b98725b",
+          "page": 1,
+          "said": "Sunday - 7:00AM, 9:00AM, 11:00AM 1:00PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 7:00am ... 11:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday - 7:00AM, 9:00AM, 11:00AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 1,
+          "said": "Sunday - 7:00AM, 9:00AM, 11:00AM 1:00PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b98725b",
+          "page": 1,
+          "said": "Sunday - 7:00AM, 9:00AM, 11:00AM 1:00PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 7:00am ... 11:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday - 7:00AM, 9:00AM, 11:00AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Interpreted in ASL"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 1,
+          "said": "Sunday - 7:00AM, 9:00AM, 11:00AM ... 9AM Mass is interpreted in ASL"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b98725b",
+          "page": 1,
+          "said": "Sunday - 7:00AM, 9:00AM, 11:00AM ... 9AM Mass is interpreted in ASL"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday - 7:00AM, 9:00AM, 11:00AM\n9AM Mass is interpreted in ASL”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; the box notes ASL interpretation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 1,
+          "said": "1:00PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b98725b",
+          "page": 1,
+          "said": "1:00PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 2,
+          "said": "1:00pm (Sp) Baldomero Romero"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “1:00PM (Spanish)”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 1,
+          "said": "Daily - Monday through Saturday—8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b98725b",
+          "page": 1,
+          "said": "Daily - Monday through Saturday—8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 2,
+          "said": "Monday, November 16 ... Saturday, November 21, 2026 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily - Monday through Saturday—8:00AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; every weekday of the intentions lists 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 1,
+          "said": "Daily - Monday through Saturday—8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b98725b",
+          "page": 1,
+          "said": "Daily - Monday through Saturday—8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 2,
+          "said": "Monday, November 16 ... Saturday, November 21, 2026 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily - Monday through Saturday—8:00AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; every weekday of the intentions lists 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 1,
+          "said": "Daily - Monday through Saturday—8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b98725b",
+          "page": 1,
+          "said": "Daily - Monday through Saturday—8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 2,
+          "said": "Monday, November 16 ... Saturday, November 21, 2026 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily - Monday through Saturday—8:00AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; every weekday of the intentions lists 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 1,
+          "said": "Daily - Monday through Saturday—8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b98725b",
+          "page": 1,
+          "said": "Daily - Monday through Saturday—8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 2,
+          "said": "Monday, November 16 ... Saturday, November 21, 2026 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily - Monday through Saturday—8:00AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; every weekday of the intentions lists 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 1,
+          "said": "Daily - Monday through Saturday—8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b98725b",
+          "page": 1,
+          "said": "Daily - Monday through Saturday—8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 2,
+          "said": "Monday, November 16 ... Saturday, November 21, 2026 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily - Monday through Saturday—8:00AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; every weekday of the intentions lists 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 1,
+          "said": "Daily - Monday through Saturday—8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b98725b",
+          "page": 1,
+          "said": "Daily - Monday through Saturday—8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 2,
+          "said": "Monday, November 16 ... Saturday, November 21, 2026 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily - Monday through Saturday—8:00AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; every weekday of the intentions lists 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-lansdale",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Mondays - 5:00PM to 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b98725b",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Mondays - 5:00PM to 5:30PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mondays - 5:00PM to 5:30PM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-lansdale",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 1,
+          "said": "Saturdays - 3:30PM to 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b98725b",
+          "page": 1,
+          "said": "Saturdays - 3:30PM to 4:00PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturdays - 3:30PM to 4:00PM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-lansdale",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ststanislaus.com/",
+          "said": "Daily Mass on Thursday, November 26th, is at 9am",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:38:42Z",
+            "current_because": "Homepage read 2026-11-27: its notice names Thursday, November 26th (Thanksgiving 2026) and the Parish Center closing 11/25-11/30; the services page says holiday 9am Masses are posted at the bottom of the homepage.",
+            "bulletin": "a5cf64bc",
+            "fits_because": "Its weekend, daily and confession times match a5cf64bc p1 exactly; the bulletin prints no Thanksgiving times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's current homepage notice dates a 9 AM Mass on Thanksgiving; on or after as_of. Like nativity-bvm-media s22.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ststanislaus.com/",
+          "said": "Daily Mass on Thursday, November 26th, is at 9am"
+        },
+        {
+          "source": "website",
+          "url": "https://ststanislaus.com/home/services/",
+          "said": "Daily Mass on some legal holidays is offered at 9am. Please see the bottom of our homepage for updates."
+        }
+      ],
+      "rationale": "R17/R40: the notice says that day's daily Mass is at 9am, which reads as a move, but 'cancelled' isn't printed. Leaning per precedent nativity-bvm-media s22 (9 AM instead of 8 AM) and our-mother-of-good-counsel-bryn-mawr s21. The date has passed.",
+      "question": "Record the usual 8:00 AM Mass on Thanksgiving, Nov 26, as cancelled (replaced by the 9 AM)?",
+      "options": [
+        {
+          "label": "Cancel Nov 26 8:00 AM",
+          "entry": {
+            "church_slug": "st-stanislaus-lansdale",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving: Mass at 9 AM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-lansdale",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-03",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Advent Confessions"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ststanislaus.com/",
+          "said": "Parish Advent Confessions Thursday, December 3rd, 7pm",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:38:42Z",
+            "current_because": "Homepage read 2026-11-27: its schedule block carries this year's Thanksgiving (Thursday, November 26th) notice; December 3 is a Thursday in 2026; the services page says 'Additional times may be added for Lent/Advent'.",
+            "bulletin": "a5cf64bc",
+            "fits_because": "The same block's weekend, daily and Mon/Sat confession times match a5cf64bc p1 exactly; the bulletin doesn't yet print Advent times."
+          }
+        }
+      ],
+      "rationale": "R6: a dated Advent confession time in the parish's current schedule block; no end given. Decided like st-aloysius-pottstown s17 (a penance service starting at its printed time).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ststanislaus.com/home/services/",
+          "said": "Holy Days of Obligation Vigil Mass – 7:00pm Holy Day – 6:30am, 9:00am, 12:00pm, 7:00pm (Spanish)"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no date; Dec 8 isn't printed anywhere read, so no date can be pinned. Like st-isaac-jogues-wayne s27. Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ststanislaus.com/home/services/",
+          "said": "Mass in American Sign Language (ASL) Parish Center Chapel at 11:45am on select Sundays (click here for schedule organized by Archdiocesan DeSales Society)"
+        }
+      ],
+      "rationale": "R33/R26: 'select Sundays' on an outside schedule; no date or weekly pattern is printed here and no bulletin mentions it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 4,
+          "said": "Kick-off Mass Saturday, December 5, 2026"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b98725b",
+          "page": 4,
+          "said": "Immediately after the 4:30PM 150th Anniversary Opening Mass, celebrated by Bishop Chylinski"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the anniversary Mass is the regular Saturday 4:30 PM vigil, recorded weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 9,
+          "said": "St. Raphaela Center Advent Programs ... The Mass That Takes Its Time Sunday, Dec. 13, 4:30pm; Taizé & Adoration, 7:30 - 8:30 PM (Chapel), 616 Coopertown Rd. Haverford"
+        }
+      ],
+      "rationale": "R22: events at St. Raphaela Center, Haverford, another location.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 7,
+          "said": "Wednesday, November 18th at 7pm – First Reconciliation Parent Reflection Evening in the school cafeteria"
+        }
+      ],
+      "rationale": "R24: a parents' meeting about First Reconciliation, not a celebration of the sacrament.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5cf64bc",
+          "page": 3,
+          "said": "Perpetual Adoration Chapel ... A security code is now required at all hours to enter the Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b98725b",
+          "page": 3,
+          "said": "Perpetual Adoration Chapel ... A security code is now required at all hours to enter the Chapel."
+        },
+        {
+          "source": "website",
+          "url": "https://ststanislaus.com/",
+          "said": "The Saint Katharine Drexel Perpetual Eucharistic Adoration Chapel is open 24 hours a day, every day."
+        },
+        {
+          "source": "website",
+          "url": "https://ststanislaus.com/home/perpetual-adoration/",
+          "said": "Saint Katharine Drexel Perpetual Eucharistic Adoration Chapel at St. Stanislaus Parish! ... a security code is now required at all hours to enter the Chapel."
+        }
+      ],
+      "rationale": "R46/R32: a standing chapel open around the clock with a code at all hours, but no page gives its address. The parish has one church. Leaning per precedent st-pius-x-broomall s25, sacred-heart-havertown s13 and ss-philip-and-james-exton s15.",
+      "question": "Is the Saint Katharine Drexel Perpetual Adoration Chapel at St. Stanislaus Church, so it is recorded as 24-hour Adoration there (code needed at all hours)?",
+      "options": [
+        {
+          "label": "Include at the church, 24 hours, code",
+          "entry": {
+            "church_slug": "st-stanislaus-lansdale",
+            "event_type": "adoration",
+            "event_kind": "continuous",
+            "day_of_week": null,
+            "date": null,
+            "start_time": null,
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Saint Katharine Drexel Perpetual Eucharistic Adoration Chapel",
+            "access": "code",
+            "open_from": null,
+            "open_until": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "4c4f65bfc9d2a8b5b6a5957f6e53502c",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T16:42:03.007797+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "a5cf64bcdefdb061e423c937eec7ec86cba05696c10dcb62c46da015ccd2698c",
+        "fetched_at": "2026-11-15T16:47:01Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "9b98725b442a911fc646b0eaf5389f1e9984c07467b57fa2849df36abc73919e",
+        "fetched_at": "2026-11-08T15:55:26Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002117,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-stanislaus-lansdale",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil - 4:30PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil - 4:30PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-stanislaus-lansdale",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday - 7:00AM, 9:00AM, 11:00AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday - 7:00AM, 9:00AM, 11:00AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-stanislaus-lansdale",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Interpreted in ASL",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday - 7:00AM, 9:00AM, 11:00AM\n9AM Mass is interpreted in ASL"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday - 7:00AM, 9:00AM, 11:00AM\n9AM Mass is interpreted in ASL"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-stanislaus-lansdale",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday - 7:00AM, 9:00AM, 11:00AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday - 7:00AM, 9:00AM, 11:00AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-stanislaus-lansdale",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "13:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spanish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "1:00PM (Spanish)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "1:00PM (Spanish)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-stanislaus-lansdale",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily - Monday through Saturday—8:00AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily - Monday through Saturday—8:00AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-stanislaus-lansdale",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily - Monday through Saturday—8:00AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily - Monday through Saturday—8:00AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-stanislaus-lansdale",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily - Monday through Saturday—8:00AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily - Monday through Saturday—8:00AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-stanislaus-lansdale",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily - Monday through Saturday—8:00AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily - Monday through Saturday—8:00AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-stanislaus-lansdale",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily - Monday through Saturday—8:00AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily - Monday through Saturday—8:00AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-stanislaus-lansdale",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily - Monday through Saturday—8:00AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily - Monday through Saturday—8:00AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-stanislaus-lansdale",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": "17:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mondays - 5:00PM to 5:30PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mondays - 5:00PM to 5:30PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-stanislaus-lansdale",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:30",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays - 3:30PM to 4:00PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays - 3:30PM to 4:00PM"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "126aa04ee46e79c7cb9907b60a17c320706c46a40a8c91abdaf665b9da6600ce",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s14"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-11-26 09:00 @st-stanislaus-lansdale",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s16"
+        ],
+        "opinion_said": "-",
+        "seed_said": "confession 2026-12-03 19:00 @st-stanislaus-lansdale",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      }
+    ]
+  }
+}
