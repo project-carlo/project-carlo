@@ -1,0 +1,1518 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-maria-goretti-hatfield",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:16Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T16:42:22Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Maria Goretti, Hatfield; both November issues (image-only) print the same schedule box: Sat 4:30 PM vigil, Sun 7:30/9:30/11:30 AM and 2:30 PM Vietnamese, weekdays 8:30 AM, Sat confession 3-4 PM, Monday Adoration 9-5 in the chapel. Open: the Saturday 8:30 AM Mass's summer break (website), whether the chapel is at the church (Monday Adoration), and a dated Nov 19 Family Adoration.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+      "fetched_at": "2026-11-15T16:46:16Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9e1633ccf0124b701dc429c27eeb3f22d9e6b935ec5d450fe683787e0d0ad67a",
+      "fetched_at": "2026-11-08T15:54:53Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+      "bulletins": [
+        "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+        "9e1633ccf0124b701dc429c27eeb3f22d9e6b935ec5d450fe683787e0d0ad67a"
+      ],
+      "cached": false,
+      "cost_usd": 0.001866,
+      "at": "2026-11-27T16:47:32.152102+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maria-goretti-hatfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 1,
+          "said": "Saturday Vigil – 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 1,
+          "said": "Saturday Vigil – 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 5,
+          "said": "4:30PM - Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 5,
+          "said": "4:30PM - Vigil Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil – 4:30PM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p5 calendar of both issues read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maria-goretti-hatfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 1,
+          "said": "Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 1,
+          "said": "Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 3,
+          "said": "Sun., Nov. 15 7:30AM ... 9:30AM ... 11:30AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p5 calendar of both issues, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maria-goretti-hatfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 1,
+          "said": "Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 1,
+          "said": "Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 3,
+          "said": "Sun., Nov. 15 7:30AM ... 9:30AM ... 11:30AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p5 calendar of both issues, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maria-goretti-hatfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 1,
+          "said": "Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 1,
+          "said": "Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 3,
+          "said": "Sun., Nov. 15 7:30AM ... 9:30AM ... 11:30AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p5 calendar of both issues, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maria-goretti-hatfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 1,
+          "said": "Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 1,
+          "said": "Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 5,
+          "said": "Sunday Mass – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 5,
+          "said": "Sunday Mass – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box and p5 calendar of both issues; open (POLICY), with the language as a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maria-goretti-hatfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 1,
+          "said": "Weekdays – 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 1,
+          "said": "Weekdays – 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 5,
+          "said": "8:30AM – Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 5,
+          "said": "8:30AM – Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 3,
+          "said": "Mon., Nov. 16 8:30AM ... Fri., Nov. 20 8:30AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays – 8:30AM”"
+        }
+      ],
+      "rationale": "R1: the p1 box of both issues gives weekdays 8:30AM; each weekday's calendar cell and intention lists it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maria-goretti-hatfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 1,
+          "said": "Weekdays – 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 1,
+          "said": "Weekdays – 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 5,
+          "said": "8:30AM – Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 5,
+          "said": "8:30AM – Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 3,
+          "said": "Mon., Nov. 16 8:30AM ... Fri., Nov. 20 8:30AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays – 8:30AM”"
+        }
+      ],
+      "rationale": "R1: the p1 box of both issues gives weekdays 8:30AM; each weekday's calendar cell and intention lists it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maria-goretti-hatfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 1,
+          "said": "Weekdays – 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 1,
+          "said": "Weekdays – 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 5,
+          "said": "8:30AM – Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 5,
+          "said": "8:30AM – Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 3,
+          "said": "Mon., Nov. 16 8:30AM ... Fri., Nov. 20 8:30AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays – 8:30AM”"
+        }
+      ],
+      "rationale": "R1: the p1 box of both issues gives weekdays 8:30AM; each weekday's calendar cell and intention lists it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maria-goretti-hatfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 1,
+          "said": "Weekdays – 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 1,
+          "said": "Weekdays – 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 5,
+          "said": "8:30AM – Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 5,
+          "said": "8:30AM – Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 3,
+          "said": "Mon., Nov. 16 8:30AM ... Fri., Nov. 20 8:30AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays – 8:30AM”"
+        }
+      ],
+      "rationale": "R1: the p1 box of both issues gives weekdays 8:30AM; each weekday's calendar cell and intention lists it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maria-goretti-hatfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 1,
+          "said": "Weekdays – 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 1,
+          "said": "Weekdays – 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 5,
+          "said": "8:30AM – Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 5,
+          "said": "8:30AM – Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 3,
+          "said": "Mon., Nov. 16 8:30AM ... Fri., Nov. 20 8:30AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays – 8:30AM”"
+        }
+      ],
+      "rationale": "R1: the p1 box of both issues gives weekdays 8:30AM; each weekday's calendar cell and intention lists it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 5,
+          "said": "Saturday ... 8:30AM – Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 5,
+          "said": "Saturday ... 8:30AM – Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 3,
+          "said": "Sat., Nov. 21 8:30AM Aura Cahustre"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 3,
+          "said": "Sat., Nov. 14 8:30AM Eleanor Graham"
+        },
+        {
+          "source": "website",
+          "url": "https://stmariagoretti.net/",
+          "said": "Monday-Saturday* Daily : 8:30AM ... *there is no Saturday daily Mass from May to Labor Day"
+        }
+      ],
+      "rationale": "R6, R30: both issues' calendars and intentions list a Saturday 8:30 AM Mass, and the p1 box says 'Weekdays – 8:30AM' with no season. The current website (2026-2027 registration, same times as the box) says there is no Saturday daily Mass from May to Labor Day. Labor Day moves (Sept 1-7), so the season can't be written exactly; Sept 8-Apr 30 never claims a Mass the parish doesn't hold, at the cost of up to a week of September (a wrong time is worse than a missing one, POLICY). Unlike holy-saviour-norristown s10, the summer note here is on a current page, not a 2022 one.",
+      "question": "Saturday 8:30 AM Mass: year-round, or not in summer as the website says ('no Saturday daily Mass from May to Labor Day')?",
+      "options": [
+        {
+          "label": "Saturdays 8:30 AM, Sept 8-Apr 30",
+          "entry": {
+            "church_slug": "st-maria-goretti-hatfield",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 8,
+              "end_month": 4,
+              "end_day": 30
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Saturdays 8:30 AM year-round",
+          "entry": {
+            "church_slug": "st-maria-goretti-hatfield",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maria-goretti-hatfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 1,
+          "said": "Confession – Saturdays, 3:00-4:00PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 1,
+          "said": "Confession – Saturdays, 3:00-4:00PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 5,
+          "said": "3:00PM to 4:00PM - Confessions, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 5,
+          "said": "3:00PM to 4:00PM - Confessions, Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://stmariagoretti.net/",
+          "said": "Confessions : Saturday, 3:00PM-4:00PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Confession – Saturdays, 3:00-4:00PM or by appointment”"
+        }
+      ],
+      "rationale": "R1: the p1 schedule box of both issues and the website give Saturdays 3:00-4:00PM; the calendar places it in the Chapel, kept as a note (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 1,
+          "said": "or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 1,
+          "said": "Adoration – Mondays, 9:00AM - 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 1,
+          "said": "Adoration – Mondays, 9:00AM - 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 5,
+          "said": "9:00AM to 5:00PM – Adoration, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 5,
+          "said": "9:00AM to 5:00PM – Adoration, Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://stmariagoretti.net/",
+          "said": "Join us in the chapel for adoration every Monday following the 8:30AM Mass until 5:00PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Adoration – Mondays, 9:00AM - 5:00PM”"
+        }
+      ],
+      "rationale": "R32, R38: leaning per precedent ss-philip-and-james-exton s15 and our-lady-of-fatima-secane s11. The time is printed in the p1 Mass Schedule box of both issues, beside the church's Mass times, and the website (Pray before our Lord in the Blessed Sacrament) puts it 'in the chapel'. The parish has one church at 1601 Derstine Rd and the calendar's other venues (Education Center, Parish Center, Drexel Hall) are on its campus. No page gives the chapel's address. No exposition is claimed (R38).",
+      "question": "Is the chapel at St. Maria Goretti Church, so Monday Adoration 9:00 AM-5:00 PM goes there?",
+      "options": [
+        {
+          "label": "Mondays 9:00 AM-5:00 PM, in the chapel",
+          "entry": {
+            "church_slug": "st-maria-goretti-hatfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 5,
+          "said": "Thursday November 19 ... 6:00PM – Family Adoration & Cookout/Potluck, Chapel & Courtyard"
+        },
+        {
+          "source": "c1",
+          "bulletin": "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+          "page": 5,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p5 “6:00PM - Family Adoration & Cookout/Potluck, Chapel & Courtyard”"
+        }
+      ],
+      "rationale": "R30: a dated item after as_of (R16), printed once; 9e1633cc has no such Thursday item. Adoration is named first and in the chapel, so it starts at the printed 6:00, as st-colman-ardmore s14 and our-lady-of-fatima-secane s15 recorded a start with no end. Hard because it is combined with a cookout and the same chapel question applies; the date has passed, so it has little effect on the site.",
+      "question": "Add the Family Adoration & Cookout/Potluck, Thu Nov 19, 6:00 PM, as Adoration (no end)?",
+      "options": [
+        {
+          "label": "Nov 19 6:00 PM, no end",
+          "entry": {
+            "church_slug": "st-maria-goretti-hatfield",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-19",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Family Adoration, chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 1,
+          "said": "Holy Days – Vigil 7:00PM, 7:00AM, 8:30AM, 12:00PM, 7:00PM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 1,
+          "said": "Holy Days – Vigil 7:00PM, 7:00AM, 8:30AM, 12:00PM, 7:00PM (Vietnamese)"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing Holy Day line pins no date, and neither issue gives this year's Immaculate Conception schedule; left out like the undated holy-day lines in st-isaac-jogues-wayne s27. Update mode will read December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "838277b7",
+          "page": 1,
+          "said": "Marian Devotion – Saturdays, 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 1,
+          "said": "Marian Devotion – Saturdays, 9:00AM"
+        }
+      ],
+      "rationale": "R24: a Marian devotion is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maria-goretti-hatfield",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-09",
+        "start_time": "09:00",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Extended Adoration, chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9e1633cc",
+          "page": 7,
+          "said": "Monday, Nov. 9th: Extended Adoration (9:00 am - 7:30 pm) ... in the Chapel between extended hours"
+        }
+      ],
+      "rationale": "R16: a dated extension before as_of, out of seed scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "db006b3a9d655edea82debf5e72e4e54",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T16:47:32.152102+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "838277b7e719b1a5b3a5fa9f7e746f2f3336d145c524eb6cfa3912c55cb2954a",
+        "fetched_at": "2026-11-15T16:46:16Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "9e1633ccf0124b701dc429c27eeb3f22d9e6b935ec5d450fe683787e0d0ad67a",
+        "fetched_at": "2026-11-08T15:54:53Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.001866,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-maria-goretti-hatfield",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "8:30AM - Mass"
+          },
+          {
+            "bulletin": "B2",
+            "page": 5,
+            "quote": "8:30AM - Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-maria-goretti-hatfield",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil – 4:30PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil – 4:30PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-maria-goretti-hatfield",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-maria-goretti-hatfield",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-maria-goretti-hatfield",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-maria-goretti-hatfield",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "14:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Vietnamese",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday – 7:30AM, 9:30AM, 11:30AM, 2:30PM (Vietnamese)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-maria-goretti-hatfield",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays – 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays – 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-maria-goretti-hatfield",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays – 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays – 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-maria-goretti-hatfield",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays – 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays – 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-maria-goretti-hatfield",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays – 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays – 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-maria-goretti-hatfield",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays – 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays – 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-maria-goretti-hatfield",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:00",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Confession – Saturdays, 3:00-4:00PM or by appointment"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Confession – Saturdays, 3:00-4:00PM or by appointment"
+          },
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "3:00PM to 4:00PM - Confessions, Chapel"
+          },
+          {
+            "bulletin": "B2",
+            "page": 5,
+            "quote": "3:00PM to 4:00PM - Confessions, Chapel"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-maria-goretti-hatfield",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "17:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Adoration – Mondays, 9:00AM - 5:00PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Adoration – Mondays, 9:00AM - 5:00PM"
+          },
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "9:00AM to 5:00PM - Adoration, Chapel"
+          },
+          {
+            "bulletin": "B2",
+            "page": 5,
+            "quote": "9:00AM to 5:00PM - Adoration, Chapel"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-maria-goretti-hatfield",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-19",
+          "start_time": "18:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Family Adoration; Chapel & Courtyard",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "6:00PM - Family Adoration & Cookout/Potluck, Chapel & Courtyard"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "dfa62bc5fb03bf585cb527661b070c06ca2d3c34b2803f26295a4587abfe0c92",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o1"
+        ],
+        "slots": [
+          "s11"
+        ],
+        "opinion_said": "mass Sat 08:30 @st-maria-goretti-hatfield",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      }
+    ]
+  }
+}
