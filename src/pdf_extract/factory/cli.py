@@ -42,6 +42,7 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
+from pdf_extract.db import ensure_db
 from pdf_extract.factory import git, report
 from pdf_extract.factory.backup import backup_ledger
 from pdf_extract.factory.config import (
@@ -67,6 +68,9 @@ from pdf_extract.factory.metrics import report as metrics
 from pdf_extract.factory.secrets import load_secrets, pick
 from pdf_extract.factory.spec import STAGES
 from pdf_extract.factory.usage import COOLDOWNS
+
+# The pipeline database, as the dispatcher reads it (its default db_path).
+DB_PATH = Path("data") / "parish_events.db"
 
 Result = dict[str, Any]
 
@@ -252,6 +256,13 @@ def _run(args: argparse.Namespace) -> Result:
         ok, out = run_command("pnpm data:pull", Path.cwd(), pick(secrets, ["R2_*"]))
         if not ok:
             raise FactoryError(f"pnpm data:pull failed: {out[-500:]}")
+        ensure_db(DB_PATH)
+
+    # The published database may be a migration behind this checkout until the weekly
+    # pipeline next publishes: the second opinions read it here, not through a command
+    # that migrates it first.
+    if not stub and DB_PATH.exists():
+        ensure_db(DB_PATH)
 
     opinions = None
     if not stub:
@@ -287,7 +298,7 @@ def _opinions(ledger: Ledger, config: Any, secrets: dict[str, str]) -> Any:
     # with the .env's, and never writes there.
     set_store(CachedBlobStore(LocalBlobStore(DATA_DIR), remote_from_env(pick(secrets, ["R2_*"]))))
     caller = SeedOpinionCaller(api_key=secrets.get("OPENAI_API_KEY"))
-    return Opinions(ledger, config, db_path=Path("data") / "parish_events.db",
+    return Opinions(ledger, config, db_path=DB_PATH,
                     caller=lambda: caller)
 
 
