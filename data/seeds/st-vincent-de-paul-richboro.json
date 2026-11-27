@@ -1,0 +1,1325 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-vincent-de-paul-richboro",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:47:12Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T22:46:29Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 5 PM; Sun 7:30, 10:30, 6 PM), weekday Masses (8 AM Mon-Wed, Fri, Sat; Thu 7 PM) and Monday Adoration 8:30 AM-4 PM agree in both issues (Nov 8, Nov 15) and on the new website. Open: whether the 'Chapel' for Saturday 3:45-4:30 confession is at the church (leaning yes), and the website's undated Christmas Masses (leaning leave out).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9e1131b056c9b3d1df490d406f6afd6f438347fce3a9a24e0ddeeebd6e92c930",
+      "fetched_at": "2026-11-15T16:47:12Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "43d2035988f66b0de2cd810573b3e9007a02ebceddc6dec8879d595ed232049d",
+      "fetched_at": "2026-11-08T15:55:33Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "9e1131b056c9b3d1df490d406f6afd6f438347fce3a9a24e0ddeeebd6e92c930",
+      "bulletins": [
+        "9e1131b056c9b3d1df490d406f6afd6f438347fce3a9a24e0ddeeebd6e92c930",
+        "43d2035988f66b0de2cd810573b3e9007a02ebceddc6dec8879d595ed232049d"
+      ],
+      "cached": false,
+      "cost_usd": 0.002298,
+      "at": "2026-11-27T22:50:25.035060+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-richboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 1,
+          "said": "Weekend Masses Saturday: 5:00pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43d20359",
+          "page": 1,
+          "said": "Weekend Masses Saturday: 5:00pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21ST ... 5:00pm Mass Intention: Rebecca Haggerty"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9e1131b056c9b3d1df490d406f6afd6f438347fce3a9a24e0ddeeebd6e92c930",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday: 5:00pm Vigil”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in each week's parish schedule; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-richboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 1,
+          "said": "Sunday: 7:30am, 10:30am, & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43d20359",
+          "page": 1,
+          "said": "Sunday: 7:30am, 10:30am, & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22ND ... 7:30am / 10:30am / 6:00pm Mass Intention"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9e1131b056c9b3d1df490d406f6afd6f438347fce3a9a24e0ddeeebd6e92c930",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30am, 10:30am, & 6:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in each week's parish schedule; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-richboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 1,
+          "said": "Sunday: 7:30am, 10:30am, & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43d20359",
+          "page": 1,
+          "said": "Sunday: 7:30am, 10:30am, & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22ND ... 7:30am / 10:30am / 6:00pm Mass Intention"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9e1131b056c9b3d1df490d406f6afd6f438347fce3a9a24e0ddeeebd6e92c930",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30am, 10:30am, & 6:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in each week's parish schedule; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-richboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 1,
+          "said": "Sunday: 7:30am, 10:30am, & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43d20359",
+          "page": 1,
+          "said": "Sunday: 7:30am, 10:30am, & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22ND ... 7:30am / 10:30am / 6:00pm Mass Intention"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9e1131b056c9b3d1df490d406f6afd6f438347fce3a9a24e0ddeeebd6e92c930",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30am, 10:30am, & 6:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in each week's parish schedule; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-richboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 1,
+          "said": "Daily Mass Monday, Tuesday, Wednesday, Friday, and Saturday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43d20359",
+          "page": 1,
+          "said": "Daily Mass Monday, Tuesday, Wednesday, Friday, and Saturday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 2,
+          "said": "8:00am Mass Intention (Mon Nov 16 - Sat Nov 21)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9e1131b056c9b3d1df490d406f6afd6f438347fce3a9a24e0ddeeebd6e92c930",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday, Tuesday, Wednesday,\nFriday, and Saturday at 8:00am;”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' parish schedule; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-richboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 1,
+          "said": "Daily Mass Monday, Tuesday, Wednesday, Friday, and Saturday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43d20359",
+          "page": 1,
+          "said": "Daily Mass Monday, Tuesday, Wednesday, Friday, and Saturday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 2,
+          "said": "8:00am Mass Intention (Mon Nov 16 - Sat Nov 21)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9e1131b056c9b3d1df490d406f6afd6f438347fce3a9a24e0ddeeebd6e92c930",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday, Tuesday, Wednesday,\nFriday, and Saturday at 8:00am;”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' parish schedule; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-richboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 1,
+          "said": "Daily Mass Monday, Tuesday, Wednesday, Friday, and Saturday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43d20359",
+          "page": 1,
+          "said": "Daily Mass Monday, Tuesday, Wednesday, Friday, and Saturday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 2,
+          "said": "8:00am Mass Intention (Mon Nov 16 - Sat Nov 21)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9e1131b056c9b3d1df490d406f6afd6f438347fce3a9a24e0ddeeebd6e92c930",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday, Tuesday, Wednesday,\nFriday, and Saturday at 8:00am;”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' parish schedule; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-richboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 1,
+          "said": "Daily Mass Monday, Tuesday, Wednesday, Friday, and Saturday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43d20359",
+          "page": 1,
+          "said": "Daily Mass Monday, Tuesday, Wednesday, Friday, and Saturday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 2,
+          "said": "8:00am Mass Intention (Mon Nov 16 - Sat Nov 21)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9e1131b056c9b3d1df490d406f6afd6f438347fce3a9a24e0ddeeebd6e92c930",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday, Tuesday, Wednesday,\nFriday, and Saturday at 8:00am;”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' parish schedule; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-richboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 1,
+          "said": "Daily Mass Monday, Tuesday, Wednesday, Friday, and Saturday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43d20359",
+          "page": 1,
+          "said": "Daily Mass Monday, Tuesday, Wednesday, Friday, and Saturday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 2,
+          "said": "8:00am Mass Intention (Mon Nov 16 - Sat Nov 21)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9e1131b056c9b3d1df490d406f6afd6f438347fce3a9a24e0ddeeebd6e92c930",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday, Tuesday, Wednesday,\nFriday, and Saturday at 8:00am;”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' parish schedule; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-richboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 1,
+          "said": "Thursday at 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43d20359",
+          "page": 1,
+          "said": "Thursday at 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 2,
+          "said": "THURSDAY, NOVEMBER 19TH ... 7:00pm Mass Intention: Pedro Arevalo"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9e1131b056c9b3d1df490d406f6afd6f438347fce3a9a24e0ddeeebd6e92c930",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Thursday at 7:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' parish schedule; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-richboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 1,
+          "said": "Adoration Mondays following 8:00am Mass until Benediction at 4:00pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "43d20359",
+          "page": 1,
+          "said": "Adoration Mondays following 8:00am Mass until Benediction at 4:00pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 2,
+          "said": "8:30am - 4:00pm Adoration of the Blessed Sacrament ... 4:00pm Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43d20359",
+          "page": 2,
+          "said": "8:30am - 4:00pm Adoration of the Blessed Sacrament ... 4:00pm Benediction"
+        },
+        {
+          "source": "website",
+          "url": "https://saintvincents.net/mass-liturgy-schedule",
+          "said": "Adoration Times Monday : 8:00 AM to 4:00 PM 4:00 PM to 4:30 PM Benediction"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9e1131b056c9b3d1df490d406f6afd6f438347fce3a9a24e0ddeeebd6e92c930",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “8:30am - 4:00pm Adoration of the Blessed Sacrament\n4:00pm Benediction”"
+        }
+      ],
+      "rationale": "R1, R10: the box says after the 8:00 AM weekday Mass (POLICY: 30 minutes, 8:30) until Benediction at 4:00, and both weeks' schedules print 8:30am-4:00pm. The website's 8:00 AM start and 4:00-4:30 Benediction are taken as a looser entry on a site the parish says is still being edited (latest p5); the bulletin's clock times win.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 1,
+          "said": "Confessions Saturdays from 3:45pm until 4:30pm in Chapel, or any time by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "43d20359",
+          "page": 1,
+          "said": "Confessions Saturdays from 3:45pm until 4:30pm in Chapel, or any time by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21ST ... 3:45-4:30pm Confessions"
+        },
+        {
+          "source": "website",
+          "url": "https://saintvincents.net/mass-liturgy-schedule",
+          "said": "Confessions are offered on Saturdays from 3:45pm until 4:30pm in Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9e1131b056c9b3d1df490d406f6afd6f438347fce3a9a24e0ddeeebd6e92c930",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Saturdays from 3:45pm until 4:30pm in Chapel, or any time by appointment.”"
+        }
+      ],
+      "rationale": "R32: the time is clear in both issues and the website, but no page gives the Chapel's address. The parish has one church, the schedule box is the church's own, the parish schedule (latest p2) holds 'Creed Series ... in Chapel' among church events, and 43d20359 p10 mentions 'the entrances of both the church and chapel', so it seems to be on the same grounds. Leaning per precedent our-lady-of-fatima-secane s11 and ss-philip-and-james-exton s15.",
+      "question": "Is the 'Chapel' where Saturday confessions are heard at St. Vincent de Paul Church, so they go there?",
+      "options": [
+        {
+          "label": "Saturdays 3:45-4:30 PM at the church, in the Chapel",
+          "entry": {
+            "church_slug": "st-vincent-de-paul-richboro",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:45",
+            "end_time": "16:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 1,
+          "said": "or any time by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-richboro",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-16",
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At Brookdale"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9e1131b0",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16TH ... 1:30pm Mass at Brookdale"
+        }
+      ],
+      "rationale": "R22, POLICY Churches and chapels: Brookdale is a senior residence, not a listed church; a Mass there is off-site (and likely for residents).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintvincents.net/mass-liturgy-schedule",
+          "said": "Advent/Christmas ... Christmas Eve: 4pm Church & Hall; 9:00pm Christmas Day: 7:30 & 10:30"
+        }
+      ],
+      "rationale": "R6, R30: the website's Seasonal Liturgies section prints these with no year, beside generic 'Penance Service' and '40 Hours ... generally scheduled' text, and its Holy Day Info says 'please see the Bulletin for more detailed information'; the box (latest p1) says 'Holy Day Masses - As announced'. No read issue prints Christmas times. Leaning per precedent st-isaac-jogues-wayne s27 (undated standing Christmas box left out); update mode will read the December issues.",
+      "question": "Add the website's Christmas Masses (Dec 24 4:00 and 9:00 PM; Dec 25 7:30 and 10:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-vincent-de-paul-richboro",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Eve"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintvincents.net/mass-liturgy-schedule",
+          "said": "Christmas Eve: 4pm Church & Hall; 9:00pm"
+        }
+      ],
+      "rationale": "R6, R30: same as the 4:00 PM Christmas Eve slot; leaning per precedent st-isaac-jogues-wayne s27.",
+      "question": "Add the website's Christmas Masses (Dec 24 4:00 and 9:00 PM; Dec 25 7:30 and 10:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-vincent-de-paul-richboro",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "21:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Eve"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintvincents.net/mass-liturgy-schedule",
+          "said": "Christmas Day: 7:30 & 10:30"
+        }
+      ],
+      "rationale": "R6, R30: same as the 4:00 PM Christmas Eve slot; leaning per precedent st-isaac-jogues-wayne s27. The weekly Friday 8:00 AM slot is left alone either way (R17).",
+      "question": "Add the website's Christmas Masses (Dec 24 4:00 and 9:00 PM; Dec 25 7:30 and 10:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-vincent-de-paul-richboro",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Day"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintvincents.net/mass-liturgy-schedule",
+          "said": "Christmas Day: 7:30 & 10:30"
+        }
+      ],
+      "rationale": "R6, R30: same as the 4:00 PM Christmas Eve slot; leaning per precedent st-isaac-jogues-wayne s27.",
+      "question": "Add the website's Christmas Masses (Dec 24 4:00 and 9:00 PM; Dec 25 7:30 and 10:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-vincent-de-paul-richboro",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Day"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "28c44338bfd282c94ac75aab59e25fb0",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T22:50:25.035060+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "9e1131b056c9b3d1df490d406f6afd6f438347fce3a9a24e0ddeeebd6e92c930",
+        "fetched_at": "2026-11-15T16:47:12Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "43d2035988f66b0de2cd810573b3e9007a02ebceddc6dec8879d595ed232049d",
+        "fetched_at": "2026-11-08T15:55:33Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002298,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-vincent-de-paul-richboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday: 5:00pm Vigil"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday: 5:00pm Vigil"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-vincent-de-paul-richboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30am, 10:30am, & 6:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30am, 10:30am, & 6:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-vincent-de-paul-richboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30am, 10:30am, & 6:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30am, 10:30am, & 6:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-vincent-de-paul-richboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "18:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30am, 10:30am, & 6:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30am, 10:30am, & 6:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-vincent-de-paul-richboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday, Tuesday, Wednesday,\nFriday, and Saturday at 8:00am;"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday, Tuesday, Wednesday,\nFriday, and Saturday at 8:00am;"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-vincent-de-paul-richboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday, Tuesday, Wednesday,\nFriday, and Saturday at 8:00am;"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday, Tuesday, Wednesday,\nFriday, and Saturday at 8:00am;"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-vincent-de-paul-richboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday, Tuesday, Wednesday,\nFriday, and Saturday at 8:00am;"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday, Tuesday, Wednesday,\nFriday, and Saturday at 8:00am;"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-vincent-de-paul-richboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Thursday at 7:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Thursday at 7:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-vincent-de-paul-richboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday, Tuesday, Wednesday,\nFriday, and Saturday at 8:00am;"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday, Tuesday, Wednesday,\nFriday, and Saturday at 8:00am;"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-vincent-de-paul-richboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday, Tuesday, Wednesday,\nFriday, and Saturday at 8:00am;"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday, Tuesday, Wednesday,\nFriday, and Saturday at 8:00am;"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-vincent-de-paul-richboro",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:45",
+          "end_time": "16:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "in Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays from 3:45pm until 4:30pm in Chapel, or any time by appointment."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays from 3:45pm until 4:30pm in Chapel, or any time by appointment."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-vincent-de-paul-richboro",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Benediction",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "8:30am - 4:00pm Adoration of the Blessed Sacrament\n4:00pm Benediction"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "8:30am - 4:00pm Adoration of the Blessed Sacrament\n4:00pm Benediction"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "15dfd0e5f8eee4e2033c18a9af10bb658c544332687ab2bf4cd78939f495d2dd",
+    "differences": []
+  }
+}
