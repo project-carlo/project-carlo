@@ -1,0 +1,2092 @@
+{
+  "schema_version": 1,
+  "parish_slug": "visitation-bvm-norristown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:47:12Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T15:36:07Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Masses (Mon-Sat 8:15, Sat 4 PM, Sun 7:30/9/11) and Saturday confessions agree in both November issues, their intentions and the website. Open: whether the Adoration Chapel (behind the convent; Lower Church from Nov 29) is at the church, Sunday Adoration's end (8 vs 3 PM), two Holy Hours inside Adoration (R37), and Thanksgiving changes from the website.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+      "fetched_at": "2026-11-15T16:47:12Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a468973447e16a249d88d33957de48937fd234f33ba31eaf99bd06d63a3341d7",
+      "fetched_at": "2026-11-08T15:55:35Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+      "bulletins": [
+        "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+        "a468973447e16a249d88d33957de48937fd234f33ba31eaf99bd06d63a3341d7"
+      ],
+      "cached": false,
+      "cost_usd": 0.008206,
+      "at": "2026-11-27T15:44:15.694759+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 1,
+          "said": "MASS TIMES: Daily: Monday - Saturday - 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 1,
+          "said": "MASS TIMES: Daily: Monday - Saturday - 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 2,
+          "said": "8:15am (Mass Intentions, each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 2,
+          "said": "8:15am (Mass Intentions, each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily: Monday - Saturday - 8:15 AM”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:15am Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 1,
+          "said": "MASS TIMES: Daily: Monday - Saturday - 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 1,
+          "said": "MASS TIMES: Daily: Monday - Saturday - 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 2,
+          "said": "8:15am (Mass Intentions, each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 2,
+          "said": "8:15am (Mass Intentions, each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily: Monday - Saturday - 8:15 AM”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:15am Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 1,
+          "said": "MASS TIMES: Daily: Monday - Saturday - 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 1,
+          "said": "MASS TIMES: Daily: Monday - Saturday - 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 2,
+          "said": "8:15am (Mass Intentions, each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 2,
+          "said": "8:15am (Mass Intentions, each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily: Monday - Saturday - 8:15 AM”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:15am Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 1,
+          "said": "MASS TIMES: Daily: Monday - Saturday - 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 1,
+          "said": "MASS TIMES: Daily: Monday - Saturday - 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 2,
+          "said": "8:15am (Mass Intentions, each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 2,
+          "said": "8:15am (Mass Intentions, each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily: Monday - Saturday - 8:15 AM”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:15am Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 1,
+          "said": "MASS TIMES: Daily: Monday - Saturday - 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 1,
+          "said": "MASS TIMES: Daily: Monday - Saturday - 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 2,
+          "said": "8:15am (Mass Intentions, each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 2,
+          "said": "8:15am (Mass Intentions, each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily: Monday - Saturday - 8:15 AM”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:15am Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 1,
+          "said": "MASS TIMES: Daily: Monday - Saturday - 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 1,
+          "said": "MASS TIMES: Daily: Monday - Saturday - 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 2,
+          "said": "8:15am (Mass Intentions, each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 2,
+          "said": "8:15am (Mass Intentions, each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily: Monday - Saturday - 8:15 AM”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:15am Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 1,
+          "said": "Weekend: Vigil, Saturday 4:00 PM Lower Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 1,
+          "said": "Weekend: Vigil, Saturday 4:00 PM Lower Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 2,
+          "said": "Saturday ... 4:00pm (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 2,
+          "said": "Saturday ... 4:00pm (Mass Intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Vigil, Saturday 4:00 PM Lower Church”"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 2,
+          "said": "Sunday ... 7:30am, 9:00am, 11:00am (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 2,
+          "said": "Sunday ... 7:30am, 9:00am, 11:00am (Mass Intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday 7:30 AM, 9:00 AM, 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 2,
+          "said": "Sunday ... 7:30am, 9:00am, 11:00am (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 2,
+          "said": "Sunday ... 7:30am, 9:00am, 11:00am (Mass Intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday 7:30 AM, 9:00 AM, 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 2,
+          "said": "Sunday ... 7:30am, 9:00am, 11:00am (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 2,
+          "said": "Sunday ... 7:30am, 9:00am, 11:00am (Mass Intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday 7:30 AM, 9:00 AM, 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION: Saturdays: 8:45 AM and 3:00 to 3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION: Saturdays: 8:45 AM and 3:00 to 3:45 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturdays: 8:45 AM and 3:00 to 3:45 PM or by appointment”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; no end time printed, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "visitation-bvm-church-norristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION: Saturdays: 8:45 AM and 3:00 to 3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION: Saturdays: 8:45 AM and 3:00 to 3:45 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturdays: 8:45 AM and 3:00 to 3:45 PM or by appointment”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the website gives the same 'Saturdays: 8:45am & 3:00pm – 3:45pm'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 1,
+          "said": "or by appointment, please call 610-539-5572"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 6,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday to Friday - 9 am to 8 pm Saturday 9 am to 3 pm Sunday 12 pm to 8 pm ... our Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 6,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday to Friday - 9 am to 8 pm Saturday 9 am to 3 pm Sunday 12 pm to 8 pm ... our Adoration Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/adoration/",
+          "said": "Eucharistic Adoration is held in the Convent Chapel ... Our Adoration Chapel is located behind the convent."
+        },
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/",
+          "said": "Beginning Sunday, November 29 after the 11:00 AM Mass (12:00 PM), Adoration of the Blessed Sacrament will move from the Chapel to the Lower Church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 6,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p6 “Monday to Friday - 9 am to 8 pm”"
+        }
+      ],
+      "rationale": "R32/POLICY chapel rules: both issues print the hours (exposed: monstrance, 'Adoration of the Blessed Sacrament'); the website puts the chapel 'behind the convent', and the parish convent is listed with the parish (p2), so it looks like the same grounds at 196 N. Trooper Rd. A Nov 24 website post moves Adoration temporarily to the Lower Church of the church itself from Nov 29. Leaning include, like ss-philip-and-james-exton s15, sacred-heart-havertown s13 and st-pius-x-broomall s25. Hard because no address is printed for the convent chapel.",
+      "question": "Is the parish's Adoration Chapel (behind the convent; from Nov 29 temporarily in the Lower Church) at Visitation BVM Church, so its hours go there?",
+      "options": [
+        {
+          "label": "Mon-Fri 9 AM-8 PM, Sat 9 AM-3 PM at the church",
+          "entry": {
+            "church_slug": "visitation-bvm-church-norristown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 6,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday to Friday - 9 am to 8 pm Saturday 9 am to 3 pm Sunday 12 pm to 8 pm ... our Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 6,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday to Friday - 9 am to 8 pm Saturday 9 am to 3 pm Sunday 12 pm to 8 pm ... our Adoration Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/adoration/",
+          "said": "Eucharistic Adoration is held in the Convent Chapel ... Our Adoration Chapel is located behind the convent."
+        },
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/",
+          "said": "Beginning Sunday, November 29 after the 11:00 AM Mass (12:00 PM), Adoration of the Blessed Sacrament will move from the Chapel to the Lower Church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 6,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p6 “Monday to Friday - 9 am to 8 pm”"
+        }
+      ],
+      "rationale": "R32/POLICY chapel rules: both issues print the hours (exposed: monstrance, 'Adoration of the Blessed Sacrament'); the website puts the chapel 'behind the convent', and the parish convent is listed with the parish (p2), so it looks like the same grounds at 196 N. Trooper Rd. A Nov 24 website post moves Adoration temporarily to the Lower Church of the church itself from Nov 29. Leaning include, like ss-philip-and-james-exton s15, sacred-heart-havertown s13 and st-pius-x-broomall s25. Hard because no address is printed for the convent chapel.",
+      "question": "Is the parish's Adoration Chapel (behind the convent; from Nov 29 temporarily in the Lower Church) at Visitation BVM Church, so its hours go there?",
+      "options": [
+        {
+          "label": "Mon-Fri 9 AM-8 PM, Sat 9 AM-3 PM at the church",
+          "entry": {
+            "church_slug": "visitation-bvm-church-norristown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 6,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday to Friday - 9 am to 8 pm Saturday 9 am to 3 pm Sunday 12 pm to 8 pm ... our Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 6,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday to Friday - 9 am to 8 pm Saturday 9 am to 3 pm Sunday 12 pm to 8 pm ... our Adoration Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/adoration/",
+          "said": "Eucharistic Adoration is held in the Convent Chapel ... Our Adoration Chapel is located behind the convent."
+        },
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/",
+          "said": "Beginning Sunday, November 29 after the 11:00 AM Mass (12:00 PM), Adoration of the Blessed Sacrament will move from the Chapel to the Lower Church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 6,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p6 “Monday to Friday - 9 am to 8 pm”"
+        }
+      ],
+      "rationale": "R32/POLICY chapel rules: both issues print the hours (exposed: monstrance, 'Adoration of the Blessed Sacrament'); the website puts the chapel 'behind the convent', and the parish convent is listed with the parish (p2), so it looks like the same grounds at 196 N. Trooper Rd. A Nov 24 website post moves Adoration temporarily to the Lower Church of the church itself from Nov 29. Leaning include, like ss-philip-and-james-exton s15, sacred-heart-havertown s13 and st-pius-x-broomall s25. Hard because no address is printed for the convent chapel.",
+      "question": "Is the parish's Adoration Chapel (behind the convent; from Nov 29 temporarily in the Lower Church) at Visitation BVM Church, so its hours go there?",
+      "options": [
+        {
+          "label": "Mon-Fri 9 AM-8 PM, Sat 9 AM-3 PM at the church",
+          "entry": {
+            "church_slug": "visitation-bvm-church-norristown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 6,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday to Friday - 9 am to 8 pm Saturday 9 am to 3 pm Sunday 12 pm to 8 pm ... our Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 6,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday to Friday - 9 am to 8 pm Saturday 9 am to 3 pm Sunday 12 pm to 8 pm ... our Adoration Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/adoration/",
+          "said": "Eucharistic Adoration is held in the Convent Chapel ... Our Adoration Chapel is located behind the convent."
+        },
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/",
+          "said": "Beginning Sunday, November 29 after the 11:00 AM Mass (12:00 PM), Adoration of the Blessed Sacrament will move from the Chapel to the Lower Church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 6,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p6 “Monday to Friday - 9 am to 8 pm”"
+        }
+      ],
+      "rationale": "R32/POLICY chapel rules: both issues print the hours (exposed: monstrance, 'Adoration of the Blessed Sacrament'); the website puts the chapel 'behind the convent', and the parish convent is listed with the parish (p2), so it looks like the same grounds at 196 N. Trooper Rd. A Nov 24 website post moves Adoration temporarily to the Lower Church of the church itself from Nov 29. Leaning include, like ss-philip-and-james-exton s15, sacred-heart-havertown s13 and st-pius-x-broomall s25. Hard because no address is printed for the convent chapel.",
+      "question": "Is the parish's Adoration Chapel (behind the convent; from Nov 29 temporarily in the Lower Church) at Visitation BVM Church, so its hours go there?",
+      "options": [
+        {
+          "label": "Mon-Fri 9 AM-8 PM, Sat 9 AM-3 PM at the church",
+          "entry": {
+            "church_slug": "visitation-bvm-church-norristown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 6,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday to Friday - 9 am to 8 pm Saturday 9 am to 3 pm Sunday 12 pm to 8 pm ... our Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 6,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday to Friday - 9 am to 8 pm Saturday 9 am to 3 pm Sunday 12 pm to 8 pm ... our Adoration Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/adoration/",
+          "said": "Eucharistic Adoration is held in the Convent Chapel ... Our Adoration Chapel is located behind the convent."
+        },
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/",
+          "said": "Beginning Sunday, November 29 after the 11:00 AM Mass (12:00 PM), Adoration of the Blessed Sacrament will move from the Chapel to the Lower Church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 6,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p6 “Monday to Friday - 9 am to 8 pm”"
+        }
+      ],
+      "rationale": "R32/POLICY chapel rules: both issues print the hours (exposed: monstrance, 'Adoration of the Blessed Sacrament'); the website puts the chapel 'behind the convent', and the parish convent is listed with the parish (p2), so it looks like the same grounds at 196 N. Trooper Rd. A Nov 24 website post moves Adoration temporarily to the Lower Church of the church itself from Nov 29. Leaning include, like ss-philip-and-james-exton s15, sacred-heart-havertown s13 and st-pius-x-broomall s25. Hard because no address is printed for the convent chapel.",
+      "question": "Is the parish's Adoration Chapel (behind the convent; from Nov 29 temporarily in the Lower Church) at Visitation BVM Church, so its hours go there?",
+      "options": [
+        {
+          "label": "Mon-Fri 9 AM-8 PM, Sat 9 AM-3 PM at the church",
+          "entry": {
+            "church_slug": "visitation-bvm-church-norristown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 6,
+          "said": "Saturday 9 am to 3 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 6,
+          "said": "Saturday 9 am to 3 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/adoration/",
+          "said": "The Blessed Sacrament will be reposed every Saturday at 3:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 6,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p6 “Saturday 9 am to 3 pm”"
+        }
+      ],
+      "rationale": "R32/POLICY chapel rules: same question as the weekday hours; the website agrees Saturday exposition ends at 3 PM. Leaning include, like ss-philip-and-james-exton s15.",
+      "question": "Is the parish's Adoration Chapel (behind the convent; from Nov 29 temporarily in the Lower Church) at Visitation BVM Church, so its hours go there?",
+      "options": [
+        {
+          "label": "Mon-Fri 9 AM-8 PM, Sat 9 AM-3 PM at the church",
+          "entry": {
+            "church_slug": "visitation-bvm-church-norristown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 6,
+          "said": "Sunday 12 pm to 8 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 6,
+          "said": "Sunday 12 pm to 8 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/adoration/",
+          "said": "Sunday – 12 Noon to 8 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/",
+          "said": "ADORATION TIMES M-F – 9AM-8PM / Sat 9AM-3PM / Sun 12noon-3PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+          "page": 6,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p6 “Sunday 12 pm to 8 pm”"
+        }
+      ],
+      "rationale": "C8/R28: leaning 12-8 PM: both bulletins and the site's own Adoration page agree against the homepage's sidebar, two service-specific sources against one, as in st-laurence-upper-darby s17. Also depends on the chapel question (group chapel): leave out if the chapel is not at the church.",
+      "question": "Sunday Adoration: 12 Noon-8 PM (bulletin, Adoration page) or 12 Noon-3 PM (homepage)?",
+      "options": [
+        {
+          "label": "Sun 12 Noon-8 PM",
+          "entry": {
+            "church_slug": "visitation-bvm-church-norristown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Sun 12 Noon-3 PM",
+          "entry": {
+            "church_slug": "visitation-bvm-church-norristown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 8,
+          "said": "FIRST FRIDAY! Join us every First Friday. Hope to see you Friday, Dec. 4th in the lower Church for a Holy Hour of Reparation at 3pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 8,
+          "said": "Join us every First Friday. Hope to see you Friday, Nov. 6th in the lower Church for a Holy Hour of Reparation at 3pm."
+        }
+      ],
+      "rationale": "R37: a Holy Hour is Adoration (POLICY), named by its week in both issues at 3pm, but it falls inside the Friday 9 AM-8 PM Adoration at the same church (and from Nov 29 that Adoration is itself in the Lower Church). Leaning leave out per R37; include it if the chapel hours are left out (group chapel).",
+      "question": "Add a first-Friday 3:00 PM Holy Hour of Reparation in the Lower Church?",
+      "options": [
+        {
+          "label": "Leave out: inside Friday Adoration (R37)",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "First Fridays 3:00 PM",
+          "entry": {
+            "church_slug": "visitation-bvm-church-norristown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour of Reparation, Lower Church"
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "303d96ac",
+          "page": 8,
+          "said": "VISITATION BVM CHURCH EUCHARISTIC ADORATION PRAISE & WORSHIP WITH LIVE MUSIC 7:00-8:00PM SEPTEMBER 15 OCTOBER 20 NOVEMBER 17 DECEMBER 15 In the Lower Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4689734",
+          "page": 8,
+          "said": "VISITATION BVM CHURCH EUCHARISTIC ADORATION PRAISE & WORSHIP WITH LIVE MUSIC 7:00-8:00PM SEPTEMBER 15 OCTOBER 20 NOVEMBER 17 DECEMBER 15 In the Lower Church."
+        },
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/praise-worship/",
+          "said": "Join us on the 2nd Tuesday of every month at 7:30 PM in the Lower Church"
+        }
+      ],
+      "rationale": "POLICY rule 3: dates only, no week named, so dated; only Dec 15 is on or after as_of (R16). The website's '2nd Tuesday 7:30 PM' contradicts the printed third-Tuesday dates and looks stale. It falls inside the Tuesday 9 AM-8 PM Adoration at the same church (R37), so leaning leave out; include if the chapel hours are left out.",
+      "question": "Add the Eucharistic Adoration Praise & Worship, Tue Dec 15, 7:00-8:00 PM, Lower Church?",
+      "options": [
+        {
+          "label": "Leave out: inside Tuesday Adoration (R37)",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Dec 15 7:00-8:00 PM",
+          "entry": {
+            "church_slug": "visitation-bvm-church-norristown",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-15",
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Praise & Worship, Lower Church"
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/",
+          "said": "Happenings around Visi - Thanksgiving & First Sunday of Advent on November 25, 2026 ... Mass on Thanksgiving day will be celebrated at 9am."
+        }
+      ],
+      "rationale": "R6/R16: a dated parish post (Nov 25, 2026) names one Mass at 9am on Thanksgiving; no read bulletin covers that week. Leaning include with the 8:15 cancelled, like nativity-bvm-media s22 and our-mother-of-good-counsel-bryn-mawr s21. Hard because 'cancelled' isn't printed and the date has passed.",
+      "question": "Thanksgiving, Thu Nov 26: record a 9 AM Mass in place of the 8:15 AM, per the website's Nov 25 post?",
+      "options": [
+        {
+          "label": "Yes, 9 AM instead of 8:15 AM",
+          "entry": {
+            "church_slug": "visitation-bvm-church-norristown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "thanksgiving"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/",
+          "said": "Mass on Thanksgiving day will be celebrated at 9am."
+        }
+      ],
+      "rationale": "R6/R16: same question; 'Mass ... will be celebrated at 9am' moves the day's one Mass, so the 8:15 doesn't take place. Leaning per nativity-bvm-media s22.",
+      "question": "Thanksgiving, Thu Nov 26: record a 9 AM Mass in place of the 8:15 AM, per the website's Nov 25 post?",
+      "options": [
+        {
+          "label": "Yes, 9 AM instead of 8:15 AM",
+          "entry": {
+            "church_slug": "visitation-bvm-church-norristown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "08:15",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving: Mass at 9 AM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "thanksgiving"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://visitationbvm.org/adoration/",
+          "said": "Subs this week on November 23, 2026 ... Reminder chapel is closed on Thanksgiving Day."
+        }
+      ],
+      "rationale": "R16/R6: a dated post on the parish's Adoration page says the chapel is closed that day; a cancellation within scope must be recorded. Asked because it rests on the website and depends on the chapel question (group chapel).",
+      "question": "Record the Adoration chapel closed on Thanksgiving, Thu Nov 26?",
+      "options": [
+        {
+          "label": "Cancel Nov 26 9 AM-8 PM",
+          "entry": {
+            "church_slug": "visitation-bvm-church-norristown",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "09:00",
+            "end_time": "20:00",
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel closed on Thanksgiving"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "6a7ddff21e04a18df0470b3115d7e707",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T15:44:15.694759+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "303d96acf119a8d3b527ad7c0608958957b0e23f9eabf7fe95057ca54bf184a4",
+        "fetched_at": "2026-11-15T16:47:12Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "a468973447e16a249d88d33957de48937fd234f33ba31eaf99bd06d63a3341d7",
+        "fetched_at": "2026-11-08T15:55:35Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.008206,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: Monday - Saturday - 8:15 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: Monday - Saturday - 8:15 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: Monday - Saturday - 8:15 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: Monday - Saturday - 8:15 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: Monday - Saturday - 8:15 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: Monday - Saturday - 8:15 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: Monday - Saturday - 8:15 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: Monday - Saturday - 8:15 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: Monday - Saturday - 8:15 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: Monday - Saturday - 8:15 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: Monday - Saturday - 8:15 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: Monday - Saturday - 8:15 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Lower Church",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Vigil, Saturday 4:00 PM Lower Church"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Vigil, Saturday 4:00 PM Lower Church"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:45",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays: 8:45 AM and 3:00 to 3:45 PM or by appointment"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays: 8:45 AM and 3:00 to 3:45 PM or by appointment"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:00",
+          "end_time": "15:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays: 8:45 AM and 3:00 to 3:45 PM or by appointment"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays: 8:45 AM and 3:00 to 3:45 PM or by appointment"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Monday to Friday - 9 am to 8 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "Monday to Friday - 9 am to 8 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel; occasional Praise & Worship with live music in the Lower Church",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Monday to Friday - 9 am to 8 pm"
+          },
+          {
+            "bulletin": "B1",
+            "page": 8,
+            "quote": "Eucharistic Adoration Praise & Worship with Live Music 7:00-8:00PM NOVEMBER 17 In the Lower Church."
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "Monday to Friday - 9 am to 8 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 8,
+            "quote": "Eucharistic Adoration Praise & Worship with Live Music 7:00-8:00PM NOVEMBER 17 In the Lower Church."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Monday to Friday - 9 am to 8 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "Monday to Friday - 9 am to 8 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Monday to Friday - 9 am to 8 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "Monday to Friday - 9 am to 8 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel; Holy Hour of Reparation in the Lower Church",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Monday to Friday - 9 am to 8 pm"
+          },
+          {
+            "bulletin": "B1",
+            "page": 8,
+            "quote": "Join us every First Friday. Hope to see you Friday, Dec. 4th in the lower Church for a Holy Hour of Reparation at 3pm."
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "Monday to Friday - 9 am to 8 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 8,
+            "quote": "Join us every First Friday. Hope to see you Friday, Nov. 6th in the lower Church for a Holy Hour of Reparation at 3pm."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o18",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "15:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Saturday 9 am to 3 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "Saturday 9 am to 3 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o19",
+        "entry": {
+          "church_slug": "visitation-bvm-church-norristown",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Sunday 12 pm to 8 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "Sunday 12 pm to 8 pm"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "e67bfad9a858e082aa58161eeb475fa0040e636b1137dc1c86e4f84c25581c31",
+    "differences": []
+  }
+}
