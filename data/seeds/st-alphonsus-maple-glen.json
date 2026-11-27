@@ -1,0 +1,1385 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-alphonsus-maple-glen",
+  "status": "needs_review",
+  "as_of": "2026-11-15T15:59:27Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T16:55:22Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Alphonsus, Maple Glen. Weekend (Sat 5 PM; Sun 8, 10:15, 12), Tue-Sat 9 AM Masses and Saturday confessions agree in both bulletins' box, the intentions and the website; first-Thursday Adoration with confession 6:30-7:30 PM rests on the Nov 8 issue and homepage (R12). Open: the website-only Wednesday Adoration (summer break can't be written exactly) and the website's Dec 8 holy-day Masses.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f3b08d778b4d00370ebd54d90479f7e000e7e23078dd0915857d715cf7693c82",
+      "fetched_at": "2026-11-15T15:59:27Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9fe3fdef2296f0e2cbe230c3a4d1227adabbc6b393960a1bfe8a3ac881ee8820",
+      "fetched_at": "2026-11-08T15:28:13Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "f3b08d778b4d00370ebd54d90479f7e000e7e23078dd0915857d715cf7693c82",
+      "bulletins": [
+        "f3b08d778b4d00370ebd54d90479f7e000e7e23078dd0915857d715cf7693c82",
+        "9fe3fdef2296f0e2cbe230c3a4d1227adabbc6b393960a1bfe8a3ac881ee8820"
+      ],
+      "cached": false,
+      "cost_usd": 0.001962,
+      "at": "2026-11-27T17:02:44.029748+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-alphonsus-church-maple-glen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 1,
+          "said": "MASS SCHEDULES Saturday Vigil 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fe3fdef",
+          "page": 1,
+          "said": "MASS SCHEDULES Saturday Vigil 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 3,
+          "said": "Saturday, November 14th: ... 5:00 PM / Saturday, November 21st: ... 5:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f3b08d778b4d00370ebd54d90479f7e000e7e23078dd0915857d715cf7693c82",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil 5:00 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-alphonsus-church-maple-glen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:15 am, 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fe3fdef",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:15 am, 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 3,
+          "said": "Sunday, November 15th: 8:00 AM ... 10:15 AM ... 12:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f3b08d778b4d00370ebd54d90479f7e000e7e23078dd0915857d715cf7693c82",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday 8:00 am, 10:15 am, 12 Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-alphonsus-church-maple-glen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:15 am, 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fe3fdef",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:15 am, 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 3,
+          "said": "Sunday, November 15th: 8:00 AM ... 10:15 AM ... 12:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f3b08d778b4d00370ebd54d90479f7e000e7e23078dd0915857d715cf7693c82",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday 8:00 am, 10:15 am, 12 Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-alphonsus-church-maple-glen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:15 am, 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fe3fdef",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:15 am, 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 3,
+          "said": "Sunday, November 15th: 8:00 AM ... 10:15 AM ... 12:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f3b08d778b4d00370ebd54d90479f7e000e7e23078dd0915857d715cf7693c82",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday 8:00 am, 10:15 am, 12 Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-alphonsus-church-maple-glen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 1,
+          "said": "Tuesday – Saturday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fe3fdef",
+          "page": 1,
+          "said": "Tuesday – Saturday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 3,
+          "said": "Tuesday, November 17th: 9:00 AM ... Friday, November 20th: 9:00 AM ... Saturday, November 21st: 9:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f3b08d778b4d00370ebd54d90479f7e000e7e23078dd0915857d715cf7693c82",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday – Saturday 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; the intentions list a 9:00 AM Mass Tuesday to Saturday and none on Monday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-alphonsus-church-maple-glen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 1,
+          "said": "Tuesday – Saturday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fe3fdef",
+          "page": 1,
+          "said": "Tuesday – Saturday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 3,
+          "said": "Tuesday, November 17th: 9:00 AM ... Friday, November 20th: 9:00 AM ... Saturday, November 21st: 9:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f3b08d778b4d00370ebd54d90479f7e000e7e23078dd0915857d715cf7693c82",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday – Saturday 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; the intentions list a 9:00 AM Mass Tuesday to Saturday and none on Monday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-alphonsus-church-maple-glen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 1,
+          "said": "Tuesday – Saturday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fe3fdef",
+          "page": 1,
+          "said": "Tuesday – Saturday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 3,
+          "said": "Tuesday, November 17th: 9:00 AM ... Friday, November 20th: 9:00 AM ... Saturday, November 21st: 9:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f3b08d778b4d00370ebd54d90479f7e000e7e23078dd0915857d715cf7693c82",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday – Saturday 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; the intentions list a 9:00 AM Mass Tuesday to Saturday and none on Monday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-alphonsus-church-maple-glen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 1,
+          "said": "Tuesday – Saturday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fe3fdef",
+          "page": 1,
+          "said": "Tuesday – Saturday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 3,
+          "said": "Tuesday, November 17th: 9:00 AM ... Friday, November 20th: 9:00 AM ... Saturday, November 21st: 9:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f3b08d778b4d00370ebd54d90479f7e000e7e23078dd0915857d715cf7693c82",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday – Saturday 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; the intentions list a 9:00 AM Mass Tuesday to Saturday and none on Monday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-alphonsus-church-maple-glen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 1,
+          "said": "Tuesday – Saturday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fe3fdef",
+          "page": 1,
+          "said": "Tuesday – Saturday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 3,
+          "said": "Tuesday, November 17th: 9:00 AM ... Friday, November 20th: 9:00 AM ... Saturday, November 21st: 9:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f3b08d778b4d00370ebd54d90479f7e000e7e23078dd0915857d715cf7693c82",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday – Saturday 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; the intentions list a 9:00 AM Mass Tuesday to Saturday and none on Monday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-alphonsus-church-maple-glen",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 1,
+          "said": "CONFESSIONS Saturday Morning 9:45 am — 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fe3fdef",
+          "page": 1,
+          "said": "CONFESSIONS Saturday Morning 9:45 am — 10:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stalphonsusparish.org/confession-times",
+          "said": "Saturday : 9:45 AM to 10:30 AM Confessions begin after Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f3b08d778b4d00370ebd54d90479f7e000e7e23078dd0915857d715cf7693c82",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Morning 9:45 am — 10:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; the website gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-alphonsus-church-maple-glen",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 1,
+          "said": "Saturday Afternoon 3:30 pm — 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fe3fdef",
+          "page": 1,
+          "said": "Saturday Afternoon 3:30 pm — 4:30 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stalphonsusparish.org/confession-times",
+          "said": "3:30 PM to 4:30 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f3b08d778b4d00370ebd54d90479f7e000e7e23078dd0915857d715cf7693c82",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Afternoon 3:30 pm — 4:30 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; the website gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 1,
+          "said": "And by Appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-alphonsus-church-maple-glen",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Return to the Lord (Missionary Hub)"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9fe3fdef",
+          "page": 5,
+          "said": "Join the Missionary Hub at St. Alphonsus on the first Thursday of each month from 6:30–7:30 PM for Eucharistic Adoration, with Confession available."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stalphonsusparish.org/",
+          "said": "Join the Missionary Hub at St. Alphonsus on the first Thursday of each month from 6:30–7:30 PM for Eucharistic Adoration, with Confession available."
+        },
+        {
+          "source": "c1",
+          "bulletin": "9fe3fdef2296f0e2cbe230c3a4d1227adabbc6b393960a1bfe8a3ac881ee8820",
+          "page": 5,
+          "said": "gpt-6-luna read the same: B2 p5 “Join the Missionary Hub at St. Alphonsus on the first Thursday of each month from 6:30–7:30 PM for Eucharistic Adoration, with Confession available.”"
+        }
+      ],
+      "rationale": "R12: a named first-Thursday service (POLICY Weekly rule 2); the newest issue's week (Nov 15-22) holds only a third Thursday and the Nov 8 issue's a second, so the Nov 8 issue's p5 notice is the evidence. The homepage repeats it word for word; all are welcome.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-alphonsus-church-maple-glen",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9fe3fdef",
+          "page": 5,
+          "said": "first Thursday of each month from 6:30–7:30 PM for Eucharistic Adoration, with Confession available."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stalphonsusparish.org/",
+          "said": "first Thursday of each month from 6:30–7:30 PM for Eucharistic Adoration, with Confession available."
+        },
+        {
+          "source": "c1",
+          "bulletin": "9fe3fdef2296f0e2cbe230c3a4d1227adabbc6b393960a1bfe8a3ac881ee8820",
+          "page": 5,
+          "said": "gpt-6-luna read the same: B2 p5 “Join the Missionary Hub at St. Alphonsus on the first Thursday of each month from 6:30–7:30 PM for Eucharistic Adoration, with Confession available.”"
+        }
+      ],
+      "rationale": "R12, R10: confession offered during the first-Thursday Adoration takes its times (POLICY, Times: During Adoration). Same evidence as the Adoration slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stalphonsusparish.org/adoration",
+          "said": "Eucharistic Adoration is held on Wednesdays, beginning at 9:30 AM and concluding with Evening Prayer and Benediction at 6:00 pm. There is no Adoration of the Blessed Sacrament from mid-June through Labor Day."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stalphonsusparish.org/",
+          "said": "Adoration Times Wednesday : 9:30 AM to 6:00 PM Concludes with Benediction at 6:00 PM."
+        }
+      ],
+      "rationale": "R6, R33: neither bulletin prints it, which R6 treats as a missing mention, not a conflict; the site's Mass and confession times match both bulletins' p1 box exactly, and its homepage is current (Thanksgiving 2026 office closing, Dec 7 Moms Group, the first-Thursday notice from the Nov 8 bulletin). Leaning include per precedent st-basil-the-great-kimberton s19. Asked because the summer break (mid-June to Labor Day) can't be written exactly: the lean's season Sept 8-June 14 always starts after Labor Day and ends by mid-June, so it never claims a summer Wednesday the site rules out (cf. holy-saviour-norristown s10).",
+      "question": "Add the website's Wednesday Adoration, 9:30 AM-6:00 PM (Benediction), which pauses mid-June through Labor Day?",
+      "options": [
+        {
+          "label": "Wednesdays 9:30 AM-6:00 PM, Sept 8-June 14",
+          "entry": {
+            "church_slug": "st-alphonsus-church-maple-glen",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 8,
+              "end_month": 6,
+              "end_day": 14
+            },
+            "note": "Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Wednesdays 9:30 AM-6:00 PM year-round",
+          "entry": {
+            "church_slug": "st-alphonsus-church-maple-glen",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stalphonsusparish.org/adoration",
+          "said": "The church is open daily for personal prayer and Adoration of the Blessed Sacrament in the Tabernacle."
+        }
+      ],
+      "rationale": "R38, R26: the church being open for prayer gives no Adoration schedule and no times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stalphonsusparish.org/mass-times",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 9:00 AM 12:00 PM 7:00 PM"
+        }
+      ],
+      "rationale": "R6, R29: no read bulletin prints holy-day times. The site's Upcoming Holy Days block names only Dec 8 and its regular Mass and confession times match both bulletins exactly; the homepage is current (Thanksgiving 2026). The 9:00 AM is the weekly Tuesday Mass, so only 12:00 PM and 7:00 PM are added. Leaning include per precedent st-matthias-bala-cynwyd s17 and st-margaret-narberth s28. Hard because the block prints no year.",
+      "question": "Add the website's Immaculate Conception Masses on Tue Dec 8 at 12:00 PM and 7:00 PM?",
+      "options": [
+        {
+          "label": "Dec 8 12:00 PM and 7:00 PM",
+          "entry": {
+            "church_slug": "st-alphonsus-church-maple-glen",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "dec8"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stalphonsusparish.org/mass-times",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 9:00 AM 12:00 PM 7:00 PM"
+        }
+      ],
+      "rationale": "R6, R29: no read bulletin prints holy-day times. The site's Upcoming Holy Days block names only Dec 8 and its regular Mass and confession times match both bulletins exactly; the homepage is current (Thanksgiving 2026). The 9:00 AM is the weekly Tuesday Mass, so only 12:00 PM and 7:00 PM are added. Leaning include per precedent st-matthias-bala-cynwyd s17 and st-margaret-narberth s28. Hard because the block prints no year.",
+      "question": "Add the website's Immaculate Conception Masses on Tue Dec 8 at 12:00 PM and 7:00 PM?",
+      "options": [
+        {
+          "label": "Dec 8 12:00 PM and 7:00 PM",
+          "entry": {
+            "church_slug": "st-alphonsus-church-maple-glen",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "dec8"
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-alphonsus-church-maple-glen",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-23",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Interfaith Thanksgiving Worship Service"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 4,
+          "said": "Interfaith Thanksgiving Worship Service & Dinner ... MONDAY, NOVEMBER 23RD HERE AT SAINT ALPHONSUS SERVICE BEGINS AT 6:00 PM"
+        }
+      ],
+      "rationale": "R24, R25: an interfaith prayer service with Temple Sinai and Jarrettown UMC, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f3b08d77",
+          "page": 5,
+          "said": "bring your bread and wine to be blessed at this year's Thanksgiving Mass!"
+        }
+      ],
+      "rationale": "R26: the Thanksgiving Mass is named with no time or date in either issue or on the website; Thanksgiving (Thu Nov 26) is covered by the weekly Thursday 9:00 AM Mass, and nothing says it moves (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "51d0dd1331c4025841c4907f63b9918d",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T17:02:44.029748+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "f3b08d778b4d00370ebd54d90479f7e000e7e23078dd0915857d715cf7693c82",
+        "fetched_at": "2026-11-15T15:59:27Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "9fe3fdef2296f0e2cbe230c3a4d1227adabbc6b393960a1bfe8a3ac881ee8820",
+        "fetched_at": "2026-11-08T15:28:13Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.001962,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-alphonsus-church-maple-glen",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil 5:00 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil 5:00 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-alphonsus-church-maple-glen",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday 8:00 am, 10:15 am, 12 Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday 8:00 am, 10:15 am, 12 Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-alphonsus-church-maple-glen",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday 8:00 am, 10:15 am, 12 Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday 8:00 am, 10:15 am, 12 Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-alphonsus-church-maple-glen",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday 8:00 am, 10:15 am, 12 Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday 8:00 am, 10:15 am, 12 Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-alphonsus-church-maple-glen",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday – Saturday 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday – Saturday 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-alphonsus-church-maple-glen",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday – Saturday 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday – Saturday 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-alphonsus-church-maple-glen",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday – Saturday 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday – Saturday 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-alphonsus-church-maple-glen",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday – Saturday 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday – Saturday 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-alphonsus-church-maple-glen",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday – Saturday 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday – Saturday 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-alphonsus-church-maple-glen",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "09:45",
+          "end_time": "10:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Morning 9:45 am — 10:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Morning 9:45 am — 10:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-alphonsus-church-maple-glen",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:30",
+          "end_time": "16:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Afternoon 3:30 pm — 4:30 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Afternoon 3:30 pm — 4:30 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-alphonsus-church-maple-glen",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "18:30",
+          "end_time": "19:30",
+          "cancelled": false,
+          "weeks_of_month": [
+            "first"
+          ],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "During Adoration",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B2",
+            "page": 5,
+            "quote": "Join the Missionary Hub at St. Alphonsus on the first Thursday of each month from 6:30–7:30 PM for Eucharistic Adoration, with Confession available."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-alphonsus-church-maple-glen",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "18:30",
+          "end_time": "19:30",
+          "cancelled": false,
+          "weeks_of_month": [
+            "first"
+          ],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B2",
+            "page": 5,
+            "quote": "Join the Missionary Hub at St. Alphonsus on the first Thursday of each month from 6:30–7:30 PM for Eucharistic Adoration, with Confession available."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "d55f885eca02c6d6151a7064f1c8f2e8913a73600ae277f1109123297c54a6a1",
+    "differences": []
+  }
+}
