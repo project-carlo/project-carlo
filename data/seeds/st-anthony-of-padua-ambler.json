@@ -1,0 +1,1831 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anthony-of-padua-ambler",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:35Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T17:03:00Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches, St. Anthony (SA) and St. Joseph (SJ), sharing one bulletin; both image-only issues (Nov 8, Nov 15) print the same schedule box, matching the website. Spanish Sunday Mass alternates by week (SJ 1st/3rd, SA 2nd/4th/5th). Open: where the Spanish 12:30 PM confession is held. Holy-day line and weekday Communion Services left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+      "fetched_at": "2026-11-15T16:44:35Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "77f61fe98e7b9d7300ac2b137dc23dcf0fd9cb0da1ba147ede2580f8dc2b3063",
+      "fetched_at": "2026-11-08T15:53:35Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+      "bulletins": [
+        "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+        "77f61fe98e7b9d7300ac2b137dc23dcf0fd9cb0da1ba147ede2580f8dc2b3063"
+      ],
+      "cached": false,
+      "cost_usd": 0.002144,
+      "at": "2026-11-27T17:11:40.129482+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-church-ambler",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:45",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Saturday Vigil Confession 2:45-3:45 PM- SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Saturday Vigil Confession 2:45-3:45 PM- SJ"
+        },
+        {
+          "source": "website",
+          "url": "https://saintanthonyparish.org/sacraments/reconciliation/",
+          "said": "Saturdays at St. Joseph 2:45 to 3:45 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Confession 2:45-3:45 PM- SJ”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Saturday Vigil ... 4:00 PM- SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Saturday Vigil ... 4:00 PM- SJ"
+        },
+        {
+          "source": "c1",
+          "bulletin": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saturday Vigil\n4:00 PM- SJ”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list 4:00 PM ...SJ each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Sunday 7:30 AM- SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Sunday 7:30 AM- SJ"
+        },
+        {
+          "source": "c1",
+          "bulletin": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “7:30 AM- SJ”"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Sunday 9:00 AM- SA / 11:00 AM - SA / 5:00 PM- SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Sunday 9:00 AM- SA / 11:00 AM - SA / 5:00 PM- SA"
+        },
+        {
+          "source": "c1",
+          "bulletin": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “9:00 AM- SA”"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Sunday 9:00 AM- SA / 11:00 AM - SA / 5:00 PM- SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Sunday 9:00 AM- SA / 11:00 AM - SA / 5:00 PM- SA"
+        },
+        {
+          "source": "c1",
+          "bulletin": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “11:00 AM - SA”"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Sunday 9:00 AM- SA / 11:00 AM - SA / 5:00 PM- SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Sunday 9:00 AM- SA / 11:00 AM - SA / 5:00 PM- SA"
+        },
+        {
+          "source": "c1",
+          "bulletin": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “5:00 PM- SA”"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-church-ambler",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Confession 4:15-4:45 PM- SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Confession 4:15-4:45 PM- SA"
+        },
+        {
+          "source": "website",
+          "url": "https://saintanthonyparish.org/sacraments/reconciliation/",
+          "said": "Sundays at St. Anthony 4:15 to 4:45 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Confession 4:15-4:45 PM- SA”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Spanish 1:00 PM First & Third Sunday- SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Spanish 1:00 PM First & Third Sunday- SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 4,
+          "said": "San José: Primer y tercer domingo de cada mes a la 1:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 3,
+          "said": "Spanish Mass 1:00 PM ... Father Abel - SJ (Nov 15, third Sunday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Spanish 1:00 PM First & Third Sunday - SJ”"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly rule 2: named by its weeks in the schedule box and the Hispanic page of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Spanish 1:00 PM Second, Fourth & Fifth Sunday- SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Spanish 1:00 PM Second, Fourth & Fifth Sunday- SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 3,
+          "said": "Spanish Mass 1:00 PM ... Father Abel - SA (Nov 22, fourth Sunday)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintanthonyparish.org/parish-schedules/",
+          "said": "2nd, 4th & 5th Sunday of the Month- Spanish Language Mass – 1 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Spanish 1:00 PM Second, Fourth & Fifth Sunday- SA”"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly rule 2: named by its weeks in the schedule box and p4 of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Confession in Spanish 12:30 PM- SA & SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Confession in Spanish 12:30 PM- SA & SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 3,
+          "said": "Nov 14 & 15 Celebrants: Confession in Spanish 12:30 PM ... Father Abel - SJ"
+        }
+      ],
+      "rationale": "R30: the box names both churches for one 12:30 time; one priest (Father Abel) hears it and says the 1:00 PM Spanish Mass, at SJ on Nov 15 (third Sunday, 77f61fe9 p3) and SA on Nov 22 (fourth Sunday, latest p3), so it follows the Spanish Mass's church. The fifth-Sunday case is inferred from the Mass. No end time printed (POLICY, Times). The website doesn't mention it.",
+      "question": "Spanish Sunday confession 12:30 PM ('SA & SJ'): at the church holding that Sunday's 1:00 PM Spanish Mass, or at both churches every Sunday?",
+      "options": [
+        {
+          "label": "At the Spanish Mass's church (SJ 1st/3rd, SA 2nd/4th/5th)",
+          "entry": {
+            "church_slug": "st-joseph-church-ambler",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first",
+              "third"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish; before the 1:00 PM Spanish Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Both churches every Sunday",
+          "entry": {
+            "church_slug": "st-joseph-church-ambler",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "spconf"
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 3,
+          "said": "Nov 21 & 22 Celebrants: Confession in Spanish 12:30 PM ... Father Abel - SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Confession in Spanish 12:30 PM- SA & SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Confession in Spanish 12:30 PM- SA & SJ"
+        }
+      ],
+      "rationale": "R30: the box names both churches for one 12:30 time; one priest (Father Abel) hears it and says the 1:00 PM Spanish Mass, at SJ on Nov 15 (third Sunday, 77f61fe9 p3) and SA on Nov 22 (fourth Sunday, latest p3), so it follows the Spanish Mass's church. The fifth-Sunday case is inferred from the Mass. No end time printed (POLICY, Times). The website doesn't mention it.",
+      "question": "Spanish Sunday confession 12:30 PM ('SA & SJ'): at the church holding that Sunday's 1:00 PM Spanish Mass, or at both churches every Sunday?",
+      "options": [
+        {
+          "label": "At the Spanish Mass's church (SJ 1st/3rd, SA 2nd/4th/5th)",
+          "entry": {
+            "church_slug": "st-anthony-of-padua-church-ambler",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "second",
+              "fourth",
+              "fifth"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish; before the 1:00 PM Spanish Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Both churches every Sunday",
+          "entry": {
+            "church_slug": "st-anthony-of-padua-church-ambler",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "spconf"
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Monday, Wednesday & Friday 8:15 AM- SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Monday, Wednesday & Friday 8:15 AM- SA"
+        },
+        {
+          "source": "c1",
+          "bulletin": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday, Wednesday & Friday 8:15 AM- SA”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; intentions list 8:15 AM ...SA on Mon, Wed and Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Monday, Wednesday & Friday 8:15 AM- SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Monday, Wednesday & Friday 8:15 AM- SA"
+        },
+        {
+          "source": "c1",
+          "bulletin": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday, Wednesday & Friday 8:15 AM- SA”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; intentions list 8:15 AM ...SA on Mon, Wed and Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Monday, Wednesday & Friday 8:15 AM- SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Monday, Wednesday & Friday 8:15 AM- SA"
+        },
+        {
+          "source": "c1",
+          "bulletin": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday, Wednesday & Friday 8:15 AM- SA”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; intentions list 8:15 AM ...SA on Mon, Wed and Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-church-ambler",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "09:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Confession 8:45-9:45 AM, Monday only- SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Confession 8:45-9:45 AM, Monday only- SA"
+        },
+        {
+          "source": "website",
+          "url": "https://saintanthonyparish.org/sacraments/reconciliation/",
+          "said": "Mondays at St. Anthony after the 8:15 AM Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Confession 8:45-9:45 AM, Monday only- SA”"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the box's clock time wins over the website's 'after the 8:15 AM Mass'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Tuesday, Thursday 6:30 AM- SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Tuesday, Thursday 6:30 AM- SJ"
+        },
+        {
+          "source": "c1",
+          "bulletin": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Tuesday, Thursday 6:30 AM- SJ”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; intentions list 6:30 AM ...SJ on Tue and Thu.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Tuesday, Thursday 6:30 AM- SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Tuesday, Thursday 6:30 AM- SJ"
+        },
+        {
+          "source": "c1",
+          "bulletin": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Tuesday, Thursday 6:30 AM- SJ”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; intentions list 6:30 AM ...SJ on Tue and Thu.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Weekday Communion Service Monday, Wednesday & Friday 6:30 AM- SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Weekday Communion Service Monday, Wednesday & Friday 6:30 AM- SJ"
+        }
+      ],
+      "rationale": "R25, POLICY: a Communion Service is not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Weekday Communion Service Monday, Wednesday & Friday 6:30 AM- SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Weekday Communion Service Monday, Wednesday & Friday 6:30 AM- SJ"
+        }
+      ],
+      "rationale": "R25, POLICY: a Communion Service is not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Weekday Communion Service Monday, Wednesday & Friday 6:30 AM- SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Weekday Communion Service Monday, Wednesday & Friday 6:30 AM- SJ"
+        }
+      ],
+      "rationale": "R25, POLICY: a Communion Service is not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Weekday Communion Service Tuesday, Thursday 8:15 AM- SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Weekday Communion Service Tuesday, Thursday 8:15 AM- SA"
+        }
+      ],
+      "rationale": "R25, POLICY: a Communion Service is not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-church-ambler",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Weekday Communion Service Tuesday, Thursday 8:15 AM- SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Weekday Communion Service Tuesday, Thursday 8:15 AM- SA"
+        }
+      ],
+      "rationale": "R25, POLICY: a Communion Service is not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Holy Day of Obligation 6:30 AM- SJ / 8:15 AM & 7:00 PM- SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Holy Day of Obligation 6:30 AM- SJ / 8:15 AM & 7:00 PM- SA"
+        }
+      ],
+      "rationale": "POLICY Dates: a generic holy-day line with no dated notice pins down no day; neither issue names Dec 8. As st-isaac-jogues-wayne s27 (and unlike our-lady-of-consolation-parkesburg s12, which had a dated notice). December issues will print it for update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-church-ambler",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-06",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe celebration"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 4,
+          "said": "SAVE THE DATE OUR LADY OF GUADALUPE CELEBRATION SUNDAY, DECEMBER 6 4:00 PM PROCESSION 5:00 PM MASS 6:00 PM DINNER"
+        }
+      ],
+      "rationale": "POLICY Weekly rule 7: a feast celebrated at the regular Sunday 5:00 PM Mass at St. Anthony (flyer headed St. Anthony of Padua Parish) is covered by the weekly slot; the procession isn't a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintanthonyparish.org/parish-schedules/",
+          "said": "There will be Adoration of the Blessed Sacrament in our Adoration Chapel. Please request a code."
+        }
+      ],
+      "rationale": "R26: no hours given anywhere; neither bulletin mentions Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "75ce39e5",
+          "page": 2,
+          "said": "Sacrament of the Anointing of the Sick Second Sunday of each month after the 11:00 AM Mass in the Mary Chapel - SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77f61fe9",
+          "page": 2,
+          "said": "Sacrament of the Anointing of the Sick Second Sunday of each month after the 11:00 AM Mass in the Mary Chapel - SA"
+        }
+      ],
+      "rationale": "R24: Anointing of the Sick is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "6d074e27544ce81cfed1586b4170d282",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T17:11:40.129482+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "75ce39e5af53b87f1b5de1dca1a69b98d0d379a1f30246d890a4ba2f9bec56fc",
+        "fetched_at": "2026-11-15T16:44:35Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "77f61fe98e7b9d7300ac2b137dc23dcf0fd9cb0da1ba147ede2580f8dc2b3063",
+        "fetched_at": "2026-11-08T15:53:35Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002144,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-joseph-church-ambler",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saturday Vigil\n4:00 PM- SJ"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saturday Vigil\n4:00 PM- SJ"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-joseph-church-ambler",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "7:30 AM- SJ"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "7:30 AM- SJ"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-anthony-of-padua-church-ambler",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "9:00 AM- SA"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "9:00 AM- SA"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-anthony-of-padua-church-ambler",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "11:00 AM - SA"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "11:00 AM - SA"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-anthony-of-padua-church-ambler",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "5:00 PM- SA"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "5:00 PM- SA"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-joseph-church-ambler",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "13:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [
+            "first",
+            "third"
+          ],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spanish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Spanish 1:00 PM First & Third Sunday - SJ"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Spanish 1:00 PM First & Third Sunday - SJ"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-anthony-of-padua-church-ambler",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "13:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [
+            "second",
+            "fourth",
+            "fifth"
+          ],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spanish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Spanish 1:00 PM Second, Fourth & Fifth Sunday- SA"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Spanish 1:00 PM Second, Fourth & Fifth Sunday- SA"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-anthony-of-padua-church-ambler",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday, Wednesday & Friday 8:15 AM- SA"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday, Wednesday & Friday 8:15 AM- SA"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-anthony-of-padua-church-ambler",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday, Wednesday & Friday 8:15 AM- SA"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday, Wednesday & Friday 8:15 AM- SA"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-anthony-of-padua-church-ambler",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday, Wednesday & Friday 8:15 AM- SA"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday, Wednesday & Friday 8:15 AM- SA"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-joseph-church-ambler",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Tuesday, Thursday 6:30 AM- SJ"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Tuesday, Thursday 6:30 AM- SJ"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-joseph-church-ambler",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Tuesday, Thursday 6:30 AM- SJ"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Tuesday, Thursday 6:30 AM- SJ"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-joseph-church-ambler",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "14:45",
+          "end_time": "15:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Confession 2:45-3:45 PM- SJ"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Confession 2:45-3:45 PM- SJ"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-anthony-of-padua-church-ambler",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "16:15",
+          "end_time": "16:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Confession 4:15-4:45 PM- SA"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Confession 4:15-4:45 PM- SA"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-anthony-of-padua-church-ambler",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spanish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Confession in Spanish 12:30 PM- SA & SJ"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Confession in Spanish 12:30 PM- SA & SJ"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "st-joseph-church-ambler",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spanish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Confession in Spanish 12:30 PM- SA & SJ"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Confession in Spanish 12:30 PM- SA & SJ"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "st-anthony-of-padua-church-ambler",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:45",
+          "end_time": "09:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Confession 8:45-9:45 AM, Monday only- SA"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Confession 8:45-9:45 AM, Monday only- SA"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "e74a73e87b971cde617970b259554ea44c126820621fbe333e6f45f6a09822d6",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o15"
+        ],
+        "slots": [
+          "s11"
+        ],
+        "opinion_said": "confession Sun 12:30 @st-anthony-of-padua-church-ambler",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o16"
+        ],
+        "slots": [
+          "s10"
+        ],
+        "opinion_said": "confession Sun 12:30 @st-joseph-church-ambler",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      }
+    ]
+  }
+}
