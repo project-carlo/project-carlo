@@ -401,6 +401,20 @@ def test_check_finds_what_needs_the_database(conn, seed):
     assert any("before as_of" in p for p in problems)
 
 
+_CHAPEL = {"church_slug": SJ, "event_type": "adoration", "event_kind": "continuous",
+           "day_of_week": None, "date": None, "start_time": None, "end_time": None,
+           "access": "not_stated", "open_from": None, "open_until": None}
+
+
+def test_a_24h_chapel_has_no_date_to_be_before_as_of(conn, seed):
+    _slot(seed, "s9")["entry"].update(_CHAPEL)
+    assert not any("s9" in p for p in check_seed(conn, seed, parish_slug=PARISH))
+    # History's chapel is in scope too, so a seed without one hears of it.
+    seed["slots"] = [s for s in seed["slots"] if s["id"] != "s9"]
+    assert [row["said"] for row in diff(seed, [_history_of(_CHAPEL)])["missing"]] == [
+        event_said(_CHAPEL)]
+
+
 def _disjoint_friday_slots(seed):
     first = _slot(seed, "s1")
     first["entry"].update(event_type="adoration", day_of_week="Friday", start_time="11:30",

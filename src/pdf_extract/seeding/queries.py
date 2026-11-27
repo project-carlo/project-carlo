@@ -19,7 +19,7 @@ from pypdf import PdfReader
 
 from pdf_extract.blobstore import CachedBlobStore, bulletin_pdf_key, get_store
 from pdf_extract.bulletin_week import bulletin_week
-from pdf_extract.model import DAYS, WEEKS_OF_MONTH, is_valid_hash, normalize_as_of
+from pdf_extract.model import CONTINUOUS, DAYS, WEEKS_OF_MONTH, is_valid_hash, normalize_as_of
 from pdf_extract.seeding import page_images, textless
 from pdf_extract.seeding.checks import COVERED_DAYS, covered_weeks
 from pdf_extract.seeding.files import (
@@ -488,7 +488,8 @@ def _history_summary(past: list[dict[str, Any]], since: str | None) -> list[dict
         if b["wrong_bulletin"]:
             continue
         for ev in b["events"]:
-            if ev["event_kind"] != "weekly" and since and (ev["date"] or "") < since:
+            if ev["event_kind"] not in ("weekly", CONTINUOUS) and since \
+                    and (ev["date"] or "") < since:
                 continue
             key = tuple(ev[k] for k in ev if k not in ("page_number", "note"))
             row = seen.setdefault(key, {"event": ev, "bulletins": 0, "in": set()})
