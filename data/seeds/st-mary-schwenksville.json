@@ -1,0 +1,1738 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-schwenksville",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:27Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T16:11:18Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Mary, Schwenksville). Both November issues print the same box: Sat 4:00 PM, Sun 7:30/9:00/10:30/12:00, Mon-Sat 9:00 AM, Saturday confession 9:30-10:00 AM and 2:45-3:45 PM (the website agrees). Open: how to record the on-campus Divine Mercy perpetual-adoration chapel, public 6 AM-9 PM and scheduled adorers only overnight (group 'chapel' vs the 24-hour question).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+      "fetched_at": "2026-11-15T16:46:27Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d607fdb292112b6e5d8be2b29990bb1ee372598b9999c5fc511e3405676667fd",
+      "fetched_at": "2026-11-08T15:55:03Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+      "bulletins": [
+        "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+        "d607fdb292112b6e5d8be2b29990bb1ee372598b9999c5fc511e3405676667fd"
+      ],
+      "cached": false,
+      "cost_usd": 0.003484,
+      "at": "2026-11-27T16:18:41.283441+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 1,
+          "said": "WEEKEND MASS Anticipated Sunday Mass Saturday 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 1,
+          "said": "WEEKEND MASS Anticipated Sunday Mass Saturday 4:00pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Anticipated Sunday Mass Saturday 4:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues; the p4 intentions list a Saturday 4:00 p.m. Mass each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 1,
+          "said": "Sunday Mass 7:30 a.m. 9:00 a.m. 10:30 a.m. 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 1,
+          "said": "Sunday Mass 7:30 a.m. 9:00 a.m. 10:30 a.m. 12:00 p.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Mass 7:30 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues; the p4 intentions and ministry schedule list the same four Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 1,
+          "said": "Sunday Mass 7:30 a.m. 9:00 a.m. 10:30 a.m. 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 1,
+          "said": "Sunday Mass 7:30 a.m. 9:00 a.m. 10:30 a.m. 12:00 p.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Mass 9:00 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues; the p4 intentions and ministry schedule list the same four Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 1,
+          "said": "Sunday Mass 7:30 a.m. 9:00 a.m. 10:30 a.m. 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 1,
+          "said": "Sunday Mass 7:30 a.m. 9:00 a.m. 10:30 a.m. 12:00 p.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Mass 10:30 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues; the p4 intentions and ministry schedule list the same four Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 1,
+          "said": "Sunday Mass 7:30 a.m. 9:00 a.m. 10:30 a.m. 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 1,
+          "said": "Sunday Mass 7:30 a.m. 9:00 a.m. 10:30 a.m. 12:00 p.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Mass 12:00 p.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues; the p4 intentions and ministry schedule list the same four Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 1,
+          "said": "DAILY MASS Monday - Saturday 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 1,
+          "said": "DAILY MASS Monday - Saturday 9:00 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “DAILY MASS Monday - Saturday 9:00 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues; the p4 intentions list a 9:00 a.m. Mass Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 1,
+          "said": "DAILY MASS Monday - Saturday 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 1,
+          "said": "DAILY MASS Monday - Saturday 9:00 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “DAILY MASS Monday - Saturday 9:00 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues; the p4 intentions list a 9:00 a.m. Mass Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 1,
+          "said": "DAILY MASS Monday - Saturday 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 1,
+          "said": "DAILY MASS Monday - Saturday 9:00 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “DAILY MASS Monday - Saturday 9:00 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues; the p4 intentions list a 9:00 a.m. Mass Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 1,
+          "said": "DAILY MASS Monday - Saturday 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 1,
+          "said": "DAILY MASS Monday - Saturday 9:00 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “DAILY MASS Monday - Saturday 9:00 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues; the p4 intentions list a 9:00 a.m. Mass Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 1,
+          "said": "DAILY MASS Monday - Saturday 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 1,
+          "said": "DAILY MASS Monday - Saturday 9:00 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “DAILY MASS Monday - Saturday 9:00 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues; the p4 intentions list a 9:00 a.m. Mass Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 1,
+          "said": "DAILY MASS Monday - Saturday 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 1,
+          "said": "DAILY MASS Monday - Saturday 9:00 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “DAILY MASS Monday - Saturday 9:00 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues; the p4 intentions list a 9:00 a.m. Mass Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE Saturday Morning 9:30 am to 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE Saturday Morning 9:30 am to 10:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.churchofsaintmary.org/",
+          "said": "Sacrament of Confession - Saturdays 9:30-10AM and 2:45-3:45PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Morning 9:30 am to 10:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 confession box of both issues; the homepage (updated 11.24.26) agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:45",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 1,
+          "said": "Saturday Afternoon 2:45 pm to 3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 1,
+          "said": "Saturday Afternoon 2:45 pm to 3:45 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.churchofsaintmary.org/",
+          "said": "Sacrament of Confession - Saturdays 9:30-10AM and 2:45-3:45PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Afternoon 2:45 pm to 3:45 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 confession box of both issues; the homepage (updated 11.24.26) agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 1,
+          "said": "To schedule a confession, contact solzinski@churchofsaintmary.org"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 5,
+          "said": "Divine Mercy Holy Hour The Thursday before the first Friday of the month from 7:00 to 8:00 p.m. in the Divine Mercy Adoration Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 5,
+          "said": "Divine Mercy Holy Hour The Thursday before the first Friday of the month from 7:00 to 8:00 p.m. in the Divine Mercy Adoration Chapel."
+        }
+      ],
+      "rationale": "R33: 'the Thursday before the first Friday' is not always the first Thursday (when a month starts on Friday it falls in the previous month), and no date is printed. It also lies inside the chapel's public 6 AM-9 PM hours asked about below (R37).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-schwenksville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Charles Borromeo Seminary, Ambler"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 9,
+          "said": "Saturday, December 12, 2026 from 4:00 - 8:00 p.m. at St. Charles Borromeo Seminary, 1400 Evans Road, Ambler. The evening includes 4:00 p.m. Mass, elegant dinner reception"
+        }
+      ],
+      "rationale": "R22: a ticketed outside foundation's supper at the seminary in Ambler, not at St. Mary Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 5,
+          "said": "Adoration Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 5,
+          "said": "Adoration Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 6,
+          "said": "PERPETUAL EUCHARISTIC ADORATION ... OPEN HOURS: Saturday @ 1AM, 2AM & 3AM. Please email MK"
+        },
+        {
+          "source": "website",
+          "url": "https://www.churchofsaintmary.org/PMin/Perpet.htm",
+          "said": "In the many churches, including here at St. Mary, that have this adoration, the Eucharist is displayed in a special holder called a monstrance."
+        }
+      ],
+      "rationale": "R30, R46, R38: a perpetual-adoration chapel open around the clock only to scheduled adorers; the public may come 6 AM-9 PM. Leaning to the hours the public can come, daily 6 AM-9 PM, as bread-of-life-catholic-community recorded a chapel whose '24 hours' were for scheduled adorers. Answer together with the separate 24-hour question (lean: leave that out); choose one of the two, not both. Location: the parish has one church; p4 lists Church and Chapel memorials (sanctuary lamp, vigil light) side by side and the website calls it 'our chapel ... here at St. Mary', so it is on the campus (as ss-philip-and-james-exton s15, sacred-heart-havertown s13). No exposition claimed in the note (R38).",
+      "question": "Record the Divine Mercy Adoration Chapel's public hours, daily 6 AM-9 PM, at St. Mary Church?",
+      "options": [
+        {
+          "label": "Daily 6 AM-9 PM in the chapel",
+          "entry": {
+            "church_slug": "st-mary-church-schwenksville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 5,
+          "said": "Adoration Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 5,
+          "said": "Adoration Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 6,
+          "said": "PERPETUAL EUCHARISTIC ADORATION ... OPEN HOURS: Saturday @ 1AM, 2AM & 3AM. Please email MK"
+        },
+        {
+          "source": "website",
+          "url": "https://www.churchofsaintmary.org/PMin/Perpet.htm",
+          "said": "In the many churches, including here at St. Mary, that have this adoration, the Eucharist is displayed in a special holder called a monstrance."
+        }
+      ],
+      "rationale": "R30, R46, R38: a perpetual-adoration chapel open around the clock only to scheduled adorers; the public may come 6 AM-9 PM. Leaning to the hours the public can come, daily 6 AM-9 PM, as bread-of-life-catholic-community recorded a chapel whose '24 hours' were for scheduled adorers. Answer together with the separate 24-hour question (lean: leave that out); choose one of the two, not both. Location: the parish has one church; p4 lists Church and Chapel memorials (sanctuary lamp, vigil light) side by side and the website calls it 'our chapel ... here at St. Mary', so it is on the campus (as ss-philip-and-james-exton s15, sacred-heart-havertown s13). No exposition claimed in the note (R38).",
+      "question": "Record the Divine Mercy Adoration Chapel's public hours, daily 6 AM-9 PM, at St. Mary Church?",
+      "options": [
+        {
+          "label": "Daily 6 AM-9 PM in the chapel",
+          "entry": {
+            "church_slug": "st-mary-church-schwenksville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 5,
+          "said": "Adoration Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 5,
+          "said": "Adoration Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 6,
+          "said": "PERPETUAL EUCHARISTIC ADORATION ... OPEN HOURS: Saturday @ 1AM, 2AM & 3AM. Please email MK"
+        },
+        {
+          "source": "website",
+          "url": "https://www.churchofsaintmary.org/PMin/Perpet.htm",
+          "said": "In the many churches, including here at St. Mary, that have this adoration, the Eucharist is displayed in a special holder called a monstrance."
+        }
+      ],
+      "rationale": "R30, R46, R38: a perpetual-adoration chapel open around the clock only to scheduled adorers; the public may come 6 AM-9 PM. Leaning to the hours the public can come, daily 6 AM-9 PM, as bread-of-life-catholic-community recorded a chapel whose '24 hours' were for scheduled adorers. Answer together with the separate 24-hour question (lean: leave that out); choose one of the two, not both. Location: the parish has one church; p4 lists Church and Chapel memorials (sanctuary lamp, vigil light) side by side and the website calls it 'our chapel ... here at St. Mary', so it is on the campus (as ss-philip-and-james-exton s15, sacred-heart-havertown s13). No exposition claimed in the note (R38).",
+      "question": "Record the Divine Mercy Adoration Chapel's public hours, daily 6 AM-9 PM, at St. Mary Church?",
+      "options": [
+        {
+          "label": "Daily 6 AM-9 PM in the chapel",
+          "entry": {
+            "church_slug": "st-mary-church-schwenksville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 5,
+          "said": "Adoration Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 5,
+          "said": "Adoration Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 6,
+          "said": "PERPETUAL EUCHARISTIC ADORATION ... OPEN HOURS: Saturday @ 1AM, 2AM & 3AM. Please email MK"
+        },
+        {
+          "source": "website",
+          "url": "https://www.churchofsaintmary.org/PMin/Perpet.htm",
+          "said": "In the many churches, including here at St. Mary, that have this adoration, the Eucharist is displayed in a special holder called a monstrance."
+        }
+      ],
+      "rationale": "R30, R46, R38: a perpetual-adoration chapel open around the clock only to scheduled adorers; the public may come 6 AM-9 PM. Leaning to the hours the public can come, daily 6 AM-9 PM, as bread-of-life-catholic-community recorded a chapel whose '24 hours' were for scheduled adorers. Answer together with the separate 24-hour question (lean: leave that out); choose one of the two, not both. Location: the parish has one church; p4 lists Church and Chapel memorials (sanctuary lamp, vigil light) side by side and the website calls it 'our chapel ... here at St. Mary', so it is on the campus (as ss-philip-and-james-exton s15, sacred-heart-havertown s13). No exposition claimed in the note (R38).",
+      "question": "Record the Divine Mercy Adoration Chapel's public hours, daily 6 AM-9 PM, at St. Mary Church?",
+      "options": [
+        {
+          "label": "Daily 6 AM-9 PM in the chapel",
+          "entry": {
+            "church_slug": "st-mary-church-schwenksville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 5,
+          "said": "Adoration Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 5,
+          "said": "Adoration Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 6,
+          "said": "PERPETUAL EUCHARISTIC ADORATION ... OPEN HOURS: Saturday @ 1AM, 2AM & 3AM. Please email MK"
+        },
+        {
+          "source": "website",
+          "url": "https://www.churchofsaintmary.org/PMin/Perpet.htm",
+          "said": "In the many churches, including here at St. Mary, that have this adoration, the Eucharist is displayed in a special holder called a monstrance."
+        }
+      ],
+      "rationale": "R30, R46, R38: a perpetual-adoration chapel open around the clock only to scheduled adorers; the public may come 6 AM-9 PM. Leaning to the hours the public can come, daily 6 AM-9 PM, as bread-of-life-catholic-community recorded a chapel whose '24 hours' were for scheduled adorers. Answer together with the separate 24-hour question (lean: leave that out); choose one of the two, not both. Location: the parish has one church; p4 lists Church and Chapel memorials (sanctuary lamp, vigil light) side by side and the website calls it 'our chapel ... here at St. Mary', so it is on the campus (as ss-philip-and-james-exton s15, sacred-heart-havertown s13). No exposition claimed in the note (R38).",
+      "question": "Record the Divine Mercy Adoration Chapel's public hours, daily 6 AM-9 PM, at St. Mary Church?",
+      "options": [
+        {
+          "label": "Daily 6 AM-9 PM in the chapel",
+          "entry": {
+            "church_slug": "st-mary-church-schwenksville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 5,
+          "said": "Adoration Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 5,
+          "said": "Adoration Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 6,
+          "said": "PERPETUAL EUCHARISTIC ADORATION ... OPEN HOURS: Saturday @ 1AM, 2AM & 3AM. Please email MK"
+        },
+        {
+          "source": "website",
+          "url": "https://www.churchofsaintmary.org/PMin/Perpet.htm",
+          "said": "In the many churches, including here at St. Mary, that have this adoration, the Eucharist is displayed in a special holder called a monstrance."
+        }
+      ],
+      "rationale": "R30, R46, R38: a perpetual-adoration chapel open around the clock only to scheduled adorers; the public may come 6 AM-9 PM. Leaning to the hours the public can come, daily 6 AM-9 PM, as bread-of-life-catholic-community recorded a chapel whose '24 hours' were for scheduled adorers. Answer together with the separate 24-hour question (lean: leave that out); choose one of the two, not both. Location: the parish has one church; p4 lists Church and Chapel memorials (sanctuary lamp, vigil light) side by side and the website calls it 'our chapel ... here at St. Mary', so it is on the campus (as ss-philip-and-james-exton s15, sacred-heart-havertown s13). No exposition claimed in the note (R38).",
+      "question": "Record the Divine Mercy Adoration Chapel's public hours, daily 6 AM-9 PM, at St. Mary Church?",
+      "options": [
+        {
+          "label": "Daily 6 AM-9 PM in the chapel",
+          "entry": {
+            "church_slug": "st-mary-church-schwenksville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 5,
+          "said": "Adoration Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 5,
+          "said": "Adoration Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 6,
+          "said": "PERPETUAL EUCHARISTIC ADORATION ... OPEN HOURS: Saturday @ 1AM, 2AM & 3AM. Please email MK"
+        },
+        {
+          "source": "website",
+          "url": "https://www.churchofsaintmary.org/PMin/Perpet.htm",
+          "said": "In the many churches, including here at St. Mary, that have this adoration, the Eucharist is displayed in a special holder called a monstrance."
+        }
+      ],
+      "rationale": "R30, R46, R38: a perpetual-adoration chapel open around the clock only to scheduled adorers; the public may come 6 AM-9 PM. Leaning to the hours the public can come, daily 6 AM-9 PM, as bread-of-life-catholic-community recorded a chapel whose '24 hours' were for scheduled adorers. Answer together with the separate 24-hour question (lean: leave that out); choose one of the two, not both. Location: the parish has one church; p4 lists Church and Chapel memorials (sanctuary lamp, vigil light) side by side and the website calls it 'our chapel ... here at St. Mary', so it is on the campus (as ss-philip-and-james-exton s15, sacred-heart-havertown s13). No exposition claimed in the note (R38).",
+      "question": "Record the Divine Mercy Adoration Chapel's public hours, daily 6 AM-9 PM, at St. Mary Church?",
+      "options": [
+        {
+          "label": "Daily 6 AM-9 PM in the chapel",
+          "entry": {
+            "church_slug": "st-mary-church-schwenksville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 5,
+          "said": "Adoration Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d607fdb2",
+          "page": 5,
+          "said": "Adoration Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0adbcd5a",
+          "page": 6,
+          "said": "PERPETUAL EUCHARISTIC ADORATION ... OPEN HOURS: Saturday @ 1AM, 2AM & 3AM. Please email MK"
+        },
+        {
+          "source": "website",
+          "url": "https://www.churchofsaintmary.org/PMin/Perpet.htm",
+          "said": "In the many churches, including here at St. Mary, that have this adoration, the Eucharist is displayed in a special holder called a monstrance."
+        }
+      ],
+      "rationale": "R30, R46: the other side of group 'chapel'. R46 makes a chapel open around the clock one 24h slot, but its access values have no 'public by day, scheduled adorers only by night': 'arrangement' hides that anyone may walk in 6 AM-9 PM, and 'code-after-hours' claims a code nothing mentions. Leaning to leave this out in favour of the daily 6 AM-9 PM slots; if this one is included, drop those. Location: the parish has one church; p4 lists Church and Chapel memorials (sanctuary lamp, vigil light) side by side and the website calls it 'our chapel ... here at St. Mary', so it is on the campus (as ss-philip-and-james-exton s15, sacred-heart-havertown s13). No exposition claimed in the note (R38).",
+      "question": "Record the Divine Mercy Adoration Chapel instead as one 24-hour chapel, by arrangement?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "One 24-hour chapel, by arrangement",
+          "entry": {
+            "church_slug": "st-mary-church-schwenksville",
+            "event_type": "adoration",
+            "event_kind": "continuous",
+            "day_of_week": null,
+            "date": null,
+            "start_time": null,
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Adoration Chapel",
+            "access": "arrangement",
+            "open_from": null,
+            "open_until": null
+          }
+        }
+      ],
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "8a49f9242834f21529ad4aee624246a1",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T16:18:41.283441+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "0adbcd5ad656d6c6e40abace2c79d8237318852bc4b3e51420c4dd8f6c92f028",
+        "fetched_at": "2026-11-15T16:46:27Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "d607fdb292112b6e5d8be2b29990bb1ee372598b9999c5fc511e3405676667fd",
+        "fetched_at": "2026-11-08T15:55:03Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.003484,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-mary-church-schwenksville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Anticipated Sunday Mass Saturday 4:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Anticipated Sunday Mass Saturday 4:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-mary-church-schwenksville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Mass 7:30 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Mass 7:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-mary-church-schwenksville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Mass 9:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Mass 9:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-mary-church-schwenksville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Mass 10:30 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Mass 10:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-mary-church-schwenksville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Mass 12:00 p.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Mass 12:00 p.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-mary-church-schwenksville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "DAILY MASS Monday - Saturday 9:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "DAILY MASS Monday - Saturday 9:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-mary-church-schwenksville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "DAILY MASS Monday - Saturday 9:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "DAILY MASS Monday - Saturday 9:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-mary-church-schwenksville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "DAILY MASS Monday - Saturday 9:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "DAILY MASS Monday - Saturday 9:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-mary-church-schwenksville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "DAILY MASS Monday - Saturday 9:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "DAILY MASS Monday - Saturday 9:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-mary-church-schwenksville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "DAILY MASS Monday - Saturday 9:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "DAILY MASS Monday - Saturday 9:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-mary-church-schwenksville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "DAILY MASS Monday - Saturday 9:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "DAILY MASS Monday - Saturday 9:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-mary-church-schwenksville",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "10:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Morning 9:30 am to 10:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Morning 9:30 am to 10:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-mary-church-schwenksville",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "14:45",
+          "end_time": "15:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Afternoon 2:45 pm to 3:45 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Afternoon 2:45 pm to 3:45 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-mary-church-schwenksville",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": null,
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Divine Mercy Adoration Chapel; scheduled adorers only overnight; includes the monthly Holy Hour before the first Friday.",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+          },
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "PERPETUAL EUCHARISTIC ADORATION"
+          },
+          {
+            "bulletin": "B2",
+            "page": 5,
+            "quote": "Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "PERPETUAL EUCHARISTIC ADORATION"
+          }
+        ],
+        "problems": [
+          "unreadable day 'Daily'"
+        ]
+      }
+    ],
+    "entries_sha256": "3d00c2287e9445b03b9a5b52180d759e721d5ad9d81a82f3e3004e29d1dbfda7",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "missing",
+        "fields": [],
+        "opinion": [
+          "o14"
+        ],
+        "slots": [],
+        "opinion_said": "adoration  00:00-23:59 @st-mary-church-schwenksville",
+        "seed_said": "-",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "0adbcd5a",
+              "page": 5,
+              "said": "Our Divine Mercy Adoration Chapel is open to the general public from 6am to 9pm. Scheduled adorers only from 9pm to 6am."
+            }
+          ],
+          "why": "R46, R30: the same chapel is already asked about. s24 offers 'One 24-hour chapel, by arrangement' (adoration 24h, the R46 form of luna's 00:00-23:59 entry, which has no day), and group 'chapel' (s17-s23) offers its public hours, daily 6 AM-9 PM. The bulletin limits the overnight hours to scheduled adorers, so how to record it is the reviewer's call. Luna's note also folds in the Thursday-before-first-Friday Holy Hour, which s15 leaves out under R33.",
+          "at": "2026-11-27T16:19:09Z"
+        }
+      }
+    ]
+  }
+}
