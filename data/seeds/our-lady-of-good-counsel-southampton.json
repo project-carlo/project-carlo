@@ -1,0 +1,1373 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-good-counsel-southampton",
+  "status": "ready",
+  "as_of": "2026-11-15T16:43:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T22:33:59Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (all Masses in the Upper Church). Both image-only issues (Nov 15, Nov 8) print the same schedule box: Sat 4:30 PM, Sun 8/10/12, Mon-Fri 9 AM, Sat 8 AM, Sat confession 8:30-9:30 AM, Mon-Fri Adoration 9:30 AM-2 PM. The Monday novena's Benediction is left out for lack of its own time; holy-day times are not yet published. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+      "fetched_at": "2026-11-15T16:43:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "418009ec6d33addebd909605904a1a88c5629ce7733dc1c80780e033ee14e473",
+      "fetched_at": "2026-11-08T15:53:04Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+      "bulletins": [
+        "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+        "418009ec6d33addebd909605904a1a88c5629ce7733dc1c80780e033ee14e473"
+      ],
+      "cached": false,
+      "cost_usd": 0.00407,
+      "at": "2026-11-27T22:38:10.853083+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Sunday Mass Saturday Evening: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Sunday Mass Saturday Evening: 4:30pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saturday Evening: 4:30pm”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues (Nov 15, Nov 8) and in both weeks' intentions (p9); all Masses are in the Upper Church of the one church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Sunday: 8:00am, 10:00am, and 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Sunday: 8:00am, 10:00am, and 12:00pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday: 8:00am, 10:00am, and 12:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in both weeks' intentions (p9).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Sunday: 8:00am, 10:00am, and 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Sunday: 8:00am, 10:00am, and 12:00pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday: 8:00am, 10:00am, and 12:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in both weeks' intentions (p9).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Sunday: 8:00am, 10:00am, and 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Sunday: 8:00am, 10:00am, and 12:00pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday: 8:00am, 10:00am, and 12:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in both weeks' intentions (p9).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Daily Mass Monday—Friday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Daily Mass Monday—Friday: 9:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday—Friday: 9:00am”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues; both weeks' intentions (p9) list 9:00 AM Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Daily Mass Monday—Friday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Daily Mass Monday—Friday: 9:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday—Friday: 9:00am”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues; both weeks' intentions (p9) list 9:00 AM Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Daily Mass Monday—Friday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Daily Mass Monday—Friday: 9:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday—Friday: 9:00am”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues; both weeks' intentions (p9) list 9:00 AM Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Daily Mass Monday—Friday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Daily Mass Monday—Friday: 9:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday—Friday: 9:00am”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues; both weeks' intentions (p9) list 9:00 AM Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Daily Mass Monday—Friday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Daily Mass Monday—Friday: 9:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday—Friday: 9:00am”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues; both weeks' intentions (p9) list 9:00 AM Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Daily Mass ... Saturday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Daily Mass ... Saturday: 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saturday: 8:00am”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in both weeks' intentions (p9).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Sacrament of Penance & Reconciliation Saturdays: 8:30am-9:30am Also by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Sacrament of Penance & Reconciliation Saturdays: 8:30am-9:30am Also by appointment"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saturdays: 8:30am-9:30am Also by appointment”"
+        }
+      ],
+      "rationale": "R1: printed in both issues' schedule box with a clock time; 'by appointment' has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Eucharistic Adoration Monday through Friday: 9:30am-2:00pm Saturday & Sunday: None"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Eucharistic Adoration Monday through Friday: 9:30am-2:00pm Saturday & Sunday: None"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday through Friday: 9:30am-2:00pm”"
+        }
+      ],
+      "rationale": "R1: printed with clock times in both issues' Devotions box; one church, so it is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Eucharistic Adoration Monday through Friday: 9:30am-2:00pm Saturday & Sunday: None"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Eucharistic Adoration Monday through Friday: 9:30am-2:00pm Saturday & Sunday: None"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday through Friday: 9:30am-2:00pm”"
+        }
+      ],
+      "rationale": "R1: printed with clock times in both issues' Devotions box; one church, so it is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Eucharistic Adoration Monday through Friday: 9:30am-2:00pm Saturday & Sunday: None"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Eucharistic Adoration Monday through Friday: 9:30am-2:00pm Saturday & Sunday: None"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday through Friday: 9:30am-2:00pm”"
+        }
+      ],
+      "rationale": "R1: printed with clock times in both issues' Devotions box; one church, so it is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Eucharistic Adoration Monday through Friday: 9:30am-2:00pm Saturday & Sunday: None"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Eucharistic Adoration Monday through Friday: 9:30am-2:00pm Saturday & Sunday: None"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday through Friday: 9:30am-2:00pm”"
+        }
+      ],
+      "rationale": "R1: printed with clock times in both issues' Devotions box; one church, so it is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Eucharistic Adoration Monday through Friday: 9:30am-2:00pm Saturday & Sunday: None"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Eucharistic Adoration Monday through Friday: 9:30am-2:00pm Saturday & Sunday: None"
+        },
+        {
+          "source": "c1",
+          "bulletin": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday through Friday: 9:30am-2:00pm”"
+        }
+      ],
+      "rationale": "R1: printed with clock times in both issues' Devotions box; one church, so it is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-southampton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction after the Miraculous Medal Novena"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Miraculous Medal Novena Monday: 7:30pm followed by Benediction *"
+        },
+        {
+          "source": "agent",
+          "bulletin": "418009ec",
+          "page": 2,
+          "said": "Miraculous Medal Novena Monday: 7:30pm followed by Benediction *"
+        }
+      ],
+      "rationale": "POLICY, Final source checks: Benediction follows the 7:30 PM novena with no time of its own, and no Mass anchor lets POLICY work one out (R10 covers only Mass); the 7:30 is the novena's start. The novena itself, the Rosary and the Chaplet are devotions POLICY leaves out (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e289d5f2",
+          "page": 2,
+          "said": "Holy Days of Obligation As published in the parish bulletin"
+        }
+      ],
+      "rationale": "R26: no holy-day times are printed in either issue; Dec 8 times are not yet published. Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "bab970052d12b073140afcfd43d84863",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T22:38:10.853083+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "e289d5f2256acf2e05eee1396a1ce8db7727a2893afe50a994cb79d0aca55efa",
+        "fetched_at": "2026-11-15T16:43:10Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "418009ec6d33addebd909605904a1a88c5629ce7733dc1c80780e033ee14e473",
+        "fetched_at": "2026-11-08T15:53:04Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.00407,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "our-lady-of-good-counsel-southampton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saturday Evening: 4:30pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saturday Evening: 4:30pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "our-lady-of-good-counsel-southampton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday: 8:00am, 10:00am, and 12:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Sunday: 8:00am, 10:00am, and 12:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "our-lady-of-good-counsel-southampton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday: 8:00am, 10:00am, and 12:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Sunday: 8:00am, 10:00am, and 12:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "our-lady-of-good-counsel-southampton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday: 8:00am, 10:00am, and 12:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Sunday: 8:00am, 10:00am, and 12:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "our-lady-of-good-counsel-southampton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday—Friday: 9:00am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday—Friday: 9:00am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "our-lady-of-good-counsel-southampton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday—Friday: 9:00am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday—Friday: 9:00am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "our-lady-of-good-counsel-southampton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday—Friday: 9:00am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday—Friday: 9:00am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "our-lady-of-good-counsel-southampton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday—Friday: 9:00am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday—Friday: 9:00am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "our-lady-of-good-counsel-southampton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday—Friday: 9:00am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday—Friday: 9:00am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "our-lady-of-good-counsel-southampton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saturday: 8:00am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saturday: 8:00am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "our-lady-of-good-counsel-southampton",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "09:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saturdays: 8:30am-9:30am Also by appointment"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saturdays: 8:30am-9:30am Also by appointment"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "our-lady-of-good-counsel-southampton",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "14:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday through Friday: 9:30am-2:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday through Friday: 9:30am-2:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "our-lady-of-good-counsel-southampton",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "14:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday through Friday: 9:30am-2:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday through Friday: 9:30am-2:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "our-lady-of-good-counsel-southampton",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "14:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday through Friday: 9:30am-2:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday through Friday: 9:30am-2:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "our-lady-of-good-counsel-southampton",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "14:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday through Friday: 9:30am-2:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday through Friday: 9:30am-2:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "our-lady-of-good-counsel-southampton",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "14:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday through Friday: 9:30am-2:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday through Friday: 9:30am-2:00pm"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "bce3fb1f3010a75a18f15eb4af2d28f4063941256593633a1863bbff686afd10",
+    "differences": []
+  }
+}
