@@ -1,0 +1,1382 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-robert-bellarmine-warrington",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:58Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T22:25:51Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Robert Bellarmine, Warrington); both image-only issues (Nov 8, Nov 15) print the same p10 schedule box, which the website matches exactly. Open: Monday Adoration's 'except Summer' (lean year-round), the Nov 25 Family Thanksgiving Mass (lean include) and the Nov 21 First Penance (lean leave out).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a5f09be79b4a0c66cd7422d1118cf740ba30b3c5adae45c58d04f345532c687f",
+      "fetched_at": "2026-11-15T16:46:58Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b9869a048068d67bf2e2d07ec854ddde6c09478ad3069ec9a3f2d2a2ac99ee0c",
+      "fetched_at": "2026-11-08T15:55:23Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "a5f09be79b4a0c66cd7422d1118cf740ba30b3c5adae45c58d04f345532c687f",
+      "bulletins": [
+        "a5f09be79b4a0c66cd7422d1118cf740ba30b3c5adae45c58d04f345532c687f",
+        "b9869a048068d67bf2e2d07ec854ddde6c09478ad3069ec9a3f2d2a2ac99ee0c"
+      ],
+      "cached": false,
+      "cost_usd": 0.005637,
+      "at": "2026-11-27T22:32:30.747473+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-robert-bellarmine-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 10,
+          "said": "WEEKEND MASSES Saturday: Vigil 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9869a04",
+          "page": 10,
+          "said": "WEEKEND MASSES Saturday: Vigil 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21, 2026 4:00 P.M. - Santino Venstresca"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5f09be79b4a0c66cd7422d1118cf740ba30b3c5adae45c58d04f345532c687f",
+          "page": 9,
+          "said": "gpt-6-luna read the same: B1 p9 “Saturday: Vigil 4:00 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both issues and in the intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-robert-bellarmine-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 10,
+          "said": "Sunday: 7:00 am 9:00 am 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9869a04",
+          "page": 10,
+          "said": "Sunday: 7:00 am 9:00 am 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22, 2026 7:00 A.M. ... 9:00 A.M. ... 11:00 A.M."
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5f09be79b4a0c66cd7422d1118cf740ba30b3c5adae45c58d04f345532c687f",
+          "page": 9,
+          "said": "gpt-6-luna read the same: B1 p9 “Sunday: 7:00 am\n9:00 am\n11:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both issues and in the intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-robert-bellarmine-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 10,
+          "said": "Sunday: 7:00 am 9:00 am 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9869a04",
+          "page": 10,
+          "said": "Sunday: 7:00 am 9:00 am 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22, 2026 7:00 A.M. ... 9:00 A.M. ... 11:00 A.M."
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5f09be79b4a0c66cd7422d1118cf740ba30b3c5adae45c58d04f345532c687f",
+          "page": 9,
+          "said": "gpt-6-luna read the same: B1 p9 “Sunday: 7:00 am\n9:00 am\n11:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both issues and in the intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-robert-bellarmine-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 10,
+          "said": "Sunday: 7:00 am 9:00 am 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9869a04",
+          "page": 10,
+          "said": "Sunday: 7:00 am 9:00 am 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22, 2026 7:00 A.M. ... 9:00 A.M. ... 11:00 A.M."
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5f09be79b4a0c66cd7422d1118cf740ba30b3c5adae45c58d04f345532c687f",
+          "page": 9,
+          "said": "gpt-6-luna read the same: B1 p9 “Sunday: 7:00 am\n9:00 am\n11:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both issues and in the intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-robert-bellarmine-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 10,
+          "said": "WEEKDAY MASSES 9:00 am - Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9869a04",
+          "page": 10,
+          "said": "WEEKDAY MASSES 9:00 am - Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... FRIDAY, NOVEMBER 20, 2026 9:00 A.M."
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5f09be79b4a0c66cd7422d1118cf740ba30b3c5adae45c58d04f345532c687f",
+          "page": 9,
+          "said": "gpt-6-luna read the same: B1 p9 “9:00 am - Monday-Friday”"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both issues and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-robert-bellarmine-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 10,
+          "said": "WEEKDAY MASSES 9:00 am - Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9869a04",
+          "page": 10,
+          "said": "WEEKDAY MASSES 9:00 am - Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... FRIDAY, NOVEMBER 20, 2026 9:00 A.M."
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5f09be79b4a0c66cd7422d1118cf740ba30b3c5adae45c58d04f345532c687f",
+          "page": 9,
+          "said": "gpt-6-luna read the same: B1 p9 “9:00 am - Monday-Friday”"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both issues and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-robert-bellarmine-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 10,
+          "said": "WEEKDAY MASSES 9:00 am - Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9869a04",
+          "page": 10,
+          "said": "WEEKDAY MASSES 9:00 am - Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... FRIDAY, NOVEMBER 20, 2026 9:00 A.M."
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5f09be79b4a0c66cd7422d1118cf740ba30b3c5adae45c58d04f345532c687f",
+          "page": 9,
+          "said": "gpt-6-luna read the same: B1 p9 “9:00 am - Monday-Friday”"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both issues and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-robert-bellarmine-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 10,
+          "said": "WEEKDAY MASSES 9:00 am - Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9869a04",
+          "page": 10,
+          "said": "WEEKDAY MASSES 9:00 am - Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... FRIDAY, NOVEMBER 20, 2026 9:00 A.M."
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5f09be79b4a0c66cd7422d1118cf740ba30b3c5adae45c58d04f345532c687f",
+          "page": 9,
+          "said": "gpt-6-luna read the same: B1 p9 “9:00 am - Monday-Friday”"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both issues and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-robert-bellarmine-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 10,
+          "said": "WEEKDAY MASSES 9:00 am - Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9869a04",
+          "page": 10,
+          "said": "WEEKDAY MASSES 9:00 am - Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... FRIDAY, NOVEMBER 20, 2026 9:00 A.M."
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5f09be79b4a0c66cd7422d1118cf740ba30b3c5adae45c58d04f345532c687f",
+          "page": 9,
+          "said": "gpt-6-luna read the same: B1 p9 “9:00 am - Monday-Friday”"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both issues and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-robert-bellarmine-warrington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 10,
+          "said": "CONFESSIONS Saturday: 3:00 to 3:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9869a04",
+          "page": 10,
+          "said": "CONFESSIONS Saturday: 3:00 to 3:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 4,
+          "said": "Sat November 21, 2026 ... 3pm Confessions ~ Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5f09be79b4a0c66cd7422d1118cf740ba30b3c5adae45c58d04f345532c687f",
+          "page": 9,
+          "said": "gpt-6-luna read the same: B1 p9 “Saturday: 3:00 to 3:30 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both issues; the parish's facility calendar (p4) places it in the chapel. The website gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-robert-bellarmine-warrington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": "10:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 10,
+          "said": "Sundays: 10:15 to 10:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9869a04",
+          "page": 10,
+          "said": "Sundays: 10:15 to 10:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 4,
+          "said": "10:15am Confessions ~ Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9869a04",
+          "page": 4,
+          "said": "10:15am Confessions ~ Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5f09be79b4a0c66cd7422d1118cf740ba30b3c5adae45c58d04f345532c687f",
+          "page": 9,
+          "said": "gpt-6-luna read the same: B1 p9 “Sundays: 10:15 to 10:45am”"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both issues; the facility calendar (p4) places it in the chapel. The website gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 10,
+          "said": "EUCHARISTIC ADORATION Adoration - Each Monday (except Summer & National Holidays) after the 9 am Mass, with simple Reposition (No Benediction) at 4 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9869a04",
+          "page": 10,
+          "said": "EUCHARISTIC ADORATION Adoration - Each Monday (except Summer & National Holidays) after the 9 am Mass, with simple Reposition (No Benediction) at 4 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 4,
+          "said": "Mon November 16, 2026 9:30am Adoration ~ Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9869a04",
+          "page": 4,
+          "said": "Mon November 9, 2026 9:30am Extended Adoration until 7pm ~ Chapel"
+        }
+      ],
+      "rationale": "POLICY, Times: 'after' the 9 AM weekday Mass is 9:30 AM, which the p4 calendar also prints; reposition at 4 PM ends it. 'Summer' names no months, so a season would be invented (R15, R33); leaning per precedent st-rose-of-lima-north-wales s10 and holy-saviour-norristown s10 (year-round). Monday national holidays can't be projected as dates (POLICY, Dates); none falls before mid-January. The chapel is in the parish's own facility calendar beside Church and Meeting Room; the parish has one church (leaning per ss-philip-and-james-exton s15, our-lady-of-fatima-secane s11). The Nov 9 extension to 7 PM was one dated occasion, before as_of. No exposition wording beyond 'Reposition'.",
+      "question": "Monday Adoration (after the 9 AM Mass to 4 PM reposition, 'except Summer & National Holidays'): record it year-round?",
+      "options": [
+        {
+          "label": "Mondays 9:30 AM-4:00 PM, year-round",
+          "entry": {
+            "church_slug": "st-robert-bellarmine-warrington",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel; simple Reposition at 4 PM, no Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 5,
+          "said": "UPCOMING FAMILY GATHERINGS ... Wednesday, November 25th 7PM Family Thanksgiving Mass - bring a nonperishable item for the poor."
+        },
+        {
+          "source": "c1",
+          "bulletin": "a5f09be79b4a0c66cd7422d1118cf740ba30b3c5adae45c58d04f345532c687f",
+          "page": 4,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p4 “Wednesday, November 25th 7PM\nFamily Thanksgiving Mass\n- bring a nonperishable item for the poor.”"
+        }
+      ],
+      "rationale": "R30: printed in the religious-education program's family gatherings box with no church named (one church) and not repeated elsewhere; nothing limits it to program families (POLICY: open unless limited). Leaning per precedent st-joseph-spring-city s21 and st-genevieve-flourtown s16. Hard because it is a program gathering, not in the schedule box.",
+      "question": "Add the Family Thanksgiving Mass, Wed Nov 25, 7:00 PM?",
+      "options": [
+        {
+          "label": "Nov 25 7:00 PM",
+          "entry": {
+            "church_slug": "st-robert-bellarmine-warrington",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-25",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Family Thanksgiving Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 5,
+          "said": "1st Penance - Saturday, Nov. 21st at 10:30 AM in church - more info to come"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 4,
+          "said": "10:30am 1st Penance ~ Church"
+        }
+      ],
+      "rationale": "R30: the children's First Penance for the PREP program, not a time open to all penitents; leaning per precedent st-luke-the-evangelist-glenside s25.",
+      "question": "Add First Penance, Sat Nov 21, 10:30 AM in church, as a confession?",
+      "options": [
+        {
+          "label": "Nov 21 10:30 AM",
+          "entry": {
+            "church_slug": "st-robert-bellarmine-warrington",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-21",
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "First Penance"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-robert-bellarmine-warrington",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-16",
+        "start_time": "17:00",
+        "end_time": "17:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Penance Refresher Class"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 5,
+          "said": "1st Penance ReFresher Class (Summer) Monday, November 16 from 5:00-5:45 PM in church"
+        }
+      ],
+      "rationale": "R24: a preparation class for children, not a celebration of the sacrament.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5f09be7",
+          "page": 10,
+          "said": "HOLY DAYS (Except Christmas & New Years) 7:00 am & 9:00 am 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9869a04",
+          "page": 10,
+          "said": "HOLY DAYS (Except Christmas & New Years) 7:00 am & 9:00 am 7:00 pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no dated notice; no read issue names Dec 8. Left out like st-isaac-jogues-wayne s27; update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintrobertwarrington.org/ministries/service-outreach/mass-at-neshaminy-manor/",
+          "said": "On the second Monday of each month, members of St. Robert Bellarmine parish community gather to celebrate Mass with the residents of Neshaminy Manor Nursing Home in Warrington."
+        }
+      ],
+      "rationale": "R22, R26: a nursing home elsewhere, not on the church list, and no time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintrobertwarrington.org/",
+          "said": "Confessions Saturday: 3:00-3:30pm Sundays: 10:15-10:45am Anytime by appointment"
+        }
+      ],
+      "rationale": "R26: confession 'anytime by appointment' has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "f84967e8c0e257ace5d0c1caa0004a6b",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T22:32:30.747473+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "a5f09be79b4a0c66cd7422d1118cf740ba30b3c5adae45c58d04f345532c687f",
+        "fetched_at": "2026-11-15T16:46:58Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "b9869a048068d67bf2e2d07ec854ddde6c09478ad3069ec9a3f2d2a2ac99ee0c",
+        "fetched_at": "2026-11-08T15:55:23Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.005637,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-robert-bellarmine-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "Saturday: Vigil 4:00 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "Saturday: Vigil 4:00 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-robert-bellarmine-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "Sunday: 7:00 am\n9:00 am\n11:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "Sunday: 7:00 am\n9:00 am\n11:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-robert-bellarmine-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "Sunday: 7:00 am\n9:00 am\n11:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "Sunday: 7:00 am\n9:00 am\n11:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-robert-bellarmine-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "Sunday: 7:00 am\n9:00 am\n11:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "Sunday: 7:00 am\n9:00 am\n11:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-robert-bellarmine-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "9:00 am - Monday-Friday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "9:00 am - Monday-Friday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-robert-bellarmine-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "9:00 am - Monday-Friday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "9:00 am - Monday-Friday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-robert-bellarmine-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "9:00 am - Monday-Friday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "9:00 am - Monday-Friday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-robert-bellarmine-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "9:00 am - Monday-Friday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "9:00 am - Monday-Friday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-robert-bellarmine-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "9:00 am - Monday-Friday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "9:00 am - Monday-Friday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-robert-bellarmine-warrington",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:00",
+          "end_time": "15:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "Saturday: 3:00 to 3:30 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "Saturday: 3:00 to 3:30 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-robert-bellarmine-warrington",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:15",
+          "end_time": "10:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "Sundays: 10:15 to 10:45am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "Sundays: 10:15 to 10:45am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-robert-bellarmine-warrington",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-25",
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Family Thanksgiving Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "Wednesday, November 25th 7PM\nFamily Thanksgiving Mass\n- bring a nonperishable item for the poor."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-robert-bellarmine-warrington",
+          "event_type": "confession",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-21",
+          "start_time": "10:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "First Penance",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "1st Penance - Saturday, Nov. 21st at 10:30 AM in church - more info to come"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-robert-bellarmine-warrington",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-16",
+          "start_time": "09:30",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "9:30am Adoration ~ Chapel"
+          },
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "Adoration - Each Monday (except Summer & National Holidays) after the 9 am Mass, with simple Reposition (No Benediction) at 4 pm."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "782d840b6b5eec35b345e65f049fe38ed942a238ff4af124b6e892f8077aeabd",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o13"
+        ],
+        "slots": [
+          "s14"
+        ],
+        "opinion_said": "confession 2026-11-21 10:30 @st-robert-bellarmine-warrington",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "missing",
+        "fields": [],
+        "opinion": [
+          "o14"
+        ],
+        "slots": [],
+        "opinion_said": "adoration 2026-11-16 09:30-16:00 @st-robert-bellarmine-warrington",
+        "seed_said": "-",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "a5f09be7",
+              "page": 4,
+              "said": "Mon November 16, 2026 9:30am Adoration ~ Chapel"
+            }
+          ],
+          "why": "POLICY, Weekly or dated rule 6: Nov 16 is one week of the weekly Monday Adoration (p10 box 'Each Monday ... after the 9 am Mass ... Reposition at 4 pm'), which question s12 covers as Mondays 9:30 AM-4:00 PM; a dated duplicate is not recorded.",
+          "at": "2026-11-27T22:32:49Z"
+        }
+      }
+    ]
+  }
+}
