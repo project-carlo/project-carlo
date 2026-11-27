@@ -1,0 +1,1251 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-warrington",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:03Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T22:21:32Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Mass and confession times agree in both issues read (Nov 1 and Nov 8; the newest fetch is the Nov 8 issue) and on the website. Open: the Saturday morning confession's end (bulletin 9:30, website 9:00) and a Thanksgiving 9 AM Mass inferred from the choir schedule. Holy-day line left out (no dated notice).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6efc55d96a58b5b96bb025f601ab6e68a89bd9f7ee6a8eff98342bc99d7a4a68",
+      "fetched_at": "2026-11-15T16:46:03Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3c1143c4cdeb7baf71c0880568fc1d2747154e3b6c9bcc35925733e536db71f4",
+      "fetched_at": "2026-11-08T15:54:44Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "6efc55d96a58b5b96bb025f601ab6e68a89bd9f7ee6a8eff98342bc99d7a4a68",
+      "bulletins": [
+        "6efc55d96a58b5b96bb025f601ab6e68a89bd9f7ee6a8eff98342bc99d7a4a68",
+        "3c1143c4cdeb7baf71c0880568fc1d2747154e3b6c9bcc35925733e536db71f4"
+      ],
+      "cached": false,
+      "cost_usd": 0.002103,
+      "at": "2026-11-27T22:25:27.744869+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 7,
+          "said": "DailyMass(Mon. – Sat.) 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c1143c4",
+          "page": 7,
+          "said": "DailyMass(Mon. – Sat.) 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 5,
+          "said": "Monday 8:00 am ... Saturday 8:00 am (Mass Intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjosephchurch.us/mass-schedule/",
+          "said": "Daily Mass: 8am (Monday thru Saturday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6efc55d96a58b5b96bb025f601ab6e68a89bd9f7ee6a8eff98342bc99d7a4a68",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “Daily Mass (Mon. – Sat.) 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 7,
+          "said": "DailyMass(Mon. – Sat.) 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c1143c4",
+          "page": 7,
+          "said": "DailyMass(Mon. – Sat.) 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 5,
+          "said": "Monday 8:00 am ... Saturday 8:00 am (Mass Intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjosephchurch.us/mass-schedule/",
+          "said": "Daily Mass: 8am (Monday thru Saturday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6efc55d96a58b5b96bb025f601ab6e68a89bd9f7ee6a8eff98342bc99d7a4a68",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “Daily Mass (Mon. – Sat.) 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 7,
+          "said": "DailyMass(Mon. – Sat.) 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c1143c4",
+          "page": 7,
+          "said": "DailyMass(Mon. – Sat.) 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 5,
+          "said": "Monday 8:00 am ... Saturday 8:00 am (Mass Intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjosephchurch.us/mass-schedule/",
+          "said": "Daily Mass: 8am (Monday thru Saturday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6efc55d96a58b5b96bb025f601ab6e68a89bd9f7ee6a8eff98342bc99d7a4a68",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “Daily Mass (Mon. – Sat.) 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 7,
+          "said": "DailyMass(Mon. – Sat.) 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c1143c4",
+          "page": 7,
+          "said": "DailyMass(Mon. – Sat.) 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 5,
+          "said": "Monday 8:00 am ... Saturday 8:00 am (Mass Intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjosephchurch.us/mass-schedule/",
+          "said": "Daily Mass: 8am (Monday thru Saturday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6efc55d96a58b5b96bb025f601ab6e68a89bd9f7ee6a8eff98342bc99d7a4a68",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “Daily Mass (Mon. – Sat.) 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 7,
+          "said": "DailyMass(Mon. – Sat.) 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c1143c4",
+          "page": 7,
+          "said": "DailyMass(Mon. – Sat.) 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 5,
+          "said": "Monday 8:00 am ... Saturday 8:00 am (Mass Intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjosephchurch.us/mass-schedule/",
+          "said": "Daily Mass: 8am (Monday thru Saturday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6efc55d96a58b5b96bb025f601ab6e68a89bd9f7ee6a8eff98342bc99d7a4a68",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “Daily Mass (Mon. – Sat.) 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 7,
+          "said": "DailyMass(Mon. – Sat.) 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c1143c4",
+          "page": 7,
+          "said": "DailyMass(Mon. – Sat.) 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 5,
+          "said": "Monday 8:00 am ... Saturday 8:00 am (Mass Intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjosephchurch.us/mass-schedule/",
+          "said": "Daily Mass: 8am (Monday thru Saturday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6efc55d96a58b5b96bb025f601ab6e68a89bd9f7ee6a8eff98342bc99d7a4a68",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “Daily Mass (Mon. – Sat.) 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 7,
+          "said": "SaturdayVigil Mass 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c1143c4",
+          "page": 7,
+          "said": "SaturdayVigil Mass 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 5,
+          "said": "Saturday Nov 14 4:00 pm People of theParish"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6efc55d96a58b5b96bb025f601ab6e68a89bd9f7ee6a8eff98342bc99d7a4a68",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “Saturday Vigil Mass      4:00 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 7,
+          "said": "SundayMasses7:30 AM |9:30 AM |11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c1143c4",
+          "page": 7,
+          "said": "SundayMasses7:30 AM |9:30 AM |11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 5,
+          "said": "Sunday Nov 15 7:30 am ... 9:30 am ... 11:30am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6efc55d96a58b5b96bb025f601ab6e68a89bd9f7ee6a8eff98342bc99d7a4a68",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “Sunday Masses     7:30 AM | 9:30 AM | 11:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 7,
+          "said": "SundayMasses7:30 AM |9:30 AM |11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c1143c4",
+          "page": 7,
+          "said": "SundayMasses7:30 AM |9:30 AM |11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 5,
+          "said": "Sunday Nov 15 7:30 am ... 9:30 am ... 11:30am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6efc55d96a58b5b96bb025f601ab6e68a89bd9f7ee6a8eff98342bc99d7a4a68",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “Sunday Masses     7:30 AM | 9:30 AM | 11:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-warrington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 7,
+          "said": "SundayMasses7:30 AM |9:30 AM |11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c1143c4",
+          "page": 7,
+          "said": "SundayMasses7:30 AM |9:30 AM |11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 5,
+          "said": "Sunday Nov 15 7:30 am ... 9:30 am ... 11:30am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6efc55d96a58b5b96bb025f601ab6e68a89bd9f7ee6a8eff98342bc99d7a4a68",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “Sunday Masses     7:30 AM | 9:30 AM | 11:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-warrington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 7,
+          "said": "Confessions: Saturdays 8:30 – 9:30 AM |3:00 – 3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c1143c4",
+          "page": 7,
+          "said": "Confessions: Saturdays 8:30 – 9:30 AM |3:00 – 3:45 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjosephchurch.us/mass-schedule/",
+          "said": "Confessions: Saturday 8:30 am to 9:00 am and 3:00 pm to 3:45 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6efc55d96a58b5b96bb025f601ab6e68a89bd9f7ee6a8eff98342bc99d7a4a68",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “Saturdays 8:30 – 9:30 AM | 3:00 – 3:45 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website gives the same afternoon times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 7,
+          "said": "Confessions: Saturdays 8:30 – 9:30 AM |3:00 – 3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c1143c4",
+          "page": 7,
+          "said": "Confessions: Saturdays 8:30 – 9:30 AM |3:00 – 3:45 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjosephchurch.us/mass-schedule/",
+          "said": "Confessions: Saturday 8:30 am to 9:00 am and 3:00 pm to 3:45 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "6efc55d96a58b5b96bb025f601ab6e68a89bd9f7ee6a8eff98342bc99d7a4a68",
+          "page": 7,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p7 “Saturdays 8:30 – 9:30 AM | 3:00 – 3:45 PM”"
+        }
+      ],
+      "rationale": "R28/R6: a real conflict between the bulletin and the website on the end time. Leaning per precedent annunciation-bvm-havertown s9 and st-agnes-sellersville s12: both issues' schedule box print 8:30-9:30, and the bulletin is the weekly-edited source; the website's page also adds a 5:30 PM holy-day vigil the bulletin lacks, so the two are not kept in step.",
+      "question": "Saturday morning confession: end at 9:30 AM (bulletin) or 9:00 AM (website)?",
+      "options": [
+        {
+          "label": "Saturdays 8:30-9:30 AM (bulletin)",
+          "entry": {
+            "church_slug": "st-joseph-warrington",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Saturdays 8:30-9:00 AM (website)",
+          "entry": {
+            "church_slug": "st-joseph-warrington",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 4,
+          "said": "ChoirSchedule AdultChoir ... November 26 ~9:00 AM (Thanksgiving) / Children's Choir ... November 26 ~9:00 AM (Thanksgiving)"
+        }
+      ],
+      "rationale": "R30: only the choir schedule gives it; it doesn't say 'Mass', but both choirs sing at 9:00 AM on Thanksgiving, which reads as a Thanksgiving Mass in place of the usual 8:00 (as nativity-bvm-media s22 recorded a 9 AM Thanksgiving Mass). No cancellation of the 8:00 AM weekday Mass is stated, so it is left alone (R17). The date has passed, so it has little effect on the site.",
+      "question": "Add a Thanksgiving Mass, Thu Nov 26, 9:00 AM (from the choir schedule)?",
+      "options": [
+        {
+          "label": "Nov 26 9:00 AM",
+          "entry": {
+            "church_slug": "st-joseph-warrington",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 7,
+          "said": "Holy DayMasses: 8:00 AM |10:00 AM |7:00 PM (Christmas and NewYear's havespecial schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c1143c4",
+          "page": 7,
+          "said": "Holy DayMasses: 8:00 AM |10:00 AM |7:00 PM (Christmas and NewYear's havespecial schedule)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjosephchurch.us/mass-schedule/",
+          "said": "Holy Days: 5:30pm Vigil, 8am, 10am, 7pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line pins down no date, and no read issue prints a dated notice for Dec 8 (as st-isaac-jogues-wayne s27; unlike our-lady-of-consolation-parkesburg s12). Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 1,
+          "said": "November 08, 2026 ~Sunday 12:30 PM Expositionofthe Blessed Sacrament 6:00 PM Benediction ... November 10 ... 6:00 PM ClosingofForty Hours"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c1143c4",
+          "page": 6,
+          "said": "Monday, November 2: Adoration~ 8:30 AM"
+        }
+      ],
+      "rationale": "R16: the Forty Hours (Nov 8-10) and the Nov 2 Adoration are dated before as_of; neither is named by a week of the month (R13).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6efc55d9",
+          "page": 4,
+          "said": "Communion Service@ Pathways ~2:00 PM; Communion Service@ Christ Home ~2:30 PM; Communion Service@ Luther Woods ~1:30 PM"
+        }
+      ],
+      "rationale": "R24/R22: Communion Services are not Masses (POLICY), and they are held at care homes away from the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "c43269b1b37ae2b983da6e198000b29e",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T22:25:27.744869+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "6efc55d96a58b5b96bb025f601ab6e68a89bd9f7ee6a8eff98342bc99d7a4a68",
+        "fetched_at": "2026-11-15T16:46:03Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "3c1143c4cdeb7baf71c0880568fc1d2747154e3b6c9bcc35925733e536db71f4",
+        "fetched_at": "2026-11-08T15:54:44Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002103,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-01",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-joseph-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "Daily Mass (Mon. – Sat.) 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "Daily Mass (Mon. – Sat.) 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-joseph-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "Daily Mass (Mon. – Sat.) 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "Daily Mass (Mon. – Sat.) 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-joseph-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "Daily Mass (Mon. – Sat.) 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "Daily Mass (Mon. – Sat.) 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-joseph-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "Daily Mass (Mon. – Sat.) 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "Daily Mass (Mon. – Sat.) 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-joseph-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "Daily Mass (Mon. – Sat.) 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "Daily Mass (Mon. – Sat.) 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-joseph-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "Daily Mass (Mon. – Sat.) 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "Daily Mass (Mon. – Sat.) 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-joseph-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "Saturday Vigil Mass      4:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "Saturday Vigil Mass      4:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-joseph-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "Sunday Masses     7:30 AM | 9:30 AM | 11:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "Sunday Masses     7:30 AM | 9:30 AM | 11:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-joseph-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "Sunday Masses     7:30 AM | 9:30 AM | 11:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "Sunday Masses     7:30 AM | 9:30 AM | 11:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-joseph-warrington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "Sunday Masses     7:30 AM | 9:30 AM | 11:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "Sunday Masses     7:30 AM | 9:30 AM | 11:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-joseph-warrington",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "09:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "Saturdays 8:30 – 9:30 AM | 3:00 – 3:45 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "Saturdays 8:30 – 9:30 AM | 3:00 – 3:45 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-joseph-warrington",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:00",
+          "end_time": "15:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "Saturdays 8:30 – 9:30 AM | 3:00 – 3:45 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "Saturdays 8:30 – 9:30 AM | 3:00 – 3:45 PM"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "daf29461eee8c873835a704e2672ff6eb68c5b3fdfeecede79fb82b3fe15daed",
+    "differences": []
+  }
+}
