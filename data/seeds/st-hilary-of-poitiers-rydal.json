@@ -1,0 +1,975 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-hilary-of-poitiers-rydal",
+  "status": "ready",
+  "as_of": "2026-11-15T16:45:42Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T20:40:20Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Hilary of Poitiers, Rydal. Both image-only issues (Nov 8, Nov 15) print the same box: Sat 5 PM vigil, Sun 8:30 and 10:30, Mon-Fri 8 AM, Sat confession 4-4:45; the vigil moves to 4 PM and confession to 3-3:45 from Sat Nov 28, a change announced for later that R20 leaves out (excluded slots record it). Plus a dated Thanksgiving Mass Tue Nov 24 6:30 PM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ced5b210b4093cf7da687251e70381a16d837c1d4e1eb0c5246151dbca260175",
+      "fetched_at": "2026-11-15T16:45:42Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a7b8bfa77c75b8978bb70e169612ecf72f4b3f684dbe117c2744e44580c35a43",
+      "fetched_at": "2026-11-08T15:54:23Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "ced5b210b4093cf7da687251e70381a16d837c1d4e1eb0c5246151dbca260175",
+      "bulletins": [
+        "ced5b210b4093cf7da687251e70381a16d837c1d4e1eb0c5246151dbca260175",
+        "a7b8bfa77c75b8978bb70e169612ecf72f4b3f684dbe117c2744e44580c35a43"
+      ],
+      "cached": false,
+      "cost_usd": 0.001898,
+      "at": "2026-11-27T20:44:32.208221+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hilary-of-poitiers-rydal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ced5b210",
+          "page": 6,
+          "said": "WEEKEND MASSES Saturdays at 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ced5b210",
+          "page": 2,
+          "said": "Saturday, November 21, 2026 5:00pm ~ William and Rosemary Wynne (this is the last 5pm Vigil; starting next Sat. it's 4pm)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7b8bfa7",
+          "page": 6,
+          "said": "WEEKEND MASSES Saturdays at 5:00pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ced5b210b4093cf7da687251e70381a16d837c1d4e1eb0c5246151dbca260175",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “Saturdays at 5:00pm\n*** Saturday Vigil will change to 4:00pm starting 11/28/26”"
+        }
+      ],
+      "rationale": "R1, R20: the schedule box of both issues prints the 5:00 PM vigil as current; the move to 4:00 PM from Sat Nov 28 (p4, p6) is a change announced for later, so the current time is kept and update mode will read the issues that show the change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hilary-of-poitiers-rydal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ced5b210",
+          "page": 4,
+          "said": "The time for the Vigil Mass will change to 4:00pm effective on the first weekend of Advent, Saturday, Nov. 28, 2026"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ced5b210",
+          "page": 6,
+          "said": "*** Saturday Vigil will change to 4:00pm starting 11/28/26"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7b8bfa7",
+          "page": 4,
+          "said": "The time for the Vigil Mass will change to 4:00pm effective on the first weekend of Advent, Saturday, Nov. 28, 2026"
+        }
+      ],
+      "rationale": "R20: a change announced for later (from Sat Nov 28, after as_of); left out until update mode reads the issues that show it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hilary-of-poitiers-rydal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ced5b210",
+          "page": 6,
+          "said": "Sundays at 8:30am and 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7b8bfa7",
+          "page": 6,
+          "said": "Sundays at 8:30am and 10:30am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ced5b210b4093cf7da687251e70381a16d837c1d4e1eb0c5246151dbca260175",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “Sundays at 8:30am and 10:30am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the intentions (p2) list both Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hilary-of-poitiers-rydal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ced5b210",
+          "page": 6,
+          "said": "Sundays at 8:30am and 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7b8bfa7",
+          "page": 6,
+          "said": "Sundays at 8:30am and 10:30am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ced5b210b4093cf7da687251e70381a16d837c1d4e1eb0c5246151dbca260175",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “Sundays at 8:30am and 10:30am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the intentions (p2) list both Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hilary-of-poitiers-rydal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ced5b210",
+          "page": 6,
+          "said": "WEEKDAY MASSES 8 AM on Monday thru Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7b8bfa7",
+          "page": 6,
+          "said": "8 AM on Monday thru Friday"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ced5b210b4093cf7da687251e70381a16d837c1d4e1eb0c5246151dbca260175",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “8 AM on Monday thru Friday”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the intentions (p2) list 8:00am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hilary-of-poitiers-rydal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ced5b210",
+          "page": 6,
+          "said": "WEEKDAY MASSES 8 AM on Monday thru Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7b8bfa7",
+          "page": 6,
+          "said": "8 AM on Monday thru Friday"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ced5b210b4093cf7da687251e70381a16d837c1d4e1eb0c5246151dbca260175",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “8 AM on Monday thru Friday”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the intentions (p2) list 8:00am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hilary-of-poitiers-rydal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ced5b210",
+          "page": 6,
+          "said": "WEEKDAY MASSES 8 AM on Monday thru Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7b8bfa7",
+          "page": 6,
+          "said": "8 AM on Monday thru Friday"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ced5b210b4093cf7da687251e70381a16d837c1d4e1eb0c5246151dbca260175",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “8 AM on Monday thru Friday”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the intentions (p2) list 8:00am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hilary-of-poitiers-rydal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ced5b210",
+          "page": 6,
+          "said": "WEEKDAY MASSES 8 AM on Monday thru Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7b8bfa7",
+          "page": 6,
+          "said": "8 AM on Monday thru Friday"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ced5b210b4093cf7da687251e70381a16d837c1d4e1eb0c5246151dbca260175",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “8 AM on Monday thru Friday”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the intentions (p2) list 8:00am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hilary-of-poitiers-rydal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ced5b210",
+          "page": 6,
+          "said": "WEEKDAY MASSES 8 AM on Monday thru Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7b8bfa7",
+          "page": 6,
+          "said": "8 AM on Monday thru Friday"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ced5b210b4093cf7da687251e70381a16d837c1d4e1eb0c5246151dbca260175",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “8 AM on Monday thru Friday”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the intentions (p2) list 8:00am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hilary-of-poitiers-rydal",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ced5b210",
+          "page": 6,
+          "said": "CONFESSIONS: Saturdays 4 - 4:45 PM (3-3:45pm beginning 11/28/26)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7b8bfa7",
+          "page": 6,
+          "said": "Saturdays 4 - 4:45 PM (3-3:45pm beginning 11/28/26)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ced5b210b4093cf7da687251e70381a16d837c1d4e1eb0c5246151dbca260175",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “Saturdays 4 – 4:45 PM (3-3:45pm beginning 11/28/26)”"
+        }
+      ],
+      "rationale": "R1, R20: the current Saturday confession time in both issues; p4 says 'Prior to Nov. 28, we will continue with ... 4-4:45pm Confessions'. The 3:00-3:45 time from Nov 28 is a change announced for later.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hilary-of-poitiers-rydal",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ced5b210",
+          "page": 4,
+          "said": "(Confessions will then move to 3-3:45pm.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7b8bfa7",
+          "page": 4,
+          "said": "(Confessions will then move to 3-3:45pm.)"
+        }
+      ],
+      "rationale": "R20: a change announced for later (from Sat Nov 28, after as_of); left out until update mode reads the issues that show it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hilary-of-poitiers-rydal",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Thanksgiving Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ced5b210",
+          "page": 3,
+          "said": "PARISH THANKSGIVING MASS TUESDAY, NOV. 24 6:30 PM ALL ARE WELCOME TO ATTEND!"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ced5b210b4093cf7da687251e70381a16d837c1d4e1eb0c5246151dbca260175",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “PARISH THANKSGIVING MASS\nTUESDAY, NOV. 24\n6:30 PM”"
+        }
+      ],
+      "rationale": "R1, R16: a dated, open Mass outside the weekly schedule (POLICY, Weekly or dated rule 7), after as_of; the parish has one church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ced5b210",
+          "page": 6,
+          "said": "HOLY DAYS 7 PM Vigil; 8 AM and 10 AM on holy day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7b8bfa7",
+          "page": 6,
+          "said": "HOLY DAYS 7 PM Vigil; 8 AM and 10 AM on holy day"
+        }
+      ],
+      "rationale": "R24, POLICY Dates: a generic standing holy-day line with no dated notice for this year's Dec 8 (as precedent st-isaac-jogues-wayne s27 left out an undated standing box); December issues will print the dates.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ced5b210",
+          "page": 2,
+          "said": "Please join us on Wednesday evenings at 7:00pm on the first floor of the Parish Center to pray the Rosary."
+        }
+      ],
+      "rationale": "R24: a Rosary group is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "4fc0b971a7c2f46471e909300edb065e",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T20:44:32.208221+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "ced5b210b4093cf7da687251e70381a16d837c1d4e1eb0c5246151dbca260175",
+        "fetched_at": "2026-11-15T16:45:42Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "a7b8bfa77c75b8978bb70e169612ecf72f4b3f684dbe117c2744e44580c35a43",
+        "fetched_at": "2026-11-08T15:54:23Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.001898,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-hilary-of-poitiers-rydal",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Saturdays at 5:00pm\n*** Saturday Vigil will change to 4:00pm starting 11/28/26"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "Saturdays at 5:00pm\n*** Saturday Vigil will change to 4:00pm starting 11/28/26"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-hilary-of-poitiers-rydal",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Sundays at 8:30am and 10:30am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "Sundays at 8:30am and 10:30am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-hilary-of-poitiers-rydal",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Sundays at 8:30am and 10:30am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "Sundays at 8:30am and 10:30am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-hilary-of-poitiers-rydal",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "8 AM on Monday thru Friday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "8 AM on Monday thru Friday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-hilary-of-poitiers-rydal",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "8 AM on Monday thru Friday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "8 AM on Monday thru Friday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-hilary-of-poitiers-rydal",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "8 AM on Monday thru Friday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "8 AM on Monday thru Friday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-hilary-of-poitiers-rydal",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "8 AM on Monday thru Friday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "8 AM on Monday thru Friday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-hilary-of-poitiers-rydal",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "8 AM on Monday thru Friday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "8 AM on Monday thru Friday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-hilary-of-poitiers-rydal",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": "16:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Saturdays 4 – 4:45 PM (3-3:45pm beginning 11/28/26)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "Saturdays 4 – 4:45 PM (3-3:45pm beginning 11/28/26)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-hilary-of-poitiers-rydal",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-24",
+          "start_time": "18:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Thanksgiving Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "PARISH THANKSGIVING MASS\nTUESDAY, NOV. 24\n6:30 PM"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "7b6df39a0904119fced9ffac16746bfb9126c2de4cac8713afa59207d4d4a8fc",
+    "differences": []
+  }
+}
