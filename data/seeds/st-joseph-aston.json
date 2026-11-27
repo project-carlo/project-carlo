@@ -1,0 +1,916 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-aston",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:45:58Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T00:56:21Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Joseph, Aston; daily Masses Mon-Thu and confessions are in Mary's Chapel in the lower church (website). Both issues read (Nov 8, Nov 15) print the same schedule box, matching the website's Mass times. Open: two conflicts with the homepage Mass-times widget (second-Tuesday confession 6:30-7:30 vs 6:00-7:00; Tuesday Adoration end 4 PM vs 7 PM), both leaning to the bulletin.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "fa87bfd0bf05fa35c9b9366708c5450e5abc851a194d4e692078d2d1e273f7d9",
+      "fetched_at": "2026-11-15T16:45:58Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d6be2e19168f2e13ead4d2391a9aaf69e599d3a60593b2481acddf27a6fe1301",
+      "fetched_at": "2026-11-08T15:54:37Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-aston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "SUNDAY MASS Saturday: 4:00 pm Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 1,
+          "said": "SUNDAY MASS Saturday: 4:00 pm Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 10,
+          "said": "November 14: Saturday Vigil Mass 4:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read; the Nov 8 intentions list it; the website's Mass schedule gives Saturday 4:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-aston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "Sunday: 6:30 am, 9:30 am & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 1,
+          "said": "Sunday: 6:30 am, 9:30 am & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 10,
+          "said": "Sunday, November 15 6:30 am ... 9:30 am ... 11:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in the Nov 8 intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-aston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "Sunday: 6:30 am, 9:30 am & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 1,
+          "said": "Sunday: 6:30 am, 9:30 am & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 10,
+          "said": "Sunday, November 15 6:30 am ... 9:30 am ... 11:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in the Nov 8 intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-aston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "Sunday: 6:30 am, 9:30 am & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 1,
+          "said": "Sunday: 6:30 am, 9:30 am & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 10,
+          "said": "Sunday, November 15 6:30 am ... 9:30 am ... 11:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in the Nov 8 intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-aston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mary's Chapel (lower church)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "DAILY MASS Monday through Thursday 6:30 am (Mary's Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 1,
+          "said": "DAILY MASS Monday through Thursday 6:30 am (Mary's Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 10,
+          "said": "Monday, November 9 6:30 am ... Thursday, November 12 6:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://churchofstjosephaston.org/",
+          "said": "Confessions are in Mary's Chapel located in the lower church"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; POLICY, Churches and chapels: the website places Mary's Chapel in the lower church of St. Joseph, the parish's one church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-aston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mary's Chapel (lower church)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "DAILY MASS Monday through Thursday 6:30 am (Mary's Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 1,
+          "said": "DAILY MASS Monday through Thursday 6:30 am (Mary's Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 10,
+          "said": "Monday, November 9 6:30 am ... Thursday, November 12 6:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://churchofstjosephaston.org/",
+          "said": "Confessions are in Mary's Chapel located in the lower church"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; POLICY, Churches and chapels: the website places Mary's Chapel in the lower church of St. Joseph, the parish's one church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-aston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mary's Chapel (lower church)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "DAILY MASS Monday through Thursday 6:30 am (Mary's Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 1,
+          "said": "DAILY MASS Monday through Thursday 6:30 am (Mary's Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 10,
+          "said": "Monday, November 9 6:30 am ... Thursday, November 12 6:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://churchofstjosephaston.org/",
+          "said": "Confessions are in Mary's Chapel located in the lower church"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; POLICY, Churches and chapels: the website places Mary's Chapel in the lower church of St. Joseph, the parish's one church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-aston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mary's Chapel (lower church)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "DAILY MASS Monday through Thursday 6:30 am (Mary's Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 1,
+          "said": "DAILY MASS Monday through Thursday 6:30 am (Mary's Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 10,
+          "said": "Monday, November 9 6:30 am ... Thursday, November 12 6:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://churchofstjosephaston.org/",
+          "said": "Confessions are in Mary's Chapel located in the lower church"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; POLICY, Churches and chapels: the website places Mary's Chapel in the lower church of St. Joseph, the parish's one church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-aston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "Friday & Saturday 8:30 am (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 1,
+          "said": "Friday & Saturday 8:30 am (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 10,
+          "said": "Friday, November 13 8:30 am ... Saturday, November 14 8:30 am"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues and the Nov 8 intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-aston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "Friday & Saturday 8:30 am (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 1,
+          "said": "Friday & Saturday 8:30 am (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 10,
+          "said": "Friday, November 13 8:30 am ... Saturday, November 14 8:30 am"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues and the Nov 8 intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-aston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mary's Chapel (lower church)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "CONFESSION Tuesday: 12:00 to 1:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 1,
+          "said": "CONFESSION Tuesday: 12:00 to 1:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://churchofstjosephaston.org/",
+          "said": "Tuesday 12:00 PM to 1:00 PM ... Confessions are in Mary's Chapel located in the lower church"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the website agrees and places confessions in Mary's Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-aston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mary's Chapel (lower church)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "Wednesday: 7:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 1,
+          "said": "Wednesday: 7:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://churchofstjosephaston.org/",
+          "said": "Wednesday 7:00 AM"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; no end printed (POLICY, Times); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-aston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mary's Chapel (lower church)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "Saturday: 3:00 to 3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 1,
+          "said": "Saturday: 3:00 to 3:45 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://churchofstjosephaston.org/",
+          "said": "Saturday 3:00 PM to 3:45 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "Second Tuesday: 6:00 to 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 1,
+          "said": "Second Tuesday: 6:00 to 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 5,
+          "said": "TUESDAY, November 10 ... Holy Hour of Prayer 6:00 pm · Mary's Chapel ... The evening will include confession, silent adoration"
+        },
+        {
+          "source": "website",
+          "url": "https://churchofstjosephaston.org/holy-hour-of-prayer",
+          "said": "Holy Hour of Prayer & Confession Second Tuesday of Each Month Prayer & Confession 6:00 to 7:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://churchofstjosephaston.org/",
+          "said": "In Addition to the Second Tuesday of the Month from 6:30 to 7:30 pm (Except for July and August)"
+        }
+      ],
+      "rationale": "R28/R6: the homepage widget conflicts with both bulletins' box. Leaning per precedent st-charles-borromeo-drexel-hill s9 and annunciation-bvm-havertown s9: the bulletin box of both issues and the site's own Holy Hour page say 6:00-7:00; the widget looks stale (the homepage still shows Summer office hours, and its Tuesday Adoration ends at 4 PM against the bulletin's 7 PM). The July-August exception is printed only in that widget, so the lean leaves it out; option 2 keeps it.",
+      "question": "Second-Tuesday confession: bulletin 6:00-7:00 PM, or the website's Mass-times widget 6:30-7:30 PM (except July and August)?",
+      "options": [
+        {
+          "label": "Second Tuesdays 6:00-7:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-aston",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "second"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour of Prayer, Mary's Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Second Tuesdays 6:00-7:00 PM, September-June",
+          "entry": {
+            "church_slug": "st-joseph-aston",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "second"
+            ],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": "Holy Hour of Prayer, Mary's Chapel"
+          }
+        },
+        {
+          "label": "Second Tuesdays 6:30-7:30 PM, September-June",
+          "entry": {
+            "church_slug": "st-joseph-aston",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": "19:30",
+            "cancelled": false,
+            "weeks_of_month": [
+              "second"
+            ],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "ADORATION HOURS Mary's Chapel Tuesdays 7:00 am to 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 1,
+          "said": "ADORATION HOURS Mary's Chapel Tuesdays 7:00 am to 7:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://churchofstjosephaston.org/",
+          "said": "Adoration Times Tuesday 7:00 AM to 4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://churchofstjosephaston.org/",
+          "said": "Confessions are in Mary's Chapel located in the lower church"
+        }
+      ],
+      "rationale": "R28/R6: the website conflicts with the box of both issues. Leaning per precedent st-charles-borromeo-drexel-hill s9 and annunciation-bvm-havertown s9: the bulletin is current and repeated; the widget shows Summer office hours, so it is the less-maintained source, and the second-Tuesday Holy Hour with silent adoration runs 6-7 PM in the chapel. R38: the website places Mary's Chapel in the lower church, the parish's one church; no exposition claimed. If 4 PM is chosen, the second-Tuesday 6-7 PM Holy Hour (excluded under R37) should be added as its own slot.",
+      "question": "Tuesday Adoration in Mary's Chapel: bulletin 7:00 AM-7:00 PM, or the website widget's 7:00 AM-4:00 PM?",
+      "options": [
+        {
+          "label": "Tuesdays 7:00 AM-7:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-aston",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mary's Chapel (lower church)"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Tuesdays 7:00 AM-4:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-aston",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mary's Chapel (lower church)"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-aston",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour of Prayer, Mary's Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 5,
+          "said": "Seminarians to Speak at Holy Hour of Prayer 6:00 pm · Mary's Chapel ... silent adoration"
+        },
+        {
+          "source": "website",
+          "url": "https://churchofstjosephaston.org/holy-hour-of-prayer",
+          "said": "Second Tuesday of Each Month Prayer & Confession 6:00 to 7:00 pm ... Silent Adoration"
+        }
+      ],
+      "rationale": "R37: the second-Tuesday Holy Hour lies inside the Tuesday 7:00 AM-7:00 PM Adoration in the same chapel (leaning of the Tuesday Adoration question).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-aston",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-11",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Veterans Day, Mary's Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d6be2e19",
+          "page": 5,
+          "said": "Veteran's Day Schedule Changes ... Daily Mass will be at 8:30 am in Mary's Chapel"
+        }
+      ],
+      "rationale": "R16: a dated change before as_of (Nov 15); out of the seed's scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "By appointment: (610) 497-3340"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa87bfd0",
+          "page": 1,
+          "said": "ROSARY & DIVINE MERCY CHAPLET Following Daily Mass Monday through Friday (Mary's Chapel)"
+        }
+      ],
+      "rationale": "R24: a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
