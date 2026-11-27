@@ -1,0 +1,1389 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-genevieve-flourtown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:45:35Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T17:12:01Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 5 PM; Sun 7:30, 10:30, 5 PM), Tue 6:30 AM, Tue-Fri 8 AM Masses and Sat 3:30-4:30 PM confession agree in both November issues and on the website; Monday 8 AM is a Communion Service. Open: whether the Tue 6:30 AM is September-May only (website), the Thanksgiving 8 AM cancellation, the Dec 8 9 AM school Mass, and a Jan 21 Holy Hour-format faith session.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+      "fetched_at": "2026-11-15T16:45:35Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "edf6f3a10752fbce5ae625d840b2a9f1785ab69ab257030cdfcec8c7424e32f1",
+      "fetched_at": "2026-11-08T15:54:18Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+      "bulletins": [
+        "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+        "edf6f3a10752fbce5ae625d840b2a9f1785ab69ab257030cdfcec8c7424e32f1"
+      ],
+      "cached": false,
+      "cost_usd": 0.003656,
+      "at": "2026-11-27T17:19:11.182662+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-church-flourtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 1,
+          "said": "Saturday Vigil Mass: 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf6f3a1",
+          "page": 1,
+          "said": "Saturday Vigil Mass: 5pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil Mass: 5pm”"
+        }
+      ],
+      "rationale": "R1: printed in the MASS TIMES box of both issues; the intentions list it both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-church-flourtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 1,
+          "said": "Sunday Masses: 7:30, 10:30, 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf6f3a1",
+          "page": 1,
+          "said": "Sunday Masses: 7:30, 10:30, 5pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Masses: 7:30, 10:30, 5pm”"
+        }
+      ],
+      "rationale": "R1: printed in the MASS TIMES box of both issues; the intentions list all three both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-church-flourtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 1,
+          "said": "Sunday Masses: 7:30, 10:30, 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf6f3a1",
+          "page": 1,
+          "said": "Sunday Masses: 7:30, 10:30, 5pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Masses: 7:30, 10:30, 5pm”"
+        }
+      ],
+      "rationale": "R1: printed in the MASS TIMES box of both issues; the intentions list all three both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-church-flourtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 1,
+          "said": "Sunday Masses: 7:30, 10:30, 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf6f3a1",
+          "page": 1,
+          "said": "Sunday Masses: 7:30, 10:30, 5pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Masses: 7:30, 10:30, 5pm”"
+        }
+      ],
+      "rationale": "R1: printed in the MASS TIMES box of both issues; the intentions list all three both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-church-flourtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 1,
+          "said": "Tuesday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf6f3a1",
+          "page": 1,
+          "said": "Tuesday-Friday 8am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday-Friday 8am”"
+        }
+      ],
+      "rationale": "R1: printed in the MASS TIMES box of both issues; the p2 intentions list 8:00 Tue-Fri both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-church-flourtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 1,
+          "said": "Tuesday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf6f3a1",
+          "page": 1,
+          "said": "Tuesday-Friday 8am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday-Friday 8am”"
+        }
+      ],
+      "rationale": "R1: printed in the MASS TIMES box of both issues; the p2 intentions list 8:00 Tue-Fri both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-church-flourtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 1,
+          "said": "Tuesday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf6f3a1",
+          "page": 1,
+          "said": "Tuesday-Friday 8am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday-Friday 8am”"
+        }
+      ],
+      "rationale": "R1: printed in the MASS TIMES box of both issues; the p2 intentions list 8:00 Tue-Fri both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-church-flourtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 1,
+          "said": "Tuesday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf6f3a1",
+          "page": 1,
+          "said": "Tuesday-Friday 8am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday-Friday 8am”"
+        }
+      ],
+      "rationale": "R1: printed in the MASS TIMES box of both issues; the p2 intentions list 8:00 Tue-Fri both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-church-flourtown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 1,
+          "said": "Confessions: Saturday 3:30-4:30pm and by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf6f3a1",
+          "page": 1,
+          "said": "Confessions: Saturday 3:30-4:30pm and by appointment"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Confessions: Saturday 3:30-4:30pm and by appointment”"
+        }
+      ],
+      "rationale": "R1: printed in the MASS TIMES box of both issues; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-church-flourtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 1,
+          "said": "Weekday Mass: Monday 8am Communion Service"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf6f3a1",
+          "page": 1,
+          "said": "Weekday Mass: Monday 8am Communion Service"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 2,
+          "said": "Monday ... 8:00 Communion Service"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf6f3a1",
+          "page": 2,
+          "said": "Monday ... 8:00 Communion Service"
+        }
+      ],
+      "rationale": "R24, POLICY (What to extract): Monday 8 AM is a standing Communion Service, not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 1,
+          "said": "Confessions: Saturday 3:30-4:30pm and by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 1,
+          "said": "The rosary is prayed in church every Tuesday at 7:25pm."
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-genevieve-church-flourtown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 1,
+          "said": "Please note: Thursday, Nov. 26th Mass is at 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf6f3a1",
+          "page": 1,
+          "said": "Please note: Thursday, Nov. 26th Mass is at 9am."
+        },
+        {
+          "source": "c1",
+          "bulletin": "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Please note: Thursday, Nov. 26th Mass is at 9am.”"
+        }
+      ],
+      "rationale": "R1, R16: a dated notice in the box of both issues gives Thanksgiving's Mass at 9 AM, outside the weekly 8 AM slot (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 1,
+          "said": "Please note: Thursday, Nov. 26th Mass is at 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf6f3a1",
+          "page": 1,
+          "said": "Please note: Thursday, Nov. 26th Mass is at 9am."
+        },
+        {
+          "source": "c1",
+          "bulletin": "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Tuesday-Friday 8am”"
+        }
+      ],
+      "rationale": "R17, R30: 'Thursday, Nov. 26th Mass is at 9am' speaks of the day's one Mass (Thursday has only the 8 AM) as being at 9, which reads as a move (POLICY: a moved event cancels the original), not a silent omission. Leaning per precedent our-mother-of-good-counsel-bryn-mawr s21 (and nativity-bvm-media s22, 9 AM instead of 8 AM). Hard because 'moved' or 'cancelled' isn't printed.",
+      "question": "Record the Thursday Nov 26 8:00 AM Mass as cancelled, since that day's Mass is at 9 AM?",
+      "options": [
+        {
+          "label": "Record the cancellation",
+          "entry": {
+            "church_slug": "st-genevieve-church-flourtown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mass moved to 9 AM for Thanksgiving"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 1,
+          "said": "Weekday Mass: ... Tuesday 6:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf6f3a1",
+          "page": 1,
+          "said": "Weekday Mass: ... Tuesday 6:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 2,
+          "said": "Tuesday ... 6:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf6f3a1",
+          "page": 2,
+          "said": "Tuesday ... 6:30"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stgensparish.com/sacraments",
+          "said": "Tuesday : 6:30 AM English (September - May)"
+        }
+      ],
+      "rationale": "R6, R30: both issues print Tuesday 6:30am with no season and list it in the intentions. The parish's Mass Times page (read 2026-11-27; current: its homepage gives the Nov 28-29 weekend priest schedule, and every other time matches the bulletin exactly) adds '(September - May)'. November bulletins can't show a summer break, so this is a missing mention, not a conflict (R6). Leaning to the season.",
+      "question": "Limit the Tuesday 6:30 AM Mass to September-May, as the website says?",
+      "options": [
+        {
+          "label": "Tuesdays 6:30 AM, September-May",
+          "entry": {
+            "church_slug": "st-genevieve-church-flourtown",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Tuesdays 6:30 AM year-round",
+          "entry": {
+            "church_slug": "st-genevieve-church-flourtown",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 4,
+          "said": "Tuesday, December 8 – School Mass at 9am, all are welcome"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+          "page": 4,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p4 “Tuesday, December 8 – School Mass at 9am, all are welcome”"
+        }
+      ],
+      "rationale": "R30, R32: the school's Upcoming Events list opens the Dec 8 school Mass to all (POLICY: a school Mass is open unless limited), but names no place; the parish has one church and the school is on its campus. The box says 'Holy Day: please see the website', and the website (read 2026-11-27) gives no holy-day times. Leaning include per precedent st-joseph-spring-city s21 (an open Mass that names no room, at the one church). The weekly Tue 8 AM slot is left alone (R17).",
+      "question": "Add the Immaculate Conception school Mass, Tue Dec 8, 9:00 AM ('all are welcome')?",
+      "options": [
+        {
+          "label": "Dec 8 9:00 AM",
+          "entry": {
+            "church_slug": "st-genevieve-church-flourtown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception; school Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 3,
+          "said": "Thursdays, 6-7pm in the narthex except week 3* which will take place in church within a Holy Hour format and be live streamed. January 7, 14, 21*, 28"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf6f3a1",
+          "page": 3,
+          "said": "Thursdays, 6-7pm in the narthex except week 3* which will take place in church within a Holy Hour format"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+          "page": 3,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p3 “Thursdays, 6-7pm in the narthex except week 3* which will take place in church within a Holy Hour format and be live streamed.”"
+        }
+      ],
+      "rationale": "R30: POLICY counts a Holy Hour as Adoration even with other prayer unless the Sacrament is said not to be exposed; this one is in church (unlike annunciation-bvm-havertown s15's school-room Holy Hour). Dated (POLICY rule 3): only January's dates are printed, with Jan 21 marked. Hard because it is a Bible-study session and exposition isn't mentioned.",
+      "question": "Add the Thu Jan 21 faith-formation session held 'within a Holy Hour format' in church, 6-7 PM, as Adoration?",
+      "options": [
+        {
+          "label": "Jan 21 6:00-7:00 PM",
+          "entry": {
+            "church_slug": "st-genevieve-church-flourtown",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2027-01-21",
+            "start_time": "18:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Faith formation in Holy Hour format"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 6,
+          "said": "SJN maintains regular Mass ... Typically, Mass is at 11AM Monday to Thursday, and Sunday Mass is usually at 2PM ... All masses are open to the public."
+        }
+      ],
+      "rationale": "R22: St. John Neumann Center, 10400 Roosevelt Blvd, Philadelphia, is another institution's chapel, not on the church list or this parish's; the times are also hedged ('typically', 'usually').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 5,
+          "said": "Saturday, December 12, 2026 | 4:00 - 8:00 PM St. Charles Borromeo Seminary ... Mass at 4:00 PM followed by reception and dinner"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6241047",
+          "page": 5,
+          "said": "ST. RAPHAELA CENTER ... The Mass That Takes Its Time Sunday, Dec. 13, 4:30pm"
+        }
+      ],
+      "rationale": "R22: outside events advertised in the bulletin, at St. Charles Borromeo Seminary and St. Raphaela Center, not at St. Genevieve.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "51fc72ccea50d0fe3a3e3fb5644c3942",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T17:19:11.182662+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "b62410479fcca7aa3cf58183788822ffbb6c638b77389f6f314b68b93f902d01",
+        "fetched_at": "2026-11-15T16:45:35Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "edf6f3a10752fbce5ae625d840b2a9f1785ab69ab257030cdfcec8c7424e32f1",
+        "fetched_at": "2026-11-08T15:54:18Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.003656,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-genevieve-church-flourtown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil Mass: 5pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil Mass: 5pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-genevieve-church-flourtown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Masses: 7:30, 10:30, 5pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Masses: 7:30, 10:30, 5pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-genevieve-church-flourtown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Masses: 7:30, 10:30, 5pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Masses: 7:30, 10:30, 5pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-genevieve-church-flourtown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Masses: 7:30, 10:30, 5pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Masses: 7:30, 10:30, 5pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-genevieve-church-flourtown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday 6:30am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday 6:30am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-genevieve-church-flourtown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday-Friday 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday-Friday 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-genevieve-church-flourtown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday-Friday 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday-Friday 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-genevieve-church-flourtown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday-Friday 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday-Friday 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-genevieve-church-flourtown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday-Friday 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday-Friday 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-genevieve-church-flourtown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:30",
+          "end_time": "16:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Confessions: Saturday 3:30-4:30pm and by appointment"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Confessions: Saturday 3:30-4:30pm and by appointment"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-genevieve-church-flourtown",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Please note: Thursday, Nov. 26th Mass is at 9am."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Please note: Thursday, Nov. 26th Mass is at 9am."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-genevieve-church-flourtown",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-08",
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "School Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "Tuesday, December 8 – School Mass at 9am, all are welcome"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-genevieve-church-flourtown",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2027-01-21",
+          "start_time": "18:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Thursdays, 6-7pm in the narthex except week 3* which will take place in church within a Holy Hour format and be live streamed."
+          },
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "January 7, 14, 21*, 28"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Thursdays, 6-7pm in the narthex except week 3* which will take place in church within a Holy Hour format and be live streamed."
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "January 7, 14, 21, 28"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-genevieve-church-flourtown",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": true,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday-Friday 8am"
+          },
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Please note: Thursday, Nov. 26th Mass is at 9am."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday-Friday 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Please note: Thursday, Nov. 26th Mass is at 9am."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "704c86da23a823cb2810f106132695644def2c826b82ac31178847e92a1f1b89",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o5"
+        ],
+        "slots": [
+          "s15"
+        ],
+        "opinion_said": "mass Tue 06:30 @st-genevieve-church-flourtown",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      }
+    ]
+  }
+}
