@@ -1,0 +1,1085 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-paul-east-norriton",
+  "status": "ready",
+  "as_of": "2026-11-15T16:46:45Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T16:19:59Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both November issues and the website agree: Sat 4:30 PM vigil, Sun 8:30 and 10:30 AM, Mon-Sat 8:00 AM, Saturday confession 3:30-4:00 PM. No Adoration is printed; the website's generic holy-day times are left out until a bulletin posts this year's Dec 8 schedule. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "05d544bbc07366a6707f4b5f9c65f7f33972ca4a9a5943a619890fe59875bce4",
+      "fetched_at": "2026-11-15T16:46:45Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "355a61bf49ca567a4b241b6ad9dd0edc55a800b79a845fe686ef5399d289d8b6",
+      "fetched_at": "2026-11-08T15:55:17Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "05d544bbc07366a6707f4b5f9c65f7f33972ca4a9a5943a619890fe59875bce4",
+      "bulletins": [
+        "05d544bbc07366a6707f4b5f9c65f7f33972ca4a9a5943a619890fe59875bce4",
+        "355a61bf49ca567a4b241b6ad9dd0edc55a800b79a845fe686ef5399d289d8b6"
+      ],
+      "cached": false,
+      "cost_usd": 0.001397,
+      "at": "2026-11-27T16:22:59.980093+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-church-east-norriton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 2,
+          "said": "Sat, Nov 21 ... 4:30 pm Charles Sarama"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 2,
+          "said": "Sat, Nov 14 ... 4:30 pm Rosemary Fazio"
+        },
+        {
+          "source": "c1",
+          "bulletin": "05d544bbc07366a6707f4b5f9c65f7f33972ca4a9a5943a619890fe59875bce4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil: 4:30 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgy Schedule box of both issues and in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-church-east-norriton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 1,
+          "said": "Sunday: 8:30 and 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 1,
+          "said": "Sunday: 8:30 and 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 2,
+          "said": "Sun, Nov 22 Christ The King 8:30 am ... 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 2,
+          "said": "Sun, Nov 8 ... 8:30 am ... 10:30 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "05d544bbc07366a6707f4b5f9c65f7f33972ca4a9a5943a619890fe59875bce4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:30 and 10:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgy Schedule box of both issues and in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-church-east-norriton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 1,
+          "said": "Sunday: 8:30 and 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 1,
+          "said": "Sunday: 8:30 and 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 2,
+          "said": "Sun, Nov 22 Christ The King 8:30 am ... 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 2,
+          "said": "Sun, Nov 8 ... 8:30 am ... 10:30 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "05d544bbc07366a6707f4b5f9c65f7f33972ca4a9a5943a619890fe59875bce4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:30 and 10:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgy Schedule box of both issues and in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-church-east-norriton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 1,
+          "said": "Daily Masses Mon-Sat: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 1,
+          "said": "Daily Masses Mon-Sat: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 2,
+          "said": "Mon, Nov 16 ... Sat, Nov 21: 8:00 am each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 2,
+          "said": "Mon, Nov 9 ... Sat, Nov 14: 8:00 am each day"
+        },
+        {
+          "source": "c1",
+          "bulletin": "05d544bbc07366a6707f4b5f9c65f7f33972ca4a9a5943a619890fe59875bce4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mon-Sat: 8:00 am”"
+        }
+      ],
+      "rationale": "R1: the box's Mon-Sat 8:00 am, confirmed by every weekday in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-church-east-norriton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 1,
+          "said": "Daily Masses Mon-Sat: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 1,
+          "said": "Daily Masses Mon-Sat: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 2,
+          "said": "Mon, Nov 16 ... Sat, Nov 21: 8:00 am each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 2,
+          "said": "Mon, Nov 9 ... Sat, Nov 14: 8:00 am each day"
+        },
+        {
+          "source": "c1",
+          "bulletin": "05d544bbc07366a6707f4b5f9c65f7f33972ca4a9a5943a619890fe59875bce4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mon-Sat: 8:00 am”"
+        }
+      ],
+      "rationale": "R1: the box's Mon-Sat 8:00 am, confirmed by every weekday in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-church-east-norriton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 1,
+          "said": "Daily Masses Mon-Sat: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 1,
+          "said": "Daily Masses Mon-Sat: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 2,
+          "said": "Mon, Nov 16 ... Sat, Nov 21: 8:00 am each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 2,
+          "said": "Mon, Nov 9 ... Sat, Nov 14: 8:00 am each day"
+        },
+        {
+          "source": "c1",
+          "bulletin": "05d544bbc07366a6707f4b5f9c65f7f33972ca4a9a5943a619890fe59875bce4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mon-Sat: 8:00 am”"
+        }
+      ],
+      "rationale": "R1: the box's Mon-Sat 8:00 am, confirmed by every weekday in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-church-east-norriton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 1,
+          "said": "Daily Masses Mon-Sat: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 1,
+          "said": "Daily Masses Mon-Sat: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 2,
+          "said": "Mon, Nov 16 ... Sat, Nov 21: 8:00 am each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 2,
+          "said": "Mon, Nov 9 ... Sat, Nov 14: 8:00 am each day"
+        },
+        {
+          "source": "c1",
+          "bulletin": "05d544bbc07366a6707f4b5f9c65f7f33972ca4a9a5943a619890fe59875bce4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mon-Sat: 8:00 am”"
+        }
+      ],
+      "rationale": "R1: the box's Mon-Sat 8:00 am, confirmed by every weekday in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-church-east-norriton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 1,
+          "said": "Daily Masses Mon-Sat: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 1,
+          "said": "Daily Masses Mon-Sat: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 2,
+          "said": "Mon, Nov 16 ... Sat, Nov 21: 8:00 am each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 2,
+          "said": "Mon, Nov 9 ... Sat, Nov 14: 8:00 am each day"
+        },
+        {
+          "source": "c1",
+          "bulletin": "05d544bbc07366a6707f4b5f9c65f7f33972ca4a9a5943a619890fe59875bce4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mon-Sat: 8:00 am”"
+        }
+      ],
+      "rationale": "R1: the box's Mon-Sat 8:00 am, confirmed by every weekday in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-church-east-norriton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 1,
+          "said": "Daily Masses Mon-Sat: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 1,
+          "said": "Daily Masses Mon-Sat: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 2,
+          "said": "Mon, Nov 16 ... Sat, Nov 21: 8:00 am each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 2,
+          "said": "Mon, Nov 9 ... Sat, Nov 14: 8:00 am each day"
+        },
+        {
+          "source": "c1",
+          "bulletin": "05d544bbc07366a6707f4b5f9c65f7f33972ca4a9a5943a619890fe59875bce4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mon-Sat: 8:00 am”"
+        }
+      ],
+      "rationale": "R1: the box's Mon-Sat 8:00 am, confirmed by every weekday in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-church-east-norriton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 1,
+          "said": "Sacrament of Penance Saturdays: 3:30-4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 1,
+          "said": "Sacrament of Penance Saturdays: 3:30-4:00 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "05d544bbc07366a6707f4b5f9c65f7f33972ca4a9a5943a619890fe59875bce4",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturdays: 3:30-4:00 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgy Schedule box of both issues; the website gives 'Saturday: 3:30-4:00pm'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-church-east-norriton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 1,
+          "said": "Holy Day Masses will be posted in the Bulletin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 1,
+          "said": "Holy Day Masses will be posted in the Bulletin"
+        },
+        {
+          "source": "website",
+          "url": "https://stpaulcatholicchurcheastnorriton.net/",
+          "said": "Holy Day Masses Vigil: 7:00pm Holy Day: 8:00am and Noon"
+        }
+      ],
+      "rationale": "POLICY, Dates: the website's holy-day line is generic, with no date or year, and the bulletin says holy-day times will be posted in the bulletin; neither read issue posts Dec 8 yet. Left out like the undated holy-day box in st-isaac-jogues-wayne s27; update mode will read the issue that posts them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-church-east-norriton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 1,
+          "said": "Holy Day Masses will be posted in the Bulletin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "355a61bf",
+          "page": 1,
+          "said": "Holy Day Masses will be posted in the Bulletin"
+        },
+        {
+          "source": "website",
+          "url": "https://stpaulcatholicchurcheastnorriton.net/",
+          "said": "Holy Day Masses Vigil: 7:00pm Holy Day: 8:00am and Noon"
+        }
+      ],
+      "rationale": "POLICY, Dates: the website's holy-day line is generic, with no date or year, and the bulletin says holy-day times will be posted in the bulletin; neither read issue posts Dec 8 yet. Left out like the undated holy-day box in st-isaac-jogues-wayne s27; update mode will read the issue that posts them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-church-east-norriton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stpaulcatholicchurcheastnorriton.net/",
+          "said": "Holy Day Masses Vigil: 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05d544bb",
+          "page": 1,
+          "said": "Holy Day Masses will be posted in the Bulletin"
+        }
+      ],
+      "rationale": "POLICY, Dates: the generic website vigil line pins no date, and the bulletin defers holy-day times to a later issue (as st-isaac-jogues-wayne s27).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "1186d02cdc753f148c4ed5001af467b6",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T16:22:59.980093+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "05d544bbc07366a6707f4b5f9c65f7f33972ca4a9a5943a619890fe59875bce4",
+        "fetched_at": "2026-11-15T16:46:45Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "355a61bf49ca567a4b241b6ad9dd0edc55a800b79a845fe686ef5399d289d8b6",
+        "fetched_at": "2026-11-08T15:55:17Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.001397,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-paul-church-east-norriton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mon-Sat: 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mon-Sat: 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-paul-church-east-norriton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mon-Sat: 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mon-Sat: 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-paul-church-east-norriton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mon-Sat: 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mon-Sat: 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-paul-church-east-norriton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mon-Sat: 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mon-Sat: 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-paul-church-east-norriton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mon-Sat: 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mon-Sat: 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-paul-church-east-norriton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mon-Sat: 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mon-Sat: 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-paul-church-east-norriton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil: 4:30 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil: 4:30 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-paul-church-east-norriton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:30 and 10:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:30 and 10:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-paul-church-east-norriton",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:30 and 10:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:30 and 10:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-paul-church-east-norriton",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:30",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays: 3:30-4:00 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays: 3:30-4:00 pm"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "67123dfbaf51434ca2af7429e8d45045a3d0c4f03c87355b827f84a3b307ff6d",
+    "differences": []
+  }
+}
