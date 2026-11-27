@@ -1,0 +1,1591 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-philip-neri-pennsburg",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:49Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T21:28:53Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday, First Friday and Saturday confession times agree in both November issues (image-only, read by render) and on the current homepage. Open: one grouped question whether Saint Anne Chapel, where the weekday 8 AM Masses and Mon-Fri exposition are held, is at the church (lean include, per ss-philip-and-james-exton s15).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+      "fetched_at": "2026-11-15T16:46:49Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2ccef1c7edf30c1eae6c0c0684f4f2ebf301b05fa65e5742c905ac35460587f9",
+      "fetched_at": "2026-11-08T15:55:21Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+      "bulletins": [
+        "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+        "2ccef1c7edf30c1eae6c0c0684f4f2ebf301b05fa65e5742c905ac35460587f9"
+      ],
+      "cached": false,
+      "cost_usd": 0.002239,
+      "at": "2026-11-27T21:34:20.681282+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-pennsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 2,
+          "said": "SUNDAY MASS SCHEDULE Saturday - Vigil Mass - 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 2,
+          "said": "SUNDAY MASS SCHEDULE Saturday - Vigil Mass - 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 3,
+          "said": "Mass Intentions Saturday 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 3,
+          "said": "Mass Intentions Saturday 4:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saturday - Vigil Mass - 4:00 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the intentions of both issues; the website gives 'Saturday Vigil: 4:00 PM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-pennsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 2,
+          "said": "Sunday - 7:30 AM; 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 2,
+          "said": "Sunday - 7:30 AM; 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 3,
+          "said": "Mass Intentions Sunday 7:30 AM, 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 3,
+          "said": "Mass Intentions Sunday 7:30 AM, 10:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday - 7:30 AM; 10:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the intentions of both issues; the website gives 'Sunday: 7:30 AM & 10:00 AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-pennsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 2,
+          "said": "Sunday - 7:30 AM; 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 2,
+          "said": "Sunday - 7:30 AM; 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 3,
+          "said": "Mass Intentions Sunday 7:30 AM, 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 3,
+          "said": "Mass Intentions Sunday 7:30 AM, 10:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday - 7:30 AM; 10:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the intentions of both issues; the website gives 'Sunday: 7:30 AM & 10:00 AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday - 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday - 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 3,
+          "said": "Mass Intentions Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 3,
+          "said": "Mass Intentions Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.spnparish.org/",
+          "said": "Weekday Mass (in St. Anne Chapel): Mon - Fri 8:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday – 8AM”"
+        }
+      ],
+      "rationale": "R32, leaning per precedent ss-philip-and-james-exton s15 (also sacred-heart-havertown s13, our-lady-of-fatima-secane s11): the chapel is named inside the parish's own schedule box under 'Church of Saint Philip' (p2), whose only address is 'Church & Rectory Address: 1325 Klinerd Rd'; the parish has one church and 'St. Anne's Meeting Room' (p4) is on its grounds. Hard because no page gives the chapel's address. The 8 AM Mass is in both issues' box and intentions and on the website.",
+      "question": "Is Saint Anne Chapel at St. Philip Neri Church, so the weekday Masses and Adoration held there go to the church?",
+      "options": [
+        {
+          "label": "Include at the church, in Saint Anne Chapel",
+          "entry": {
+            "church_slug": "st-philip-neri-pennsburg",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Saint Anne Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "st-anne-chapel"
+    },
+    {
+      "id": "s5",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday - 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday - 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 3,
+          "said": "Mass Intentions Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 3,
+          "said": "Mass Intentions Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.spnparish.org/",
+          "said": "Weekday Mass (in St. Anne Chapel): Mon - Fri 8:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday – 8AM”"
+        }
+      ],
+      "rationale": "R32, leaning per precedent ss-philip-and-james-exton s15 (also sacred-heart-havertown s13, our-lady-of-fatima-secane s11): the chapel is named inside the parish's own schedule box under 'Church of Saint Philip' (p2), whose only address is 'Church & Rectory Address: 1325 Klinerd Rd'; the parish has one church and 'St. Anne's Meeting Room' (p4) is on its grounds. Hard because no page gives the chapel's address. The 8 AM Mass is in both issues' box and intentions and on the website.",
+      "question": "Is Saint Anne Chapel at St. Philip Neri Church, so the weekday Masses and Adoration held there go to the church?",
+      "options": [
+        {
+          "label": "Include at the church, in Saint Anne Chapel",
+          "entry": {
+            "church_slug": "st-philip-neri-pennsburg",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Saint Anne Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "st-anne-chapel"
+    },
+    {
+      "id": "s6",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday - 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday - 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 3,
+          "said": "Mass Intentions Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 3,
+          "said": "Mass Intentions Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.spnparish.org/",
+          "said": "Weekday Mass (in St. Anne Chapel): Mon - Fri 8:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday – 8AM”"
+        }
+      ],
+      "rationale": "R32, leaning per precedent ss-philip-and-james-exton s15 (also sacred-heart-havertown s13, our-lady-of-fatima-secane s11): the chapel is named inside the parish's own schedule box under 'Church of Saint Philip' (p2), whose only address is 'Church & Rectory Address: 1325 Klinerd Rd'; the parish has one church and 'St. Anne's Meeting Room' (p4) is on its grounds. Hard because no page gives the chapel's address. The 8 AM Mass is in both issues' box and intentions and on the website.",
+      "question": "Is Saint Anne Chapel at St. Philip Neri Church, so the weekday Masses and Adoration held there go to the church?",
+      "options": [
+        {
+          "label": "Include at the church, in Saint Anne Chapel",
+          "entry": {
+            "church_slug": "st-philip-neri-pennsburg",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Saint Anne Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "st-anne-chapel"
+    },
+    {
+      "id": "s7",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday - 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday - 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 3,
+          "said": "Mass Intentions Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 3,
+          "said": "Mass Intentions Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.spnparish.org/",
+          "said": "Weekday Mass (in St. Anne Chapel): Mon - Fri 8:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday – 8AM”"
+        }
+      ],
+      "rationale": "R32, leaning per precedent ss-philip-and-james-exton s15 (also sacred-heart-havertown s13, our-lady-of-fatima-secane s11): the chapel is named inside the parish's own schedule box under 'Church of Saint Philip' (p2), whose only address is 'Church & Rectory Address: 1325 Klinerd Rd'; the parish has one church and 'St. Anne's Meeting Room' (p4) is on its grounds. Hard because no page gives the chapel's address. The 8 AM Mass is in both issues' box and intentions and on the website.",
+      "question": "Is Saint Anne Chapel at St. Philip Neri Church, so the weekday Masses and Adoration held there go to the church?",
+      "options": [
+        {
+          "label": "Include at the church, in Saint Anne Chapel",
+          "entry": {
+            "church_slug": "st-philip-neri-pennsburg",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Saint Anne Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "st-anne-chapel"
+    },
+    {
+      "id": "s8",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday - 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 2,
+          "said": "WEEKDAY MASS SCHEDULE Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday - 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 3,
+          "said": "Mass Intentions Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 3,
+          "said": "Mass Intentions Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.spnparish.org/",
+          "said": "Weekday Mass (in St. Anne Chapel): Mon - Fri 8:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday – 8AM”"
+        }
+      ],
+      "rationale": "R32, leaning per precedent ss-philip-and-james-exton s15 (also sacred-heart-havertown s13, our-lady-of-fatima-secane s11): the chapel is named inside the parish's own schedule box under 'Church of Saint Philip' (p2), whose only address is 'Church & Rectory Address: 1325 Klinerd Rd'; the parish has one church and 'St. Anne's Meeting Room' (p4) is on its grounds. Hard because no page gives the chapel's address. The 8 AM Mass is in both issues' box and intentions and on the website.",
+      "question": "Is Saint Anne Chapel at St. Philip Neri Church, so the weekday Masses and Adoration held there go to the church?",
+      "options": [
+        {
+          "label": "Include at the church, in Saint Anne Chapel",
+          "entry": {
+            "church_slug": "st-philip-neri-pennsburg",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Saint Anne Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "st-anne-chapel"
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 3,
+          "said": "Monday-Thursday 9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 3,
+          "said": "Monday-Thursday 9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.spnparish.org/",
+          "said": "Eucharistic Adoration ... Exposition of The Blessed Sacrament: Mon-Thurs 9am to 7pm Fri 9am to 4pm Sat-Sun CLOSED"
+        },
+        {
+          "source": "c1",
+          "bulletin": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+          "page": 3,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p3 “9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel.”"
+        }
+      ],
+      "rationale": "R32, leaning per precedent ss-philip-and-james-exton s15, as for the weekday Masses in the same chapel. Weekly by R35: the same hours are printed on every weekday of both issues' intentions (Nov 9-13, Nov 16-20), and the current homepage (lists Dec 13 and Dec 15, 2026 events) gives the same hours as a standing schedule, so the exposition is stated.",
+      "question": "Is Saint Anne Chapel at St. Philip Neri Church, so the weekday Masses and Adoration held there go to the church?",
+      "options": [
+        {
+          "label": "Include at the church, in Saint Anne Chapel",
+          "entry": {
+            "church_slug": "st-philip-neri-pennsburg",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Exposition, Saint Anne Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "st-anne-chapel"
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 3,
+          "said": "Monday-Thursday 9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 3,
+          "said": "Monday-Thursday 9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.spnparish.org/",
+          "said": "Eucharistic Adoration ... Exposition of The Blessed Sacrament: Mon-Thurs 9am to 7pm Fri 9am to 4pm Sat-Sun CLOSED"
+        },
+        {
+          "source": "c1",
+          "bulletin": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+          "page": 3,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p3 “9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel.”"
+        }
+      ],
+      "rationale": "R32, leaning per precedent ss-philip-and-james-exton s15, as for the weekday Masses in the same chapel. Weekly by R35: the same hours are printed on every weekday of both issues' intentions (Nov 9-13, Nov 16-20), and the current homepage (lists Dec 13 and Dec 15, 2026 events) gives the same hours as a standing schedule, so the exposition is stated.",
+      "question": "Is Saint Anne Chapel at St. Philip Neri Church, so the weekday Masses and Adoration held there go to the church?",
+      "options": [
+        {
+          "label": "Include at the church, in Saint Anne Chapel",
+          "entry": {
+            "church_slug": "st-philip-neri-pennsburg",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Exposition, Saint Anne Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "st-anne-chapel"
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 3,
+          "said": "Monday-Thursday 9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 3,
+          "said": "Monday-Thursday 9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.spnparish.org/",
+          "said": "Eucharistic Adoration ... Exposition of The Blessed Sacrament: Mon-Thurs 9am to 7pm Fri 9am to 4pm Sat-Sun CLOSED"
+        },
+        {
+          "source": "c1",
+          "bulletin": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+          "page": 3,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p3 “9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel.”"
+        }
+      ],
+      "rationale": "R32, leaning per precedent ss-philip-and-james-exton s15, as for the weekday Masses in the same chapel. Weekly by R35: the same hours are printed on every weekday of both issues' intentions (Nov 9-13, Nov 16-20), and the current homepage (lists Dec 13 and Dec 15, 2026 events) gives the same hours as a standing schedule, so the exposition is stated.",
+      "question": "Is Saint Anne Chapel at St. Philip Neri Church, so the weekday Masses and Adoration held there go to the church?",
+      "options": [
+        {
+          "label": "Include at the church, in Saint Anne Chapel",
+          "entry": {
+            "church_slug": "st-philip-neri-pennsburg",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Exposition, Saint Anne Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "st-anne-chapel"
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 3,
+          "said": "Monday-Thursday 9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 3,
+          "said": "Monday-Thursday 9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.spnparish.org/",
+          "said": "Eucharistic Adoration ... Exposition of The Blessed Sacrament: Mon-Thurs 9am to 7pm Fri 9am to 4pm Sat-Sun CLOSED"
+        },
+        {
+          "source": "c1",
+          "bulletin": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+          "page": 3,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p3 “9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel.”"
+        }
+      ],
+      "rationale": "R32, leaning per precedent ss-philip-and-james-exton s15, as for the weekday Masses in the same chapel. Weekly by R35: the same hours are printed on every weekday of both issues' intentions (Nov 9-13, Nov 16-20), and the current homepage (lists Dec 13 and Dec 15, 2026 events) gives the same hours as a standing schedule, so the exposition is stated.",
+      "question": "Is Saint Anne Chapel at St. Philip Neri Church, so the weekday Masses and Adoration held there go to the church?",
+      "options": [
+        {
+          "label": "Include at the church, in Saint Anne Chapel",
+          "entry": {
+            "church_slug": "st-philip-neri-pennsburg",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Exposition, Saint Anne Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "st-anne-chapel"
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 3,
+          "said": "Friday 9:00 AM - 4:00 PM: Adoration in Saint Anne Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 3,
+          "said": "Friday 9:00 AM - 4:00 PM: Adoration in Saint Anne Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.spnparish.org/",
+          "said": "Exposition of The Blessed Sacrament: Mon-Thurs 9am to 7pm Fri 9am to 4pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+          "page": 3,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p3 “9:00 AM - 4:00 PM: Adoration in Saint Anne Chapel.”"
+        }
+      ],
+      "rationale": "R32, leaning per precedent ss-philip-and-james-exton s15, as for the weekday Masses in the same chapel. Weekly by R35: Friday 9-4 in both issues' intentions (Nov 13, Nov 20) and on the current homepage.",
+      "question": "Is Saint Anne Chapel at St. Philip Neri Church, so the weekday Masses and Adoration held there go to the church?",
+      "options": [
+        {
+          "label": "Include at the church, in Saint Anne Chapel",
+          "entry": {
+            "church_slug": "st-philip-neri-pennsburg",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Exposition, Saint Anne Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "st-anne-chapel"
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-pennsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the church"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 2,
+          "said": "FIRST FRIDAY MASS 9:00 AM: in Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 2,
+          "said": "FIRST FRIDAY MASS 9:00 AM: in Church"
+        },
+        {
+          "source": "website",
+          "url": "https://www.spnparish.org/",
+          "said": "First Friday Mass : 9:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “FIRST FRIDAY MASS 9:00 AM: in Church”"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly rule 2: the schedule page of both issues names the week. Nothing says it replaces the Friday 8 AM Mass in the chapel (the website lists both), so the 8 AM slot stays every week (R17). No issue read covers a first Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-pennsburg",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 2,
+          "said": "CONFESSIONS Saturdays: 3:00 - 3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 2,
+          "said": "CONFESSIONS Saturdays: 3:00 - 3:45 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.spnparish.org/",
+          "said": "Confessions: Saturday 3:00 PM - 3:45 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saturdays: 3:00 - 3:45PM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 2,
+          "said": "OR at the Rectory BY APPOINTMENT"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 3,
+          "said": "7:10 AM - Morning Rosary; 1:00 PM - Holy Rosary Hour"
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 6,
+          "said": "The Sacrament of Reconciliation ... scheduled Confession times for nearby parishes and Shrines (Saint Mary's Schwenksville, Saint Teresa of Calcutta Royersford, St. Isidore Quakertown, Most Blessed Sacrament Bally, Padre Pio Barto)"
+        }
+      ],
+      "rationale": "R22: other parishes' confession times, listed for information.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2ccef1c7",
+          "page": 6,
+          "said": "Tuesday, November 24, 2026 St. Teresa of Calcutta, 256 Swamp Pike, Schwenksville ... 6:15 PM Adoration, Flame of Love Rosary, Confessions 7:00 PM Procession, Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "454774bb",
+          "page": 6,
+          "said": "Memorial Mass for Parents of Deceased Children ... Saint Teresa of Calcutta Parish ... Wednesday, November 18th at 7:00 PM; Saturday, November 21 Mass of Remembrance, Saint Laurence Church, Upper Darby; Monday November 23 Veneration of Holy Face Relics, St. Joseph's Chapel at Malvern Retreat House"
+        }
+      ],
+      "rationale": "R22: events at other parishes or a retreat house, not at St. Philip Neri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "e8683da8f38a068bfd1d2f8513739fc1",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T21:34:20.681282+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "454774bb1f5d57e2a7e2b5183da00e9dea18a79b10e2e58018eda01d84edc076",
+        "fetched_at": "2026-11-15T16:46:49Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "2ccef1c7edf30c1eae6c0c0684f4f2ebf301b05fa65e5742c905ac35460587f9",
+        "fetched_at": "2026-11-08T15:55:21Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002239,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-philip-neri-pennsburg",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saturday - Vigil Mass - 4:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saturday - Vigil Mass - 4:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-philip-neri-pennsburg",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday - 7:30 AM; 10:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Sunday - 7:30 AM; 10:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-philip-neri-pennsburg",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday - 7:30 AM; 10:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Sunday - 7:30 AM; 10:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-philip-neri-pennsburg",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Anne Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday – 8AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday – 8AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-philip-neri-pennsburg",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Anne Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday – 8AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday – 8AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-philip-neri-pennsburg",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Anne Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday – 8AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday – 8AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-philip-neri-pennsburg",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Anne Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday – 8AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday – 8AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-philip-neri-pennsburg",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Anne Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday – 8AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Daily Masses are celebrated in the Saint Anne Chapel. Monday; Tuesday; Wednesday; Thursday; Friday – 8AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-philip-neri-pennsburg",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [
+            "first"
+          ],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "FIRST FRIDAY MASS 9:00 AM: in Church"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "FIRST FRIDAY MASS 9:00 AM: in Church"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-philip-neri-pennsburg",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:00",
+          "end_time": "15:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saturdays: 3:00 - 3:45PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saturdays: 3:00 - 3:45PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-philip-neri-pennsburg",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Anne Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel."
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-philip-neri-pennsburg",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Anne Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel."
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-philip-neri-pennsburg",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Anne Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel."
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-philip-neri-pennsburg",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Anne Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel."
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "9:00 AM - 7:00 PM: Adoration in Saint Anne Chapel."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-philip-neri-pennsburg",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Anne Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "9:00 AM - 4:00 PM: Adoration in Saint Anne Chapel."
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "9:00 AM - 4:00 PM: Adoration in Saint Anne Chapel."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "fe5845325597294fdfc3919d83d22a8b85b09def0ba4406fc7c1b1772f5f0905",
+    "differences": []
+  }
+}
