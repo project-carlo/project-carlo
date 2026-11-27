@@ -1,0 +1,750 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-gabriel-norwood",
+  "status": "ready",
+  "as_of": "2026-11-15T16:45:31Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T00:50:25Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both issues read (Nov 8, Nov 15) print the same box: Mon-Sat 8 AM, Sat 4:30 PM vigil, Sun 9, 12 and 5; Thursday Adoration after the 8 AM Mass to 7 PM with Benediction; confession Thu 6:15-6:45 and Sat 3-4. Christmas Masses come from both issues' dated Upcoming Events. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9c38f28b1524be2598cc4181fe45288279140c5533fac9b07b583c4ae669be82",
+      "fetched_at": "2026-11-15T16:45:31Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e6753ca021e3f7b14e75c45ee01b5a718d8d7a89cd651eef7d40a4d373baef64",
+      "fetched_at": "2026-11-08T15:54:16Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 1,
+          "said": "Weekday Mass Monday to Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 1,
+          "said": "Weekday Mass Monday to Saturday 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read; both weeks' intentions list 8:00AM each weekday (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 1,
+          "said": "Weekday Mass Monday to Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 1,
+          "said": "Weekday Mass Monday to Saturday 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read; both weeks' intentions list 8:00AM each weekday (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 1,
+          "said": "Weekday Mass Monday to Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 1,
+          "said": "Weekday Mass Monday to Saturday 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read; both weeks' intentions list 8:00AM each weekday (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 1,
+          "said": "Weekday Mass Monday to Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 1,
+          "said": "Weekday Mass Monday to Saturday 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read; both weeks' intentions list 8:00AM each weekday (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 1,
+          "said": "Weekday Mass Monday to Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 1,
+          "said": "Weekday Mass Monday to Saturday 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read; both weeks' intentions list 8:00AM each weekday (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 1,
+          "said": "Weekday Mass Monday to Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 1,
+          "said": "Weekday Mass Monday to Saturday 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read; both weeks' intentions list 8:00AM each weekday (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 1,
+          "said": "WEEKEND MASS Saturday (Vigil) 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 1,
+          "said": "WEEKEND MASS Saturday (Vigil) 4:30PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read, and in the weekly calendar and intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 1,
+          "said": "Sunday 9:00AM 12:00 Noon 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 1,
+          "said": "Sunday 9:00AM 12:00 Noon 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read; the intentions list 9:00AM, 12:00PM and 5:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 1,
+          "said": "Sunday 9:00AM 12:00 Noon 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 1,
+          "said": "Sunday 9:00AM 12:00 Noon 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read; the intentions list 9:00AM, 12:00PM and 5:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 1,
+          "said": "Sunday 9:00AM 12:00 Noon 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 1,
+          "said": "Sunday 9:00AM 12:00 Noon 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read; the intentions list 9:00AM, 12:00PM and 5:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass; Evening Prayer and Benediction at 7:00 PM"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 1,
+          "said": "Adoration Thursday after 8AM Mass until 7:00pm / Evening Prayer & Benediction Thursday 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 1,
+          "said": "Adoration Thursday after 8AM Mass until 7:00pm / Evening Prayer & Benediction Thursday 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 5,
+          "said": "Each Thursday, we gather for Eucharistic Adoration ... Adoration continues until 7:00 PM, and all are welcome."
+        }
+      ],
+      "rationale": "R1, R10: 'after' a weekday Mass starts 30 minutes after it (8:30 AM), ending at the printed 7:00 PM. POLICY: the 7:00 PM Benediction closes this Adoration, so it is one event with a note, not a second Adoration slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 1,
+          "said": "Reconciliation Thursday 6:15-6:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 1,
+          "said": "Reconciliation Thursday 6:15-6:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 2,
+          "said": "Thursday 6:15-6:45PM Saturday 3:00-4:00PM"
+        }
+      ],
+      "rationale": "R1: schedule box and Sacraments section of both issues; the weekly calendar repeats it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 1,
+          "said": "Reconciliation ... Saturday 3:00-4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 1,
+          "said": "Reconciliation ... Saturday 3:00-4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 2,
+          "said": "Thursday 6:15-6:45PM Saturday 3:00-4:00PM"
+        }
+      ],
+      "rationale": "R1: schedule box and Sacraments section of both issues; the weekly calendar repeats it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 2,
+          "said": "Reconciliation room located in the back of the church. Anytime by Appointment. Please call the Rectory"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 4,
+          "said": "December 24~ Mass Schedule 4PM; 6PM; Midnight"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 3,
+          "said": "December 24~ Mass Schedule 4PM; 6PM; Midnight"
+        }
+      ],
+      "rationale": "R1, R16: this year's Upcoming Events list (dated, followed by January 2027 items) in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 4,
+          "said": "December 24~ Mass Schedule 4PM; 6PM; Midnight"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 3,
+          "said": "December 24~ Mass Schedule 4PM; 6PM; Midnight"
+        }
+      ],
+      "rationale": "R1, R16: this year's Upcoming Events list (dated, followed by January 2027 items) in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "00:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Midnight Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 4,
+          "said": "December 24~ Mass Schedule 4PM; 6PM; Midnight"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 3,
+          "said": "December 24~ Mass Schedule 4PM; 6PM; Midnight"
+        }
+      ],
+      "rationale": "R1, R16: the Christmas Eve 'Midnight' Mass, recorded at 12:00 AM on Dec 25 as other seeds record it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 4,
+          "said": "December 25~ Christmas Day Masses 10:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 3,
+          "said": "December 25~ Christmas Day Masses 10:00 Noon"
+        }
+      ],
+      "rationale": "R1, R16: this year's Upcoming Events list in both issues; '10:00 Noon' reads as 10:00 AM and 12:00 Noon.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-norwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c38f28b",
+          "page": 4,
+          "said": "December 25~ Christmas Day Masses 10:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6753ca0",
+          "page": 3,
+          "said": "December 25~ Christmas Day Masses 10:00 Noon"
+        }
+      ],
+      "rationale": "R1, R16: this year's Upcoming Events list in both issues; '10:00 Noon' reads as 10:00 AM and 12:00 Noon.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
