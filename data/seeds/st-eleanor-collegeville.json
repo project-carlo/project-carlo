@@ -1,0 +1,1474 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-eleanor-collegeville",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:45:08Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T16:04:31Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Neither image-only bulletin (Nov 15, Nov 8) prints a schedule box or Mass intentions, so the weekly Masses come from the parish's Mass & Confession Times page, confirmed by its live calendar for Nov 27-Dec 1, 2026 (R6). Open: whether 'the Chapel' is at the church (Saturday and Wednesday confessions, the dated Nov 20 Family Holy Half Hour), and weekday Adoration 7 AM-9 PM seen only in the website calendar (Mon, Tue, Fri; Wed/Thu unseen).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3ad842102cd80131ea8e978f5d9962b38cf0301fb9ba5d0dadf6dbeed665c58d",
+      "fetched_at": "2026-11-15T16:45:08Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "75af420e71e2023127cfadc9425085a3720e482d73195b9c6308e8a513cd9417",
+      "fetched_at": "2026-11-08T15:54:01Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "3ad842102cd80131ea8e978f5d9962b38cf0301fb9ba5d0dadf6dbeed665c58d",
+      "bulletins": [
+        "3ad842102cd80131ea8e978f5d9962b38cf0301fb9ba5d0dadf6dbeed665c58d",
+        "75af420e71e2023127cfadc9425085a3720e482d73195b9c6308e8a513cd9417"
+      ],
+      "cached": false,
+      "cost_usd": 0.001347,
+      "at": "2026-11-27T16:10:55.487092+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Weekend Mass Saturday 4:30 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Vigil Mass Sat, Nov 28, 2026 4:30pm - 5:30pm @ Church",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Mass times; the parish's schedule page gives the Saturday vigil and its live calendar confirms it for Nov 28, 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Sunday 7:30 a.m., 9 a.m., 10:30 a.m. (live streamed), 12 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Mass Sun, Nov 29, 2026 7:30am ... 9:00am ... 10:30am ... 12:00pm @ Church",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Mass times; the schedule page gives the Sunday Masses and the live calendar lists all four for Nov 29, 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Sunday 7:30 a.m., 9 a.m., 10:30 a.m. (live streamed), 12 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Mass Sun, Nov 29, 2026 7:30am ... 9:00am ... 10:30am ... 12:00pm @ Church",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Mass times; the schedule page gives the Sunday Masses and the live calendar lists all four for Nov 29, 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Sunday 7:30 a.m., 9 a.m., 10:30 a.m. (live streamed), 12 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Mass Sun, Nov 29, 2026 7:30am ... 9:00am ... 10:30am ... 12:00pm @ Church",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Mass times; the schedule page gives the Sunday Masses and the live calendar lists all four for Nov 29, 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Sunday 7:30 a.m., 9 a.m., 10:30 a.m. (live streamed), 12 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Mass Sun, Nov 29, 2026 7:30am ... 9:00am ... 10:30am ... 12:00pm @ Church",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Mass times; the schedule page gives the Sunday Masses and the live calendar lists all four for Nov 29, 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Weekday Mass Monday–Friday 6:30 a.m., 9 a.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Daily Mass Mon, Nov 30, 2026 6:30am - 7:00am @ Church; Daily Mass Mon, Nov 30, 2026 9:00am - 9:45am @ Church",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Mass times; the schedule page gives Mon-Fri 6:30 and 9:00 and the live calendar lists both on Fri Nov 27, Mon Nov 30 and Tue Dec 1, 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Weekday Mass Monday–Friday 6:30 a.m., 9 a.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Daily Mass Mon, Nov 30, 2026 6:30am - 7:00am @ Church; Daily Mass Mon, Nov 30, 2026 9:00am - 9:45am @ Church",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Mass times; the schedule page gives Mon-Fri 6:30 and 9:00 and the live calendar lists both on Fri Nov 27, Mon Nov 30 and Tue Dec 1, 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Weekday Mass Monday–Friday 6:30 a.m., 9 a.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Daily Mass Mon, Nov 30, 2026 6:30am - 7:00am @ Church; Daily Mass Mon, Nov 30, 2026 9:00am - 9:45am @ Church",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Mass times; the schedule page gives Mon-Fri 6:30 and 9:00 and the live calendar lists both on Fri Nov 27, Mon Nov 30 and Tue Dec 1, 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Weekday Mass Monday–Friday 6:30 a.m., 9 a.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Daily Mass Mon, Nov 30, 2026 6:30am - 7:00am @ Church; Daily Mass Mon, Nov 30, 2026 9:00am - 9:45am @ Church",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Mass times; the schedule page gives Mon-Fri 6:30 and 9:00 and the live calendar lists both on Fri Nov 27, Mon Nov 30 and Tue Dec 1, 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Weekday Mass Monday–Friday 6:30 a.m., 9 a.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Daily Mass Mon, Nov 30, 2026 6:30am - 7:00am @ Church; Daily Mass Mon, Nov 30, 2026 9:00am - 9:45am @ Church",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Mass times; the schedule page gives Mon-Fri 6:30 and 9:00 and the live calendar lists both on Fri Nov 27, Mon Nov 30 and Tue Dec 1, 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Weekday Mass Monday–Friday 6:30 a.m., 9 a.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Daily Mass Mon, Nov 30, 2026 6:30am - 7:00am @ Church; Daily Mass Mon, Nov 30, 2026 9:00am - 9:45am @ Church",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Mass times; the schedule page gives Mon-Fri 6:30 and 9:00 and the live calendar lists both on Fri Nov 27, Mon Nov 30 and Tue Dec 1, 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Weekday Mass Monday–Friday 6:30 a.m., 9 a.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Daily Mass Mon, Nov 30, 2026 6:30am - 7:00am @ Church; Daily Mass Mon, Nov 30, 2026 9:00am - 9:45am @ Church",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Mass times; the schedule page gives Mon-Fri 6:30 and 9:00 and the live calendar lists both on Fri Nov 27, Mon Nov 30 and Tue Dec 1, 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Weekday Mass Monday–Friday 6:30 a.m., 9 a.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Daily Mass Mon, Nov 30, 2026 6:30am - 7:00am @ Church; Daily Mass Mon, Nov 30, 2026 9:00am - 9:45am @ Church",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Mass times; the schedule page gives Mon-Fri 6:30 and 9:00 and the live calendar lists both on Fri Nov 27, Mon Nov 30 and Tue Dec 1, 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Weekday Mass Monday–Friday 6:30 a.m., 9 a.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Daily Mass Mon, Nov 30, 2026 6:30am - 7:00am @ Church; Daily Mass Mon, Nov 30, 2026 9:00am - 9:45am @ Church",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Mass times; the schedule page gives Mon-Fri 6:30 and 9:00 and the live calendar lists both on Fri Nov 27, Mon Nov 30 and Tue Dec 1, 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Weekday Mass Monday–Friday 6:30 a.m., 9 a.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Daily Mass Mon, Nov 30, 2026 6:30am - 7:00am @ Church; Daily Mass Mon, Nov 30, 2026 9:00am - 9:45am @ Church",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Mass times; the schedule page gives Mon-Fri 6:30 and 9:00 and the live calendar lists both on Fri Nov 27, Mon Nov 30 and Tue Dec 1, 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Saturday 9 a.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Daily Mass Sat, Nov 28, 2026 9:00am - 9:45am @ Church",
+          "schedule_check": {
+            "checked_at": "2026-11-27T16:08:59Z",
+            "current_because": "Checked 2026-11-27: the homepage repeats this box and its live calendar lists the same Masses for Nov 27-Dec 1, 2026 (Daily Mass 6:30am and 9:00am weekdays, Sat Nov 28 9:00am and Vigil Mass 4:30pm, Sun Nov 29 7:30, 9:00, 10:30 and 12:00), so the schedule is in current use.",
+            "bulletin": "3ad84210",
+            "fits_because": "The bulletins (3ad84210, 75af420e) print no schedule box or Mass intentions; they mention a Saturday Vigil Mass (75af420e p2 Vigil Mass hymns), all Masses (3ad84210 p7) and livestreamed Masses (p10), and nothing in them contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no Mass times; the schedule page gives Saturday 9 a.m., confirmed for Nov 28, 2026 by the live calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Confession In Chapel unless noted Saturday: 8:00 to 8:45 am & 3:30 to 4:15 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/sacraments/reconciliation",
+          "said": "Confession is available on Saturdays from 8 a.m. to 8:45 a.m. and from 3:30 p.m. to 4:15 p.m."
+        }
+      ],
+      "rationale": "R32, R6: the times come from the current schedule page (its Masses match the live calendar for Nov 27-Dec 1, 2026); the bulletins print no confession times. 'Chapel' (3ad84210 p5 also 'Our Lady's chapel') is never given an address, but the parish has one church and nothing places the chapel elsewhere. Leaning per precedent ss-philip-and-james-exton s15 and our-lady-of-fatima-secane s11 (chapel confession, one church, website 'in Chapel').",
+      "question": "Is the parish's Chapel at St. Eleanor Church, so the confessions and the Nov 20 Family Holy Half Hour held there go to the church?",
+      "options": [
+        {
+          "label": "At the church, in the chapel",
+          "entry": {
+            "church_slug": "st-eleanor-church-collegeville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "08:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Confession In Chapel unless noted Saturday: 8:00 to 8:45 am & 3:30 to 4:15 pm"
+        }
+      ],
+      "rationale": "R32, R6: as the Saturday 8:00 confession; leaning per precedent ss-philip-and-james-exton s15 and our-lady-of-fatima-secane s11.",
+      "question": "Is the parish's Chapel at St. Eleanor Church, so the confessions and the Nov 20 Family Holy Half Hour held there go to the church?",
+      "options": [
+        {
+          "label": "At the church, in the chapel",
+          "entry": {
+            "church_slug": "st-eleanor-church-collegeville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:30",
+            "end_time": "16:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Wednesday: After the 6:30 & 9:00 am Mass, or by appointment anytime by contacting the parish office."
+        }
+      ],
+      "rationale": "R32, R6, R10: 'after' a weekday Mass is timed 30 minutes after it starts (7:00), no end. Location as the Saturday confession; leaning per precedent ss-philip-and-james-exton s15 and our-lady-of-fatima-secane s11.",
+      "question": "Is the parish's Chapel at St. Eleanor Church, so the confessions and the Nov 20 Family Holy Half Hour held there go to the church?",
+      "options": [
+        {
+          "label": "At the church, in the chapel",
+          "entry": {
+            "church_slug": "st-eleanor-church-collegeville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel, after the 6:30 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "Wednesday: After the 6:30 & 9:00 am Mass, or by appointment anytime by contacting the parish office."
+        }
+      ],
+      "rationale": "R32, R6, R10: 'after' a weekday Mass is timed 30 minutes after it starts (9:30), no end. Location as the Saturday confession; leaning per precedent ss-philip-and-james-exton s15 and our-lady-of-fatima-secane s11.",
+      "question": "Is the parish's Chapel at St. Eleanor Church, so the confessions and the Nov 20 Family Holy Half Hour held there go to the church?",
+      "options": [
+        {
+          "label": "At the church, in the chapel",
+          "entry": {
+            "church_slug": "st-eleanor-church-collegeville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel, after the 9:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ad84210",
+          "page": 5,
+          "said": "FRIDAY - November 20 ... Family Noisy Holy ½ Hour: 5:30pm · Chapel; Join us for 30 minutes of Eucharistic Adoration with praise and worship music."
+        },
+        {
+          "source": "agent",
+          "bulletin": "75af420e",
+          "page": 9,
+          "said": "Family Noisy Holy ½ Hour Join us for 30 minutes of Eucharistic Adoration ... Friday November 20 5:30 pm · Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "3ad842102cd80131ea8e978f5d9962b38cf0301fb9ba5d0dadf6dbeed665c58d",
+          "page": 5,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p5 “Join us for 30 minutes of Eucharistic Adoration with praise and worship music. We welcome families with kids of all ages, from infants to teens! Friday November 20 5:30 pm · Chapel”"
+        }
+      ],
+      "rationale": "R32: a dated Adoration (POLICY, Weekly or dated rule 3; Nov 20 falls on a third Friday but no week is named, R13), after as_of; '30 minutes' gives the end. The chapel's location is the group's question; leaning per precedent ss-philip-and-james-exton s15.",
+      "question": "Is the parish's Chapel at St. Eleanor Church, so the confessions and the Nov 20 Family Holy Half Hour held there go to the church?",
+      "options": [
+        {
+          "label": "At the church, in the chapel",
+          "entry": {
+            "church_slug": "st-eleanor-church-collegeville",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-20",
+            "start_time": "17:30",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel; Family Noisy Holy Half Hour"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/about-us/mass-confession-times",
+          "said": "or by appointment anytime by contacting the parish office."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-eleanor-church-collegeville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy devotions, Our Lady's chapel"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3ad84210",
+          "page": 5,
+          "said": "Divine Mercy Devotions: 7:00 to 8:00 pm · Chapel ... Please join us in Our Lady's chapel on Thursday evenings at 7 pm for Divine Mercy devotions."
+        }
+      ],
+      "rationale": "R24: a devotion the bulletin does not call Adoration, Exposition or a Holy Hour (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Adoration Fri, Nov 27, 2026 7:00am - 9:00pm @ Chapel; Adoration Mon, Nov 30, 2026 7:00am - 9:00pm @ Chapel; Adoration Tue, Dec 1, 2026 7:00am - 9:00pm @ Chapel"
+        }
+      ],
+      "rationale": "R29, R6: only the homepage's live calendar shows it, one date per weekday; neither bulletin nor the schedule page mentions Adoration (a missing mention is not a conflict, R6). The calendar's Masses match the schedule page exactly, and each weekday shown has it at the same hours, so it reads as a standing daily schedule (R35 by analogy with dated listings). Hard because no date repeats for a weekday and the chapel's address isn't given (see group chapel); no exposition claimed (R38).",
+      "question": "Add weekday Adoration in the chapel, 7:00 AM-9:00 PM, on Mondays, Tuesdays and Fridays, as the website's calendar lists it?",
+      "options": [
+        {
+          "label": "Mon, Tue, Fri 7:00 AM-9:00 PM",
+          "entry": {
+            "church_slug": "st-eleanor-church-collegeville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "adoration-seen"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Adoration Fri, Nov 27, 2026 7:00am - 9:00pm @ Chapel; Adoration Mon, Nov 30, 2026 7:00am - 9:00pm @ Chapel; Adoration Tue, Dec 1, 2026 7:00am - 9:00pm @ Chapel"
+        }
+      ],
+      "rationale": "R29, R6: only the homepage's live calendar shows it, one date per weekday; neither bulletin nor the schedule page mentions Adoration (a missing mention is not a conflict, R6). The calendar's Masses match the schedule page exactly, and each weekday shown has it at the same hours, so it reads as a standing daily schedule (R35 by analogy with dated listings). Hard because no date repeats for a weekday and the chapel's address isn't given (see group chapel); no exposition claimed (R38).",
+      "question": "Add weekday Adoration in the chapel, 7:00 AM-9:00 PM, on Mondays, Tuesdays and Fridays, as the website's calendar lists it?",
+      "options": [
+        {
+          "label": "Mon, Tue, Fri 7:00 AM-9:00 PM",
+          "entry": {
+            "church_slug": "st-eleanor-church-collegeville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "adoration-seen"
+    },
+    {
+      "id": "s26",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Adoration Fri, Nov 27, 2026 7:00am - 9:00pm @ Chapel; Adoration Mon, Nov 30, 2026 7:00am - 9:00pm @ Chapel; Adoration Tue, Dec 1, 2026 7:00am - 9:00pm @ Chapel"
+        }
+      ],
+      "rationale": "R29, R6: only the homepage's live calendar shows it, one date per weekday; neither bulletin nor the schedule page mentions Adoration (a missing mention is not a conflict, R6). The calendar's Masses match the schedule page exactly, and each weekday shown has it at the same hours, so it reads as a standing daily schedule (R35 by analogy with dated listings). Hard because no date repeats for a weekday and the chapel's address isn't given (see group chapel); no exposition claimed (R38).",
+      "question": "Add weekday Adoration in the chapel, 7:00 AM-9:00 PM, on Mondays, Tuesdays and Fridays, as the website's calendar lists it?",
+      "options": [
+        {
+          "label": "Mon, Tue, Fri 7:00 AM-9:00 PM",
+          "entry": {
+            "church_slug": "st-eleanor-church-collegeville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "adoration-seen"
+    },
+    {
+      "id": "s27",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Adoration Mon, Nov 30, 2026 7:00am - 9:00pm @ Chapel; Adoration Tue, Dec 1, 2026 7:00am - 9:00pm @ Chapel"
+        }
+      ],
+      "rationale": "R29: the calendar shown on 2026-11-27 runs Fri Nov 27-Tue Dec 1 only, so no Wednesday or Thursday is visible; the Thursday 7 PM Divine Mercy devotions in Our Lady's chapel (3ad84210 p5) may share the chapel. A wrong time is worse than a missing one (POLICY); update mode can add them.",
+      "question": "Add weekday Adoration 7:00 AM-9:00 PM on Wednesdays and Thursdays too, which the website's calendar window doesn't reach?",
+      "options": [
+        {
+          "label": "Wed, Thu 7:00 AM-9:00 PM",
+          "entry": {
+            "church_slug": "st-eleanor-church-collegeville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "adoration-unseen"
+    },
+    {
+      "id": "s28",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.steleanor.com/",
+          "said": "Adoration Mon, Nov 30, 2026 7:00am - 9:00pm @ Chapel; Adoration Tue, Dec 1, 2026 7:00am - 9:00pm @ Chapel"
+        }
+      ],
+      "rationale": "R29: the calendar shown on 2026-11-27 runs Fri Nov 27-Tue Dec 1 only, so no Wednesday or Thursday is visible; the Thursday 7 PM Divine Mercy devotions in Our Lady's chapel (3ad84210 p5) may share the chapel. A wrong time is worse than a missing one (POLICY); update mode can add them.",
+      "question": "Add weekday Adoration 7:00 AM-9:00 PM on Wednesdays and Thursdays too, which the website's calendar window doesn't reach?",
+      "options": [
+        {
+          "label": "Wed, Thu 7:00 AM-9:00 PM",
+          "entry": {
+            "church_slug": "st-eleanor-church-collegeville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "adoration-unseen"
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "7d3f61cdd1fd1fc58a87c2023d7f8a05",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T16:10:55.487092+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "3ad842102cd80131ea8e978f5d9962b38cf0301fb9ba5d0dadf6dbeed665c58d",
+        "fetched_at": "2026-11-15T16:45:08Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "75af420e71e2023127cfadc9425085a3720e482d73195b9c6308e8a513cd9417",
+        "fetched_at": "2026-11-08T15:54:01Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.001347,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-eleanor-church-collegeville",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-20",
+          "start_time": "17:30",
+          "end_time": "18:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "Join us for 30 minutes of Eucharistic Adoration with praise and worship music. We welcome families with kids of all ages, from infants to teens! Friday November 20 5:30 pm · Chapel"
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "Join us for 30 minutes of Eucharistic Adoration with praise and worship music. We welcome families with kids of all ages, from infants to teens! Friday November 20 5:30 pm · Chapel"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "5ba778282ffbdf4738e621d8b23c5fdc6f483a154f290313d4c08e81b91246f5",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s1"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Sat 16:30 @st-eleanor-church-collegeville",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s16",
+          "s3",
+          "s7",
+          "s9",
+          "s11",
+          "s13",
+          "s15"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Sat,Sun,Mon,Tue,Wed,Thu,Fri 09:00 @st-eleanor-church-collegeville",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d3",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s2"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Sun 07:30 @st-eleanor-church-collegeville",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d4",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s4"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Sun 10:30 @st-eleanor-church-collegeville",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d5",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s5"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Sun 12:00 @st-eleanor-church-collegeville",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d6",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s6",
+          "s8",
+          "s10",
+          "s12",
+          "s14"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Mon,Tue,Wed,Thu,Fri 06:30 @st-eleanor-church-collegeville",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      }
+    ]
+  }
+}
