@@ -1,0 +1,1458 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-help-of-christians-abington",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:42:18Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T20:29:53Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The schedule box is identical in both November issues and matches the website: Sat 4:30 PM, Sun 8, 10:30 and 12, Mon-Sat 8 AM, Monday exposition 8:30 AM-7 PM, Saturday confession 3:45 PM. Left out: the undated holy-day line and the Advent/Lent Saturday confession (no dates printed). Open: whether the 'Holiday Mass: 8:30am' line moves Thanksgiving's 8 AM Mass to 8:30.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d3d25a69f1981a307b0ebb9ed21c3de085853463a450398d0d88fddf546d538e",
+      "fetched_at": "2026-11-15T16:42:18Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6a5a5ea06322787bae705c900e8f814e31b5cc54af01beccfea1ba885606ca5b",
+      "fetched_at": "2026-11-08T15:52:56Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "d3d25a69f1981a307b0ebb9ed21c3de085853463a450398d0d88fddf546d538e",
+      "bulletins": [
+        "d3d25a69f1981a307b0ebb9ed21c3de085853463a450398d0d88fddf546d538e",
+        "6a5a5ea06322787bae705c900e8f814e31b5cc54af01beccfea1ba885606ca5b"
+      ],
+      "cached": false,
+      "cost_usd": 0.002659,
+      "at": "2026-11-27T20:35:27.262079+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "Saturday Evening Vigil Mass: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "Saturday Evening Vigil Mass: 4:30pm"
+        },
+        {
+          "source": "website",
+          "url": "https://olhcabington.com/",
+          "said": "Saturday - 4:30 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d3d25a69f1981a307b0ebb9ed21c3de085853463a450398d0d88fddf546d538e",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Evening Vigil Mass: 4:30pm”"
+        }
+      ],
+      "rationale": "R1: printed in the WORSHIP - EUCHARIST box of both issues read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "Sunday Masses: 8am, 10:30am & 12noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "Sunday Masses: 8am, 10:30am & 12noon"
+        },
+        {
+          "source": "website",
+          "url": "https://olhcabington.com/",
+          "said": "Sunday - 8:00am, 10:30am, 12:00pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d3d25a69f1981a307b0ebb9ed21c3de085853463a450398d0d88fddf546d538e",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Masses: 8am, 10:30am & 12noon”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; the website agrees. The Nov 22 Holy Name Mass and the Nov 15 Catholic Education Mass are held at the regular noon and 10:30 Masses (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "Sunday Masses: 8am, 10:30am & 12noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "Sunday Masses: 8am, 10:30am & 12noon"
+        },
+        {
+          "source": "website",
+          "url": "https://olhcabington.com/",
+          "said": "Sunday - 8:00am, 10:30am, 12:00pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d3d25a69f1981a307b0ebb9ed21c3de085853463a450398d0d88fddf546d538e",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Masses: 8am, 10:30am & 12noon”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; the website agrees. The Nov 22 Holy Name Mass and the Nov 15 Catholic Education Mass are held at the regular noon and 10:30 Masses (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "Sunday Masses: 8am, 10:30am & 12noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "Sunday Masses: 8am, 10:30am & 12noon"
+        },
+        {
+          "source": "website",
+          "url": "https://olhcabington.com/",
+          "said": "Sunday - 8:00am, 10:30am, 12:00pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d3d25a69f1981a307b0ebb9ed21c3de085853463a450398d0d88fddf546d538e",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Masses: 8am, 10:30am & 12noon”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; the website agrees. The Nov 22 Holy Name Mass and the Nov 15 Catholic Education Mass are held at the regular noon and 10:30 Masses (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "Weekday Mass: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "Weekday Mass: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 2,
+          "said": "8:00 am. Daily MASS INTENTIONS Monday, Nov. 16 ... Saturday, Nov. 21"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 2,
+          "said": "8:00 am. Daily MASS INTENTIONS Monday, Nov. 9 ... Saturday, Nov. 14"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 4,
+          "said": "pray the Rosary with us. Monday through Saturday, immediately after the 8 am Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d3d25a69f1981a307b0ebb9ed21c3de085853463a450398d0d88fddf546d538e",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass: 8am”"
+        }
+      ],
+      "rationale": "R1, R35: the box gives 'Weekday Mass: 8am'; both issues' 8:00 am intentions run Monday through Saturday, and the Rosary line and the Advent/Lent confession line ('Saturdays after 8am Mass') confirm a Saturday 8 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "Weekday Mass: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "Weekday Mass: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 2,
+          "said": "8:00 am. Daily MASS INTENTIONS Monday, Nov. 16 ... Saturday, Nov. 21"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 2,
+          "said": "8:00 am. Daily MASS INTENTIONS Monday, Nov. 9 ... Saturday, Nov. 14"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 4,
+          "said": "pray the Rosary with us. Monday through Saturday, immediately after the 8 am Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d3d25a69f1981a307b0ebb9ed21c3de085853463a450398d0d88fddf546d538e",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass: 8am”"
+        }
+      ],
+      "rationale": "R1, R35: the box gives 'Weekday Mass: 8am'; both issues' 8:00 am intentions run Monday through Saturday, and the Rosary line and the Advent/Lent confession line ('Saturdays after 8am Mass') confirm a Saturday 8 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "Weekday Mass: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "Weekday Mass: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 2,
+          "said": "8:00 am. Daily MASS INTENTIONS Monday, Nov. 16 ... Saturday, Nov. 21"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 2,
+          "said": "8:00 am. Daily MASS INTENTIONS Monday, Nov. 9 ... Saturday, Nov. 14"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 4,
+          "said": "pray the Rosary with us. Monday through Saturday, immediately after the 8 am Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d3d25a69f1981a307b0ebb9ed21c3de085853463a450398d0d88fddf546d538e",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass: 8am”"
+        }
+      ],
+      "rationale": "R1, R35: the box gives 'Weekday Mass: 8am'; both issues' 8:00 am intentions run Monday through Saturday, and the Rosary line and the Advent/Lent confession line ('Saturdays after 8am Mass') confirm a Saturday 8 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "Weekday Mass: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "Weekday Mass: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 2,
+          "said": "8:00 am. Daily MASS INTENTIONS Monday, Nov. 16 ... Saturday, Nov. 21"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 2,
+          "said": "8:00 am. Daily MASS INTENTIONS Monday, Nov. 9 ... Saturday, Nov. 14"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 4,
+          "said": "pray the Rosary with us. Monday through Saturday, immediately after the 8 am Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d3d25a69f1981a307b0ebb9ed21c3de085853463a450398d0d88fddf546d538e",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass: 8am”"
+        }
+      ],
+      "rationale": "R1, R35: the box gives 'Weekday Mass: 8am'; both issues' 8:00 am intentions run Monday through Saturday, and the Rosary line and the Advent/Lent confession line ('Saturdays after 8am Mass') confirm a Saturday 8 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "Weekday Mass: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "Weekday Mass: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 2,
+          "said": "8:00 am. Daily MASS INTENTIONS Monday, Nov. 16 ... Saturday, Nov. 21"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 2,
+          "said": "8:00 am. Daily MASS INTENTIONS Monday, Nov. 9 ... Saturday, Nov. 14"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 4,
+          "said": "pray the Rosary with us. Monday through Saturday, immediately after the 8 am Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d3d25a69f1981a307b0ebb9ed21c3de085853463a450398d0d88fddf546d538e",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass: 8am”"
+        }
+      ],
+      "rationale": "R1, R35: the box gives 'Weekday Mass: 8am'; both issues' 8:00 am intentions run Monday through Saturday, and the Rosary line and the Advent/Lent confession line ('Saturdays after 8am Mass') confirm a Saturday 8 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "Weekday Mass: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "Weekday Mass: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 2,
+          "said": "8:00 am. Daily MASS INTENTIONS Monday, Nov. 16 ... Saturday, Nov. 21"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 2,
+          "said": "8:00 am. Daily MASS INTENTIONS Monday, Nov. 9 ... Saturday, Nov. 14"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 4,
+          "said": "pray the Rosary with us. Monday through Saturday, immediately after the 8 am Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d3d25a69f1981a307b0ebb9ed21c3de085853463a450398d0d88fddf546d538e",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “Come & pray the Rosary with us. Monday through Saturday, immediately after the 8 am Mass.”"
+        }
+      ],
+      "rationale": "R1, R35: the box gives 'Weekday Mass: 8am'; both issues' 8:00 am intentions run Monday through Saturday, and the Rosary line and the Advent/Lent confession line ('Saturdays after 8am Mass') confirm a Saturday 8 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 4,
+          "said": "Eucharistic Adoration (Exposition of the Blessed Sacrament) Mondays, 8:30 am to 7:00 pm!"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 4,
+          "said": "Eucharistic Adoration (Exposition of the Blessed Sacrament) Mondays, 8:30 am to 7:00 pm!"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "Monday Eucharistic Adoration"
+        },
+        {
+          "source": "website",
+          "url": "https://olhcabington.com/",
+          "said": "Monday: Eucharistic Adoration Monday - 8:30am -7:00pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d3d25a69f1981a307b0ebb9ed21c3de085853463a450398d0d88fddf546d538e",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “Eucharistic Adoration (Exposition of the Blessed Sacrament) Mondays, 8:30 am to 7:00 pm!”"
+        }
+      ],
+      "rationale": "R1: both issues print the Monday hours with exposition; the box and the website agree. The sign-up for hours doesn't limit who may come.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "Confessions: Saturdays, 3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "Confessions: Saturdays, 3:45pm"
+        },
+        {
+          "source": "website",
+          "url": "https://olhcabington.com/",
+          "said": "Sacrament of Reconciliation Saturday - 3:45 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d3d25a69f1981a307b0ebb9ed21c3de085853463a450398d0d88fddf546d538e",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Confessions: Saturdays, 3:45pm”"
+        }
+      ],
+      "rationale": "R1: printed in the box of both issues and on the website; no end time is given, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://olhcabington.com/",
+          "said": "Sacrament of Reconciliation ... Or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent and Lent, after the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "Advent/Lent: Saturdays after 8am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "Advent/Lent: Saturdays after 8am Mass"
+        }
+      ],
+      "rationale": "R33: confession after the Saturday 8 AM Mass in Advent and Lent (8:30 AM by POLICY, Times). Lent's dates move every year and Advent's start does too, so no month season expresses it, and no bulletin read prints this Advent's dates (POLICY, Dates: don't project). December issues will print the Advent Saturdays for update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "HOLYDAYS OF OBLIGATION Vigil:5:30pm; 8am, 12noon & 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "HOLYDAYS OF OBLIGATION Vigil:5:30pm; 8am, 12noon & 7pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: the box's standing holy-day line names no day, and no issue read gives a dated notice for the Immaculate Conception (Tue Dec 8) or Christmas; dates the bulletin doesn't pin down are not projected (as st-isaac-jogues-wayne s27 left out an undated holy-day box). Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "HOLYDAYS OF OBLIGATION Vigil:5:30pm; 8am, 12noon & 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "HOLYDAYS OF OBLIGATION Vigil:5:30pm; 8am, 12noon & 7pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: the box's standing holy-day line names no day, and no issue read gives a dated notice for the Immaculate Conception (Tue Dec 8) or Christmas; dates the bulletin doesn't pin down are not projected (as st-isaac-jogues-wayne s27 left out an undated holy-day box). Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "HOLYDAYS OF OBLIGATION Vigil:5:30pm; 8am, 12noon & 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "HOLYDAYS OF OBLIGATION Vigil:5:30pm; 8am, 12noon & 7pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: the box's standing holy-day line names no day, and no issue read gives a dated notice for the Immaculate Conception (Tue Dec 8) or Christmas; dates the bulletin doesn't pin down are not projected (as st-isaac-jogues-wayne s27 left out an undated holy-day box). Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-abington",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "HOLYDAYS OF OBLIGATION Vigil:5:30pm; 8am, 12noon & 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "HOLYDAYS OF OBLIGATION Vigil:5:30pm; 8am, 12noon & 7pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: the box's standing holy-day line names no day, and no issue read gives a dated notice for the Immaculate Conception (Tue Dec 8) or Christmas; dates the bulletin doesn't pin down are not projected (as st-isaac-jogues-wayne s27 left out an undated holy-day box). Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "Weekday Mass: 8am ... Holiday Mass: 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "Weekday Mass: 8am ... Holiday Mass: 8:30am"
+        }
+      ],
+      "rationale": "R30: the box's standing line says holidays have an 8:30 AM Mass, which reads as replacing the 8 AM weekday Mass, but it names no holiday, so POLICY, Dates doesn't pin Nov 26. Leaning yes as nativity-bvm-media s22 recorded a standing holiday footnote's later Thanksgiving Mass in place of the usual one; Thanksgiving is the one national holiday before December. Hard because the line names no day; Nov 11 Veterans Day kept its 8:00 intention (6a5a5ea0 p2), so not every holiday counts.",
+      "question": "Thanksgiving, Thu Nov 26: record the box's 'Holiday Mass: 8:30am' in place of the 8 AM weekday Mass?",
+      "options": [
+        {
+          "label": "Yes, 8:30 AM instead of 8 AM",
+          "entry": {
+            "church_slug": "our-lady-help-of-christians-abington",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "thanksgiving"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d3d25a69",
+          "page": 1,
+          "said": "Weekday Mass: 8am ... Holiday Mass: 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5a5ea0",
+          "page": 1,
+          "said": "Weekday Mass: 8am ... Holiday Mass: 8:30am"
+        }
+      ],
+      "rationale": "R30: the box's standing line says holidays have an 8:30 AM Mass, which reads as replacing the 8 AM weekday Mass, but it names no holiday, so POLICY, Dates doesn't pin Nov 26. Leaning yes as nativity-bvm-media s22 recorded a standing holiday footnote's later Thanksgiving Mass in place of the usual one; Thanksgiving is the one national holiday before December. Hard because the line names no day; Nov 11 Veterans Day kept its 8:00 intention (6a5a5ea0 p2), so not every holiday counts.",
+      "question": "Thanksgiving, Thu Nov 26: record the box's 'Holiday Mass: 8:30am' in place of the 8 AM weekday Mass?",
+      "options": [
+        {
+          "label": "Yes, 8:30 AM instead of 8 AM",
+          "entry": {
+            "church_slug": "our-lady-help-of-christians-abington",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving: Holiday Mass at 8:30 AM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "thanksgiving"
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "207d7d9ea3be2f2843e5e2adf558c235",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T20:35:27.262079+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "d3d25a69f1981a307b0ebb9ed21c3de085853463a450398d0d88fddf546d538e",
+        "fetched_at": "2026-11-15T16:42:18Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "6a5a5ea06322787bae705c900e8f814e31b5cc54af01beccfea1ba885606ca5b",
+        "fetched_at": "2026-11-08T15:52:56Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002659,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "our-lady-help-of-christians-abington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Evening Vigil Mass: 4:30pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Evening Vigil Mass: 4:30pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "our-lady-help-of-christians-abington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Masses: 8am, 10:30am & 12noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Masses: 8am, 10:30am & 12noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "our-lady-help-of-christians-abington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Masses: 8am, 10:30am & 12noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Masses: 8am, 10:30am & 12noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "our-lady-help-of-christians-abington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Masses: 8am, 10:30am & 12noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Masses: 8am, 10:30am & 12noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "our-lady-help-of-christians-abington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass: 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass: 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "our-lady-help-of-christians-abington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass: 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass: 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "our-lady-help-of-christians-abington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass: 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass: 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "our-lady-help-of-christians-abington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass: 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass: 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "our-lady-help-of-christians-abington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass: 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass: 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "our-lady-help-of-christians-abington",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "Come & pray the Rosary with us. Monday through Saturday, immediately after the 8 am Mass."
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "Come & pray the Rosary with us. Monday through Saturday, immediately after the 8 am Mass."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "our-lady-help-of-christians-abington",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:45",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Confessions: Saturdays, 3:45pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Confessions: Saturdays, 3:45pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "our-lady-help-of-christians-abington",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "Eucharistic Adoration (Exposition of the Blessed Sacrament) Mondays, 8:30 am to 7:00 pm!"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "Eucharistic Adoration (Exposition of the Blessed Sacrament) Mondays, 8:30 am to 7:00 pm!"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "add3e5bd9abc57a73edd31e0f79424e0dac4747d66fba364a11fa0d26ea717c5",
+    "differences": []
+  }
+}
