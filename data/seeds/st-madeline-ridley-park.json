@@ -1,0 +1,782 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-madeline-ridley-park",
+  "status": "ready",
+  "as_of": "2026-11-15T16:46:12Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T01:12:28Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both read issues (Nov 8, Nov 15; image-only PDFs, read from renders) print the same box: weekdays 8 AM, Sat 4 PM vigil, Sun 8:30, 11 AM and 5 PM, Saturday confession 3:00-3:45 PM; the intentions agree. Adds the Advent Wednesday Confessions & Holy Hour, Dec 2-23, 6-7 PM, as dated entries. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "cd01b539c02543a222e0faa28a33176f40e0726df8725e869f95b97dae2caf52",
+      "fetched_at": "2026-11-15T16:46:12Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d4d3f9202c51f438df875618b55bb2c7e9645b55c8df57559130a06249f5f751",
+      "fetched_at": "2026-11-08T15:54:52Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 1,
+          "said": "SATURDAY VIGIL MASS 4PM & CONFESSIONS 3PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4d3f920",
+          "page": 1,
+          "said": "SATURDAY VIGIL MASS 4PM & CONFESSIONS 3PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 2,
+          "said": "Saturday, November 21 ... 4:00PM For the People of St. Madeline Parish"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both bulletins and in each week's intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 1,
+          "said": "SUNDAYS 8:30AM, 11AM & 5PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4d3f920",
+          "page": 1,
+          "said": "SUNDAYS 8:30AM, 11AM & 5PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 2,
+          "said": "Sunday, November 22 ... 8:30AM ... 11:00AM ... 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both bulletins and in each week's intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 1,
+          "said": "SUNDAYS 8:30AM, 11AM & 5PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4d3f920",
+          "page": 1,
+          "said": "SUNDAYS 8:30AM, 11AM & 5PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 2,
+          "said": "Sunday, November 22 ... 8:30AM ... 11:00AM ... 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both bulletins and in each week's intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 1,
+          "said": "SUNDAYS 8:30AM, 11AM & 5PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4d3f920",
+          "page": 1,
+          "said": "SUNDAYS 8:30AM, 11AM & 5PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 2,
+          "said": "Sunday, November 22 ... 8:30AM ... 11:00AM ... 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both bulletins and in each week's intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 1,
+          "said": "DAILY MASS 8AM MON-FRIDAY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4d3f920",
+          "page": 1,
+          "said": "DAILY MASS 8AM MON-FRIDAY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 2,
+          "said": "Monday, November 16 8:00 AM ... Friday, November 20 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both bulletins; each weekday's intentions (p2) list 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 1,
+          "said": "DAILY MASS 8AM MON-FRIDAY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4d3f920",
+          "page": 1,
+          "said": "DAILY MASS 8AM MON-FRIDAY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 2,
+          "said": "Monday, November 16 8:00 AM ... Friday, November 20 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both bulletins; each weekday's intentions (p2) list 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 1,
+          "said": "DAILY MASS 8AM MON-FRIDAY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4d3f920",
+          "page": 1,
+          "said": "DAILY MASS 8AM MON-FRIDAY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 2,
+          "said": "Monday, November 16 8:00 AM ... Friday, November 20 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both bulletins; each weekday's intentions (p2) list 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 1,
+          "said": "DAILY MASS 8AM MON-FRIDAY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4d3f920",
+          "page": 1,
+          "said": "DAILY MASS 8AM MON-FRIDAY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 2,
+          "said": "Monday, November 16 8:00 AM ... Friday, November 20 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both bulletins; each weekday's intentions (p2) list 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 1,
+          "said": "DAILY MASS 8AM MON-FRIDAY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4d3f920",
+          "page": 1,
+          "said": "DAILY MASS 8AM MON-FRIDAY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 2,
+          "said": "Monday, November 16 8:00 AM ... Friday, November 20 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Times box of both bulletins; each weekday's intentions (p2) list 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Every Saturday at 3 PM - 3:45PM in church and anytime by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4d3f920",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Every Saturday at 3 PM - 3:45PM in church and anytime by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 1,
+          "said": "SATURDAY VIGIL MASS 4PM & CONFESSIONS 3PM"
+        }
+      ],
+      "rationale": "R1: the Reconciliation box of both bulletins gives 3:00-3:45 PM; the Mass Times line agrees on the 3 PM start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 1,
+          "said": "and anytime by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Confessions & Holy Hour"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 5,
+          "said": "Advent Confessions & Holy Hour Wednesday Evenings Starting 12/2 & end 12/23 6PM-7PM"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin's Advent flyer prints Wednesday evenings 6-7 PM from Dec 2 through Dec 23, which pins those four Wednesdays; recorded as dated entries rather than a weekly slot so it doesn't recur every December. The printed 6-7 PM is given for the confessions themselves, not for a larger event (one church).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-09",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Confessions & Holy Hour"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 5,
+          "said": "Advent Confessions & Holy Hour Wednesday Evenings Starting 12/2 & end 12/23 6PM-7PM"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin's Advent flyer prints Wednesday evenings 6-7 PM from Dec 2 through Dec 23, which pins those four Wednesdays; recorded as dated entries rather than a weekly slot so it doesn't recur every December. The printed 6-7 PM is given for the confessions themselves, not for a larger event (one church).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-16",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Confessions & Holy Hour"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 5,
+          "said": "Advent Confessions & Holy Hour Wednesday Evenings Starting 12/2 & end 12/23 6PM-7PM"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin's Advent flyer prints Wednesday evenings 6-7 PM from Dec 2 through Dec 23, which pins those four Wednesdays; recorded as dated entries rather than a weekly slot so it doesn't recur every December. The printed 6-7 PM is given for the confessions themselves, not for a larger event (one church).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-23",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Confessions & Holy Hour"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 5,
+          "said": "Advent Confessions & Holy Hour Wednesday Evenings Starting 12/2 & end 12/23 6PM-7PM"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin's Advent flyer prints Wednesday evenings 6-7 PM from Dec 2 through Dec 23, which pins those four Wednesdays; recorded as dated entries rather than a weekly slot so it doesn't recur every December. The printed 6-7 PM is given for the confessions themselves, not for a larger event (one church).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Holy Hour"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 5,
+          "said": "Advent Confessions & Holy Hour Wednesday Evenings Starting 12/2 & end 12/23 6PM-7PM"
+        }
+      ],
+      "rationale": "R1, R16; POLICY, What to extract: a Holy Hour is Adoration. The flyer pins the four Wednesdays Dec 2-23, 6-7 PM, at the parish's one church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-09",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Holy Hour"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 5,
+          "said": "Advent Confessions & Holy Hour Wednesday Evenings Starting 12/2 & end 12/23 6PM-7PM"
+        }
+      ],
+      "rationale": "R1, R16; POLICY, What to extract: a Holy Hour is Adoration. The flyer pins the four Wednesdays Dec 2-23, 6-7 PM, at the parish's one church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-16",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Holy Hour"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 5,
+          "said": "Advent Confessions & Holy Hour Wednesday Evenings Starting 12/2 & end 12/23 6PM-7PM"
+        }
+      ],
+      "rationale": "R1, R16; POLICY, What to extract: a Holy Hour is Adoration. The flyer pins the four Wednesdays Dec 2-23, 6-7 PM, at the parish's one church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeline-ridley-park",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-23",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Holy Hour"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 5,
+          "said": "Advent Confessions & Holy Hour Wednesday Evenings Starting 12/2 & end 12/23 6PM-7PM"
+        }
+      ],
+      "rationale": "R1, R16; POLICY, What to extract: a Holy Hour is Adoration. The flyer pins the four Wednesdays Dec 2-23, 6-7 PM, at the parish's one church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 1,
+          "said": "HOLY DAYS AS PUBLISHED"
+        }
+      ],
+      "rationale": "R24: no time is given; neither read issue publishes holy-day times (Dec 8 times will come in later issues).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd01b539",
+          "page": 7,
+          "said": "5th Sunday Rosary November 29th @ 10:30am in Church"
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
