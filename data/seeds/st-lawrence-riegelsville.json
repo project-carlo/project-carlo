@@ -1,0 +1,859 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-lawrence-riegelsville",
+  "status": "ready",
+  "as_of": "2026-11-15T16:46:12Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T21:26:10Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both November issues print the same schedule box: Sat 5 PM vigil, Sun 9:30 AM, 9 AM Mon-Wed, Fri, Sat (Thursday is a Communion Service), Wed Adoration 9:30-11, Sat confession 3:30-4:30. The undated holy-day line is left out. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "833950fea65629a761d6b697de073fdf5f09def10459bcb63b0d865927f89d15",
+      "fetched_at": "2026-11-15T16:46:12Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "942e3b6e8347d2034875940d8c290d698972657e9fa259d0fd3b94cb621152d1",
+      "fetched_at": "2026-11-08T22:10:34Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "833950fea65629a761d6b697de073fdf5f09def10459bcb63b0d865927f89d15",
+      "bulletins": [
+        "833950fea65629a761d6b697de073fdf5f09def10459bcb63b0d865927f89d15",
+        "942e3b6e8347d2034875940d8c290d698972657e9fa259d0fd3b94cb621152d1"
+      ],
+      "cached": false,
+      "cost_usd": 0.001262,
+      "at": "2026-11-27T21:28:31.155390+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-riegelsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "833950fe",
+          "page": 1,
+          "said": "Mass Schedule: Saturday Evenings @ 5PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "942e3b6e",
+          "page": 1,
+          "said": "Mass Schedule: Saturday Evenings @ 5PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "833950fea65629a761d6b697de073fdf5f09def10459bcb63b0d865927f89d15",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in each week's intentions (Vigil Mass 5:00PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-riegelsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "833950fe",
+          "page": 1,
+          "said": "Sunday Morning @ 9:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "942e3b6e",
+          "page": 1,
+          "said": "Sunday Morning @ 9:30AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "833950fea65629a761d6b697de073fdf5f09def10459bcb63b0d865927f89d15",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-riegelsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "833950fe",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "942e3b6e",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "833950fea65629a761d6b697de073fdf5f09def10459bcb63b0d865927f89d15",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; each day's 9:00AM intention matches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-riegelsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "833950fe",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "942e3b6e",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "833950fea65629a761d6b697de073fdf5f09def10459bcb63b0d865927f89d15",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; each day's 9:00AM intention matches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-riegelsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "833950fe",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "942e3b6e",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "833950fea65629a761d6b697de073fdf5f09def10459bcb63b0d865927f89d15",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; each day's 9:00AM intention matches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-riegelsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "833950fe",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "942e3b6e",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "833950fea65629a761d6b697de073fdf5f09def10459bcb63b0d865927f89d15",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; each day's 9:00AM intention matches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-riegelsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "833950fe",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "942e3b6e",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "833950fea65629a761d6b697de073fdf5f09def10459bcb63b0d865927f89d15",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; each day's 9:00AM intention matches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-riegelsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Readings & Communion Distribution"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "833950fe",
+          "page": 1,
+          "said": "Thursday Readings & Communion Distribution Only"
+        },
+        {
+          "source": "agent",
+          "bulletin": "942e3b6e",
+          "page": 1,
+          "said": "Thursday Readings & Communion Distribution Only"
+        }
+      ],
+      "rationale": "R24, POLICY (What to extract): Thursday is a Communion Service, never a Mass; both weeks' intentions print '9:00AM Reading & Communion Distribution Only'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-riegelsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "833950fe",
+          "page": 1,
+          "said": "Eucharistic Adoration: Wednesday @ 9:30AM – 11AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "942e3b6e",
+          "page": 1,
+          "said": "Eucharistic Adoration: Wednesday @ 9:30AM – 11AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "833950fea65629a761d6b697de073fdf5f09def10459bcb63b0d865927f89d15",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Eucharistic Adoration: Wednesday @ 9:30AM – 11AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-riegelsville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "833950fe",
+          "page": 1,
+          "said": "Confessions: Saturday @ 3:30PM - 4:30PM @ Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "942e3b6e",
+          "page": 1,
+          "said": "Confessions: Saturday @ 3:30PM - 4:30PM @ Church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "833950fea65629a761d6b697de073fdf5f09def10459bcb63b0d865927f89d15",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Confessions: Saturday @ 3:30PM - 4:30PM @ Church.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "833950fe",
+          "page": 1,
+          "said": "Confessions: ... Via Appointment - Contact Rectory"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "833950fe",
+          "page": 1,
+          "said": "Holy Days @ 9AM, 12 Noon & 7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "942e3b6e",
+          "page": 1,
+          "said": "Holy Days @ 9AM, 12 Noon & 7PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line names no date, so no dated Mass is projected from it (as st-isaac-jogues-wayne s27 left out an undated standing box). Neither issue prints Dec 8 or another holy day; update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "bbb45bd6542afcac1fb75e0976b02d47",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T21:28:31.155390+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "833950fea65629a761d6b697de073fdf5f09def10459bcb63b0d865927f89d15",
+        "fetched_at": "2026-11-15T16:46:12Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "942e3b6e8347d2034875940d8c290d698972657e9fa259d0fd3b94cb621152d1",
+        "fetched_at": "2026-11-08T22:10:34Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.001262,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-lawrence-riegelsville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-lawrence-riegelsville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-lawrence-riegelsville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-lawrence-riegelsville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-lawrence-riegelsville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-lawrence-riegelsville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-lawrence-riegelsville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mass Schedule: Saturday Evenings @ 5PM; Sunday Morning @ 9:30AM; Holy Days @ 9AM, 12 Noon & 7PM; Monday, Tuesday, Wednesday, Friday, Saturday @ 9AM, Thursday Readings & Communion Distribution Only."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-lawrence-riegelsville",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:30",
+          "end_time": "16:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Confessions: Saturday @ 3:30PM - 4:30PM @ Church."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Confessions: Saturday @ 3:30PM - 4:30PM @ Church."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-lawrence-riegelsville",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "11:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Wednesday @ 9:30AM – 11AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Wednesday @ 9:30AM – 11AM"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "094f46e2bfd56de681a149734d0074ade3c53d9cfaba45a298cc99e0e96b73c2",
+    "differences": []
+  }
+}
