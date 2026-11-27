@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "presentation-bvm-cheltenham",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:44:03Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T20:12:15Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@f3cefc0ce390",
+  "approved_at": "2026-11-27T21:43:56Z",
   "summary": "One church (Presentation BVM); the twinned St. Joseph Church is its own parish's and is left out. Two image-only November issues and the website agree on the weekend Masses, weekday Masses and Saturday confession. Open: whether the Adoration Chapel (weekday Masses) is at the church, and Wednesday Adoration's end (bulletin 6 PM vs website 7 PM).",
   "blocked_reason": null,
   "bulletins": [
@@ -240,9 +240,22 @@
     },
     {
       "id": "s5",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-cheltenham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -301,14 +314,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:43:56Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s6",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-cheltenham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -367,14 +397,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:43:56Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s7",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-cheltenham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -433,14 +480,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:43:56Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s8",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-cheltenham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -499,14 +563,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:43:56Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-cheltenham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -565,14 +646,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:43:56Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-cheltenham",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel; Benediction"
+      },
       "page": 3,
       "sources": [
         {
@@ -642,7 +740,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:43:56Z"
+      }
     },
     {
       "id": "s11",

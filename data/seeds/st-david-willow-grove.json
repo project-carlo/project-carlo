@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-david-willow-grove",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:44:58Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T20:52:24Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@f3cefc0ce390",
+  "approved_at": "2026-11-27T21:44:11Z",
   "summary": "One church, two November issues read (Nov 15 text, Nov 8 image-only) with identical schedule boxes; the website matches them. Weekend Masses, Saturday 8 AM Mass and Saturday 8:30-9:30 AM confession (end from the website) are settled. Open: one grouped question whether to apply the website's summer schedule (June 8-Sept 7) to the weekday Mass and chapel Adoration.",
   "blocked_reason": null,
   "bulletins": [
@@ -352,9 +352,27 @@
     },
     {
       "id": "s7",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 8,
+          "end_month": 6,
+          "end_day": 7
+        },
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -425,14 +443,36 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:11Z"
+      },
       "group": "summer-regular"
     },
     {
       "id": "s8",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 8,
+          "end_month": 6,
+          "end_day": 7
+        },
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -503,14 +543,36 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:11Z"
+      },
       "group": "summer-regular"
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 8,
+          "end_month": 6,
+          "end_day": 7
+        },
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -581,14 +643,36 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:11Z"
+      },
       "group": "summer-regular"
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 8,
+          "end_month": 6,
+          "end_day": 7
+        },
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -659,14 +743,36 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:11Z"
+      },
       "group": "summer-regular"
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 8,
+          "end_month": 6,
+          "end_day": 7
+        },
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -737,14 +843,36 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:11Z"
+      },
       "group": "summer-regular"
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 6,
+          "start_day": 8,
+          "end_month": 9,
+          "end_day": 7
+        },
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -784,14 +912,36 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:11Z"
+      },
       "group": "summer-added"
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 6,
+          "start_day": 8,
+          "end_month": 9,
+          "end_day": 7
+        },
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -831,14 +981,36 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:11Z"
+      },
       "group": "summer-added"
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 6,
+          "start_day": 8,
+          "end_month": 9,
+          "end_day": 7
+        },
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -878,14 +1050,36 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:11Z"
+      },
       "group": "summer-added"
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 6,
+          "start_day": 8,
+          "end_month": 9,
+          "end_day": 7
+        },
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -925,14 +1119,36 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:11Z"
+      },
       "group": "summer-added"
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 6,
+          "start_day": 8,
+          "end_month": 9,
+          "end_day": 7
+        },
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -972,14 +1188,36 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:11Z"
+      },
       "group": "summer-added"
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 8,
+          "end_month": 6,
+          "end_day": 7
+        },
+        "note": "Adoration Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -1061,14 +1299,36 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:11Z"
+      },
       "group": "summer-regular"
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 8,
+          "end_month": 6,
+          "end_day": 7
+        },
+        "note": "Adoration Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -1150,14 +1410,36 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:11Z"
+      },
       "group": "summer-regular"
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 8,
+          "end_month": 6,
+          "end_day": 7
+        },
+        "note": "Adoration Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -1222,14 +1504,36 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:11Z"
+      },
       "group": "summer-regular"
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 6,
+          "start_day": 8,
+          "end_month": 9,
+          "end_day": 7
+        },
+        "note": "Adoration Chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -1269,14 +1573,36 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:11Z"
+      },
       "group": "summer-added"
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 6,
+          "start_day": 8,
+          "end_month": 9,
+          "end_day": 7
+        },
+        "note": "Adoration Chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -1316,14 +1642,36 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:11Z"
+      },
       "group": "summer-added"
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 6,
+          "start_day": 8,
+          "end_month": 9,
+          "end_day": 7
+        },
+        "note": "Adoration Chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -1363,7 +1711,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:11Z"
+      },
       "group": "summer-added"
     },
     {

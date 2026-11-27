@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "immaculate-conception-bvm-jenkintown",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:40:54Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T23:53:13Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@f3cefc0ce390",
+  "approved_at": "2026-11-27T21:44:01Z",
   "summary": "One church. Both bulletins (Nov 8 and Nov 15, 2026; image-only, read by render) print the same schedule, matching the parish website: Sat 4:30 PM vigil, Sun 7:30/9:30/11:30 AM and 4:30 PM, Mon-Sat 8:00 AM, Friday Adoration 8:30-noon, Saturday Confession 3-4 PM. Dated: Thanksgiving 9 AM Mass, Dec 21 Christmas Confessions, Christmas Eve/Day Masses. Open: the Christmas Eve children's Mass after the 3:30 procession, and the undated Dec 8 holy-day Masses.",
   "blocked_reason": null,
   "bulletins": [
@@ -877,9 +877,22 @@
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve, begins with the Children's Procession to the Crib"
+      },
       "page": 10,
       "sources": [
         {
@@ -921,13 +934,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:01Z"
+      }
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy day vigil"
+      },
       "page": 1,
       "sources": [
         {
@@ -969,14 +999,31 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:01Z"
+      },
       "group": "holyday"
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
       "page": 1,
       "sources": [
         {
@@ -1018,14 +1065,31 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:01Z"
+      },
       "group": "holyday"
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
       "page": 1,
       "sources": [
         {
@@ -1067,14 +1131,31 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:01Z"
+      },
       "group": "holyday"
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
       "page": 1,
       "sources": [
         {
@@ -1116,7 +1197,11 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:01Z"
+      },
       "group": "holyday"
     }
   ]

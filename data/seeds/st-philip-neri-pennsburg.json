@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-philip-neri-pennsburg",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:46:49Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T21:28:53Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@f3cefc0ce390",
+  "approved_at": "2026-11-27T21:44:22Z",
   "summary": "One church. Weekend, weekday, First Friday and Saturday confession times agree in both November issues (image-only, read by render) and on the current homepage. Open: one grouped question whether Saint Anne Chapel, where the weekday 8 AM Masses and Mon-Fri exposition are held, is at the church (lean include, per ss-philip-and-james-exton s15).",
   "blocked_reason": null,
   "bulletins": [
@@ -210,9 +210,22 @@
     },
     {
       "id": "s4",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-pennsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Saint Anne Chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -277,14 +290,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:22Z"
+      },
       "group": "st-anne-chapel"
     },
     {
       "id": "s5",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-pennsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Saint Anne Chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -349,14 +379,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:22Z"
+      },
       "group": "st-anne-chapel"
     },
     {
       "id": "s6",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-pennsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Saint Anne Chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -421,14 +468,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:22Z"
+      },
       "group": "st-anne-chapel"
     },
     {
       "id": "s7",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-pennsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Saint Anne Chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -493,14 +557,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:22Z"
+      },
       "group": "st-anne-chapel"
     },
     {
       "id": "s8",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-pennsburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Saint Anne Chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -565,14 +646,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:22Z"
+      },
       "group": "st-anne-chapel"
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-pennsburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition, Saint Anne Chapel"
+      },
       "page": 3,
       "sources": [
         {
@@ -625,14 +723,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:22Z"
+      },
       "group": "st-anne-chapel"
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-pennsburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition, Saint Anne Chapel"
+      },
       "page": 3,
       "sources": [
         {
@@ -685,14 +800,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:22Z"
+      },
       "group": "st-anne-chapel"
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-pennsburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition, Saint Anne Chapel"
+      },
       "page": 3,
       "sources": [
         {
@@ -745,14 +877,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:22Z"
+      },
       "group": "st-anne-chapel"
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-pennsburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition, Saint Anne Chapel"
+      },
       "page": 3,
       "sources": [
         {
@@ -805,14 +954,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:22Z"
+      },
       "group": "st-anne-chapel"
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-pennsburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition, Saint Anne Chapel"
+      },
       "page": 3,
       "sources": [
         {
@@ -865,7 +1031,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:22Z"
+      },
       "group": "st-anne-chapel"
     },
     {

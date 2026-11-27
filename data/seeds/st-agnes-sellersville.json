@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-agnes-sellersville",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:44:23Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T21:15:18Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@f3cefc0ce390",
+  "approved_at": "2026-11-27T21:44:17Z",
   "summary": "One church, St. Agnes, Sellersville. Both November issues (image-only) print the same schedule box: Sat 5:15 PM vigil, Sun 8/10/12, Mon-Fri 8 AM, Sat 9 AM, Saturday confession; the website matches except Saturday morning confession ending 8:50. Dated: Thanksgiving 9 AM Mass, no Mass Fri Nov 27. Open: the Saturday morning confession end, and placing the 24/7 JPII Adoration Chapel (door code) at the church.",
   "blocked_reason": null,
   "bulletins": [
@@ -591,9 +591,22 @@
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": "08:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -664,13 +677,33 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:17Z"
+      }
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "adoration",
+        "event_kind": "continuous",
+        "day_of_week": null,
+        "date": null,
+        "start_time": null,
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. John Paul II Adoration Chapel",
+        "access": "code",
+        "open_from": null,
+        "open_until": null
+      },
       "page": 1,
       "sources": [
         {
@@ -726,7 +759,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@f3cefc0ce390",
+        "at": "2026-11-27T21:44:17Z"
+      }
     },
     {
       "id": "s14",
