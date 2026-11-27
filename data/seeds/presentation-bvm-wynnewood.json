@@ -1,0 +1,857 @@
+{
+  "schema_version": 1,
+  "parish_slug": "presentation-bvm-wynnewood",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:08Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T04:16:21Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church; the image-only bulletins print no schedule box, so the weekly Masses rest on both weeks' intentions and the parish's schedule page, which matches them exactly and supplies Saturday 4:00-4:45 PM confession (R6). Also a dated Confirmation Mass Sun Nov 22, 12:30 PM. Open: whether Our Lady's Chapel (in the Parish Center) counts as at the church for its Mon-Fri 10 AM-3 PM Adoration.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "17b629182a9ef9a573d52d74313e3ca6eae34055623fa3063579fd624ab763d1",
+      "fetched_at": "2026-11-15T16:44:08Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "8310134aabc115a041315643420c8c1fab18c62e5515aa6b50cf0e884164ff14",
+      "fetched_at": "2026-11-08T15:53:14Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-wynnewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17b62918",
+          "page": 2,
+          "said": "Saturday November 14, 2026 5:00PM / Saturday November 21, 2026 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8310134a",
+          "page": 2,
+          "said": "Saturday November 14, 2026 5:00PM / Saturday November 21, 2026 5:00PM"
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/whats-happening/mass-confession-schedule",
+          "said": "Weekend Mass Saturday - 5:00pm Sunday - 8:30am, 10:30am"
+        }
+      ],
+      "rationale": "R35: the Saturday 5:00 PM Mass is in the intentions of every Saturday in both issues (Nov 7, 14, 21), and the parish's schedule page prints it as the weekend Mass. The bulletins have no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-wynnewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17b62918",
+          "page": 2,
+          "said": "Sunday November 15, 2026 8:30AM ... 10:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8310134a",
+          "page": 2,
+          "said": "Sunday November 15, 2026 8:30AM ... 10:30AM"
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/whats-happening/mass-confession-schedule",
+          "said": "Weekend Mass Saturday - 5:00pm Sunday - 8:30am, 10:30am"
+        }
+      ],
+      "rationale": "R35: 8:30 and 10:30 AM are listed for Sunday in both issues' intentions (Nov 8, Nov 15), matching the parish's schedule page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-wynnewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17b62918",
+          "page": 2,
+          "said": "Sunday November 15, 2026 8:30AM ... 10:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8310134a",
+          "page": 2,
+          "said": "Sunday November 15, 2026 8:30AM ... 10:30AM"
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/whats-happening/mass-confession-schedule",
+          "said": "Weekend Mass Saturday - 5:00pm Sunday - 8:30am, 10:30am"
+        }
+      ],
+      "rationale": "R35: 8:30 and 10:30 AM are listed for Sunday in both issues' intentions (Nov 8, Nov 15), matching the parish's schedule page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-wynnewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17b62918",
+          "page": 2,
+          "said": "Monday ... 8:00AM / Tuesday ... 8:00 AM / Wednesday ... 8:00AM / Thursday ... 8:00AM / Friday ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8310134a",
+          "page": 2,
+          "said": "Monday ... 8:00AM / Tuesday ... 8:00 AM / Wednesday ... 8:00AM / Thursday ... 8:00AM / Friday ... 8:00AM"
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/whats-happening/mass-confession-schedule",
+          "said": "Weekday Mass Monday-Friday - 8:00am"
+        }
+      ],
+      "rationale": "R35: an 8:00 AM Mass each weekday in both weeks' intentions, matching the parish's schedule page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-wynnewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17b62918",
+          "page": 2,
+          "said": "Monday ... 8:00AM / Tuesday ... 8:00 AM / Wednesday ... 8:00AM / Thursday ... 8:00AM / Friday ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8310134a",
+          "page": 2,
+          "said": "Monday ... 8:00AM / Tuesday ... 8:00 AM / Wednesday ... 8:00AM / Thursday ... 8:00AM / Friday ... 8:00AM"
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/whats-happening/mass-confession-schedule",
+          "said": "Weekday Mass Monday-Friday - 8:00am"
+        }
+      ],
+      "rationale": "R35: an 8:00 AM Mass each weekday in both weeks' intentions, matching the parish's schedule page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-wynnewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17b62918",
+          "page": 2,
+          "said": "Monday ... 8:00AM / Tuesday ... 8:00 AM / Wednesday ... 8:00AM / Thursday ... 8:00AM / Friday ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8310134a",
+          "page": 2,
+          "said": "Monday ... 8:00AM / Tuesday ... 8:00 AM / Wednesday ... 8:00AM / Thursday ... 8:00AM / Friday ... 8:00AM"
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/whats-happening/mass-confession-schedule",
+          "said": "Weekday Mass Monday-Friday - 8:00am"
+        }
+      ],
+      "rationale": "R35: an 8:00 AM Mass each weekday in both weeks' intentions, matching the parish's schedule page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-wynnewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17b62918",
+          "page": 2,
+          "said": "Monday ... 8:00AM / Tuesday ... 8:00 AM / Wednesday ... 8:00AM / Thursday ... 8:00AM / Friday ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8310134a",
+          "page": 2,
+          "said": "Monday ... 8:00AM / Tuesday ... 8:00 AM / Wednesday ... 8:00AM / Thursday ... 8:00AM / Friday ... 8:00AM"
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/whats-happening/mass-confession-schedule",
+          "said": "Weekday Mass Monday-Friday - 8:00am"
+        }
+      ],
+      "rationale": "R35: an 8:00 AM Mass each weekday in both weeks' intentions, matching the parish's schedule page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-wynnewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17b62918",
+          "page": 2,
+          "said": "Monday ... 8:00AM / Tuesday ... 8:00 AM / Wednesday ... 8:00AM / Thursday ... 8:00AM / Friday ... 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8310134a",
+          "page": 2,
+          "said": "Monday ... 8:00AM / Tuesday ... 8:00 AM / Wednesday ... 8:00AM / Thursday ... 8:00AM / Friday ... 8:00AM"
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/whats-happening/mass-confession-schedule",
+          "said": "Weekday Mass Monday-Friday - 8:00am"
+        }
+      ],
+      "rationale": "R35: an 8:00 AM Mass each weekday in both weeks' intentions, matching the parish's schedule page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-wynnewood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Confirmation"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17b62918",
+          "page": 4,
+          "said": "Confirmation will be celebrated on Sunday, November 22, 2026 at the 12:30 PM Mass. All are welcome to join in this celebration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8310134a",
+          "page": 2,
+          "said": "Confirmation is Sunday, November 22. 2026 at 12:30PM"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 7: a Mass outside the weekly Sunday times (8:30, 10:30), dated and open ('All are welcome'). R16: Nov 22 is after as_of. Nothing says the 10:30 is replaced, so the weekly slots stay (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-wynnewood",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "14:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Grace-Filled Holy Hour at Annunciation BVM, Havertown"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17b62918",
+          "page": 3,
+          "said": "Grace-Filled Holy Hour Sunday, November 15th, from 2:00-3:00 PM ... Adoration, Confessions, and Benediction ... Annunciation BVM Church 400 Brookline Boulevard Havertown, PA"
+        }
+      ],
+      "rationale": "R22: held at another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-wynnewood",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "14:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Grace-Filled Holy Hour at Annunciation BVM, Havertown"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17b62918",
+          "page": 3,
+          "said": "During this Holy Hour, we will have Adoration, Confessions, and Benediction ... Annunciation BVM Church"
+        }
+      ],
+      "rationale": "R22: held at another parish's church; POLICY Final source checks also gives the confessions no time of their own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-wynnewood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Archbishop Carroll Chapel, Class of 1976 reunion"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8310134a",
+          "page": 4,
+          "said": "Saturday, November 21, 2026 4:30pm Mass in the Archbishop Carroll Chapel"
+        }
+      ],
+      "rationale": "R22: a reunion Mass at the Archbishop Carroll High School chapel, not a parish church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://presbvm.org/whats-happening/mass-confession-schedule",
+          "said": "Holy Day MASS 8:00am"
+        }
+      ],
+      "rationale": "R24/POLICY Dates: a generic holy-day line names no date; Dec 8 falls on a Tuesday, already covered by the weekly 8:00 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-wynnewood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://presbvm.org/whats-happening/mass-confession-schedule",
+          "said": "Confessions Saturday - 4:00pm to 4:45pm Or by appointment.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T04:20:55Z",
+            "current_because": "Checked 2026-11-27: the page's Mass times (Sat 5:00pm; Sun 8:30am, 10:30am; Mon-Fri 8:00am) and Adoration (Mon-Fri 10:00am-3:00pm) match the Nov 8 and Nov 15, 2026 bulletins exactly; the homepage repeats it and lists a 'Mass Book 2026' notice.",
+            "bulletin": "17b62918",
+            "fits_because": "17b62918 prints no schedule box and no confession time at all (a missing mention, R6); 4:00-4:45 ends before the Saturday 5:00 PM Mass the bulletin's intentions list."
+          }
+        }
+      ],
+      "rationale": "R6: the parish's current schedule page gives the Saturday confession the bulletins don't print; every other time on the page matches both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17b62918",
+          "page": 3,
+          "said": "Our Lady's Chapel The Chapel is open for adoration Monday through Friday from 10:00 AM until 3:00PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8310134a",
+          "page": 3,
+          "said": "Our Lady's Chapel The Chapel is open for adoration Monday through Friday from 10:00 AM until 3:00PM."
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/get-involved/adoration",
+          "said": "Each Wednesday Our Lady's Chapel located in the Parish Center will be open to all PREP parents"
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/",
+          "said": "Adoration Monday-Friday -10:00am to 3:00pm Our Lady Chapel"
+        }
+      ],
+      "rationale": "R32/R38, leaning per precedent sacred-heart-havertown s13 and ss-philip-and-james-exton s15: the parish calls the chapel's hours adoration (no exposition claimed). Hard because the website places the chapel in the Parish Center, a separate building; the bulletin gives the parish's address as 204 Haverford Road and the church list puts the church at 240 Haverford Road, so it is likely the same campus but no page says so. (The website's adoration page says 'everyday', its schedule page and both bulletins Mon-Fri.)",
+      "question": "Is Our Lady's Chapel, in the Parish Center, on the church's grounds, so its Adoration hours Mon-Fri 10:00 AM-3:00 PM go at the church?",
+      "options": [
+        {
+          "label": "Mon-Fri 10:00 AM-3:00 PM at the church, in Our Lady's Chapel",
+          "entry": {
+            "church_slug": "presentation-bvm-wynnewood",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady's Chapel, Parish Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17b62918",
+          "page": 3,
+          "said": "Our Lady's Chapel The Chapel is open for adoration Monday through Friday from 10:00 AM until 3:00PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8310134a",
+          "page": 3,
+          "said": "Our Lady's Chapel The Chapel is open for adoration Monday through Friday from 10:00 AM until 3:00PM."
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/get-involved/adoration",
+          "said": "Each Wednesday Our Lady's Chapel located in the Parish Center will be open to all PREP parents"
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/",
+          "said": "Adoration Monday-Friday -10:00am to 3:00pm Our Lady Chapel"
+        }
+      ],
+      "rationale": "R32/R38, leaning per precedent sacred-heart-havertown s13 and ss-philip-and-james-exton s15: the parish calls the chapel's hours adoration (no exposition claimed). Hard because the website places the chapel in the Parish Center, a separate building; the bulletin gives the parish's address as 204 Haverford Road and the church list puts the church at 240 Haverford Road, so it is likely the same campus but no page says so. (The website's adoration page says 'everyday', its schedule page and both bulletins Mon-Fri.)",
+      "question": "Is Our Lady's Chapel, in the Parish Center, on the church's grounds, so its Adoration hours Mon-Fri 10:00 AM-3:00 PM go at the church?",
+      "options": [
+        {
+          "label": "Mon-Fri 10:00 AM-3:00 PM at the church, in Our Lady's Chapel",
+          "entry": {
+            "church_slug": "presentation-bvm-wynnewood",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady's Chapel, Parish Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17b62918",
+          "page": 3,
+          "said": "Our Lady's Chapel The Chapel is open for adoration Monday through Friday from 10:00 AM until 3:00PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8310134a",
+          "page": 3,
+          "said": "Our Lady's Chapel The Chapel is open for adoration Monday through Friday from 10:00 AM until 3:00PM."
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/get-involved/adoration",
+          "said": "Each Wednesday Our Lady's Chapel located in the Parish Center will be open to all PREP parents"
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/",
+          "said": "Adoration Monday-Friday -10:00am to 3:00pm Our Lady Chapel"
+        }
+      ],
+      "rationale": "R32/R38, leaning per precedent sacred-heart-havertown s13 and ss-philip-and-james-exton s15: the parish calls the chapel's hours adoration (no exposition claimed). Hard because the website places the chapel in the Parish Center, a separate building; the bulletin gives the parish's address as 204 Haverford Road and the church list puts the church at 240 Haverford Road, so it is likely the same campus but no page says so. (The website's adoration page says 'everyday', its schedule page and both bulletins Mon-Fri.)",
+      "question": "Is Our Lady's Chapel, in the Parish Center, on the church's grounds, so its Adoration hours Mon-Fri 10:00 AM-3:00 PM go at the church?",
+      "options": [
+        {
+          "label": "Mon-Fri 10:00 AM-3:00 PM at the church, in Our Lady's Chapel",
+          "entry": {
+            "church_slug": "presentation-bvm-wynnewood",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady's Chapel, Parish Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17b62918",
+          "page": 3,
+          "said": "Our Lady's Chapel The Chapel is open for adoration Monday through Friday from 10:00 AM until 3:00PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8310134a",
+          "page": 3,
+          "said": "Our Lady's Chapel The Chapel is open for adoration Monday through Friday from 10:00 AM until 3:00PM."
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/get-involved/adoration",
+          "said": "Each Wednesday Our Lady's Chapel located in the Parish Center will be open to all PREP parents"
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/",
+          "said": "Adoration Monday-Friday -10:00am to 3:00pm Our Lady Chapel"
+        }
+      ],
+      "rationale": "R32/R38, leaning per precedent sacred-heart-havertown s13 and ss-philip-and-james-exton s15: the parish calls the chapel's hours adoration (no exposition claimed). Hard because the website places the chapel in the Parish Center, a separate building; the bulletin gives the parish's address as 204 Haverford Road and the church list puts the church at 240 Haverford Road, so it is likely the same campus but no page says so. (The website's adoration page says 'everyday', its schedule page and both bulletins Mon-Fri.)",
+      "question": "Is Our Lady's Chapel, in the Parish Center, on the church's grounds, so its Adoration hours Mon-Fri 10:00 AM-3:00 PM go at the church?",
+      "options": [
+        {
+          "label": "Mon-Fri 10:00 AM-3:00 PM at the church, in Our Lady's Chapel",
+          "entry": {
+            "church_slug": "presentation-bvm-wynnewood",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady's Chapel, Parish Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17b62918",
+          "page": 3,
+          "said": "Our Lady's Chapel The Chapel is open for adoration Monday through Friday from 10:00 AM until 3:00PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8310134a",
+          "page": 3,
+          "said": "Our Lady's Chapel The Chapel is open for adoration Monday through Friday from 10:00 AM until 3:00PM."
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/get-involved/adoration",
+          "said": "Each Wednesday Our Lady's Chapel located in the Parish Center will be open to all PREP parents"
+        },
+        {
+          "source": "website",
+          "url": "https://presbvm.org/",
+          "said": "Adoration Monday-Friday -10:00am to 3:00pm Our Lady Chapel"
+        }
+      ],
+      "rationale": "R32/R38, leaning per precedent sacred-heart-havertown s13 and ss-philip-and-james-exton s15: the parish calls the chapel's hours adoration (no exposition claimed). Hard because the website places the chapel in the Parish Center, a separate building; the bulletin gives the parish's address as 204 Haverford Road and the church list puts the church at 240 Haverford Road, so it is likely the same campus but no page says so. (The website's adoration page says 'everyday', its schedule page and both bulletins Mon-Fri.)",
+      "question": "Is Our Lady's Chapel, in the Parish Center, on the church's grounds, so its Adoration hours Mon-Fri 10:00 AM-3:00 PM go at the church?",
+      "options": [
+        {
+          "label": "Mon-Fri 10:00 AM-3:00 PM at the church, in Our Lady's Chapel",
+          "entry": {
+            "church_slug": "presentation-bvm-wynnewood",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady's Chapel, Parish Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    }
+  ]
+}
