@@ -1,0 +1,2141 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-bede-the-venerable-holland",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:42Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T22:38:28Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Bede, Holland). Two image-only issues (Nov 8, Nov 15) print the same schedule box: Sat 5:30 PM vigil, Sun 7:30/9:30/11:00/12:30, Mon-Fri 6:30 and 9:00, Sat 8:30, Saturday confession 4-5 PM; the website matches. Dated: Dec 2 7 PM Advent Mass, Dec 16 7 PM Advent Confession. Open: whether the perpetual Adoration chapel ('adjacent to the Drexel Center') is on the grounds (lean include as 24h, code 9 PM-7 AM), and Dec 7/8 holy-day Masses from the undated standing line (lean leave out).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+      "fetched_at": "2026-11-15T16:44:42Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c84ff0536afd838caf315815fb1c45cdc9371856b863c49a836e1fbcc33ce52d",
+      "fetched_at": "2026-11-08T15:53:40Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+      "bulletins": [
+        "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+        "c84ff0536afd838caf315815fb1c45cdc9371856b863c49a836e1fbcc33ce52d"
+      ],
+      "cached": false,
+      "cost_usd": 0.005888,
+      "at": "2026-11-27T22:45:12.879004+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Vigil Mass (Saturday Evening):5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Vigil Mass (Saturday Evening):5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 9,
+          "said": "Saturday, November 21 ... +5:30 pm-John A. Long"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Vigil Mass (Saturday Evening):5:30 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 9,
+          "said": "Sunday, November 22 + 7:30 am ... 9:30 am ... 11:00 am ... 12:30 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and the intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 9,
+          "said": "Sunday, November 22 + 7:30 am ... 9:30 am ... 11:00 am ... 12:30 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and the intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 9,
+          "said": "Sunday, November 22 + 7:30 am ... 9:30 am ... 11:00 am ... 12:30 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and the intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 9,
+          "said": "Sunday, November 22 + 7:30 am ... 9:30 am ... 11:00 am ... 12:30 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and the intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 9,
+          "said": "Monday, November 16 + 6:30 am ... +9:00 am (same each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Masses (Monday through Friday): 6:30 & 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 9,
+          "said": "Monday, November 16 + 6:30 am ... +9:00 am (same each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Masses (Monday through Friday): 6:30 & 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 9,
+          "said": "Monday, November 16 + 6:30 am ... +9:00 am (same each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Masses (Monday through Friday): 6:30 & 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 9,
+          "said": "Monday, November 16 + 6:30 am ... +9:00 am (same each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Masses (Monday through Friday): 6:30 & 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 9,
+          "said": "Monday, November 16 + 6:30 am ... +9:00 am (same each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Masses (Monday through Friday): 6:30 & 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 9,
+          "said": "Monday, November 16 + 6:30 am ... +9:00 am (same each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Masses (Monday through Friday): 6:30 & 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 9,
+          "said": "Monday, November 16 + 6:30 am ... +9:00 am (same each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Masses (Monday through Friday): 6:30 & 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 9,
+          "said": "Monday, November 16 + 6:30 am ... +9:00 am (same each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Masses (Monday through Friday): 6:30 & 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 9,
+          "said": "Monday, November 16 + 6:30 am ... +9:00 am (same each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Masses (Monday through Friday): 6:30 & 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Weekday Masses(Monday through Friday): 6:30 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 9,
+          "said": "Monday, November 16 + 6:30 am ... +9:00 am (same each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Masses (Monday through Friday): 6:30 & 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Saturday Mass & Miraculous Medal Novena: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Saturday Mass & Miraculous Medal Novena: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 9,
+          "said": "Saturday, November 21 +8:30 am-Ed Ingle"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Mass & Miraculous Medal Novena: 8:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Saturday)4:00-5:00 pm (or by appointment with a priest)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Saturday)4:00-5:00 pm (or by appointment with a priest)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sacrament of Reconciliation (Saturday) 4:00-5:00 pm (or by appointment with a priest)”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website's Mass & Confession Times page gives Saturday 4:00 to 5:00 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "(or by appointment with a priest)"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Mass and Gift Giving"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 5,
+          "said": "Twenty first Annual Advent Mass and Gift Giving December 2, 2026 7 pm in St. Bede Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 6,
+          "said": "12/2: Advent Gift Giving Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 5,
+          "said": "gpt-6-luna read the same: B1 p5 “Twenty first Annual Advent Mass and Gift Giving December 2, 2026 7 pm in St. Bede Church”"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass in the parish church after as_of; POLICY counts a Mass open unless the bulletin limits it, and nothing limits this one (social follows).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-16",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Advent Confession"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 6,
+          "said": "12/16: Parish Advent Confession 7pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “12/16: Parish Advent Confession 7pm”"
+        }
+      ],
+      "rationale": "R1, R16: a dated parish confession service at a printed time, after as_of; the parish has one church. No end printed, so none recorded (as the st-aloysius-pottstown s17 precedent timed a penance service from its printed start).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Parish Rosary (Tuesday) 7:00 pm"
+        }
+      ],
+      "rationale": "R24: a Rosary is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am (During this time period only members of the Adoration Society who commit to the late night and early morning hours for adoration will know the combination to the safety door lock)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am (During this time period only members of the Adoration Society who commit to the late night and early morning hours for adoration will know the combination to the safety door lock)"
+        },
+        {
+          "source": "website",
+          "url": "https://st-bede.org/saint-katharine-drexel-adoration-chapel/",
+          "said": "the Saint Katharine Drexel Shrine at Saint Bede the Venerable Parish is home to our Perpetual Adoration Chapel. ... The Adoration Chapel, adjacent to the Drexel Center is open to all fro m 7:00am until 9:00pm. A system of security will go into effect from 9:00pm to 7:00am each day."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 4,
+          "said": "St. Katharine Drexel Center @ 12:30pm (parish Women's Club luncheon); latest p6: Drexel Center Room A (parish men's group)"
+        }
+      ],
+      "rationale": "R32/R38, leaning per precedent ss-philip-and-james-exton s15 (and sacred-heart-havertown s13, st-pius-x-broomall s25): the parish's own schedule box lists the chapel, the website places it 'adjacent to the Drexel Center', a parish building that hosts parish meetings, and the parish has one church. If on the grounds, R46 makes it one 24h slot: a door combination is needed 9 PM-7 AM only, so code-after-hours with open 07:00-21:00 (the st-mary-schwenksville s17 case had no code printed; this one does). The website says the tabernacle is an Exposition Tabernacle. Hard because no page gives the chapel's or the Drexel Center's address.",
+      "question": "Is the Saint Katharine Drexel Perpetual Adoration Chapel ('adjacent to the Drexel Center') on St. Bede's grounds, so it is recorded at the church as a 24-hour chapel, open 7 AM-9 PM, code overnight?",
+      "options": [
+        {
+          "label": "Include at the church: 24h, code after hours, open 7:00 AM-9:00 PM",
+          "entry": {
+            "church_slug": "st-bede-the-venerable-holland",
+            "event_type": "adoration",
+            "event_kind": "continuous",
+            "day_of_week": null,
+            "date": null,
+            "start_time": null,
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Saint Katharine Drexel Adoration Chapel",
+            "access": "code_after_hours",
+            "open_from": "07:00",
+            "open_until": "21:00"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Holy Day (Except Christmas & New Year's) Vigil Mass: 5:30 pm Holy Day Masses: 6:30, 9:00 am, 5:30 pm, 7:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Holy Day (Except Christmas & New Year's) Vigil Mass: 5:30 pm Holy Day Masses: 6:30, 9:00 am, 5:30 pm, 7:30 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://st-bede.org/mass-confession-times/",
+          "said": "Holy Days (Except Christmas & New Year's Day): Vigil Mass: 5:30 pm Holy Day Masses: 6:30 & 9:00 am, 5:30 & 7:30 pm"
+        }
+      ],
+      "rationale": "POLICY, Dates; leaning per precedent st-isaac-jogues-wayne s27, which left out holy-day times from an undated standing box. Neither issue read prints Dec 8 or a dated notice tying the line to this year (unlike our-lady-of-consolation-parkesburg s12). Hard because the line is the parish's standing rule, Dec 8 2026 is a Tuesday holy day it plainly covers, and the website repeats it; December issues will likely print it.",
+      "question": "Add this year's Immaculate Conception Masses from the standing Holy Day line (Mon Dec 7 5:30 PM vigil; Tue Dec 8 5:30 and 7:30 PM, besides the weekly 6:30 and 9:00 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-bede-the-venerable-holland",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception vigil"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Holy Day (Except Christmas & New Year's) ... Holy Day Masses: 6:30, 9:00 am, 5:30 pm, 7:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Holy Day (Except Christmas & New Year's) ... Holy Day Masses: 6:30, 9:00 am, 5:30 pm, 7:30 pm"
+        }
+      ],
+      "rationale": "POLICY, Dates; leaning per precedent st-isaac-jogues-wayne s27, as the Dec 7 vigil slot in this group.",
+      "question": "Add this year's Immaculate Conception Masses from the standing Holy Day line (Mon Dec 7 5:30 PM vigil; Tue Dec 8 5:30 and 7:30 PM, besides the weekly 6:30 and 9:00 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-bede-the-venerable-holland",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f4cb53c0",
+          "page": 1,
+          "said": "Holy Day (Except Christmas & New Year's) ... Holy Day Masses: 6:30, 9:00 am, 5:30 pm, 7:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c84ff053",
+          "page": 1,
+          "said": "Holy Day (Except Christmas & New Year's) ... Holy Day Masses: 6:30, 9:00 am, 5:30 pm, 7:30 pm"
+        }
+      ],
+      "rationale": "POLICY, Dates; leaning per precedent st-isaac-jogues-wayne s27, as the Dec 7 vigil slot in this group.",
+      "question": "Add this year's Immaculate Conception Masses from the standing Holy Day line (Mon Dec 7 5:30 PM vigil; Tue Dec 8 5:30 and 7:30 PM, besides the weekly 6:30 and 9:00 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-bede-the-venerable-holland",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "55aec2eba5e9e29afb258711a667437e",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T22:45:12.879004+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "f4cb53c05d40296c8fe13a702aa48a758bc921191a249c76fb80f5e9bfb393e2",
+        "fetched_at": "2026-11-15T16:44:42Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "c84ff0536afd838caf315815fb1c45cdc9371856b863c49a836e1fbcc33ce52d",
+        "fetched_at": "2026-11-08T15:53:40Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.005888,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Vigil Mass (Saturday Evening):5:30 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Vigil Mass (Saturday Evening):5:30 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Masses: 7:30, 9:30, 11:00 am, 12:30 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Masses (Monday through Friday): 6:30 & 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Mass & Miraculous Medal Novena: 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Mass & Miraculous Medal Novena: 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": "17:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sacrament of Reconciliation (Saturday) 4:00-5:00 pm (or by appointment with a priest)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sacrament of Reconciliation (Saturday) 4:00-5:00 pm (or by appointment with a priest)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o18",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Perpetual Adoration Chapel; overnight access by code",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am by code"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am by code"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o19",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Perpetual Adoration Chapel; overnight access by code",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am by code"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am by code"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o20",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Perpetual Adoration Chapel; overnight access by code",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am by code"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am by code"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o21",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Perpetual Adoration Chapel; overnight access by code",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am by code"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am by code"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o22",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Perpetual Adoration Chapel; overnight access by code",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am by code"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am by code"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o23",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Perpetual Adoration Chapel; overnight access by code",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am by code"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am by code"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o24",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Perpetual Adoration Chapel; overnight access by code",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am by code"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am by code"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o25",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-02",
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Advent Mass and Gift Giving",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "Twenty first Annual Advent Mass and Gift Giving December 2, 2026 7 pm in St. Bede Church"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o26",
+        "entry": {
+          "church_slug": "st-bede-the-venerable-holland",
+          "event_type": "confession",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-16",
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Parish Advent Confession",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "12/16: Parish Advent Confession 7pm"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "9bd8d8e6eb0472646d5612b87ff2890fbeb783cf0274c0f25ace198db99357d9",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "missing",
+        "fields": [],
+        "opinion": [
+          "o18",
+          "o19",
+          "o20",
+          "o21",
+          "o22",
+          "o23",
+          "o24"
+        ],
+        "slots": [],
+        "opinion_said": "adoration Mon,Tue,Wed,Thu,Fri,Sat,Sun 00:00-23:59 @st-bede-the-venerable-holland",
+        "seed_said": "-",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "f4cb53c0",
+              "page": 1,
+              "said": "Perpetual Adoration Chapel: 7:00 am to 9:00 pm (open to all) 9:00 pm to 7:00 am (During this time period only members of the Adoration Society ... will know the combination to the safety door lock)"
+            }
+          ],
+          "why": "R46: a chapel open around the clock is one 'adoration 24h' slot (code-after-hours, open 07:00-21:00), never seven 00:00-23:59 weekly slots. That slot is question s22's leaning option, asked under R32/R38 because no page gives the chapel's address (website: 'adjacent to the Drexel Center').",
+          "at": "2026-11-27T22:45:31Z"
+        }
+      }
+    ]
+  }
+}
