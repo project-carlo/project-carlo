@@ -1,0 +1,1907 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-bosco-hatboro",
+  "status": "ready",
+  "as_of": "2026-11-15T16:45:50Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T21:00:00Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church; both November issues (image-only) print the same schedule: Sat 4 PM and 7 PM Spanish, Sun 8, 9:30, 11, weekdays 8:45, Sat confession 3-3:30, and the Adoration Chapel Mon-Fri 8 AM-7 PM (website places the chapel at the church's address). First-Friday confession time 8:15 comes from the website (R6); dated Immaculate Conception Masses and the Thanksgiving chapel closure are recorded. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+      "fetched_at": "2026-11-15T16:45:50Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6950a3eba0a607ae1965ad38129aaff610cf59a4176526feb85a6745552f4da0",
+      "fetched_at": "2026-11-08T15:54:30Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+      "bulletins": [
+        "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+        "6950a3eba0a607ae1965ad38129aaff610cf59a4176526feb85a6745552f4da0"
+      ],
+      "cached": false,
+      "cost_usd": 0.002468,
+      "at": "2026-11-27T21:06:04.121101+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 1,
+          "said": "Saturday Evening Vigil Masses: 4:00 PM (English) and 7:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 1,
+          "said": "Saturday Evening Vigil Masses: 4:00 PM (English) and 7:00 PM (Spanish)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Evening Vigil Masses: 4:00 PM (English) and 7:00 PM (Spanish)”"
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass schedule box of both issues; both issues' intentions list Saturday 4:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 1,
+          "said": "Saturday Evening Vigil Masses: 4:00 PM (English) and 7:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 1,
+          "said": "Saturday Evening Vigil Masses: 4:00 PM (English) and 7:00 PM (Spanish)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Evening Vigil Masses: 4:00 PM (English) and 7:00 PM (Spanish)”"
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass schedule box of both issues; intentions list 7:00 PM Pro Populo each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 1,
+          "said": "Sunday at 8:00 AM, 9:30 AM and 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 1,
+          "said": "Sunday at 8:00 AM, 9:30 AM and 11:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday at 8:00 AM, 9:30 AM and 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass schedule box of both issues and in both weeks' intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 1,
+          "said": "Sunday at 8:00 AM, 9:30 AM and 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 1,
+          "said": "Sunday at 8:00 AM, 9:30 AM and 11:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday at 8:00 AM, 9:30 AM and 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass schedule box of both issues and in both weeks' intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 1,
+          "said": "Sunday at 8:00 AM, 9:30 AM and 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 1,
+          "said": "Sunday at 8:00 AM, 9:30 AM and 11:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday at 8:00 AM, 9:30 AM and 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass schedule box of both issues and in both weeks' intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday 8:45AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday 8:45AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 4,
+          "said": "11/16 MON. 8:45 AM ... 11/20 FRI. 8:45 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Mass: Monday thru Friday 8:45AM”"
+        }
+      ],
+      "rationale": "R1: printed in the front-page box of both issues and every weekday of both weeks' intentions. The Thanksgiving Mass Nov 26 8:45 AM (p8) is this weekly slot (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday 8:45AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday 8:45AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 4,
+          "said": "11/16 MON. 8:45 AM ... 11/20 FRI. 8:45 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Mass: Monday thru Friday 8:45AM”"
+        }
+      ],
+      "rationale": "R1: printed in the front-page box of both issues and every weekday of both weeks' intentions. The Thanksgiving Mass Nov 26 8:45 AM (p8) is this weekly slot (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday 8:45AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday 8:45AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 4,
+          "said": "11/16 MON. 8:45 AM ... 11/20 FRI. 8:45 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Mass: Monday thru Friday 8:45AM”"
+        }
+      ],
+      "rationale": "R1: printed in the front-page box of both issues and every weekday of both weeks' intentions. The Thanksgiving Mass Nov 26 8:45 AM (p8) is this weekly slot (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday 8:45AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday 8:45AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 4,
+          "said": "11/16 MON. 8:45 AM ... 11/20 FRI. 8:45 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Mass: Monday thru Friday 8:45AM”"
+        }
+      ],
+      "rationale": "R1: printed in the front-page box of both issues and every weekday of both weeks' intentions. The Thanksgiving Mass Nov 26 8:45 AM (p8) is this weekly slot (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday 8:45AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday 8:45AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 4,
+          "said": "11/16 MON. 8:45 AM ... 11/20 FRI. 8:45 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Mass: Monday thru Friday 8:45AM”"
+        }
+      ],
+      "rationale": "R1: printed in the front-page box of both issues and every weekday of both weeks' intentions. The Thanksgiving Mass Nov 26 8:45 AM (p8) is this weekly slot (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 1,
+          "said": "Confession: Saturday 3:00-3:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 1,
+          "said": "Confession: Saturday 3:00-3:30 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Confession: Saturday 3:00 – 3:30 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the front-page box of both issues; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 4,
+          "said": "Adoration Chapel Monday to Friday 8am to 7pm. Sat. & Sun. Closed."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 4,
+          "said": "Adoration Chapel Monday to Friday 8am to 7pm. Sat. & Sun. Closed."
+        },
+        {
+          "source": "website",
+          "url": "https://sjbhatboro.org/event/eucharistic-adoration-2-7-3/",
+          "said": "Venue Saint John Bosco Adoration Chapel 215 E County Line Rd Warminster"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “Monday to Friday 8am to 7pm”"
+        }
+      ],
+      "rationale": "R1, R38: the parish's Eucharistic Adoration box prints the chapel's hours in both issues; the website's event venue puts the Adoration Chapel at 215 E County Line Rd, the church's own address, so it is on the church grounds (POLICY, Churches and chapels). The box says 'Please do not try to enter the Church outside of these hours', tying the chapel to the church. No exposition claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 4,
+          "said": "Adoration Chapel Monday to Friday 8am to 7pm. Sat. & Sun. Closed."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 4,
+          "said": "Adoration Chapel Monday to Friday 8am to 7pm. Sat. & Sun. Closed."
+        },
+        {
+          "source": "website",
+          "url": "https://sjbhatboro.org/event/eucharistic-adoration-2-7-3/",
+          "said": "Venue Saint John Bosco Adoration Chapel 215 E County Line Rd Warminster"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “Monday to Friday 8am to 7pm”"
+        }
+      ],
+      "rationale": "R1, R38: the parish's Eucharistic Adoration box prints the chapel's hours in both issues; the website's event venue puts the Adoration Chapel at 215 E County Line Rd, the church's own address, so it is on the church grounds (POLICY, Churches and chapels). The box says 'Please do not try to enter the Church outside of these hours', tying the chapel to the church. No exposition claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 4,
+          "said": "Adoration Chapel Monday to Friday 8am to 7pm. Sat. & Sun. Closed."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 4,
+          "said": "Adoration Chapel Monday to Friday 8am to 7pm. Sat. & Sun. Closed."
+        },
+        {
+          "source": "website",
+          "url": "https://sjbhatboro.org/event/eucharistic-adoration-2-7-3/",
+          "said": "Venue Saint John Bosco Adoration Chapel 215 E County Line Rd Warminster"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “Monday to Friday 8am to 7pm”"
+        }
+      ],
+      "rationale": "R1, R38: the parish's Eucharistic Adoration box prints the chapel's hours in both issues; the website's event venue puts the Adoration Chapel at 215 E County Line Rd, the church's own address, so it is on the church grounds (POLICY, Churches and chapels). The box says 'Please do not try to enter the Church outside of these hours', tying the chapel to the church. No exposition claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 4,
+          "said": "Adoration Chapel Monday to Friday 8am to 7pm. Sat. & Sun. Closed."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 4,
+          "said": "Adoration Chapel Monday to Friday 8am to 7pm. Sat. & Sun. Closed."
+        },
+        {
+          "source": "website",
+          "url": "https://sjbhatboro.org/event/eucharistic-adoration-2-7-3/",
+          "said": "Venue Saint John Bosco Adoration Chapel 215 E County Line Rd Warminster"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “Monday to Friday 8am to 7pm”"
+        }
+      ],
+      "rationale": "R1, R38: the parish's Eucharistic Adoration box prints the chapel's hours in both issues; the website's event venue puts the Adoration Chapel at 215 E County Line Rd, the church's own address, so it is on the church grounds (POLICY, Churches and chapels). The box says 'Please do not try to enter the Church outside of these hours', tying the chapel to the church. No exposition claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 4,
+          "said": "Adoration Chapel Monday to Friday 8am to 7pm. Sat. & Sun. Closed."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 4,
+          "said": "Adoration Chapel Monday to Friday 8am to 7pm. Sat. & Sun. Closed."
+        },
+        {
+          "source": "website",
+          "url": "https://sjbhatboro.org/event/eucharistic-adoration-2-7-3/",
+          "said": "Venue Saint John Bosco Adoration Chapel 215 E County Line Rd Warminster"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “Monday to Friday 8am to 7pm”"
+        }
+      ],
+      "rationale": "R1, R38: the parish's Eucharistic Adoration box prints the chapel's hours in both issues; the website's event venue puts the Adoration Chapel at 215 E County Line Rd, the church's own address, so it is on the church grounds (POLICY, Churches and chapels). The box says 'Please do not try to enter the Church outside of these hours', tying the chapel to the church. No exposition claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 5,
+          "said": "THE ADORATION CHAPEL WILL BE CLOSED THURSDAY 11/26 AND FRIDAY 11/27. The Chapel will reopen on Monday, 11/30."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 5,
+          "said": "THE ADORATION CHAPEL WILL BE CLOSED THURSDAY 11/26 AND FRIDAY 11/27. The Chapel will reopen on Monday, 11/30."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 4,
+          "said": "Adoration Chapel Monday to Friday 8am to 7pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “Monday to Friday 8am to 7pm”"
+        }
+      ],
+      "rationale": "R1, R16: both issues state the chapel's weekday Adoration does not take place on these two dates, on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 5,
+          "said": "THE ADORATION CHAPEL WILL BE CLOSED THURSDAY 11/26 AND FRIDAY 11/27. The Chapel will reopen on Monday, 11/30."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 5,
+          "said": "THE ADORATION CHAPEL WILL BE CLOSED THURSDAY 11/26 AND FRIDAY 11/27. The Chapel will reopen on Monday, 11/30."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 4,
+          "said": "Adoration Chapel Monday to Friday 8am to 7pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “Monday to Friday 8am to 7pm”"
+        }
+      ],
+      "rationale": "R1, R16: both issues state the chapel's weekday Adoration does not take place on these two dates, on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of the Immaculate Conception"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 9,
+          "said": "The Mass Schedule at SJB is as follows: Vigil on 12/7 at 4PM; Tuesday 12/8: 8:45 AM, 12:05 PM, and 7:00 PM."
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 9,
+          "said": "gpt-6-luna read the same: B1 p9 “Vigil on 12/7 at 4PM; Tuesday 12/8: 8:45 AM, 12:05 PM, and 7:00 PM.”"
+        }
+      ],
+      "rationale": "R1, R16: a dated holy-day schedule in the newest issue; Monday has no 4 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 9,
+          "said": "Tuesday 12/8: 8:45 AM, 12:05 PM, and 7:00 PM."
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 9,
+          "said": "gpt-6-luna read the same: B1 p9 “Vigil on 12/7 at 4PM; Tuesday 12/8: 8:45 AM, 12:05 PM, and 7:00 PM.”"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Masses outside the weekly schedule. The 8:45 AM is the weekly Tuesday Mass and gets no separate slot (POLICY, Weekly or dated rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 9,
+          "said": "Tuesday 12/8: 8:45 AM, 12:05 PM, and 7:00 PM."
+        },
+        {
+          "source": "c1",
+          "bulletin": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+          "page": 9,
+          "said": "gpt-6-luna read the same: B1 p9 “Vigil on 12/7 at 4PM; Tuesday 12/8: 8:45 AM, 12:05 PM, and 7:00 PM.”"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Masses outside the weekly schedule. The 8:45 AM is the weekly Tuesday Mass and gets no separate slot (POLICY, Weekly or dated rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Prayer Service"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 8,
+          "said": "Thanksgiving Prayer Service on Tuesday, 11/24 at 6:30pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 8,
+          "said": "Thanksgiving Prayer Service on Tuesday, 11/24 at 6:30pm."
+        }
+      ],
+      "rationale": "R25, R24: a prayer service, not called a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 1,
+          "said": "Rosary: Monday before 8:45am Mass, Saturday before 4pm Vigil Mass; Miraculous Medal Novena: Monday after 8:45am Mass"
+        }
+      ],
+      "rationale": "R24: Rosary and novena are devotions POLICY leaves out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-hatboro",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 8:45 AM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sjbhatboro.org/",
+          "said": "SACRAMENT of PENANCE and RECONCILIATION Saturdays: 3:00pm – 3:30pm ... First Fridays: 8:15am",
+          "schedule_check": {
+            "checked_at": "2026-11-27T21:03:45Z",
+            "current_because": "Checked 2026-11-27: the homepage links November and December 2026 music lists and a live calendar for Nov 27-30 (Adoration 'CANCELED Today' Nov 27, as the bulletin announces); its calendar event for Dec 4 gives 8:15am - 8:30am, venue Saint John Bosco Church.",
+            "bulletin": "4ca01d97",
+            "fits_because": "The site's Mass and Saturday confession times match the 4ca01d97 p1 box exactly; the bulletin names first-Friday confession before the 8:45 AM Mass without a clock time, and 8:15 is before it (R6: a time the bulletin lacks)."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 4,
+          "said": "Confessions will be heard on the First Friday of each month here at SJB before morning Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 4,
+          "said": "Confessions will be heard on the First Friday of each month here at SJB before morning Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ca01d97",
+          "page": 1,
+          "said": "Confession: First Fridays before 8:45am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6950a3eb",
+          "page": 1,
+          "said": "Confession: First Fridays before 8:45am Mass"
+        }
+      ],
+      "rationale": "R6, POLICY Weekly or dated rule 2: the bulletin names a first-Friday confession before the 8:45 AM Mass with no clock time; the current website supplies 8:15am. No end recorded: the homepage gives none and the calendar's 8:30 end may be a default; POLICY gives a clock time running until Mass no end_time. Newest week holds no first Friday (R12).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "b9e334e3393a36f69b9f4dbc10103a2c",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T21:06:04.121101+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "4ca01d97957a51090d9ee2289841dc606ab622779e51beafffe1447bf15a1dc2",
+        "fetched_at": "2026-11-15T16:45:50Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "6950a3eba0a607ae1965ad38129aaff610cf59a4176526feb85a6745552f4da0",
+        "fetched_at": "2026-11-08T15:54:30Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002468,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:45",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Mass: Monday thru Friday 8:45AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Mass: Monday thru Friday 8:45AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:45",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Mass: Monday thru Friday 8:45AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Mass: Monday thru Friday 8:45AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:45",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Mass: Monday thru Friday 8:45AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Mass: Monday thru Friday 8:45AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:45",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Mass: Monday thru Friday 8:45AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Mass: Monday thru Friday 8:45AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:45",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Mass: Monday thru Friday 8:45AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Mass: Monday thru Friday 8:45AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "English",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Evening Vigil Masses: 4:00 PM (English) and 7:00 PM (Spanish)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Evening Vigil Masses: 4:00 PM (English) and 7:00 PM (Spanish)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spanish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Evening Vigil Masses: 4:00 PM (English) and 7:00 PM (Spanish)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Evening Vigil Masses: 4:00 PM (English) and 7:00 PM (Spanish)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday at 8:00 AM, 9:30 AM and 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday at 8:00 AM, 9:30 AM and 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday at 8:00 AM, 9:30 AM and 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday at 8:00 AM, 9:30 AM and 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday at 8:00 AM, 9:30 AM and 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday at 8:00 AM, 9:30 AM and 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:00",
+          "end_time": "15:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Confession: Saturday 3:00 – 3:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Confession: Saturday 3:00 – 3:30 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "Monday to Friday 8am to 7pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "Monday to Friday 8am to 7pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "Monday to Friday 8am to 7pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "Monday to Friday 8am to 7pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "Monday to Friday 8am to 7pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "Monday to Friday 8am to 7pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "Monday to Friday 8am to 7pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "Monday to Friday 8am to 7pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "Monday to Friday 8am to 7pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "Monday to Friday 8am to 7pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-07",
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Immaculate Conception",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "Vigil on 12/7 at 4PM; Tuesday 12/8: 8:45 AM, 12:05 PM, and 7:00 PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o18",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-08",
+          "start_time": "12:05",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Immaculate Conception",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "Vigil on 12/7 at 4PM; Tuesday 12/8: 8:45 AM, 12:05 PM, and 7:00 PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o19",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-08",
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Immaculate Conception",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "Vigil on 12/7 at 4PM; Tuesday 12/8: 8:45 AM, 12:05 PM, and 7:00 PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o20",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "08:00",
+          "end_time": "19:00",
+          "cancelled": true,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "Monday to Friday 8am to 7pm"
+          },
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "THE ADORATION CHAPEL WILL BE CLOSED THURSDAY 11/26 AND FRIDAY 11/27."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o21",
+        "entry": {
+          "church_slug": "st-john-bosco-hatboro",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-27",
+          "start_time": "08:00",
+          "end_time": "19:00",
+          "cancelled": true,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "Monday to Friday 8am to 7pm"
+          },
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "THE ADORATION CHAPEL WILL BE CLOSED THURSDAY 11/26 AND FRIDAY 11/27."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "7dc4c9e5002d4a48545ebbb95eb0a49e2b5c78075c4b1f29bc717e9aead7138e",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "differs",
+        "fields": [
+          "end time"
+        ],
+        "opinion": [
+          "o20"
+        ],
+        "slots": [
+          "s17"
+        ],
+        "opinion_said": "adoration 2026-11-26 08:00-19:00 cancelled @st-john-bosco-hatboro",
+        "seed_said": "adoration 2026-11-26 08:00 cancelled @st-john-bosco-hatboro",
+        "resolution": {
+          "how": "changed"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "differs",
+        "fields": [
+          "end time"
+        ],
+        "opinion": [
+          "o21"
+        ],
+        "slots": [
+          "s18"
+        ],
+        "opinion_said": "adoration 2026-11-27 08:00-19:00 cancelled @st-john-bosco-hatboro",
+        "seed_said": "adoration 2026-11-27 08:00 cancelled @st-john-bosco-hatboro",
+        "resolution": {
+          "how": "changed"
+        }
+      },
+      {
+        "id": "d3",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s24"
+        ],
+        "opinion_said": "-",
+        "seed_said": "confession Fri 08:15 @st-john-bosco-hatboro first",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      }
+    ]
+  }
+}
