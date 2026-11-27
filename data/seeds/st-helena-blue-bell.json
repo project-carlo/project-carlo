@@ -1,0 +1,2351 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-helena-blue-bell",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:45:42Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T15:05:41Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Helena, Blue Bell); the bulletin is shared with St. Titus, Norristown, whose times are left out (R22). Weekend Masses, the Saturday 3 PM confession and the Nov 23 6 PM Mass are settled. Open: whether the weekday St. Theresa Chapel is at the church (Mon-Sat 9 AM Mass, Mon-Fri 9:30 AM-7:30 PM Adoration; leaning include per precedent), and the Advent Sunday Evening Prayer & Benediction (leaning leave out).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+      "fetched_at": "2026-11-15T16:45:42Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "08454ffc4ead995f01e0e6b6af2ff6470859fd8b47a892dd5c89d6316d571330",
+      "fetched_at": "2026-11-08T15:54:19Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+      "bulletins": [
+        "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+        "08454ffc4ead995f01e0e6b6af2ff6470859fd8b47a892dd5c89d6316d571330"
+      ],
+      "cached": false,
+      "cost_usd": 0.007402,
+      "at": "2026-11-27T15:17:07.664613+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-church-blue-bell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 1,
+          "said": "Saturday Vigil 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "Saturday: 4:00 PM Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 1,
+          "said": "Saturday Vigil 4:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saturday: 4:00 PM Vigil Mass”"
+        }
+      ],
+      "rationale": "R1: printed in both schedule boxes (p1, p2) of both issues read; the intentions (p3) put it in St. Helena Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-church-blue-bell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "Sunday: 7:30 AM, 9:00 AM, & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday: 7:30 AM, 9:00 AM, & 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in both schedule boxes of both issues read; the p3 intentions place them in St. Helena Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-church-blue-bell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "Sunday: 7:30 AM, 9:00 AM, & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday: 7:30 AM, 9:00 AM, & 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in both schedule boxes of both issues read; the p3 intentions place them in St. Helena Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-church-blue-bell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "Sunday: 7:30 AM, 9:00 AM, & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 1,
+          "said": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday: 7:30 AM, 9:00 AM, & 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in both schedule boxes of both issues read; the p3 intentions place them in St. Helena Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-church-blue-bell",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "St. Helena - Saturday at 3:00 PM in the Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 2,
+          "said": "St. Helena - Saturday at 3:00 PM in the Church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “St. Helena - Saturday at 3:00 PM in the Church”"
+        }
+      ],
+      "rationale": "R1: the Sacrament of Reconciliation box of both issues; no end time is printed, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-church-blue-bell",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-23",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simple Supper Mass, hosted by the School Class of 2027"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 9,
+          "said": "Please join us Monday, November 23rd at 6:00 PM for Mass followed by Simple Supper ... students, families, and the parish community"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 7,
+          "said": "Monday, November 23rd at 6:00 PM for Mass followed by Simple Supper"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 10,
+          "said": "gpt-6-luna read the same: B1 p10 “Please join us Monday, November 23rd at 6:00 PM for Mass followed by Simple Supper, hosted by the Saint Helena School Class of 2027.”"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass outside the weekly schedule, after as_of, that invites the parish community (POLICY: open unless limited; the RSVP is for the supper). No place is named; the parish has one church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 9:00 AM - Saint Helena Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "St. Helena Mass Schedule Chapel Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 4,
+          "said": "Daily Mass: 9:00 AM - Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 1,
+          "said": "Monday-Saturday 9:00 AM - Saint Helena Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 5,
+          "said": "Men's Day of Recollection ... St. Helena Church & Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://sainthelena-centersquare.net/mass-schedule-2/",
+          "said": "Monday – Saturday 9:00 AM in Saint Theresa Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Chapel Monday - Saturday: 9:00 AM”"
+        }
+      ],
+      "rationale": "R23/R32 vs R38: no page gives the chapel's address. Leaning include per precedent ss-philip-and-james-exton s15, our-lady-of-fatima-secane s11 and st-pius-x-broomall s25: the chapel is in St. Helena's own schedule box beside its one church address (1489 DeKalb Pike), the Nov 8 flyer names one venue 'St. Helena Church & Chapel', and candles are sold 'in the Church and Chapel' (08454ffc p10). The p3 intentions say 'St. Helena Chapel' (the website: 'Saint Theresa Chapel'), and twice put the 9 AM in the Church instead for school liturgies, a dated room change at the same site.",
+      "question": "Is St. Theresa Chapel (the parish's weekday chapel) at St. Helena Church, so its Mon-Sat 9:00 AM Mass and Mon-Fri Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-helena-church-blue-bell",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Theresa Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s8",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 9:00 AM - Saint Helena Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "St. Helena Mass Schedule Chapel Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 4,
+          "said": "Daily Mass: 9:00 AM - Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 1,
+          "said": "Monday-Saturday 9:00 AM - Saint Helena Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 5,
+          "said": "Men's Day of Recollection ... St. Helena Church & Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://sainthelena-centersquare.net/mass-schedule-2/",
+          "said": "Monday – Saturday 9:00 AM in Saint Theresa Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Chapel Monday - Saturday: 9:00 AM”"
+        }
+      ],
+      "rationale": "R23/R32 vs R38: no page gives the chapel's address. Leaning include per precedent ss-philip-and-james-exton s15, our-lady-of-fatima-secane s11 and st-pius-x-broomall s25: the chapel is in St. Helena's own schedule box beside its one church address (1489 DeKalb Pike), the Nov 8 flyer names one venue 'St. Helena Church & Chapel', and candles are sold 'in the Church and Chapel' (08454ffc p10). The p3 intentions say 'St. Helena Chapel' (the website: 'Saint Theresa Chapel'), and twice put the 9 AM in the Church instead for school liturgies, a dated room change at the same site.",
+      "question": "Is St. Theresa Chapel (the parish's weekday chapel) at St. Helena Church, so its Mon-Sat 9:00 AM Mass and Mon-Fri Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-helena-church-blue-bell",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Theresa Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 9:00 AM - Saint Helena Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "St. Helena Mass Schedule Chapel Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 4,
+          "said": "Daily Mass: 9:00 AM - Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 1,
+          "said": "Monday-Saturday 9:00 AM - Saint Helena Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 5,
+          "said": "Men's Day of Recollection ... St. Helena Church & Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://sainthelena-centersquare.net/mass-schedule-2/",
+          "said": "Monday – Saturday 9:00 AM in Saint Theresa Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Chapel Monday - Saturday: 9:00 AM”"
+        }
+      ],
+      "rationale": "R23/R32 vs R38: no page gives the chapel's address. Leaning include per precedent ss-philip-and-james-exton s15, our-lady-of-fatima-secane s11 and st-pius-x-broomall s25: the chapel is in St. Helena's own schedule box beside its one church address (1489 DeKalb Pike), the Nov 8 flyer names one venue 'St. Helena Church & Chapel', and candles are sold 'in the Church and Chapel' (08454ffc p10). The p3 intentions say 'St. Helena Chapel' (the website: 'Saint Theresa Chapel'), and twice put the 9 AM in the Church instead for school liturgies, a dated room change at the same site.",
+      "question": "Is St. Theresa Chapel (the parish's weekday chapel) at St. Helena Church, so its Mon-Sat 9:00 AM Mass and Mon-Fri Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-helena-church-blue-bell",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Theresa Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 9:00 AM - Saint Helena Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "St. Helena Mass Schedule Chapel Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 4,
+          "said": "Daily Mass: 9:00 AM - Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 1,
+          "said": "Monday-Saturday 9:00 AM - Saint Helena Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 5,
+          "said": "Men's Day of Recollection ... St. Helena Church & Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://sainthelena-centersquare.net/mass-schedule-2/",
+          "said": "Monday – Saturday 9:00 AM in Saint Theresa Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Chapel Monday - Saturday: 9:00 AM”"
+        }
+      ],
+      "rationale": "R23/R32 vs R38: no page gives the chapel's address. Leaning include per precedent ss-philip-and-james-exton s15, our-lady-of-fatima-secane s11 and st-pius-x-broomall s25: the chapel is in St. Helena's own schedule box beside its one church address (1489 DeKalb Pike), the Nov 8 flyer names one venue 'St. Helena Church & Chapel', and candles are sold 'in the Church and Chapel' (08454ffc p10). The p3 intentions say 'St. Helena Chapel' (the website: 'Saint Theresa Chapel'), and twice put the 9 AM in the Church instead for school liturgies, a dated room change at the same site.",
+      "question": "Is St. Theresa Chapel (the parish's weekday chapel) at St. Helena Church, so its Mon-Sat 9:00 AM Mass and Mon-Fri Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-helena-church-blue-bell",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Theresa Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 9:00 AM - Saint Helena Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "St. Helena Mass Schedule Chapel Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 4,
+          "said": "Daily Mass: 9:00 AM - Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 1,
+          "said": "Monday-Saturday 9:00 AM - Saint Helena Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 5,
+          "said": "Men's Day of Recollection ... St. Helena Church & Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://sainthelena-centersquare.net/mass-schedule-2/",
+          "said": "Monday – Saturday 9:00 AM in Saint Theresa Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Chapel Monday - Saturday: 9:00 AM”"
+        }
+      ],
+      "rationale": "R23/R32 vs R38: no page gives the chapel's address. Leaning include per precedent ss-philip-and-james-exton s15, our-lady-of-fatima-secane s11 and st-pius-x-broomall s25: the chapel is in St. Helena's own schedule box beside its one church address (1489 DeKalb Pike), the Nov 8 flyer names one venue 'St. Helena Church & Chapel', and candles are sold 'in the Church and Chapel' (08454ffc p10). The p3 intentions say 'St. Helena Chapel' (the website: 'Saint Theresa Chapel'), and twice put the 9 AM in the Church instead for school liturgies, a dated room change at the same site.",
+      "question": "Is St. Theresa Chapel (the parish's weekday chapel) at St. Helena Church, so its Mon-Sat 9:00 AM Mass and Mon-Fri Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-helena-church-blue-bell",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Theresa Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 9:00 AM - Saint Helena Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "St. Helena Mass Schedule Chapel Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 4,
+          "said": "Daily Mass: 9:00 AM - Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 1,
+          "said": "Monday-Saturday 9:00 AM - Saint Helena Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 5,
+          "said": "Men's Day of Recollection ... St. Helena Church & Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://sainthelena-centersquare.net/mass-schedule-2/",
+          "said": "Monday – Saturday 9:00 AM in Saint Theresa Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Chapel Monday - Saturday: 9:00 AM”"
+        }
+      ],
+      "rationale": "R23/R32 vs R38: no page gives the chapel's address. Leaning include per precedent ss-philip-and-james-exton s15, our-lady-of-fatima-secane s11 and st-pius-x-broomall s25: the chapel is in St. Helena's own schedule box beside its one church address (1489 DeKalb Pike), the Nov 8 flyer names one venue 'St. Helena Church & Chapel', and candles are sold 'in the Church and Chapel' (08454ffc p10). The p3 intentions say 'St. Helena Chapel' (the website: 'Saint Theresa Chapel'), and twice put the 9 AM in the Church instead for school liturgies, a dated room change at the same site.",
+      "question": "Is St. Theresa Chapel (the parish's weekday chapel) at St. Helena Church, so its Mon-Sat 9:00 AM Mass and Mon-Fri Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-helena-church-blue-bell",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Theresa Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "Spiritual Devotions: Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION ... The St. Theresa Chapel is open Monday - Friday after the 9:00 Mass until 7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://sainthelena-centersquare.net/adoration/",
+          "said": "Adoration of the Blessed Sacrament is held immediately following the 9:00 AM Mass, Monday through Friday until 7:30 PM in the St. Theresa Chapel."
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM”"
+        }
+      ],
+      "rationale": "Same question as the chapel's weekday Mass (leaning per precedent ss-philip-and-james-exton s15, st-pius-x-broomall s25). The p2 box gives 9:30 AM-7:30 PM, which matches POLICY's 30 minutes after the 9:00 weekday Mass (R10); the Nov 8 box shows a monstrance. The website adds 'Exceptions: Civil Holidays, school closed or dismissed early due to inclement weather', which the format can't express.",
+      "question": "Is St. Theresa Chapel (the parish's weekday chapel) at St. Helena Church, so its Mon-Sat 9:00 AM Mass and Mon-Fri Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-helena-church-blue-bell",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "19:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Theresa Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "Spiritual Devotions: Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION ... The St. Theresa Chapel is open Monday - Friday after the 9:00 Mass until 7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://sainthelena-centersquare.net/adoration/",
+          "said": "Adoration of the Blessed Sacrament is held immediately following the 9:00 AM Mass, Monday through Friday until 7:30 PM in the St. Theresa Chapel."
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM”"
+        }
+      ],
+      "rationale": "Same question as the chapel's weekday Mass (leaning per precedent ss-philip-and-james-exton s15, st-pius-x-broomall s25). The p2 box gives 9:30 AM-7:30 PM, which matches POLICY's 30 minutes after the 9:00 weekday Mass (R10); the Nov 8 box shows a monstrance. The website adds 'Exceptions: Civil Holidays, school closed or dismissed early due to inclement weather', which the format can't express.",
+      "question": "Is St. Theresa Chapel (the parish's weekday chapel) at St. Helena Church, so its Mon-Sat 9:00 AM Mass and Mon-Fri Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-helena-church-blue-bell",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "19:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Theresa Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "Spiritual Devotions: Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION ... The St. Theresa Chapel is open Monday - Friday after the 9:00 Mass until 7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://sainthelena-centersquare.net/adoration/",
+          "said": "Adoration of the Blessed Sacrament is held immediately following the 9:00 AM Mass, Monday through Friday until 7:30 PM in the St. Theresa Chapel."
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM”"
+        }
+      ],
+      "rationale": "Same question as the chapel's weekday Mass (leaning per precedent ss-philip-and-james-exton s15, st-pius-x-broomall s25). The p2 box gives 9:30 AM-7:30 PM, which matches POLICY's 30 minutes after the 9:00 weekday Mass (R10); the Nov 8 box shows a monstrance. The website adds 'Exceptions: Civil Holidays, school closed or dismissed early due to inclement weather', which the format can't express.",
+      "question": "Is St. Theresa Chapel (the parish's weekday chapel) at St. Helena Church, so its Mon-Sat 9:00 AM Mass and Mon-Fri Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-helena-church-blue-bell",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "19:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Theresa Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "Spiritual Devotions: Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION ... The St. Theresa Chapel is open Monday - Friday after the 9:00 Mass until 7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://sainthelena-centersquare.net/adoration/",
+          "said": "Adoration of the Blessed Sacrament is held immediately following the 9:00 AM Mass, Monday through Friday until 7:30 PM in the St. Theresa Chapel."
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM”"
+        }
+      ],
+      "rationale": "Same question as the chapel's weekday Mass (leaning per precedent ss-philip-and-james-exton s15, st-pius-x-broomall s25). The p2 box gives 9:30 AM-7:30 PM, which matches POLICY's 30 minutes after the 9:00 weekday Mass (R10); the Nov 8 box shows a monstrance. The website adds 'Exceptions: Civil Holidays, school closed or dismissed early due to inclement weather', which the format can't express.",
+      "question": "Is St. Theresa Chapel (the parish's weekday chapel) at St. Helena Church, so its Mon-Sat 9:00 AM Mass and Mon-Fri Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-helena-church-blue-bell",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "19:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Theresa Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "Spiritual Devotions: Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION ... The St. Theresa Chapel is open Monday - Friday after the 9:00 Mass until 7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08454ffc",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://sainthelena-centersquare.net/adoration/",
+          "said": "Adoration of the Blessed Sacrament is held immediately following the 9:00 AM Mass, Monday through Friday until 7:30 PM in the St. Theresa Chapel."
+        },
+        {
+          "source": "c1",
+          "bulletin": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM”"
+        }
+      ],
+      "rationale": "Same question as the chapel's weekday Mass (leaning per precedent ss-philip-and-james-exton s15, st-pius-x-broomall s25). The p2 box gives 9:30 AM-7:30 PM, which matches POLICY's 30 minutes after the 9:00 weekday Mass (R10); the Nov 8 box shows a monstrance. The website adds 'Exceptions: Civil Holidays, school closed or dismissed early due to inclement weather', which the format can't express.",
+      "question": "Is St. Theresa Chapel (the parish's weekday chapel) at St. Helena Church, so its Mon-Sat 9:00 AM Mass and Mon-Fri Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-helena-church-blue-bell",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "19:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Theresa Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 7,
+          "said": "ALL ARE INVITED On the Four Sundays of Advent for Solemn Evening Prayer & Benediction Sunday, November 29 @ 6PM Sunday, December 6 @ 6PM Sunday, December 13 @6PM Sunday, December 20 @6PM"
+        }
+      ],
+      "rationale": "R30: Benediction implies Adoration (POLICY), but it is named after Evening Prayer, so exposition has no printed start of its own (POLICY, Final source checks). Leaning leave out per precedent our-lady-of-fatima-secane s16 (a component listed last has no start), unlike st-colman-ardmore s14 / our-lady-of-fatima-secane s15 where exposition opened the program. No place is printed; the parish has one church.",
+      "question": "Add Solemn Evening Prayer & Benediction on the Sundays of Advent (Nov 29, Dec 6, 13, 20, 6:00 PM) as Adoration?",
+      "options": [
+        {
+          "label": "Adoration at 6:00 PM, no end, note=Benediction",
+          "entry": {
+            "church_slug": "st-helena-church-blue-bell",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-29",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Evening Prayer and Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "advent-benediction"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 7,
+          "said": "ALL ARE INVITED On the Four Sundays of Advent for Solemn Evening Prayer & Benediction Sunday, November 29 @ 6PM Sunday, December 6 @ 6PM Sunday, December 13 @6PM Sunday, December 20 @6PM"
+        }
+      ],
+      "rationale": "R30: Benediction implies Adoration (POLICY), but it is named after Evening Prayer, so exposition has no printed start of its own (POLICY, Final source checks). Leaning leave out per precedent our-lady-of-fatima-secane s16 (a component listed last has no start), unlike st-colman-ardmore s14 / our-lady-of-fatima-secane s15 where exposition opened the program. No place is printed; the parish has one church.",
+      "question": "Add Solemn Evening Prayer & Benediction on the Sundays of Advent (Nov 29, Dec 6, 13, 20, 6:00 PM) as Adoration?",
+      "options": [
+        {
+          "label": "Adoration at 6:00 PM, no end, note=Benediction",
+          "entry": {
+            "church_slug": "st-helena-church-blue-bell",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-06",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Evening Prayer and Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "advent-benediction"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 7,
+          "said": "ALL ARE INVITED On the Four Sundays of Advent for Solemn Evening Prayer & Benediction Sunday, November 29 @ 6PM Sunday, December 6 @ 6PM Sunday, December 13 @6PM Sunday, December 20 @6PM"
+        }
+      ],
+      "rationale": "R30: Benediction implies Adoration (POLICY), but it is named after Evening Prayer, so exposition has no printed start of its own (POLICY, Final source checks). Leaning leave out per precedent our-lady-of-fatima-secane s16 (a component listed last has no start), unlike st-colman-ardmore s14 / our-lady-of-fatima-secane s15 where exposition opened the program. No place is printed; the parish has one church.",
+      "question": "Add Solemn Evening Prayer & Benediction on the Sundays of Advent (Nov 29, Dec 6, 13, 20, 6:00 PM) as Adoration?",
+      "options": [
+        {
+          "label": "Adoration at 6:00 PM, no end, note=Benediction",
+          "entry": {
+            "church_slug": "st-helena-church-blue-bell",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-13",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Evening Prayer and Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "advent-benediction"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 7,
+          "said": "ALL ARE INVITED On the Four Sundays of Advent for Solemn Evening Prayer & Benediction Sunday, November 29 @ 6PM Sunday, December 6 @ 6PM Sunday, December 13 @6PM Sunday, December 20 @6PM"
+        }
+      ],
+      "rationale": "R30: Benediction implies Adoration (POLICY), but it is named after Evening Prayer, so exposition has no printed start of its own (POLICY, Final source checks). Leaning leave out per precedent our-lady-of-fatima-secane s16 (a component listed last has no start), unlike st-colman-ardmore s14 / our-lady-of-fatima-secane s15 where exposition opened the program. No place is printed; the parish has one church.",
+      "question": "Add Solemn Evening Prayer & Benediction on the Sundays of Advent (Nov 29, Dec 6, 13, 20, 6:00 PM) as Adoration?",
+      "options": [
+        {
+          "label": "Adoration at 6:00 PM, no end, note=Benediction",
+          "entry": {
+            "church_slug": "st-helena-church-blue-bell",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-20",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Evening Prayer and Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "advent-benediction"
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-06",
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Adoration Holy Hour"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 7,
+          "said": "PARISH ADORATION HOLY HOUR 6:30PM - 7:30PM SUNDAY, DECEMBER 6 SAINT TITUS CHURCH 3006 KEENWOOD RD EAST NORRITON"
+        }
+      ],
+      "rationale": "R22: at St. Titus Church, Norristown, another parish's listed church (st-titus-norristown); its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "St. Titus Mass Schedule ... Saturday Vigil Mass: 4:30 PM; Sunday: 10:00AM; Mon., Tues., Thurs., Fri.: 8:00 AM; Holy Day 8:00 AM & 7:00 PM"
+        }
+      ],
+      "rationale": "R22: St. Titus Church is another parish's listed church (st-titus-norristown); its Masses and Saturday 3:30 PM confession, printed in this partnered bulletin, belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-titus-church-norristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "St. Titus - Saturday at 3:30 PM in the Church"
+        }
+      ],
+      "rationale": "R22: St. Titus Church is another parish's listed church (st-titus-norristown).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 1,
+          "said": "Holy Days - Vigil 7:00 PM; Holy Days 9:00 AM, 12:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "Holy Days: Vigil: 7:00 PM, Holy Day: 9:00 AM, & 12:15 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no date; no read issue pins Dec 8 or Christmas, and dates are not projected (as st-isaac-jogues-wayne s27). Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 1,
+          "said": "Chapel Hours Monday-Friday 6:30 AM - 9:00 PM Saturday 8:00 AM - 5:00 PM Sunday 7:00 AM - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "St. Theresa Chapel Hours: Monday - Friday from 6:30 AM to 9:00 PM"
+        }
+      ],
+      "rationale": "R38: the chapel's opening hours are building access, not an Adoration schedule; Adoration's own hours are the chapel question's slots.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-church-blue-bell",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "School Confessions Grades 5-6"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 4,
+          "said": "THURSDAY, November 19 School Confessions Grades 5-6: 9:30 AM - Church"
+        }
+      ],
+      "rationale": "POLICY: limited to a group (school grades 5-6), not open to the public.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17534561",
+          "page": 2,
+          "said": "or call St. Helena Parish Office to make an appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "92eaef6a4fc209ea7dec8bcb21fba078",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T15:17:07.664613+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "1753456149ff17c0282d74e8585d37d55fa7b18db00f979b297f7a5284a6c943",
+        "fetched_at": "2026-11-15T16:45:42Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "08454ffc4ead995f01e0e6b6af2ff6470859fd8b47a892dd5c89d6316d571330",
+        "fetched_at": "2026-11-08T15:54:19Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.007402,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": true,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Helena Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Chapel Monday - Saturday: 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Chapel Monday - Saturday: 9:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Helena Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Chapel Monday - Saturday: 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Chapel Monday - Saturday: 9:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Helena Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Chapel Monday - Saturday: 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Chapel Monday - Saturday: 9:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Helena Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Chapel Monday - Saturday: 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Chapel Monday - Saturday: 9:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Helena Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Chapel Monday - Saturday: 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Chapel Monday - Saturday: 9:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Helena Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Chapel Monday - Saturday: 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Chapel Monday - Saturday: 9:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saturday: 4:00 PM Vigil Mass"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saturday: 4:00 PM Vigil Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday: 7:30 AM, 9:00 AM, & 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Sunday: 7:30 AM, 9:00 AM, & 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday: 7:30 AM, 9:00 AM, & 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Sunday: 7:30 AM, 9:00 AM, & 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday: 7:30 AM, 9:00 AM, & 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Sunday: 7:30 AM, 9:00 AM, & 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "St. Helena - Saturday at 3:00 PM in the Church"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "St. Helena - Saturday at 3:00 PM in the Church"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "19:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "St. Theresa Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "Visit the Lord in “heart to heart” contact in Eucharistic Adoration. The St. Theresa Chapel is open Monday - Friday after the 9:00 Mass until 7:30 PM. He waits for you!"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "19:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "St. Theresa Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "Visit the Lord in “heart to heart” contact in Eucharistic Adoration. The St. Theresa Chapel is open Monday - Friday after the 9:00 Mass until 7:30 PM. He waits for you!"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "19:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "St. Theresa Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "Visit the Lord in “heart to heart” contact in Eucharistic Adoration. The St. Theresa Chapel is open Monday - Friday after the 9:00 Mass until 7:30 PM. He waits for you!"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "19:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "St. Theresa Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "Visit the Lord in “heart to heart” contact in Eucharistic Adoration. The St. Theresa Chapel is open Monday - Friday after the 9:00 Mass until 7:30 PM. He waits for you!"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "19:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "St. Theresa Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Eucharistic Adoration: Mon-Fri 9:30 AM-7:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "Visit the Lord in “heart to heart” contact in Eucharistic Adoration. The St. Theresa Chapel is open Monday - Friday after the 9:00 Mass until 7:30 PM. He waits for you!"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-23",
+          "start_time": "18:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Before Simple Supper",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 10,
+            "quote": "Please join us Monday, November 23rd at 6:00 PM for Mass followed by Simple Supper, hosted by the Saint Helena School Class of 2027."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o18",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "confession",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-19",
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Grades 5-6",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "School Confessions Grades 5-6: 9:30 AM - Church"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o19",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-29",
+          "start_time": "18:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Benediction",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 8,
+            "quote": "On the Four Sundays of Advent for Solemn Evening Prayer & Benediction Sunday, November 29 @ 6PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o20",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-06",
+          "start_time": "18:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Benediction",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 8,
+            "quote": "On the Four Sundays of Advent for Solemn Evening Prayer & Benediction Sunday, December 6 @ 6PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o21",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-13",
+          "start_time": "18:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Benediction",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 8,
+            "quote": "On the Four Sundays of Advent for Solemn Evening Prayer & Benediction Sunday, December 13 @6PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o22",
+        "entry": {
+          "church_slug": "st-helena-church-blue-bell",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-20",
+          "start_time": "18:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Benediction",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 8,
+            "quote": "On the Four Sundays of Advent for Solemn Evening Prayer & Benediction Sunday, December 20 @6PM"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "647809e8b3d96dbb4e5a406bf89b90c1253ee6d40338b8ba5ea2761d66091398",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "excluded",
+        "fields": [],
+        "opinion": [
+          "o18"
+        ],
+        "slots": [
+          "s27"
+        ],
+        "opinion_said": "confession 2026-11-19 09:30 @st-helena-church-blue-bell",
+        "seed_said": "confession 2026-11-19 09:30 @st-helena-church-blue-bell",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "17534561",
+              "page": 4,
+              "said": "THURSDAY, November 19 ... School Confessions Grades 5-6: 9:30 AM - Church"
+            }
+          ],
+          "why": "POLICY, What to extract (closed to the public; R24/R25): the calendar limits it to the school's grades 5-6 as a class activity, like a students-only school Mass; nothing invites the parish.",
+          "at": "2026-11-27T15:17:28Z"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o19"
+        ],
+        "slots": [
+          "s18"
+        ],
+        "opinion_said": "adoration 2026-11-29 18:00 @st-helena-church-blue-bell",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      },
+      {
+        "id": "d3",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o20"
+        ],
+        "slots": [
+          "s19"
+        ],
+        "opinion_said": "adoration 2026-12-06 18:00 @st-helena-church-blue-bell",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      },
+      {
+        "id": "d4",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o21"
+        ],
+        "slots": [
+          "s20"
+        ],
+        "opinion_said": "adoration 2026-12-13 18:00 @st-helena-church-blue-bell",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      },
+      {
+        "id": "d5",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o22"
+        ],
+        "slots": [
+          "s21"
+        ],
+        "opinion_said": "adoration 2026-12-20 18:00 @st-helena-church-blue-bell",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      }
+    ]
+  }
+}
