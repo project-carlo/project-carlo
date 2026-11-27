@@ -1,0 +1,564 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-rose-of-lima-eddystone",
+  "status": "ready",
+  "as_of": "2026-11-15T16:16:47Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T01:16:02Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both November issues print the same schedule box: Sat 4:30 PM vigil, Sun 7:30/10:30/12:00, Mon/Tue/Thu/Fri 9:00 AM Mass, Wednesday 9:00 AM Communion Service (excluded), and confession Tue 7:00-7:30 PM and Sat 3:30-4:15 PM; intentions agree. No Adoration printed; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4080a07b79458631855cc92b46f42ee2ba64efd26f59917d14a5592325b9a760",
+      "fetched_at": "2026-11-15T16:16:47Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "5ec4c4984cc991ed400c06c13206f61ae1ed5d9fde6a6b03e7e37e1fccb34f9f",
+      "fetched_at": "2026-11-08T15:41:59Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-eddystone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 1,
+          "said": "WEEKEND MASS Saturday Vigil | 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ec4c498",
+          "page": 1,
+          "said": "WEEKEND MASS Saturday Vigil | 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 4,
+          "said": "Saturday, November 14, 2026 4:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-eddystone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 1,
+          "said": "Sunday | 7:30am, 10:30am & 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ec4c498",
+          "page": 1,
+          "said": "Sunday | 7:30am, 10:30am & 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 4,
+          "said": "Sunday, November 15, 2026 7:30am, 10:30am, 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-eddystone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 1,
+          "said": "Sunday | 7:30am, 10:30am & 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ec4c498",
+          "page": 1,
+          "said": "Sunday | 7:30am, 10:30am & 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 4,
+          "said": "Sunday, November 15, 2026 7:30am, 10:30am, 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-eddystone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 1,
+          "said": "Sunday | 7:30am, 10:30am & 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ec4c498",
+          "page": 1,
+          "said": "Sunday | 7:30am, 10:30am & 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 4,
+          "said": "Sunday, November 15, 2026 7:30am, 10:30am, 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-eddystone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday, Tuesday, Thursday and Friday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ec4c498",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday, Tuesday, Thursday and Friday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 4,
+          "said": "Monday-Friday intentions 9:00am (Wednesday 9:00am Communion Service)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; both weeks' intentions list a 9:00am Mass on these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-eddystone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday, Tuesday, Thursday and Friday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ec4c498",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday, Tuesday, Thursday and Friday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 4,
+          "said": "Monday-Friday intentions 9:00am (Wednesday 9:00am Communion Service)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; both weeks' intentions list a 9:00am Mass on these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-eddystone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday, Tuesday, Thursday and Friday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ec4c498",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday, Tuesday, Thursday and Friday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 4,
+          "said": "Monday-Friday intentions 9:00am (Wednesday 9:00am Communion Service)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; both weeks' intentions list a 9:00am Mass on these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-eddystone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday, Tuesday, Thursday and Friday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ec4c498",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday, Tuesday, Thursday and Friday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 4,
+          "said": "Monday-Friday intentions 9:00am (Wednesday 9:00am Communion Service)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; both weeks' intentions list a 9:00am Mass on these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-eddystone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 1,
+          "said": "COMMUNION SERVICE Wednesday| 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ec4c498",
+          "page": 1,
+          "said": "COMMUNION SERVICE Wednesday| 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 4,
+          "said": "Wednesday, November 18, 2026 9:00am Communion Service"
+        }
+      ],
+      "rationale": "R24, POLICY What to extract: a Communion Service is not a Mass. It is the standing Wednesday service in both issues, not a dated replacement, so no cancellation is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-eddystone",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 1,
+          "said": "CONFESSION Tuesday | 7:00pm - 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ec4c498",
+          "page": 1,
+          "said": "CONFESSION Tuesday | 7:00pm - 7:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-eddystone",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 1,
+          "said": "CONFESSION Saturday| 3:30pm - 4:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ec4c498",
+          "page": 1,
+          "said": "CONFESSION Saturday| 3:30pm - 4:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ec4c498",
+          "page": 3,
+          "said": "Memorial Mass On this day, we remember all those who were buried from our church in the past year."
+        }
+      ],
+      "rationale": "R24, R26: the November memorial Mass notice gives no date or time; R16: any November date before as_of is out of scope anyway.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4080a07b",
+          "page": 1,
+          "said": "HOLY DAYS AS ANNOUNCED IN THE BULLETIN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ec4c498",
+          "page": 1,
+          "said": "HOLY DAYS AS ANNOUNCED IN THE BULLETIN"
+        }
+      ],
+      "rationale": "R26: no holy-day times are printed in either issue; update mode will read the announcement.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ec4c498",
+          "page": 3,
+          "said": "ST. JOHN FISHER CHURCH ADVENT DAY OF REFLECTION Saturday, November 21st 9:00 AM-2:00 PM ... Mass at 11:00 AM ... Sacrament of Reconciliation opportunity ... 4225 Chichester Ave, Boothwyn"
+        }
+      ],
+      "rationale": "R22: a registered retreat day at St. John Fisher, Boothwyn, another parish's church; not held at St. Rose.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
