@@ -1,0 +1,1326 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-quasi-parish-conshohocken",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:29Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T04:40:28Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Mary, Conshohocken), FSSP Latin Mass quasi-parish. The Mass, Simple Exposition and 'Confessions 30 min. before Mass' boxes are identical in the Nov 1 and Nov 15 issues; confessions are timed per POLICY before each weekly Mass. Dated: Dec 4-5 All-Night Adoration and Dec 5 5:30 AM Rorate Mass. Open: the Nov 16 Confraternity induction Mass (leaning leave out).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e9dc0779484a2dc040a8bec6283913f0801cbc90092e927534476669f7b6f62d",
+      "fetched_at": "2026-11-15T16:46:29Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "725871cc7bf2c58c7cbcefa07a0f43f98916eff87b90b50f7001e858b2544ff7",
+      "fetched_at": "2026-11-08T15:55:02Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Sunday Mass 8:00 a.m.—Low 10:00 a.m.—High (Low Mass in summer) 1:00 p.m.—Low"
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Sunday Mass 8:00 a.m.—Low 10:00 a.m.—High (Low Mass in summer) 1:00 p.m.—Low"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read (Nov 15, Nov 1) and in the Nov 15-22 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Sunday Mass 8:00 a.m.—Low 10:00 a.m.—High (Low Mass in summer) 1:00 p.m.—Low"
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Sunday Mass 8:00 a.m.—Low 10:00 a.m.—High (Low Mass in summer) 1:00 p.m.—Low"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read (Nov 15, Nov 1) and in the Nov 15-22 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Sunday Mass 8:00 a.m.—Low 10:00 a.m.—High (Low Mass in summer) 1:00 p.m.—Low"
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Sunday Mass 8:00 a.m.—Low 10:00 a.m.—High (Low Mass in summer) 1:00 p.m.—Low"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read (Nov 15, Nov 1) and in the Nov 15-22 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Monday 7:15 a.m. Tuesday 7:15 a.m. Wednesday 7:15 a.m. & 12:05 p.m. Thursday 7:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Monday 7:15 a.m. Tuesday 7:15 a.m. Wednesday 7:15 a.m. & 12:05 p.m. Thursday 7:15 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in the Nov 16-19 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Monday 7:15 a.m. Tuesday 7:15 a.m. Wednesday 7:15 a.m. & 12:05 p.m. Thursday 7:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Monday 7:15 a.m. Tuesday 7:15 a.m. Wednesday 7:15 a.m. & 12:05 p.m. Thursday 7:15 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in the Nov 16-19 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Monday 7:15 a.m. Tuesday 7:15 a.m. Wednesday 7:15 a.m. & 12:05 p.m. Thursday 7:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Monday 7:15 a.m. Tuesday 7:15 a.m. Wednesday 7:15 a.m. & 12:05 p.m. Thursday 7:15 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in the Nov 16-19 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Monday 7:15 a.m. Tuesday 7:15 a.m. Wednesday 7:15 a.m. & 12:05 p.m. Thursday 7:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Monday 7:15 a.m. Tuesday 7:15 a.m. Wednesday 7:15 a.m. & 12:05 p.m. Thursday 7:15 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in the Nov 16-19 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Wednesday 7:15 a.m. & 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Wednesday 7:15 a.m. & 12:05 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in the Nov 18 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Friday 12:05 p.m. & 6:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Friday 12:05 p.m. & 6:30 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in the Nov 20 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Friday 12:05 p.m. & 6:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Friday 12:05 p.m. & 6:30 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in the Nov 20 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Saturday 7:15 a.m. & 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Saturday 7:15 a.m. & 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in the Nov 21 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Saturday 7:15 a.m. & 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Saturday 7:15 a.m. & 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in the Nov 21 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Simple Exposition of the Blessed Sacrament Mon-Thurs 8:00-9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Simple Exposition of the Blessed Sacrament Mon-Thurs 8:00-9:00 a.m."
+        }
+      ],
+      "rationale": "R1: the Simple Exposition box of both issues. (725871cc p2 cancelled it on Nov 2, a past date.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Simple Exposition of the Blessed Sacrament Mon-Thurs 8:00-9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Simple Exposition of the Blessed Sacrament Mon-Thurs 8:00-9:00 a.m."
+        }
+      ],
+      "rationale": "R1: the Simple Exposition box of both issues. (725871cc p2 cancelled it on Nov 2, a past date.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Simple Exposition of the Blessed Sacrament Mon-Thurs 8:00-9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Simple Exposition of the Blessed Sacrament Mon-Thurs 8:00-9:00 a.m."
+        }
+      ],
+      "rationale": "R1: the Simple Exposition box of both issues. (725871cc p2 cancelled it on Nov 2, a past date.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Simple Exposition of the Blessed Sacrament Mon-Thurs 8:00-9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Simple Exposition of the Blessed Sacrament Mon-Thurs 8:00-9:00 a.m."
+        }
+      ],
+      "rationale": "R1: the Simple Exposition box of both issues. (725871cc p2 cancelled it on Nov 2, a past date.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Simple Exposition of the Blessed Sacrament Friday 5:30-6:20 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Simple Exposition of the Blessed Sacrament Friday 5:30-6:20 p.m."
+        }
+      ],
+      "rationale": "R1: the Simple Exposition box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Simple Exposition of the Blessed Sacrament Saturday 8:00-9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Simple Exposition of the Blessed Sacrament Saturday 8:00-9:00 a.m."
+        }
+      ],
+      "rationale": "R1: the Simple Exposition box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        }
+      ],
+      "rationale": "R1, R10: 'Confessions 30 min. before Mass' in both issues' box; POLICY Times makes one entry per regular weekly Mass, from 30 minutes before to the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 10:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        }
+      ],
+      "rationale": "R1, R10: 'Confessions 30 min. before Mass' in both issues' box; POLICY Times makes one entry per regular weekly Mass, from 30 minutes before to the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 1:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        }
+      ],
+      "rationale": "R1, R10: 'Confessions 30 min. before Mass' in both issues' box; POLICY Times makes one entry per regular weekly Mass, from 30 minutes before to the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": "07:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:15 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        }
+      ],
+      "rationale": "R1, R10: 'Confessions 30 min. before Mass' in both issues' box; POLICY Times makes one entry per regular weekly Mass, from 30 minutes before to the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": "07:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:15 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        }
+      ],
+      "rationale": "R1, R10: 'Confessions 30 min. before Mass' in both issues' box; POLICY Times makes one entry per regular weekly Mass, from 30 minutes before to the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": "07:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:15 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        }
+      ],
+      "rationale": "R1, R10: 'Confessions 30 min. before Mass' in both issues' box; POLICY Times makes one entry per regular weekly Mass, from 30 minutes before to the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": "07:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:15 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        }
+      ],
+      "rationale": "R1, R10: 'Confessions 30 min. before Mass' in both issues' box; POLICY Times makes one entry per regular weekly Mass, from 30 minutes before to the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:35",
+        "end_time": "12:05",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 12:05 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        }
+      ],
+      "rationale": "R1, R10: 'Confessions 30 min. before Mass' in both issues' box; POLICY Times makes one entry per regular weekly Mass, from 30 minutes before to the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:35",
+        "end_time": "12:05",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 12:05 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        }
+      ],
+      "rationale": "R1, R10: 'Confessions 30 min. before Mass' in both issues' box; POLICY Times makes one entry per regular weekly Mass, from 30 minutes before to the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 6:30 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        }
+      ],
+      "rationale": "R1, R10: 'Confessions 30 min. before Mass' in both issues' box; POLICY Times makes one entry per regular weekly Mass, from 30 minutes before to the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": "07:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:15 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        }
+      ],
+      "rationale": "R1, R10: 'Confessions 30 min. before Mass' in both issues' box; POLICY Times makes one entry per regular weekly Mass, from 30 minutes before to the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "725871cc",
+          "page": 1,
+          "said": "Confessions 30 min. before Mass"
+        }
+      ],
+      "rationale": "R1, R10: 'Confessions 30 min. before Mass' in both issues' box; POLICY Times makes one entry per regular weekly Mass, from 30 minutes before to the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-05",
+        "start_time": "05:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rorate Mass (Solemn High)"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 2,
+          "said": "Rorate Mass—Sat, Dec 5 at 5:30am ... There will be no confessions before or during Mass."
+        }
+      ],
+      "rationale": "R1, R16: a dated, open Advent Mass after as_of; the notice says there are no confessions before it, so none is added.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-04",
+        "start_time": "19:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All-Night Adoration, after the 6:30 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 2,
+          "said": "All-Night Adoration—Dec 4-5 ... It will start after the 6:30pm Mass. Benediction will be at 5:10am on December 5th before the Rorate Mass ... the entire parish is free to join them that night."
+        }
+      ],
+      "rationale": "R1, R10, R16: an all-night Adoration open to the whole parish; 'after the 6:30pm Mass' (a weekday Mass) starts at 7:00 PM per POLICY Times, and it runs past midnight, so this day ends at 23:59 and Dec 5 continues it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-church-conshohocken",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-05",
+        "start_time": "00:00",
+        "end_time": "05:10",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All-Night Adoration, ends with Benediction"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 2,
+          "said": "All-Night Adoration—Dec 4-5 ... Benediction will be at 5:10am on December 5th before the Rorate Mass."
+        }
+      ],
+      "rationale": "R1, R16: the second half of the Dec 4-5 All-Night Adoration, ending with the printed 5:10 AM Benediction.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 2,
+          "said": "Confraternity of Christian Mothers —Mon, Nov 16 Induction Ceremony, Mass & Meeting ... will be meeting on Monday, October 19th ... Annual Induction Ceremony and Mass in the main church at 7pm."
+        }
+      ],
+      "rationale": "R30: a group's own induction Mass at its meeting, which POLICY treats as limited to a group; leaning per precedent st-thomas-of-villanova-villanova s19 (men's gathering Mass) and st-pius-x-broomall s34. Also the body says 'October 19th' against the heading's Nov 16 (a carried-over line), and it is not in the intentions (p1 lists only 7:15 AM on Nov 16). Hard because it is in the main church and nothing turns others away.",
+      "question": "Add the Confraternity of Christian Mothers' Induction Ceremony and Mass, Mon Nov 16, 7:00 PM, in the main church?",
+      "options": [
+        {
+          "label": "Nov 16 7:00 PM",
+          "entry": {
+            "church_slug": "st-mary-church-conshohocken",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-16",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Confraternity of Christian Mothers Induction Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e9dc0779",
+          "page": 1,
+          "said": "Devotions to Our Lady of Czestochowa Fridays after the 6:30pm Mass"
+        }
+      ],
+      "rationale": "R24: a devotion, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
