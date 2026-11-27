@@ -1,0 +1,1316 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-philip-neri-lafayette-hill",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:48Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T19:50:39Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 5 PM; Sun 7:30, 9:30, 11), daily 8:30 AM Mon-Sat and Saturday 3:45-4:45 PM confession agree in both November issues and the website. Dated: Thanksgiving Mass moved 8:30 to 9:00 (website notice), Children's Vigil Mass Dec 7 7 PM, Adoration Dec 14 9-5. Open: whether the undated Holy Day line gives Dec 8 Masses at 6:30 AM and 7 PM.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+      "fetched_at": "2026-11-15T16:46:48Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c3ef47430322bc75594a8dd4ecf1caa53e3091e37c0e4f33e2f2aaee45b12512",
+      "fetched_at": "2026-11-08T15:55:18Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+      "bulletins": [
+        "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+        "c3ef47430322bc75594a8dd4ecf1caa53e3091e37c0e4f33e2f2aaee45b12512"
+      ],
+      "cached": false,
+      "cost_usd": 0.005313,
+      "at": "2026-11-27T19:54:48.063285+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 2,
+          "said": "Parish Mass Schedule Saturday Evening Vigil Mass 5PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c3ef4743",
+          "page": 2,
+          "said": "Parish Mass Schedule Saturday Evening Vigil Mass 5PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saturday Evening Vigil Mass 5PM”"
+        }
+      ],
+      "rationale": "R1: printed in the Parish Mass Schedule box of both issues; the intentions list the 5PM Vigil each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 2,
+          "said": "Sunday Morning 7:30AM - No Music 9:30AM & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c3ef4743",
+          "page": 2,
+          "said": "Sunday Morning 7:30AM - No Music 9:30AM & 11:00AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “7:30AM - No Music”"
+        }
+      ],
+      "rationale": "R1: printed in the Parish Mass Schedule box of both issues, and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 2,
+          "said": "Sunday Morning 7:30AM - No Music 9:30AM & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c3ef4743",
+          "page": 2,
+          "said": "Sunday Morning 7:30AM - No Music 9:30AM & 11:00AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “9:30AM & 11:00AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Parish Mass Schedule box of both issues, and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 2,
+          "said": "Sunday Morning 7:30AM - No Music 9:30AM & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c3ef4743",
+          "page": 2,
+          "said": "Sunday Morning 7:30AM - No Music 9:30AM & 11:00AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “9:30AM & 11:00AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Parish Mass Schedule box of both issues, and in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday through Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c3ef4743",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday through Saturday 8:30AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday through Saturday 8:30AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; both weeks' intentions list 8:30AM Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday through Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c3ef4743",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday through Saturday 8:30AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday through Saturday 8:30AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; both weeks' intentions list 8:30AM Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday through Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c3ef4743",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday through Saturday 8:30AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday through Saturday 8:30AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; both weeks' intentions list 8:30AM Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday through Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c3ef4743",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday through Saturday 8:30AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday through Saturday 8:30AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; both weeks' intentions list 8:30AM Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday through Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c3ef4743",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday through Saturday 8:30AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday through Saturday 8:30AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; both weeks' intentions list 8:30AM Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday through Saturday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c3ef4743",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday through Saturday 8:30AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Monday through Saturday 8:30AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; both weeks' intentions list 8:30AM Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 2,
+          "said": "Confessions are heard every Saturday from 3:45PM to 4:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c3ef4743",
+          "page": 2,
+          "said": "Confessions are heard every Saturday from 3:45PM to 4:45PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintphilipnerichurch.com/confession/",
+          "said": "Saturdays, 3:45 PM - 4:45 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Confessions are heard every Saturday from 3:45PM to 4:45PM”"
+        }
+      ],
+      "rationale": "R1: printed in both issues; the website's Reconciliation page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 2,
+          "said": "or by appointment, call 610-834-1975 to schedule."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-14",
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the church"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 3,
+          "said": "Adoration of the Most Blessed Sacrament in the Church on Monday, December 14th from 9AM to 5PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintphilipnerichurch.com/adoration-of-the-blessed-sacrament-information/",
+          "said": "Adoration of the Blessed Sacrament is scheduled for Monday, December 14th from 9:00 AM until 5:00 PM in the Church Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Adoration of the Most Blessed Sacrament in the Church on Monday, December 14th from 9AM to 5PM”"
+        }
+      ],
+      "rationale": "R1, R16: a dated Adoration day after as_of. The Nov 8 issue (c3ef4743 p3) printed the same notice for Monday, November 9; both fall on second Mondays, but no issue names the week, so it stays dated (POLICY, Weekly or dated rule 2; R13). The website places it in the Church Chapel, the bulletin 'in the Church'; same building.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Children's Vigil Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 5,
+          "said": "Join us for the Children's Vigil Mass on Monday, December 7th at 7:00 PM in the Church ... All families are welcome!"
+        },
+        {
+          "source": "c1",
+          "bulletin": "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+          "page": 5,
+          "said": "gpt-6-luna read the same: B1 p5 “Join us for the Children’s Vigil Mass on Monday, December 7th at 7:00 PM in the Church”"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass in the church open to all families (POLICY: open unless limited), after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintphilipnerichurch.com/9-00-am-mass-on-thanksgiving-day/",
+          "said": "There will be no 8:30 AM Mass on Thursday, Thanksgiving day. Mass will be held at 9:00 AM.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T19:52:46Z",
+            "current_because": "Posted 21 November 2026 for Thanksgiving 2026; the homepage's announced Masses for the week of 11-23 list Thursday 11-26 Thanksgiving Day 9:00 AM and the regular 8:30 AM other days.",
+            "bulletin": "9c1694d3",
+            "fits_because": "The Nov 15 bulletin (9c1694d3 p2) gives weekday Mass Monday through Saturday 8:30AM; this notice moves only Thursday Nov 26's 8:30 to 9:00, a holiday the bulletin's week does not cover."
+          }
+        }
+      ],
+      "rationale": "R6, R16, R40: the parish's dated website notice moves the Thanksgiving weekday Mass; a moved Mass is a cancellation plus the new time (POLICY, Weekly or dated). Nov 26 is after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-church-lafayette-hill",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintphilipnerichurch.com/9-00-am-mass-on-thanksgiving-day/",
+          "said": "There will be no 8:30 AM Mass on Thursday, Thanksgiving day. Mass will be held at 9:00 AM.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T19:52:50Z",
+            "current_because": "Posted 21 November 2026 for Thanksgiving 2026; the homepage's announced Masses for the week of 11-23 list Thursday 11-26 Thanksgiving Day 9:00 AM and the regular 8:30 AM other days.",
+            "bulletin": "9c1694d3",
+            "fits_because": "The Nov 15 bulletin (9c1694d3 p2) gives weekday Mass Monday through Saturday 8:30AM; this notice moves only Thursday Nov 26's 8:30 to 9:00, a holiday the bulletin's week does not cover."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintphilipnerichurch.com/mass_schedule/",
+          "said": "Thursday - 11-26 Thanksgiving Day 9:00 AM",
+          "schedule_check": {
+            "checked_at": "2026-11-27T19:52:50Z",
+            "current_because": "Posted 21 November 2026 for Thanksgiving 2026; the homepage's announced Masses for the week of 11-23 list Thursday 11-26 Thanksgiving Day 9:00 AM and the regular 8:30 AM other days.",
+            "bulletin": "9c1694d3",
+            "fits_because": "The Nov 15 bulletin (9c1694d3 p2) gives weekday Mass Monday through Saturday 8:30AM; this notice moves only Thursday Nov 26's 8:30 to 9:00, a holiday the bulletin's week does not cover."
+          }
+        }
+      ],
+      "rationale": "R6, R16, R40: the new time of the moved Thanksgiving Mass, from the parish's dated website notice and its announced-Masses page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 2,
+          "said": "Holy Day Mass Schedule 6:30AM, 8:30AM, & 7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c3ef4743",
+          "page": 2,
+          "said": "Holy Day Mass Schedule 6:30AM, 8:30AM, & 7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 5,
+          "said": "Children's Vigil Mass on Monday, December 7th at 7:00 PM in the Church"
+        }
+      ],
+      "rationale": "R30: the box's Holy Day line is standing and undated (cf. st-isaac-jogues-wayne s27, left out), but the dated 'Children's Vigil Mass' on Mon Dec 7 ties a holy day to Tue Dec 8 this year; leaning per precedent our-lady-of-consolation-parkesburg s12, which included the holy-day time on that kind of dated vigil notice. The 8:30 AM is already the weekly Tuesday Mass. Hard because neither 'December 8' nor 'Immaculate Conception' is printed.",
+      "question": "Add a 6:30 AM Mass on Tue Dec 8 (Immaculate Conception) from the standing Holy Day line?",
+      "options": [
+        {
+          "label": "Dec 8 6:30 AM",
+          "entry": {
+            "church_slug": "st-philip-neri-church-lafayette-hill",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 2,
+          "said": "Holy Day Mass Schedule 6:30AM, 8:30AM, & 7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c3ef4743",
+          "page": 2,
+          "said": "Holy Day Mass Schedule 6:30AM, 8:30AM, & 7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c1694d3",
+          "page": 5,
+          "said": "Children's Vigil Mass on Monday, December 7th at 7:00 PM in the Church"
+        }
+      ],
+      "rationale": "R30: the Holy Day line's 7PM matches the 7:00 PM vigil printed for Monday Dec 7, so it may be the evening-before vigil rather than a Mass on the day; a wrong time is worse than a missing one (POLICY). Unlike our-lady-of-consolation-parkesburg s12, whose line printed the vigil separately. December issues will settle it.",
+      "question": "Add a 7:00 PM Mass on Tue Dec 8 from the Holy Day line, or is that line's 7PM the Dec 7 vigil?",
+      "options": [
+        {
+          "label": "Dec 8 7:00 PM",
+          "entry": {
+            "church_slug": "st-philip-neri-church-lafayette-hill",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "0615380e5b22d46456dac67a33c51d69",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T19:54:48.063285+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "9c1694d30e22120c753816145a0302c8606c82c9daf229313d3faa9188192edd",
+        "fetched_at": "2026-11-15T16:46:48Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "c3ef47430322bc75594a8dd4ecf1caa53e3091e37c0e4f33e2f2aaee45b12512",
+        "fetched_at": "2026-11-08T15:55:18Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.005313,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-philip-neri-church-lafayette-hill",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saturday Evening Vigil Mass 5PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saturday Evening Vigil Mass 5PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-philip-neri-church-lafayette-hill",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "7:30AM - No Music"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "7:30AM - No Music"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-philip-neri-church-lafayette-hill",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "9:30AM & 11:00AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "9:30AM & 11:00AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-philip-neri-church-lafayette-hill",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "9:30AM & 11:00AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "9:30AM & 11:00AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-philip-neri-church-lafayette-hill",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday through Saturday 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday through Saturday 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-philip-neri-church-lafayette-hill",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday through Saturday 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday through Saturday 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-philip-neri-church-lafayette-hill",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday through Saturday 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday through Saturday 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-philip-neri-church-lafayette-hill",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday through Saturday 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday through Saturday 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-philip-neri-church-lafayette-hill",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday through Saturday 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday through Saturday 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-philip-neri-church-lafayette-hill",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Monday through Saturday 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Monday through Saturday 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-philip-neri-church-lafayette-hill",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:45",
+          "end_time": "16:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Confessions are heard every Saturday from 3:45PM to 4:45PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Confessions are heard every Saturday from 3:45PM to 4:45PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-philip-neri-church-lafayette-hill",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-07",
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Children's Vigil Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "Join us for the Children’s Vigil Mass on Monday, December 7th at 7:00 PM in the Church"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-philip-neri-church-lafayette-hill",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-14",
+          "start_time": "09:00",
+          "end_time": "17:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Adoration of the Most Blessed Sacrament in the Church on Monday, December 14th from 9AM to 5PM"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "4be3cdd66cb3fa4e506b5fa11b7554b1caa72afc7af95e108985d44d44a24bc6",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s15"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-11-26 08:30 cancelled @st-philip-neri-church-lafayette-hill",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s16"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-11-26 09:00 @st-philip-neri-church-lafayette-hill",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      }
+    ]
+  }
+}
