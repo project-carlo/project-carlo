@@ -1,0 +1,596 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-george-glenolden",
+  "status": "ready",
+  "as_of": "2026-11-15T16:45:41Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T00:54:06Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. George, Glenolden). Both bulletins (Nov 8, Nov 15) print the same schedule box: Sat 4:30 PM vigil, Sun 8:00 and 10:30 AM, Mon-Fri 4:00 PM, Saturday confession 3:30-4:15 PM and a Friday 2:00 PM Holy Hour with Benediction. Thanksgiving: 9:00 AM Mass, no 4:00 PM Mass, and no Adoration Fri Nov 27. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "427db87775394fc65d92c5c26e005b2d8d854afdacfdaa8053b56ce000a610b5",
+      "fetched_at": "2026-11-15T16:45:41Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b0ec930b4b80c12b3697b162ee0fb883ce6f7b85a7da69afb24afed9d2fe796a",
+      "fetched_at": "2026-11-08T15:54:19Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-george-glenolden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 2,
+          "said": "Saturday Vigil: 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0ec930b",
+          "page": 2,
+          "said": "Saturday Vigil: 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 3,
+          "said": "Saturday, November 21, 4:30 PM: Jerry Dinan"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-george-glenolden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 2,
+          "said": "Sunday Masses: 8:00 AM | 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0ec930b",
+          "page": 2,
+          "said": "Sunday Masses: 8:00 AM | 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 3,
+          "said": "Sunday, November 22 8:00 AM: Pro Populo ~ 10:30 AM: Pamela Lewis"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-george-glenolden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 2,
+          "said": "Sunday Masses: 8:00 AM | 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0ec930b",
+          "page": 2,
+          "said": "Sunday Masses: 8:00 AM | 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 3,
+          "said": "Sunday, November 22 8:00 AM: Pro Populo ~ 10:30 AM: Pamela Lewis"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-george-glenolden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 2,
+          "said": "Weekly Masses (Mon-Fri): 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0ec930b",
+          "page": 2,
+          "said": "Weekly Masses (Mon-Fri): 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 3,
+          "said": "Monday, November 16, 4:00 PM ... Friday, November 20, 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; every weekday's intention is at 4:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-george-glenolden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 2,
+          "said": "Weekly Masses (Mon-Fri): 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0ec930b",
+          "page": 2,
+          "said": "Weekly Masses (Mon-Fri): 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 3,
+          "said": "Monday, November 16, 4:00 PM ... Friday, November 20, 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; every weekday's intention is at 4:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-george-glenolden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 2,
+          "said": "Weekly Masses (Mon-Fri): 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0ec930b",
+          "page": 2,
+          "said": "Weekly Masses (Mon-Fri): 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 3,
+          "said": "Monday, November 16, 4:00 PM ... Friday, November 20, 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; every weekday's intention is at 4:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-george-glenolden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 2,
+          "said": "Weekly Masses (Mon-Fri): 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0ec930b",
+          "page": 2,
+          "said": "Weekly Masses (Mon-Fri): 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 3,
+          "said": "Monday, November 16, 4:00 PM ... Friday, November 20, 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; every weekday's intention is at 4:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-george-glenolden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 2,
+          "said": "Weekly Masses (Mon-Fri): 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0ec930b",
+          "page": 2,
+          "said": "Weekly Masses (Mon-Fri): 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 3,
+          "said": "Monday, November 16, 4:00 PM ... Friday, November 20, 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; every weekday's intention is at 4:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-george-glenolden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 2,
+          "said": "Confessions: Saturday, 3:30 PM–4:15 PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0ec930b",
+          "page": 2,
+          "said": "Confessions: Saturday, 3:30 PM–4:15 PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 4,
+          "said": "Rite of Reconciliation 3:30 PM to 4:15 PM Saturday afternoons or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0ec930b",
+          "page": 4,
+          "said": "Rite of Reconciliation 3:30 PM to 4:15 PM Saturday afternoons or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and on p4 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 2,
+          "said": "or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-george-glenolden",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 2,
+          "said": "Holy Hour: Friday at 2:00 PM, Followed by Benediction & Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0ec930b",
+          "page": 2,
+          "said": "Holy Hour: Friday at 2:00 PM, Followed by Benediction & Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 5,
+          "said": "Adoration of the Blessed Sacrament is held every Friday afternoon, beginning at 2:00 PM in St. George Church, followed by Benediction and Mass at 4:00 PM."
+        }
+      ],
+      "rationale": "R1, POLICY (What to extract, Times): a weekly Holy Hour with Benediction in the church, starting 2:00 PM. No end time printed ('Holy Hour' is its name, and Benediction comes before the 4:00 PM Mass), so end left null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-george-glenolden",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Day after Thanksgiving"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 5,
+          "said": "Adoration will NOT be held the day after Thanksgiving, Friday, November, 27, but will resume the following Friday, December 4"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin cancels one date of the weekly Friday Adoration, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-george-glenolden",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 5,
+          "said": "Mass on Thanksgiving will be celebrated at 9:00 AM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 7,
+          "said": "our Thanksgiving Day Mass on Thursday, November 26 at 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass outside the weekly schedule (POLICY, Weekly or dated rule 7), after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-george-glenolden",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "427db877",
+          "page": 5,
+          "said": "There will not be at 4:00 PM Mass on Thanksgiving Day."
+        }
+      ],
+      "rationale": "R1, R16: the bulletin says the weekday 4:00 PM Mass will not take place on Thanksgiving, Thu Nov 26.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
