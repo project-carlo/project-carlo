@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-peace-milmont-park",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:43:44Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T00:38:21Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@d4594cfe4e0c",
+  "approved_at": "2026-11-27T02:01:19Z",
   "summary": "Two churches: Our Lady of Peace (Milmont Park) and the Notre Dame de Lourdes worship site (Swarthmore). The schedule box is identical in both issues (Nov 8, Nov 15) and matches olpparish.org/mass-times exactly; Tuesday Adoration 9:00 AM-6:30 PM per POLICY timing; a dated Youth Mass Dec 6, 6 PM. Open: whether Tue Nov 17's Mass moved to ND (intentions only; leaning no change).",
   "blocked_reason": null,
   "bulletins": [
@@ -580,9 +580,22 @@
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-milmont-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 3,
       "sources": [
         {
@@ -630,14 +643,31 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@d4594cfe4e0c",
+        "at": "2026-11-27T02:01:19Z"
+      },
       "group": "nov17"
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-de-lourdes-swarthmore",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 3,
       "sources": [
         {
@@ -673,7 +703,11 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@d4594cfe4e0c",
+        "at": "2026-11-27T02:01:19Z"
+      },
       "group": "nov17"
     },
     {

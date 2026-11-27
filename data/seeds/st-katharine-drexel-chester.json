@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-katharine-drexel-chester",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:46:03Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T01:08:03Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@d4594cfe4e0c",
+  "approved_at": "2026-11-27T02:01:32Z",
   "summary": "One church. Both November issues print the same schedule box: Tue-Fri 7:30 AM, Sat 4:00 PM, Sun 9:30 and 11:30 AM (bilingual) Masses; confessions Sat 3:30-3:50 and Sun before each Mass; Thursday Adoration after the 7:30 Mass to 9:00. Dated: Nov 22 10:00 AM Harvest Mass (no stated cancellation of 9:30/11:30, R17) and Thanksgiving 9:00 AM. Open: the Guadalupe Dec 11 7 PM flyer (leaning leave out per precedent).",
   "blocked_reason": null,
   "bulletins": [
@@ -604,9 +604,22 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-chester",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-11",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
       "page": 5,
       "sources": [
         {
@@ -642,7 +655,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@d4594cfe4e0c",
+        "at": "2026-11-27T02:01:32Z"
+      }
     },
     {
       "id": "s18",

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-francis-de-sales-lenni",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:45:17Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T00:46:00Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@d4594cfe4e0c",
+  "approved_at": "2026-11-27T02:01:23Z",
   "summary": "One church. Sat 5 PM, Sun 8 and 10:30 AM, Mon-Thu 8:30 AM Masses (no Friday Mass), Sat 4:00-4:45 PM Confession and Thu 9-10 AM Adoration agree in both bulletins (Nov 8, Nov 15) and the website. Open: whether the monthly 2nd-Friday 7:30 PM 'Praise on the Hill' evening counts as Adoration.",
   "blocked_reason": null,
   "bulletins": [
@@ -445,9 +445,24 @@
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lenni",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Praise on the Hill"
+      },
       "page": 4,
       "sources": [
         {
@@ -491,7 +506,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@d4594cfe4e0c",
+        "at": "2026-11-27T02:01:23Z"
+      }
     },
     {
       "id": "s12",
