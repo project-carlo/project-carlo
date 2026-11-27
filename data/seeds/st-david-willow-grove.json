@@ -1,0 +1,2026 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-david-willow-grove",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:58Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T20:52:24Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, two November issues read (Nov 15 text, Nov 8 image-only) with identical schedule boxes; the website matches them. Weekend Masses, Saturday 8 AM Mass and Saturday 8:30-9:30 AM confession (end from the website) are settled. Open: one grouped question whether to apply the website's summer schedule (June 8-Sept 7) to the weekday Mass and chapel Adoration.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ee93cd4118d57e2d074a7ec347316173adc6f75980e486b1ae58cb96bc1e5d0d",
+      "fetched_at": "2026-11-15T16:44:58Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "5e6e4be168de27c72d637fffd85a1b4ab21cedc3951e9149e2b4378279b88327",
+      "fetched_at": "2026-11-08T15:53:54Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "ee93cd4118d57e2d074a7ec347316173adc6f75980e486b1ae58cb96bc1e5d0d",
+      "bulletins": [
+        "ee93cd4118d57e2d074a7ec347316173adc6f75980e486b1ae58cb96bc1e5d0d",
+        "5e6e4be168de27c72d637fffd85a1b4ab21cedc3951e9149e2b4378279b88327"
+      ],
+      "cached": false,
+      "cost_usd": 0.001797,
+      "at": "2026-11-27T20:59:41.559007+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 1,
+          "said": "Mass Schedule Saturday Vigil: 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 1,
+          "said": "Mass Schedule Saturday Vigil: 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 3,
+          "said": "Saturday, November 14th 4:00 pm Intentions of the Presider"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee93cd4118d57e2d074a7ec347316173adc6f75980e486b1ae58cb96bc1e5d0d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil: 4:00 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 1,
+          "said": "Sunday: 7:00AM, 9:00AM & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 1,
+          "said": "Sunday: 7:00AM, 9:00AM & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 3,
+          "said": "Sunday, November 15th 7:00 am ... 9:00 am ... 11:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee93cd4118d57e2d074a7ec347316173adc6f75980e486b1ae58cb96bc1e5d0d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:00AM,9:00AM & 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 1,
+          "said": "Sunday: 7:00AM, 9:00AM & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 1,
+          "said": "Sunday: 7:00AM, 9:00AM & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 3,
+          "said": "Sunday, November 15th 7:00 am ... 9:00 am ... 11:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee93cd4118d57e2d074a7ec347316173adc6f75980e486b1ae58cb96bc1e5d0d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:00AM,9:00AM & 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 1,
+          "said": "Sunday: 7:00AM, 9:00AM & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 1,
+          "said": "Sunday: 7:00AM, 9:00AM & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 3,
+          "said": "Sunday, November 15th 7:00 am ... 9:00 am ... 11:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee93cd4118d57e2d074a7ec347316173adc6f75980e486b1ae58cb96bc1e5d0d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:00AM,9:00AM & 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 1,
+          "said": "Daily: ... 8:00AM Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 1,
+          "said": "Daily: ... 8:00AM Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 3,
+          "said": "Saturday, November 21st 8:00 am Living & Deceased members of the Messina and Grasso Family"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ee93cd4118d57e2d074a7ec347316173adc6f75980e486b1ae58cb96bc1e5d0d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “8:00AM Saturday”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both issues read and in both weeks' intentions; the website gives the same Saturday 8 AM with no summer change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 1,
+          "said": "Confessions: Every Saturday - 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 1,
+          "said": "Confessions: Every Saturday - 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/",
+          "said": "Confessions: Saturday (excluding Holy Saturday): 8:30 - 9:30 AM",
+          "schedule_check": {
+            "checked_at": "2026-11-27T20:57:33Z",
+            "current_because": "Homepage lists posts dated Nov 15 and Nov 22, 2026; its Mass, confession start and Adoration times match the Nov 15 bulletin box exactly.",
+            "bulletin": "ee93cd41",
+            "fits_because": "The bulletin prints the 8:30 AM start with no end; the site's 8:30-9:30 AM adds only the end time (R6)."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/mass-schedule/",
+          "said": "Standard Confession and Mass Schedule ... Saturdays from 8:30-9:30",
+          "schedule_check": {
+            "checked_at": "2026-11-27T20:57:33Z",
+            "current_because": "Homepage lists posts dated Nov 15 and Nov 22, 2026; its Mass, confession start and Adoration times match the Nov 15 bulletin box exactly.",
+            "bulletin": "ee93cd41",
+            "fits_because": "The bulletin prints the 8:30 AM start with no end; the site's 8:30-9:30 AM adds only the end time (R6)."
+          }
+        }
+      ],
+      "rationale": "R1, R6: both issues' p1 Sacraments box prints Saturday 8:30 AM (after the 8 AM Mass); the current website, which otherwise matches the bulletin, gives the end, 9:30 AM, which the bulletin lacks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 1,
+          "said": "Daily: 6:30AM Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 1,
+          "said": "Daily: 6:30AM Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 3,
+          "said": "Monday, November 16th ... 6:30 am (each weekday through Friday, November 20th)"
+        },
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/",
+          "said": "Weekday Mass (M-F): 6:30 AM / Summer Weekday Mass(M-F): ( June 8th-Sept. 7th ) 8:00 AM"
+        }
+      ],
+      "rationale": "Answer alike with group summer-added. R6, R29: the bulletin box (both issues) and intentions give Mon-Fri 6:30 AM with no season; the current homepage (posts of Nov 22, 2026; regular times match the bulletin exactly) adds a summer schedule. A November issue can't show a summer change, so it's a missing mention, not a conflict (R6). Leaning per precedent st-maria-goretti-hatfield s11 and st-genevieve-flourtown s15. Hard because June 8 and Sept 7 are this year's dates (the Monday after Labor Day is Sept 8), so the season approximates future years.",
+      "question": "Limit the weekday 6:30 AM Mass and 7 AM chapel Adoration to Sept 8-June 7, per the website's summer schedule?",
+      "options": [
+        {
+          "label": "Sept 8-June 7",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 8,
+              "end_month": 6,
+              "end_day": 7
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Year-round, as the bulletin prints",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null,
+      "group": "summer-regular"
+    },
+    {
+      "id": "s8",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 1,
+          "said": "Daily: 6:30AM Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 1,
+          "said": "Daily: 6:30AM Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 3,
+          "said": "Monday, November 16th ... 6:30 am (each weekday through Friday, November 20th)"
+        },
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/",
+          "said": "Weekday Mass (M-F): 6:30 AM / Summer Weekday Mass(M-F): ( June 8th-Sept. 7th ) 8:00 AM"
+        }
+      ],
+      "rationale": "Answer alike with group summer-added. R6, R29: the bulletin box (both issues) and intentions give Mon-Fri 6:30 AM with no season; the current homepage (posts of Nov 22, 2026; regular times match the bulletin exactly) adds a summer schedule. A November issue can't show a summer change, so it's a missing mention, not a conflict (R6). Leaning per precedent st-maria-goretti-hatfield s11 and st-genevieve-flourtown s15. Hard because June 8 and Sept 7 are this year's dates (the Monday after Labor Day is Sept 8), so the season approximates future years.",
+      "question": "Limit the weekday 6:30 AM Mass and 7 AM chapel Adoration to Sept 8-June 7, per the website's summer schedule?",
+      "options": [
+        {
+          "label": "Sept 8-June 7",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 8,
+              "end_month": 6,
+              "end_day": 7
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Year-round, as the bulletin prints",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null,
+      "group": "summer-regular"
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 1,
+          "said": "Daily: 6:30AM Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 1,
+          "said": "Daily: 6:30AM Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 3,
+          "said": "Monday, November 16th ... 6:30 am (each weekday through Friday, November 20th)"
+        },
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/",
+          "said": "Weekday Mass (M-F): 6:30 AM / Summer Weekday Mass(M-F): ( June 8th-Sept. 7th ) 8:00 AM"
+        }
+      ],
+      "rationale": "Answer alike with group summer-added. R6, R29: the bulletin box (both issues) and intentions give Mon-Fri 6:30 AM with no season; the current homepage (posts of Nov 22, 2026; regular times match the bulletin exactly) adds a summer schedule. A November issue can't show a summer change, so it's a missing mention, not a conflict (R6). Leaning per precedent st-maria-goretti-hatfield s11 and st-genevieve-flourtown s15. Hard because June 8 and Sept 7 are this year's dates (the Monday after Labor Day is Sept 8), so the season approximates future years.",
+      "question": "Limit the weekday 6:30 AM Mass and 7 AM chapel Adoration to Sept 8-June 7, per the website's summer schedule?",
+      "options": [
+        {
+          "label": "Sept 8-June 7",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 8,
+              "end_month": 6,
+              "end_day": 7
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Year-round, as the bulletin prints",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null,
+      "group": "summer-regular"
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 1,
+          "said": "Daily: 6:30AM Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 1,
+          "said": "Daily: 6:30AM Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 3,
+          "said": "Monday, November 16th ... 6:30 am (each weekday through Friday, November 20th)"
+        },
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/",
+          "said": "Weekday Mass (M-F): 6:30 AM / Summer Weekday Mass(M-F): ( June 8th-Sept. 7th ) 8:00 AM"
+        }
+      ],
+      "rationale": "Answer alike with group summer-added. R6, R29: the bulletin box (both issues) and intentions give Mon-Fri 6:30 AM with no season; the current homepage (posts of Nov 22, 2026; regular times match the bulletin exactly) adds a summer schedule. A November issue can't show a summer change, so it's a missing mention, not a conflict (R6). Leaning per precedent st-maria-goretti-hatfield s11 and st-genevieve-flourtown s15. Hard because June 8 and Sept 7 are this year's dates (the Monday after Labor Day is Sept 8), so the season approximates future years.",
+      "question": "Limit the weekday 6:30 AM Mass and 7 AM chapel Adoration to Sept 8-June 7, per the website's summer schedule?",
+      "options": [
+        {
+          "label": "Sept 8-June 7",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 8,
+              "end_month": 6,
+              "end_day": 7
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Year-round, as the bulletin prints",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null,
+      "group": "summer-regular"
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 1,
+          "said": "Daily: 6:30AM Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 1,
+          "said": "Daily: 6:30AM Monday - Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 3,
+          "said": "Monday, November 16th ... 6:30 am (each weekday through Friday, November 20th)"
+        },
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/",
+          "said": "Weekday Mass (M-F): 6:30 AM / Summer Weekday Mass(M-F): ( June 8th-Sept. 7th ) 8:00 AM"
+        }
+      ],
+      "rationale": "Answer alike with group summer-added. R6, R29: the bulletin box (both issues) and intentions give Mon-Fri 6:30 AM with no season; the current homepage (posts of Nov 22, 2026; regular times match the bulletin exactly) adds a summer schedule. A November issue can't show a summer change, so it's a missing mention, not a conflict (R6). Leaning per precedent st-maria-goretti-hatfield s11 and st-genevieve-flourtown s15. Hard because June 8 and Sept 7 are this year's dates (the Monday after Labor Day is Sept 8), so the season approximates future years.",
+      "question": "Limit the weekday 6:30 AM Mass and 7 AM chapel Adoration to Sept 8-June 7, per the website's summer schedule?",
+      "options": [
+        {
+          "label": "Sept 8-June 7",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 8,
+              "end_month": 6,
+              "end_day": 7
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Year-round, as the bulletin prints",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null,
+      "group": "summer-regular"
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/",
+          "said": "Summer Weekday Mass(M-F): ( June 8th-Sept. 7th ) 8:00 AM"
+        }
+      ],
+      "rationale": "Answer alike with group summer-regular. R6, R29: website-only summer weekday Mass; see the group's 6:30 AM slots. Leaning per precedent st-maria-goretti-hatfield s11; the November bulletins can't show a summer schedule.",
+      "question": "Add the website's summer weekday schedule (June 8-Sept 7: Mass 8:00 AM, Adoration from 8:30 AM)?",
+      "options": [
+        {
+          "label": "Add, June 8-Sept 7",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 6,
+              "start_day": 8,
+              "end_month": 9,
+              "end_day": 7
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (year-round schedule)",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "summer-added"
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/",
+          "said": "Summer Weekday Mass(M-F): ( June 8th-Sept. 7th ) 8:00 AM"
+        }
+      ],
+      "rationale": "Answer alike with group summer-regular. R6, R29: website-only summer weekday Mass; see the group's 6:30 AM slots. Leaning per precedent st-maria-goretti-hatfield s11; the November bulletins can't show a summer schedule.",
+      "question": "Add the website's summer weekday schedule (June 8-Sept 7: Mass 8:00 AM, Adoration from 8:30 AM)?",
+      "options": [
+        {
+          "label": "Add, June 8-Sept 7",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 6,
+              "start_day": 8,
+              "end_month": 9,
+              "end_day": 7
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (year-round schedule)",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "summer-added"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/",
+          "said": "Summer Weekday Mass(M-F): ( June 8th-Sept. 7th ) 8:00 AM"
+        }
+      ],
+      "rationale": "Answer alike with group summer-regular. R6, R29: website-only summer weekday Mass; see the group's 6:30 AM slots. Leaning per precedent st-maria-goretti-hatfield s11; the November bulletins can't show a summer schedule.",
+      "question": "Add the website's summer weekday schedule (June 8-Sept 7: Mass 8:00 AM, Adoration from 8:30 AM)?",
+      "options": [
+        {
+          "label": "Add, June 8-Sept 7",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 6,
+              "start_day": 8,
+              "end_month": 9,
+              "end_day": 7
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (year-round schedule)",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "summer-added"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/",
+          "said": "Summer Weekday Mass(M-F): ( June 8th-Sept. 7th ) 8:00 AM"
+        }
+      ],
+      "rationale": "Answer alike with group summer-regular. R6, R29: website-only summer weekday Mass; see the group's 6:30 AM slots. Leaning per precedent st-maria-goretti-hatfield s11; the November bulletins can't show a summer schedule.",
+      "question": "Add the website's summer weekday schedule (June 8-Sept 7: Mass 8:00 AM, Adoration from 8:30 AM)?",
+      "options": [
+        {
+          "label": "Add, June 8-Sept 7",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 6,
+              "start_day": 8,
+              "end_month": 9,
+              "end_day": 7
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (year-round schedule)",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "summer-added"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/",
+          "said": "Summer Weekday Mass(M-F): ( June 8th-Sept. 7th ) 8:00 AM"
+        }
+      ],
+      "rationale": "Answer alike with group summer-regular. R6, R29: website-only summer weekday Mass; see the group's 6:30 AM slots. Leaning per precedent st-maria-goretti-hatfield s11; the November bulletins can't show a summer schedule.",
+      "question": "Add the website's summer weekday schedule (June 8-Sept 7: Mass 8:00 AM, Adoration from 8:30 AM)?",
+      "options": [
+        {
+          "label": "Add, June 8-Sept 7",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 6,
+              "start_day": 8,
+              "end_month": 9,
+              "end_day": 7
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (year-round schedule)",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "summer-added"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 1,
+          "said": "Adoration: Monday & Wednesday 7 AM - 7 PM, Friday 7 AM - 5 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 1,
+          "said": "Adoration: Monday & Wednesday 7 AM - 7 PM, Friday 7 AM - 5 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 3,
+          "said": "Our Adoration Chapel is open: Monday & Wednesday: 7 AM - 7 PM Friday: 7 AM - 5 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 3,
+          "said": "Our Adoration Chapel is open: Monday & Wednesday: 7 AM - 7 PM Friday: 7 AM - 5 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/eucharistic-adoration/",
+          "said": "The Blessed Sacrament is exposed in the Church from 7 AM to 7 PM from Monday and Wednesday and on Friday from 7 AM to 5 PM each and every week."
+        },
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/",
+          "said": "Adoration of the Blessed Sacrament is available in the Chapel after the daily Mass ... Summer Eucharistic Adoration: Monday & Wednesday 8:30AM-7PM and Friday 8:30AM-5PM"
+        }
+      ],
+      "rationale": "Answer alike with group summer-added. R38, R6: both issues print the chapel hours; the website places Adoration 'in the Church'/'in the Chapel' at St. David (one church), with the Sacrament exposed, so the location is settled. The only open point is the website's summer start (8:30 AM, after the summer 8 AM Mass), decided with the group. Leaning per precedent st-maria-goretti-hatfield s11.",
+      "question": "Limit the weekday 6:30 AM Mass and 7 AM chapel Adoration to Sept 8-June 7, per the website's summer schedule?",
+      "options": [
+        {
+          "label": "Sept 8-June 7",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 8,
+              "end_month": 6,
+              "end_day": 7
+            },
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Year-round, as the bulletin prints",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "summer-regular"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 1,
+          "said": "Adoration: Monday & Wednesday 7 AM - 7 PM, Friday 7 AM - 5 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 1,
+          "said": "Adoration: Monday & Wednesday 7 AM - 7 PM, Friday 7 AM - 5 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 3,
+          "said": "Our Adoration Chapel is open: Monday & Wednesday: 7 AM - 7 PM Friday: 7 AM - 5 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 3,
+          "said": "Our Adoration Chapel is open: Monday & Wednesday: 7 AM - 7 PM Friday: 7 AM - 5 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/eucharistic-adoration/",
+          "said": "The Blessed Sacrament is exposed in the Church from 7 AM to 7 PM from Monday and Wednesday and on Friday from 7 AM to 5 PM each and every week."
+        },
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/",
+          "said": "Adoration of the Blessed Sacrament is available in the Chapel after the daily Mass ... Summer Eucharistic Adoration: Monday & Wednesday 8:30AM-7PM and Friday 8:30AM-5PM"
+        }
+      ],
+      "rationale": "Answer alike with group summer-added. R38, R6: both issues print the chapel hours; the website places Adoration 'in the Church'/'in the Chapel' at St. David (one church), with the Sacrament exposed, so the location is settled. The only open point is the website's summer start (8:30 AM, after the summer 8 AM Mass), decided with the group. Leaning per precedent st-maria-goretti-hatfield s11.",
+      "question": "Limit the weekday 6:30 AM Mass and 7 AM chapel Adoration to Sept 8-June 7, per the website's summer schedule?",
+      "options": [
+        {
+          "label": "Sept 8-June 7",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 8,
+              "end_month": 6,
+              "end_day": 7
+            },
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Year-round, as the bulletin prints",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "summer-regular"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 1,
+          "said": "Adoration: ... Friday 7 AM - 5 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 1,
+          "said": "Adoration: ... Friday 7 AM - 5 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/eucharistic-adoration/",
+          "said": "on Friday from 7 AM to 5 PM each and every week"
+        }
+      ],
+      "rationale": "Answer alike with group summer-added. R38, R6: as the Monday/Wednesday slots; Friday ends 5 PM. Leaning per precedent st-maria-goretti-hatfield s11.",
+      "question": "Limit the weekday 6:30 AM Mass and 7 AM chapel Adoration to Sept 8-June 7, per the website's summer schedule?",
+      "options": [
+        {
+          "label": "Sept 8-June 7",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 8,
+              "end_month": 6,
+              "end_day": 7
+            },
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Year-round, as the bulletin prints",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "summer-regular"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/",
+          "said": "Summer Eucharistic Adoration: Monday & Wednesday 8:30AM-7PM and Friday 8:30AM-5PM"
+        }
+      ],
+      "rationale": "Answer alike with group summer-regular. R6, R29: website-only summer Adoration hours; see the group. Leaning per precedent st-maria-goretti-hatfield s11.",
+      "question": "Add the website's summer weekday schedule (June 8-Sept 7: Mass 8:00 AM, Adoration from 8:30 AM)?",
+      "options": [
+        {
+          "label": "Add, June 8-Sept 7",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 6,
+              "start_day": 8,
+              "end_month": 9,
+              "end_day": 7
+            },
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (year-round schedule)",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "summer-added"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/",
+          "said": "Summer Eucharistic Adoration: Monday & Wednesday 8:30AM-7PM and Friday 8:30AM-5PM"
+        }
+      ],
+      "rationale": "Answer alike with group summer-regular. R6, R29: website-only summer Adoration hours; see the group. Leaning per precedent st-maria-goretti-hatfield s11.",
+      "question": "Add the website's summer weekday schedule (June 8-Sept 7: Mass 8:00 AM, Adoration from 8:30 AM)?",
+      "options": [
+        {
+          "label": "Add, June 8-Sept 7",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 6,
+              "start_day": 8,
+              "end_month": 9,
+              "end_day": 7
+            },
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (year-round schedule)",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "summer-added"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stdavidparish.org/",
+          "said": "Summer Eucharistic Adoration: ... Friday 8:30AM-5PM"
+        }
+      ],
+      "rationale": "Answer alike with group summer-regular. R6, R29: website-only summer Adoration hours; see the group. Leaning per precedent st-maria-goretti-hatfield s11.",
+      "question": "Add the website's summer weekday schedule (June 8-Sept 7: Mass 8:00 AM, Adoration from 8:30 AM)?",
+      "options": [
+        {
+          "label": "Add, June 8-Sept 7",
+          "entry": {
+            "church_slug": "st-david-willow-grove",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 6,
+              "start_day": 8,
+              "end_month": 9,
+              "end_day": 7
+            },
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (year-round schedule)",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "summer-added"
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-david-willow-grove",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-11",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Veterans Day Military Appreciation Mass (QOA)"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 4,
+          "said": "Veterans Day Military Appreciation Mass and Reception on Wednesday, November 11th at 9 AM at St. David Church! All are welcome!"
+        }
+      ],
+      "rationale": "R16: a dated Mass before as_of (Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 1,
+          "said": "Holy Days: Check bulletin for times or call the rectory"
+        }
+      ],
+      "rationale": "R26: no holy-day times are printed; no issue read prints Dec 8 or Christmas times, and the website's Thanksgiving schedule post could not be found.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee93cd41",
+          "page": 3,
+          "said": "Every Tues. Thurs. & Sat. - Rosary after the Daily Mass Every Wednesday 3 PM - Divine Mercy Chaplet in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5e6e4be1",
+          "page": 3,
+          "said": "Every Tues. Thurs. & Sat. - Rosary after the Daily Mass Every Wednesday 3 PM - Divine Mercy Chaplet in the chapel"
+        }
+      ],
+      "rationale": "R24: a Rosary and the Divine Mercy Chaplet are devotions POLICY leaves out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "f2cc2b39ccf443984e37e959f5a358e7",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T20:59:41.559007+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "ee93cd4118d57e2d074a7ec347316173adc6f75980e486b1ae58cb96bc1e5d0d",
+        "fetched_at": "2026-11-15T16:44:58Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "5e6e4be168de27c72d637fffd85a1b4ab21cedc3951e9149e2b4378279b88327",
+        "fetched_at": "2026-11-08T15:53:54Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.001797,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-david-willow-grove",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil: 4:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil: 4:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-david-willow-grove",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:00AM,9:00AM & 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:00 AM, 9:00 AM & 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-david-willow-grove",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:00AM,9:00AM & 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:00 AM, 9:00 AM & 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-david-willow-grove",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:00AM,9:00AM & 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:00 AM, 9:00 AM & 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-david-willow-grove",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: 6:30AM Monday – Friday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: 6:30 AM Monday – Friday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-david-willow-grove",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: 6:30AM Monday – Friday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: 6:30 AM Monday – Friday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-david-willow-grove",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: 6:30AM Monday – Friday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: 6:30 AM Monday – Friday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-david-willow-grove",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: 6:30AM Monday – Friday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: 6:30 AM Monday – Friday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-david-willow-grove",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: 6:30AM Monday – Friday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: 6:30 AM Monday – Friday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-david-willow-grove",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "8:00AM Saturday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "8:00 AM Saturday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-david-willow-grove",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Confessions: Every Saturday – 8:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Confessions: Every Saturday – 8:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-david-willow-grove",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Our Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Our Adoration Chapel is open: Monday & Wednesday: 7 AM – 7 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Our Adoration Chapel is open: Monday & Wednesday: 7 AM – 7 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-david-willow-grove",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Our Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Our Adoration Chapel is open: Monday & Wednesday: 7 AM – 7 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Our Adoration Chapel is open: Monday & Wednesday: 7 AM – 7 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-david-willow-grove",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": "17:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Our Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Friday: 7 AM – 5 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Friday: 7 AM – 5 PM"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "f5beca17844e5ace10d1723f1405e6b5e4fcdd7935839d6ba5971d0dc3951085",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o5",
+          "o6",
+          "o7",
+          "o8",
+          "o9"
+        ],
+        "slots": [
+          "s7",
+          "s8",
+          "s9",
+          "s10",
+          "s11"
+        ],
+        "opinion_said": "mass Mon,Tue,Wed,Thu,Fri 06:30 @st-david-willow-grove",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o12",
+          "o13"
+        ],
+        "slots": [
+          "s17",
+          "s18"
+        ],
+        "opinion_said": "adoration Mon,Wed 07:00-19:00 @st-david-willow-grove",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      },
+      {
+        "id": "d3",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o14"
+        ],
+        "slots": [
+          "s19"
+        ],
+        "opinion_said": "adoration Fri 07:00-17:00 @st-david-willow-grove",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      },
+      {
+        "id": "d4",
+        "kind": "differs",
+        "fields": [
+          "end time"
+        ],
+        "opinion": [
+          "o11"
+        ],
+        "slots": [
+          "s6"
+        ],
+        "opinion_said": "confession Sat 08:30 @st-david-willow-grove",
+        "seed_said": "confession Sat 08:30-09:30 @st-david-willow-grove",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      }
+    ]
+  }
+}
