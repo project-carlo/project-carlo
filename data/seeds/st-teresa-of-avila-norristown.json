@@ -1,0 +1,1145 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-teresa-of-avila-norristown",
+  "status": "ready",
+  "as_of": "2026-11-15T16:47:03Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T15:18:47Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both November issues (Nov 8, Nov 15) print the same schedule box: Sat 4:15 PM, Sun 9 and 11 AM, Mon 10 AM, Tue/Wed/Fri 7 AM, confessions Fri 7:45-8:15 AM and Sat 3:00-3:30 PM, Adoration Tue 10 AM-3 PM; the intentions match. Plus the Thanksgiving 8 AM Mass. The Shannondell retirement-community Masses and communion services are left out as off site. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c77d828407a66337b00ac5d5bfb28787b173066c39815c24ab7a6664761644d1",
+      "fetched_at": "2026-11-15T16:47:03Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "5f8e1eced93d8c095fc864912e55de026c79e1148c0347101b67aa1560389d24",
+      "fetched_at": "2026-11-08T15:55:27Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "c77d828407a66337b00ac5d5bfb28787b173066c39815c24ab7a6664761644d1",
+      "bulletins": [
+        "c77d828407a66337b00ac5d5bfb28787b173066c39815c24ab7a6664761644d1",
+        "5f8e1eced93d8c095fc864912e55de026c79e1148c0347101b67aa1560389d24"
+      ],
+      "cached": false,
+      "cost_usd": 0.001416,
+      "at": "2026-11-27T15:23:10.493613+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 1,
+          "said": "Mass Schedule Saturday: 4:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 1,
+          "said": "Mass Schedule Saturday: 4:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 3,
+          "said": "Saturday ... 4:15PM (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 3,
+          "said": "Saturday ... 4:15PM (intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "c77d828407a66337b00ac5d5bfb28787b173066c39815c24ab7a6664761644d1",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday: 4:15pm”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 1,
+          "said": "Sunday: 9:00am and 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 1,
+          "said": "Sunday: 9:00am and 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 3,
+          "said": "Sunday ... 9:00 AM ... 11:00 AM (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 3,
+          "said": "Sunday ... 9:00 AM ... 11:00 AM (intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "c77d828407a66337b00ac5d5bfb28787b173066c39815c24ab7a6664761644d1",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 9:00am and 11am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 1,
+          "said": "Sunday: 9:00am and 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 1,
+          "said": "Sunday: 9:00am and 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 3,
+          "said": "Sunday ... 9:00 AM ... 11:00 AM (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 3,
+          "said": "Sunday ... 9:00 AM ... 11:00 AM (intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "c77d828407a66337b00ac5d5bfb28787b173066c39815c24ab7a6664761644d1",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 9:00am and 11am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 1,
+          "said": "Daily Mass: Monday @ 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 1,
+          "said": "Daily Mass: Monday @ 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 3,
+          "said": "Monday ... 10:00 AM (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 3,
+          "said": "Monday ... 10:00 AM (intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "c77d828407a66337b00ac5d5bfb28787b173066c39815c24ab7a6664761644d1",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily Mass: Monday @ 10:00am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 1,
+          "said": "Tuesday, Wednesday, Friday @ 7:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 1,
+          "said": "Tuesday, Wednesday, Friday @ 7:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 3,
+          "said": "Tuesday/Wednesday/Friday ... 7:00 AM (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 3,
+          "said": "Tuesday/Wednesday/Friday ... 7:00 AM (intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "c77d828407a66337b00ac5d5bfb28787b173066c39815c24ab7a6664761644d1",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday, Wednesday, Friday @ 7:00am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in both weeks' intentions; no Thursday or Saturday morning Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 1,
+          "said": "Tuesday, Wednesday, Friday @ 7:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 1,
+          "said": "Tuesday, Wednesday, Friday @ 7:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 3,
+          "said": "Tuesday/Wednesday/Friday ... 7:00 AM (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 3,
+          "said": "Tuesday/Wednesday/Friday ... 7:00 AM (intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "c77d828407a66337b00ac5d5bfb28787b173066c39815c24ab7a6664761644d1",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday, Wednesday, Friday @ 7:00am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in both weeks' intentions; no Thursday or Saturday morning Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 1,
+          "said": "Tuesday, Wednesday, Friday @ 7:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 1,
+          "said": "Tuesday, Wednesday, Friday @ 7:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 3,
+          "said": "Tuesday/Wednesday/Friday ... 7:00 AM (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 3,
+          "said": "Tuesday/Wednesday/Friday ... 7:00 AM (intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "c77d828407a66337b00ac5d5bfb28787b173066c39815c24ab7a6664761644d1",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday, Wednesday, Friday @ 7:00am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read and in both weeks' intentions; no Thursday or Saturday morning Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-church-norristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": "08:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Reconciliation Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 1,
+          "said": "Confessions: Friday 7:45am-8:15am Saturday 3:00pm-3:30pm in the Reconciliation Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 1,
+          "said": "Confessions: Friday 7:45am-8:15am Saturday 3:00pm-3:30pm in the Reconciliation Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "c77d828407a66337b00ac5d5bfb28787b173066c39815c24ab7a6664761644d1",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Confessions: Friday 7:45am-8:15am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read. The chapel line follows both times in the one Confessions entry, so the note goes on both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-church-norristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Reconciliation Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 1,
+          "said": "Confessions: Friday 7:45am-8:15am Saturday 3:00pm-3:30pm in the Reconciliation Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 1,
+          "said": "Confessions: Friday 7:45am-8:15am Saturday 3:00pm-3:30pm in the Reconciliation Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "c77d828407a66337b00ac5d5bfb28787b173066c39815c24ab7a6664761644d1",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday 3:00pm-3:30pm in the Reconciliation Chapel”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-church-norristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 1,
+          "said": "Eucharistic Adoration: Tuesdays 10am-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 1,
+          "said": "Eucharistic Adoration: Tuesdays 10am-3pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "c77d828407a66337b00ac5d5bfb28787b173066c39815c24ab7a6664761644d1",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Eucharistic Adoration: Tuesdays 10am-3pm”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read. No exposition wording beyond 'Eucharistic Adoration'; times as printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-church-norristown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 2,
+          "said": "Please join us for Mass on Thanksgiving Day at 8:00am as we gather to give thanks to God"
+        },
+        {
+          "source": "c1",
+          "bulletin": "c77d828407a66337b00ac5d5bfb28787b173066c39815c24ab7a6664761644d1",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Please join us for Mass on Thanksgiving Day at 8:00am as we gather to give thanks to God for His many blessings.”"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 7: a holiday Mass on Thursday Nov 26, outside the weekly schedule (no Thursday Mass), on or after as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-church-norristown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Shannondell retirement community, Ashcroft Bldg."
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 3,
+          "said": "St. Teresa of Avila Parish at Shannondell ... Monthly Mass: Tuesday, December 8, 2026 10:00am - Ashcroft Bldg."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8e1ece",
+          "page": 3,
+          "said": "Monthly Mass: Tuesday, November 10, 2026 10:00am - Ashcroft Bldg."
+        }
+      ],
+      "rationale": "R22/R23: the parish's monthly Mass at the Shannondell retirement community (Ashcroft Building) is at another address, not on the church list, and reads as a residents' Mass (POLICY). Its days (Nov 10, Dec 8) are dated, not a named week. Listed once in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 3,
+          "said": "Liturgy of the Word with Communion: Sunday, November 22, 2026 10:30am Ashcroft Bldg.; Weekly Communion Service: Inn-Wednesday ... 1st Floor 1:30pm; Meadows-Monday ... 1st Floor 1:45pm"
+        }
+      ],
+      "rationale": "POLICY: Communion services are not Mass, and they are at Shannondell, off site (R22).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 1,
+          "said": "Church open for Private Prayer: Monday through Friday 9:00am-3:00pm"
+        }
+      ],
+      "rationale": "R38: the church being open for private prayer is not an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 1,
+          "said": "Holy Days and Holidays as announced"
+        }
+      ],
+      "rationale": "R26: no time; the Dec 8 holy-day times are not yet announced in the issues read. Update mode will read them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 2,
+          "said": "Sacrament of Anointing of the Sick Sunday, November 22nd following the 11 o'clock AM Mass"
+        }
+      ],
+      "rationale": "R24: Anointing of the Sick is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c77d8284",
+          "page": 4,
+          "said": "Advent Reflection on the Holy Family, Monday, November 30th at 6:30 P.M. in the church"
+        }
+      ],
+      "rationale": "R24: an evening of reflection with a speaker; nothing calls it Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Shannondell retirement community (Ashcroft Building)",
+      "said": "Monthly Mass: Tuesday, December 8, 2026 10:00am - Ashcroft Bldg.",
+      "bulletin": "c77d8284",
+      "page": 3
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "1602d7a97ba98d3873433e581b743c44",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T15:23:10.493613+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "c77d828407a66337b00ac5d5bfb28787b173066c39815c24ab7a6664761644d1",
+        "fetched_at": "2026-11-15T16:47:03Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "5f8e1eced93d8c095fc864912e55de026c79e1148c0347101b67aa1560389d24",
+        "fetched_at": "2026-11-08T15:55:27Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.001416,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-teresa-of-avila-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday: 4:15pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday: 4:15pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-teresa-of-avila-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 9:00am and 11am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 9:00am and 11am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-teresa-of-avila-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 9:00am and 11am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 9:00am and 11am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-teresa-of-avila-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Mass: Monday @ 10:00am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Mass: Monday @ 10:00am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-teresa-of-avila-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday, Wednesday, Friday @ 7:00am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday, Wednesday, Friday @ 7:00am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-teresa-of-avila-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday, Wednesday, Friday @ 7:00am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday, Wednesday, Friday @ 7:00am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-teresa-of-avila-church-norristown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday, Wednesday, Friday @ 7:00am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday, Wednesday, Friday @ 7:00am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-teresa-of-avila-church-norristown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "07:45",
+          "end_time": "08:15",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Reconciliation Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Confessions: Friday 7:45am-8:15am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Confessions: Friday 7:45am-8:15am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-teresa-of-avila-church-norristown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:00",
+          "end_time": "15:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Reconciliation Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday 3:00pm-3:30pm in the Reconciliation Chapel"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday 3:00pm-3:30pm in the Reconciliation Chapel"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-teresa-of-avila-church-norristown",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": "15:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Tuesdays 10am-3pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Tuesdays 10am-3pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-teresa-of-avila-church-norristown",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Thanksgiving Day",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Please join us for Mass on Thanksgiving Day at 8:00am as we gather to give thanks to God for His many blessings."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "1a344ff46a9e24cdd8aac1ce90dceddbe844bdcb4c0e458389e8ffc60498fae8",
+    "differences": []
+  }
+}
