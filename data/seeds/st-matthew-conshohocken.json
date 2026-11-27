@@ -1,0 +1,923 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-matthew-conshohocken",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:29Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T04:43:46Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The schedule box (p9) and intentions agree in both November issues: Sat 4:30 PM Vigil and 3:30-4:15 PM Confession, Sun 7:30/9:30/11:30, Mon-Fri 8:15. Dated: Thanksgiving 9 AM, Dec 14 Advent Confessions 7 PM, and this year's Christmas/New Year Masses. Open: whether Thanksgiving's 9 AM cancels the 8:15.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "78b6e237e83a6a95ae5d0ed042526ef2d9b729add0960d7a256baa9884c8c482",
+      "fetched_at": "2026-11-15T16:46:29Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2f99cdf109a2c0e68e0cd158be1b8bf5486563b69212634c339508ac0ca2b9d7",
+      "fetched_at": "2026-11-08T15:55:04Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 9,
+          "said": "Vigil Saturday: 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 9,
+          "said": "Vigil Saturday: 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 2,
+          "said": "Saturday, November 14 4:30PM ... Saturday, November 21 4:30PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box (p9) of both issues and in both weeks' intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 9,
+          "said": "Saturday Confession: 3:30 - 4:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 9,
+          "said": "Saturday Confession: 3:30 - 4:15PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 9,
+          "said": "Sunday: 7:30 - 9:30 - 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 9,
+          "said": "Sunday: 7:30 - 9:30 - 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 2,
+          "said": "Sunday, November 15 7:30AM 9:30AM 11:30AM ... Sunday, November 22 7:30AM 9:30AM 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 9,
+          "said": "Sunday: 7:30 - 9:30 - 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 9,
+          "said": "Sunday: 7:30 - 9:30 - 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 2,
+          "said": "Sunday, November 15 7:30AM 9:30AM 11:30AM ... Sunday, November 22 7:30AM 9:30AM 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 9,
+          "said": "Sunday: 7:30 - 9:30 - 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 9,
+          "said": "Sunday: 7:30 - 9:30 - 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 2,
+          "said": "Sunday, November 15 7:30AM 9:30AM 11:30AM ... Sunday, November 22 7:30AM 9:30AM 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 9,
+          "said": "Daily Mass: Monday - Friday 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 9,
+          "said": "Daily Mass: Monday - Friday 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 2,
+          "said": "Monday, November 16 8:15AM ... Friday, November 20 8:15AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every weekday of both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 9,
+          "said": "Daily Mass: Monday - Friday 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 9,
+          "said": "Daily Mass: Monday - Friday 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 2,
+          "said": "Monday, November 16 8:15AM ... Friday, November 20 8:15AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every weekday of both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 9,
+          "said": "Daily Mass: Monday - Friday 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 9,
+          "said": "Daily Mass: Monday - Friday 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 2,
+          "said": "Monday, November 16 8:15AM ... Friday, November 20 8:15AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every weekday of both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 9,
+          "said": "Daily Mass: Monday - Friday 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 9,
+          "said": "Daily Mass: Monday - Friday 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 2,
+          "said": "Monday, November 16 8:15AM ... Friday, November 20 8:15AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every weekday of both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 9,
+          "said": "Daily Mass: Monday - Friday 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 9,
+          "said": "Daily Mass: Monday - Friday 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 2,
+          "said": "Monday, November 16 8:15AM ... Friday, November 20 8:15AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and every weekday of both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 6,
+          "said": "The Thanksgiving Day Mass is at 9 AM on Thursday, November 26"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 6,
+          "said": "The Thanksgiving Day Mass is at 9 AM on Thursday, November 26"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass outside the weekly schedule, printed in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 6,
+          "said": "The Thanksgiving Day Mass is at 9 AM on Thursday, November 26"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 6,
+          "said": "The Thanksgiving Day Mass is at 9 AM on Thursday, November 26"
+        }
+      ],
+      "rationale": "R17 records a cancellation only when stated. The flyer names 'The Thanksgiving Day Mass' (one Mass) at 9 AM, which reads as replacing the 8:15 but never says 'cancelled' or 'only'. Leaning per precedent our-mother-of-good-counsel-bryn-mawr s21 ('One Mass' wording recorded as cancelling the other weekday Masses); a wrong 8:15 time on the site is worse than a missing one (POLICY).",
+      "question": "Record the Thursday Nov 26 8:15 AM Mass as cancelled, since 'The Thanksgiving Day Mass is at 9 AM'?",
+      "options": [
+        {
+          "label": "Cancel Nov 26 8:15 AM",
+          "entry": {
+            "church_slug": "st-matthew-conshohocken",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "08:15",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving: one Mass at 9 AM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave the weekly slot alone",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-14",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Confessions"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 6,
+          "said": "Monday, December 14 Advent Confessions - 7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 6,
+          "said": "Monday, December 14 Advent Confessions - 7PM"
+        }
+      ],
+      "rationale": "R1, R16: dated in this year's Christmas & New Year's schedule (weekdays match 2026) in both issues; no end printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 6,
+          "said": "Thursday, December 24 4:30 PM - Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 6,
+          "said": "Thursday, December 24 4:30 PM - Church"
+        }
+      ],
+      "rationale": "R1, R16: this year's Christmas schedule (Thursday, December 24 matches 2026), in both issues; the choir flyer (p6) also names the '4:30 Christmas Eve Mass'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:40",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve, in the Hall (overflow)"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 6,
+          "said": "Thursday, December 24 ... 4:40 PM - Hall (overflow)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 6,
+          "said": "Thursday, December 24 ... 4:40 PM - Hall (overflow)"
+        }
+      ],
+      "rationale": "R1, R16, POLICY Churches and chapels: a separate overflow Mass in the parish hall, a room of the church's own grounds (the parish has one church).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "00:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Midnight Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 6,
+          "said": "Thursday, December 24 ... 12 Midnight"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 6,
+          "said": "Thursday, December 24 ... 12 Midnight"
+        }
+      ],
+      "rationale": "R1, R16: the Christmas Eve 'Midnight' Mass, recorded at 12:00 AM on Dec 25 as other seeds record it (e.g. st-gabriel-norwood).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 6,
+          "said": "Friday, December 25 7:30 AM 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 6,
+          "said": "Friday, December 25 7:30 AM 10:30 AM"
+        }
+      ],
+      "rationale": "R1, R16: this year's Christmas schedule in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 6,
+          "said": "Friday, December 25 7:30 AM 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 6,
+          "said": "Friday, December 25 7:30 AM 10:30 AM"
+        }
+      ],
+      "rationale": "R1, R16: this year's Christmas schedule in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Eve"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 6,
+          "said": "Thursday, December 31 New Year's Eve - 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 6,
+          "said": "Thursday, December 31 New Year's Eve - 4:30 PM"
+        }
+      ],
+      "rationale": "R1, R16: this year's New Year's schedule in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Day"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 6,
+          "said": "Friday, January 1 New Year's Day - 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f99cdf1",
+          "page": 6,
+          "said": "Friday, January 1 New Year's Day - 10:30 AM"
+        }
+      ],
+      "rationale": "R1, R16: this year's New Year's schedule in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-conshohocken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Young adults Friendsgiving with The Mix Mainline"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 3,
+          "said": "Friendsgiving with the YA group in Bryn Mawr, 'The Mix Mainline'! Starts at 4 pm and it ends with 7pm Mass!"
+        }
+      ],
+      "rationale": "R22: a joint young-adult event with a Bryn Mawr group; the 7 PM Mass's church isn't named and St. Matthew has no Sunday 7 PM Mass (p9 box), so it is likely elsewhere.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 4,
+          "said": "Every 1st Saturday of the month join us after the 4:30PM Mass to say the Rosary. Every Monday at 7PM in the Parish Center."
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion POLICY doesn't record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78b6e237",
+          "page": 6,
+          "said": "Tuesday December 1, 2026 7:00 - 8:00 PM Epiphany of Our Lord Church, 3050 Walton Rd., Plymouth Meeting ... Parish Center Rooms"
+        }
+      ],
+      "rationale": "R22, R24: a talk at another parish, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
