@@ -1,0 +1,1757 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-mount-carmel-doylestown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:43:31Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T21:52:44Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday and confession times agree in both issues (image-only, read by render) and on the website. Thanksgiving 9 AM Mass and the Nov 25 confession cancellation recorded. Open: whether Thanksgiving cancels the 8 AM Mass, and whether Monday Adoration starts at 9:00 (website) or 8:30 (POLICY from 'after the 8:00 AM Mass').",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+      "fetched_at": "2026-11-15T16:43:31Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9b22183b1aa98d87c2c803b780ab67fcfd1612c7a7e5660b0cda027892814bdc",
+      "fetched_at": "2026-11-08T15:53:06Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+      "bulletins": [
+        "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+        "9b22183b1aa98d87c2c803b780ab67fcfd1612c7a7e5660b0cda027892814bdc"
+      ],
+      "cached": false,
+      "cost_usd": 0.00276,
+      "at": "2026-11-27T21:59:41.993061+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 3,
+          "said": "Weekly Mass Schedule Sunday 7:00 AM, 9:00 AM, 10:30 AM & 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 3,
+          "said": "Weekly Mass Schedule Sunday 7:00 AM, 9:00 AM, 10:30 AM & 12:00 Noon"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Sunday 7:00 AM, 9:00 AM ▶▶, 10:30 AM & 12:00 Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box of both issues and in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 3,
+          "said": "Weekly Mass Schedule Sunday 7:00 AM, 9:00 AM, 10:30 AM & 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 3,
+          "said": "Weekly Mass Schedule Sunday 7:00 AM, 9:00 AM, 10:30 AM & 12:00 Noon"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Sunday 7:00 AM, 9:00 AM ▶▶, 10:30 AM & 12:00 Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box of both issues and in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 3,
+          "said": "Weekly Mass Schedule Sunday 7:00 AM, 9:00 AM, 10:30 AM & 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 3,
+          "said": "Weekly Mass Schedule Sunday 7:00 AM, 9:00 AM, 10:30 AM & 12:00 Noon"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Sunday 7:00 AM, 9:00 AM ▶▶, 10:30 AM & 12:00 Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box of both issues and in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 3,
+          "said": "Weekly Mass Schedule Sunday 7:00 AM, 9:00 AM, 10:30 AM & 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 3,
+          "said": "Weekly Mass Schedule Sunday 7:00 AM, 9:00 AM, 10:30 AM & 12:00 Noon"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Sunday 7:00 AM, 9:00 AM ▶▶, 10:30 AM & 12:00 Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box of both issues and in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 3,
+          "said": "Monday - Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 3,
+          "said": "Monday - Friday 8:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Monday - Friday 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box of both issues and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 3,
+          "said": "Monday - Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 3,
+          "said": "Monday - Friday 8:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Monday - Friday 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box of both issues and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 3,
+          "said": "Monday - Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 3,
+          "said": "Monday - Friday 8:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Monday - Friday 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box of both issues and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 3,
+          "said": "Monday - Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 3,
+          "said": "Monday - Friday 8:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Monday - Friday 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box of both issues and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 3,
+          "said": "Monday - Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 3,
+          "said": "Monday - Friday 8:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Monday - Friday 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box of both issues and in each weekday's intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 3,
+          "said": "Saturday 5:00 PM Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 3,
+          "said": "Saturday 5:00 PM Vigil"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Saturday 5:00 PM Vigil”"
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box of both issues and in the intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 2,
+          "said": "Sacrament of Reconciliation at Our Lady of Mount Carmel Wednesdays 6:00 to 6:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 2,
+          "said": "Sacrament of Reconciliation at Our Lady of Mount Carmel Wednesdays 6:00 to 6:45 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sacrament of Reconciliation at Our Lady of Mount Carmel Wednesdays 6:00 to 6:45 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the parish's Reconciliation box in both issues; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 2,
+          "said": "Saturdays 3:45 to 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 2,
+          "said": "Saturdays 3:45 to 4:30 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saturdays 3:45 to 4:30 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the parish's Reconciliation box in both issues; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-25",
+        "start_time": "18:00",
+        "end_time": "18:45",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Day before Thanksgiving"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 2,
+          "said": "Wednesday Evening Confessions & ACTS 4 Adoration will NOT be held on Wednesday, November 25"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 2,
+          "said": "Wednesday Evening Confessions & ACTS 4 Adoration will NOT be held on Wednesday, November 25"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Wednesday Evening Confessions & ACTS 4 Adoration will NOT be held on Wednesday, November 25”"
+        }
+      ],
+      "rationale": "R1, R16: both issues cancel one date of the weekly Wednesday confession; Nov 25 is after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 3,
+          "said": "Thanksgiving Day Mass Schedule Thursday November 26 9 AM Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Thanksgiving Day Mass Schedule Thursday November 26 9 AM Mass”"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 7: a holiday Mass outside the weekly schedule is dated; Nov 26 is after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 3,
+          "said": "Thanksgiving Day Mass Schedule Thursday November 26 9 AM Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+          "page": 3,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p3 “Thanksgiving Day Mass Schedule Thursday November 26 9 AM Mass”"
+        }
+      ],
+      "rationale": "R17 wants a cancellation stated, but a box headed 'Thanksgiving Day Mass Schedule' listing one 9 AM Mass states the day's whole schedule. Leaning per precedent our-mother-of-good-counsel-bryn-mawr s21 ('One Mass') and our-lady-help-of-christians-abington s19 / nativity-bvm-media s22 (9 AM instead of the weekday Mass). Hard because 'cancelled' isn't printed.",
+      "question": "Thanksgiving, Thu Nov 26: record the weekly 8:00 AM Mass as cancelled, since the 'Thanksgiving Day Mass Schedule' gives only 9 AM?",
+      "options": [
+        {
+          "label": "Record the cancellation",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-doylestown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving Day: 9 AM Mass instead"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave the weekly slot alone",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 5,
+          "said": "Eucharistic Adoration Mondays after the 8:00 AM Mass Reposition at 3:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 5,
+          "said": "Eucharistic Adoration Mondays after the 8:00 AM Mass Reposition at 3:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ourladymtcarmel.org/",
+          "said": "Eucharistic Adoration Monday 9:00-3:00 PM"
+        }
+      ],
+      "rationale": "R10 would time 'after the 8:00 AM Mass' at 8:30, but the parish's website, whose Mass, confession and rectory times match both issues exactly, prints the clock time 9:00-3:00 PM. A printed clock time beats a worked-out one (POLICY, Times) and a later start claims nothing false, so lean 9:00. No place is printed; the parish has one church and nothing places it elsewhere (R38). Hard because the website isn't the bulletin.",
+      "question": "Monday Adoration: start at 9:00 AM (website) or 8:30 AM (bulletin 'after the 8:00 AM Mass', POLICY timing); end 3:00 PM?",
+      "options": [
+        {
+          "label": "Mondays 9:00 AM-3:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-doylestown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Reposition at 3:00 PM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mondays 8:30 AM-3:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-doylestown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass; reposition at 3:00 PM"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 5,
+          "said": "A.C.T.S. 4 Adoration (Adults, Children, Teens, Sanctified 4th Wednesday Adoration) ACTS 4 Adoration will NOT be held in November and December ... scheduled to resume on Wednesday, January 27, 2027."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 5,
+          "said": "A.C.T.S. 4 Adoration (Adults, Children, Teens, Sanctified 4th Wednesday Adoration) ACTS 4 Adoration will NOT be held in November and December ... scheduled to resume on Wednesday, January 27, 2027."
+        }
+      ],
+      "rationale": "R26: no time is printed in either issue or on the website, so nothing can be recorded; it is paused until Jan 27, 2027 anyway. Update mode will read the issue that prints its time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 5,
+          "said": "Parish Penance Service Wednesday, December 2 6 PM Many priests will be available to hear confessions."
+        },
+        {
+          "source": "c1",
+          "bulletin": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+          "page": 5,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p5 “Parish Penance Service Wednesday, December 2 6 PM Many priests will be available to hear confessions.”"
+        }
+      ],
+      "rationale": "R30, leaning per precedent st-aloysius-pottstown s17 (a penance service is a celebration of Penance, recorded at its printed start, no end). 7aa678a5 p5: 'Parish Penance Service Wednesday, December 2 6 PM Many priests will be available to hear confessions', with child care in the Church Quiet Room, so it is in the church. Hard because it starts at the weekly Wednesday confession's time: POLICY Weekly or dated rules 6-7 warn against duplicating a weekly slot, but this is a separate, larger service likely running past 6:45. gpt-6-luna read it as a dated confession.",
+      "question": "Add the Parish Penance Service, Wed Dec 2, 6:00 PM, as a dated confession, though the weekly Wednesday 6:00-6:45 PM confession falls at the same time?",
+      "options": [
+        {
+          "label": "Confession Dec 2 6:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-doylestown",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-02",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Parish Penance Service"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (the weekly slot covers it)",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "11:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Shrine of Our Lady of Czestochowa"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 2,
+          "said": "Sacrament of Reconciliation at the Shrine of Our Lady of Czestochowa Monday - Saturday 11:00 AM - 11:45 AM Saturday Vigil Mass 5:00 PM Sunday 8:00 - 9:30 AM, 11:00 AM - 12:30 PM 2:30 PM - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 2,
+          "said": "Sacrament of Reconciliation at the Shrine of Our Lady of Czestochowa Monday - Saturday 11:00 AM - 11:45 AM Saturday Vigil Mass 5:00 PM Sunday 8:00 - 9:30 AM, 11:00 AM - 12:30 PM 2:30 PM - 5:00 PM"
+        }
+      ],
+      "rationale": "R22: the national shrine is a separate place not run by this parish; its times are printed as a community service, not this parish's schedule. Not a church-list issue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "11:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Shrine of Our Lady of Czestochowa"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 2,
+          "said": "Sacrament of Reconciliation at the Shrine of Our Lady of Czestochowa Monday - Saturday 11:00 AM - 11:45 AM Saturday Vigil Mass 5:00 PM Sunday 8:00 - 9:30 AM, 11:00 AM - 12:30 PM 2:30 PM - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 2,
+          "said": "Sacrament of Reconciliation at the Shrine of Our Lady of Czestochowa Monday - Saturday 11:00 AM - 11:45 AM Saturday Vigil Mass 5:00 PM Sunday 8:00 - 9:30 AM, 11:00 AM - 12:30 PM 2:30 PM - 5:00 PM"
+        }
+      ],
+      "rationale": "R22: the national shrine is a separate place not run by this parish; its times are printed as a community service, not this parish's schedule. Not a church-list issue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "11:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Shrine of Our Lady of Czestochowa"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 2,
+          "said": "Sacrament of Reconciliation at the Shrine of Our Lady of Czestochowa Monday - Saturday 11:00 AM - 11:45 AM Saturday Vigil Mass 5:00 PM Sunday 8:00 - 9:30 AM, 11:00 AM - 12:30 PM 2:30 PM - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 2,
+          "said": "Sacrament of Reconciliation at the Shrine of Our Lady of Czestochowa Monday - Saturday 11:00 AM - 11:45 AM Saturday Vigil Mass 5:00 PM Sunday 8:00 - 9:30 AM, 11:00 AM - 12:30 PM 2:30 PM - 5:00 PM"
+        }
+      ],
+      "rationale": "R22: the national shrine is a separate place not run by this parish; its times are printed as a community service, not this parish's schedule. Not a church-list issue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "11:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Shrine of Our Lady of Czestochowa"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 2,
+          "said": "Sacrament of Reconciliation at the Shrine of Our Lady of Czestochowa Monday - Saturday 11:00 AM - 11:45 AM Saturday Vigil Mass 5:00 PM Sunday 8:00 - 9:30 AM, 11:00 AM - 12:30 PM 2:30 PM - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 2,
+          "said": "Sacrament of Reconciliation at the Shrine of Our Lady of Czestochowa Monday - Saturday 11:00 AM - 11:45 AM Saturday Vigil Mass 5:00 PM Sunday 8:00 - 9:30 AM, 11:00 AM - 12:30 PM 2:30 PM - 5:00 PM"
+        }
+      ],
+      "rationale": "R22: the national shrine is a separate place not run by this parish; its times are printed as a community service, not this parish's schedule. Not a church-list issue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "11:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Shrine of Our Lady of Czestochowa"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 2,
+          "said": "Sacrament of Reconciliation at the Shrine of Our Lady of Czestochowa Monday - Saturday 11:00 AM - 11:45 AM Saturday Vigil Mass 5:00 PM Sunday 8:00 - 9:30 AM, 11:00 AM - 12:30 PM 2:30 PM - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 2,
+          "said": "Sacrament of Reconciliation at the Shrine of Our Lady of Czestochowa Monday - Saturday 11:00 AM - 11:45 AM Saturday Vigil Mass 5:00 PM Sunday 8:00 - 9:30 AM, 11:00 AM - 12:30 PM 2:30 PM - 5:00 PM"
+        }
+      ],
+      "rationale": "R22: the national shrine is a separate place not run by this parish; its times are printed as a community service, not this parish's schedule. Not a church-list issue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "11:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Shrine of Our Lady of Czestochowa"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 2,
+          "said": "Sacrament of Reconciliation at the Shrine of Our Lady of Czestochowa Monday - Saturday 11:00 AM - 11:45 AM Saturday Vigil Mass 5:00 PM Sunday 8:00 - 9:30 AM, 11:00 AM - 12:30 PM 2:30 PM - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 2,
+          "said": "Sacrament of Reconciliation at the Shrine of Our Lady of Czestochowa Monday - Saturday 11:00 AM - 11:45 AM Saturday Vigil Mass 5:00 PM Sunday 8:00 - 9:30 AM, 11:00 AM - 12:30 PM 2:30 PM - 5:00 PM"
+        }
+      ],
+      "rationale": "R22: the national shrine is a separate place not run by this parish; its times are printed as a community service, not this parish's schedule. Not a church-list issue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7aa678a5",
+          "page": 2,
+          "said": "Sacrament of Reconciliation at Our Lady of Guadalupe Saturdays 4:30 PM Sundays 8:30 AM & 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 2,
+          "said": "Sacrament of Reconciliation at Our Lady of Guadalupe Saturdays 4:30 PM Sundays 8:30 AM & 10:30 AM"
+        }
+      ],
+      "rationale": "R22: Our Lady of Guadalupe, Doylestown is another parish's listed church; its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-10",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Children's Adoration, St. Francis Center (Convent)"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b22183b",
+          "page": 5,
+          "said": "Children's Adoration of the Blessed Sacrament Tuesday November 10 10 AM St. Francis Center (Convent)"
+        }
+      ],
+      "rationale": "R22, R16: at the convent's St. Francis Center, not a listed church, and the date is before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "73399df738de576b8eaf3f18c535c2a0",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T21:59:41.993061+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "7aa678a58a23bc193d40f8af8682d5d5bf31bffc85f71856688f49dadc86c03c",
+        "fetched_at": "2026-11-15T16:43:31Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "9b22183b1aa98d87c2c803b780ab67fcfd1612c7a7e5660b0cda027892814bdc",
+        "fetched_at": "2026-11-08T15:53:06Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.00276,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": true,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Sunday 7:00 AM, 9:00 AM ▶▶, 10:30 AM & 12:00 Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Sunday 7:00 AM, 9:00 AM ▶▶, 10:30 AM & 12:00 Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Sunday 7:00 AM, 9:00 AM ▶▶, 10:30 AM & 12:00 Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Sunday 7:00 AM, 9:00 AM ▶▶, 10:30 AM & 12:00 Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Sunday 7:00 AM, 9:00 AM ▶▶, 10:30 AM & 12:00 Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Sunday 7:00 AM, 9:00 AM ▶▶, 10:30 AM & 12:00 Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Sunday 7:00 AM, 9:00 AM ▶▶, 10:30 AM & 12:00 Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Sunday 7:00 AM, 9:00 AM ▶▶, 10:30 AM & 12:00 Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Monday - Friday 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Monday - Friday 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Monday - Friday 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Monday - Friday 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Monday - Friday 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Monday - Friday 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Monday - Friday 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Monday - Friday 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Monday - Friday 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Monday - Friday 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Saturday 5:00 PM Vigil"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Saturday 5:00 PM Vigil"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "18:00",
+          "end_time": "18:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sacrament of Reconciliation at Our Lady of Mount Carmel Wednesdays 6:00 to 6:45 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Sacrament of Reconciliation at Our Lady of Mount Carmel Wednesdays 6:00 to 6:45 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:45",
+          "end_time": "16:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saturdays 3:45 to 4:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saturdays 3:45 to 4:30 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "15:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Divine Mercy Chapel; after the 8:00 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "Eucharistic Adoration Mondays after the 8:00 AM Mass Reposition at 3:00 PM Divine Mercy Chaplet Immediately Following"
+          },
+          {
+            "bulletin": "B2",
+            "page": 5,
+            "quote": "Eucharistic Adoration Mondays after the 8:00 AM Mass Reposition at 3:00 PM Divine Mercy Chaplet Immediately Following"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Thanksgiving Day",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Thanksgiving Day Mass Schedule Thursday November 26 9 AM Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "confession",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-02",
+          "start_time": "18:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "Parish Penance Service Wednesday, December 2 6 PM Many priests will be available to hear confessions."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": true,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Thanksgiving Day schedule lists the 9:00 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Thanksgiving Day Mass Schedule Thursday November 26 9 AM Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "our-lady-of-mount-carmel-doylestown",
+          "event_type": "confession",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-25",
+          "start_time": "18:00",
+          "end_time": "18:45",
+          "cancelled": true,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Wednesday Evening Confessions & ACTS 4 Adoration will NOT be held on Wednesday, November 25"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "4f0a4ccbed67b089587d92917a3bf101f4a346a52a0d1a619423b72cc81d641e",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o13"
+        ],
+        "slots": [
+          "s16"
+        ],
+        "opinion_said": "adoration Mon 08:30-15:00 @our-lady-of-mount-carmel-doylestown",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "excluded",
+        "fields": [],
+        "opinion": [
+          "o15"
+        ],
+        "slots": [
+          "s18"
+        ],
+        "opinion_said": "confession 2026-12-02 18:00 @our-lady-of-mount-carmel-doylestown",
+        "seed_said": "confession 2026-12-02 18:00 @our-lady-of-mount-carmel-doylestown",
+        "resolution": {
+          "how": "asked"
+        }
+      }
+    ]
+  }
+}
