@@ -1,0 +1,852 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-cheltenham",
+  "status": "ready",
+  "as_of": "2026-11-15T16:45:59Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T20:25:57Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Joseph); its only Masses are Sunday, Wednesday and Friday 10 AM, printed alike in both November issues, their intentions and the website. The bulletin also prints the partner Presentation B.V.M. Church's Masses, Saturday confession and Wednesday Adoration chapel; that church belongs to presentation-bvm-cheltenham, so they are excluded here. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2e50f66c880d19437fb3f75a12a8230f8ada15f8712185dfc3ae577e5c66ef0c",
+      "fetched_at": "2026-11-15T16:45:59Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "59b36859992477d7aafb56eaaf17363592f22b83c80c40f11202dd8fbaf30b12",
+      "fetched_at": "2026-11-08T15:54:39Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "2e50f66c880d19437fb3f75a12a8230f8ada15f8712185dfc3ae577e5c66ef0c",
+      "bulletins": [
+        "2e50f66c880d19437fb3f75a12a8230f8ada15f8712185dfc3ae577e5c66ef0c",
+        "59b36859992477d7aafb56eaaf17363592f22b83c80c40f11202dd8fbaf30b12"
+      ],
+      "cached": false,
+      "cost_usd": 0.00106,
+      "at": "2026-11-27T20:29:38.167261+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-cheltenham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 1,
+          "said": "MASS SCHEDULE Sunday, Wednesday & Friday 10 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59b36859",
+          "page": 1,
+          "said": "MASS SCHEDULE Sunday, Wednesday & Friday 10 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 3,
+          "said": "MASS SCHEDULE Sunday, November 15, 2026 10am ... Wednesday, November 18, 2026 10am ... Friday, November 20, 2026 10am"
+        },
+        {
+          "source": "website",
+          "url": "https://stjoescheltenham.org/mass/",
+          "said": "St. Joseph Church: Sunday Wednesday Friday ... 10am 10am 10am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "2e50f66c880d19437fb3f75a12a8230f8ada15f8712185dfc3ae577e5c66ef0c",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday, Wednesday & Friday 10 AM”"
+        }
+      ],
+      "rationale": "R1: St. Joseph's own line heads the Mass schedule box in both issues read (the Presentation B.V.M. lines below it are another parish's church), and both issues' intentions list 10am on these days; the website's St. Joseph schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-cheltenham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 1,
+          "said": "MASS SCHEDULE Sunday, Wednesday & Friday 10 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59b36859",
+          "page": 1,
+          "said": "MASS SCHEDULE Sunday, Wednesday & Friday 10 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 3,
+          "said": "MASS SCHEDULE Sunday, November 15, 2026 10am ... Wednesday, November 18, 2026 10am ... Friday, November 20, 2026 10am"
+        },
+        {
+          "source": "website",
+          "url": "https://stjoescheltenham.org/mass/",
+          "said": "St. Joseph Church: Sunday Wednesday Friday ... 10am 10am 10am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "2e50f66c880d19437fb3f75a12a8230f8ada15f8712185dfc3ae577e5c66ef0c",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday, Wednesday & Friday 10 AM”"
+        }
+      ],
+      "rationale": "R1: St. Joseph's own line heads the Mass schedule box in both issues read (the Presentation B.V.M. lines below it are another parish's church), and both issues' intentions list 10am on these days; the website's St. Joseph schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-cheltenham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 1,
+          "said": "MASS SCHEDULE Sunday, Wednesday & Friday 10 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59b36859",
+          "page": 1,
+          "said": "MASS SCHEDULE Sunday, Wednesday & Friday 10 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 3,
+          "said": "MASS SCHEDULE Sunday, November 15, 2026 10am ... Wednesday, November 18, 2026 10am ... Friday, November 20, 2026 10am"
+        },
+        {
+          "source": "website",
+          "url": "https://stjoescheltenham.org/mass/",
+          "said": "St. Joseph Church: Sunday Wednesday Friday ... 10am 10am 10am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "2e50f66c880d19437fb3f75a12a8230f8ada15f8712185dfc3ae577e5c66ef0c",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday, Wednesday & Friday 10 AM”"
+        }
+      ],
+      "rationale": "R1: St. Joseph's own line heads the Mass schedule box in both issues read (the Presentation B.V.M. lines below it are another parish's church), and both issues' intentions list 10am on these days; the website's St. Joseph schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-cheltenham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 1,
+          "said": "Presentation B.V.M. Church Weekday Mass Schedule: Sunday 8:30 AM and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59b36859",
+          "page": 1,
+          "said": "Presentation B.V.M. Church Weekday Mass Schedule: Sunday 8:30 AM and 11:30 AM"
+        }
+      ],
+      "rationale": "R22: Presentation B.V.M. Church, 100 Old Soldiers Rd., is the listed church of another parish (presentation-bvm-cheltenham), which shares the pastor; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-cheltenham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 1,
+          "said": "Presentation B.V.M. Church Weekday Mass Schedule: Sunday 8:30 AM and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59b36859",
+          "page": 1,
+          "said": "Presentation B.V.M. Church Weekday Mass Schedule: Sunday 8:30 AM and 11:30 AM"
+        }
+      ],
+      "rationale": "R22: Presentation B.V.M. Church, 100 Old Soldiers Rd., is the listed church of another parish (presentation-bvm-cheltenham), which shares the pastor; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-cheltenham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 1,
+          "said": "Presentation B.V.M. Church ... Monday, Wednesday & Friday 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59b36859",
+          "page": 1,
+          "said": "Presentation B.V.M. Church ... Monday, Wednesday & Friday 6:30 AM"
+        }
+      ],
+      "rationale": "R22: Presentation B.V.M. Church, 100 Old Soldiers Rd., is the listed church of another parish (presentation-bvm-cheltenham), which shares the pastor; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-cheltenham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 1,
+          "said": "Presentation B.V.M. Church ... Monday, Wednesday & Friday 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59b36859",
+          "page": 1,
+          "said": "Presentation B.V.M. Church ... Monday, Wednesday & Friday 6:30 AM"
+        }
+      ],
+      "rationale": "R22: Presentation B.V.M. Church, 100 Old Soldiers Rd., is the listed church of another parish (presentation-bvm-cheltenham), which shares the pastor; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-cheltenham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 1,
+          "said": "Presentation B.V.M. Church ... Monday, Wednesday & Friday 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59b36859",
+          "page": 1,
+          "said": "Presentation B.V.M. Church ... Monday, Wednesday & Friday 6:30 AM"
+        }
+      ],
+      "rationale": "R22: Presentation B.V.M. Church, 100 Old Soldiers Rd., is the listed church of another parish (presentation-bvm-cheltenham), which shares the pastor; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-cheltenham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 1,
+          "said": "Presentation B.V.M. Church ... Tuesday & Thursday 8 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59b36859",
+          "page": 1,
+          "said": "Presentation B.V.M. Church ... Tuesday & Thursday 8 AM"
+        }
+      ],
+      "rationale": "R22: Presentation B.V.M. Church, 100 Old Soldiers Rd., is the listed church of another parish (presentation-bvm-cheltenham), which shares the pastor; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-cheltenham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 1,
+          "said": "Presentation B.V.M. Church ... Tuesday & Thursday 8 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59b36859",
+          "page": 1,
+          "said": "Presentation B.V.M. Church ... Tuesday & Thursday 8 AM"
+        }
+      ],
+      "rationale": "R22: Presentation B.V.M. Church, 100 Old Soldiers Rd., is the listed church of another parish (presentation-bvm-cheltenham), which shares the pastor; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-cheltenham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 1,
+          "said": "Presentation B.V.M. Church ... Saturday Vigil Mass 5:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59b36859",
+          "page": 1,
+          "said": "Presentation B.V.M. Church ... Saturday Vigil Mass 5:15 PM"
+        }
+      ],
+      "rationale": "R22: Presentation B.V.M. Church, 100 Old Soldiers Rd., is the listed church of another parish (presentation-bvm-cheltenham), which shares the pastor; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-cheltenham",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 1,
+          "said": "CONFESSIONS Presentation B.V.M. Church: Every Saturday 4-4:45 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "59b36859",
+          "page": 1,
+          "said": "CONFESSIONS Presentation B.V.M. Church: Every Saturday 4-4:45 PM."
+        }
+      ],
+      "rationale": "R22: the parish's only scheduled confession is at Presentation B.V.M. Church, another parish's listed church (presentation-bvm-cheltenham). Nothing schedules confession at St. Joseph.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "presentation-bvm-cheltenham",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Presentation BVM Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 1,
+          "said": "Wednesdays in the Presentation BVM Adoration Chapel: After the 6:30AM Mass until 6 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59b36859",
+          "page": 1,
+          "said": "Wednesdays in the Presentation BVM Adoration Chapel: After the 6:30AM Mass until 6 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament takes place in the Presentation BVM Adoration Chapel on Wednesdays from 7am until 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59b36859",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament takes place in the Presentation BVM Adoration Chapel on Wednesdays from 7am until 6pm"
+        }
+      ],
+      "rationale": "R22: the Adoration Chapel is at Presentation B.V.M., another parish's listed church (presentation-bvm-cheltenham), not at St. Joseph.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 1,
+          "said": "Other times as announced. Anytime upon request."
+        },
+        {
+          "source": "agent",
+          "bulletin": "59b36859",
+          "page": 1,
+          "said": "Other times as announced. Anytime upon request."
+        }
+      ],
+      "rationale": "R26: confession on request or as announced has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2e50f66c",
+          "page": 1,
+          "said": "DIVINE MERCY CHAPLET Sunday, Wednesday & Friday 9:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59b36859",
+          "page": 1,
+          "said": "DIVINE MERCY CHAPLET Sunday, Wednesday & Friday 9:45 AM"
+        }
+      ],
+      "rationale": "R24: the Chaplet is a devotion, not Mass, Confession or Adoration (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-cheltenham",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stjoescheltenham.org/mass/",
+          "said": "St. Joseph Church: ... Holyday ... 5pm (Vigil) • 10am"
+        }
+      ],
+      "rationale": "POLICY, Dates: the website's standing Holyday line names no date, and neither bulletin read mentions the Immaculate Conception; decided like st-isaac-jogues-wayne s27 (undated standing holy-day/Christmas box left out). The site's only Dec 8 post is from 2023. Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-cheltenham",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stjoescheltenham.org/mass/",
+          "said": "Holyday ... 5pm (Vigil) • 10am"
+        }
+      ],
+      "rationale": "POLICY, Dates: the vigil half of the same undated Holyday line; left out with the Dec 8 10am, as st-isaac-jogues-wayne s27.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "f6cf10b2c688cb801b91e6e1b46ea4da",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T20:29:38.167261+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "2e50f66c880d19437fb3f75a12a8230f8ada15f8712185dfc3ae577e5c66ef0c",
+        "fetched_at": "2026-11-15T16:45:59Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "59b36859992477d7aafb56eaaf17363592f22b83c80c40f11202dd8fbaf30b12",
+        "fetched_at": "2026-11-08T15:54:39Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.00106,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": true,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-joseph-cheltenham",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday, Wednesday & Friday 10 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday, Wednesday & Friday 10 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-joseph-cheltenham",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday, Wednesday & Friday 10 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday, Wednesday & Friday 10 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-joseph-cheltenham",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday, Wednesday & Friday 10 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday, Wednesday & Friday 10 AM"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "c535dced9dddc546e990c5c1f303e44a36341b4169a3f3cf8d64f350c7c8aaa1",
+    "differences": []
+  }
+}
