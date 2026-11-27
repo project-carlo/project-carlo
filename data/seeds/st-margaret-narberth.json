@@ -1,0 +1,1390 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-margaret-narberth",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:00:46Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T04:27:09Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both November issues print the same schedule box (Mass, Wednesday and First Friday exposition, confession), which the website matches; the website supplies the Sunday 7:00-7:30 AM confession time, Thanksgiving's 9 AM Mass (replacing the 7:00) and the Dec 8 Masses. Open: the website's Thursday Holy Hour 'until Pentecost' and its Christmas Masses.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "fc0dc17f1983ab90b0e2c3f4d970f3285cd7a5669a774633d067cd8978bb0256",
+      "fetched_at": "2026-11-15T16:00:46Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "fed5cf0a52fcaad1cbba2f3bb892a25f7ab711d7660b2b45b199303a5cefffc8",
+      "fetched_at": "2026-11-08T15:28:58Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "Saturday Evening Vigil: 5:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "Saturday Evening Vigil: 5:15 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the clergy schedule (p4) and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "Sunday: 7:30, 10:00 and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "Sunday: 7:30, 10:00 and 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the clergy schedule (p4) and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "Sunday: 7:30, 10:00 and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "Sunday: 7:30, 10:00 and 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the clergy schedule (p4) and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "Sunday: 7:30, 10:00 and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "Sunday: 7:30, 10:00 and 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the clergy schedule (p4) and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "Daily Monday - Friday: 7:00 AM, followed by Morning Prayer"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "Daily Monday - Friday: 7:00 AM, followed by Morning Prayer"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 2,
+          "said": "MONDAY, November 16 7:00 AM ... FRIDAY, November 20 7:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues and in each weekday's intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "Daily Monday - Friday: 7:00 AM, followed by Morning Prayer"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "Daily Monday - Friday: 7:00 AM, followed by Morning Prayer"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 2,
+          "said": "MONDAY, November 16 7:00 AM ... FRIDAY, November 20 7:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues and in each weekday's intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "Daily Monday - Friday: 7:00 AM, followed by Morning Prayer"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "Daily Monday - Friday: 7:00 AM, followed by Morning Prayer"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 2,
+          "said": "MONDAY, November 16 7:00 AM ... FRIDAY, November 20 7:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues and in each weekday's intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "Daily Monday - Friday: 7:00 AM, followed by Morning Prayer"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "Daily Monday - Friday: 7:00 AM, followed by Morning Prayer"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 2,
+          "said": "MONDAY, November 16 7:00 AM ... FRIDAY, November 20 7:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues and in each weekday's intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "Daily Monday - Friday: 7:00 AM, followed by Morning Prayer"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "Daily Monday - Friday: 7:00 AM, followed by Morning Prayer"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 2,
+          "said": "MONDAY, November 16 7:00 AM ... FRIDAY, November 20 7:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues and in each weekday's intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 2,
+          "said": "SATURDAY, November 21 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues and in the Saturday intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "EUCHARISTIC EXPOSTION 7:30-8:30 AM Wednesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "EUCHARISTIC EXPOSTION 7:30-8:30 AM Wednesday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues; the website's Adoration page gives Wednesday 7:30-8:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "EUCHARISTIC EXPOSTION ... 7:30-8:00 AM - First Fridays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "EUCHARISTIC EXPOSTION ... 7:30-8:00 AM - First Fridays"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly rule 2: the newest box names the week; the website gives '1st Friday 7:30 AM to 8:00 AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturday: 4:00 - 4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturday: 4:00 - 4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 4,
+          "said": "Saturday, November 21 Confessions – 4:00 to 4:45 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues and the clergy schedule (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "Tuesday thru Saturday: 7:45-7:55 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "Tuesday thru Saturday: 7:45-7:55 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues; the website's Confession Times page gives 'Tue Sat 7:45 AM to 7:55 AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "Tuesday thru Saturday: 7:45-7:55 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "Tuesday thru Saturday: 7:45-7:55 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues; the website's Confession Times page gives 'Tue Sat 7:45 AM to 7:55 AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "Tuesday thru Saturday: 7:45-7:55 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "Tuesday thru Saturday: 7:45-7:55 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues; the website's Confession Times page gives 'Tue Sat 7:45 AM to 7:55 AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "Tuesday thru Saturday: 7:45-7:55 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "Tuesday thru Saturday: 7:45-7:55 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues; the website's Confession Times page gives 'Tue Sat 7:45 AM to 7:55 AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "Tuesday thru Saturday: 7:45-7:55 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "Tuesday thru Saturday: 7:45-7:55 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues; the website's Confession Times page gives 'Tue Sat 7:45 AM to 7:55 AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:30 AM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintmarg.org/confession-times",
+          "said": "Sunday : 7:00 AM to 7:30 AM Confessions will be heard before the 7:30 AM Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-27T04:29:58Z",
+            "current_because": "Checked 2026-11-27: the site's Mass, Confession and Adoration schedules match the Nov 15, 2026 box exactly, and its events list Thanksgiving Nov 26, 2026.",
+            "bulletin": "fc0dc17f",
+            "fits_because": "The newest box (p1) prints 'Sunday before 7:30 AM Mass' with no clock time; the website gives that same confession its 7:00-7:30 AM window (R6: supplies a time the bulletin lacks)."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "Sunday before 7:30 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "Sunday before 7:30 AM Mass"
+        }
+      ],
+      "rationale": "R6: the bulletin names a Sunday confession before the 7:30 AM Mass without a time; the parish's current website times it 7:00-7:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintmarg.org/events/thanksgiving-day-9-am-mass",
+          "said": "Thanksgiving Day 9 AM Mass Thursday , November 26 , 2026 , 9:00 AM",
+          "schedule_check": {
+            "checked_at": "2026-11-27T04:29:58Z",
+            "current_because": "Checked 2026-11-27: the event page is dated Thursday, November 26, 2026, and the site's regular schedule matches the Nov 15, 2026 box exactly.",
+            "bulletin": "fc0dc17f",
+            "fits_because": "No read bulletin covers Thanksgiving week; the 9 AM holiday Mass fits the newest box's 7:00 AM weekday schedule as its holiday replacement."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintmarg.org/mass-times",
+          "said": "Daily Mass on Memorial Day, Independence Day, Labor Day, and Thanksgiving will be at 9 AM",
+          "schedule_check": {
+            "checked_at": "2026-11-27T04:29:58Z",
+            "current_because": "Checked 2026-11-27: the event page is dated Thursday, November 26, 2026, and the site's regular schedule matches the Nov 15, 2026 box exactly.",
+            "bulletin": "fc0dc17f",
+            "fits_because": "No read bulletin covers Thanksgiving week; the 9 AM holiday Mass fits the newest box's 7:00 AM weekday schedule as its holiday replacement."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's own 2026 event page gives the Thanksgiving Mass at 9 AM; decided like nativity-bvm-media s22.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day: daily Mass at 9 AM"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintmarg.org/mass-times",
+          "said": "Daily Mass on Memorial Day, Independence Day, Labor Day, and Thanksgiving will be at 9 AM",
+          "schedule_check": {
+            "checked_at": "2026-11-27T04:29:58Z",
+            "current_because": "Checked 2026-11-27: the event page is dated November 26, 2026, and the site's regular schedule matches the Nov 15, 2026 box exactly.",
+            "bulletin": "fc0dc17f",
+            "fits_because": "The newest box (p1) gives daily Mass Mon-Fri 7:00 AM; the site says the daily Mass on Thanksgiving is at 9 AM instead."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintmarg.org/events/thanksgiving-day-9-am-mass",
+          "said": "Thanksgiving Day 9 AM Mass Thursday , November 26 , 2026 , 9:00 AM",
+          "schedule_check": {
+            "checked_at": "2026-11-27T04:29:58Z",
+            "current_because": "Checked 2026-11-27: the event page is dated November 26, 2026, and the site's regular schedule matches the Nov 15, 2026 box exactly.",
+            "bulletin": "fc0dc17f",
+            "fits_because": "The newest box (p1) gives daily Mass Mon-Fri 7:00 AM; the site says the daily Mass on Thanksgiving is at 9 AM instead."
+          }
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated (a moved event is a cancellation plus the new time), R16: the site says the day's daily Mass will be at 9 AM, i.e. the 7:00 AM moves; recorded like nativity-bvm-media s22 and our-mother-of-good-counsel-bryn-mawr s21.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintmarg.org/adoration",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 7:00 AM 12:05 PM 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-27T04:29:58Z",
+            "current_because": "Checked 2026-11-27: the site's 'Upcoming Holy Days' lists Dec 8 next, its events list Thanksgiving 2026, and its regular schedule matches the Nov 15, 2026 box exactly.",
+            "bulletin": "fc0dc17f",
+            "fits_because": "The newest box (p1) prints the same holy-day times and sends readers to the website for the final holy-day schedule; Dec 8, 2026 is a Tuesday."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintmarg.org/mass-times",
+          "said": "Mass on Holy Days of Obligation will be at 7 AM, 12:05 PM, and 7 PM. There will be no Vigil.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T04:29:58Z",
+            "current_because": "Checked 2026-11-27: the site's 'Upcoming Holy Days' lists Dec 8 next, its events list Thanksgiving 2026, and its regular schedule matches the Nov 15, 2026 box exactly.",
+            "bulletin": "fc0dc17f",
+            "fits_because": "The newest box (p1) prints the same holy-day times and sends readers to the website for the final holy-day schedule; Dec 8, 2026 is a Tuesday."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "HOLY DAYS OF OBLIGATION 7:00 AM, 12:05 PM and 7:00 PM (schedule subject to change on certain Holydays. Check website for final schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "HOLY DAYS OF OBLIGATION 7:00 AM, 12:05 PM and 7:00 PM (schedule subject to change on certain Holydays. Check website for final schedule)"
+        }
+      ],
+      "rationale": "R6, R16: the website dates the Immaculate Conception Masses and they match the bulletin's holy-day line. The 7:00 AM is the weekly Tuesday Mass (POLICY Weekly rule 6); 12:05 PM and 7:00 PM are dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-narberth",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintmarg.org/adoration",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 7:00 AM 12:05 PM 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-27T04:29:58Z",
+            "current_because": "Checked 2026-11-27: the site's 'Upcoming Holy Days' lists Dec 8 next, its events list Thanksgiving 2026, and its regular schedule matches the Nov 15, 2026 box exactly.",
+            "bulletin": "fc0dc17f",
+            "fits_because": "The newest box (p1) prints the same holy-day times and sends readers to the website for the final holy-day schedule; Dec 8, 2026 is a Tuesday."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintmarg.org/mass-times",
+          "said": "Mass on Holy Days of Obligation will be at 7 AM, 12:05 PM, and 7 PM. There will be no Vigil.",
+          "schedule_check": {
+            "checked_at": "2026-11-27T04:29:58Z",
+            "current_because": "Checked 2026-11-27: the site's 'Upcoming Holy Days' lists Dec 8 next, its events list Thanksgiving 2026, and its regular schedule matches the Nov 15, 2026 box exactly.",
+            "bulletin": "fc0dc17f",
+            "fits_because": "The newest box (p1) prints the same holy-day times and sends readers to the website for the final holy-day schedule; Dec 8, 2026 is a Tuesday."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "HOLY DAYS OF OBLIGATION 7:00 AM, 12:05 PM and 7:00 PM (schedule subject to change on certain Holydays. Check website for final schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "HOLY DAYS OF OBLIGATION 7:00 AM, 12:05 PM and 7:00 PM (schedule subject to change on certain Holydays. Check website for final schedule)"
+        }
+      ],
+      "rationale": "R6, R16: the website dates the Immaculate Conception Masses and they match the bulletin's holy-day line. The 7:00 AM is the weekly Tuesday Mass (POLICY Weekly rule 6); 12:05 PM and 7:00 PM are dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "MASS SCHEDULE HOLY DAYS OF OBLIGATION 7:00 AM, 12:05 PM and 7:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no date pins no day; Dec 8 is recorded from the website's dated list (R6), and Christmas is asked separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 3,
+          "said": "Saint Margaret Church is open from 7:30 AM to 4:30 PM, Monday through Friday ... Come be in the presence of our Lord"
+        }
+      ],
+      "rationale": "R38: the church being open for prayer does not establish an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "or by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintmarg.org/adoration",
+          "said": "Thursday : 7:00 PM to 8:00 PM Thursday evening Holy Hour will be held until Pentecost."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "EUCHARISTIC EXPOSTION 7:30-8:30 AM Wednesday 7:30-8:00 AM - First Fridays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fed5cf0a",
+          "page": 1,
+          "said": "EUCHARISTIC EXPOSTION 7:30-8:30 AM Wednesday 7:30-8:00 AM - First Fridays"
+        }
+      ],
+      "rationale": "R29, R6: only the website has it, and 'until Pentecost' names no year: Pentecost 2026 (May 24) has passed, and neither November box lists it beside Wednesday and First Friday exposition. Leaning out: a wrong time is worse than a missing one (POLICY).",
+      "question": "Add the website's Thursday 7:00-8:00 PM Holy Hour ('held until Pentecost')?",
+      "options": [
+        {
+          "label": "Thursdays 7:00-8:00 PM",
+          "entry": {
+            "church_slug": "st-margaret-narberth",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintmarg.org/adoration",
+          "said": "Nativity of Our Lord Jesus Christ December 24 : 4:00 PM Mass will be celebrated in the Church and in the Antioch Annex 6:00 PM 8:00 PM December 25 : 7:30 AM 10:00 AM 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc0dc17f",
+          "page": 1,
+          "said": "(schedule subject to change on certain Holydays. Check website for final schedule)"
+        }
+      ],
+      "rationale": "R29, R6: no read bulletin prints Christmas times and the site's 'Upcoming Holy Days' gives no year. Leaning include, unlike st-joseph-coatesville s45: here the same list's Dec 8 times match the current bulletin exactly, and the bulletin itself sends readers to the website for the holy-day schedule. Dec 25 7:30 AM is the weekday 7:00 AM's day, which this would not cancel.",
+      "question": "Add the website's Christmas Masses (Dec 24 4, 6, 8 PM; Dec 25 7:30, 10:00, 11:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-margaret-narberth",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Eve; also in the Antioch Annex"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s29",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintmarg.org/adoration",
+          "said": "December 24 : 4:00 PM ... 6:00 PM 8:00 PM"
+        }
+      ],
+      "rationale": "R29, R6: see the 4:00 PM slot of this group.",
+      "question": "Add the website's Christmas Masses (Dec 24 4, 6, 8 PM; Dec 25 7:30, 10:00, 11:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-margaret-narberth",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Eve"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s30",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintmarg.org/adoration",
+          "said": "December 24 : 4:00 PM ... 6:00 PM 8:00 PM"
+        }
+      ],
+      "rationale": "R29, R6: see the 4:00 PM slot of this group.",
+      "question": "Add the website's Christmas Masses (Dec 24 4, 6, 8 PM; Dec 25 7:30, 10:00, 11:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-margaret-narberth",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "20:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Eve"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s31",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintmarg.org/adoration",
+          "said": "December 25 : 7:30 AM 10:00 AM 11:30 AM"
+        }
+      ],
+      "rationale": "R29, R6: see the 4:00 PM slot of this group.",
+      "question": "Add the website's Christmas Masses (Dec 24 4, 6, 8 PM; Dec 25 7:30, 10:00, 11:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-margaret-narberth",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Day"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s32",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintmarg.org/adoration",
+          "said": "December 25 : 7:30 AM 10:00 AM 11:30 AM"
+        }
+      ],
+      "rationale": "R29, R6: see the 4:00 PM slot of this group.",
+      "question": "Add the website's Christmas Masses (Dec 24 4, 6, 8 PM; Dec 25 7:30, 10:00, 11:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-margaret-narberth",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Day"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s33",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintmarg.org/adoration",
+          "said": "December 25 : 7:30 AM 10:00 AM 11:30 AM"
+        }
+      ],
+      "rationale": "R29, R6: see the 4:00 PM slot of this group.",
+      "question": "Add the website's Christmas Masses (Dec 24 4, 6, 8 PM; Dec 25 7:30, 10:00, 11:30 AM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-margaret-narberth",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Day"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    }
+  ]
+}
