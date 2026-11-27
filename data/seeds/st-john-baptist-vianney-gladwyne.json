@@ -1,0 +1,691 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-baptist-vianney-gladwyne",
+  "status": "ready",
+  "as_of": "2026-11-15T16:45:50Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T04:22:57Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 5 PM vigil; Sun 8:30, 10:30), weekday 7:30 AM, Saturday 8 AM and Saturday 4:15-4:45 PM confession agree in the boxes and intentions of both issues (Nov 8, Nov 15; both image-only). Adds the dated Nov 17 Eucharist Day exposition (8 AM-7 PM, Benediction); the undated Holy Day line is left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f56a377e2c6b95e0428e8b1776ad74ec833b831d12f2a06989de7359bfa20c90",
+      "fetched_at": "2026-11-15T16:45:50Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ff50d01cebc50fbd3d994833103e5b82ca0c03bb65e1ee538df03b0994267564",
+      "fetched_at": "2026-11-08T15:54:29Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-vianney-gladwyne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 1,
+          "said": "MASS SCHEDULE Sunday: 8:30 AM, 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 1,
+          "said": "MASS SCHEDULE Sunday: 8:30 AM, 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 2,
+          "said": "Masses of the Week, Sunday 8:30 AM, 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 2,
+          "said": "Masses of the Week, Sunday 8:30 AM, 10:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 and p10 schedule boxes and the Masses of the Week of both issues read (Nov 8, Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-vianney-gladwyne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 1,
+          "said": "MASS SCHEDULE Sunday: 8:30 AM, 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 1,
+          "said": "MASS SCHEDULE Sunday: 8:30 AM, 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 2,
+          "said": "Masses of the Week, Sunday 8:30 AM, 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 2,
+          "said": "Masses of the Week, Sunday 8:30 AM, 10:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 and p10 schedule boxes and the Masses of the Week of both issues read (Nov 8, Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-vianney-gladwyne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 1,
+          "said": "Saturday Vigil Mass: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 1,
+          "said": "Saturday Vigil Mass: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 2,
+          "said": "Saturday 5:00 PM intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 2,
+          "said": "Saturday 5:00 PM intentions"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-vianney-gladwyne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 1,
+          "said": "Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 1,
+          "said": "Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 2,
+          "said": "Saturday 8:00 AM intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 2,
+          "said": "Saturday 8:00 AM intentions"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-vianney-gladwyne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 1,
+          "said": "Weekday: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 1,
+          "said": "Weekday: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 10,
+          "said": "Weekday (Monday-Friday): 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 10,
+          "said": "Weekday (Monday-Friday): 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 2,
+          "said": "7:30 AM intentions Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 2,
+          "said": "7:30 AM intentions Monday-Friday"
+        }
+      ],
+      "rationale": "R1: schedule boxes (p1, p10) and every weekday's intentions in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-vianney-gladwyne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 1,
+          "said": "Weekday: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 1,
+          "said": "Weekday: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 10,
+          "said": "Weekday (Monday-Friday): 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 10,
+          "said": "Weekday (Monday-Friday): 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 2,
+          "said": "7:30 AM intentions Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 2,
+          "said": "7:30 AM intentions Monday-Friday"
+        }
+      ],
+      "rationale": "R1: schedule boxes (p1, p10) and every weekday's intentions in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-vianney-gladwyne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 1,
+          "said": "Weekday: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 1,
+          "said": "Weekday: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 10,
+          "said": "Weekday (Monday-Friday): 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 10,
+          "said": "Weekday (Monday-Friday): 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 2,
+          "said": "7:30 AM intentions Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 2,
+          "said": "7:30 AM intentions Monday-Friday"
+        }
+      ],
+      "rationale": "R1: schedule boxes (p1, p10) and every weekday's intentions in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-vianney-gladwyne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 1,
+          "said": "Weekday: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 1,
+          "said": "Weekday: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 10,
+          "said": "Weekday (Monday-Friday): 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 10,
+          "said": "Weekday (Monday-Friday): 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 2,
+          "said": "7:30 AM intentions Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 2,
+          "said": "7:30 AM intentions Monday-Friday"
+        }
+      ],
+      "rationale": "R1: schedule boxes (p1, p10) and every weekday's intentions in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-vianney-gladwyne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 1,
+          "said": "Weekday: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 1,
+          "said": "Weekday: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 10,
+          "said": "Weekday (Monday-Friday): 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 10,
+          "said": "Weekday (Monday-Friday): 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 2,
+          "said": "7:30 AM intentions Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 2,
+          "said": "7:30 AM intentions Monday-Friday"
+        }
+      ],
+      "rationale": "R1: schedule boxes (p1, p10) and every weekday's intentions in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-vianney-gladwyne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 10,
+          "said": "SACRAMENT OF RECONCILIATION Saturday 4:15 PM - 4:45 PM or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 10,
+          "said": "SACRAMENT OF RECONCILIATION Saturday 4:15 PM - 4:45 PM or by appointment."
+        }
+      ],
+      "rationale": "R1: printed in the p10 directory of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 10,
+          "said": "or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-vianney-gladwyne",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "08:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Eucharist Day; exposition after the 7:30 AM Mass, Benediction at 7:00 PM"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 4,
+          "said": "EUCHARIST DAY TUESDAY, NOVEMBER 17, 2026 7:30 AM Mass / Following 7:30 AM Mass Exposition of the Blessed Sacrament / 7:00 PM Benediction and Eucharistic Reflection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 4,
+          "said": "Exposition of the Blessed Sacrament will begin following the 7:30 AM Mass and continue throughout the day, concluding with Benediction and a reflection on devotion to the Holy Eucharist at 7:00 PM."
+        }
+      ],
+      "rationale": "R1, R10, R16: a dated day of exposition in both issues; POLICY times 'following' a weekday Mass at 30 minutes after it (8:00 AM); the Nov 8 letter says it continues throughout the day and concludes with Benediction at 7:00 PM. On or after as_of (Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-vianney-gladwyne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-03",
+        "start_time": "06:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "NYC Christmas Pilgrimage, St. Patrick's Cathedral, New York"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 8,
+          "said": "NYC Christmas Pilgrimage, Thursday, December 3, 2026, 6:00 AM - 7:00 PM: MASS at Saint Patrick's Cathedral"
+        }
+      ],
+      "rationale": "R22: the pilgrimage Mass is at St. Patrick's Cathedral in New York, not a parish church. No Mass time is printed; 06:00 is only the trip's start (departure from the church parking lot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f56a377e",
+          "page": 1,
+          "said": "Holy Day: 7:30 AM & 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ff50d01c",
+          "page": 1,
+          "said": "Holy Day: 7:30 AM & 5:30 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: the standing box gives holy-day times with no date and no current dated notice; a holy day's date is not projected (like st-isaac-jogues-wayne s27; our-lady-of-consolation-parkesburg s12 included only because a dated notice pinned the day). Update mode will read December issues for Dec 8.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
