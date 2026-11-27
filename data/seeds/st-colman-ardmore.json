@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-colman-ardmore",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:44:54Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-26T21:11:01Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@c6dc1bcaf24b",
+  "approved_at": "2026-11-27T00:37:27Z",
   "summary": "One church. Both issues (Nov 8, Nov 15) and the website agree: Sat 4 PM vigil, Sun 8, 9:30 and 12, Mon-Sat 8 AM Mass, Sat 3-3:45 PM confession. Open: the Immaculate Conception vigil and noon Mass from the standing Holy Days line, and Nov 30 6 PM Exposition/Benediction at the St. Francis evening.",
   "blocked_reason": null,
   "bulletins": [
@@ -581,9 +581,22 @@
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-colman-ardmore",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of the Immaculate Conception"
+      },
       "page": 1,
       "sources": [
         {
@@ -631,14 +644,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:27Z"
+      },
       "group": "immaculate"
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-colman-ardmore",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
       "page": 1,
       "sources": [
         {
@@ -686,14 +716,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:27Z"
+      },
       "group": "immaculate"
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-colman-ardmore",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-30",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction; Saint Francis of Assisi at Christmas evening"
+      },
       "page": 4,
       "sources": [
         {
@@ -735,7 +782,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:27Z"
+      }
     },
     {
       "id": "s15",

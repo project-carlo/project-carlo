@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-pius-x-broomall",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:46:51Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-26T23:10:42Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@c6dc1bcaf24b",
+  "approved_at": "2026-11-27T00:37:36Z",
   "summary": "One church. Weekend, weekday and Saturday confession times agree in both image-only issues (Nov 8 and Nov 15), the intentions and the website; the newest adds dated Advent evenings (Dec 1/15 Adoration, Dec 8 7 PM Mass, Dec 22 penance). Open: whether the Divine Mercy Adoration Chapel (no address printed) is at the church, the holy-day box's Dec 7 vigil and Dec 8 12:05 Masses, and the Over 50 Club's Nov 17 memorial Mass.",
   "blocked_reason": null,
   "bulletins": [
@@ -994,9 +994,22 @@
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -1038,14 +1051,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:36Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s26",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -1087,14 +1117,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:36Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s27",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -1136,14 +1183,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:36Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s28",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -1185,14 +1249,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:36Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s29",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -1234,14 +1315,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:36Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s30",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -1283,14 +1381,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:36Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s31",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -1332,14 +1447,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:36Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s32",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of the Immaculate Conception"
+      },
       "page": 2,
       "sources": [
         {
@@ -1387,14 +1519,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:36Z"
+      },
       "group": "holyday"
     },
     {
       "id": "s33",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Solemnity of the Immaculate Conception"
+      },
       "page": 2,
       "sources": [
         {
@@ -1442,14 +1591,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:36Z"
+      },
       "group": "holyday"
     },
     {
       "id": "s34",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-broomall",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "For deceased members of the Over 50 Club"
+      },
       "page": 3,
       "sources": [
         {
@@ -1491,7 +1657,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:36Z"
+      }
     }
   ]
 }

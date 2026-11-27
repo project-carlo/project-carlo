@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-cross-springfield",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:40:22Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T23:33:06Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@c6dc1bcaf24b",
+  "approved_at": "2026-11-27T00:37:53Z",
   "summary": "One church. Weekend (Sat 4:30 PM; Sun 8:30, 11:00 AM), Tue-Fri 8:30 AM Masses, Saturday 3:30-4 PM Confession and weekday 9 AM-7 PM Adoration Chapel agree in both bulletins (Nov 8 and Nov 15, both image-only) and on the website. Open: whether the Dec 3 Nocturnal Adoration Society hour is at Holy Cross.",
   "blocked_reason": null,
   "bulletins": [
@@ -744,9 +744,22 @@
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-church-springfield",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-03",
+        "start_time": "19:30",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Andrew Nocturnal Adoration Society"
+      },
       "page": 6,
       "sources": [
         {
@@ -788,7 +801,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:53Z"
+      }
     }
   ]
 }

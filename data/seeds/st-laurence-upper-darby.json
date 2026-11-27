@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-laurence-upper-darby",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:46:10Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-26T23:40:35Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@c6dc1bcaf24b",
+  "approved_at": "2026-11-27T00:37:49Z",
   "summary": "Two churches: St. Laurence (all English and Spanish Masses, Saturday confession) and St. Alice (Sunday 10 AM Vietnamese). Both bulletins (Nov 8, Nov 15; image-only) print the same schedule box. Open: Wednesday Adoration start (box 9:30 vs 9:00 elsewhere) and a Dec 11 Guadalupe Mass with no church named; the website's Wednesday 6:30 PM Spanish Mass is left out as contradicted by the intentions.",
   "blocked_reason": null,
   "bulletins": [
@@ -668,9 +668,22 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
       "page": 1,
       "sources": [
         {
@@ -746,7 +759,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:49Z"
+      }
     },
     {
       "id": "s18",
@@ -788,9 +805,22 @@
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-laurence-church-upper-darby",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-11",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
       "page": null,
       "sources": [
         {
@@ -826,7 +856,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:49Z"
+      }
     },
     {
       "id": "s20",

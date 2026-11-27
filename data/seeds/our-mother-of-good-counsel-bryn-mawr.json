@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-mother-of-good-counsel-bryn-mawr",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:44:02Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-26T21:20:47Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@c6dc1bcaf24b",
+  "approved_at": "2026-11-27T00:37:31Z",
   "summary": "One church, Our Mother of Good Counsel, Bryn Mawr. The schedule box (Sat 5 PM; Sun 8, 10, 11:30 AM, 7 PM; Mon-Fri 6:30 and 8 AM; Sat 8 AM; Sat confession 11:30-12) is identical in both image-only issues and matches the calendars and intentions; St. Thomas of Villanova's Masses in the same box are left out. Dated: Thanksgiving 9 AM, Dec 8 7 PM, Dec 9 Taizé Adoration. Open: whether Thanksgiving week's 'One Mass' days cancel the other weekday Masses.",
   "blocked_reason": null,
   "bulletins": [
@@ -864,9 +864,22 @@
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving: one Mass at 9 AM"
+      },
       "page": 6,
       "sources": [
         {
@@ -908,14 +921,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:31Z"
+      },
       "group": "one-mass"
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving: one Mass at 9 AM"
+      },
       "page": 6,
       "sources": [
         {
@@ -957,14 +987,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:31Z"
+      },
       "group": "one-mass"
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-good-counsel-bryn-mawr",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "One Mass at 8 AM"
+      },
       "page": 6,
       "sources": [
         {
@@ -1000,7 +1047,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:31Z"
+      },
       "group": "one-mass"
     },
     {

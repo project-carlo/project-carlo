@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-charles-borromeo-drexel-hill",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:44:52Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-26T23:25:23Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@c6dc1bcaf24b",
+  "approved_at": "2026-11-27T00:37:42Z",
   "summary": "One church (St. Charles Borromeo), partnered with Sacred Heart, Havertown, whose times are excluded (R22). Sunday 10 AM and 4 PM, Thu-Sat 8:30 AM Masses, Saturday 9-10 AM confession and Thursday 6-7 PM Flame of Love Holy Hour agree in both bulletins and the website. Open: First Friday Holy Hour time (bulletins 7-8 PM vs website 6:30-7:30) and the untimed First Saturday Exposition; the Thursday-before-First-Friday confession is excluded under R33.",
   "blocked_reason": null,
   "bulletins": [
@@ -353,9 +353,24 @@
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-drexel-hill",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour of Reparation"
+      },
       "page": 1,
       "sources": [
         {
@@ -423,13 +438,32 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:42Z"
+      }
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-drexel-hill",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass; Benediction"
+      },
       "page": 1,
       "sources": [
         {
@@ -478,7 +512,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:42Z"
+      }
     },
     {
       "id": "s11",

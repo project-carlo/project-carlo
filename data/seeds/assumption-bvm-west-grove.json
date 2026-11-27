@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "assumption-bvm-west-grove",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T15:57:51Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T22:59:59Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@c6dc1bcaf24b",
+  "approved_at": "2026-11-27T00:37:14Z",
   "summary": "One church. Both bulletins (Nov 8, Nov 15) print the same schedule: Sat 4:30 PM, Sun 8 and 10 AM, 8:15 AM Mon/Tue/Wed/Fri/Sat (no Thursday Mass since July 1), Sat 3:15-4:15 PM Confession, and weekday Adoration 9 AM-7 PM in the on-site Adoration Chapel. Dated: Thanksgiving 9 AM Mass and no Adoration Nov 26 (bulletin); Dec 8 and Christmas Masses from the parish's 2026 holy-day web list. Open: the web list's Dec 8 6:30 AM Mass, which conflicts with the dropped 6:30 AM Masses.",
   "blocked_reason": null,
   "bulletins": [
@@ -893,9 +893,22 @@
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
       "page": 4,
       "sources": [
         {
@@ -936,7 +949,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:14Z"
+      }
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-francis-of-assisi-springfield",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:45:22Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-26T23:55:36Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@c6dc1bcaf24b",
+  "approved_at": "2026-11-27T00:37:57Z",
   "summary": "One church. Both read issues (Nov 8, Nov 15) have no schedule box; their Mass intentions list Mon-Sat 8 AM, Sat 3 PM Confessions and 4 PM, Sun 7:30/9:30/11:30, and Wednesday Adoration after the 8 AM Mass, all matching the current website, which supplies the Confession end (3:45) and the Adoration end and Jan-Nov season. Christmas 2026 dates come from the parish's own dated 2026-2027 schedule PDF. Open: the December Wednesday 7 PM Holy Hour (leaning leave out).",
   "blocked_reason": null,
   "bulletins": [
@@ -560,9 +560,27 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 12,
+          "start_day": null,
+          "end_month": 12,
+          "end_day": null
+        },
+        "note": "Holy Hour"
+      },
       "page": null,
       "sources": [
         {
@@ -602,7 +620,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@c6dc1bcaf24b",
+        "at": "2026-11-27T00:37:57Z"
+      }
     },
     {
       "id": "s14",
