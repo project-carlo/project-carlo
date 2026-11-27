@@ -45,6 +45,7 @@ from urllib.parse import unquote, urlsplit
 
 from pdf_extract.bulletin_week import bulletin_reference_date, bulletin_week, parse_iso_date
 from pdf_extract.model import (
+    CONTINUOUS,
     DAYS,
     FACEBOOK,
     WEBSITE,
@@ -340,7 +341,9 @@ def check_seed(
                         break
                 included_entries.append((entry, slot["id"]))
                 date = slot["entry"].get("date")
-                if as_of_date and slot["entry"]["event_kind"] != "weekly" and date < as_of_date:
+                # A continuous chapel, like a weekly slot, has no date to be before as_of.
+                if as_of_date and slot["entry"]["event_kind"] not in ("weekly", CONTINUOUS) \
+                        and date < as_of_date:
                     problems.append(
                         f"{where} is dated {date}, before as_of ({as_of_date}): a seed holds "
                         "only dated entries from as_of on"

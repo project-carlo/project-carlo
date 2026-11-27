@@ -262,7 +262,8 @@ def diff(seed: dict[str, Any], history: list[dict[str, Any]]) -> dict[str, Any]:
     for bulletin in usable:
         variant_of = {id(ev): slot for ev, slot in variants(slots, bulletin["events"])}
         for ev in bulletin["events"]:
-            if ev.get("event_kind") != "weekly" and first and (ev.get("date") or "") < first:
+            if ev.get("event_kind") not in ("weekly", CONTINUOUS) and first \
+                    and (ev.get("date") or "") < first:
                 continue
             if any(matches(e, ev) for e in entries):
                 continue
