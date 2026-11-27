@@ -1,0 +1,1714 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-agnes-sellersville",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:23Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T21:15:18Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Agnes, Sellersville. Both November issues (image-only) print the same schedule box: Sat 5:15 PM vigil, Sun 8/10/12, Mon-Fri 8 AM, Sat 9 AM, Saturday confession; the website matches except Saturday morning confession ending 8:50. Dated: Thanksgiving 9 AM Mass, no Mass Fri Nov 27. Open: the Saturday morning confession end, and placing the 24/7 JPII Adoration Chapel (door code) at the church.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+      "fetched_at": "2026-11-15T16:44:23Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c0f610a3351784f0c15d619305f6be186086769dbab6ee4276d41eb37e0c4f18",
+      "fetched_at": "2026-11-08T15:53:24Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+      "bulletins": [
+        "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+        "c0f610a3351784f0c15d619305f6be186086769dbab6ee4276d41eb37e0c4f18"
+      ],
+      "cached": false,
+      "cost_usd": 0.002497,
+      "at": "2026-11-27T21:21:05.514123+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 1,
+          "said": "Saturday Vigil: 5:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 1,
+          "said": "Saturday Vigil: 5:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 6,
+          "said": "Saturday, November 21 ... 5:15 PM +Paul Wilczynski"
+        },
+        {
+          "source": "c1",
+          "bulletin": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil: 5:15 PM”"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both issues; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM & 12:00 (Noon)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM & 12:00 (Noon)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 6,
+          "said": "Sunday, November 22 ... 8:00 AM / 10:00 AM / 12:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sundays: 8:00 AM, 10:00 AM & 12:00 (Noon)”"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both issues; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM & 12:00 (Noon)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM & 12:00 (Noon)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 6,
+          "said": "Sunday, November 22 ... 8:00 AM / 10:00 AM / 12:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sundays: 8:00 AM, 10:00 AM & 12:00 (Noon)”"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both issues; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM & 12:00 (Noon)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM & 12:00 (Noon)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 6,
+          "said": "Sunday, November 22 ... 8:00 AM / 10:00 AM / 12:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sundays: 8:00 AM, 10:00 AM & 12:00 (Noon)”"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both issues; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 6,
+          "said": "Monday ... Friday 8:00 AM intentions"
+        },
+        {
+          "source": "c1",
+          "bulletin": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: 8:00 AM (Monday-Friday)”"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both issues; intentions list 8:00 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 6,
+          "said": "Monday ... Friday 8:00 AM intentions"
+        },
+        {
+          "source": "c1",
+          "bulletin": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: 8:00 AM (Monday-Friday)”"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both issues; intentions list 8:00 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 6,
+          "said": "Monday ... Friday 8:00 AM intentions"
+        },
+        {
+          "source": "c1",
+          "bulletin": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: 8:00 AM (Monday-Friday)”"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both issues; intentions list 8:00 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 6,
+          "said": "Monday ... Friday 8:00 AM intentions"
+        },
+        {
+          "source": "c1",
+          "bulletin": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: 8:00 AM (Monday-Friday)”"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both issues; intentions list 8:00 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 1,
+          "said": "Weekdays: 8:00 AM (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 6,
+          "said": "Monday ... Friday 8:00 AM intentions"
+        },
+        {
+          "source": "c1",
+          "bulletin": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: 8:00 AM (Monday-Friday)”"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both issues; intentions list 8:00 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 1,
+          "said": "Saturdays: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 1,
+          "said": "Saturdays: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 6,
+          "said": "Saturday, November 21 ... 9:00 AM +John Benz"
+        },
+        {
+          "source": "c1",
+          "bulletin": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturdays: 9:00 AM”"
+        }
+      ],
+      "rationale": "R1: Mass schedule box of both issues; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturdays: 8:15-8:45 AM / 4:00-4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturdays: 8:15-8:45 AM / 4:00-4:45 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://stagneschurch.org/liturgy/mass-confession-times/",
+          "said": "Saturday : 8:15-8:50AM; 4:00-4:45PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturdays: 8:15-8:45 AM / 4:00-4:45 PM. (*) Schedules change around Christmas & Easter.”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the website gives the same afternoon window.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 1,
+          "said": "Saturdays: 8:15-8:45 AM / 4:00-4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 1,
+          "said": "Saturdays: 8:15-8:45 AM / 4:00-4:45 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://stagneschurch.org/liturgy/mass-confession-times/",
+          "said": "Saturday : 8:15-8:50AM; 4:00-4:45PM"
+        },
+        {
+          "source": "website",
+          "url": "https://stagneschurch.org/",
+          "said": "Saturday: 8:15 – 8:50 AM; 4:00 – 4:45 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Saturdays: 8:15-8:45 AM / 4:00-4:45 PM. (*) Schedules change around Christmas & Easter.”"
+        }
+      ],
+      "rationale": "R28/R6: both bulletins' box print 8:45; both website pages print 8:50, a real if small conflict. Leaning per precedent annunciation-bvm-havertown s9 (bulletin over website); the 8:50 may be when the 9:00 Mass preparation starts, and the bulletin is the edited weekly source.",
+      "question": "Saturday morning confession: end at 8:45 AM (bulletin) or 8:50 AM (website)?",
+      "options": [
+        {
+          "label": "Saturdays 8:15-8:45 AM (bulletin)",
+          "entry": {
+            "church_slug": "st-agnes-sellersville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:15",
+            "end_time": "08:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Saturdays 8:15-8:50 AM (website)",
+          "entry": {
+            "church_slug": "st-agnes-sellersville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:15",
+            "end_time": "08:50",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 1,
+          "said": "ST. JOHN PAUL 11 ADORATION CHAPEL The Chapel is open all days, anytime. Please find the access code on our website."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 1,
+          "said": "ST. JOHN PAUL 11 ADORATION CHAPEL The Chapel is open all days, anytime. Please find the access code on our website."
+        },
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 6,
+          "said": "Sanctuary candles which burn in both the Adoration Chapel and in the daily Mass Chapel ... sign-in table in the Adoration Chapel or at the parish office"
+        },
+        {
+          "source": "website",
+          "url": "https://stagneschurch.org/liturgy/jpii-adoration-chapel/",
+          "said": "24/7 Adoration ... The John Paul II Adoration Chapel is always locked for the safety of visitors ... click the button for the door code"
+        }
+      ],
+      "rationale": "R46/R38: a standing chapel open around the clock, locked at all hours, so access=code. The parish has one church and the chapel is printed in its own schedule box and on its site, but no page gives the chapel's address (POLICY leaves out a chapel whose location is unclear). Leaning per precedent ss-philip-and-james-exton s15 and st-pius-x-broomall s25. Exposition isn't claimed: the site says the Sacrament is behind a curtain outside scheduled-adorer hours.",
+      "question": "Is the St. John Paul II Adoration Chapel (open 24/7, always locked, door code) at St. Agnes Church, so it is recorded there as a 24-hour chapel with a code?",
+      "options": [
+        {
+          "label": "24-hour chapel at the church, code",
+          "entry": {
+            "church_slug": "st-agnes-sellersville",
+            "event_type": "adoration",
+            "event_kind": "continuous",
+            "day_of_week": null,
+            "date": null,
+            "start_time": null,
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. John Paul II Adoration Chapel",
+            "access": "code",
+            "open_from": null,
+            "open_until": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 5,
+          "said": "Thanksgiving Day Mass in Church Thursday, November 26, 2026 9:00 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+          "page": 5,
+          "said": "gpt-6-luna read the same: B1 p5 “Thanksgiving Day Mass at Church Thursday, November 26, 2026 9:00 a.m.”"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass at the church after as_of. R17: the notice doesn't say the weekly Thursday 8:00 AM is cancelled, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 5,
+          "said": "Please note: There will be no Mass on Friday, November 27."
+        },
+        {
+          "source": "c1",
+          "bulletin": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: 8:00 AM (Monday-Friday)”"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin cancels one date of the weekly Friday 8:00 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Retreat for Women"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 5,
+          "said": "ADVENT RETREAT For Women DECEMBER 2ND | 5PM-9PM ST. AGNES CHURCH & SOCIAL HALL Enter into Advent with Adoration, praise & worship, a catered dinner & a talk"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 5,
+          "said": "Registration forms can be found at all exits of the Church"
+        }
+      ],
+      "rationale": "POLICY, Final source checks: the Adoration is one component of a 5-9 PM retreat with no program order or time of its own, so the event's hours aren't copied onto it; the retreat is also registered (as st-agnes-west-chester s24 left out a registered retreat's Holy Hour).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-sellersville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Prayer for Priestly Vocations, Adoration Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 2,
+          "said": "The Parish Vocation Ministry invites you to pray for Priestly Vocations on the First Friday of the Month from 6-7 PM in the Adoration Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 2,
+          "said": "The Parish Vocation Ministry invites you to pray for Priestly Vocations on the First Friday of the Month from 6-7 PM in the Adoration Chapel."
+        }
+      ],
+      "rationale": "R24: a prayer gathering not called Adoration, Exposition or a Holy Hour (POLICY, What to extract), as st-thomas-more-south-coventry s18 left out a Night of Reparation; it meets in the 24-hour chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 1,
+          "said": "Holy Days: Vigil-5:15 PM, 9:00 AM & 7:00 PM * (*) Schedule Varies—Check Parish Bulletin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 1,
+          "said": "Holy Days: Vigil-5:15 PM, 9:00 AM & 7:00 PM * (*) Schedule Varies—Check Parish Bulletin"
+        }
+      ],
+      "rationale": "POLICY, Dates: a generic holy-day line pins no date, and it says the schedule varies; no read issue prints the Dec 8 times (as st-isaac-jogues-wayne s27). Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 1,
+          "said": "ROSARY Mondays - 6:30 PM (Adoration Chapel) Saturdays - 8:00 AM (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c0f610a3",
+          "page": 1,
+          "said": "ROSARY Mondays - 6:30 PM (Adoration Chapel) Saturdays - 8:00 AM (Church)"
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion POLICY leaves out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "49cf51e5",
+          "page": 5,
+          "said": "Annual Ecumenical Thanksgiving Prayer Service on Wednesday, November 25 at 7 PM at St. Agnes Church"
+        }
+      ],
+      "rationale": "R24: an ecumenical prayer service is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "b0926c89555852ccf269ebbc906142ad",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T21:21:05.514123+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "49cf51e5afd3e29bcf212dc9ed8f3d4b0a36bca8e4d47cccaf5ba470445a6ff5",
+        "fetched_at": "2026-11-15T16:44:23Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "c0f610a3351784f0c15d619305f6be186086769dbab6ee4276d41eb37e0c4f18",
+        "fetched_at": "2026-11-08T15:53:24Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002497,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil: 5:15 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil: 5:15 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sundays: 8:00 AM, 10:00 AM & 12:00 (Noon)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sundays: 8:00 AM, 10:00 AM & 12:00 (Noon)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sundays: 8:00 AM, 10:00 AM & 12:00 (Noon)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sundays: 8:00 AM, 10:00 AM & 12:00 (Noon)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sundays: 8:00 AM, 10:00 AM & 12:00 (Noon)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sundays: 8:00 AM, 10:00 AM & 12:00 (Noon)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: 8:00 AM (Monday-Friday)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: 8:00 AM (Monday-Friday)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: 8:00 AM (Monday-Friday)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: 8:00 AM (Monday-Friday)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: 8:00 AM (Monday-Friday)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: 8:00 AM (Monday-Friday)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: 8:00 AM (Monday-Friday)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: 8:00 AM (Monday-Friday)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: 8:00 AM (Monday-Friday)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: 8:00 AM (Monday-Friday)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays: 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays: 9:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": "08:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays: 8:15-8:45 AM / 4:00-4:45 PM. (*) Schedules change around Christmas & Easter."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays: 8:15-8:45 AM / 4:00-4:45 PM. (*) Schedules change around Christmas & Easter."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": "16:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays: 8:15-8:45 AM / 4:00-4:45 PM. (*) Schedules change around Christmas & Easter."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays: 8:15-8:45 AM / 4:00-4:45 PM. (*) Schedules change around Christmas & Easter."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "St. John Paul II Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "ST. JOHN PAUL II ADORATION CHAPEL - The Chapel is open all days, anytime. Please find the access code on our website."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "ST. JOHN PAUL II ADORATION CHAPEL - The Chapel is open all days, anytime. Please find the access code on our website."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "St. John Paul II Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "ST. JOHN PAUL II ADORATION CHAPEL - The Chapel is open all days, anytime. Please find the access code on our website."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "ST. JOHN PAUL II ADORATION CHAPEL - The Chapel is open all days, anytime. Please find the access code on our website."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "St. John Paul II Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "ST. JOHN PAUL II ADORATION CHAPEL - The Chapel is open all days, anytime. Please find the access code on our website."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "ST. JOHN PAUL II ADORATION CHAPEL - The Chapel is open all days, anytime. Please find the access code on our website."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "St. John Paul II Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "ST. JOHN PAUL II ADORATION CHAPEL - The Chapel is open all days, anytime. Please find the access code on our website."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "ST. JOHN PAUL II ADORATION CHAPEL - The Chapel is open all days, anytime. Please find the access code on our website."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "St. John Paul II Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "ST. JOHN PAUL II ADORATION CHAPEL - The Chapel is open all days, anytime. Please find the access code on our website."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "ST. JOHN PAUL II ADORATION CHAPEL - The Chapel is open all days, anytime. Please find the access code on our website."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o18",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "St. John Paul II Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "ST. JOHN PAUL II ADORATION CHAPEL - The Chapel is open all days, anytime. Please find the access code on our website."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "ST. JOHN PAUL II ADORATION CHAPEL - The Chapel is open all days, anytime. Please find the access code on our website."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o19",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "St. John Paul II Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "ST. JOHN PAUL II ADORATION CHAPEL - The Chapel is open all days, anytime. Please find the access code on our website."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "ST. JOHN PAUL II ADORATION CHAPEL - The Chapel is open all days, anytime. Please find the access code on our website."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o20",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Thanksgiving Day Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "Thanksgiving Day Mass at Church Thursday, November 26, 2026 9:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o21",
+        "entry": {
+          "church_slug": "st-agnes-sellersville",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-27",
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": true,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: 8:00 AM (Monday-Friday)"
+          },
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "Please note: There will be no Mass on Friday, November 27."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "037b987f4a9e1fe2bf40e5f2bfa09cbf8e65c8c30fda319d0a890a4dd4900fcb",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "missing",
+        "fields": [],
+        "opinion": [
+          "o13",
+          "o14",
+          "o15",
+          "o16",
+          "o17",
+          "o18",
+          "o19"
+        ],
+        "slots": [],
+        "opinion_said": "adoration Sun,Mon,Tue,Wed,Thu,Fri,Sat 00:00-23:59 @st-agnes-sellersville",
+        "seed_said": "-",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "49cf51e5",
+              "page": 1,
+              "said": "ST. JOHN PAUL 11 ADORATION CHAPEL The Chapel is open all days, anytime. Please find the access code on our website."
+            }
+          ],
+          "why": "R46: a chapel open around the clock is one 'adoration 24h' slot with access=code, never seven 00:00-23:59 weekly slots. That slot is the leaning option of question s13, which asks whether the chapel is at the church: no page gives its address (POLICY, Churches and chapels; R38).",
+          "at": "2026-11-27T21:21:22Z"
+        }
+      }
+    ]
+  }
+}
