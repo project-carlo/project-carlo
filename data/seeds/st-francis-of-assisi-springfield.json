@@ -1,0 +1,961 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-francis-of-assisi-springfield",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:45:22Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-26T23:55:36Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both read issues (Nov 8, Nov 15) have no schedule box; their Mass intentions list Mon-Sat 8 AM, Sat 3 PM Confessions and 4 PM, Sun 7:30/9:30/11:30, and Wednesday Adoration after the 8 AM Mass, all matching the current website, which supplies the Confession end (3:45) and the Adoration end and Jan-Nov season. Christmas 2026 dates come from the parish's own dated 2026-2027 schedule PDF. Open: the December Wednesday 7 PM Holy Hour (leaning leave out).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "04a5e8063f47d122b43de0be0bce3fc61e63b496fada4b34a870b716a45eeafb",
+      "fetched_at": "2026-11-15T16:45:22Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e0196937ba1a0a6775fc30c4f03fc8d2d6e68722f475b8e87f536b6c3ec7f9e4",
+      "fetched_at": "2026-11-08T15:54:10Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04a5e806",
+          "page": 2,
+          "said": "Sunday, November 15, 2026 7:30AM ... 9:30AM ... 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0196937",
+          "page": 2,
+          "said": "Sunday, November 15, 2026 7:30AM ... 9:30AM ... 11:30AM"
+        },
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/",
+          "said": "Sunday: 7:30AM, 9:30AM, 11:30AM"
+        }
+      ],
+      "rationale": "R1, R35: Mass intentions of both issues list Sunday 7:30, 9:30 and 11:30 AM Masses in both weeks; the website's Mass Schedule agrees. The bulletin has no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04a5e806",
+          "page": 2,
+          "said": "Sunday, November 15, 2026 7:30AM ... 9:30AM ... 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0196937",
+          "page": 2,
+          "said": "Sunday, November 15, 2026 7:30AM ... 9:30AM ... 11:30AM"
+        },
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/",
+          "said": "Sunday: 7:30AM, 9:30AM, 11:30AM"
+        }
+      ],
+      "rationale": "R1, R35: Mass intentions of both issues list Sunday 7:30, 9:30 and 11:30 AM Masses in both weeks; the website's Mass Schedule agrees. The bulletin has no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04a5e806",
+          "page": 2,
+          "said": "Sunday, November 15, 2026 7:30AM ... 9:30AM ... 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0196937",
+          "page": 2,
+          "said": "Sunday, November 15, 2026 7:30AM ... 9:30AM ... 11:30AM"
+        },
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/",
+          "said": "Sunday: 7:30AM, 9:30AM, 11:30AM"
+        }
+      ],
+      "rationale": "R1, R35: Mass intentions of both issues list Sunday 7:30, 9:30 and 11:30 AM Masses in both weeks; the website's Mass Schedule agrees. The bulletin has no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04a5e806",
+          "page": 2,
+          "said": "Saturday ... 4:00PM For the People of the Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0196937",
+          "page": 2,
+          "said": "Saturday ... 4:00PM For the People of the Parish"
+        },
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/",
+          "said": "Saturday Vigil: 4:00PM"
+        }
+      ],
+      "rationale": "R1, R35: intentions of both weeks list Saturday 4:00 PM; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04a5e806",
+          "page": 2,
+          "said": "8:00AM (each day Monday through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0196937",
+          "page": 2,
+          "said": "8:00AM (each day Monday through Saturday)"
+        },
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/",
+          "said": "Monday ~ Saturday: 8:00AM"
+        }
+      ],
+      "rationale": "R1, R35: intentions of both weeks list an 8:00 AM Mass every Monday-Saturday; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04a5e806",
+          "page": 2,
+          "said": "8:00AM (each day Monday through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0196937",
+          "page": 2,
+          "said": "8:00AM (each day Monday through Saturday)"
+        },
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/",
+          "said": "Monday ~ Saturday: 8:00AM"
+        }
+      ],
+      "rationale": "R1, R35: intentions of both weeks list an 8:00 AM Mass every Monday-Saturday; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04a5e806",
+          "page": 2,
+          "said": "8:00AM (each day Monday through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0196937",
+          "page": 2,
+          "said": "8:00AM (each day Monday through Saturday)"
+        },
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/",
+          "said": "Monday ~ Saturday: 8:00AM"
+        }
+      ],
+      "rationale": "R1, R35: intentions of both weeks list an 8:00 AM Mass every Monday-Saturday; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04a5e806",
+          "page": 2,
+          "said": "8:00AM (each day Monday through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0196937",
+          "page": 2,
+          "said": "8:00AM (each day Monday through Saturday)"
+        },
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/",
+          "said": "Monday ~ Saturday: 8:00AM"
+        }
+      ],
+      "rationale": "R1, R35: intentions of both weeks list an 8:00 AM Mass every Monday-Saturday; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04a5e806",
+          "page": 2,
+          "said": "8:00AM (each day Monday through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0196937",
+          "page": 2,
+          "said": "8:00AM (each day Monday through Saturday)"
+        },
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/",
+          "said": "Monday ~ Saturday: 8:00AM"
+        }
+      ],
+      "rationale": "R1, R35: intentions of both weeks list an 8:00 AM Mass every Monday-Saturday; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04a5e806",
+          "page": 2,
+          "said": "8:00AM (each day Monday through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0196937",
+          "page": 2,
+          "said": "8:00AM (each day Monday through Saturday)"
+        },
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/",
+          "said": "Monday ~ Saturday: 8:00AM"
+        }
+      ],
+      "rationale": "R1, R35: intentions of both weeks list an 8:00 AM Mass every Monday-Saturday; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04a5e806",
+          "page": 2,
+          "said": "Saturday ... 3:00PM Confessions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0196937",
+          "page": 2,
+          "said": "Saturday ... 3:00PM Confessions"
+        },
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/",
+          "said": "Confessions: Saturday Afternoons Between 3:00PM~3:45PM",
+          "schedule_check": {
+            "checked_at": "2026-11-26T23:58:59Z",
+            "current_because": "Fetched 2026-11-26: homepage gives the Nov 29, 2026 Gospel, Thanksgiving 2026 office closing and funerals as of November 25; current pastor era",
+            "bulletin": "04a5e806",
+            "fits_because": "Both bulletins list Saturday 3:00PM Confessions with no end; the site's start time and Mass times match the bulletin exactly, so it supplies the 3:45 end (R6)."
+          }
+        }
+      ],
+      "rationale": "R1, R35, R6: both issues list Saturday 3:00 PM Confessions; the parish website gives the 3:45 PM end the bulletin lacks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 1,
+          "start_day": null,
+          "end_month": 11,
+          "end_day": null
+        },
+        "note": "Holy Hour 7-8 PM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04a5e806",
+          "page": 2,
+          "said": "Wednesday ... 8:00AM ... ADORATION (Following 8AM Mass through Holy Hour)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0196937",
+          "page": 2,
+          "said": "Wednesday ... 8:00AM ... ADORATION (Following 8AM Mass through Holy Hour)"
+        },
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/",
+          "said": "Adoration of the Blessed Sacrament January ~ November Wednesdays following 8AM Mass through evening Holy Hour 7PM~ 8PM",
+          "schedule_check": {
+            "checked_at": "2026-11-26T23:58:59Z",
+            "current_because": "Fetched 2026-11-26: homepage gives the Nov 29, 2026 Gospel, Thanksgiving 2026 office closing and funerals as of November 25; current pastor era",
+            "bulletin": "04a5e806",
+            "fits_because": "Both bulletins print Wednesday Adoration 'Following 8AM Mass through Holy Hour' without clock times; the site names the same service and gives the Holy Hour 7-8 PM and the January-November season."
+          }
+        }
+      ],
+      "rationale": "R1, R10, R6: both issues print Wednesday Adoration following the 8 AM Mass (weekday: starts 8:30 AM, POLICY Times) through the Holy Hour; the current website gives that Holy Hour as 7-8 PM (end 8:00 PM) and limits the all-day Adoration to January-November (season). The Holy Hour sits inside it (R37).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sfaparish.org/adoration/",
+          "said": "During the month of December, There is NO Adoration following 8AM Daily Mass. Wednesday Evening 7PM Holy Hour may vary due to other seasonal events."
+        }
+      ],
+      "rationale": "R30, R6: the website says the December Holy Hour 'may vary due to other seasonal events' and to refer to the bulletin; neither read issue covers December. Leaning to leave it out (a wrong time is worse than a missing one); update mode will read the December bulletins.",
+      "question": "Add the Wednesday 7-8 PM Holy Hour in December?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Wednesdays in December 7:00-8:00 PM",
+          "entry": {
+            "church_slug": "st-francis-of-assisi-church-springfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 12,
+              "start_day": null,
+              "end_month": 12,
+              "end_day": null
+            },
+            "note": "Holy Hour"
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Church and Leonard Hall"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/wp-content/uploads/Christmas-Schedule-2026-2027-website.pdf",
+          "said": "Christmas Eve Liturgies Thursday, December 24th *4:00PM (Church) 4:00PM (Leonard Hall)",
+          "schedule_check": {
+            "checked_at": "2026-11-26T23:58:59Z",
+            "current_because": "Fetched 2026-11-26: homepage gives the Nov 29, 2026 Gospel, Thanksgiving 2026 office closing and funerals as of November 25; current pastor era",
+            "bulletin": "04a5e806",
+            "fits_because": "The parish's own 2026-2027 Christmas schedule PDF, linked from the homepage; its weekdays match 2026 (Thu Dec 24) and its weekend times match the bulletins' Saturday 4 PM and Sunday 7:30/9:30/11:30."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's dated 2026-2027 Christmas schedule; unlike the stale or undated boxes in st-isaac-jogues-wayne s27 and st-joseph-coatesville s45, it names this year. Leonard Hall is the parish auditorium on the Saxer Avenue campus (homepage), so POLICY puts it at the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/wp-content/uploads/Christmas-Schedule-2026-2027-website.pdf",
+          "said": "7:30PM Solemn Christmas Vigil Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-26T23:58:59Z",
+            "current_because": "Fetched 2026-11-26: homepage gives the Nov 29, 2026 Gospel, Thanksgiving 2026 office closing and funerals as of November 25; current pastor era",
+            "bulletin": "04a5e806",
+            "fits_because": "Same 2026-2027 Christmas schedule; fits the bulletins' weekend times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: parish's dated 2026-2027 Christmas schedule (see the Dec 24 4 PM slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/wp-content/uploads/Christmas-Schedule-2026-2027-website.pdf",
+          "said": "Christmas Day Friday, December 25th MASSES WILL BE CELEBRATED AT 7:30AM, 9:30AM & 11:30AM",
+          "schedule_check": {
+            "checked_at": "2026-11-26T23:58:59Z",
+            "current_because": "Fetched 2026-11-26: homepage gives the Nov 29, 2026 Gospel, Thanksgiving 2026 office closing and funerals as of November 25; current pastor era",
+            "bulletin": "04a5e806",
+            "fits_because": "Same 2026-2027 Christmas schedule; fits the bulletins' weekend times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: parish's dated 2026-2027 Christmas schedule. No cancellation of the weekly Friday 8 AM is stated (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/wp-content/uploads/Christmas-Schedule-2026-2027-website.pdf",
+          "said": "Christmas Day Friday, December 25th MASSES WILL BE CELEBRATED AT 7:30AM, 9:30AM & 11:30AM",
+          "schedule_check": {
+            "checked_at": "2026-11-26T23:58:59Z",
+            "current_because": "Fetched 2026-11-26: homepage gives the Nov 29, 2026 Gospel, Thanksgiving 2026 office closing and funerals as of November 25; current pastor era",
+            "bulletin": "04a5e806",
+            "fits_because": "Same 2026-2027 Christmas schedule; fits the bulletins' weekend times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: parish's dated 2026-2027 Christmas schedule. No cancellation of the weekly Friday 8 AM is stated (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/wp-content/uploads/Christmas-Schedule-2026-2027-website.pdf",
+          "said": "Christmas Day Friday, December 25th MASSES WILL BE CELEBRATED AT 7:30AM, 9:30AM & 11:30AM",
+          "schedule_check": {
+            "checked_at": "2026-11-26T23:58:59Z",
+            "current_because": "Fetched 2026-11-26: homepage gives the Nov 29, 2026 Gospel, Thanksgiving 2026 office closing and funerals as of November 25; current pastor era",
+            "bulletin": "04a5e806",
+            "fits_because": "Same 2026-2027 Christmas schedule; fits the bulletins' weekend times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: parish's dated 2026-2027 Christmas schedule. No cancellation of the weekly Friday 8 AM is stated (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/wp-content/uploads/Christmas-Schedule-2026-2027-website.pdf",
+          "said": "SOLEMNITY OF MARY, MOTHER OF GOD Friday, January 1st Masses celebrated 8:00AM & 10:00AM",
+          "schedule_check": {
+            "checked_at": "2026-11-26T23:58:59Z",
+            "current_because": "Fetched 2026-11-26: homepage gives the Nov 29, 2026 Gospel, Thanksgiving 2026 office closing and funerals as of November 25; current pastor era",
+            "bulletin": "04a5e806",
+            "fits_because": "Same 2026-2027 Christmas schedule; its 8:00 AM matches the weekly Friday Mass in the bulletins."
+          }
+        }
+      ],
+      "rationale": "R6, R16: parish's dated 2026-2027 Christmas schedule; the 8:00 AM is the weekly Friday Mass (POLICY rule 6), so only 10:00 AM is dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-19",
+        "start_time": "14:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/wp-content/uploads/Christmas-Schedule-2026-2027-website.pdf",
+          "said": "Saturday, December 19th 2:00PM – 3:45PM (under CONFESSIONS)",
+          "schedule_check": {
+            "checked_at": "2026-11-26T23:58:59Z",
+            "current_because": "Fetched 2026-11-26: homepage gives the Nov 29, 2026 Gospel, Thanksgiving 2026 office closing and funerals as of November 25; current pastor era",
+            "bulletin": "04a5e806",
+            "fits_because": "Same 2026-2027 Christmas schedule; its Dec 12 and Dec 26 confessions repeat the bulletins' weekly Saturday 3:00 PM."
+          }
+        }
+      ],
+      "rationale": "R6, R16, R40: dated extended confession hours on Dec 19 in the parish's 2026-2027 Christmas schedule. No cancellation recorded (R17); the Dec 12, 26 and Jan 2 3:00-3:45 lines repeat the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-16",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Penance Service at St. Kevin Church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/wp-content/uploads/Christmas-Schedule-2026-2027-website.pdf",
+          "said": "ADVENT PENANCE SERVICE for St. Francis & St. Kevin Parishioners to be hosted by St. Kevin Church Wednesday, December 16th 7:00PM"
+        }
+      ],
+      "rationale": "R22: held at St. Kevin Church (st-kevin-church-springfield), another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-20",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Gospel choir Mass at St. Martin de Porres"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04a5e806",
+          "page": 4,
+          "said": "We will leave at 8:30AM to join the parish for their 10:00AM gospel choir Mass"
+        }
+      ],
+      "rationale": "R22: the Giving Tree delivery joins St. Martin de Porres parish in North Philadelphia for its Mass, another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-church-springfield",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-03-11",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Reconciliation"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sfaparish.org/reconciliation/",
+          "said": "First Reconciliation at Saint Francis of Assisi Parish will be held on Thursday, March 11, 2027 6:30PM"
+        }
+      ],
+      "rationale": "R25, POLICY (closed to a group): a second-grade sacramental celebration, not open confessions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
