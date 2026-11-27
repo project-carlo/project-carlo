@@ -1,0 +1,1290 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-rose-of-lima-north-wales",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:47:01Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-27T16:47:59Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Only one current bulletin (Nov 15, 2026); the other stored issue, 7d0bf2b7, is the Nov 10, 2024 bulletin and is used only to explain its superseded Friday Adoration. The schedule box, intentions and srol.org agree on weekend, weekday and Saturday confession times; Wednesday Adoration 9-5 and the Thanksgiving 9 AM Mass (in place of 8:30) come from the bulletin. Open: whether the Saturday 8:30 AM Mass stops in summer, as only the homepage says.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+      "fetched_at": "2026-11-15T16:47:01Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "7d0bf2b7ec5353a922cb0592b0e89f8242ea3e40bd7615ef8365cde53c224b10",
+      "fetched_at": "2026-11-08T15:55:26Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+      "bulletins": [
+        "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+        "7d0bf2b7ec5353a922cb0592b0e89f8242ea3e40bd7615ef8365cde53c224b10"
+      ],
+      "cached": false,
+      "cost_usd": 0.002403,
+      "at": "2026-11-27T16:53:49.029401+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-wales",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 14 ... 4:00 PM; SATURDAY, NOVEMBER 21 ... 4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.srol.org/worship-and-sacraments/mass-and-confession-schedule/",
+          "said": "Saturday Vigil: 4:00 p.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil: 4:00 p.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the Nov 15, 2026 schedule box and both Saturdays of its intentions; the website agrees. The only other stored issue (7d0bf2b7) is the Nov 10, 2024 bulletin, so it is not current evidence.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-wales",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 1,
+          "said": "Sunday: 8:00 a.m., 9:30 a.m. & 11:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 15 8:00 AM ... 9:30 AM ... 11:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.srol.org/worship-and-sacraments/mass-and-confession-schedule/",
+          "said": "Sunday: 8:00 am, 9:30 am & 11:30 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:00 a.m., 9:30 a.m. & 11:30 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the intentions of the Nov 15, 2026 issue; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-wales",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 1,
+          "said": "Sunday: 8:00 a.m., 9:30 a.m. & 11:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 15 8:00 AM ... 9:30 AM ... 11:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.srol.org/worship-and-sacraments/mass-and-confession-schedule/",
+          "said": "Sunday: 8:00 am, 9:30 am & 11:30 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:00 a.m., 9:30 a.m. & 11:30 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the intentions of the Nov 15, 2026 issue; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-wales",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 1,
+          "said": "Sunday: 8:00 a.m., 9:30 a.m. & 11:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 15 8:00 AM ... 9:30 AM ... 11:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.srol.org/worship-and-sacraments/mass-and-confession-schedule/",
+          "said": "Sunday: 8:00 am, 9:30 am & 11:30 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:00 a.m., 9:30 a.m. & 11:30 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the intentions of the Nov 15, 2026 issue; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-wales",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 8:30 AM ... FRIDAY, NOVEMBER 20 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.srol.org/worship-and-sacraments/mass-and-confession-schedule/",
+          "said": "Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 8:30 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and every weekday of the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-wales",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 8:30 AM ... FRIDAY, NOVEMBER 20 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.srol.org/worship-and-sacraments/mass-and-confession-schedule/",
+          "said": "Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 8:30 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and every weekday of the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-wales",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 8:30 AM ... FRIDAY, NOVEMBER 20 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.srol.org/worship-and-sacraments/mass-and-confession-schedule/",
+          "said": "Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 8:30 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and every weekday of the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-wales",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 8:30 AM ... FRIDAY, NOVEMBER 20 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.srol.org/worship-and-sacraments/mass-and-confession-schedule/",
+          "said": "Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 8:30 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and every weekday of the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-wales",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 8:30 AM ... FRIDAY, NOVEMBER 20 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.srol.org/worship-and-sacraments/mass-and-confession-schedule/",
+          "said": "Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 8:30 a.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and every weekday of the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21 8:30 AM James Allan Walko"
+        },
+        {
+          "source": "website",
+          "url": "https://www.srol.org/worship-and-sacraments/mass-and-confession-schedule/",
+          "said": "Monday - Saturday: 8:30 a.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.srol.org/",
+          "said": "8:30 AM - Monday - Saturday (No Saturday 8:30am in the Summer)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Monday - Saturday: 8:30 a.m.”"
+        }
+      ],
+      "rationale": "R30, R33: the Nov 15 box and intentions print a Saturday 8:30 AM Mass with no season, as does the website's schedule page; only the homepage adds 'No Saturday 8:30am in the Summer', which names no months, so the format can only approximate it. Leaning per precedent holy-saviour-norristown s10: keep it year-round as the bulletin prints; update mode will read the summer bulletins.",
+      "question": "Saturday 8:30 AM Mass: year-round, as the bulletin and schedule page print, or not in summer as the homepage says?",
+      "options": [
+        {
+          "label": "Saturdays 8:30 AM year-round",
+          "entry": {
+            "church_slug": "st-rose-of-lima-north-wales",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Saturdays 8:30 AM, September-May",
+          "entry": {
+            "church_slug": "st-rose-of-lima-north-wales",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-wales",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 1,
+          "said": "ADORATION Wednesday: 9:00 a.m. - 5:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 3,
+          "said": "Adoration begins after the 8:30 AM Mass and continues until 5:00 PM every Wednesday."
+        },
+        {
+          "source": "c1",
+          "bulletin": "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Wednesday: 9:00 a.m. - 5:00 p.m.”"
+        }
+      ],
+      "rationale": "R1: the box gives 9:00 AM-5:00 PM, and p3's 'after the 8:30 AM Mass' gives the same start (POLICY, Times). The Nov 10, 2024 issue's 'Friday: 9:00 a.m. - Noon' is superseded (separate excluded slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-wales",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 3,
+          "said": "THE SACRAMENT OF RECONCILIATION is offered every Saturday, 3:00 to 3:45 pm, and anytime by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 1,
+          "said": "Saturday: 3:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.srol.org/worship-and-sacraments/mass-and-confession-schedule/",
+          "said": "Saturday : 3:00-3:45 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “offered every Saturday, 3:00 to 3:45 pm”"
+        }
+      ],
+      "rationale": "R1: p3 gives 3:00-3:45 PM, matching the box's 3:00 start and the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 3,
+          "said": "and anytime by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-wales",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 9,
+          "said": "St. Rose of Lima Thanksgiving Day Mass Thursday, November 26 9:00 a.m. ... Please take note of the time, 9:00 am, not 8:30 am."
+        },
+        {
+          "source": "c1",
+          "bulletin": "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+          "page": 9,
+          "said": "gpt-6-luna read the same: B1 p9 “St. Rose of Lima Thanksgiving Day Mass Thursday, November 26 9:00 a.m.”"
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass on or after as_of (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-wales",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day: Mass at 9:00 AM instead"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 9,
+          "said": "Thanksgiving Day Mass Thursday, November 26 9:00 a.m. ... Please take note of the time, 9:00 am, not 8:30 am."
+        }
+      ],
+      "rationale": "R16, POLICY Weekly or dated (a moved event is a cancellation plus the new time): '9:00 am, not 8:30 am' says the usual Thursday 8:30 Mass moves to 9:00 that day, more than the silent omission R17 describes; recorded as our-mother-of-good-counsel-bryn-mawr s21 recorded 'One Mass' days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-wales",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception vigil"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 1,
+          "said": "HOLY DAY Vigil Mass: 7:00 p.m. Holy Day: 8:30 a.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.srol.org/worship-and-sacraments/holy-days/",
+          "said": "Mass times at St. Rose of Lima for Holy Days will be published in the Weekly Bulletin for the Sunday preceding the Holy Day."
+        }
+      ],
+      "rationale": "POLICY, Dates: the standing holy-day line pins no date, and the parish says it prints each holy day's times in the preceding Sunday's bulletin, which update mode will read; as st-isaac-jogues-wayne s27 left out an undated standing line. The Dec 8 8:30 AM is the weekly Tuesday slot anyway.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-wales",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d0bf2b7",
+          "page": 1,
+          "said": "ADORATION Friday: 9:00 a.m. - Noon"
+        }
+      ],
+      "rationale": "R3, R7: this is from the stored 7d0bf2b7, which is the Nov 10, 2024 bulletin (p1 'NOVEMBER 10, 2024'), not a 2026 issue; the Nov 15, 2026 box lists only Wednesday Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-wales",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Charles Borromeo Seminary, Ambler"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c47d2c8b",
+          "page": 10,
+          "said": "Adoration is held the first Thursday of every month from 9 AM to 4 PM in the Immaculate Conception Chapel ... 1400 Evans Rd., Ambler"
+        }
+      ],
+      "rationale": "R22: Area News; the seminary chapel is not a church of this parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "4f3c0b158502bd24c5c0bfd0c28c0ed2",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-27T16:53:49.029401+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "c47d2c8b39ac3437444f8b637f89b5dc8e5dfd4191c3274bcebde613dac4cd80",
+        "fetched_at": "2026-11-15T16:47:01Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "7d0bf2b7ec5353a922cb0592b0e89f8242ea3e40bd7615ef8365cde53c224b10",
+        "fetched_at": "2026-11-08T15:55:26Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002403,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2024-11-10",
+        "wrong_bulletin": true
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-rose-of-lima-north-wales",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 8:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-rose-of-lima-north-wales",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil: 4:00 p.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-rose-of-lima-north-wales",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:00 a.m., 9:30 a.m. & 11:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-rose-of-lima-north-wales",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:00 a.m., 9:30 a.m. & 11:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-rose-of-lima-north-wales",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:00 a.m., 9:30 a.m. & 11:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-rose-of-lima-north-wales",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 8:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-rose-of-lima-north-wales",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 8:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-rose-of-lima-north-wales",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 8:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-rose-of-lima-north-wales",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 8:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-rose-of-lima-north-wales",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 8:30 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-rose-of-lima-north-wales",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:00",
+          "end_time": "15:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "offered every Saturday, 3:00 to 3:45 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-rose-of-lima-north-wales",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "17:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Wednesday: 9:00 a.m. - 5:00 p.m."
+          },
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Adoration begins after the 8:30 AM Mass and continues until 5:00 PM every Wednesday."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-rose-of-lima-north-wales",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Thanksgiving Day",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "St. Rose of Lima Thanksgiving Day Mass Thursday, November 26 9:00 a.m."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "d92b1404bb0a2f7b7e779e9ae8796b7290373272e302177edff1c1b4c744c624",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s15"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-11-26 08:30 cancelled @st-rose-of-lima-north-wales",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "c47d2c8b",
+              "page": 9,
+              "said": "Thanksgiving Day Mass Thursday, November 26 9:00 a.m. ... Please take note of the time, 9:00 am, not 8:30 am."
+            }
+          ],
+          "why": "R16, POLICY Weekly or dated (a moved event is a cancellation plus the new time): the note inside the Thanksgiving Mass box says that day's usual 8:30 AM weekday Mass is at 9:00 instead, more than the silent omission of R17; as our-mother-of-good-counsel-bryn-mawr s21 recorded 'One Mass' days.",
+          "at": "2026-11-27T16:54:19Z"
+        }
+      }
+    ]
+  }
+}
