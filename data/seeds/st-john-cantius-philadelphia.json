@@ -1,0 +1,1554 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-cantius-philadelphia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:45:51Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T03:47:45Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (the weekday chapel is at the church's address). Weekend, weekday, first-Friday Polish Mass and Saturday confession agree in both issues and on the website; new confession times from Dec 1/5 are left out (R20). Open: the Monday exposition's October-June season, a website-only Wednesday exposition, and the Polish Prayer Group's third-Saturday 7 PM Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+      "fetched_at": "2026-11-15T16:45:51Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d1842f823a5a4936e281a8bd6497d3dfdc03b4362e8d7921ca6fbf51da7412d0",
+      "fetched_at": "2026-11-08T15:54:31Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+      "bulletins": [
+        "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+        "d1842f823a5a4936e281a8bd6497d3dfdc03b4362e8d7921ca6fbf51da7412d0"
+      ],
+      "cached": false,
+      "cost_usd": 0.003066,
+      "at": "2026-11-28T03:52:14.398532+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-cantius-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 1,
+          "said": "Sunday Mass-Church ... Saturday Vigil: 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 1,
+          "said": "Sunday Mass-Church ... Saturday Vigil: 4:30 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohncantiusparish.org/",
+          "said": "Saturday Vigil : 4:30 pm (English)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Mass-Church\nSaturday Vigil: 4:30 pm; 8 am; 10 am\n11:30 am (Polish)”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues; the intentions list it both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-cantius-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 1,
+          "said": "Sunday Mass-Church ... 8 am; 10 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 1,
+          "said": "Sunday Mass-Church ... 8 am; 10 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohncantiusparish.org/",
+          "said": "Sunday: 8:00am (English) ... 10:00 am (English)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Mass-Church\nSaturday Vigil: 4:30 pm; 8 am; 10 am\n11:30 am (Polish)”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-cantius-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 1,
+          "said": "Sunday Mass-Church ... 8 am; 10 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 1,
+          "said": "Sunday Mass-Church ... 8 am; 10 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohncantiusparish.org/",
+          "said": "Sunday: 8:00am (English) ... 10:00 am (English)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Mass-Church\nSaturday Vigil: 4:30 pm; 8 am; 10 am\n11:30 am (Polish)”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-cantius-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 1,
+          "said": "11:30 am (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 1,
+          "said": "11:30 am (Polish)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Mass-Church\nSaturday Vigil: 4:30 pm; 8 am; 10 am\n11:30 am (Polish)”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-cantius-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 1,
+          "said": "Weekday Mass - Chapel ... Monday-Saturday 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 1,
+          "said": "Weekday Mass - Chapel ... Monday-Saturday 8 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohncantiusparish.org/",
+          "said": "Weekday (Chapel) Monday-Friday : 8:00 am (English)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass - Chapel\nMonday-Saturday 8 am”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list each weekday 8:00 am. The chapel is at the church: its meeting room is 'in rear of 4412 E. Thompson Street' (latest p4), the church's address on the website (R38/POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-cantius-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 1,
+          "said": "Weekday Mass - Chapel ... Monday-Saturday 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 1,
+          "said": "Weekday Mass - Chapel ... Monday-Saturday 8 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohncantiusparish.org/",
+          "said": "Weekday (Chapel) Monday-Friday : 8:00 am (English)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass - Chapel\nMonday-Saturday 8 am”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list each weekday 8:00 am. The chapel is at the church: its meeting room is 'in rear of 4412 E. Thompson Street' (latest p4), the church's address on the website (R38/POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-cantius-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 1,
+          "said": "Weekday Mass - Chapel ... Monday-Saturday 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 1,
+          "said": "Weekday Mass - Chapel ... Monday-Saturday 8 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohncantiusparish.org/",
+          "said": "Weekday (Chapel) Monday-Friday : 8:00 am (English)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass - Chapel\nMonday-Saturday 8 am”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list each weekday 8:00 am. The chapel is at the church: its meeting room is 'in rear of 4412 E. Thompson Street' (latest p4), the church's address on the website (R38/POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-cantius-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 1,
+          "said": "Weekday Mass - Chapel ... Monday-Saturday 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 1,
+          "said": "Weekday Mass - Chapel ... Monday-Saturday 8 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohncantiusparish.org/",
+          "said": "Weekday (Chapel) Monday-Friday : 8:00 am (English)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass - Chapel\nMonday-Saturday 8 am”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list each weekday 8:00 am. The chapel is at the church: its meeting room is 'in rear of 4412 E. Thompson Street' (latest p4), the church's address on the website (R38/POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-cantius-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 1,
+          "said": "Weekday Mass - Chapel ... Monday-Saturday 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 1,
+          "said": "Weekday Mass - Chapel ... Monday-Saturday 8 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohncantiusparish.org/",
+          "said": "Weekday (Chapel) Monday-Friday : 8:00 am (English)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass - Chapel\nMonday-Saturday 8 am”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; the intentions list each weekday 8:00 am. The chapel is at the church: its meeting room is 'in rear of 4412 E. Thompson Street' (latest p4), the church's address on the website (R38/POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-cantius-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 1,
+          "said": "Weekday Mass - Chapel ... Saturday 8 am (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 1,
+          "said": "Weekday Mass - Chapel ... Saturday 8 am (Polish)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohncantiusparish.org/",
+          "said": "Saturday: 8:00 am (Polish) -quiet Mass (No Organ)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass - Chapel\nMonday-Saturday 8 am\nSaturday 8 am (Polish)”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues and both weeks' intentions ('8:00 am (P)'). Chapel at the church, as for the weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-cantius-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 1,
+          "said": "First Fridays 7 pm (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 1,
+          "said": "First Fridays 7 pm (Polish)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohncantiusparish.org/",
+          "said": "First Friday Mass 7 pm in Chapel (Polish)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass - Chapel\nFirst Fridays 7 pm (Polish)”"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly rule 2: printed by its week in the newest issue's schedule box (and the older one's); no read issue's week holds a first Friday, so the intentions can't show it (R11).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-cantius-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 6,
+          "said": "Confession: Saturday 3:30-4:15 pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 6,
+          "said": "Confession: Saturday 3:30-4:15 pm or by appointment"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohncantiusparish.org/",
+          "said": "Confessions are offered before the Saturday evening Vigil Mass from 3:30 pm to 4:15 pm."
+        },
+        {
+          "source": "c1",
+          "bulletin": "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “Confession: Saturday 3:30—4:15 pm or by appointment”"
+        }
+      ],
+      "rationale": "R1, R20: the current Saturday time in both issues and on the website. From Dec 5 it becomes 3:15-4:15 (latest p2); R20 keeps the current schedule and update mode will read the issues that show the change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-cantius-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 2,
+          "said": "beginning on Saturday, December 5 confessions will be from 3:15 pm to 4:15 pm before the Vigil Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 2,
+          "said": "beginning on Saturday, December 5 confessions will be from 3:15 pm to 4:15 pm before the Vigil Mass."
+        }
+      ],
+      "rationale": "R20: a change announced for later (from Dec 5); the current 3:30-4:15 is kept, and update mode will read the issues that print the new time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-cantius-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel, after the 8:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 2,
+          "said": "Beginning on Tuesday, December 1, in addition to Saturday, Confessions will be heard in the Chapel on Tuesday and Thursday after the 8 am Mass until 9:15 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 2,
+          "said": "Beginning on Tuesday, December 1, in addition to Saturday, Confessions will be heard in the Chapel on Tuesday and Thursday after the 8 am Mass until 9:15 am."
+        }
+      ],
+      "rationale": "R20: new confession times that begin Dec 1, after as_of; left out until the issues that show them are read. Timed per R10 (30 minutes after the weekday Mass) for matching.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-cantius-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel, after the 8:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 2,
+          "said": "Beginning on Tuesday, December 1, in addition to Saturday, Confessions will be heard in the Chapel on Tuesday and Thursday after the 8 am Mass until 9:15 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 2,
+          "said": "Beginning on Tuesday, December 1, in addition to Saturday, Confessions will be heard in the Chapel on Tuesday and Thursday after the 8 am Mass until 9:15 am."
+        }
+      ],
+      "rationale": "R20: new confession times that begin Dec 1, after as_of; left out until the issues that show them are read. Timed per R10 (30 minutes after the weekday Mass) for matching.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-cantius-church-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish Prayer Group, chapel"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 5,
+          "said": "Join us for Mass, Prayer and Adoration on the third (3rd) Saturdays of each month at 7 pm St. John Cantius Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 5,
+          "said": "Join us for Mass, Prayer and Adoration on the third (3rd) Saturdays of each month at 7 pm St. John Cantius Chapel"
+        }
+      ],
+      "rationale": "POLICY, Final source checks: Adoration is a later part of the 7 pm Mass-prayer-adoration program and has no start of its own (as our-lady-of-fatima-secane s16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 2,
+          "said": "November 28-December 2 -Vincentian Parish Advent Mission retreat."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohncantiusparish.org/",
+          "said": "Join us for one night or all nights at 6:30 pm in St. John Cantius Church"
+        }
+      ],
+      "rationale": "R24: an Advent mission of talks; no Mass, Confession or Adoration with its own time is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 6,
+          "said": "Confession: Saturday 3:30-4:15 pm or by appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 6,
+          "said": "Monday morning Miraculous Medal Novena with Exposition of the Blessed Sacrament and Benediction every Monday after the 8 am Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 2,
+          "said": "Monday ... 8:30 am Exposition of the Blessed Sacrament with the Miraculous Medal Novena and Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 2,
+          "said": "8:30 am Exposition of the Blessed Sacrament"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohncantiusparish.org/",
+          "said": "Mondays after the 8 am Mass: Join us for Exposition of the Blessed Sacrament and the Miraculous Medal Novena every Monday (Except holy days and holidays) from October to June in the Chapel.",
+          "schedule_check": {
+            "checked_at": "2026-11-28T03:50:04Z",
+            "current_because": "The homepage announces the Nov 29-Dec 1, 2026 Advent evenings and the confession change beginning Dec 5 that the Nov 15 bulletin prints.",
+            "bulletin": "40b707be",
+            "fits_because": "Its Mass times (Sat 4:30; Sun 8, 10, 11:30 Polish; weekdays 8 in the chapel; Sat 8 Polish; First Friday 7 pm Polish) and Saturday 3:30-4:15 confession match 40b707be p1/p6 exactly."
+          }
+        }
+      ],
+      "rationale": "R1 for the slot: both issues print it weekly and both weeks' intentions give 8:30 am (POLICY, Times: the printed clock time, also 30 min after the weekday Mass, R10); no end printed. The question is the season: only the website limits it to October-June, which a November issue can't show (R6: a missing mention, not a conflict). Leaning per precedent st-genevieve-flourtown s15 and st-maria-goretti-hatfield s11. The website's 'except holy days and holidays' can't be expressed and isn't recorded.",
+      "question": "Monday exposition after the 8 AM Mass (8:30 AM, Benediction, chapel): every Monday, or only October-June as the website says?",
+      "options": [
+        {
+          "label": "Mondays 8:30 AM, October-June",
+          "entry": {
+            "church_slug": "st-john-cantius-church-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 10,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": "Chapel, after the 8:00 AM Mass; Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mondays 8:30 AM year-round",
+          "entry": {
+            "church_slug": "st-john-cantius-church-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel, after the 8:00 AM Mass; Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjohncantiusparish.org/",
+          "said": "Exposition of the Blessed Sacrament ... Wednesday 4-7 pm Oct - June 6:30 pm Rosary in Polish",
+          "schedule_check": {
+            "checked_at": "2026-11-28T03:50:04Z",
+            "current_because": "The homepage announces the Nov 29-Dec 1, 2026 Advent evenings and the confession change beginning Dec 5 that the Nov 15 bulletin prints.",
+            "bulletin": "40b707be",
+            "fits_because": "Its Mass times (Sat 4:30; Sun 8, 10, 11:30 Polish; weekdays 8 in the chapel; Sat 8 Polish; First Friday 7 pm Polish) and Saturday 3:30-4:15 confession match 40b707be p1/p6 exactly."
+          }
+        }
+      ],
+      "rationale": "R6: only the website's 'Exposition of the Blessed Sacrament' section gives it; neither bulletin mentions Wednesday Adoration, a missing mention rather than a conflict. The site's other times match both issues. Leaning per precedent st-basil-the-great-kimberton s19 and st-alphonsus-maple-glen s15 (website-only Adoration with its season). Hard because the line runs into '6:30 pm Rosary in Polish' and the 'in the Chapel' is inferred from the Monday line above it.",
+      "question": "Add the website's Wednesday exposition, 4:00-7:00 PM, October-June, in the chapel?",
+      "options": [
+        {
+          "label": "Wednesdays 4:00-7:00 PM, October-June",
+          "entry": {
+            "church_slug": "st-john-cantius-church-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 10,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": "Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40b707be",
+          "page": 5,
+          "said": "Polish Prayer Group (Everyone Welcome!) Join us for Mass, Prayer and Adoration on the third (3rd) Saturdays of each month at 7 pm St. John Cantius Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1842f82",
+          "page": 5,
+          "said": "Polish Prayer Group (Everyone Welcome!) Join us for Mass, Prayer and Adoration on the third (3rd) Saturdays of each month at 7 pm St. John Cantius Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+          "page": 5,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p5 “Join us for Mass, Prayer and Adoration on the third (3rd) Saturdays of each month at 7 pm St. John Cantius Chapel”"
+        }
+      ],
+      "rationale": "POLICY Weekly rule 2: named by its week and open ('Everyone Welcome'). Mass is the program's first item, so it starts at the printed 7 pm; leaning per precedent st-colman-ardmore s14 and our-lady-of-fatima-secane s15. Hard because the newest issue's own third Saturday (Nov 21, latest p2) lists only the 8:00 am and 4:30 pm Masses in the intentions (R39: not proof either way), and the box and website don't list it.",
+      "question": "Add the Polish Prayer Group's third-Saturday 7:00 PM Mass in the chapel ('Mass, Prayer and Adoration ... at 7 pm', everyone welcome)?",
+      "options": [
+        {
+          "label": "Third Saturdays 7:00 PM",
+          "entry": {
+            "church_slug": "st-john-cantius-church-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "third"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Polish Prayer Group, in the chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "1b0d38b8929468869ac493507fdf9716",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T03:52:14.398532+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "40b707bed5ce8c9bbe33143e859bf4925fc79bda71f0f6b89b32fac72476af37",
+        "fetched_at": "2026-11-15T16:45:51Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "d1842f823a5a4936e281a8bd6497d3dfdc03b4362e8d7921ca6fbf51da7412d0",
+        "fetched_at": "2026-11-08T15:54:31Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.003066,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-john-cantius-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Mass-Church\nSaturday Vigil: 4:30 pm; 8 am; 10 am\n11:30 am (Polish)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Mass-Church\nSaturday Vigil: 4:30 pm; 8 am; 10 am\n11:30 am (Polish)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-john-cantius-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Mass-Church\nSaturday Vigil: 4:30 pm; 8 am; 10 am\n11:30 am (Polish)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Mass-Church\nSaturday Vigil: 4:30 pm; 8 am; 10 am\n11:30 am (Polish)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-john-cantius-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Mass-Church\nSaturday Vigil: 4:30 pm; 8 am; 10 am\n11:30 am (Polish)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Mass-Church\nSaturday Vigil: 4:30 pm; 8 am; 10 am\n11:30 am (Polish)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-john-cantius-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Polish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Mass-Church\nSaturday Vigil: 4:30 pm; 8 am; 10 am\n11:30 am (Polish)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Mass-Church\nSaturday Vigil: 4:30 pm; 8 am; 10 am\n11:30 am (Polish)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-john-cantius-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass - Chapel\nMonday-Saturday 8 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass - Chapel\nMonday-Saturday 8 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-john-cantius-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass - Chapel\nMonday-Saturday 8 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass - Chapel\nMonday-Saturday 8 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-john-cantius-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass - Chapel\nMonday-Saturday 8 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass - Chapel\nMonday-Saturday 8 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-john-cantius-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass - Chapel\nMonday-Saturday 8 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass - Chapel\nMonday-Saturday 8 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-john-cantius-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass - Chapel\nMonday-Saturday 8 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass - Chapel\nMonday-Saturday 8 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-john-cantius-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel; Polish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass - Chapel\nMonday-Saturday 8 am\nSaturday 8 am (Polish)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass - Chapel\nMonday-Saturday 8 am\nSaturday 8 am (Polish)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-john-cantius-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [
+            "first"
+          ],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel; Polish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass - Chapel\nFirst Fridays 7 pm (Polish)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass - Chapel\nFirst Fridays 7 pm (Polish)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-john-cantius-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [
+            "third"
+          ],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "Join us for Mass, Prayer and Adoration on the third (3rd) Saturdays of each month at 7 pm St. John Cantius Chapel"
+          },
+          {
+            "bulletin": "B2",
+            "page": 5,
+            "quote": "Join us for Mass, Prayer and Adoration on the third (3rd) Saturdays of each month at 7 pm St. John Cantius Chapel"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-john-cantius-church-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:30",
+          "end_time": "16:15",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Confession: Saturday 3:30—4:15 pm or by appointment"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "Confession: Saturday 3:30—4:15 pm or by appointment"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-john-cantius-church-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "after the 8:00 AM Mass; Benediction",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "8:30 am Exposition of the Blessed Sacrament with the Miraculous Medal Novena and Benediction"
+          },
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Monday morning Miraculous Medal Novena with Exposition of the Blessed Sacrament and Benediction every Monday after the 8 am Mass."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "8:30 am Exposition of the Blessed Sacrament with the Miraculous Medal Novena and Benediction"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "Monday morning Miraculous Medal Novena with Exposition of the Blessed Sacrament and Benediction every Monday after the 8 am Mass."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "859887b9255d391fa6557548a21841fb5ce3d04f4bbe7e7d1956a884df0cbad1",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o14"
+        ],
+        "slots": [
+          "s19"
+        ],
+        "opinion_said": "adoration Mon 08:30 @st-john-cantius-church-philadelphia",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      }
+    ]
+  }
+}
