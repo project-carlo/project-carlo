@@ -1,0 +1,1402 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mark-bristol",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:16Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T01:37:49Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: St. Mark (Sat 5 PM; Sun 7:30, 9:00 Spanish; Mon-Fri 8 AM; Sat 3:30-4:30 confession; Thursday Adoration and confession after the 8 AM Mass) and St. Ann (Sun 10:45 AM). Both November issues print identical schedules and the website matches. Open: the Wednesday Adoration that follows the 7 PM Divine Mercy Chaplet, and whether to date the standing Holy Days line to Dec 8.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ec360462ebd7f884bfc18a861a012f4e23901fba5f662a1c7557df54e7752bef",
+      "fetched_at": "2026-11-15T16:46:16Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1cfed86fce54e6b3f0a73e0cb82eb59f4583a384b40a44f1f7d33bcd4d4abd59",
+      "fetched_at": "2026-11-08T15:54:53Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "ec360462ebd7f884bfc18a861a012f4e23901fba5f662a1c7557df54e7752bef",
+      "bulletins": [
+        "ec360462ebd7f884bfc18a861a012f4e23901fba5f662a1c7557df54e7752bef",
+        "1cfed86fce54e6b3f0a73e0cb82eb59f4583a384b40a44f1f7d33bcd4d4abd59"
+      ],
+      "cached": false,
+      "cost_usd": 0.002482,
+      "at": "2026-11-28T01:42:16.766358+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-bristol",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 1,
+          "said": "Parish Site: Saturday Vigil- 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 1,
+          "said": "Parish Site: Saturday Vigil- 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 4,
+          "said": "Saturday, November 21st, 5:00 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ec360462ebd7f884bfc18a861a012f4e23901fba5f662a1c7557df54e7752bef",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil- 5:00 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the St. Mark (Parish Site) column of the schedule box of both issues; the intentions list it both Saturdays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-bristol",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 1,
+          "said": "Parish Site: Sunday- 7:30 am and 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 1,
+          "said": "Parish Site: Sunday- 7:30 am and 9:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ec360462ebd7f884bfc18a861a012f4e23901fba5f662a1c7557df54e7752bef",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday- 7:30 am and 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the St. Mark column of the schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-bristol",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 1,
+          "said": "Parish Site: Sunday- 7:30 am and 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 1,
+          "said": "Parish Site: Sunday- 7:30 am and 9:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://saintmarkchurch.net/",
+          "said": "SUNDAY MASSES ... 9:00am (En Español)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ec360462ebd7f884bfc18a861a012f4e23901fba5f662a1c7557df54e7752bef",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday- 7:30 am and 9:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the St. Mark column of both issues' schedule box; the website footer marks it Spanish, which the note carries.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-bristol",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 1,
+          "said": "Worship Site: Sunday- 10:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 1,
+          "said": "Worship Site: Sunday- 10:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 4,
+          "said": "CYO Mass ... on November 22, 2026, at St. Ann Church, 357 Dorrance St., at 10:45 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ec360462ebd7f884bfc18a861a012f4e23901fba5f662a1c7557df54e7752bef",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday- 10:45 am”"
+        }
+      ],
+      "rationale": "R1: printed in the St. Ann (Worship Site) column of both issues' schedule box; the CYO Mass on Nov 22 is this weekly Mass (POLICY rule 7), not a separate slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-bristol",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 1,
+          "said": "Parish Site: Weekdays: Monday-Friday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 1,
+          "said": "Parish Site: Weekdays: Monday-Friday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 4,
+          "said": "Monday, November 16th ... Friday, November 20th, 8:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ec360462ebd7f884bfc18a861a012f4e23901fba5f662a1c7557df54e7752bef",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: Monday-Friday 8:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the St. Mark column of both issues' schedule box and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-bristol",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 1,
+          "said": "Parish Site: Weekdays: Monday-Friday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 1,
+          "said": "Parish Site: Weekdays: Monday-Friday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 4,
+          "said": "Monday, November 16th ... Friday, November 20th, 8:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ec360462ebd7f884bfc18a861a012f4e23901fba5f662a1c7557df54e7752bef",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: Monday-Friday 8:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the St. Mark column of both issues' schedule box and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-bristol",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 1,
+          "said": "Parish Site: Weekdays: Monday-Friday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 1,
+          "said": "Parish Site: Weekdays: Monday-Friday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 4,
+          "said": "Monday, November 16th ... Friday, November 20th, 8:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ec360462ebd7f884bfc18a861a012f4e23901fba5f662a1c7557df54e7752bef",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: Monday-Friday 8:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the St. Mark column of both issues' schedule box and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-bristol",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 1,
+          "said": "Parish Site: Weekdays: Monday-Friday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 1,
+          "said": "Parish Site: Weekdays: Monday-Friday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 4,
+          "said": "Monday, November 16th ... Friday, November 20th, 8:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ec360462ebd7f884bfc18a861a012f4e23901fba5f662a1c7557df54e7752bef",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: Monday-Friday 8:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the St. Mark column of both issues' schedule box and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-bristol",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 1,
+          "said": "Parish Site: Weekdays: Monday-Friday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 1,
+          "said": "Parish Site: Weekdays: Monday-Friday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 4,
+          "said": "Monday, November 16th ... Friday, November 20th, 8:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ec360462ebd7f884bfc18a861a012f4e23901fba5f662a1c7557df54e7752bef",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: Monday-Friday 8:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the St. Mark column of both issues' schedule box and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-bristol",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 1,
+          "said": "Sacrament of Reconciliation/Confessions: Saturday 3:30-4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 1,
+          "said": "Sacrament of Reconciliation/Confessions: Saturday 3:30-4:30 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://saintmarkchurch.net/",
+          "said": "Saint Mark Parish Church ... SACRAMENT OF PENANCE Saturday – 3:30pm to 4:30pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "ec360462ebd7f884bfc18a861a012f4e23901fba5f662a1c7557df54e7752bef",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sacrament of Reconciliation/Confessions:\n Saturday 3:30-4:30 pm”"
+        }
+      ],
+      "rationale": "R1: in the St. Mark (Parish Site) column of both issues' box; the website lists it under Saint Mark Parish Church, confirming the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-bristol",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass; Benediction"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 3,
+          "said": "St. Mark Church will have Eucharistic Adoration, Benediction, and confession following the 8:00 am Mass every Thursday."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 3,
+          "said": "St. Mark Church will have Eucharistic Adoration, Benediction, and confession following the 8:00 am Mass every Thursday."
+        },
+        {
+          "source": "website",
+          "url": "https://saintmarkchurch.net/",
+          "said": "Join us for Adoration of the Blessed Sacrament and Benediction, every Thursdays after 8:00 AM mass."
+        },
+        {
+          "source": "c1",
+          "bulletin": "ec360462ebd7f884bfc18a861a012f4e23901fba5f662a1c7557df54e7752bef",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “St. Mark Church will have Eucharistic Adoration, Benediction, and confession following the 8:00 am Mass every Thursday.”"
+        }
+      ],
+      "rationale": "R1, R10: both issues print it weekly at St. Mark Church following the weekday 8:00 AM Mass, so it starts 30 minutes after (8:30); no end is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-bristol",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass, during Adoration"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 3,
+          "said": "St. Mark Church will have Eucharistic Adoration, Benediction, and confession following the 8:00 am Mass every Thursday."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 3,
+          "said": "St. Mark Church will have Eucharistic Adoration, Benediction, and confession following the 8:00 am Mass every Thursday."
+        },
+        {
+          "source": "website",
+          "url": "https://saintmarkchurch.net/",
+          "said": "Father Cesar will also be available for confessions from 8:30-9:00 AM."
+        }
+      ],
+      "rationale": "R1, R10: both issues print confession following the Thursday 8:00 AM Mass (8:30 by POLICY); the homepage, whose Mass and confession times match the box exactly, gives the clock time 8:30-9:00 AM (R6), which supplies the end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-bristol",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintmarkchurch.net/",
+          "said": "Join us November 26th for 10:00 AM at St. Mark Church",
+          "schedule_check": {
+            "checked_at": "2026-11-28T01:40:00Z",
+            "current_because": "Homepage read 2026-11-28 shows First Sunday of Advent Nov 29 2026 readings and the Thanksgiving 2026 notice (image titled Thanksgiving Day Mass; office closed Nov 26-27).",
+            "bulletin": "ec360462",
+            "fits_because": "The newest bulletin (Nov 15) prints no Thanksgiving schedule; a holiday Mass at 10:00 is outside the weekly schedule, so it is a dated addition, not a conflict."
+          }
+        }
+      ],
+      "rationale": "R6, R16, POLICY rule 7: a dated Thanksgiving Mass on or after as_of. The weekly Thursday 8:00 AM is left alone since no cancellation is stated (R17). The date has passed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 1,
+          "said": "Divine Mercy Chaplet followed by Adoration: Wednesday @7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 1,
+          "said": "Divine Mercy Chaplet followed by Adoration: Wednesday @7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://saintmarkchurch.net/",
+          "said": "Wednesday – Divine Mercy & Adoration 7:00pm"
+        }
+      ],
+      "rationale": "R30: the 7:00 PM is the chaplet's start; Adoration follows it and has no start of its own (POLICY, Final source checks), as the Mass after a program was left out in queen-of-peace-ardsley s16 and st-cyril-of-jerusalem-jamison s29 (leaning per those precedents). Hard because the website gives 'Divine Mercy & Adoration 7:00pm' as one time, and exposition often opens the chaplet; recording only the start would copy no hours.",
+      "question": "Add the Wednesday Adoration that follows the 7:00 PM Divine Mercy Chaplet at St. Mark?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Wednesdays 7:00 PM, no end",
+          "entry": {
+            "church_slug": "st-mark-bristol",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "With the Divine Mercy Chaplet"
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 1,
+          "said": "Holy Days- 8:00 am, Noon, 6:30 pm (Bilingual)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 1,
+          "said": "Holy Days- 8:00 am, Noon, 6:30 pm (Bilingual)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintmarkchurch.net/",
+          "said": "HOLY DAY MASSES 8:00am 12:00pm 6:30pm (English and Español)"
+        }
+      ],
+      "rationale": "R30: the box's Holy Days line and the website give no year or dated notice, like the undated Christmas box left out in st-isaac-jogues-wayne s27 (leaning per precedent); unlike our-lady-of-consolation-parkesburg s12, nothing dated ties it to Dec 8 this year. The 8:00 AM is already the weekly Tuesday Mass. Hard because the times may well be right; December issues will print them.",
+      "question": "Add Immaculate Conception Masses on Tue Dec 8 from the standing Holy Days line (St. Mark noon and 6:30 PM bilingual; St. Ann 9:00 AM)?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Dec 8 at these times",
+          "entry": {
+            "church_slug": "st-mark-bristol",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 1,
+          "said": "Holy Days- 8:00 am, Noon, 6:30 pm (Bilingual)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 1,
+          "said": "Holy Days- 8:00 am, Noon, 6:30 pm (Bilingual)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintmarkchurch.net/",
+          "said": "HOLY DAY MASSES 8:00am 12:00pm 6:30pm (English and Español)"
+        }
+      ],
+      "rationale": "R30: the box's Holy Days line and the website give no year or dated notice, like the undated Christmas box left out in st-isaac-jogues-wayne s27 (leaning per precedent); unlike our-lady-of-consolation-parkesburg s12, nothing dated ties it to Dec 8 this year. Hard because the times may well be right; December issues will print them.",
+      "question": "Add Immaculate Conception Masses on Tue Dec 8 from the standing Holy Days line (St. Mark noon and 6:30 PM bilingual; St. Ann 9:00 AM)?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Dec 8 at these times",
+          "entry": {
+            "church_slug": "st-mark-bristol",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Bilingual"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 1,
+          "said": "Worship Site: Holy Days- 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 1,
+          "said": "Worship Site: Holy Days- 9:00 am"
+        }
+      ],
+      "rationale": "R30: the St. Ann column's Holy Days line gives no year or dated notice, like the undated Christmas box left out in st-isaac-jogues-wayne s27 (leaning per precedent). Hard because the time may well be right; December issues will print it.",
+      "question": "Add Immaculate Conception Masses on Tue Dec 8 from the standing Holy Days line (St. Mark noon and 6:30 PM bilingual; St. Ann 9:00 AM)?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Dec 8 at these times",
+          "entry": {
+            "church_slug": "st-ann-bristol",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec360462",
+          "page": 1,
+          "said": "Rosary: Monday – Friday before 8:00 am Mass; Blessed Mother Novena: Tuesday after 8:00 am Mass; Rosary and Prayers to Blessed Anna Maria and St. Michael of the Saints- Sunday before 10:45 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1cfed86f",
+          "page": 1,
+          "said": "Rosary: Monday – Friday before 8:00 am Mass; Blessed Mother Novena: Tuesday after 8:00 am Mass; Rosary and Prayers to Blessed Anna Maria and St. Michael of the Saints- Sunday before 10:45 am Mass"
+        }
+      ],
+      "rationale": "R24: Rosary, novena and prayers are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-bristol",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintmarkchurch.net/",
+          "said": "All Souls Mass at Saint Mark Church- ... was celebrated on Monday, November 2, 2026 at 7:00 pm"
+        }
+      ],
+      "rationale": "R16: dated before as_of (Nov 15); out of seed scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "853fdc80b7be54ae4469998dd56dccc2",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T01:42:16.766358+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "ec360462ebd7f884bfc18a861a012f4e23901fba5f662a1c7557df54e7752bef",
+        "fetched_at": "2026-11-15T16:46:16Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "1cfed86fce54e6b3f0a73e0cb82eb59f4583a384b40a44f1f7d33bcd4d4abd59",
+        "fetched_at": "2026-11-08T15:54:53Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002482,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-mark-bristol",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil- 5:00 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil- 5:00 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-mark-bristol",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday- 7:30 am and 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday- 7:30 am and 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-mark-bristol",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday- 7:30 am and 9:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday- 7:30 am and 9:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-mark-bristol",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: Monday-Friday 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: Monday-Friday 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-mark-bristol",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: Monday-Friday 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: Monday-Friday 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-mark-bristol",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: Monday-Friday 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: Monday-Friday 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-mark-bristol",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: Monday-Friday 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: Monday-Friday 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-mark-bristol",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: Monday-Friday 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: Monday-Friday 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-ann-bristol",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:45",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday- 10:45 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday- 10:45 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-mark-bristol",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:30",
+          "end_time": "16:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sacrament of Reconciliation/Confessions:\n Saturday 3:30-4:30 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sacrament of Reconciliation/Confessions:\n Saturday 3:30-4:30 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-mark-bristol",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "after the 8:00 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "St. Mark Church will have Eucharistic Adoration, Benediction, and confession following the 8:00 am Mass every Thursday."
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "St. Mark Church will have Eucharistic Adoration, Benediction, and confession following the 8:00 am Mass every Thursday."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-mark-bristol",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Benediction; after the 8:00 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "St. Mark Church will have Eucharistic Adoration, Benediction, and confession following the 8:00 am Mass every Thursday."
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "St. Mark Church will have Eucharistic Adoration, Benediction, and confession following the 8:00 am Mass every Thursday."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "44ae5954b44a1c95939d35d5214e1491d6ab41a62138d6682f669f0d8800d02f",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "differs",
+        "fields": [
+          "end time"
+        ],
+        "opinion": [
+          "o11"
+        ],
+        "slots": [
+          "s12"
+        ],
+        "opinion_said": "confession Thu 08:30 @st-mark-bristol",
+        "seed_said": "confession Thu 08:30-09:00 @st-mark-bristol",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s13"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-11-26 10:00 @st-mark-bristol",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      }
+    ]
+  }
+}
