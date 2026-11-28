@@ -1,0 +1,2422 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-calvary-philadelphia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:42:22Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T03:52:36Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Our Lady of Calvary, Knights Road. Weekend, weekday 8:00 AM and Saturday confession times agree in both November issues and on the website; a dated 6 PM Mass on Sun Nov 22 opens Forty Hours. Open: a Saturday 6:30 AM Mass (box says Mon-Sat, intentions and website say no), the website's September-June season for the weekday 6:30 AM, and whether to record the Forty Hours, whose exposition hours aren't printed.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+      "fetched_at": "2026-11-15T16:42:22Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d9c589f9b9d5b73115697776bdc64835273d1b6cdbb6ecc37cccf713ecb5c4a5",
+      "fetched_at": "2026-11-08T15:52:56Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+      "bulletins": [
+        "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+        "d9c589f9b9d5b73115697776bdc64835273d1b6cdbb6ecc37cccf713ecb5c4a5"
+      ],
+      "cached": false,
+      "cost_usd": 0.003085,
+      "at": "2026-11-28T03:57:30.519883+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-calvary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Saturday Evening - 5:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Saturday Evening - 5:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "Saturday November 21, 2026 ... 5:00PM Edward G. Ruch"
+        },
+        {
+          "source": "c1",
+          "bulletin": "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Evening - 5:00 p.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues; both weeks' intentions list the Saturday 5:00PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-calvary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "LITURGY SCHEDULE ... 6:30AM ... 8:00AM ... 10:00AM ... 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "LITURGY SCHEDULE ... 6:30AM ... 8:00AM ... 10:00AM ... 12:00PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in both weeks' liturgy and intention lists. The Nov 15 Veterans Mass (d9c589f9 p3) was the regular 12:00 Mass (POLICY rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-calvary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "LITURGY SCHEDULE ... 6:30AM ... 8:00AM ... 10:00AM ... 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "LITURGY SCHEDULE ... 6:30AM ... 8:00AM ... 10:00AM ... 12:00PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in both weeks' liturgy and intention lists. The Nov 15 Veterans Mass (d9c589f9 p3) was the regular 12:00 Mass (POLICY rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-calvary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "LITURGY SCHEDULE ... 6:30AM ... 8:00AM ... 10:00AM ... 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "LITURGY SCHEDULE ... 6:30AM ... 8:00AM ... 10:00AM ... 12:00PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in both weeks' liturgy and intention lists. The Nov 15 Veterans Mass (d9c589f9 p3) was the regular 12:00 Mass (POLICY rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-calvary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "LITURGY SCHEDULE ... 6:30AM ... 8:00AM ... 10:00AM ... 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "LITURGY SCHEDULE ... 6:30AM ... 8:00AM ... 10:00AM ... 12:00PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in both weeks' liturgy and intention lists. The Nov 15 Veterans Mass (d9c589f9 p3) was the regular 12:00 Mass (POLICY rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-calvary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "intentions list an 8:00 Mass every Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "intentions list an 8:00 Mass every Monday-Saturday"
+        },
+        {
+          "source": "c1",
+          "bulletin": "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily (Monday - Saturday) - 6:30 and 8:00 a.m.”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:00 Monday through Saturday, and the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-calvary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "intentions list an 8:00 Mass every Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "intentions list an 8:00 Mass every Monday-Saturday"
+        },
+        {
+          "source": "c1",
+          "bulletin": "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily (Monday - Saturday) - 6:30 and 8:00 a.m.”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:00 Monday through Saturday, and the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-calvary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "intentions list an 8:00 Mass every Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "intentions list an 8:00 Mass every Monday-Saturday"
+        },
+        {
+          "source": "c1",
+          "bulletin": "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily (Monday - Saturday) - 6:30 and 8:00 a.m.”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:00 Monday through Saturday, and the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-calvary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "intentions list an 8:00 Mass every Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "intentions list an 8:00 Mass every Monday-Saturday"
+        },
+        {
+          "source": "c1",
+          "bulletin": "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily (Monday - Saturday) - 6:30 and 8:00 a.m.”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:00 Monday through Saturday, and the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-calvary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "intentions list an 8:00 Mass every Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "intentions list an 8:00 Mass every Monday-Saturday"
+        },
+        {
+          "source": "c1",
+          "bulletin": "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily (Monday - Saturday) - 6:30 and 8:00 a.m.”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:00 Monday through Saturday, and the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-calvary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "intentions list an 8:00 Mass every Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "intentions list an 8:00 Mass every Monday-Saturday"
+        },
+        {
+          "source": "c1",
+          "bulletin": "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily (Monday - Saturday) - 6:30 and 8:00 a.m.”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:00 Monday through Saturday, and the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-calvary-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Confession Schedule Saturday 3:45 - 4:45 p.m. & by appointment in the Rectory"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Confession Schedule Saturday 3:45 - 4:45 p.m. & by appointment in the Rectory"
+        },
+        {
+          "source": "c1",
+          "bulletin": "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday 3:45 - 4:45 p.m. & by appointment in the Rectory”"
+        }
+      ],
+      "rationale": "R1: printed in the Confession Schedule box of both issues; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "& by appointment in the Rectory"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-calvary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Opening of Forty Hours"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "Sunday November 22, 2026 ... 6:00PM Roseann Spear; PRIEST MASS SCHEDULE ... 6:00PM Fr. John"
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 3,
+          "said": "our 40 Hours on Sunday, November 22 at 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 3,
+          "said": "our 40 Hours on Sunday, November 22 at 6:00PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofcalvary.org/",
+          "said": "40 Hours begins on Sunday evening, November 22 at 6:00 PM Mass."
+        },
+        {
+          "source": "c1",
+          "bulletin": "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday November 22, 2026\n6:00PM Roseann Spear req. by OLC Rectory Staff”"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass outside the weekly schedule (POLICY rule 7), printed in the newest issue's intentions and priest schedule; the website calls the 40 Hours opening a 6:00 PM Mass. On or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "Divine Mercy Prayers are on the third Sunday of each Month after the 10 AM Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "Divine Mercy Prayers are on the third Sunday of each Month after the 10 AM Mass."
+        }
+      ],
+      "rationale": "R24: a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-calvary-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance at St. Laurence, Upper Darby"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 3,
+          "said": "Mass of Remembrance for Miscarriage and Infant Loss - Saturday, November 21, 2026-10:30AM at St. Laurence Church, 8245 West Chester Pike, Upper Darby"
+        }
+      ],
+      "rationale": "R22: held at another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Eve of Holydays - 5:00 p.m. Holydays - 6:30 and 8:00 a.m. 12:00 Noon and 7:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Eve of Holydays - 5:00 p.m. Holydays - 6:30 and 8:00 a.m. 12:00 Noon and 7:00 p.m."
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no date; no read issue dates a holy day, so nothing is projected onto Dec 7-8 (as st-isaac-jogues-wayne s27 left out an undated box). December issues will print this year's times for update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "Saturday November 21, 2026 8:00 Joe Seamans ... 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "Saturday November 14, 2026 8:00 Virginia Smith ... 5:00PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofcalvary.org/",
+          "said": "Daily : 6:30(September-June), 8:00 A.M. only Saturday : 8:00 A.M."
+        }
+      ],
+      "rationale": "R28: the box's 'Daily (Monday - Saturday) - 6:30 and 8:00' covers Saturday, but both weeks' intentions list only 8:00 on Saturday while Mon-Fri have a 6:30, and the website gives 'Saturday : 8:00 A.M.' Leaning per precedent st-joseph-coatesville s10: two sources against the box's compressed line.",
+      "question": "Is there a Saturday 6:30 AM Mass?",
+      "options": [
+        {
+          "label": "Saturdays 6:30 AM",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "intentions list a 6:30 Mass every Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "intentions list a 6:30 Mass every Monday-Friday"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofcalvary.org/",
+          "said": "Daily : 6:30(September-June), 8:00 A.M. only"
+        }
+      ],
+      "rationale": "R6: the 6:30 is in both boxes and both weeks' intentions; the current homepage (it carries the Nov 22-24 Forty Hours notice and the same weekend, Saturday and confession times) limits it to September-June, which a November issue can't show. Leaning per precedent st-genevieve-flourtown s15.",
+      "question": "Limit the Mon-Fri 6:30 AM Mass to September-June, as the website says?",
+      "options": [
+        {
+          "label": "Mon-Fri 6:30 AM, September-June",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mon-Fri 6:30 AM year-round",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "s19"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "intentions list a 6:30 Mass every Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "intentions list a 6:30 Mass every Monday-Friday"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofcalvary.org/",
+          "said": "Daily : 6:30(September-June), 8:00 A.M. only"
+        }
+      ],
+      "rationale": "R6: the 6:30 is in both boxes and both weeks' intentions; the current homepage (it carries the Nov 22-24 Forty Hours notice and the same weekend, Saturday and confession times) limits it to September-June, which a November issue can't show. Leaning per precedent st-genevieve-flourtown s15.",
+      "question": "Limit the Mon-Fri 6:30 AM Mass to September-June, as the website says?",
+      "options": [
+        {
+          "label": "Mon-Fri 6:30 AM, September-June",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mon-Fri 6:30 AM year-round",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "s19"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "intentions list a 6:30 Mass every Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "intentions list a 6:30 Mass every Monday-Friday"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofcalvary.org/",
+          "said": "Daily : 6:30(September-June), 8:00 A.M. only"
+        }
+      ],
+      "rationale": "R6: the 6:30 is in both boxes and both weeks' intentions; the current homepage (it carries the Nov 22-24 Forty Hours notice and the same weekend, Saturday and confession times) limits it to September-June, which a November issue can't show. Leaning per precedent st-genevieve-flourtown s15.",
+      "question": "Limit the Mon-Fri 6:30 AM Mass to September-June, as the website says?",
+      "options": [
+        {
+          "label": "Mon-Fri 6:30 AM, September-June",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mon-Fri 6:30 AM year-round",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "s19"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "intentions list a 6:30 Mass every Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "intentions list a 6:30 Mass every Monday-Friday"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofcalvary.org/",
+          "said": "Daily : 6:30(September-June), 8:00 A.M. only"
+        }
+      ],
+      "rationale": "R6: the 6:30 is in both boxes and both weeks' intentions; the current homepage (it carries the Nov 22-24 Forty Hours notice and the same weekend, Saturday and confession times) limits it to September-June, which a November issue can't show. Leaning per precedent st-genevieve-flourtown s15.",
+      "question": "Limit the Mon-Fri 6:30 AM Mass to September-June, as the website says?",
+      "options": [
+        {
+          "label": "Mon-Fri 6:30 AM, September-June",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mon-Fri 6:30 AM year-round",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "s19"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 1,
+          "said": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 2,
+          "said": "intentions list a 6:30 Mass every Monday-Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 2,
+          "said": "intentions list a 6:30 Mass every Monday-Friday"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofcalvary.org/",
+          "said": "Daily : 6:30(September-June), 8:00 A.M. only"
+        }
+      ],
+      "rationale": "R6: the 6:30 is in both boxes and both weeks' intentions; the current homepage (it carries the Nov 22-24 Forty Hours notice and the same weekend, Saturday and confession times) limits it to September-June, which a November issue can't show. Leaning per precedent st-genevieve-flourtown s15.",
+      "question": "Limit the Mon-Fri 6:30 AM Mass to September-June, as the website says?",
+      "options": [
+        {
+          "label": "Mon-Fri 6:30 AM, September-June",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mon-Fri 6:30 AM year-round",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "s19"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 3,
+          "said": "FORTY HOURS - Our Lady of Calvary Parish will begin our 40 Hours on Sunday, November 22 at 6:00PM. There will be a signup sheet to spend an hour with our Lord. 40 Hours will continue on Monday, November 23 at 7:00PM and Tuesday, November 24 at 7:30PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 3,
+          "said": "FORTY HOURS - Our Lady of Calvary Parish will begin our 40 Hours on Sunday, November 22 at 6:00PM. There will be a signup sheet to spend an hour with our Lord. 40 Hours will continue on Monday, November 23 at 7:00PM and Tuesday, November 24 at 7:30PM."
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofcalvary.org/",
+          "said": "40 Hours begins on Sunday evening, November 22 at 6:00 PM Mass. Continues with evening prayer on Monday, November 23 at 7:00 PM and the closing on Tuesday, November 24 at 7:30 PM."
+        }
+      ],
+      "rationale": "R30: Forty Hours is Adoration, but neither issue (22acb5f5 p3, d9c589f9 p3) nor the website prints the hours of exposition: only 'begin our 40 Hours on Sunday, November 22 at 6:00PM' (the website: 'at 6:00 PM Mass', recorded as its own slot), Monday's 7 PM evening prayer and Tuesday's 7:30 PM closing. Option 'Printed start times' takes the printed 6:00PM as the start (gpt-6-luna's reading), though it overlaps the opening Mass. Option 'Evening starts only' times Sunday 1 hour after the 6 PM Mass (POLICY Times). Neither records an end. Leaning per precedent our-lady-of-consolation-parkesburg s13 (leave out a Forty Hours whose hours aren't printed). The dates are past, so the choice has little effect on the site.",
+      "question": "Add the Forty Hours (Sun Nov 22 6 PM Mass to Tue Nov 24 7:30 PM closing) as Adoration?",
+      "options": [
+        {
+          "label": "Printed start times",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-22",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Forty Hours opening"
+          }
+        },
+        {
+          "label": "Evening starts only",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-22",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Forty Hours, after the 6:00 PM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "forty-hours"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 3,
+          "said": "FORTY HOURS - Our Lady of Calvary Parish will begin our 40 Hours on Sunday, November 22 at 6:00PM. There will be a signup sheet to spend an hour with our Lord. 40 Hours will continue on Monday, November 23 at 7:00PM and Tuesday, November 24 at 7:30PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 3,
+          "said": "FORTY HOURS - Our Lady of Calvary Parish will begin our 40 Hours on Sunday, November 22 at 6:00PM. There will be a signup sheet to spend an hour with our Lord. 40 Hours will continue on Monday, November 23 at 7:00PM and Tuesday, November 24 at 7:30PM."
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofcalvary.org/",
+          "said": "40 Hours begins on Sunday evening, November 22 at 6:00 PM Mass. Continues with evening prayer on Monday, November 23 at 7:00 PM and the closing on Tuesday, November 24 at 7:30 PM."
+        }
+      ],
+      "rationale": "R30: Forty Hours is Adoration, but neither issue (22acb5f5 p3, d9c589f9 p3) nor the website prints the hours of exposition: only 'begin our 40 Hours on Sunday, November 22 at 6:00PM' (the website: 'at 6:00 PM Mass', recorded as its own slot), Monday's 7 PM evening prayer and Tuesday's 7:30 PM closing. Option 'Printed start times' takes the printed 6:00PM as the start (gpt-6-luna's reading), though it overlaps the opening Mass. Option 'Evening starts only' times Sunday 1 hour after the 6 PM Mass (POLICY Times). Neither records an end. Leaning per precedent our-lady-of-consolation-parkesburg s13 (leave out a Forty Hours whose hours aren't printed). The dates are past, so the choice has little effect on the site.",
+      "question": "Add the Forty Hours (Sun Nov 22 6 PM Mass to Tue Nov 24 7:30 PM closing) as Adoration?",
+      "options": [
+        {
+          "label": "Printed start times",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-23",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Forty Hours evening prayer"
+          }
+        },
+        {
+          "label": "Evening starts only",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-23",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Forty Hours evening prayer"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "forty-hours"
+    },
+    {
+      "id": "s26",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "22acb5f5",
+          "page": 3,
+          "said": "FORTY HOURS - Our Lady of Calvary Parish will begin our 40 Hours on Sunday, November 22 at 6:00PM. There will be a signup sheet to spend an hour with our Lord. 40 Hours will continue on Monday, November 23 at 7:00PM and Tuesday, November 24 at 7:30PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9c589f9",
+          "page": 3,
+          "said": "FORTY HOURS - Our Lady of Calvary Parish will begin our 40 Hours on Sunday, November 22 at 6:00PM. There will be a signup sheet to spend an hour with our Lord. 40 Hours will continue on Monday, November 23 at 7:00PM and Tuesday, November 24 at 7:30PM."
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofcalvary.org/",
+          "said": "40 Hours begins on Sunday evening, November 22 at 6:00 PM Mass. Continues with evening prayer on Monday, November 23 at 7:00 PM and the closing on Tuesday, November 24 at 7:30 PM."
+        }
+      ],
+      "rationale": "R30: Forty Hours is Adoration, but neither issue (22acb5f5 p3, d9c589f9 p3) nor the website prints the hours of exposition: only 'begin our 40 Hours on Sunday, November 22 at 6:00PM' (the website: 'at 6:00 PM Mass', recorded as its own slot), Monday's 7 PM evening prayer and Tuesday's 7:30 PM closing. Option 'Printed start times' takes the printed 6:00PM as the start (gpt-6-luna's reading), though it overlaps the opening Mass. Option 'Evening starts only' times Sunday 1 hour after the 6 PM Mass (POLICY Times). Neither records an end. Leaning per precedent our-lady-of-consolation-parkesburg s13 (leave out a Forty Hours whose hours aren't printed). The dates are past, so the choice has little effect on the site.",
+      "question": "Add the Forty Hours (Sun Nov 22 6 PM Mass to Tue Nov 24 7:30 PM closing) as Adoration?",
+      "options": [
+        {
+          "label": "Printed start times",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-24",
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Forty Hours closing"
+          }
+        },
+        {
+          "label": "Evening starts only",
+          "entry": {
+            "church_slug": "our-lady-of-calvary-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-24",
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Forty Hours closing"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "forty-hours"
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "2e7e63bb861ca71dd291c8724a925fa8",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T03:57:30.519883+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "22acb5f58cf82c6da35eac4e16dc288de9c1f9790082df38610f19f0fbbfbb2b",
+        "fetched_at": "2026-11-15T16:42:22Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "d9c589f9b9d5b73115697776bdc64835273d1b6cdbb6ecc37cccf713ecb5c4a5",
+        "fetched_at": "2026-11-08T15:52:56Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.003085,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily (Monday - Saturday) - 6:30 and 8:00 a.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Evening - 5:00 p.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Evening - 5:00 p.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday - 6:30, 8:00, 10:00 a.m., 12:00 Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o18",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:45",
+          "end_time": "16:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday 3:45 - 4:45 p.m. & by appointment in the Rectory"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday 3:45 - 4:45 p.m. & by appointment in the Rectory"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o19",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-22",
+          "start_time": "18:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday November 22, 2026\n6:00PM Roseann Spear req. by OLC Rectory Staff"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o20",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-22",
+          "start_time": "18:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Forty Hours",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Our Lady of Calvary Parish will begin our 40 Hours on Sunday, November 22 at 6:00PM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "Our Lady of Calvary Parish will begin our 40 Hours on Sunday, November 22 at 6:00PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o21",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-23",
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Forty Hours",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "40 Hours will continue on Monday, November 23 at 7:00PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "40 Hours will continue on Monday, November 23 at 7:00PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o22",
+        "entry": {
+          "church_slug": "our-lady-of-calvary-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-24",
+          "start_time": "19:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Forty Hours",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "40 Hours will continue on Monday, November 23 at 7:00PM and Tuesday, November 24 at 7:30PM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "40 Hours will continue on Monday, November 23 at 7:00PM and Tuesday, November 24 at 7:30PM."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "83b9003341a677d181b46633050b3a7edf374d5e77564b7278f7a05a69ee57e3",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o1",
+          "o3",
+          "o5",
+          "o7",
+          "o9",
+          "o11"
+        ],
+        "slots": [
+          "s19",
+          "s20",
+          "s21",
+          "s22",
+          "s23",
+          "s18"
+        ],
+        "opinion_said": "mass Mon,Tue,Wed,Thu,Fri,Sat 06:30 @our-lady-of-calvary-philadelphia",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o21"
+        ],
+        "slots": [
+          "s25"
+        ],
+        "opinion_said": "adoration 2026-11-23 19:00 @our-lady-of-calvary-philadelphia",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      },
+      {
+        "id": "d3",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o22"
+        ],
+        "slots": [
+          "s26"
+        ],
+        "opinion_said": "adoration 2026-11-24 19:30 @our-lady-of-calvary-philadelphia",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      },
+      {
+        "id": "d4",
+        "kind": "missing",
+        "fields": [],
+        "opinion": [
+          "o20"
+        ],
+        "slots": [],
+        "opinion_said": "adoration 2026-11-22 18:00 @our-lady-of-calvary-philadelphia",
+        "seed_said": "-",
+        "resolution": {
+          "how": "changed"
+        }
+      },
+      {
+        "id": "d5",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o20"
+        ],
+        "slots": [
+          "s24"
+        ],
+        "opinion_said": "adoration 2026-11-22 18:00 @our-lady-of-calvary-philadelphia",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      }
+    ]
+  }
+}
