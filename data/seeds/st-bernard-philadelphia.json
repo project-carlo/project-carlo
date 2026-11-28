@@ -1,0 +1,1099 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-bernard-philadelphia",
+  "status": "ready",
+  "as_of": "2026-11-15T16:13:14Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T03:14:47Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Bernard (Mayfair). Two image-only November issues agree exactly: Sat 5 PM vigil, Sun 8:30/10:30/4:30, Mon-Sat 8 AM, Sat confession 3:30-4:30. The undated Holy Day line (vigil 7 PM; 8 AM, noon) is left out per POLICY Dates; no Adoration is printed. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8a88705c1f19d386f08500ea586f314871e59526b478de28d6ed92007f97bc47",
+      "fetched_at": "2026-11-15T16:13:14Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b98bbab8cffb96283f887d6b7df949e1dea5f1c14e86b222e02b81c2e5c4abc6",
+      "fetched_at": "2026-11-08T15:39:01Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "8a88705c1f19d386f08500ea586f314871e59526b478de28d6ed92007f97bc47",
+      "bulletins": [
+        "8a88705c1f19d386f08500ea586f314871e59526b478de28d6ed92007f97bc47",
+        "b98bbab8cffb96283f887d6b7df949e1dea5f1c14e86b222e02b81c2e5c4abc6"
+      ],
+      "cached": false,
+      "cost_usd": 0.001585,
+      "at": "2026-11-28T03:18:28.434477+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 1,
+          "said": "Saturday: Vigil 5:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 1,
+          "said": "Saturday: Vigil 5:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 2,
+          "said": "5:00 pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 2,
+          "said": "5:00 pm Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8a88705c1f19d386f08500ea586f314871e59526b478de28d6ed92007f97bc47",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday: Vigil 5:00 p.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the Saturday intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 1,
+          "said": "Sunday: 8:30 a.m., 10:30 a.m. & 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 1,
+          "said": "Sunday: 8:30 a.m., 10:30 a.m. & 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 2,
+          "said": "8:30 am / 10:30 am Mass / 4:30 pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 2,
+          "said": "8:30 am / 10:30 am Mass / 4:30 pm Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8a88705c1f19d386f08500ea586f314871e59526b478de28d6ed92007f97bc47",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:30 a.m., 10:30 a.m. & 4:30 p.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues; both weeks' Sunday intentions list all three.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 1,
+          "said": "Sunday: 8:30 a.m., 10:30 a.m. & 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 1,
+          "said": "Sunday: 8:30 a.m., 10:30 a.m. & 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 2,
+          "said": "8:30 am / 10:30 am Mass / 4:30 pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 2,
+          "said": "8:30 am / 10:30 am Mass / 4:30 pm Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8a88705c1f19d386f08500ea586f314871e59526b478de28d6ed92007f97bc47",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:30 a.m., 10:30 a.m. & 4:30 p.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues; both weeks' Sunday intentions list all three.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 1,
+          "said": "Sunday: 8:30 a.m., 10:30 a.m. & 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 1,
+          "said": "Sunday: 8:30 a.m., 10:30 a.m. & 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 2,
+          "said": "8:30 am / 10:30 am Mass / 4:30 pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 2,
+          "said": "8:30 am / 10:30 am Mass / 4:30 pm Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8a88705c1f19d386f08500ea586f314871e59526b478de28d6ed92007f97bc47",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:30 a.m., 10:30 a.m. & 4:30 p.m.”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues; both weeks' Sunday intentions list all three.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 1,
+          "said": "Daily: 8:00 a.m. Monday thru Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 1,
+          "said": "Daily: 8:00 a.m. Monday thru Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 2,
+          "said": "8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 2,
+          "said": "8:00 am Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8a88705c1f19d386f08500ea586f314871e59526b478de28d6ed92007f97bc47",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily: 8:00 a.m. Monday thru Saturday”"
+        }
+      ],
+      "rationale": "R1: the box gives Daily 8:00 a.m. Monday thru Saturday, and both weeks' intentions list an 8:00 am Mass every Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 1,
+          "said": "Daily: 8:00 a.m. Monday thru Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 1,
+          "said": "Daily: 8:00 a.m. Monday thru Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 2,
+          "said": "8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 2,
+          "said": "8:00 am Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8a88705c1f19d386f08500ea586f314871e59526b478de28d6ed92007f97bc47",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily: 8:00 a.m. Monday thru Saturday”"
+        }
+      ],
+      "rationale": "R1: the box gives Daily 8:00 a.m. Monday thru Saturday, and both weeks' intentions list an 8:00 am Mass every Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 1,
+          "said": "Daily: 8:00 a.m. Monday thru Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 1,
+          "said": "Daily: 8:00 a.m. Monday thru Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 2,
+          "said": "8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 2,
+          "said": "8:00 am Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8a88705c1f19d386f08500ea586f314871e59526b478de28d6ed92007f97bc47",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily: 8:00 a.m. Monday thru Saturday”"
+        }
+      ],
+      "rationale": "R1: the box gives Daily 8:00 a.m. Monday thru Saturday, and both weeks' intentions list an 8:00 am Mass every Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 1,
+          "said": "Daily: 8:00 a.m. Monday thru Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 1,
+          "said": "Daily: 8:00 a.m. Monday thru Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 2,
+          "said": "8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 2,
+          "said": "8:00 am Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8a88705c1f19d386f08500ea586f314871e59526b478de28d6ed92007f97bc47",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily: 8:00 a.m. Monday thru Saturday”"
+        }
+      ],
+      "rationale": "R1: the box gives Daily 8:00 a.m. Monday thru Saturday, and both weeks' intentions list an 8:00 am Mass every Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 1,
+          "said": "Daily: 8:00 a.m. Monday thru Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 1,
+          "said": "Daily: 8:00 a.m. Monday thru Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 2,
+          "said": "8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 2,
+          "said": "8:00 am Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8a88705c1f19d386f08500ea586f314871e59526b478de28d6ed92007f97bc47",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily: 8:00 a.m. Monday thru Saturday”"
+        }
+      ],
+      "rationale": "R1: the box gives Daily 8:00 a.m. Monday thru Saturday, and both weeks' intentions list an 8:00 am Mass every Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 1,
+          "said": "Daily: 8:00 a.m. Monday thru Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 1,
+          "said": "Daily: 8:00 a.m. Monday thru Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 2,
+          "said": "8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 2,
+          "said": "8:00 am Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8a88705c1f19d386f08500ea586f314871e59526b478de28d6ed92007f97bc47",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily: 8:00 a.m. Monday thru Saturday”"
+        }
+      ],
+      "rationale": "R1: the box gives Daily 8:00 a.m. Monday thru Saturday, and both weeks' intentions list an 8:00 am Mass every Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 1,
+          "said": "Confessions Saturday: 3:30-4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 1,
+          "said": "Confessions Saturday: 3:30-4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 2,
+          "said": "3:30 pm Confessions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 2,
+          "said": "3:30 pm Confessions"
+        }
+      ],
+      "rationale": "R1: printed in the Confessions box of both issues and the Saturday listing of Masses for the Week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 1,
+          "said": "Miraculous Medal Novena Saturday after 8:00 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 1,
+          "said": "Miraculous Medal Novena Saturday after 8:00 a.m. Mass"
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a88705c",
+          "page": 1,
+          "said": "Holy Day: Vigil 7:00 p.m. 8:00 a.m., 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b98bbab8",
+          "page": 1,
+          "said": "Holy Day: Vigil 7:00 p.m. 8:00 a.m., 12:00 Noon"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no date; neither issue dates a holy day (Dec 8 is not printed), so no day is pinned down. Decided like st-isaac-jogues-wayne s27 (undated standing box left out); unlike st-michael-the-archangel-levittown s16, there is no current dated reminder. December issues will print this year's times for update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "de1be2895975378d5ff9b20de7ad2678",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T03:18:28.434477+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "8a88705c1f19d386f08500ea586f314871e59526b478de28d6ed92007f97bc47",
+        "fetched_at": "2026-11-15T16:13:14Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "b98bbab8cffb96283f887d6b7df949e1dea5f1c14e86b222e02b81c2e5c4abc6",
+        "fetched_at": "2026-11-08T15:39:01Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.001585,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-bernard-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday: Vigil 5:00 p.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday: Vigil 5:00 p.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-bernard-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:30 a.m., 10:30 a.m. & 4:30 p.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:30 a.m., 10:30 a.m. & 4:30 p.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-bernard-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:30 a.m., 10:30 a.m. & 4:30 p.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:30 a.m., 10:30 a.m. & 4:30 p.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-bernard-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:30 a.m., 10:30 a.m. & 4:30 p.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:30 a.m., 10:30 a.m. & 4:30 p.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-bernard-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: 8:00 a.m. Monday thru Saturday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: 8:00 a.m. Monday thru Saturday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-bernard-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: 8:00 a.m. Monday thru Saturday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: 8:00 a.m. Monday thru Saturday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-bernard-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: 8:00 a.m. Monday thru Saturday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: 8:00 a.m. Monday thru Saturday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-bernard-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: 8:00 a.m. Monday thru Saturday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: 8:00 a.m. Monday thru Saturday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-bernard-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: 8:00 a.m. Monday thru Saturday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: 8:00 a.m. Monday thru Saturday"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-bernard-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily: 8:00 a.m. Monday thru Saturday"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily: 8:00 a.m. Monday thru Saturday"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "d54222b7ef00c28befac49753d67b34e9e301b882044ced08af88dcf96e51d21",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s11"
+        ],
+        "opinion_said": "-",
+        "seed_said": "confession Sat 15:30-16:30 @st-bernard-church-philadelphia",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "8a88705c",
+              "page": 1,
+              "said": "Confessions Saturday: 3:30-4:30 p.m."
+            }
+          ],
+          "why": "R1: the Confessions box of both issues (8a88705c p1, b98bbab8 p1) prints Saturday 3:30-4:30 p.m., and both weeks' p2 Saturday listings repeat '3:30 pm Confessions'; re-read at 300 dpi.",
+          "at": "2026-11-28T03:19:02Z"
+        }
+      }
+    ]
+  }
+}
