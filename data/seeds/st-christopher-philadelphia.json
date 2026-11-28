@@ -1,0 +1,1666 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-christopher-philadelphia",
+  "status": "ready",
+  "as_of": "2026-11-15T16:44:54Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T04:16:39Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Christopher, 13301 Proctor Rd.). Both November issues print the same Masses box (Sat 5 PM; Sun 8, 10, 12; Mon-Fri 8:30; Sat 8 AM) and confession times (Tue after 8:30 Mass, Wed 6:30-7:15 PM, Sat after 8 AM Mass, Sat 3:45-4:30 PM), and the website matches. A 24/7 code-entry Adoration chapel beside the school is recorded as one 24h slot. No open questions; the Nov 8-10 Forty Hours and Nov 7 memorial Mass are past as_of.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+      "fetched_at": "2026-11-15T16:44:54Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d7fe6b429fde73f4fad46c81858d3cb8a1593ec93d9e2e26f500d1d256d85ac0",
+      "fetched_at": "2026-11-08T22:01:35Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+      "bulletins": [
+        "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+        "d7fe6b429fde73f4fad46c81858d3cb8a1593ec93d9e2e26f500d1d256d85ac0"
+      ],
+      "cached": false,
+      "cost_usd": 0.003167,
+      "at": "2026-11-28T04:21:39.665256+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "Vigil - Saturday ... 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 1,
+          "said": "Vigil - Saturday ... 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 2,
+          "said": "5:00 PM (Saturday intentions, both weeks)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 2,
+          "said": "5:00 PM (Saturday intentions, both weeks)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Vigil - Saturday 5:00 pm”"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "Sundays ... 8:00, 10:00 and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 1,
+          "said": "Sundays ... 8:00, 10:00 and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 2,
+          "said": "8:00 AM / 10:00 AM / 12 Noon (Sunday intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 2,
+          "said": "8:00 AM / 10:00 AM / 12 Noon (Sunday intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sundays 8:00, 10:00 and 12:00 noon”"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "Sundays ... 8:00, 10:00 and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 1,
+          "said": "Sundays ... 8:00, 10:00 and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 2,
+          "said": "8:00 AM / 10:00 AM / 12 Noon (Sunday intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 2,
+          "said": "8:00 AM / 10:00 AM / 12 Noon (Sunday intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sundays 8:00, 10:00 and 12:00 noon”"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "Sundays ... 8:00, 10:00 and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 1,
+          "said": "Sundays ... 8:00, 10:00 and 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 2,
+          "said": "8:00 AM / 10:00 AM / 12 Noon (Sunday intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 2,
+          "said": "8:00 AM / 10:00 AM / 12 Noon (Sunday intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sundays 8:00, 10:00 and 12:00 noon”"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday ... 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday ... 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 2,
+          "said": "8:30 AM (Mon-Fri intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 2,
+          "said": "8:30 AM (Mon-Fri intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday to Friday 8:30 am”"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday ... 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday ... 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 2,
+          "said": "8:30 AM (Mon-Fri intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 2,
+          "said": "8:30 AM (Mon-Fri intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday to Friday 8:30 am”"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday ... 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday ... 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 2,
+          "said": "8:30 AM (Mon-Fri intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 2,
+          "said": "8:30 AM (Mon-Fri intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday to Friday 8:30 am”"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday ... 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday ... 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 2,
+          "said": "8:30 AM (Mon-Fri intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 2,
+          "said": "8:30 AM (Mon-Fri intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday to Friday 8:30 am”"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday ... 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday ... 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 2,
+          "said": "8:30 AM (Mon-Fri intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 2,
+          "said": "8:30 AM (Mon-Fri intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday to Friday 8:30 am”"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "Saturday ... 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 1,
+          "said": "Saturday ... 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 2,
+          "said": "8:00 AM (Saturday intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 2,
+          "said": "8:00 AM (Saturday intentions)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday 8:00 am”"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "Reconciliation is offered on Tuesday morning following the 8:30am Mass (about 9 am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 1,
+          "said": "Reconciliation is offered on Tuesday morning following the 8:30am Mass (about 9 am)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday morning following the 8:30am Mass (about 9 am)”"
+        }
+      ],
+      "rationale": "R1, R10: the bulletin prints 'about 9 am', which is also POLICY's 30 minutes after a weekday Mass; no end is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "Wednesday evening from 6:30 to 7:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 1,
+          "said": "Wednesday evening from 6:30 to 7:15 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Wednesday evening from 6:30 to 7:15 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the Sacraments box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "Saturday morning following the 8am Mass (about 8:30 am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 1,
+          "said": "Saturday morning following the 8am Mass (about 8:30 am)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday morning following the 8am Mass (about 8:30 am)”"
+        }
+      ],
+      "rationale": "R1, R10: the bulletin prints 'about 8:30 am', POLICY's 30 minutes after the 8:00 AM weekday-style Saturday Mass; no end is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "Saturday afternoon from 3:45 to 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 1,
+          "said": "Saturday afternoon from 3:45 to 4:30 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday afternoon from 3:45 to 4:30 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the Sacraments box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "continuous",
+        "day_of_week": null,
+        "date": null,
+        "start_time": null,
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel of the Most Blessed Sacrament, entrance by the school",
+        "access": "code",
+        "open_from": null,
+        "open_until": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. Entrance to the chapel is the second door to the left of our school's main entrance. You will need to key in the code number"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7fe6b42",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. Entrance to the chapel is the second door to the left of our school's main entrance. You will need to key in the code number"
+        }
+      ],
+      "rationale": "R46, R38: a standing chapel open around the clock, entered beside the parish school on the church's own property (website gives the one address, 13301 Proctor Road); the code is needed at every hour, so access is code.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "Holy Day Masses ... as announced"
+        }
+      ],
+      "rationale": "R26: no time is printed; no read issue announces a holy day (the next, Dec 8, is not yet printed).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 1,
+          "said": "You may also contact one of the priests through the Parish Office to make arrangements for Confession at another time."
+        }
+      ],
+      "rationale": "R26: by arrangement has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4c0db05",
+          "page": 3,
+          "said": "The ROSARY ... each Tuesday, for the Holy Souls in Purgatory, at 1:15 in the Chapel"
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "8d3033e7c980fdac1ea4aa978c6ff1a9",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T04:21:39.665256+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "b4c0db051d35695bc8b014a296486f6f4a98e89e675fea2b4442fdb3fe4ea24b",
+        "fetched_at": "2026-11-15T16:44:54Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "d7fe6b429fde73f4fad46c81858d3cb8a1593ec93d9e2e26f500d1d256d85ac0",
+        "fetched_at": "2026-11-08T22:01:35Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.003167,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-14",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-07",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday 8:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday 8:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Vigil - Saturday 5:00 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Vigil - Saturday 5:00 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sundays 8:00, 10:00 and 12:00 noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sundays 8:00, 10:00 and 12:00 noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sundays 8:00, 10:00 and 12:00 noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sundays 8:00, 10:00 and 12:00 noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sundays 8:00, 10:00 and 12:00 noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sundays 8:00, 10:00 and 12:00 noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday to Friday 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday to Friday 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday to Friday 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday to Friday 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday to Friday 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday to Friday 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday to Friday 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday to Friday 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday to Friday 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday to Friday 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Following the 8:30 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday morning following the 8:30am Mass (about 9 am)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday morning following the 8:30am Mass (about 9 am)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "18:30",
+          "end_time": "19:15",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Wednesday evening from 6:30 to 7:15 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Wednesday evening from 6:30 to 7:15 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Following the 8:00 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday morning following the 8am Mass (about 8:30 am)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday morning following the 8am Mass (about 8:30 am)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:45",
+          "end_time": "16:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday afternoon from 3:45 to 4:30 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday afternoon from 3:45 to 4:30 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel of the Most Blessed Sacrament; code required for access",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. You will need to key in the code number followed by the star. Please contact the parish office for the code number."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. You will need to key in the code number followed by the star. Please contact the parish office for the code number."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel of the Most Blessed Sacrament; code required for access",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. You will need to key in the code number followed by the star. Please contact the parish office for the code number."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. You will need to key in the code number followed by the star. Please contact the parish office for the code number."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel of the Most Blessed Sacrament; code required for access",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. You will need to key in the code number followed by the star. Please contact the parish office for the code number."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. You will need to key in the code number followed by the star. Please contact the parish office for the code number."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o18",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel of the Most Blessed Sacrament; code required for access",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. You will need to key in the code number followed by the star. Please contact the parish office for the code number."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. You will need to key in the code number followed by the star. Please contact the parish office for the code number."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o19",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel of the Most Blessed Sacrament; code required for access",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. You will need to key in the code number followed by the star. Please contact the parish office for the code number."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. You will need to key in the code number followed by the star. Please contact the parish office for the code number."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o20",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel of the Most Blessed Sacrament; code required for access",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. You will need to key in the code number followed by the star. Please contact the parish office for the code number."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. You will need to key in the code number followed by the star. Please contact the parish office for the code number."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o21",
+        "entry": {
+          "church_slug": "st-christopher-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel of the Most Blessed Sacrament; code required for access",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. You will need to key in the code number followed by the star. Please contact the parish office for the code number."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. You will need to key in the code number followed by the star. Please contact the parish office for the code number."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "e2c2cacf6f8b977aa3a8126f8149b8f6a0a19b5132a9ab7d4b6cd403e5dfb1b1",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "missing",
+        "fields": [],
+        "opinion": [
+          "o15",
+          "o16",
+          "o17",
+          "o18",
+          "o19",
+          "o20",
+          "o21"
+        ],
+        "slots": [],
+        "opinion_said": "adoration Mon,Tue,Wed,Thu,Fri,Sat,Sun 00:00-23:59 @st-christopher-philadelphia",
+        "seed_said": "-",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "b4c0db05",
+              "page": 1,
+              "said": "Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. ... You will need to key in the code number followed by the star."
+            }
+          ],
+          "why": "R46: a standing chapel open around the clock is one 'adoration 24h' slot (s15, access=code), never seven 00:00-23:59 weekly slots; s15 records the same availability.",
+          "at": "2026-11-28T04:21:55Z"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s15"
+        ],
+        "opinion_said": "-",
+        "seed_said": "adoration None None @st-christopher-philadelphia",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "b4c0db05",
+              "page": 1,
+              "said": "Adoration of the Blessed Sacrament is available twenty-four hours a day, seven days a week, in our Chapel of the Most Blessed Sacrament. ... You will need to key in the code number followed by the star."
+            }
+          ],
+          "why": "R46: s15 is the 24h chapel luna read as seven 00:00-23:59 slots (d1); the format requires one continuous entry, and the code is needed at every hour, so access=code.",
+          "at": "2026-11-28T04:22:00Z"
+        }
+      }
+    ]
+  }
+}
