@@ -1,0 +1,1473 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-peace-williamstown",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:32Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T21:19:01Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:42Z",
+  "summary": "One church, St. Mary, Williamstown. The Mass and Confession schedule boxes are identical in the Nov 8 and Nov 15, 2026 bulletins (both image-only, read as rendered pages) and match the parish website; no history is stored. Open: whether the St. John Neumann Adoration Chapel (daily 5:30am-9pm) is at St. Mary, since no source gives its location.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0b01819af40700f4a22c291642aa4cbb1e990e655d03723c06354bc12c6d9742",
+      "fetched_at": "2026-11-15T16:47:32Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3dc0e4501920f3d18161b339afaef5b8c385bb792873d5f81dbba7ac22023caa",
+      "fetched_at": "2026-11-08T15:55:54Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "MASSES Saturday: 8:00am & 4:00pm (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "MASSES Saturday: 8:00am & 4:00pm (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Saturday 11/21 8:00am Jozef Les"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read (Nov 8 and Nov 15) and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "MASSES Saturday: 8:00am & 4:00pm (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "MASSES Saturday: 8:00am & 4:00pm (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Saturday 11/21 4:00pm Jack Pawela"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "Sunday: 7:45am, 9:30am, 11:30am & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "Sunday: 7:45am, 9:30am, 11:30am & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Sunday 11/22 7:45am ... 9:30am ... 11:30am ... 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "Sunday: 7:45am, 9:30am, 11:30am & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "Sunday: 7:45am, 9:30am, 11:30am & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Sunday 11/22 7:45am ... 9:30am ... 11:30am ... 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "Sunday: 7:45am, 9:30am, 11:30am & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "Sunday: 7:45am, 9:30am, 11:30am & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Sunday 11/22 7:45am ... 9:30am ... 11:30am ... 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "Sunday: 7:45am, 9:30am, 11:30am & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "Sunday: 7:45am, 9:30am, 11:30am & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Sunday 11/22 7:45am ... 9:30am ... 11:30am ... 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Monday 11/16 6:45am ... 8:00am (same each weekday 11/16-11/20)"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read; every weekday of the intentions lists both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Monday 11/16 6:45am ... 8:00am (same each weekday 11/16-11/20)"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read; every weekday of the intentions lists both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Monday 11/16 6:45am ... 8:00am (same each weekday 11/16-11/20)"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read; every weekday of the intentions lists both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Monday 11/16 6:45am ... 8:00am (same each weekday 11/16-11/20)"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read; every weekday of the intentions lists both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Monday 11/16 6:45am ... 8:00am (same each weekday 11/16-11/20)"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read; every weekday of the intentions lists both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Monday 11/16 6:45am ... 8:00am (same each weekday 11/16-11/20)"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read; every weekday of the intentions lists both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Monday 11/16 6:45am ... 8:00am (same each weekday 11/16-11/20)"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read; every weekday of the intentions lists both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Monday 11/16 6:45am ... 8:00am (same each weekday 11/16-11/20)"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read; every weekday of the intentions lists both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Monday 11/16 6:45am ... 8:00am (same each weekday 11/16-11/20)"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read; every weekday of the intentions lists both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Monday 11/16 6:45am ... 8:00am (same each weekday 11/16-11/20)"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read; every weekday of the intentions lists both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "Monday-Friday: 6:45 & 8:00am, Thursday 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 2,
+          "said": "Thursday 11/19 6:30pm Martha Kaufman"
+        }
+      ],
+      "rationale": "R1: printed in the MASSES box on page 1 of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "CONFESSIONS Saturday: 8:30-9:00am & 3:00-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "CONFESSIONS Saturday: 8:30-9:00am & 3:00-3:45pm"
+        }
+      ],
+      "rationale": "R1: printed in the CONFESSIONS box on page 1 of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "CONFESSIONS Saturday: 8:30-9:00am & 3:00-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "CONFESSIONS Saturday: 8:30-9:00am & 3:00-3:45pm"
+        }
+      ],
+      "rationale": "R1: printed in the CONFESSIONS box on page 1 of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "CONFESSIONS Thursday: 6:00-6:20pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "CONFESSIONS Thursday: 6:00-6:20pm"
+        }
+      ],
+      "rationale": "R1: printed in the CONFESSIONS box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "05:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. John Neumann Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "ST. JOHN NEUMANN ADORATION CHAPEL Open Daily: 5:30am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "ST. JOHN NEUMANN ADORATION CHAPEL Open Daily: 5:30am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 3,
+          "said": "St. John Neumann Eucharistic Adoration Chapel is open daily from 5:30am until 9pm"
+        },
+        {
+          "source": "website",
+          "url": "https://olopp.org/mass-schedule/",
+          "said": "St. John Neumann Adoration Chapel Daily: 5:30am-9:00pm"
+        }
+      ],
+      "rationale": "R32, R38: the parish names it a Eucharistic Adoration Chapel with daily hours (both bulletins and website), but no source says where it is; seed church finds no St. John Neumann in Williamstown, and the only address given is the parish office's in a parish-wide box. A 'St. John Neumann Chapel Light' is sponsored next to the Sanctuary Light (3dc0e450 p2), which hints it is on parish grounds. Leaning leave out per POLICY (unclear location is left out); include if the reviewer knows it is at or attached to St. Mary. No source claims exposition.",
+      "question": "Is the St. John Neumann Adoration Chapel (open daily 5:30am-9pm) at St. Mary Church, 32 Carroll Ave? If so, add its daily hours as Adoration there.",
+      "options": [
+        {
+          "label": "Daily 5:30 AM-9:00 PM at St. Mary",
+          "entry": {
+            "church_slug": "st-mary-williamstown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "05:30",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. John Neumann Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:42Z"
+      },
+      "group": "neumann-chapel"
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "05:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. John Neumann Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "ST. JOHN NEUMANN ADORATION CHAPEL Open Daily: 5:30am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "ST. JOHN NEUMANN ADORATION CHAPEL Open Daily: 5:30am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 3,
+          "said": "St. John Neumann Eucharistic Adoration Chapel is open daily from 5:30am until 9pm"
+        },
+        {
+          "source": "website",
+          "url": "https://olopp.org/mass-schedule/",
+          "said": "St. John Neumann Adoration Chapel Daily: 5:30am-9:00pm"
+        }
+      ],
+      "rationale": "R32, R38: the parish names it a Eucharistic Adoration Chapel with daily hours (both bulletins and website), but no source says where it is; seed church finds no St. John Neumann in Williamstown, and the only address given is the parish office's in a parish-wide box. A 'St. John Neumann Chapel Light' is sponsored next to the Sanctuary Light (3dc0e450 p2), which hints it is on parish grounds. Leaning leave out per POLICY (unclear location is left out); include if the reviewer knows it is at or attached to St. Mary. No source claims exposition.",
+      "question": "Is the St. John Neumann Adoration Chapel (open daily 5:30am-9pm) at St. Mary Church, 32 Carroll Ave? If so, add its daily hours as Adoration there.",
+      "options": [
+        {
+          "label": "Daily 5:30 AM-9:00 PM at St. Mary",
+          "entry": {
+            "church_slug": "st-mary-williamstown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "05:30",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. John Neumann Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:42Z"
+      },
+      "group": "neumann-chapel"
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "05:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. John Neumann Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "ST. JOHN NEUMANN ADORATION CHAPEL Open Daily: 5:30am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "ST. JOHN NEUMANN ADORATION CHAPEL Open Daily: 5:30am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 3,
+          "said": "St. John Neumann Eucharistic Adoration Chapel is open daily from 5:30am until 9pm"
+        },
+        {
+          "source": "website",
+          "url": "https://olopp.org/mass-schedule/",
+          "said": "St. John Neumann Adoration Chapel Daily: 5:30am-9:00pm"
+        }
+      ],
+      "rationale": "R32, R38: the parish names it a Eucharistic Adoration Chapel with daily hours (both bulletins and website), but no source says where it is; seed church finds no St. John Neumann in Williamstown, and the only address given is the parish office's in a parish-wide box. A 'St. John Neumann Chapel Light' is sponsored next to the Sanctuary Light (3dc0e450 p2), which hints it is on parish grounds. Leaning leave out per POLICY (unclear location is left out); include if the reviewer knows it is at or attached to St. Mary. No source claims exposition.",
+      "question": "Is the St. John Neumann Adoration Chapel (open daily 5:30am-9pm) at St. Mary Church, 32 Carroll Ave? If so, add its daily hours as Adoration there.",
+      "options": [
+        {
+          "label": "Daily 5:30 AM-9:00 PM at St. Mary",
+          "entry": {
+            "church_slug": "st-mary-williamstown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "05:30",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. John Neumann Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:42Z"
+      },
+      "group": "neumann-chapel"
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "05:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. John Neumann Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "ST. JOHN NEUMANN ADORATION CHAPEL Open Daily: 5:30am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "ST. JOHN NEUMANN ADORATION CHAPEL Open Daily: 5:30am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 3,
+          "said": "St. John Neumann Eucharistic Adoration Chapel is open daily from 5:30am until 9pm"
+        },
+        {
+          "source": "website",
+          "url": "https://olopp.org/mass-schedule/",
+          "said": "St. John Neumann Adoration Chapel Daily: 5:30am-9:00pm"
+        }
+      ],
+      "rationale": "R32, R38: the parish names it a Eucharistic Adoration Chapel with daily hours (both bulletins and website), but no source says where it is; seed church finds no St. John Neumann in Williamstown, and the only address given is the parish office's in a parish-wide box. A 'St. John Neumann Chapel Light' is sponsored next to the Sanctuary Light (3dc0e450 p2), which hints it is on parish grounds. Leaning leave out per POLICY (unclear location is left out); include if the reviewer knows it is at or attached to St. Mary. No source claims exposition.",
+      "question": "Is the St. John Neumann Adoration Chapel (open daily 5:30am-9pm) at St. Mary Church, 32 Carroll Ave? If so, add its daily hours as Adoration there.",
+      "options": [
+        {
+          "label": "Daily 5:30 AM-9:00 PM at St. Mary",
+          "entry": {
+            "church_slug": "st-mary-williamstown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "05:30",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. John Neumann Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:42Z"
+      },
+      "group": "neumann-chapel"
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "05:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. John Neumann Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "ST. JOHN NEUMANN ADORATION CHAPEL Open Daily: 5:30am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "ST. JOHN NEUMANN ADORATION CHAPEL Open Daily: 5:30am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 3,
+          "said": "St. John Neumann Eucharistic Adoration Chapel is open daily from 5:30am until 9pm"
+        },
+        {
+          "source": "website",
+          "url": "https://olopp.org/mass-schedule/",
+          "said": "St. John Neumann Adoration Chapel Daily: 5:30am-9:00pm"
+        }
+      ],
+      "rationale": "R32, R38: the parish names it a Eucharistic Adoration Chapel with daily hours (both bulletins and website), but no source says where it is; seed church finds no St. John Neumann in Williamstown, and the only address given is the parish office's in a parish-wide box. A 'St. John Neumann Chapel Light' is sponsored next to the Sanctuary Light (3dc0e450 p2), which hints it is on parish grounds. Leaning leave out per POLICY (unclear location is left out); include if the reviewer knows it is at or attached to St. Mary. No source claims exposition.",
+      "question": "Is the St. John Neumann Adoration Chapel (open daily 5:30am-9pm) at St. Mary Church, 32 Carroll Ave? If so, add its daily hours as Adoration there.",
+      "options": [
+        {
+          "label": "Daily 5:30 AM-9:00 PM at St. Mary",
+          "entry": {
+            "church_slug": "st-mary-williamstown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "05:30",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. John Neumann Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:42Z"
+      },
+      "group": "neumann-chapel"
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "05:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. John Neumann Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "ST. JOHN NEUMANN ADORATION CHAPEL Open Daily: 5:30am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "ST. JOHN NEUMANN ADORATION CHAPEL Open Daily: 5:30am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 3,
+          "said": "St. John Neumann Eucharistic Adoration Chapel is open daily from 5:30am until 9pm"
+        },
+        {
+          "source": "website",
+          "url": "https://olopp.org/mass-schedule/",
+          "said": "St. John Neumann Adoration Chapel Daily: 5:30am-9:00pm"
+        }
+      ],
+      "rationale": "R32, R38: the parish names it a Eucharistic Adoration Chapel with daily hours (both bulletins and website), but no source says where it is; seed church finds no St. John Neumann in Williamstown, and the only address given is the parish office's in a parish-wide box. A 'St. John Neumann Chapel Light' is sponsored next to the Sanctuary Light (3dc0e450 p2), which hints it is on parish grounds. Leaning leave out per POLICY (unclear location is left out); include if the reviewer knows it is at or attached to St. Mary. No source claims exposition.",
+      "question": "Is the St. John Neumann Adoration Chapel (open daily 5:30am-9pm) at St. Mary Church, 32 Carroll Ave? If so, add its daily hours as Adoration there.",
+      "options": [
+        {
+          "label": "Daily 5:30 AM-9:00 PM at St. Mary",
+          "entry": {
+            "church_slug": "st-mary-williamstown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "05:30",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. John Neumann Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:42Z"
+      },
+      "group": "neumann-chapel"
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-williamstown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "05:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. John Neumann Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "ST. JOHN NEUMANN ADORATION CHAPEL Open Daily: 5:30am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "ST. JOHN NEUMANN ADORATION CHAPEL Open Daily: 5:30am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 3,
+          "said": "St. John Neumann Eucharistic Adoration Chapel is open daily from 5:30am until 9pm"
+        },
+        {
+          "source": "website",
+          "url": "https://olopp.org/mass-schedule/",
+          "said": "St. John Neumann Adoration Chapel Daily: 5:30am-9:00pm"
+        }
+      ],
+      "rationale": "R32, R38: the parish names it a Eucharistic Adoration Chapel with daily hours (both bulletins and website), but no source says where it is; seed church finds no St. John Neumann in Williamstown, and the only address given is the parish office's in a parish-wide box. A 'St. John Neumann Chapel Light' is sponsored next to the Sanctuary Light (3dc0e450 p2), which hints it is on parish grounds. Leaning leave out per POLICY (unclear location is left out); include if the reviewer knows it is at or attached to St. Mary. No source claims exposition.",
+      "question": "Is the St. John Neumann Adoration Chapel (open daily 5:30am-9pm) at St. Mary Church, 32 Carroll Ave? If so, add its daily hours as Adoration there.",
+      "options": [
+        {
+          "label": "Daily 5:30 AM-9:00 PM at St. Mary",
+          "entry": {
+            "church_slug": "st-mary-williamstown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "05:30",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. John Neumann Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:42Z"
+      },
+      "group": "neumann-chapel"
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0b01819a",
+          "page": 1,
+          "said": "Holy Days: 4:00pm (Vigil), 6:45, 8:00am & 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3dc0e450",
+          "page": 1,
+          "said": "Holy Days: 4:00pm (Vigil), 6:45, 8:00am & 7:00pm"
+        }
+      ],
+      "rationale": "R24, POLICY Dates: holy-day Masses are dated, and neither bulletin names a holy day or date, so none can be pinned down.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://olopp.org/mass-schedule/",
+          "said": "Saturdays 8:30am-9:00am 3:00pm-3:45pm or by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

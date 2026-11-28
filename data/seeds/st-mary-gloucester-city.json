@@ -1,0 +1,686 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-gloucester-city",
+  "status": "approved",
+  "as_of": "2026-11-15T16:48:00Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T13:21:39Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:28Z",
+  "summary": "One church, St. Mary, Gloucester City. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box and Mass Times: Sat 4:00pm vigil, Sun 9:30 & 11:30am, Mon-Fri 8:00am, Sat 9:00am, Saturday confession 9:30am and 3:15-3:45pm, Monday Adoration 7:00pm; the Mass intentions agree. No open questions; Advent Adoration Dec 6-8 and the Dec 8 holy day print no times and are left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "347c66b8efd5211ef40f0891e5024694b408c79cb90ec6e617afb48cba503e5f",
+      "fetched_at": "2026-11-15T16:48:00Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2945f0c1281fdf74b7f4091f3d99c15d78b8e5139e02ebe0c3b066c83690c5b9",
+      "fetched_at": "2026-11-08T15:56:15Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-gloucester-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 1,
+          "said": "Saturday Vigil - 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 1,
+          "said": "Saturday Vigil - 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 7,
+          "said": "Saturday Vigil Mass 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 7,
+          "said": "Saturday Vigil Mass 4:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box and the page 7 Mass Times of both bulletins read; the intentions list 4:00pm each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-gloucester-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 1,
+          "said": "Sunday - 9:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 1,
+          "said": "Sunday - 9:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 7,
+          "said": "Sunday 9:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 7,
+          "said": "Sunday 9:30am & 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box and the page 7 Mass Times of both bulletins read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-gloucester-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 1,
+          "said": "Sunday - 9:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 1,
+          "said": "Sunday - 9:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 7,
+          "said": "Sunday 9:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 7,
+          "said": "Sunday 9:30am & 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box and the page 7 Mass Times of both bulletins read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-gloucester-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday - 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday - 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 7,
+          "said": "Daily Mass Monday - Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 7,
+          "said": "Daily Mass Monday - Friday 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list 8:00am Mass each weekday. Thanksgiving Day has no stated change (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-gloucester-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday - 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday - 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 7,
+          "said": "Daily Mass Monday - Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 7,
+          "said": "Daily Mass Monday - Friday 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list 8:00am Mass each weekday. Thanksgiving Day has no stated change (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-gloucester-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday - 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday - 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 7,
+          "said": "Daily Mass Monday - Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 7,
+          "said": "Daily Mass Monday - Friday 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list 8:00am Mass each weekday. Thanksgiving Day has no stated change (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-gloucester-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday - 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday - 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 7,
+          "said": "Daily Mass Monday - Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 7,
+          "said": "Daily Mass Monday - Friday 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list 8:00am Mass each weekday. Thanksgiving Day has no stated change (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-gloucester-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday - 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday - 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 7,
+          "said": "Daily Mass Monday - Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 7,
+          "said": "Daily Mass Monday - Friday 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list 8:00am Mass each weekday. Thanksgiving Day has no stated change (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-gloucester-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 1,
+          "said": "Daily Mass Saturday - 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 1,
+          "said": "Daily Mass Saturday - 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 7,
+          "said": "Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 7,
+          "said": "Saturday 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list 9:00am each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-gloucester-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 1,
+          "said": "Reconciliation Saturday - 9:30am & 3:15-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 1,
+          "said": "Reconciliation Saturday - 9:30am & 3:15-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 7,
+          "said": "Reconciliation Saturday 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 7,
+          "said": "Reconciliation Saturday 9:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; no end time given, so end_time is null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-gloucester-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 1,
+          "said": "Reconciliation Saturday - 9:30am & 3:15-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 1,
+          "said": "Reconciliation Saturday - 9:30am & 3:15-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 7,
+          "said": "Saturday 3:15pm-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 7,
+          "said": "Saturday 3:15pm-3:45pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-gloucester-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday - 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday - 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 7,
+          "said": "Eucharistic Adoration Monday 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2945f0c1",
+          "page": 7,
+          "said": "Eucharistic Adoration Monday 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; no end time is given, so end_time is null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 5,
+          "said": "Eucharistic Adoration will take place Sunday, December 6, through Tuesday, December 8 ... thirty-minute time slot"
+        }
+      ],
+      "rationale": "R24, R26: the Advent Adoration days print no start or end hours (the slots are on SignUpGenius), so there is no definite time to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 3,
+          "said": "Tuesday, December 8 Parish Office Closed - Holy Day of Obligation"
+        }
+      ],
+      "rationale": "R26: the Immaculate Conception holy day is noted, but no Mass times are printed yet; update mode will read them when published.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c66b8",
+          "page": 10,
+          "said": "8:15 AM – Mass at St. Bartholomew Church"
+        }
+      ],
+      "rationale": "R22: the Catholic Business Network Mass on November 20 is at St. Bartholomew Church of Sacred Heart Parish, Camden, another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

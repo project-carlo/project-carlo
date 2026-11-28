@@ -1,0 +1,583 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-eucharist-cherry-hill",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:25Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T20:37:27Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:23Z",
+  "summary": "One church (Holy Eucharist, Cherry Hill). The page-1 schedule box is identical in both bulletins read (Nov 8 and Nov 15, 2026): Saturday 9 AM and 5 PM, Sunday 8:15, 9:45 and 11:15 AM, weekdays 9 AM, Saturday Confession 4-4:30 PM; the Mass intentions match. Also the 10 PM Christmas Eve Mass announced in both. No Adoration is printed; no history is stored. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9b51c6b3d63c739d2167f919e33db96551e5cf09dee1bcb3d0edfd75bb8d8ac3",
+      "fetched_at": "2026-11-15T16:47:25Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f4812ccce675882c5123070b4bfebbc6e475852bf86f9d09f22d64f775b03bf6",
+      "fetched_at": "2026-11-08T22:01:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-eucharist-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 1,
+          "said": "Masses Saturday ... 9:00 am & 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4812ccc",
+          "page": 1,
+          "said": "Masses Saturday ... 9:00 am & 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 6,
+          "said": "Saturday, November 21 9:00 ... 5:00 ..."
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read, and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-eucharist-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 1,
+          "said": "Masses Saturday ... 9:00 am & 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4812ccc",
+          "page": 1,
+          "said": "Masses Saturday ... 9:00 am & 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 6,
+          "said": "Saturday, November 21 9:00 ... 5:00 ..."
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read, and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-eucharist-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 1,
+          "said": "Sunday ... 8:15 am, 9:45 am & 11:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4812ccc",
+          "page": 1,
+          "said": "Sunday ... 8:15 am, 9:45 am & 11:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 6,
+          "said": "Sunday, November 22 8:15 ... 9:45 ... 11:15 ..."
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read, and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-eucharist-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 1,
+          "said": "Sunday ... 8:15 am, 9:45 am & 11:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4812ccc",
+          "page": 1,
+          "said": "Sunday ... 8:15 am, 9:45 am & 11:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 6,
+          "said": "Sunday, November 22 8:15 ... 9:45 ... 11:15 ..."
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read, and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-eucharist-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 1,
+          "said": "Sunday ... 8:15 am, 9:45 am & 11:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4812ccc",
+          "page": 1,
+          "said": "Sunday ... 8:15 am, 9:45 am & 11:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 6,
+          "said": "Sunday, November 22 8:15 ... 9:45 ... 11:15 ..."
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read, and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-eucharist-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 1,
+          "said": "Weekday Mass Mon. - Friday ... 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4812ccc",
+          "page": 1,
+          "said": "Weekday Mass Mon. - Friday ... 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 6,
+          "said": "Monday, November 16 9:00 Pro Populo ... Friday, November 20 9:00"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read; every weekday 9:00 has an intention.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-eucharist-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 1,
+          "said": "Weekday Mass Mon. - Friday ... 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4812ccc",
+          "page": 1,
+          "said": "Weekday Mass Mon. - Friday ... 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 6,
+          "said": "Monday, November 16 9:00 Pro Populo ... Friday, November 20 9:00"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read; every weekday 9:00 has an intention.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-eucharist-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 1,
+          "said": "Weekday Mass Mon. - Friday ... 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4812ccc",
+          "page": 1,
+          "said": "Weekday Mass Mon. - Friday ... 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 6,
+          "said": "Monday, November 16 9:00 Pro Populo ... Friday, November 20 9:00"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read; every weekday 9:00 has an intention.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-eucharist-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 1,
+          "said": "Weekday Mass Mon. - Friday ... 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4812ccc",
+          "page": 1,
+          "said": "Weekday Mass Mon. - Friday ... 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 6,
+          "said": "Monday, November 16 9:00 Pro Populo ... Friday, November 20 9:00"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read; every weekday 9:00 has an intention.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-eucharist-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 1,
+          "said": "Weekday Mass Mon. - Friday ... 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4812ccc",
+          "page": 1,
+          "said": "Weekday Mass Mon. - Friday ... 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 6,
+          "said": "Monday, November 16 9:00 Pro Populo ... Friday, November 20 9:00"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read; every weekday 9:00 has an intention.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-eucharist-cherry-hill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 1,
+          "said": "Confessions Saturday ... 4:00 to 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4812ccc",
+          "page": 1,
+          "said": "Confessions Saturday ... 4:00 to 4:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Confessions box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-eucharist-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "22:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 4,
+          "said": "celebrating the 10:00 PM Christmas Eve Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4812ccc",
+          "page": 4,
+          "said": "celebrating the 10:00 PM Christmas Eve Mass"
+        }
+      ],
+      "rationale": "R1, R16: POLICY, Weekly or dated rule 7: a holy-day Mass outside the weekly schedule is dated; announced in the choir notice of both bulletins, after as_of. Other Christmas Mass times are not yet printed; update mode will read them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 3,
+          "said": "pray the Rosary Via Zoom Monday Evenings - 6:30-7:00 p.m."
+        }
+      ],
+      "rationale": "R24: a Rosary on Zoom is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b51c6b3",
+          "page": 1,
+          "said": "The rectory should be called at any time for the Sacrament of the Sick"
+        }
+      ],
+      "rationale": "R24, R26: Anointing of the Sick by call has no time and is not a recorded service.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

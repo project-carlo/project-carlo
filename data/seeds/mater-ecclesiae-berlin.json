@@ -1,0 +1,1086 @@
+{
+  "schema_version": 1,
+  "parish_slug": "mater-ecclesiae-berlin",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:30Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T20:53:54Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:31Z",
+  "summary": "One church (Mater Ecclesiae, traditional Latin Mass). Both November 2026 bulletins print the same week: Sat 5 PM, Sun 8 and 10:30 AM (Benediction after), Mon-Tue/Thu-Sat 8 AM, Wed 7:30 PM, with confessions before each Mass; the homepage's Mass Times agree, with slightly different confession minutes (bulletin used). First Friday all-day Adoration comes from the website (R6). Open: the website-only Saturday 4-4:55 PM and First Friday 7:30 AM confessions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c5cdb3b2d6cef2eb6c1f722874e39972d2005615d4949a4519d895eca500de35",
+      "fetched_at": "2026-11-15T16:47:30Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "214312e710e157ecf062c244d9f3edee9b2d95829c228f97246720e870979465",
+      "fetched_at": "2026-11-08T15:55:54Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "Saturday 8:00 AM / 5:00 PM (Masses for the Week); 5:00 PM Saturday Anticipated Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Saturday 8:00 AM / 5:00 PM (Masses for the Week); 5:00 PM Saturday Anticipated Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses for the Week box and readings list of both bulletins read (Nov 8 and Nov 15); the website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "Sunday 8:00 AM / 10:30 AM; 8:00 AM Low Mass; 10:30 AM High Mass followed by Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Sunday 8:00 AM / 10:30 AM; 8:00 AM Low Mass; 10:30 AM High Mass followed by Benediction"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses for the Week box of both bulletins read; the website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "Sunday 8:00 AM / 10:30 AM; 8:00 AM Low Mass; 10:30 AM High Mass followed by Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Sunday 8:00 AM / 10:30 AM; 8:00 AM Low Mass; 10:30 AM High Mass followed by Benediction"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses for the Week box of both bulletins read; the website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "Monday-Tuesday, Thursday-Saturday 8:00 AM (Masses for the Week)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Monday-Tuesday, Thursday-Saturday 8:00 AM (Masses for the Week)"
+        }
+      ],
+      "rationale": "R1, R35: printed for each of these weekdays in the Masses for the Week box of both bulletins read; the website gives Mon, Tue, Thu, Fri, Sat 8:00 am Low Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "Monday-Tuesday, Thursday-Saturday 8:00 AM (Masses for the Week)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Monday-Tuesday, Thursday-Saturday 8:00 AM (Masses for the Week)"
+        }
+      ],
+      "rationale": "R1, R35: printed for each of these weekdays in the Masses for the Week box of both bulletins read; the website gives Mon, Tue, Thu, Fri, Sat 8:00 am Low Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "Monday-Tuesday, Thursday-Saturday 8:00 AM (Masses for the Week)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Monday-Tuesday, Thursday-Saturday 8:00 AM (Masses for the Week)"
+        }
+      ],
+      "rationale": "R1, R35: printed for each of these weekdays in the Masses for the Week box of both bulletins read; the website gives Mon, Tue, Thu, Fri, Sat 8:00 am Low Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "Monday-Tuesday, Thursday-Saturday 8:00 AM (Masses for the Week)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Monday-Tuesday, Thursday-Saturday 8:00 AM (Masses for the Week)"
+        }
+      ],
+      "rationale": "R1, R35: printed for each of these weekdays in the Masses for the Week box of both bulletins read; the website gives Mon, Tue, Thu, Fri, Sat 8:00 am Low Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "Monday-Tuesday, Thursday-Saturday 8:00 AM (Masses for the Week)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Monday-Tuesday, Thursday-Saturday 8:00 AM (Masses for the Week)"
+        }
+      ],
+      "rationale": "R1, R35: printed for each of these weekdays in the Masses for the Week box of both bulletins read; the website gives Mon, Tue, Thu, Fri, Sat 8:00 am Low Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "Wednesday 7:30 PM; 7:30 PM Mass Followed by The Saint Jude Novena"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Wednesday 7:30 PM; 7:30 PM Mass Followed by The Saint Jude Novena"
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins read; the website agrees. The Saint Jude Novena that follows is a devotion (R24) and is not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction after the 10:30 AM High Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "10:30 AM High Mass followed by Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "10:30 AM High Mass followed by Benediction"
+        }
+      ],
+      "rationale": "R10, POLICY (Benediction implies Adoration; after a weekend Mass is 1 hour after it starts): printed in both bulletins read; the website gives Benediction following the Sunday 10:30 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "Confessions 7:15 AM to7:55 AM & 9:45 to 10:25 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Confessions 7:15 AM to7:55 AM & 9:45 to 10:25 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed under Sunday in both bulletins read. The website's Mass Times say 7:00-7:55 and 9:30-10:30; the two dated weekly bulletins agree with each other and are the newer, more specific source, so their times are used (R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": "10:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "Confessions 7:15 AM to7:55 AM & 9:45 to 10:25 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Confessions 7:15 AM to7:55 AM & 9:45 to 10:25 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed under Sunday in both bulletins read. The website's Mass Times say 7:00-7:55 and 9:30-10:30; the two dated weekly bulletins agree with each other and are the newer, more specific source, so their times are used (R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:40",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "8:00 AM Mass / Confessions 7:40 AM to 7:55 AM (Mon 16, Tue 17, Thu 19, Fri 20, Sat 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Confessions 7:40 AM to 7:55 AM (Mon 9, Tue 10, Thu 12, Sat 14)"
+        }
+      ],
+      "rationale": "R1, R35: printed for each of these weekdays in the newest bulletin. The Nov 8 issue prints it for Mon, Tue, Thu and Sat; for Fri Nov 13 it omits both the Mass and confession lines even though its Masses box lists the Friday 8:00 AM Mass, so that is a layout gap. The website gives the same weekday pattern (7:45-7:55, including Friday); the bulletins' 7:40 is used as the newer, dated source (R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:40",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "8:00 AM Mass / Confessions 7:40 AM to 7:55 AM (Mon 16, Tue 17, Thu 19, Fri 20, Sat 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Confessions 7:40 AM to 7:55 AM (Mon 9, Tue 10, Thu 12, Sat 14)"
+        }
+      ],
+      "rationale": "R1, R35: printed for each of these weekdays in the newest bulletin. The Nov 8 issue prints it for Mon, Tue, Thu and Sat; for Fri Nov 13 it omits both the Mass and confession lines even though its Masses box lists the Friday 8:00 AM Mass, so that is a layout gap. The website gives the same weekday pattern (7:45-7:55, including Friday); the bulletins' 7:40 is used as the newer, dated source (R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:40",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "8:00 AM Mass / Confessions 7:40 AM to 7:55 AM (Mon 16, Tue 17, Thu 19, Fri 20, Sat 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Confessions 7:40 AM to 7:55 AM (Mon 9, Tue 10, Thu 12, Sat 14)"
+        }
+      ],
+      "rationale": "R1, R35: printed for each of these weekdays in the newest bulletin. The Nov 8 issue prints it for Mon, Tue, Thu and Sat; for Fri Nov 13 it omits both the Mass and confession lines even though its Masses box lists the Friday 8:00 AM Mass, so that is a layout gap. The website gives the same weekday pattern (7:45-7:55, including Friday); the bulletins' 7:40 is used as the newer, dated source (R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:40",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "8:00 AM Mass / Confessions 7:40 AM to 7:55 AM (Mon 16, Tue 17, Thu 19, Fri 20, Sat 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Confessions 7:40 AM to 7:55 AM (Mon 9, Tue 10, Thu 12, Sat 14)"
+        }
+      ],
+      "rationale": "R1, R35: printed for each of these weekdays in the newest bulletin. The Nov 8 issue prints it for Mon, Tue, Thu and Sat; for Fri Nov 13 it omits both the Mass and confession lines even though its Masses box lists the Friday 8:00 AM Mass, so that is a layout gap. The website gives the same weekday pattern (7:45-7:55, including Friday); the bulletins' 7:40 is used as the newer, dated source (R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:40",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "8:00 AM Mass / Confessions 7:40 AM to 7:55 AM (Mon 16, Tue 17, Thu 19, Fri 20, Sat 21)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Confessions 7:40 AM to 7:55 AM (Mon 9, Tue 10, Thu 12, Sat 14)"
+        }
+      ],
+      "rationale": "R1, R35: printed for each of these weekdays in the newest bulletin. The Nov 8 issue prints it for Mon, Tue, Thu and Sat; for Fri Nov 13 it omits both the Mass and confession lines even though its Masses box lists the Friday 8:00 AM Mass, so that is a layout gap. The website gives the same weekday pattern (7:45-7:55, including Friday); the bulletins' 7:40 is used as the newer, dated source (R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "Confessions 6:30 PM to 7:25 PM (Wednesday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 1,
+          "said": "Confessions 6:30 PM to 7:25 PM (Wednesday)"
+        }
+      ],
+      "rationale": "R1, R35: printed under Wednesday in both bulletins read. The website's '6:30 am to 7:25 am' is a typo for the evening Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, Choral Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 3,
+          "said": "Choral Masses / Immaculate Conception / Tuesday, December 8, 7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 3,
+          "said": "Immaculate Conception SPONSORED / Tuesday, December 8, 7:30 PM"
+        }
+      ],
+      "rationale": "R1, R16: a dated holy-day Mass outside the weekly schedule, on or after as_of; printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "23:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Midnight Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 3,
+          "said": "Christmas Midnight Mass / Thursday, December 24, 11:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 3,
+          "said": "Christmas Midnight Mass SPONSORED / Thursday, December 24, 11:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: dated Mass outside the weekly schedule, printed with its clock time in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-02-02",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Candlemas, Choral Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 3,
+          "said": "Candlemas / Tuesday, February 2, 2027, 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "214312e7",
+          "page": 3,
+          "said": "Candlemas SPONSORED / Tuesday, February 2, 2027, 10:30 AM"
+        }
+      ],
+      "rationale": "R1, R16: dated feast Mass outside the weekly schedule (Tuesdays have only the 8:00 AM Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-06",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Epiphany, Choral Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 3,
+          "said": "Epiphany / Wednesday, January 6, 2027, 7:30PM"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the Epiphany Choral Mass is the regular Wednesday 7:30 PM Mass, so only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 6,
+          "said": "First Holy Communion Saturday, May 1, 2027 at 10:30 AM; Confirmation 2027 Thursday, May 20, 2027 at 5:00 PM; May Crowning Sunday, May 2, 2027 at 10:30 AM"
+        }
+      ],
+      "rationale": "R24: the CCD calendar does not call First Communion or Confirmation a Mass, and the May Crowning is at the regular Sunday 10:30 AM Mass; nothing separate is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "an hour of adoration on First Saturday and First Friday"
+        }
+      ],
+      "rationale": "R26: the Advent note gives no time for First Saturday adoration, and the website's First Saturday line lists only Confessions and Mass. First Friday Adoration is its own slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "http://www.materecclesiae.org/",
+          "said": "First Saturday - 7:45 AM Confessions; 8 AM Mass"
+        }
+      ],
+      "rationale": "R40: the website's First Saturday confession and Mass are the regular Saturday 7:40-7:55 AM confession and 8:00 AM Mass, already recorded at the bulletins' times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass; Benediction at 3:00 PM"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "http://www.materecclesiae.org/",
+          "said": "First Friday --7:30 AM Confession; 8:00 AM Mass Followed by All Day Adoration of the Blessed Sacrament; 3:00 PM Benediction of the Blessed Sacrament",
+          "schedule_check": {
+            "checked_at": "2026-11-16T20:57:49Z",
+            "current_because": "The homepage's Mass Times section matches both November 2026 bulletins on every Mass (Sat 5 PM, Sun 8 and 10:30 with Benediction, weekday 8 AM, Wed 7:30 PM with St Jude Novena), names the current rector Fr. Pasley, and links the Nov 15, 2026 bulletin; checked 2026-11-16.",
+            "bulletin": "c5cdb3b2",
+            "fits_because": "Neither read bulletin's week holds a first Friday (Nov 9-14, Nov 16-21), and the Nov 15 bulletin itself urges 'an hour of adoration on First Saturday and First Friday', so the bulletin presupposes this First Friday adoration."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "an hour of adoration on First Saturday and First Friday"
+        }
+      ],
+      "rationale": "R6, R10, R12: a monthly pattern from the parish's own current Mass Times; start is 30 minutes after the weekday 8:00 AM Mass (POLICY, Times) and it ends with the 3:00 PM Benediction (POLICY: one Adoration event with the note Benediction).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 8:00 AM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "http://www.materecclesiae.org/",
+          "said": "First Friday --7:30 AM Confession; 8:00 AM Mass"
+        }
+      ],
+      "rationale": "R6, R30: only the website gives it, and its other confession times differ by a few minutes from both bulletins (e.g. weekdays 7:45 vs 7:40), so its confession minutes look out of date. The regular Friday 7:40-7:55 AM confession already covers first Fridays; leaning leave out.",
+      "question": "Add the website's First Friday 7:30 AM confession?",
+      "options": [
+        {
+          "label": "First Fridays 7:30 AM",
+          "entry": {
+            "church_slug": "mater-ecclesiae-berlin",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 8:00 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:31Z"
+      }
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 5:00 PM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "http://www.materecclesiae.org/",
+          "said": "Saturday 5:00 pm: Anticipated Low Mass (No Music) Confessions: 4:00 pm to 4:55 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5cdb3b2",
+          "page": 1,
+          "said": "5:00 PM Saturday Anticipated Mass (no confession line given)"
+        }
+      ],
+      "rationale": "R29, R6: neither bulletin prints a Saturday-afternoon confession (each lists confessions per day but none before the 5:00 PM Mass), while the current website does. Not a contradiction, but the website's other confession minutes differ from the bulletins, so the exact time is uncertain; leaning include since the Mass schedule on the site is current.",
+      "question": "Add the website's Saturday 4:00-4:55 PM confession before the 5:00 PM Mass?",
+      "options": [
+        {
+          "label": "Saturdays 4:00-4:55 PM",
+          "entry": {
+            "church_slug": "mater-ecclesiae-berlin",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "16:55",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 5:00 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:31Z"
+      }
+    }
+  ]
+}

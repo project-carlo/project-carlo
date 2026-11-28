@@ -1,0 +1,1154 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-damien-ocean-city",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:44Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T21:59:59Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:06Z",
+  "summary": "Three worship sites (St. Augustine, St. Frances Cabrini, Our Lady of Good Counsel); the page-1 schedule boxes are identical in the Nov 8 and Nov 15, 2026 bulletins (image-only PDFs, read as rendered pages). Weekly Masses, Mon-Fri Adoration and Saturday/Sunday confessions are settled; the weekday 7 AM Communion Service is excluded. December holy-day Masses are dated. Open: whether the Dec 16 Advent Penance Service counts as Confession.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "909f5a392c16e1b0ce7c58d5a4cd5978f6449690ee2cfd57e8c7e4c56c1247c0",
+      "fetched_at": "2026-11-15T16:47:44Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "fb1fc6d84e9f675c4c503aca37c39d06691c3ec23059dcde266a9a1ce628406a",
+      "fetched_at": "2026-11-08T15:56:07Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-ocean-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "St. Frances Cabrini ... Sunday: 10:30 AM, & 4:00 PM (SPA)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "St. Frances Cabrini ... Sunday: 10:30 AM, & 4:00 PM (SPA)"
+        }
+      ],
+      "rationale": "R1: printed in the St. Frances Cabrini schedule box on page 1 of both bulletins read; intentions on p10 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-ocean-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "St. Frances Cabrini ... Sunday: 10:30 AM, & 4:00 PM (SPA)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "St. Frances Cabrini ... Sunday: 10:30 AM, & 4:00 PM (SPA)"
+        }
+      ],
+      "rationale": "R1: printed in the St. Frances Cabrini schedule box of both bulletins; (SPA) gives the language note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-ocean-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English and Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Confessions: Sunday, 3:00 PM (ENG/SPA)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Confessions: Sunday, 3:00 PM (ENG/SPA)"
+        }
+      ],
+      "rationale": "R1: printed in the St. Frances Cabrini box of both bulletins; no end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "St. Augustine ... Saturday Vigil: 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "St. Augustine ... Saturday Vigil: 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the St. Augustine box of both bulletins; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "St. Augustine ... Sunday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "St. Augustine ... Sunday: 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the St. Augustine box of both bulletins; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Daily Mass (Mon - Sat): 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Daily Mass (Mon - Sat): 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the St. Augustine box of both bulletins; the p10 intentions list 8:30 am Mass each day Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Daily Mass (Mon - Sat): 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Daily Mass (Mon - Sat): 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the St. Augustine box of both bulletins; the p10 intentions list 8:30 am Mass each day Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Daily Mass (Mon - Sat): 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Daily Mass (Mon - Sat): 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the St. Augustine box of both bulletins; the p10 intentions list 8:30 am Mass each day Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Daily Mass (Mon - Sat): 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Daily Mass (Mon - Sat): 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the St. Augustine box of both bulletins; the p10 intentions list 8:30 am Mass each day Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Daily Mass (Mon - Sat): 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Daily Mass (Mon - Sat): 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the St. Augustine box of both bulletins; the p10 intentions list 8:30 am Mass each day Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Daily Mass (Mon - Sat): 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Daily Mass (Mon - Sat): 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the St. Augustine box of both bulletins; the p10 intentions list 8:30 am Mass each day Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Adoration (Mon - Fri): 9:00 AM - 1:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Adoration (Mon - Fri): 9:00 AM - 1:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the St. Augustine box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Adoration (Mon - Fri): 9:00 AM - 1:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Adoration (Mon - Fri): 9:00 AM - 1:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the St. Augustine box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Adoration (Mon - Fri): 9:00 AM - 1:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Adoration (Mon - Fri): 9:00 AM - 1:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the St. Augustine box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Adoration (Mon - Fri): 9:00 AM - 1:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Adoration (Mon - Fri): 9:00 AM - 1:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the St. Augustine box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Adoration (Mon - Fri): 9:00 AM - 1:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Adoration (Mon - Fri): 9:00 AM - 1:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the St. Augustine box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Confessions: Saturday, 3:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Confessions: Saturday, 3:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the St. Augustine box of both bulletins; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Communion Service (Mon - Fri): 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Communion Service (Mon - Fri): 7:00 AM"
+        }
+      ],
+      "rationale": "R25, POLICY: a Communion Service is not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Communion Service (Mon - Fri): 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Communion Service (Mon - Fri): 7:00 AM"
+        }
+      ],
+      "rationale": "R25, POLICY: a Communion Service is not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Communion Service (Mon - Fri): 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Communion Service (Mon - Fri): 7:00 AM"
+        }
+      ],
+      "rationale": "R25, POLICY: a Communion Service is not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Communion Service (Mon - Fri): 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Communion Service (Mon - Fri): 7:00 AM"
+        }
+      ],
+      "rationale": "R25, POLICY: a Communion Service is not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Communion Service (Mon - Fri): 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Communion Service (Mon - Fri): 7:00 AM"
+        }
+      ],
+      "rationale": "R25, POLICY: a Communion Service is not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-ocean-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 1,
+          "said": "Our Lady of Good Counsel ... Sunday: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb1fc6d8",
+          "page": 1,
+          "said": "Our Lady of Good Counsel ... Sunday: 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Our Lady of Good Counsel box of both bulletins; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception Vigil"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 10,
+          "said": "Upcoming Liturgies: December 7 Immaculate Conception Vigil 7:00 PM - St. Augustine"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Mass outside the weekly schedule, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 10,
+          "said": "December 8 Immaculate Conception 7:00 AM - St. Augustine"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Mass; the usual 7:00 AM weekday service is a Communion Service, so this is outside the weekly Mass schedule. R17: no cancellation recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 10,
+          "said": "December 8 ... 7:00 PM - St. Augustine"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Mass outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-ocean-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, Spanish"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 10,
+          "said": "December 8 ... 7:00 PM (Spanish) - St. Frances Cabrini"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Mass outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 10,
+          "said": "December 8 ... 8:30 AM - St. Augustine"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 6: Dec 8 is a Tuesday, already covered by the weekly Mon-Sat 8:30 AM Mass at St. Augustine.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-ocean-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe, Spanish"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 10,
+          "said": "December 12 Our Lady of Guadalupe 6:00 PM (Spanish) - St. Frances Cabrini"
+        }
+      ],
+      "rationale": "R1, R16: dated feast-day Mass outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-ocean-city",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-16",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Penance Service"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "909f5a39",
+          "page": 10,
+          "said": "December 16 Advent Penance Service 6:00 PM - St. Augustine"
+        }
+      ],
+      "rationale": "R30: POLICY counts Penance/Reconciliation; an Advent penance service normally offers individual confessions, but the bulletin does not say so. Leaning include.",
+      "question": "Record the December 16 Advent Penance Service at St. Augustine as a Confession?",
+      "options": [
+        {
+          "label": "Confession Dec 16 6:00 PM",
+          "entry": {
+            "church_slug": "st-augustine-ocean-city",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-16",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Advent Penance Service"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:06Z"
+      }
+    }
+  ]
+}

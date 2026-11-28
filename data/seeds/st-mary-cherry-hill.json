@@ -1,0 +1,527 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-cherry-hill",
+  "status": "approved",
+  "as_of": "2026-11-15T16:48:15Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T13:16:26Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:26Z",
+  "summary": "One church (St. Mary, Cherry Hill). Weekend (Sat 5:00pm; Sun 8:30 & 10:30am), weekday 8:00am chapel Mass and Saturday 8:30am confession agree in both bulletins read (Nov 8, Nov 15) and on the website. First-Wednesday Adoration time (Noon-1pm, Chapel) comes from the parish website, since the bulletins give no time. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e3e028adde3159e23773c8900bdb32a792f2cdaf5dfc5c34f56d1ac2914905d2",
+      "fetched_at": "2026-11-15T16:48:15Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "bdef0f405f08a6e00750dfb5b808c107a079e33907c1361bf66c9b7dfa6a50af",
+      "fetched_at": "2026-11-08T15:56:41Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 1,
+          "said": "Weekends Saturday 5:00pm   Sunday 8:30am & 10:30am*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bdef0f40",
+          "page": 1,
+          "said": "Weekends Saturday 5:00pm   Sunday 8:30am & 10:30am*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 2,
+          "said": "Saturday, November 21 5:00pm Anna Junier"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read (Nov 8 and Nov 15) and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 1,
+          "said": "Weekends Saturday 5:00pm   Sunday 8:30am & 10:30am*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bdef0f40",
+          "page": 1,
+          "said": "Weekends Saturday 5:00pm   Sunday 8:30am & 10:30am*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 2,
+          "said": "November 22 8:30am Nicola Tanzi ... 10:30am Kay Brawn"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 1,
+          "said": "Weekends Saturday 5:00pm   Sunday 8:30am & 10:30am*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bdef0f40",
+          "page": 1,
+          "said": "Weekends Saturday 5:00pm   Sunday 8:30am & 10:30am*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 2,
+          "said": "November 22 8:30am Nicola Tanzi ... 10:30am Kay Brawn"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 1,
+          "said": "Weekdays: Monday-Friday 8:00am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bdef0f40",
+          "page": 1,
+          "said": "Weekdays: Monday-Friday 8:00am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 2,
+          "said": "Monday, November 16 8:00am ... Friday, November 20 8:00am"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins prints weekday Mass Monday-Friday 8:00am in the Chapel; POLICY, Churches and chapels: the chapel is part of the parish's one church (the calendar also lists the Rosary in the Chapel beside on-site rooms), and the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 1,
+          "said": "Weekdays: Monday-Friday 8:00am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bdef0f40",
+          "page": 1,
+          "said": "Weekdays: Monday-Friday 8:00am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 2,
+          "said": "Monday, November 16 8:00am ... Friday, November 20 8:00am"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins prints weekday Mass Monday-Friday 8:00am in the Chapel; POLICY, Churches and chapels: the chapel is part of the parish's one church (the calendar also lists the Rosary in the Chapel beside on-site rooms), and the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 1,
+          "said": "Weekdays: Monday-Friday 8:00am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bdef0f40",
+          "page": 1,
+          "said": "Weekdays: Monday-Friday 8:00am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 2,
+          "said": "Monday, November 16 8:00am ... Friday, November 20 8:00am"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins prints weekday Mass Monday-Friday 8:00am in the Chapel; POLICY, Churches and chapels: the chapel is part of the parish's one church (the calendar also lists the Rosary in the Chapel beside on-site rooms), and the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 1,
+          "said": "Weekdays: Monday-Friday 8:00am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bdef0f40",
+          "page": 1,
+          "said": "Weekdays: Monday-Friday 8:00am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 2,
+          "said": "Monday, November 16 8:00am ... Friday, November 20 8:00am"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins prints weekday Mass Monday-Friday 8:00am in the Chapel; POLICY, Churches and chapels: the chapel is part of the parish's one church (the calendar also lists the Rosary in the Chapel beside on-site rooms), and the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 1,
+          "said": "Weekdays: Monday-Friday 8:00am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bdef0f40",
+          "page": 1,
+          "said": "Weekdays: Monday-Friday 8:00am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 2,
+          "said": "Monday, November 16 8:00am ... Friday, November 20 8:00am"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins prints weekday Mass Monday-Friday 8:00am in the Chapel; POLICY, Churches and chapels: the chapel is part of the parish's one church (the calendar also lists the Rosary in the Chapel beside on-site rooms), and the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cherry-hill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 1,
+          "said": "Confession Saturday  8:30am or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bdef0f40",
+          "page": 1,
+          "said": "Confession Saturday  8:30am or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; no end time is given, so POLICY, Times leaves end_time null. There is no Saturday morning Mass, so it is not tied to one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 1,
+          "said": "Confession Saturday  8:30am or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cherry-hill",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 1,
+          "said": "Eucharistic Adoration 1st Wednesday of each month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bdef0f40",
+          "page": 1,
+          "said": "Eucharistic Adoration 1st Wednesday of each month"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmarycherryhill.org/page/180021590/180114532/Mass-Schedule-2",
+          "said": "Eucharistic Adoration First Wednesdays of the month: 12:00 Noon to 1:00pm (Chapel)",
+          "schedule_check": {
+            "checked_at": "2026-11-19T13:20:28Z",
+            "current_because": "Fetched 2026-11-19; the page's Mass, weekday Mass and Saturday 8:30am confession schedule matches the Nov 15, 2026 bulletin exactly, and no stale priests or dates appear.",
+            "bulletin": "e3e028ad",
+            "fits_because": "The Nov 15 bulletin's schedule box prints Eucharistic Adoration on the 1st Wednesday of each month without a time; the website gives that same service's hours in the Chapel."
+          }
+        }
+      ],
+      "rationale": "R6, R12: both bulletins name first-Wednesday Adoration without a time; the parish's current website schedule supplies Noon-1pm in the Chapel. The newest week (Nov 15-22) holds no first Wednesday, so page is null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Youth Led Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3e028ad",
+          "page": 4,
+          "said": "Dec 12 ... Join us for Youth Led Mass at 5pm at The Catholic Church of St Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bdef0f40",
+          "page": 4,
+          "said": "Dec 12 ... Join us for Youth Led Mass at 5pm at The Catholic Church of St Mary"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: a youth-led celebration at the regular Saturday 5:00pm Mass is covered by the weekly slot, not a separate dated entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

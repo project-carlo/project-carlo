@@ -1,0 +1,643 @@
+{
+  "schema_version": 1,
+  "parish_slug": "christ-the-redeemer",
+  "status": "approved",
+  "as_of": "2026-11-15T16:16:52Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T20:14:33Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:10Z",
+  "summary": "One church (Assumption, Atco). Both bulletins (Nov 7-8 and Nov 14-15, 2026) and the website agree: Sat 4 PM vigil, Sun 9 and 11 AM, Mon-Fri 8 AM Mass; Saturday 3 PM Confession; Adoration Mon-Thu 3-4 PM and Fri 8:30 AM-7 PM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2389448aa6eba0d98cc8d02386f5ed371268c4791ca5c638e355a8640aa5d868",
+      "fetched_at": "2026-11-15T16:16:52Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2792cbe1ad0e1149de6b0483b32891aa8cf4802ee5f93a37264ec3c0529960db",
+      "fetched_at": "2026-11-08T15:42:04Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-atco",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2389448a",
+          "page": 1,
+          "said": "WEEKEND MASS Saturday Vigil | 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2792cbe1",
+          "page": 1,
+          "said": "WEEKEND MASS Saturday Vigil | 4:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read (Nov 7-8 and Nov 14-15) and on the website's Mass Schedule page; intentions list Sat 4:00 PM each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-atco",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2389448a",
+          "page": 1,
+          "said": "WEEKEND MASS Sunday | 9:00am & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2792cbe1",
+          "page": 1,
+          "said": "WEEKEND MASS Sunday | 9:00am & 11:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and on the website; intentions list both Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-atco",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2389448a",
+          "page": 1,
+          "said": "WEEKEND MASS Sunday | 9:00am & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2792cbe1",
+          "page": 1,
+          "said": "WEEKEND MASS Sunday | 9:00am & 11:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and on the website; intentions list both Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-atco",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2389448a",
+          "page": 1,
+          "said": "DAILY MASS Monday through Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2792cbe1",
+          "page": 1,
+          "said": "DAILY MASS Monday through Friday | 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and on the website; intentions list 8:00 AM Monday-Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-atco",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2389448a",
+          "page": 1,
+          "said": "DAILY MASS Monday through Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2792cbe1",
+          "page": 1,
+          "said": "DAILY MASS Monday through Friday | 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and on the website; intentions list 8:00 AM Monday-Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-atco",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2389448a",
+          "page": 1,
+          "said": "DAILY MASS Monday through Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2792cbe1",
+          "page": 1,
+          "said": "DAILY MASS Monday through Friday | 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and on the website; intentions list 8:00 AM Monday-Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-atco",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2389448a",
+          "page": 1,
+          "said": "DAILY MASS Monday through Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2792cbe1",
+          "page": 1,
+          "said": "DAILY MASS Monday through Friday | 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and on the website; intentions list 8:00 AM Monday-Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-atco",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2389448a",
+          "page": 1,
+          "said": "DAILY MASS Monday through Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2792cbe1",
+          "page": 1,
+          "said": "DAILY MASS Monday through Friday | 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and on the website; intentions list 8:00 AM Monday-Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-atco",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2389448a",
+          "page": 1,
+          "said": "RECONCILIATION Saturday | 3:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2792cbe1",
+          "page": 1,
+          "said": "RECONCILIATION Saturday | 3:00pm"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; no end time given, so end_time is null (POLICY, Times). Website: 'every Saturday at 3:00pm'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-atco",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2389448a",
+          "page": 1,
+          "said": "ADORATION Monday-Thursday Prayer | 3:00pm - 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2792cbe1",
+          "page": 1,
+          "said": "ADORATION Monday-Thursday Prayer | 3:00pm - 4:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.christtheredeemer.us/mass-schedule",
+          "said": "Eucharistic Adoration Monday-Thursday | 3:00 pm - 4:00 pm"
+        }
+      ],
+      "rationale": "R1: listed under the ADORATION heading in both bulletins; the website's Mass Schedule page calls the same hours Eucharistic Adoration. One-church parish, so it belongs to Assumption, Atco.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-atco",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2389448a",
+          "page": 1,
+          "said": "ADORATION Monday-Thursday Prayer | 3:00pm - 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2792cbe1",
+          "page": 1,
+          "said": "ADORATION Monday-Thursday Prayer | 3:00pm - 4:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.christtheredeemer.us/mass-schedule",
+          "said": "Eucharistic Adoration Monday-Thursday | 3:00 pm - 4:00 pm"
+        }
+      ],
+      "rationale": "R1: listed under the ADORATION heading in both bulletins; the website's Mass Schedule page calls the same hours Eucharistic Adoration. One-church parish, so it belongs to Assumption, Atco.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-atco",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2389448a",
+          "page": 1,
+          "said": "ADORATION Monday-Thursday Prayer | 3:00pm - 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2792cbe1",
+          "page": 1,
+          "said": "ADORATION Monday-Thursday Prayer | 3:00pm - 4:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.christtheredeemer.us/mass-schedule",
+          "said": "Eucharistic Adoration Monday-Thursday | 3:00 pm - 4:00 pm"
+        }
+      ],
+      "rationale": "R1: listed under the ADORATION heading in both bulletins; the website's Mass Schedule page calls the same hours Eucharistic Adoration. One-church parish, so it belongs to Assumption, Atco.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-atco",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2389448a",
+          "page": 1,
+          "said": "ADORATION Monday-Thursday Prayer | 3:00pm - 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2792cbe1",
+          "page": 1,
+          "said": "ADORATION Monday-Thursday Prayer | 3:00pm - 4:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.christtheredeemer.us/mass-schedule",
+          "said": "Eucharistic Adoration Monday-Thursday | 3:00 pm - 4:00 pm"
+        }
+      ],
+      "rationale": "R1: listed under the ADORATION heading in both bulletins; the website's Mass Schedule page calls the same hours Eucharistic Adoration. One-church parish, so it belongs to Assumption, Atco.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-atco",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2389448a",
+          "page": 1,
+          "said": "ADORATION Friday | following the 8:00am Mass until 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2792cbe1",
+          "page": 1,
+          "said": "ADORATION Friday | following the 8:00am Mass until 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.christtheredeemer.us/mass-schedule",
+          "said": "Eucharistic Adoration Friday | 8:30 am - 7:00 pm"
+        }
+      ],
+      "rationale": "R1, R10: after a weekday 8:00 AM Mass starts 30 minutes after it, 8:30 AM, which the website prints as its clock time; ends 7:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-atco",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-04",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Friday Holy Hour with Vespers"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2389448a",
+          "page": 9,
+          "said": "First Friday Holy Hour with Vespers on Friday, December 4, 2026, at 6:00 PM beginning with a Eucharistic Procession from St. Lucy's Chapel into Assumption Church, where time will be spent in Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2792cbe1",
+          "page": 9,
+          "said": "First Friday Holy Hour with Vespers on Friday, December 4"
+        }
+      ],
+      "rationale": "R37: the Holy Hour lies entirely inside the Friday 8:30 AM-7:00 PM Adoration already recorded at Assumption; no second overlapping Adoration slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2389448a",
+          "page": 1,
+          "said": "HOLY DAY MASS Vigil | 6:00pm Holy Day | 8:00am"
+        }
+      ],
+      "rationale": "POLICY, Dates; R16: generic holy-day times with no date; no holy day is named or dated in the bulletins read, so nothing to record. Update mode will pick up dated holy-day Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

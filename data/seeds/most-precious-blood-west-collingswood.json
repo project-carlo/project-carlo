@@ -1,0 +1,897 @@
+{
+  "schema_version": 1,
+  "parish_slug": "most-precious-blood-west-collingswood",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:31Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T20:58:58Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:34Z",
+  "summary": "One church, bilingual (English/Vietnamese). Weekend, weekday, Confession and Adoration times are identical in the Nov 8 and Nov 15 bulletins and match the website; Sunday 10:00-10:20 Confession is given only in the Vietnamese text and on the site. The website cancels the Dec 5 Saturday 8:30 AM Mass (moved to Calvary Cemetery, excluded as off-site). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "462f8267c17eff720203471907284b287ccb5b4098887355dd537982042f2807",
+      "fetched_at": "2026-11-15T16:47:31Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e5bf06832e5e8d5fd94480933f3684e9add151d68f907560e2696311be041163",
+      "fetched_at": "2026-11-08T15:55:55Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Saturday Vigil: 5:00PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Saturday Vigil: 5:00PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Services box of both bulletins read; the intentions list a 5:00PM Vigil each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Sunday: 7:30AM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Sunday: 7:30AM (Vietnamese)"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Services box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Sunday: ... 9:00AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Sunday: ... 9:00AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Services box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Sunday: ... 10:30AM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Sunday: ... 10:30AM (Vietnamese)"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Services box of both bulletins read. The Nov 15 Confirmation at this Mass is a special occasion at the weekly Mass (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Monday - Friday: 8:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Monday - Friday: 8:30AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the weekday intentions list 8:30AM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Monday - Friday: 8:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Monday - Friday: 8:30AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the weekday intentions list 8:30AM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Monday - Friday: 8:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Monday - Friday: 8:30AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the weekday intentions list 8:30AM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Monday - Friday: 8:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Monday - Friday: 8:30AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the weekday intentions list 8:30AM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Monday - Friday: 8:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Monday - Friday: 8:30AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the weekday intentions list 8:30AM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Monday - Friday: ... 6:00PM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Monday - Friday: ... 6:00PM (Vietnamese)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the weekday intentions list 6:00PM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Monday - Friday: ... 6:00PM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Monday - Friday: ... 6:00PM (Vietnamese)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the weekday intentions list 6:00PM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Monday - Friday: ... 6:00PM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Monday - Friday: ... 6:00PM (Vietnamese)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the weekday intentions list 6:00PM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Monday - Friday: ... 6:00PM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Monday - Friday: ... 6:00PM (Vietnamese)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the weekday intentions list 6:00PM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Monday - Friday: ... 6:00PM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Monday - Friday: ... 6:00PM (Vietnamese)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the weekday intentions list 6:00PM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Saturday: 8:30AM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Saturday: 8:30AM (Vietnamese)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the Saturday intentions list 8:30AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "HOLY HOUR is every First Friday of every month 9:00AM-10:00AM in English."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "HOLY HOUR is every First Friday of every month 9:00AM-10:00AM in English."
+        }
+      ],
+      "rationale": "R1: named first-Friday Holy Hour printed in the schedule box of both bulletins (POLICY, Weekly or dated rule 2); the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese; with the Divine Mercy Chaplet"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Chuỗi Lòng Thương Xót Chúa và Chầu Thánh Thể: Mỗi Thứ Sáu hàng tuần bằng tiếng Việt từ 5:30PM-6:00PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Chuỗi Lòng Thương Xót Chúa và Chầu Thánh Thể: Mỗi Thứ Sáu hàng tuần bằng tiếng Việt từ 5:30PM-6:00PM."
+        }
+      ],
+      "rationale": "R1: 'Chaplet of Divine Mercy and Eucharistic Adoration, every Friday in Vietnamese 5:30-6:00PM', printed in both bulletins; the website's Vietnamese schedule lists 'Chầu Thánh Thể: Thứ Sáu - 5:30PM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Reconciliation - Saturday: 4:15-4:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Reconciliation - Saturday: 4:15-4:45PM"
+        }
+      ],
+      "rationale": "R1: printed in English and Vietnamese in both bulletins and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "08:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Reconciliation - ... Sunday: 8:30-8:50AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Reconciliation - ... Sunday: 8:30-8:50AM"
+        }
+      ],
+      "rationale": "R1: printed in English and Vietnamese in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "10:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Giải Tội - ... Sáng Chúa Nhật: Từ 8:30AM-8:50AM và từ 10:00AM-10:20AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e5bf0683",
+          "page": 2,
+          "said": "Giải Tội - ... Sáng Chúa Nhật: Từ 8:30AM-8:50AM và từ 10:00AM-10:20AM"
+        }
+      ],
+      "rationale": "R1: the Vietnamese Reconciliation line of both bulletins gives Sunday 10:00-10:20AM (before the Vietnamese 10:30 Mass) alongside 8:30-8:50; the English line omits it, which is a shorter listing, not a contradiction. The website's Vietnamese schedule gives 'Sáng Chúa Nhật từ 10:00 - 10:20AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Reconciliation ... or by appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f8267",
+          "page": 2,
+          "said": "Holy Day: Vigil: 7:00PM (Bilingual), Day: 8:30AM (English), 7:00PM (Vietnamese)"
+        }
+      ],
+      "rationale": "R24, POLICY Dates: the holy-day times name no date, and dates may not be projected; update mode will read the bulletins that date each holy day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-05",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Saturday Mass at Calvary Cemetery instead"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.mpbparish.org/",
+          "said": "On Saturday, December - 5th, 2026, there will be no 8:30 AM Mass at the parish church: Most Precious Blood. However, a Mass will be celebrated at 9:00 AM at Calvary Cemetery",
+          "schedule_check": {
+            "checked_at": "2026-11-16T21:00:44Z",
+            "current_because": "Homepage Weekly Announcements, checked 2026-11-16, name Saturday December 5th, 2026 (a real Saturday three weeks after the newest bulletin); its Schedule of Services matches the Nov 15 bulletin exactly.",
+            "bulletin": "462f8267",
+            "fits_because": "The Nov 15 bulletin prints the weekly Saturday 8:30AM Vietnamese Mass; it does not yet cover December, so the site's explicit cancellation of that one date fits it."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's own current website explicitly cancels the Saturday 8:30 AM Mass at the church on Dec 5, 2026, which is after as_of; the weekly slot stays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "precious-blood-west-collingswood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-05",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At Calvary Cemetery, Cherry Hill"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.mpbparish.org/",
+          "said": "a Mass will be celebrated at 9:00 AM at Calvary Cemetery, (Rosary at 8:30AM.) 2398 W Marlton Pike, Cherry Hill Township, NJ 08002."
+        }
+      ],
+      "rationale": "R22: held at a cemetery at another address, not at the parish church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

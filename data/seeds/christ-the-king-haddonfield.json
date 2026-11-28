@@ -1,0 +1,1149 @@
+{
+  "schema_version": 1,
+  "parish_slug": "christ-the-king-haddonfield",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:18Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T20:07:43Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:08Z",
+  "summary": "One church. No schedule box: the Saturday 5 PM, Sunday 7:30/9/11 AM and weekday 8 AM Masses come from two weeks of intentions (R35) and match the website; Monday Adoration 8:30 AM-7 PM is in the newest calendar and on the website's chapel page. Open: whether the Sunday Masses follow the website's summer schedule, the website-only Sunday Confessions (seasons around Labor Day), and a Thanksgiving 9 AM Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c7f6185583e4862b3dcb90988b2386fbf888d35d4c48c4371fe202fdacb3db2d",
+      "fetched_at": "2026-11-15T16:47:18Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e79d356de3977eecf69fbb205fbb9aa64e2038f5635fc0be3ca4badcb537e030",
+      "fetched_at": "2026-11-08T15:55:42Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c7f61855",
+          "page": 6,
+          "said": "Mass Intentions: Saturday 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79d356d",
+          "page": 6,
+          "said": "Mass Intentions: Saturday 5:00 PM"
+        }
+      ],
+      "rationale": "R35: the Saturday 5:00 PM Mass is in the intentions of both weeks read (Nov 7, 14, 21); the website's Mass schedule also gives Saturday Anticipatory Mass 5 PM. The bulletin has no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c7f61855",
+          "page": 6,
+          "said": "Mass Intentions: Monday-Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79d356d",
+          "page": 6,
+          "said": "Mass Intentions: Monday-Friday 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "http://ctkhaddonfield.org/mass-schedule-live-stream/",
+          "said": "Weekday Mass Monday – Friday 8 AM"
+        }
+      ],
+      "rationale": "R35: an 8:00 AM Mass each weekday in the intentions of both weeks read (Nov 9-13 and 16-20), matching the website's Weekday Mass Monday-Friday 8 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c7f61855",
+          "page": 6,
+          "said": "Mass Intentions: Monday-Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79d356d",
+          "page": 6,
+          "said": "Mass Intentions: Monday-Friday 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "http://ctkhaddonfield.org/mass-schedule-live-stream/",
+          "said": "Weekday Mass Monday – Friday 8 AM"
+        }
+      ],
+      "rationale": "R35: an 8:00 AM Mass each weekday in the intentions of both weeks read (Nov 9-13 and 16-20), matching the website's Weekday Mass Monday-Friday 8 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c7f61855",
+          "page": 6,
+          "said": "Mass Intentions: Monday-Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79d356d",
+          "page": 6,
+          "said": "Mass Intentions: Monday-Friday 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "http://ctkhaddonfield.org/mass-schedule-live-stream/",
+          "said": "Weekday Mass Monday – Friday 8 AM"
+        }
+      ],
+      "rationale": "R35: an 8:00 AM Mass each weekday in the intentions of both weeks read (Nov 9-13 and 16-20), matching the website's Weekday Mass Monday-Friday 8 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c7f61855",
+          "page": 6,
+          "said": "Mass Intentions: Monday-Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79d356d",
+          "page": 6,
+          "said": "Mass Intentions: Monday-Friday 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "http://ctkhaddonfield.org/mass-schedule-live-stream/",
+          "said": "Weekday Mass Monday – Friday 8 AM"
+        }
+      ],
+      "rationale": "R35: an 8:00 AM Mass each weekday in the intentions of both weeks read (Nov 9-13 and 16-20), matching the website's Weekday Mass Monday-Friday 8 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c7f61855",
+          "page": 6,
+          "said": "Mass Intentions: Monday-Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79d356d",
+          "page": 6,
+          "said": "Mass Intentions: Monday-Friday 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "http://ctkhaddonfield.org/mass-schedule-live-stream/",
+          "said": "Weekday Mass Monday – Friday 8 AM"
+        }
+      ],
+      "rationale": "R35: an 8:00 AM Mass each weekday in the intentions of both weeks read (Nov 9-13 and 16-20), matching the website's Weekday Mass Monday-Friday 8 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c7f61855",
+          "page": 6,
+          "said": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79d356d",
+          "page": 6,
+          "said": "Sunday 7:30 AM, 9:00 AM, 11:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "http://ctkhaddonfield.org/mass-schedule-live-stream/",
+          "said": "Regular Schedule September 10 through June 15, 2025 ... Sunday 7:30 AM, 9:00 AM, 11:00 AM. Summer Schedule June 22 through Labor Day, inclusive ... Sunday 8 AM, 10 AM"
+        }
+      ],
+      "rationale": "R35 settles the three Sunday Masses for now (intentions of Nov 8, 15, 22). The website gives them only Sept 10-June 15 (dated 2025) and a summer 8/10 AM schedule ending on Labor Day, which a fixed season day cannot express (R33). Leaning year-round: the bulletins' intentions will show the summer change to update mode.",
+      "question": "Keep the Sunday 7:30, 9:00 and 11:00 AM Masses year-round, or follow the website's summer schedule?",
+      "options": [
+        {
+          "label": "Year-round; leave the summer times to update mode",
+          "entry": {
+            "church_slug": "christ-the-king-haddonfield",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Sept 10-June 15 only, plus summer 8 and 10 AM",
+          "entry": {
+            "church_slug": "christ-the-king-haddonfield",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 10,
+              "end_month": 6,
+              "end_day": 15
+            },
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:08Z"
+      },
+      "group": "sunday-summer"
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c7f61855",
+          "page": 6,
+          "said": "Sunday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79d356d",
+          "page": 6,
+          "said": "Sunday 9:00 AM"
+        }
+      ],
+      "rationale": "Same as the 7:30 AM Sunday slot (group sunday-summer).",
+      "question": "Keep the Sunday 7:30, 9:00 and 11:00 AM Masses year-round, or follow the website's summer schedule?",
+      "options": [
+        {
+          "label": "Year-round; leave the summer times to update mode",
+          "entry": {
+            "church_slug": "christ-the-king-haddonfield",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Sept 10-June 15 only, plus summer 8 and 10 AM",
+          "entry": {
+            "church_slug": "christ-the-king-haddonfield",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 10,
+              "end_month": 6,
+              "end_day": 15
+            },
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:08Z"
+      },
+      "group": "sunday-summer"
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c7f61855",
+          "page": 6,
+          "said": "Sunday 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79d356d",
+          "page": 6,
+          "said": "Sunday 11:00 AM"
+        }
+      ],
+      "rationale": "Same as the 7:30 AM Sunday slot (group sunday-summer).",
+      "question": "Keep the Sunday 7:30, 9:00 and 11:00 AM Masses year-round, or follow the website's summer schedule?",
+      "options": [
+        {
+          "label": "Year-round; leave the summer times to update mode",
+          "entry": {
+            "church_slug": "christ-the-king-haddonfield",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Sept 10-June 15 only, plus summer 8 and 10 AM",
+          "entry": {
+            "church_slug": "christ-the-king-haddonfield",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 10,
+              "end_month": 6,
+              "end_day": 15
+            },
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:08Z"
+      },
+      "group": "sunday-summer"
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 6,
+          "start_day": 22,
+          "end_month": 9,
+          "end_day": 7
+        },
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "http://ctkhaddonfield.org/mass-schedule-live-stream/",
+          "said": "Summer Schedule June 22 through Labor Day, inclusive ... Sunday 8 AM, 10 AM"
+        }
+      ],
+      "rationale": "Website-only summer Masses (R29). Answer together with group sunday-summer: if those become Sept 10-June 15 only, add these. Leaning leave out, matching the leaning there; Labor Day is approximated as Sept 7 in the include option (R33).",
+      "question": "Add the website's summer Sunday 8:00 and 10:00 AM Masses (June 22-Labor Day)?",
+      "options": [
+        {
+          "label": "Leave out; update mode will read the summer bulletins",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "June 22-Sept 7",
+          "entry": {
+            "church_slug": "christ-the-king-haddonfield",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 6,
+              "start_day": 22,
+              "end_month": 9,
+              "end_day": 7
+            },
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:08Z"
+      },
+      "group": "summer-masses"
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 6,
+          "start_day": 22,
+          "end_month": 9,
+          "end_day": 7
+        },
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "http://ctkhaddonfield.org/mass-schedule-live-stream/",
+          "said": "Summer Schedule ... Sunday 8 AM, 10 AM"
+        }
+      ],
+      "rationale": "Website-only summer Masses (R29). Answer together with group sunday-summer: if those become Sept 10-June 15 only, add these. Leaning leave out, matching the leaning there; Labor Day is approximated as Sept 7 in the include option (R33).",
+      "question": "Add the website's summer Sunday 8:00 and 10:00 AM Masses (June 22-Labor Day)?",
+      "options": [
+        {
+          "label": "Leave out; update mode will read the summer bulletins",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "June 22-Sept 7",
+          "entry": {
+            "church_slug": "christ-the-king-haddonfield",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 6,
+              "start_day": 22,
+              "end_month": 9,
+              "end_day": 7
+            },
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:08Z"
+      },
+      "group": "summer-masses"
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": 30
+        },
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "http://ctkhaddonfield.org/sacraments/confession/",
+          "said": "Confessions are heard on Sundays at 8:45 & 10:45 AM (Labor Day to June 30), 9:45 AM (July 1 to Labor Day), and any time by appointment."
+        }
+      ],
+      "rationale": "R6/R29: the bulletins print no Confession times. The website's times fit the Sunday 9:00 and 11:00 AM Masses in both bulletins (15 minutes before each), and the confession page shows no stale signs. Asked because the season boundary (Labor Day) can't be expressed exactly (R33): the leaning option starts the season on Sept 1, a few days early.",
+      "question": "Add the website's Sunday Confessions (8:45 and 10:45 AM Labor Day-June 30; 9:45 AM July 1-Labor Day)?",
+      "options": [
+        {
+          "label": "Yes, Labor Day approximated as the start of September",
+          "entry": {
+            "church_slug": "christ-the-king-haddonfield",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:45",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": 30
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:08Z"
+      },
+      "group": "confession"
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": 30
+        },
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "http://ctkhaddonfield.org/sacraments/confession/",
+          "said": "Confessions are heard on Sundays at 8:45 & 10:45 AM (Labor Day to June 30)"
+        }
+      ],
+      "rationale": "Same as the 8:45 AM slot (group confession).",
+      "question": "Add the website's Sunday Confessions (8:45 and 10:45 AM Labor Day-June 30; 9:45 AM July 1-Labor Day)?",
+      "options": [
+        {
+          "label": "Yes, Labor Day approximated as the start of September",
+          "entry": {
+            "church_slug": "christ-the-king-haddonfield",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:45",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": 30
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:08Z"
+      },
+      "group": "confession"
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 7,
+          "start_day": 1,
+          "end_month": 8,
+          "end_day": 31
+        },
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "http://ctkhaddonfield.org/sacraments/confession/",
+          "said": "9:45 AM (July 1 to Labor Day)"
+        }
+      ],
+      "rationale": "Same as the 8:45 AM slot (group confession); the summer time ends at the end of August in the leaning option.",
+      "question": "Add the website's Sunday Confessions (8:45 and 10:45 AM Labor Day-June 30; 9:45 AM July 1-Labor Day)?",
+      "options": [
+        {
+          "label": "Yes, Labor Day approximated as the start of September",
+          "entry": {
+            "church_slug": "christ-the-king-haddonfield",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:45",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 7,
+              "start_day": 1,
+              "end_month": 8,
+              "end_day": 31
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:08Z"
+      },
+      "group": "confession"
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "http://ctkhaddonfield.org/sacraments/confession/",
+          "said": "and any time by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "http://ctkhaddonfield.org/mass-schedule-live-stream/",
+          "said": "Weekday Mass Monday – Friday 8 AM. Thanksgiving Day 9 AM"
+        }
+      ],
+      "rationale": "R6/R17: the website's standing schedule gives Thanksgiving Day 9 AM; Thanksgiving 2026 is Nov 26, after as_of. No bulletin read prints it yet, and the page's year (2025) is uncertain, so asked. The weekly Thursday 8 AM slot is left alone (R17).",
+      "question": "Add the Thanksgiving Day 9:00 AM Mass on Thursday, November 26?",
+      "options": [
+        {
+          "label": "Thursday, Nov 26, 9:00 AM",
+          "entry": {
+            "church_slug": "christ-the-king-haddonfield",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving Day"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:08Z"
+      }
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-20",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour, then overnight Adoration until Saturday 4:30 PM (feast of Christ the King)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c7f61855",
+          "page": 3,
+          "said": "Adoration begins with a Holy Hour on Friday, November 20 at 7:00 PM and continues through the night until Saturday, November 21 at 4:30 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7f61855",
+          "page": 2,
+          "said": "Nov 20 Fri: Christ the King Holy Hour 7:00 PM Church; Overnight Eucharistic Adoration 8:00 PM Church"
+        }
+      ],
+      "rationale": "R1, R16, R37: dated Adoration after as_of; the Holy Hour is inside the overnight period, so one entry. It runs past midnight, so Friday has no end time and Saturday is a second entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "00:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Overnight Adoration continuing from Friday 7:00 PM"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c7f61855",
+          "page": 3,
+          "said": "continues through the night until Saturday, November 21 at 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c7f61855",
+          "page": 2,
+          "said": "Nov 21 Sat: Overnight Eucharistic Adoration 8:00 AM Church"
+        }
+      ],
+      "rationale": "R1, R16, R40: the article's specific times (through the night until 4:30 PM) win over the calendar's Saturday '8:00 AM' line, which reads as a calendar fragment of the same overnight event.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Teen Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c7f61855",
+          "page": 5,
+          "said": "Thanksgiving Teen Mass & Hangout, Sunday, November 15 at 6:00 PM in Church. High school teens in grades 9-12 are invited to join us for our monthly Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e79d356d",
+          "page": 3,
+          "said": "Teen Mass & Hospitality Sunday, November 15 at 6:00 PM in Church"
+        }
+      ],
+      "rationale": "R24 (POLICY, closed Masses): a Mass for high school teens in grades 9-12; also a dated monthly Mass with no week of the month named.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-16",
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "RE Reconciliation service Gr. 3 & 4"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c7f61855",
+          "page": 2,
+          "said": "Nov 16 Mon: RE Reconciliation service Gr. 3 & 4 5:15 PM Church"
+        }
+      ],
+      "rationale": "R24/R25: a religious-education reconciliation service for grades 3 and 4, not an open Confession time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-haddonfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c7f61855",
+          "page": 2,
+          "said": "Nov 16 Mon: Eucharistic Adoration 8:30 AM | Church"
+        },
+        {
+          "source": "website",
+          "url": "https://ctkhaddonfield.org/sacraments/adoration-chapel/",
+          "said": "Enter the chapel from the Hopkins Ave side door of the church, or the main doors. Our chapel hours have changed. ... Monday 8:30 AM to 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-16T20:13:15Z",
+            "current_because": "The page says the chapel hours have changed and gives only the new Monday hours, with a sign-up link; nothing on it names an earlier period.",
+            "bulletin": "c7f61855",
+            "fits_because": "The newest bulletin (Nov 15) lists Eucharistic Adoration at 8:30 AM in the Church on Monday Nov 16, the same day and start time as the website."
+          }
+        }
+      ],
+      "rationale": "R6, R38: the parish's chapel page gives Monday 8:30 AM-7:00 PM Adoration in the chapel inside the church, and the newest bulletin's calendar prints Monday 8:30 AM Eucharistic Adoration. The Nov 8 calendar omits it, but no notice cancels it. Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,918 @@
+{
+  "schema_version": 1,
+  "parish_slug": "divine-mercy-vineland",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:22Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T20:24:32Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:17Z",
+  "summary": "Two churches: St. Francis of Assisi (with the Blessed Sacrament Chapel at the same address) and Immaculate Heart of Mary. The weekend, weekday, Spanish and first-Friday Masses and the chapel's Mon-Fri 6 AM-9 PM Adoration agree in both bulletins (Nov 8, Nov 15) and on the website; the Nov 18 Wednesday Mass is cancelled and a Nov 26 noon Mass is added. Open: Saturday 3-4 PM Confession, printed only in the Nov 8 bulletin.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5d63921615bd01898fd91c557af16f70400380c0a5a53ba61fb2d21c053e5d5d",
+      "fetched_at": "2026-11-15T16:47:22Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "5c3f2a1981ce2860b982171f6567b3eda36bea9d11e6801c370eac425bab83af",
+      "fetched_at": "2026-11-08T15:55:44Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "ST. FRANCIS OF ASSISI CHURCH ... Monday to Friday 7:30am - English Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "ST. FRANCIS OF ASSISI CHURCH ... Monday to Friday 7:30am - English Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://divinemercyparishvld.com/weekly-mass-schedule/",
+          "said": "Monday to Friday: 7:30am at St. Francis Church"
+        }
+      ],
+      "rationale": "R1: printed in the St. Francis schedule box of both bulletins and on the website. Intentions print Wednesday 7:30AM 'No Mass/ No Service' on Nov 11 (explained by the Nov 8 notice 'No Habra Misa ... el miercoles 11 de noviembre') and Nov 18; under R17/R40 these are dated exceptions, not a change to the standing Mon-Fri schedule, so the Nov 18 one is recorded as its own cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "ST. FRANCIS OF ASSISI CHURCH ... Monday to Friday 7:30am - English Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "ST. FRANCIS OF ASSISI CHURCH ... Monday to Friday 7:30am - English Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://divinemercyparishvld.com/weekly-mass-schedule/",
+          "said": "Monday to Friday: 7:30am at St. Francis Church"
+        }
+      ],
+      "rationale": "R1: printed in the St. Francis schedule box of both bulletins and on the website. Intentions print Wednesday 7:30AM 'No Mass/ No Service' on Nov 11 (explained by the Nov 8 notice 'No Habra Misa ... el miercoles 11 de noviembre') and Nov 18; under R17/R40 these are dated exceptions, not a change to the standing Mon-Fri schedule, so the Nov 18 one is recorded as its own cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "ST. FRANCIS OF ASSISI CHURCH ... Monday to Friday 7:30am - English Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "ST. FRANCIS OF ASSISI CHURCH ... Monday to Friday 7:30am - English Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://divinemercyparishvld.com/weekly-mass-schedule/",
+          "said": "Monday to Friday: 7:30am at St. Francis Church"
+        }
+      ],
+      "rationale": "R1: printed in the St. Francis schedule box of both bulletins and on the website. Intentions print Wednesday 7:30AM 'No Mass/ No Service' on Nov 11 (explained by the Nov 8 notice 'No Habra Misa ... el miercoles 11 de noviembre') and Nov 18; under R17/R40 these are dated exceptions, not a change to the standing Mon-Fri schedule, so the Nov 18 one is recorded as its own cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "ST. FRANCIS OF ASSISI CHURCH ... Monday to Friday 7:30am - English Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "ST. FRANCIS OF ASSISI CHURCH ... Monday to Friday 7:30am - English Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://divinemercyparishvld.com/weekly-mass-schedule/",
+          "said": "Monday to Friday: 7:30am at St. Francis Church"
+        }
+      ],
+      "rationale": "R1: printed in the St. Francis schedule box of both bulletins and on the website. Intentions print Wednesday 7:30AM 'No Mass/ No Service' on Nov 11 (explained by the Nov 8 notice 'No Habra Misa ... el miercoles 11 de noviembre') and Nov 18; under R17/R40 these are dated exceptions, not a change to the standing Mon-Fri schedule, so the Nov 18 one is recorded as its own cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "ST. FRANCIS OF ASSISI CHURCH ... Monday to Friday 7:30am - English Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "ST. FRANCIS OF ASSISI CHURCH ... Monday to Friday 7:30am - English Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://divinemercyparishvld.com/weekly-mass-schedule/",
+          "said": "Monday to Friday: 7:30am at St. Francis Church"
+        }
+      ],
+      "rationale": "R1: printed in the St. Francis schedule box of both bulletins and on the website. Intentions print Wednesday 7:30AM 'No Mass/ No Service' on Nov 11 (explained by the Nov 8 notice 'No Habra Misa ... el miercoles 11 de noviembre') and Nov 18; under R17/R40 these are dated exceptions, not a change to the standing Mon-Fri schedule, so the Nov 18 one is recorded as its own cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "Saturday 4:00pm - English mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "Saturday 4:00pm - English mass"
+        },
+        {
+          "source": "website",
+          "url": "https://divinemercyparishvld.com/weekly-mass-schedule/",
+          "said": "Saturday: 4:00pm at St. Francis Church"
+        }
+      ],
+      "rationale": "R1: St. Francis schedule box in both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "Sunday 10:00am -English mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "Sunday 10:00am -English mass"
+        },
+        {
+          "source": "website",
+          "url": "https://divinemercyparishvld.com/weekly-mass-schedule/",
+          "said": "Sunday: 10:00am at St. Francis Church"
+        }
+      ],
+      "rationale": "R1: St. Francis schedule box in both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "domingo 8:00am – Misa en Español 12:00pm- Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "domingo 8:00am – Misa en Español 12:00pm- Misa en Español"
+        },
+        {
+          "source": "website",
+          "url": "https://divinemercyparishvld.com/weekly-mass-schedule/",
+          "said": "Sunday: 8:00am AND 12:00pm at St. Francis Church"
+        }
+      ],
+      "rationale": "R1: St. Francis schedule box in both bulletins; website lists them under Masses in Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "domingo 8:00am – Misa en Español 12:00pm- Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "domingo 8:00am – Misa en Español 12:00pm- Misa en Español"
+        },
+        {
+          "source": "website",
+          "url": "https://divinemercyparishvld.com/weekly-mass-schedule/",
+          "said": "Sunday: 8:00am AND 12:00pm at St. Francis Church"
+        }
+      ],
+      "rationale": "R1: St. Francis schedule box in both bulletins; website lists them under Masses in Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "Cada Primer viernes del Mes 7:00pm – Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "Cada Primer viernes del Mes 7:00pm – Misa en Español"
+        }
+      ],
+      "rationale": "R1, POLICY weeks of the month: the St. Francis schedule box of both bulletins names it 'every first Friday of the month'; the newest week holds no first Friday but the box prints it as standing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; Blessed Sacrament Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "BLESSED SACRAMENT CHAPEL 23 W. Chestnut Ave. ... Martes 7:00pm- Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "BLESSED SACRAMENT CHAPEL 23 W. Chestnut Ave. ... Martes 7:00pm- Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 2,
+          "said": "Tuesday / martes, November 17, 2026 ... 7:00PM Por la Gente de la Parroquia"
+        },
+        {
+          "source": "website",
+          "url": "https://divinemercyparishvld.com/weekly-mass-schedule/",
+          "said": "Tuesday: 7:00pm at the Divine Mercy Parish Chapel"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: the Blessed Sacrament Chapel is at 23 W. Chestnut Ave., St. Francis's own address, so its Mass belongs to St. Francis with the chapel named in the note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "IMMACULATE HEART OF MARY CHURCH 410 S. Eighth St. Jueves 7:00pm – Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "IMMACULATE HEART OF MARY CHURCH 410 S. Eighth St. Jueves 7:00pm – Misa en Español"
+        },
+        {
+          "source": "website",
+          "url": "https://divinemercyparishvld.com/weekly-mass-schedule/",
+          "said": "Thursday: 7:00pm at the Church of the Immaculate Heart of Mary on 8th Street"
+        }
+      ],
+      "rationale": "R1: IHM schedule box in both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "BLESSED SACRAMENT CHAPEL/CAPILLA DEL SANTISIMO SACRAMENTO 23 W. Chestnut Ave. Monday- Friday / lunes- viernes 6:00am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "BLESSED SACRAMENT CHAPEL/CAPILLA DEL SANTISIMO SACRAMENTO 23 W. Chestnut Ave. Monday- Friday / lunes- viernes 6:00am-9:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://divinemercyparishvld.com/adoration-of-the-holy-sacrament/",
+          "said": "The Blessed Sacrament is exposed in the Blessed Sacrament Chapel Monday through Friday, from 6:00am until 9:00pm."
+        }
+      ],
+      "rationale": "R1, R38, POLICY Churches and chapels: the bulletin box gives the chapel's hours at St. Francis's address; the parish's own page (R6) calls them Adoration with the Sacrament exposed, so they are Adoration at St. Francis with the chapel named.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "BLESSED SACRAMENT CHAPEL/CAPILLA DEL SANTISIMO SACRAMENTO 23 W. Chestnut Ave. Monday- Friday / lunes- viernes 6:00am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "BLESSED SACRAMENT CHAPEL/CAPILLA DEL SANTISIMO SACRAMENTO 23 W. Chestnut Ave. Monday- Friday / lunes- viernes 6:00am-9:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://divinemercyparishvld.com/adoration-of-the-holy-sacrament/",
+          "said": "The Blessed Sacrament is exposed in the Blessed Sacrament Chapel Monday through Friday, from 6:00am until 9:00pm."
+        }
+      ],
+      "rationale": "R1, R38, POLICY Churches and chapels: the bulletin box gives the chapel's hours at St. Francis's address; the parish's own page (R6) calls them Adoration with the Sacrament exposed, so they are Adoration at St. Francis with the chapel named.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "BLESSED SACRAMENT CHAPEL/CAPILLA DEL SANTISIMO SACRAMENTO 23 W. Chestnut Ave. Monday- Friday / lunes- viernes 6:00am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "BLESSED SACRAMENT CHAPEL/CAPILLA DEL SANTISIMO SACRAMENTO 23 W. Chestnut Ave. Monday- Friday / lunes- viernes 6:00am-9:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://divinemercyparishvld.com/adoration-of-the-holy-sacrament/",
+          "said": "The Blessed Sacrament is exposed in the Blessed Sacrament Chapel Monday through Friday, from 6:00am until 9:00pm."
+        }
+      ],
+      "rationale": "R1, R38, POLICY Churches and chapels: the bulletin box gives the chapel's hours at St. Francis's address; the parish's own page (R6) calls them Adoration with the Sacrament exposed, so they are Adoration at St. Francis with the chapel named.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "BLESSED SACRAMENT CHAPEL/CAPILLA DEL SANTISIMO SACRAMENTO 23 W. Chestnut Ave. Monday- Friday / lunes- viernes 6:00am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "BLESSED SACRAMENT CHAPEL/CAPILLA DEL SANTISIMO SACRAMENTO 23 W. Chestnut Ave. Monday- Friday / lunes- viernes 6:00am-9:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://divinemercyparishvld.com/adoration-of-the-holy-sacrament/",
+          "said": "The Blessed Sacrament is exposed in the Blessed Sacrament Chapel Monday through Friday, from 6:00am until 9:00pm."
+        }
+      ],
+      "rationale": "R1, R38, POLICY Churches and chapels: the bulletin box gives the chapel's hours at St. Francis's address; the parish's own page (R6) calls them Adoration with the Sacrament exposed, so they are Adoration at St. Francis with the chapel named.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 1,
+          "said": "BLESSED SACRAMENT CHAPEL/CAPILLA DEL SANTISIMO SACRAMENTO 23 W. Chestnut Ave. Monday- Friday / lunes- viernes 6:00am-9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 1,
+          "said": "BLESSED SACRAMENT CHAPEL/CAPILLA DEL SANTISIMO SACRAMENTO 23 W. Chestnut Ave. Monday- Friday / lunes- viernes 6:00am-9:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://divinemercyparishvld.com/adoration-of-the-holy-sacrament/",
+          "said": "The Blessed Sacrament is exposed in the Blessed Sacrament Chapel Monday through Friday, from 6:00am until 9:00pm."
+        }
+      ],
+      "rationale": "R1, R38, POLICY Churches and chapels: the bulletin box gives the chapel's hours at St. Francis's address; the parish's own page (R6) calls them Adoration with the Sacrament exposed, so they are Adoration at St. Francis with the chapel named.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 2,
+          "said": "Wed. / Miércoles, November 18, 2026 7:30AM No Mass/ No Service"
+        }
+      ],
+      "rationale": "R16, R18: the newest bulletin's intentions say there is no Mass that Wednesday; the date is after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Antorcha Guadalupana"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 6,
+          "said": "jueves 26 de noviembre ... Antorcha Guadalupana ... seguido de la Misa a las 12:00 p. m en la Iglesia de San Francisco. ¡Todos están invitados"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 3: a dated open Mass at St. Francis outside the weekly schedule, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c3f2a19",
+          "page": 7,
+          "said": "Confessions Every Saturday of the month from 3pm – 4pm at St. Francis of Assisi Church."
+        }
+      ],
+      "rationale": "R29: the Nov 8 bulletin states a standing weekly Confession; the newest (Nov 15) bulletin and the website's Mass schedule page do not mention Confession at all. Only one older issue is stored, so R36 cannot apply. Leaning include: an explicit 'every Saturday' standing notice one week old, with nothing cancelling it, and the newest issue prints no Confession time of any kind.",
+      "question": "Keep Saturday 3-4 PM Confession at St. Francis, printed only in the Nov 8 bulletin?",
+      "options": [
+        {
+          "label": "Saturdays 3:00-4:00 PM",
+          "entry": {
+            "church_slug": "st-francis-of-assisi-vineland",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:17Z"
+      }
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-vineland",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English Rosary in the Chapel"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d639216",
+          "page": 6,
+          "said": "The English Rosary will take place in the Chapel every Wednesday at 7:00AM."
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration (it falls within the chapel's Adoration hours already recorded).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

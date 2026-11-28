@@ -1,0 +1,496 @@
+{
+  "schema_version": 1,
+  "parish_slug": "mary-queen-of-all-saints",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:30Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T20:51:12Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:29Z",
+  "summary": "One church, and the bulletins print no schedule box, only weekly Mass intentions. Masses (Sat 6:30 PM Spanish; Sun 8:30 and 10:30 AM; Mon, Tue, Wed and Fri 8:00 AM) recur in the intentions of both issues and match the parish's current website schedule. Saturday 5-6 PM confession comes from that website under R6. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "72702c5bf410a4610929f8bad14a77482d4a5872a3c195ff4a6e4ee62944d8c4",
+      "fetched_at": "2026-11-15T16:47:30Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "89a16315980dde0b22675f1d3710942a6b49cdf626bc61d190cc85fa18b95ef4",
+      "fetched_at": "2026-11-08T15:55:53Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mary-queen-of-all-saints",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "72702c5b",
+          "page": 1,
+          "said": "SATURDAY, NOVEMBER 14th 6:30pm ... SATURDAY, NOVEMBER 21st 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89a16315",
+          "page": 1,
+          "said": "SATURDAY, NOVEMBER 7th 6:30pm; SATURDAY, NOVEMBER 14th 6:30pm"
+        },
+        {
+          "source": "website",
+          "url": "http://www.maryqueenofallsaints.org/wksvs.html",
+          "said": "Saturday: 6:30pm (Spanish)"
+        }
+      ],
+      "rationale": "R1, R35, POLICY Weekly or dated rule 4: the bulletins print no schedule box, but the newest issue's intentions list a 6:30 PM Mass on both Saturdays it covers (Nov 14, 21), and the previous issue on Nov 7 and 14. The parish's schedule page (NEW MASS SCHEDULE 7-1-23) gives Saturday 6:30pm (Spanish), the source of the note. The 2021 Holy Week block on the homepage mentions a 4:30pm Mass too; neither bulletin lists one, so it is long gone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mary-queen-of-all-saints",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "72702c5b",
+          "page": 1,
+          "said": "SUNDAY, NOVEMBER 15th 8:30am ... 10:30am; SUNDAY, NOVEMBER 22nd 8:30am ... 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89a16315",
+          "page": 1,
+          "said": "SUNDAY, NOVEMBER 8th 8:30am ... 10:30am"
+        },
+        {
+          "source": "website",
+          "url": "http://www.maryqueenofallsaints.org/wksvs.html",
+          "said": "Sunday: 8:30am & 10:30am"
+        }
+      ],
+      "rationale": "R1, R35, POLICY Weekly or dated rule 4: the intentions in both issues list 8:30 AM and 10:30 AM Masses on every Sunday they cover (Nov 8, 15, 22), and the parish's schedule page gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mary-queen-of-all-saints",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "72702c5b",
+          "page": 1,
+          "said": "SUNDAY, NOVEMBER 15th 8:30am ... 10:30am; SUNDAY, NOVEMBER 22nd 8:30am ... 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89a16315",
+          "page": 1,
+          "said": "SUNDAY, NOVEMBER 8th 8:30am ... 10:30am"
+        },
+        {
+          "source": "website",
+          "url": "http://www.maryqueenofallsaints.org/wksvs.html",
+          "said": "Sunday: 8:30am & 10:30am"
+        }
+      ],
+      "rationale": "R1, R35, POLICY Weekly or dated rule 4: the intentions in both issues list 8:30 AM and 10:30 AM Masses on every Sunday they cover (Nov 8, 15, 22), and the parish's schedule page gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mary-queen-of-all-saints",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "72702c5b",
+          "page": 1,
+          "said": "MONDAY, NOVEMBER 16th 8:00am; TUESDAY ... 17th 8:00am; WEDNESDAY ... 18th 8:00am; FRIDAY ... 20th 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89a16315",
+          "page": 1,
+          "said": "MONDAY, NOVEMBER 9th 8:00am; TUESDAY ... 10th 8:00am; WEDNESDAY ... 11th 8:00am; FRIDAY ... 13th 8:00am"
+        },
+        {
+          "source": "website",
+          "url": "http://www.maryqueenofallsaints.org/wksvs.html",
+          "said": "Weekday Masses: Monday, Tuesday Wednesday & Friday: 8:00am"
+        }
+      ],
+      "rationale": "R1, R35: the intentions in two issues covering different weeks list an 8:00 AM Mass on these days, and the parish's schedule page gives the same weekday schedule. Neither issue lists a Thursday Mass, and the site gives none, so no Thursday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mary-queen-of-all-saints",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "72702c5b",
+          "page": 1,
+          "said": "MONDAY, NOVEMBER 16th 8:00am; TUESDAY ... 17th 8:00am; WEDNESDAY ... 18th 8:00am; FRIDAY ... 20th 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89a16315",
+          "page": 1,
+          "said": "MONDAY, NOVEMBER 9th 8:00am; TUESDAY ... 10th 8:00am; WEDNESDAY ... 11th 8:00am; FRIDAY ... 13th 8:00am"
+        },
+        {
+          "source": "website",
+          "url": "http://www.maryqueenofallsaints.org/wksvs.html",
+          "said": "Weekday Masses: Monday, Tuesday Wednesday & Friday: 8:00am"
+        }
+      ],
+      "rationale": "R1, R35: the intentions in two issues covering different weeks list an 8:00 AM Mass on these days, and the parish's schedule page gives the same weekday schedule. Neither issue lists a Thursday Mass, and the site gives none, so no Thursday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mary-queen-of-all-saints",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "72702c5b",
+          "page": 1,
+          "said": "MONDAY, NOVEMBER 16th 8:00am; TUESDAY ... 17th 8:00am; WEDNESDAY ... 18th 8:00am; FRIDAY ... 20th 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89a16315",
+          "page": 1,
+          "said": "MONDAY, NOVEMBER 9th 8:00am; TUESDAY ... 10th 8:00am; WEDNESDAY ... 11th 8:00am; FRIDAY ... 13th 8:00am"
+        },
+        {
+          "source": "website",
+          "url": "http://www.maryqueenofallsaints.org/wksvs.html",
+          "said": "Weekday Masses: Monday, Tuesday Wednesday & Friday: 8:00am"
+        }
+      ],
+      "rationale": "R1, R35: the intentions in two issues covering different weeks list an 8:00 AM Mass on these days, and the parish's schedule page gives the same weekday schedule. Neither issue lists a Thursday Mass, and the site gives none, so no Thursday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mary-queen-of-all-saints",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "72702c5b",
+          "page": 1,
+          "said": "MONDAY, NOVEMBER 16th 8:00am; TUESDAY ... 17th 8:00am; WEDNESDAY ... 18th 8:00am; FRIDAY ... 20th 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "89a16315",
+          "page": 1,
+          "said": "MONDAY, NOVEMBER 9th 8:00am; TUESDAY ... 10th 8:00am; WEDNESDAY ... 11th 8:00am; FRIDAY ... 13th 8:00am"
+        },
+        {
+          "source": "website",
+          "url": "http://www.maryqueenofallsaints.org/wksvs.html",
+          "said": "Weekday Masses: Monday, Tuesday Wednesday & Friday: 8:00am"
+        }
+      ],
+      "rationale": "R1, R35: the intentions in two issues covering different weeks list an 8:00 AM Mass on these days, and the parish's schedule page gives the same weekday schedule. Neither issue lists a Thursday Mass, and the site gives none, so no Thursday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mary-queen-of-all-saints",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "http://www.maryqueenofallsaints.org/wksvs.html",
+          "said": "Confessions: Saturday, 5:00pm-6:00pm",
+          "schedule_check": {
+            "checked_at": "2026-11-16T20:52:55Z",
+            "current_because": "Checked 2026-11-16. The schedule page heads it NEW MASS SCHEDULE (7-1-23), and the homepage prints the same schedule beside this week's notices (RE classes Nov 16/23/30, Joseph's House collection Thu Nov 19), so the site is kept up to date. Every Mass time on it matches the intentions of both bulletins.",
+            "bulletin": "72702c5b",
+            "fits_because": "The newest bulletin prints no schedule box, only Mass intentions. Its intentions match the site's Mass schedule exactly (Sat 6:30pm, Sun 8:30/10:30, Mon/Tue/Wed/Fri 8:00am), and a 5-6pm confession fits before the 6:30pm Saturday Mass."
+          }
+        },
+        {
+          "source": "website",
+          "url": "http://www.maryqueenofallsaints.org/",
+          "said": "MASS SCHEDULE ... Confessions: Saturday 5:00pm-6:00pm",
+          "schedule_check": {
+            "checked_at": "2026-11-16T20:52:55Z",
+            "current_because": "Checked 2026-11-16. The schedule page heads it NEW MASS SCHEDULE (7-1-23), and the homepage prints the same schedule beside this week's notices (RE classes Nov 16/23/30, Joseph's House collection Thu Nov 19), so the site is kept up to date. Every Mass time on it matches the intentions of both bulletins.",
+            "bulletin": "72702c5b",
+            "fits_because": "The newest bulletin prints no schedule box, only Mass intentions. Its intentions match the site's Mass schedule exactly (Sat 6:30pm, Sun 8:30/10:30, Mon/Tue/Wed/Fri 8:00am), and a 5-6pm confession fits before the 6:30pm Saturday Mass."
+          }
+        }
+      ],
+      "rationale": "R6: the bulletins print no confession times. The parish's current schedule page and homepage both give Saturday 5:00-6:00 PM. Their Mass schedule fits both bulletins, and nothing contradicts it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "http://www.maryqueenofallsaints.org/wksvs.html",
+          "said": "Confessions any time by appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "http://www.maryqueenofallsaints.org/wksvs.html",
+          "said": "Holy Day - 9:00 AM & 7:00 PM. Holy Days falling on Saturdays, Sundays and Mondays have a slightly different schedule."
+        }
+      ],
+      "rationale": "R24, POLICY Dates: a generic holy-day rule with no dated occurrence printed. Projecting it onto Dec 8 is not allowed, and the site says the schedule varies by weekday. Update mode will read the bulletin that prints it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mary-queen-of-all-saints",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "http://www.maryqueenofallsaints.org/wksvs.html",
+          "said": "MIRACULOUS MEDAL NOVENA In Church every Wednesday after the 9:00 AM Mass."
+        }
+      ],
+      "rationale": "R7, R25: a stale line on the site. Its own schedule above (7-1-23) and both bulletins' intentions give Wednesday Mass at 8:00 AM, not 9:00. The novena itself is a devotion (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mary-queen-of-all-saints",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Diocesan Wedding Anniversary Mass, St. Mary of Mt. Carmel, Hammonton"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89a16315",
+          "page": 3,
+          "said": "Wedding Anniversary Mass and Reception ... Sunday, November 15th at 3:00pm at St. Mary of Mt. Carmel Parish, Hammonton, NJ."
+        }
+      ],
+      "rationale": "R22, R16: held at another parish's church, and its date has passed by the newest bulletin's fetch.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89a16315",
+          "page": 3,
+          "said": "Man Up South Jersey ... adoration during the day ... Paul VI High School Conference Center, Haddonfield"
+        }
+      ],
+      "rationale": "R22, R24: off-site at a school conference centre, with no adoration time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

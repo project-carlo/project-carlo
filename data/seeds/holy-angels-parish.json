@@ -1,0 +1,878 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-angels-parish",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:22Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T20:28:09Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:19Z",
+  "summary": "Two churches: St. Patrick (Woodbury) has the weekend Masses, Mon-Thu 9 AM Mass, Saturday and weekday confessions and Monday evening Adoration; St. Matthew (National Park) has the Friday 9 AM Mass, confession and all-day Adoration ending with Benediction. Schedule boxes, intentions and calendars agree in both bulletins (Nov 8 and Nov 15, 2026; the newest is image-only and was read from renders). No history stored; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "44632788d279c64a67f0c3b331761fbbde6221777a369e2370aa614248dbbb3a",
+      "fetched_at": "2026-11-15T16:47:22Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a149acf661b2c4ea4ce7c5d787691176db6395af28092f8caffeb5b81ed61365",
+      "fetched_at": "2026-11-08T15:55:44Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-woodbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "MASS SCHEDULES ST. PATRICK CHURCH Saturday: 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "MASS SCHEDULES ST. PATRICK CHURCH Saturday: 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "SATURDAY, NOVEMBER 21 4:00PM William & Dorothy Clark"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box (p1) of both bulletins read, and in the weekly intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-woodbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "ST. PATRICK CHURCH Sunday: 7:30AM, *9:30AM, 11:30AM, 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "ST. PATRICK CHURCH Sunday: 7:30AM, *9:30AM, 11:30AM, 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "SUNDAY, NOVEMBER 22 7:30AM ... 9:30AM ... 11:30AM ... 6:00PM"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box (p1) of both bulletins read, and in the weekly intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-woodbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "ST. PATRICK CHURCH Sunday: 7:30AM, *9:30AM, 11:30AM, 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "ST. PATRICK CHURCH Sunday: 7:30AM, *9:30AM, 11:30AM, 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "SUNDAY, NOVEMBER 22 7:30AM ... 9:30AM ... 11:30AM ... 6:00PM"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box (p1) of both bulletins read, and in the weekly intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-woodbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "ST. PATRICK CHURCH Sunday: 7:30AM, *9:30AM, 11:30AM, 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "ST. PATRICK CHURCH Sunday: 7:30AM, *9:30AM, 11:30AM, 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "SUNDAY, NOVEMBER 22 7:30AM ... 9:30AM ... 11:30AM ... 6:00PM"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box (p1) of both bulletins read, and in the weekly intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-woodbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "ST. PATRICK CHURCH Sunday: 7:30AM, *9:30AM, 11:30AM, 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "ST. PATRICK CHURCH Sunday: 7:30AM, *9:30AM, 11:30AM, 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "SUNDAY, NOVEMBER 22 7:30AM ... 9:30AM ... 11:30AM ... 6:00PM"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box (p1) of both bulletins read, and in the weekly intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-woodbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "DAILY Monday THRU Thursday: 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "DAILY Monday THRU Thursday: 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 16 9:00AM William Hennessy r/b The Paulsen Family"
+        }
+      ],
+      "rationale": "R1, R35: the daily line sits under the St. Patrick Church heading in the schedule box of both bulletins; intentions list a 9:00 AM Mass Mon-Thu each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-woodbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "DAILY Monday THRU Thursday: 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "DAILY Monday THRU Thursday: 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 16 9:00AM William Hennessy r/b The Paulsen Family"
+        }
+      ],
+      "rationale": "R1, R35: the daily line sits under the St. Patrick Church heading in the schedule box of both bulletins; intentions list a 9:00 AM Mass Mon-Thu each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-woodbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "DAILY Monday THRU Thursday: 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "DAILY Monday THRU Thursday: 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 16 9:00AM William Hennessy r/b The Paulsen Family"
+        }
+      ],
+      "rationale": "R1, R35: the daily line sits under the St. Patrick Church heading in the schedule box of both bulletins; intentions list a 9:00 AM Mass Mon-Thu each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-woodbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "DAILY Monday THRU Thursday: 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "DAILY Monday THRU Thursday: 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 16 9:00AM William Hennessy r/b The Paulsen Family"
+        }
+      ],
+      "rationale": "R1, R35: the daily line sits under the St. Patrick Church heading in the schedule box of both bulletins; intentions list a 9:00 AM Mass Mon-Thu each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-national-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "ST. MATTHEW CHURCH Friday: 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "ST. MATTHEW CHURCH Friday: 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "FRIDAY, NOVEMBER 21 9:00AM-STM Antony DePompa"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; intentions mark the Friday Mass STM (St. Matthew).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-woodbury",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:45",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "CONFESSIONS St. Patrick Church Saturday: 2:45—3:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "CONFESSIONS St. Patrick Church Saturday: 2:45—3:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "SATURDAY, NOVEMBER 21 2:45PM Confessions — St. Patrick Church"
+        }
+      ],
+      "rationale": "R1, R35: confession box of both bulletins and the parish calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-woodbury",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "CONFESSIONS St. Patrick Church Monday—Thursday: 9:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "CONFESSIONS St. Patrick Church Monday—Thursday: 9:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 16 9:30AM Confessions — St. Patrick Church"
+        }
+      ],
+      "rationale": "R1, R35: confession box of both bulletins and each weekday of the calendar; no end time is printed, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-woodbury",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "CONFESSIONS St. Patrick Church Monday—Thursday: 9:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "CONFESSIONS St. Patrick Church Monday—Thursday: 9:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 16 9:30AM Confessions — St. Patrick Church"
+        }
+      ],
+      "rationale": "R1, R35: confession box of both bulletins and each weekday of the calendar; no end time is printed, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-woodbury",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "CONFESSIONS St. Patrick Church Monday—Thursday: 9:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "CONFESSIONS St. Patrick Church Monday—Thursday: 9:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 16 9:30AM Confessions — St. Patrick Church"
+        }
+      ],
+      "rationale": "R1, R35: confession box of both bulletins and each weekday of the calendar; no end time is printed, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-woodbury",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "CONFESSIONS St. Patrick Church Monday—Thursday: 9:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "CONFESSIONS St. Patrick Church Monday—Thursday: 9:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 16 9:30AM Confessions — St. Patrick Church"
+        }
+      ],
+      "rationale": "R1, R35: confession box of both bulletins and each weekday of the calendar; no end time is printed, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-national-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "St. Matthew Church Friday: 9:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "St. Matthew Church Friday: 9:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "FRIDAY, NOVEMBER 20 9:30AM Confessions — St. Matthew Church"
+        }
+      ],
+      "rationale": "R1, R35: confession box of both bulletins and the calendar; no end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-woodbury",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "BLESSED SACRAMENT ADORATION St. Patrick Church: Monday: 7:00PM—8:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "BLESSED SACRAMENT ADORATION St. Patrick Church: Monday: 7:00PM—8:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 16 7:00PM Adoration — St. Patrick Church"
+        }
+      ],
+      "rationale": "R1, R35: adoration box of both bulletins and the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-national-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "St. Matthew Church: Friday: 9:30AM—7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 1,
+          "said": "St. Matthew Church: Friday: 9:30AM—7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "9:30AM Adoration — St. Matthew Church; 6:45PM Benediction — St. Matthew Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a149acf6",
+          "page": 4,
+          "said": "9:30AM Adoration — St. Matthew Church; 6:45PM Benediction — St. Matthew Church"
+        }
+      ],
+      "rationale": "R1, R35: adoration box of both bulletins; the calendar's 6:45 PM Benediction falls inside the period, so it is one Adoration event with the note Benediction (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-woodbury",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Funeral Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 4,
+          "said": "THURSDAY, NOVEMBER 19 11:00AM Funeral Mass—St. Patrick Church"
+        }
+      ],
+      "rationale": "R24: a funeral Mass for one person is not open to the public under POLICY.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44632788",
+          "page": 1,
+          "said": "HOLY DAY St. Patrick Church Vigil: 7:00PM Holy Day: 9:00AM, 12:10PM, 7:00PM"
+        }
+      ],
+      "rationale": "R16, POLICY Dates: the generic holy-day schedule names no date, and neither bulletin pins a holy day to a date; update mode records holy days when a bulletin dates them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

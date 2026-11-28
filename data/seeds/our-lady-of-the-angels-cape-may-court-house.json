@@ -1,0 +1,612 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-angels-cape-may-court-house",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:34Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T21:29:10Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:47Z",
+  "summary": "Two churches; only Our Lady of the Angels has services in the current winter schedule (Mon-Fri 8 AM, Sat 5 PM, Sun 8 and 10:30 AM, Sat confession 4-4:30, Mon/Wed/Fri chapel Adoration 8:30-noon), identical in both bulletins and on the website. The website's summer schedule (from May 9, 2027, incl. St. Elizabeth Goshen Sun 10:15) is left out under R20. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ea70117bae65b0e13a692866e85d30a19e2f88b5c0a3018a0b80f7b6b54949b4",
+      "fetched_at": "2026-11-15T16:47:34Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "303fc54601c938111bcaa49ce671ee1687fac6e5114c0b285b92348b46315088",
+      "fetched_at": "2026-11-08T15:55:58Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cape-may-court-house",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea70117b",
+          "page": 2,
+          "said": "Winter Mass Schedule. Daily Mass Monday – Friday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303fc546",
+          "page": 2,
+          "said": "Winter Mass Schedule. Daily Mass Monday – Friday 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses box of both bulletins read; the intentions list 8:00AM Mass each weekday. 'Winter' carries no months in the bulletin, so no season (R15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cape-may-court-house",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea70117b",
+          "page": 2,
+          "said": "Winter Mass Schedule. Daily Mass Monday – Friday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303fc546",
+          "page": 2,
+          "said": "Winter Mass Schedule. Daily Mass Monday – Friday 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses box of both bulletins read; the intentions list 8:00AM Mass each weekday. 'Winter' carries no months in the bulletin, so no season (R15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cape-may-court-house",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea70117b",
+          "page": 2,
+          "said": "Winter Mass Schedule. Daily Mass Monday – Friday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303fc546",
+          "page": 2,
+          "said": "Winter Mass Schedule. Daily Mass Monday – Friday 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses box of both bulletins read; the intentions list 8:00AM Mass each weekday. 'Winter' carries no months in the bulletin, so no season (R15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cape-may-court-house",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea70117b",
+          "page": 2,
+          "said": "Winter Mass Schedule. Daily Mass Monday – Friday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303fc546",
+          "page": 2,
+          "said": "Winter Mass Schedule. Daily Mass Monday – Friday 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses box of both bulletins read; the intentions list 8:00AM Mass each weekday. 'Winter' carries no months in the bulletin, so no season (R15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cape-may-court-house",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea70117b",
+          "page": 2,
+          "said": "Winter Mass Schedule. Daily Mass Monday – Friday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303fc546",
+          "page": 2,
+          "said": "Winter Mass Schedule. Daily Mass Monday – Friday 8:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses box of both bulletins read; the intentions list 8:00AM Mass each weekday. 'Winter' carries no months in the bulletin, so no season (R15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cape-may-court-house",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea70117b",
+          "page": 2,
+          "said": "Weekend Masses Saturday — 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303fc546",
+          "page": 2,
+          "said": "Weekend Masses Saturday — 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses box of both bulletins read; the website gives the same 5PM in summer too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cape-may-court-house",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea70117b",
+          "page": 2,
+          "said": "Sunday — 8:00AM, 10:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303fc546",
+          "page": 2,
+          "said": "Sunday — 8:00AM, 10:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses box of both bulletins read. The bulletin's 'Winter Mass Schedule' gives no months, so no season (R15); the website's summer Sunday times start May 9, 2027 and are left out under R20.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cape-may-court-house",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea70117b",
+          "page": 2,
+          "said": "Sunday — 8:00AM, 10:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303fc546",
+          "page": 2,
+          "said": "Sunday — 8:00AM, 10:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses box of both bulletins read. The bulletin's 'Winter Mass Schedule' gives no months, so no season (R15); the website's summer Sunday times start May 9, 2027 and are left out under R20.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cape-may-court-house",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea70117b",
+          "page": 2,
+          "said": "Confessions at Our Lady of the Angels Church: Saturday - 4:00-4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303fc546",
+          "page": 2,
+          "said": "Confessions at Our Lady of the Angels Church: Saturday - 4:00-4:30PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cape-may-court-house",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of the Angels Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea70117b",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION Monday, Wednesday, Friday 8:30AM – 12:00PM – Our Lady of the Angels Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303fc546",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION Monday, Wednesday, Friday 8:30AM – 12:00PM – Our Lady of the Angels Chapel"
+        }
+      ],
+      "rationale": "R1, R38: printed under a Eucharistic Adoration heading in both bulletins read. The chapel is the parish church's own (the newest bulletin p3 offers memorial candles 'at the main altar & chapel altar'), so it is recorded at the church with the chapel named in a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cape-may-court-house",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of the Angels Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea70117b",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION Monday, Wednesday, Friday 8:30AM – 12:00PM – Our Lady of the Angels Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303fc546",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION Monday, Wednesday, Friday 8:30AM – 12:00PM – Our Lady of the Angels Chapel"
+        }
+      ],
+      "rationale": "R1, R38: printed under a Eucharistic Adoration heading in both bulletins read. The chapel is the parish church's own (the newest bulletin p3 offers memorial candles 'at the main altar & chapel altar'), so it is recorded at the church with the chapel named in a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cape-may-court-house",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of the Angels Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea70117b",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION Monday, Wednesday, Friday 8:30AM – 12:00PM – Our Lady of the Angels Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "303fc546",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION Monday, Wednesday, Friday 8:30AM – 12:00PM – Our Lady of the Angels Chapel"
+        }
+      ],
+      "rationale": "R1, R38: printed under a Eucharistic Adoration heading in both bulletins read. The chapel is the parish church's own (the newest bulletin p3 offers memorial candles 'at the main altar & chapel altar'), so it is recorded at the church with the chapel named in a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cape-may-court-house",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 5,
+          "start_day": 9,
+          "end_month": 9,
+          "end_day": 12
+        },
+        "note": "Summer schedule"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ourladyoftheangels.net/",
+          "said": "Summer Schedule (May 9, 2027 – Sept 12,2027) ... Weekend Mass: Saturday 5PM, Sunday 8AM, 9:30AM & 11AM"
+        }
+      ],
+      "rationale": "R20: the website's summer schedule begins May 9, 2027; keep the current winter schedule and let update mode read the bulletins that show the change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cape-may-court-house",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 5,
+          "start_day": 9,
+          "end_month": 9,
+          "end_day": 12
+        },
+        "note": "Summer schedule"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ourladyoftheangels.net/",
+          "said": "Summer Schedule (May 9, 2027 – Sept 12,2027) ... Weekend Mass: Saturday 5PM, Sunday 8AM, 9:30AM & 11AM"
+        }
+      ],
+      "rationale": "R20: the website's summer schedule begins May 9, 2027; keep the current winter schedule and let update mode read the bulletins that show the change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-goshen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 5,
+          "start_day": 9,
+          "end_month": 9,
+          "end_day": 12
+        },
+        "note": "Summer schedule"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ourladyoftheangels.net/",
+          "said": "No Mass at St. Elizabeth from October through the end of April ... Summer Schedule (May 9, 2027 – Sept 12,2027) St. Elizabeth Church - Route 47 - Goshen NJ: Sunday, 10:15 AM"
+        }
+      ],
+      "rationale": "R20: the mission church has no Mass in the current winter schedule (neither bulletin lists any St. Elizabeth time); its summer Sunday Mass begins May 9, 2027 and update mode will read the bulletins that show it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea70117b",
+          "page": 2,
+          "said": "Daily Rosary at 7:30AM before The 8:00AM Mass in the Church"
+        }
+      ],
+      "rationale": "R24: a Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

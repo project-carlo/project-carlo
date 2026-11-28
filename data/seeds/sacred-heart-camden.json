@@ -1,0 +1,807 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-camden",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:41Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T21:41:05Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:55Z",
+  "summary": "Three churches (Sacred Heart, St. Bartholomew, St. Joan of Arc); the page-1 schedule box and the weekly intentions agree in both bulletins read (Nov 8 and Nov 15, 2026). Confession at St. Joan of Arc is a start time before the Tue/Thu 7 PM and Sat 4 PM Masses, with no end. Two dated Our Lady of Guadalupe Masses at St. Joan of Arc (Dec 11 11 PM, Dec 12 7 PM). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b70aeec2b8025121f19c23df74f6ca7970dc6a367a00a84b11195362967a11a4",
+      "fetched_at": "2026-11-15T16:47:41Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ac5662f2edab37704124ab0d493c113119c1ba1b3e83b9fabd4b9c96d95381e0",
+      "fetched_at": "2026-11-08T15:56:01Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 1,
+          "said": "Sacred Heart Church ... Monday ~ Saturday Mass: 8:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 1,
+          "said": "Sacred Heart Church ... Monday ~ Saturday Mass: 8:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 3,
+          "said": "SH 8:15 a.m. (each weekday and Saturday in the Weekly Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 3,
+          "said": "SH 8:15 a.m. (each weekday and Saturday in the Weekly Intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins (Nov 8 and Nov 15) and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 1,
+          "said": "Sacred Heart Church ... Monday ~ Saturday Mass: 8:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 1,
+          "said": "Sacred Heart Church ... Monday ~ Saturday Mass: 8:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 3,
+          "said": "SH 8:15 a.m. (each weekday and Saturday in the Weekly Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 3,
+          "said": "SH 8:15 a.m. (each weekday and Saturday in the Weekly Intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins (Nov 8 and Nov 15) and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 1,
+          "said": "Sacred Heart Church ... Monday ~ Saturday Mass: 8:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 1,
+          "said": "Sacred Heart Church ... Monday ~ Saturday Mass: 8:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 3,
+          "said": "SH 8:15 a.m. (each weekday and Saturday in the Weekly Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 3,
+          "said": "SH 8:15 a.m. (each weekday and Saturday in the Weekly Intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins (Nov 8 and Nov 15) and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 1,
+          "said": "Sacred Heart Church ... Monday ~ Saturday Mass: 8:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 1,
+          "said": "Sacred Heart Church ... Monday ~ Saturday Mass: 8:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 3,
+          "said": "SH 8:15 a.m. (each weekday and Saturday in the Weekly Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 3,
+          "said": "SH 8:15 a.m. (each weekday and Saturday in the Weekly Intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins (Nov 8 and Nov 15) and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 1,
+          "said": "Sacred Heart Church ... Monday ~ Saturday Mass: 8:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 1,
+          "said": "Sacred Heart Church ... Monday ~ Saturday Mass: 8:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 3,
+          "said": "SH 8:15 a.m. (each weekday and Saturday in the Weekly Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 3,
+          "said": "SH 8:15 a.m. (each weekday and Saturday in the Weekly Intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins (Nov 8 and Nov 15) and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 1,
+          "said": "Sacred Heart Church ... Monday ~ Saturday Mass: 8:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 1,
+          "said": "Sacred Heart Church ... Monday ~ Saturday Mass: 8:15 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 3,
+          "said": "SH 8:15 a.m. (each weekday and Saturday in the Weekly Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 3,
+          "said": "SH 8:15 a.m. (each weekday and Saturday in the Weekly Intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins (Nov 8 and Nov 15) and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 1,
+          "said": "Sacred Heart Church ... Sunday Mass: 10:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 1,
+          "said": "Sacred Heart Church ... Sunday Mass: 10:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 3,
+          "said": "SH 10:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 3,
+          "said": "SH 10:30 a.m."
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins. The Nov 22 Victims of Murder Mass is at this regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 1,
+          "said": "St. Bartholomew Church ... Sunday Mass: 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 1,
+          "said": "St. Bartholomew Church ... Sunday Mass: 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 3,
+          "said": "SB 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 3,
+          "said": "SB 11:00 a.m."
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 1,
+          "said": "St. Joan of Arc Church ... Tuesday: Confession 6:30 p.m. Mass 7:00 p.m. Spanish / Thursday: Confession 6:30 p.m. Mass 7:00 p.m. Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 1,
+          "said": "St. Joan of Arc Church ... Tuesday: Confession 6:30 p.m. Mass 7:00 p.m. Spanish / Thursday: Confession 6:30 p.m. Mass 7:00 p.m. Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 3,
+          "said": "SJ 7:00 p.m. Por Nuestra Familia Parroquial"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 3,
+          "said": "SJ 7:00 p.m. Por Nuestra Familia Parroquial"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 1,
+          "said": "St. Joan of Arc Church ... Tuesday: Confession 6:30 p.m. Mass 7:00 p.m. Spanish / Thursday: Confession 6:30 p.m. Mass 7:00 p.m. Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 1,
+          "said": "St. Joan of Arc Church ... Tuesday: Confession 6:30 p.m. Mass 7:00 p.m. Spanish / Thursday: Confession 6:30 p.m. Mass 7:00 p.m. Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 3,
+          "said": "SJ 7:00 p.m. Por Nuestra Familia Parroquial"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 3,
+          "said": "SJ 7:00 p.m. Por Nuestra Familia Parroquial"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-camden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 7:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 1,
+          "said": "Tuesday: Confession 6:30 p.m. Mass 7:00 p.m. Spanish / Thursday: Confession 6:30 p.m. Mass 7:00 p.m. Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 1,
+          "said": "Tuesday: Confession 6:30 p.m. Mass 7:00 p.m. Spanish / Thursday: Confession 6:30 p.m. Mass 7:00 p.m. Spanish"
+        }
+      ],
+      "rationale": "R1, POLICY Times: a clock time running up to a Mass with no end of its own starts at 6:30 PM with no end_time and a note naming the Mass. Printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-camden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 7:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 1,
+          "said": "Tuesday: Confession 6:30 p.m. Mass 7:00 p.m. Spanish / Thursday: Confession 6:30 p.m. Mass 7:00 p.m. Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 1,
+          "said": "Tuesday: Confession 6:30 p.m. Mass 7:00 p.m. Spanish / Thursday: Confession 6:30 p.m. Mass 7:00 p.m. Spanish"
+        }
+      ],
+      "rationale": "R1, POLICY Times: a clock time running up to a Mass with no end of its own starts at 6:30 PM with no end_time and a note naming the Mass. Printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 1,
+          "said": "Saturday: Confession 3:30 p.m. Vigil Mass: 4:00 p.m. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 1,
+          "said": "Saturday: Confession 3:30 p.m. Vigil Mass: 4:00 p.m. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 3,
+          "said": "SJ 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 3,
+          "said": "SJ 4:00 p.m."
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-camden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 4:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 1,
+          "said": "Saturday: Confession 3:30 p.m. Vigil Mass: 4:00 p.m. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 1,
+          "said": "Saturday: Confession 3:30 p.m. Vigil Mass: 4:00 p.m. English"
+        }
+      ],
+      "rationale": "R1, POLICY Times: clock time with no end of its own before the 4:00 PM Mass; no end_time. Printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 1,
+          "said": "Sunday Mass: 9:00 a.m. Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 1,
+          "said": "Sunday Mass: 9:00 a.m. Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 3,
+          "said": "SJ 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac5662f2",
+          "page": 3,
+          "said": "SJ 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-camden",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-11",
+        "start_time": "23:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 7,
+          "said": "Nuestra Señora de Guadalupe, 3107 Alabama Rd., Camden ... Diciembre 11 Rosario 10 PM - 11 PM, Misa 11 PM (Relato de la Aparición)"
+        }
+      ],
+      "rationale": "R1, R16: dated feast Mass after as_of at St. Joan of Arc's address (3107 Alabama Rd); the 10 PM Rosary is not recorded (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-camden",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b70aeec2",
+          "page": 7,
+          "said": "Nuestra Señora de Guadalupe, 3107 Alabama Rd. ... Diciembre 12 Misa 7 PM"
+        }
+      ],
+      "rationale": "R1, R16: dated feast Mass after as_of at St. Joan of Arc's address. It does not say the 4:00 PM Saturday Mass is cancelled, so that weekly slot stands (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

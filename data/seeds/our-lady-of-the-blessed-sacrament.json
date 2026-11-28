@@ -1,0 +1,1029 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-blessed-sacrament",
+  "status": "approved",
+  "as_of": "2026-11-15T16:17:07Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T21:31:50Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:49Z",
+  "summary": "Four churches. The Mass, Adoration and Confession schedule box is identical in both bulletins (Nov 8, Nov 15). Multi-day Adoration is split at midnight; the Saturday/Sunday continuation of First Friday Adoration cannot be expressed (R33) and is excluded. Dated: Nov 17 Schoenstatt Adoration/Confession and the Nov 29 Healing Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f31ef150b63ca302be33d8e4e6f0a9dbf48a0cebc6071d518c0e5220dd86605c",
+      "fetched_at": "2026-11-15T16:17:07Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e8afd2f40a78c5c136136a768ef4f6da90e58f8eb98b857f8622b7b3f8dcd700",
+      "fetched_at": "2026-11-08T15:42:25Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "Saturday Vigil 4:00pm- St. Rose of Lima Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "Saturday Vigil 4:00pm- St. Rose of Lima Church"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on p1 of both bulletins; intentions list Saturday 4:00pm each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-minotola",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "Sunday 10:00am- St. Michael Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "Sunday 10:00am- St. Michael Church"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on p1 of both bulletins. The Nov 22 image visit is held at this regular Mass (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-minotola",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "12:00pm- St. Michael Church (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "12:00pm- St. Michael Church (Spanish)"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on p1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-malaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "Daily Mass Monday, Tuesday, Wednesday 9:00 am - St. Mary Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "Daily Mass Monday, Tuesday, Wednesday 9:00 am - St. Mary Church"
+        }
+      ],
+      "rationale": "R1: Daily Mass in the schedule box on p1 of both bulletins; the intentions (p3) list 9:00am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-malaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "Daily Mass Monday, Tuesday, Wednesday 9:00 am - St. Mary Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "Daily Mass Monday, Tuesday, Wednesday 9:00 am - St. Mary Church"
+        }
+      ],
+      "rationale": "R1: Daily Mass in the schedule box on p1 of both bulletins; the intentions (p3) list 9:00am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-malaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "Daily Mass Monday, Tuesday, Wednesday 9:00 am - St. Mary Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "Daily Mass Monday, Tuesday, Wednesday 9:00 am - St. Mary Church"
+        }
+      ],
+      "rationale": "R1: Daily Mass in the schedule box on p1 of both bulletins; the intentions (p3) list 9:00am each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-landisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "Thursday & Friday 9:00 am - Our Lady of Victories"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "Thursday & Friday 9:00 am - Our Lady of Victories"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of both bulletins. The Thanksgiving Mass, Thu Nov 26 9:00am at Our Lady of Victories (p5), is this regular Mass (POLICY rule 7), so no dated entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-landisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "Thursday & Friday 9:00 am - Our Lady of Victories"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "Thursday & Friday 9:00 am - Our Lady of Victories"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of both bulletins. The Thanksgiving Mass, Thu Nov 26 9:00am at Our Lady of Victories (p5), is this regular Mass (POLICY rule 7), so no dated entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-landisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "Tuesday- Spanish Mass 7:00 pm - Our Lady of Victories"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "Tuesday- Spanish Mass 7:00 pm - Our Lady of Victories"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of both bulletins. The Nov 17 Schoenstatt Mass (p2, p5) is at this same time and church, so it is not recorded separately (POLICY rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-landisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bilingual Charismatic Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "Thursday- Charismatic Mass 7:00 pm - Our Lady of Victories"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "Thursday- Charismatic Mass 7:00 pm - Our Lady of Victories"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 4,
+          "said": "Bilingual Mass- 7:00pm Our Lady of Victories Church ... Thursday, November 19, 2026 Bilingual Charismatic Mass"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of both bulletins; p4 of each repeats it for that week's Thursday as bilingual.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-landisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "First Friday Mass 7:00 pm - Our Lady of Victories"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "First Friday Mass 7:00 pm - Our Lady of Victories"
+        }
+      ],
+      "rationale": "R1: the newest bulletin's standing schedule box prints the named First Friday Mass (p1), as does the older one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-landisville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "Eucharistic Adoration Every Thursday ~ 9:30am-7:00pm Our Lady of Victories Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "Eucharistic Adoration Every Thursday ~ 9:30am-7:00pm Our Lady of Victories Church"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-landisville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "20:30",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Continues until Sunday 11:00 AM"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "First Friday ~ 8:30pm until Sunday 11:00am Our Lady of Victories Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "First Friday ~ 8:30pm until Sunday 11:00am Our Lady of Victories Church"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of both bulletins. Split at midnight as other seeds do for overnight Adoration; the Saturday and Sunday continuation is a separate excluded slot (R33).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-landisville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Saturday after first Friday"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "First Friday ~ 8:30pm until Sunday 11:00am Our Lady of Victories Church"
+        }
+      ],
+      "rationale": "R33: the Saturday after the first Friday is not always the first Saturday, so weeks_of_month cannot express it, and the bulletin prints no dates to record (projecting them is forbidden by POLICY, Dates). The Friday part is kept with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-landisville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sunday after first Friday"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "First Friday ~ 8:30pm until Sunday 11:00am Our Lady of Victories Church"
+        }
+      ],
+      "rationale": "R33: same as the Saturday continuation; the Sunday after the first Friday is not always the first Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-malaga",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Continuous until Wednesday 9:00 AM"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "Sunday ~ 6:00pm until Wednesday 9:00am St. Mary Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "Sunday ~ 6:00pm until Wednesday 9:00am St. Mary Church"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of both bulletins; one continuous weekly period, split at midnight into one slot per day as other seeds do for overnight Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-malaga",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Continuous from Sunday 6:00 PM until Wednesday 9:00 AM"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "Sunday ~ 6:00pm until Wednesday 9:00am St. Mary Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "Sunday ~ 6:00pm until Wednesday 9:00am St. Mary Church"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of both bulletins; the middle days of the Sunday 6 PM to Wednesday 9 AM period, split at midnight.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-malaga",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Continuous from Sunday 6:00 PM until Wednesday 9:00 AM"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "Sunday ~ 6:00pm until Wednesday 9:00am St. Mary Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "Sunday ~ 6:00pm until Wednesday 9:00am St. Mary Church"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of both bulletins; the middle days of the Sunday 6 PM to Wednesday 9 AM period, split at midnight.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-malaga",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Continuous from Sunday 6:00 PM"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "Sunday ~ 6:00pm until Wednesday 9:00am St. Mary Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "Sunday ~ 6:00pm until Wednesday 9:00am St. Mary Church"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of both bulletins; the period ends at the Wednesday 9:00 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 1,
+          "said": "Confessions Saturday ~ 3:15pm -3:45pm St. Rose of Lima Church Or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 1,
+          "said": "Confessions Saturday ~ 3:15pm -3:45pm St. Rose of Lima Church Or by appointment"
+        }
+      ],
+      "rationale": "R1: schedule box on p1 of both bulletins. 'Or by appointment' has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-landisville",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the Schoenstatt Mass; Benediction"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 2,
+          "said": "The Schoenstatt Mass will be Tuesday, November 17 at 7:00pm at Our Lady of Victories Church. Adoration and Confessions at 6:00pm with Rosary at 6:30."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 5,
+          "said": "6:00pm Confessions & Adoration ... 7:00pm Benediction & Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated after as_of. No end time is printed, so none is given (POLICY, Times); the 7:00pm Benediction belongs to this same Adoration (POLICY). The Mass is the regular Tuesday 7 PM Mass there.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-landisville",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the Schoenstatt Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 2,
+          "said": "Adoration and Confessions at 6:00pm with Rosary at 6:30."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 5,
+          "said": "6:00pm Confessions & Adoration"
+        }
+      ],
+      "rationale": "R1, R16: dated after as_of; no end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-minotola",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-29",
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 4,
+          "said": "Healing Mass Sunday, November 29, 2026 Adoration & Confessions - 2:00pm Rosary- 2:30pm Bilingual Mass- 3:00pm St. Michael Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 2,
+          "said": "Healing Mass Sunday, November 29, 2026 Adoration & Confessions - 2:00pm Rosary- 2:30pm Bilingual Mass- 3:00pm St. Michael Church"
+        }
+      ],
+      "rationale": "R1, R16: dated after as_of, printed in both bulletins (p4 newest, p2 older); no end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-minotola",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-29",
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 4,
+          "said": "Healing Mass ... Adoration & Confessions - 2:00pm ... St. Michael Church"
+        }
+      ],
+      "rationale": "R1, R16: dated after as_of; no end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-minotola",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-29",
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bilingual Healing Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 4,
+          "said": "Healing Mass Sunday, November 29, 2026 ... Bilingual Mass- 3:00pm St. Michael Church"
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass outside the weekly schedule, after as_of; also in the older bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-minotola",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Religious Education Thanksgiving & Enrollment Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f31ef150",
+          "page": 5,
+          "said": "Religious Education Upcoming Events November 24, 2026 Thanksgiving Mass & Enrollment Mass All Students- St. Michael Church Mass begins at 5:30pm"
+        }
+      ],
+      "rationale": "R24/R25, POLICY (closed Masses): listed only as a Religious Education class event for the students, not announced to the parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-minotola",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-13",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e8afd2f4",
+          "page": 2,
+          "said": "The Mass of Remembrance ... Friday, November 13, 2026 at 6:00pm at St. Michael Church."
+        }
+      ],
+      "rationale": "R16: dated before as_of (2026-11-15), so out of the seed's scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
