@@ -1,0 +1,1346 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-martha-philadelphia",
+  "status": "ready",
+  "as_of": "2026-11-15T16:46:17Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T04:06:36Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both November issues (the newest image-only, read by render) and the website agree: weekday 8:15 AM, Sat 4 PM vigil, Sunday 8/10/12, Sat confession 2:30-3:30, Wednesday Adoration after the 8:15 Mass to noon, and a 4th-Sunday Sensory Friendly Mass Sept-June. The undated holy-day line is left out (POLICY, Dates). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+      "fetched_at": "2026-11-15T16:46:17Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e1d8148b06f10b465ad854043b96bcb0117d8b4e600ecc148d166bb55cd7c1eb",
+      "fetched_at": "2026-11-08T15:54:54Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+      "bulletins": [
+        "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+        "e1d8148b06f10b465ad854043b96bcb0117d8b4e600ecc148d166bb55cd7c1eb"
+      ],
+      "cached": false,
+      "cost_usd": 0.002344,
+      "at": "2026-11-28T04:10:47.322468+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 5,
+          "said": "Mass Intentions Monday, Nov 16 ... Saturday, Nov 21 8:15 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday-Saturday 8:15am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues, and every weekday of the intentions lists 8:15 AM; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 5,
+          "said": "Mass Intentions Monday, Nov 16 ... Saturday, Nov 21 8:15 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday-Saturday 8:15am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues, and every weekday of the intentions lists 8:15 AM; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 5,
+          "said": "Mass Intentions Monday, Nov 16 ... Saturday, Nov 21 8:15 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday-Saturday 8:15am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues, and every weekday of the intentions lists 8:15 AM; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 5,
+          "said": "Mass Intentions Monday, Nov 16 ... Saturday, Nov 21 8:15 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday-Saturday 8:15am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues, and every weekday of the intentions lists 8:15 AM; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 5,
+          "said": "Mass Intentions Monday, Nov 16 ... Saturday, Nov 21 8:15 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday-Saturday 8:15am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues, and every weekday of the intentions lists 8:15 AM; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 1,
+          "said": "Mass Schedule Monday-Saturday 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 5,
+          "said": "Mass Intentions Monday, Nov 16 ... Saturday, Nov 21 8:15 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday-Saturday 8:15am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues, and every weekday of the intentions lists 8:15 AM; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 5,
+          "said": "4:00 PM Vigil"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil: 4:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 1,
+          "said": "Sunday: 8:00, 10:00, Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 1,
+          "said": "Sunday: 8:00, 10:00, Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 5,
+          "said": "8:00 AM / 10:00 AM / 12 Noon"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:00, 10:00, Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 1,
+          "said": "Sunday: 8:00, 10:00, Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 1,
+          "said": "Sunday: 8:00, 10:00, Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 5,
+          "said": "8:00 AM / 10:00 AM / 12 Noon"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:00, 10:00, Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 1,
+          "said": "Sunday: 8:00, 10:00, Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 1,
+          "said": "Sunday: 8:00, 10:00, Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 5,
+          "said": "8:00 AM / 10:00 AM / 12 Noon"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:00, 10:00, Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and intentions of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "Sensory Friendly Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 1,
+          "said": "Sensory Friendly Mass: 4th Sunday of the month from September to June 1:30pm Refreshments at 1:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 1,
+          "said": "Sensory Friendly Mass: 4th Sunday of the month from September to June 1:30pm Refreshments at 1:00pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sensory Friendly Mass: 4th Sunday of the month from September to June 1:30pm”"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly rule 2: the schedule box of both issues names the week and the months; an open Mass at the parish's one church, not limited to a group. The intentions list only the regular Masses, which is no conflict (R39).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 1,
+          "said": "Reconciliation: Saturdays 2:30-3:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 1,
+          "said": "Reconciliation: Saturdays 2:30-3:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 2,
+          "said": "Reconciliation is every Saturday 2:30-3:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 2,
+          "said": "Reconciliation is every Saturday 2:30-3:30PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Reconciliation: Saturdays 2:30-3:30”"
+        }
+      ],
+      "rationale": "R1: printed on p1 and p2 of both issues; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:15 AM Mass; not when a funeral is scheduled"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 2,
+          "said": "Eucharistic Adoration is every Wednesday following the 8:15am Mass until noon, unless a funeral is scheduled."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 2,
+          "said": "Eucharistic Adoration is every Wednesday following the 8:15am Mass until noon, unless a funeral is scheduled."
+        },
+        {
+          "source": "c1",
+          "bulletin": "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Eucharistic Adoration is every Wednesday following the 8:15am Mass until noon, unless a funeral is scheduled.”"
+        }
+      ],
+      "rationale": "R1, R10: printed in both issues; POLICY times 'following' a weekday Mass at 30 minutes after it starts (8:45 AM), ending at the printed noon.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy day of obligation (Immaculate Conception)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 1,
+          "said": "Holy Days: 7pm Vigil day before; 8:15am, 12:00pm day of"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 1,
+          "said": "Holy Days: 7pm Vigil day before; 8:15am, 12:00pm day of"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no date; no read issue dates a holy day, so a date would be projected. Left out like st-isaac-jogues-wayne s27's undated box; December issues will print this year's times for update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy day of obligation (Immaculate Conception)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 1,
+          "said": "Holy Days: 7pm Vigil day before; 8:15am, 12:00pm day of"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 1,
+          "said": "Holy Days: 7pm Vigil day before; 8:15am, 12:00pm day of"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no date; no read issue dates a holy day, so a date would be projected. Left out like st-isaac-jogues-wayne s27's undated box; December issues will print this year's times for update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance for Miscarriage and Infant Loss, at Saint Laurence Church, Upper Darby"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 7,
+          "said": "Saturday, November 21, 2026 - 10:30 AM Mass of Remembrance for Miscarriage and Infant Loss ... Location: Saint Laurence Church, 8245 West Chester Pike, Upper Darby PA"
+        }
+      ],
+      "rationale": "R22: held at another parish's church (St. Laurence, Upper Darby).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 4,
+          "said": "Join us for the Rosary Monday Evenings- 7pm in the church Every weekday morning-7:45am in the church"
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy day vigil (Immaculate Conception)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "df54a756",
+          "page": 1,
+          "said": "Holy Days: 7pm Vigil day before; 8:15am, 12:00pm day of"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1d8148b",
+          "page": 1,
+          "said": "Holy Days: 7pm Vigil day before; 8:15am, 12:00pm day of"
+        }
+      ],
+      "rationale": "POLICY, Dates: the standing holy-day line gives no date, so the vigil's date would be projected; left out with s14-s15.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "0fc53f31f6b20c980e0d6f31e8d1b399",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T04:10:47.322468+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "df54a75658ed39e9332a2c06b342751566b5f79ad40450ce44efedddb591da31",
+        "fetched_at": "2026-11-15T16:46:17Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "e1d8148b06f10b465ad854043b96bcb0117d8b4e600ecc148d166bb55cd7c1eb",
+        "fetched_at": "2026-11-08T15:54:54Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002344,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-martha-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday-Saturday 8:15am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday-Saturday 8:15am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-martha-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday-Saturday 8:15am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday-Saturday 8:15am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-martha-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday-Saturday 8:15am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday-Saturday 8:15am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-martha-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday-Saturday 8:15am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday-Saturday 8:15am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-martha-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday-Saturday 8:15am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday-Saturday 8:15am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-martha-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday-Saturday 8:15am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday-Saturday 8:15am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-martha-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil: 4:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil: 4:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-martha-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:00, 10:00, Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:00, 10:00, Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-martha-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:00, 10:00, Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:00, 10:00, Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-martha-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:00, 10:00, Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:00, 10:00, Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-martha-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "13:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [
+            "fourth"
+          ],
+          "exclude_weeks": false,
+          "season": {
+            "start_month": 9,
+            "start_day": null,
+            "end_month": 6,
+            "end_day": null
+          },
+          "note": "Sensory Friendly Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sensory Friendly Mass: 4th Sunday of the month from September to June 1:30pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sensory Friendly Mass: 4th Sunday of the month from September to June 1:30pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-martha-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "14:30",
+          "end_time": "15:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Reconciliation: Saturdays 2:30-3:30"
+          },
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Reconciliation is every Saturday 2:30-3:30PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Reconciliation: Saturdays 2:30-3:30"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Reconciliation is every Saturday 2:30-3:30PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-martha-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:45",
+          "end_time": "12:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "after the 8:15 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Eucharistic Adoration is every Wednesday following the 8:15am Mass until noon, unless a funeral is scheduled."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Eucharistic Adoration is every Wednesday following the 8:15am Mass until noon, unless a funeral is scheduled."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "8e99add180dd9e7f0c9c41f3cc5ff060940cdef14f9b86f6d5e87d04dff35996",
+    "differences": []
+  }
+}
