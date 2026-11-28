@@ -1,0 +1,1362 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-martin-of-tours-new-hope",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:19Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T01:14:09Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Martin of Tours, New Hope). Both image-only issues (Nov 8, Nov 15) print the same Mass box, matched by the intentions and website: Mon/Wed/Fri 9 AM, Tue 7 PM, Sat 9 AM and 4:30 PM, Sun 8:30 and 11 AM; plus a Dec 8 9 AM holy-day Mass. Confession is a half hour before each weekend Mass; open: whether that covers Saturday 9 AM, and whether the Monday Exposition chapel is at the church.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+      "fetched_at": "2026-11-15T16:46:19Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d18e0c85084cd128bb4a79e4264678e97d08b9a76a7d80e7c54bf1f86300e275",
+      "fetched_at": "2026-11-08T15:54:57Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+      "bulletins": [
+        "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+        "d18e0c85084cd128bb4a79e4264678e97d08b9a76a7d80e7c54bf1f86300e275"
+      ],
+      "cached": false,
+      "cost_usd": 0.002505,
+      "at": "2026-11-28T01:18:58.193614+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-new-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 1,
+          "said": "Weekday Mass Schedule 9:00am - Mondays, Wednesdays, and Fridays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 1,
+          "said": "Weekday Mass Schedule 9:00am - Mondays, Wednesdays, and Fridays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 3,
+          "said": "Monday, November 16 9:00am / Wednesday, November 18 9:00am / Friday, November 20 9:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “9:00am – Mondays, Wednesdays, and Fridays”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; both weeks' intentions agree, and the website lists Monday, Wednesday, Friday 9:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-new-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 1,
+          "said": "Weekday Mass Schedule 9:00am - Mondays, Wednesdays, and Fridays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 1,
+          "said": "Weekday Mass Schedule 9:00am - Mondays, Wednesdays, and Fridays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 3,
+          "said": "Monday, November 16 9:00am / Wednesday, November 18 9:00am / Friday, November 20 9:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “9:00am – Mondays, Wednesdays, and Fridays”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; both weeks' intentions agree, and the website lists Monday, Wednesday, Friday 9:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-new-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 1,
+          "said": "Weekday Mass Schedule 9:00am - Mondays, Wednesdays, and Fridays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 1,
+          "said": "Weekday Mass Schedule 9:00am - Mondays, Wednesdays, and Fridays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 3,
+          "said": "Monday, November 16 9:00am / Wednesday, November 18 9:00am / Friday, November 20 9:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “9:00am – Mondays, Wednesdays, and Fridays”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues; both weeks' intentions agree, and the website lists Monday, Wednesday, Friday 9:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-new-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 1,
+          "said": "7:00pm - Tuesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 1,
+          "said": "7:00pm - Tuesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 3,
+          "said": "Tuesday, November 17 7:00pm - Mass for Thomas Aquinas Larkin"
+        },
+        {
+          "source": "c1",
+          "bulletin": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “7:00pm – Tuesdays”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-new-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 1,
+          "said": "Weekend Mass Schedule 9:00am - Saturdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 1,
+          "said": "Weekend Mass Schedule 9:00am - Saturdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 3,
+          "said": "Saturday, November 21 9:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “9:00am – Saturdays”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-new-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 1,
+          "said": "4:30pm - Saturday Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 1,
+          "said": "4:30pm - Saturday Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 3,
+          "said": "Saturday, November 21 4:30pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “4:30pm – Saturday Vigil”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-new-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 1,
+          "said": "8:30am & 11:00am - Sundays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 1,
+          "said": "8:30am & 11:00am - Sundays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 3,
+          "said": "Sunday, November 22 8:30am ... 11:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “8:30am & 11:00am – Sundays”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-new-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 1,
+          "said": "8:30am & 11:00am - Sundays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 1,
+          "said": "8:30am & 11:00am - Sundays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 3,
+          "said": "Sunday, November 22 8:30am ... 11:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “8:30am & 11:00am – Sundays”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-new-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 1,
+          "said": "No Mass on Thursdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 1,
+          "said": "No Mass on Thursdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 3,
+          "said": "Thursday, November 19 NO MASS"
+        }
+      ],
+      "rationale": "R25: the parish has no Thursday Mass; recorded so a reviewer sees the gap is deliberate.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-new-hope",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, Holy Day of Obligation"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 6,
+          "said": "Feast of the Immaculate Conception Tuesday, December 8th, 2026 - MASSES AT 9am & 7PM *Holy Day of Obligation*"
+        },
+        {
+          "source": "c1",
+          "bulletin": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “Tuesday, December 8, 2026 MASSES AT 9am & 7PM *Holy Day of Obligation*”"
+        }
+      ],
+      "rationale": "R1, R16: a dated holy-day Mass outside the weekly schedule (POLICY, Weekly or dated rule 7). The 7 PM is the weekly Tuesday Mass, so it is not duplicated (rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-new-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 4:30 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 2,
+          "said": "SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 2,
+          "said": "SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmartinoftours.org/",
+          "said": "Confessions are celebrated a half hour prior to Masses each weekend"
+        },
+        {
+          "source": "c1",
+          "bulletin": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend, as a parish at our Parish Penance Services, or by appointment.”"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 'a half hour prior to the Masses each weekend' is one entry per weekend Mass, ending at its start; the website says the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-new-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 8:30 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 2,
+          "said": "SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 2,
+          "said": "SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend"
+        },
+        {
+          "source": "c1",
+          "bulletin": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend, as a parish at our Parish Penance Services, or by appointment.”"
+        }
+      ],
+      "rationale": "R10, POLICY Times: a half hour before the Sunday 8:30 AM Mass, ending at its start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-new-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 11:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 2,
+          "said": "SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 2,
+          "said": "SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend"
+        },
+        {
+          "source": "c1",
+          "bulletin": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend, as a parish at our Parish Penance Services, or by appointment.”"
+        }
+      ],
+      "rationale": "R10, POLICY Times: a half hour before the Sunday 11:00 AM Mass, ending at its start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 2,
+          "said": "is celebrated a half hour prior to the Masses each weekend"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 2,
+          "said": "is celebrated a half hour prior to the Masses each weekend"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 1,
+          "said": "Weekend Mass Schedule 9:00am - Saturdays / 4:30pm - Saturday Vigil / 8:30am & 11:00am - Sundays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 1,
+          "said": "Weekend Mass Schedule 9:00am - Saturdays / 4:30pm - Saturday Vigil / 8:30am & 11:00am - Sundays"
+        },
+        {
+          "source": "c1",
+          "bulletin": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend, as a parish at our Parish Penance Services, or by appointment.”"
+        }
+      ],
+      "rationale": "R30: the p1 box lists the Saturday 9:00am Mass under 'Weekend Mass Schedule', so the line literally covers it (lean include), but a Saturday morning Mass often counts as a weekday Mass (p2 calls it 'the Saturday Morning Mass'), and nothing prints a Saturday morning confession by itself.",
+      "question": "Does 'a half hour prior to the Masses each weekend' include Saturday's 9:00 AM Mass (confession Sat 8:30-9:00 AM)?",
+      "options": [
+        {
+          "label": "Saturdays 8:30-9:00 AM",
+          "entry": {
+            "church_slug": "st-martin-of-tours-new-hope",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 9:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT: is offered every Monday Morning after the 9:00 AM Mass until 10:30 AM. All are welcome to spend an hour with the Lord during Exposition of the Blessed Sacrament in our chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT: is offered every Monday Morning after the 9:00 AM Mass until 10:30 AM. All are welcome to spend an hour with the Lord during Exposition of the Blessed Sacrament in our chapel."
+        },
+        {
+          "source": "c1",
+          "bulletin": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “EXPOSITION OF THE BLESSED SACRAMENT: is offered every Monday Morning after the 9:00 AM Mass until 10:30 AM. All are welcome to spend an hour with the Lord during Exposition of the Blessed Sacrament in our chapel.”"
+        }
+      ],
+      "rationale": "R32, leaning per precedent ss-philip-and-james-exton s15: the parish has one church, exposition follows its own Monday 9:00 Mass (R10: 30 minutes after a weekday Mass, 9:30) and ends at the printed 10:30; no page gives the chapel's address.",
+      "question": "Is 'our chapel', where Monday Exposition is held, at St. Martin of Tours Church (Mon 9:30-10:30 AM)?",
+      "options": [
+        {
+          "label": "Mondays 9:30-10:30 AM at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-martin-of-tours-new-hope",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "10:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel; after the 9:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-new-hope",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-06",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Annual Barn Mass, 440 Lurgan Road"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 9,
+          "said": "JOIN US FOR OUR ANNUAL BARN MASS SUNDAY, DECEMBER 6TH, 2026 @ 4 PM 440 LURGAN ROAD, NEW HOPE, PA 18938"
+        }
+      ],
+      "rationale": "R22: held at a barn at another address (the church is 1 Riverstone Circle), not a listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 2,
+          "said": "DEVOTIONS: Our Lady of the Miraculous Medal - before Mass on First Saturdays. Sacred Heart of Jesus - before Mass on First Fridays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 2,
+          "said": "DEVOTIONS: Our Lady of the Miraculous Medal - before Mass on First Saturdays. Sacred Heart of Jesus - before Mass on First Fridays"
+        }
+      ],
+      "rationale": "R24: devotions, not Mass, Confession or Adoration, and no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35a2e6b2",
+          "page": 2,
+          "said": "as a parish at our Parish Penance Services, or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d18e0c85",
+          "page": 2,
+          "said": "as a parish at our Parish Penance Services, or by appointment"
+        }
+      ],
+      "rationale": "R26: no penance service is dated in either issue, and appointments have no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "b13dfa05ac2d40d1147672b564318571",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T01:18:58.193614+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "35a2e6b2330757c5c989dcdaeddee7351effcf92367500f5cc0a56135850487d",
+        "fetched_at": "2026-11-15T16:46:19Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "d18e0c85084cd128bb4a79e4264678e97d08b9a76a7d80e7c54bf1f86300e275",
+        "fetched_at": "2026-11-08T15:54:57Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002505,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-martin-of-tours-new-hope",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "9:00am – Mondays, Wednesdays, and Fridays"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "9:00am – Mondays, Wednesdays, and Fridays"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-martin-of-tours-new-hope",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "7:00pm – Tuesdays"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "7:00pm – Tuesdays"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-martin-of-tours-new-hope",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "9:00am – Mondays, Wednesdays, and Fridays"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "9:00am – Mondays, Wednesdays, and Fridays"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-martin-of-tours-new-hope",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "9:00am – Mondays, Wednesdays, and Fridays"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "9:00am – Mondays, Wednesdays, and Fridays"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-martin-of-tours-new-hope",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "9:00am – Saturdays"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "9:00am – Saturdays"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-martin-of-tours-new-hope",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "4:30pm – Saturday Vigil"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "4:30pm – Saturday Vigil"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-martin-of-tours-new-hope",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "8:30am & 11:00am – Sundays"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "8:30am & 11:00am – Sundays"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-martin-of-tours-new-hope",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "8:30am & 11:00am – Sundays"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "8:30am & 11:00am – Sundays"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-martin-of-tours-new-hope",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "09:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Before the 9:00 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend, as a parish at our Parish Penance Services, or by appointment."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend, as a parish at our Parish Penance Services, or by appointment."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-martin-of-tours-new-hope",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": "16:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Before the 4:30 PM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend, as a parish at our Parish Penance Services, or by appointment."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend, as a parish at our Parish Penance Services, or by appointment."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-martin-of-tours-new-hope",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": "08:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Before the 8:30 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend, as a parish at our Parish Penance Services, or by appointment."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend, as a parish at our Parish Penance Services, or by appointment."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-martin-of-tours-new-hope",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:30",
+          "end_time": "11:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Before the 11:00 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend, as a parish at our Parish Penance Services, or by appointment."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "SACRAMENT OF RECONCILIATION: is celebrated a half hour prior to the Masses each weekend, as a parish at our Parish Penance Services, or by appointment."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-martin-of-tours-new-hope",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "10:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "In the chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "EXPOSITION OF THE BLESSED SACRAMENT: is offered every Monday Morning after the 9:00 AM Mass until 10:30 AM. All are welcome to spend an hour with the Lord during Exposition of the Blessed Sacrament in our chapel."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "EXPOSITION OF THE BLESSED SACRAMENT: is offered every Monday Morning after the 9:00 AM Mass until 10:30 AM. All are welcome to spend an hour with the Lord during Exposition of the Blessed Sacrament in our chapel."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-martin-of-tours-new-hope",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-08",
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Holy Day of Obligation",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Tuesday, December 8, 2026 MASSES AT 9am & 7PM *Holy Day of Obligation*"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "d4e4b0d7e8e5486651f372f60ccb8968a81683da79062e8368378de80182795c",
+    "differences": []
+  }
+}
