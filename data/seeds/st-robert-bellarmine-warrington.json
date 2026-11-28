@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-robert-bellarmine-warrington",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:46:58Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T22:25:51Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@1676e752ef71",
+  "approved_at": "2026-11-28T00:59:33Z",
   "summary": "One church (St. Robert Bellarmine, Warrington); both image-only issues (Nov 8, Nov 15) print the same p10 schedule box, which the website matches exactly. Open: Monday Adoration's 'except Summer' (lean year-round), the Nov 25 Family Thanksgiving Mass (lean include) and the Nov 21 First Penance (lean leave out).",
   "blocked_reason": null,
   "bulletins": [
@@ -598,9 +598,22 @@
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-robert-bellarmine-warrington",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel; simple Reposition at 4 PM, no Benediction"
+      },
       "page": 10,
       "sources": [
         {
@@ -654,13 +667,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:33Z"
+      }
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-robert-bellarmine-warrington",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-25",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Family Thanksgiving Mass"
+      },
       "page": 5,
       "sources": [
         {
@@ -702,13 +732,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:33Z"
+      }
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-robert-bellarmine-warrington",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Penance"
+      },
       "page": 5,
       "sources": [
         {
@@ -750,7 +797,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:33Z"
+      }
     },
     {
       "id": "s15",

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "assumption-bvm-feasterville",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:38:38Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T22:56:30Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@1676e752ef71",
+  "approved_at": "2026-11-28T00:59:35Z",
   "summary": "One church. Weekend, weekday, Confession, Tuesday Adoration and First Friday Night of Reparation times are identical in the standing schedule box of both bulletins (Nov 8 and Nov 15); no history stored. One question: the Thanksgiving 9:00 AM Mass named in the standing box without a date.",
   "blocked_reason": null,
   "bulletins": [
@@ -788,9 +788,22 @@
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
       "page": 1,
       "sources": [
         {
@@ -832,7 +845,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:35Z"
+      }
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-joseph-warrington",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:46:03Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T22:21:32Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@1676e752ef71",
+  "approved_at": "2026-11-28T00:59:31Z",
   "summary": "One church. Mass and confession times agree in both issues read (Nov 1 and Nov 8; the newest fetch is the Nov 8 issue) and on the website. Open: the Saturday morning confession's end (bulletin 9:30, website 9:00) and a Thanksgiving 9 AM Mass inferred from the choir schedule. Holy-day line left out (no dated notice).",
   "blocked_reason": null,
   "bulletins": [
@@ -621,9 +621,22 @@
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-warrington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 7,
       "sources": [
         {
@@ -693,13 +706,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:31Z"
+      }
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-warrington",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
       "page": 4,
       "sources": [
         {
@@ -735,7 +765,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:31Z"
+      }
     },
     {
       "id": "s14",

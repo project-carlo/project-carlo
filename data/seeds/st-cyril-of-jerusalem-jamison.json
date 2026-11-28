@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-cyril-of-jerusalem-jamison",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:44:55Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T22:15:39Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@1676e752ef71",
+  "approved_at": "2026-11-28T00:59:29Z",
   "summary": "One church, St. Cyril of Jerusalem, Jamison. Weekend (Sat 4 PM; Sun 8, 10, Noon), daily 9 AM Mon-Sat, Saturday 3-3:45 confession and Adoration (Mon-Fri 9:30-12:30, Wed 7:30-8:30 PM, Daily Mass Chapel) agree in both issues and on the website. Dated Advent penance service, Dec 23 confessions and the 2026 Christmas/New Year schedule are recorded; open: whether to add the Christmas Eve Mass after the 3:30 PM tableau (leaning leave out).",
   "blocked_reason": null,
   "bulletins": [
@@ -1328,9 +1328,22 @@
     },
     {
       "id": "s29",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cyril-of-jerusalem-jamison",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Children's Tableau, followed by Mass"
+      },
       "page": 6,
       "sources": [
         {
@@ -1372,7 +1385,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:29Z"
+      }
     },
     {
       "id": "s30",

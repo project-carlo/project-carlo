@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-guadalupe-doylestown",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:43:27Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T21:44:57Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@1676e752ef71",
+  "approved_at": "2026-11-28T00:59:20Z",
   "summary": "One church (Buckingham/Doylestown). Both November issues (image-only) print the same weekend, Tue-Sat 8 a.m. and before-weekend-Mass confession times. Dated Thanksgiving, Advent confession, Dec 8 and Dec 11 times come from the parish's current events page (R6). Open: the website-only First Friday Adoration and 7 p.m. confession in the St. Juan Diego Chapel.",
   "blocked_reason": null,
   "bulletins": [
@@ -873,9 +873,29 @@
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 10,
+          "start_day": null,
+          "end_month": 8,
+          "end_day": null
+        },
+        "note": "St. Juan Diego Chapel; Benediction; after the 8:00 AM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -917,14 +937,38 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:20Z"
+      },
       "group": "first-friday"
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 9,
+          "end_day": null
+        },
+        "note": "St. Juan Diego Chapel; Benediction; after the 8:00 AM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -966,14 +1010,38 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:20Z"
+      },
       "group": "first-friday"
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-guadalupe-doylestown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 10,
+          "start_day": null,
+          "end_month": 8,
+          "end_day": null
+        },
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -1015,7 +1083,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:20Z"
+      },
       "group": "first-friday"
     }
   ],

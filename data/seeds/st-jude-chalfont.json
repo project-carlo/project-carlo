@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-jude-chalfont",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:46:03Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T22:06:51Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@1676e752ef71",
+  "approved_at": "2026-11-28T00:59:25Z",
   "summary": "One church (St. Jude Church and Shrine). Both November issues (image-only, read by render) print the same schedule box, which the website matches: Sat 4:30 PM, Sun 8:30/10:30, Mon-Sat 9:00, Tue/Thu 6:30 AM, Sat confession 3:15-4:15, Thursday Adoration 9:30 AM-7 PM; Thanksgiving cancels the 6:30 Mass and Adoration. Open: whether the 6:30 AM Mass, 'suspended during summer' with no months, is year-round, and a website-only Dec 8 7:00 PM Mass.",
   "blocked_reason": null,
   "bulletins": [
@@ -492,9 +492,22 @@
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -547,14 +560,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:25Z"
+      },
       "group": "summer630"
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -607,7 +637,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:25Z"
+      },
       "group": "summer630"
     },
     {
@@ -952,9 +986,22 @@
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-chalfont",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
       "page": null,
       "sources": [
         {
@@ -994,7 +1041,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:25Z"
+      }
     }
   ],
   "second_opinion": {

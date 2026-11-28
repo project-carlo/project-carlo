@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-mount-carmel-doylestown",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:43:31Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T21:52:44Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@1676e752ef71",
+  "approved_at": "2026-11-28T00:59:22Z",
   "summary": "One church. Weekend, weekday and confession times agree in both issues (image-only, read by render) and on the website. Thanksgiving 9 AM Mass and the Nov 25 confession cancellation recorded. Open: whether Thanksgiving cancels the 8 AM Mass, and whether Monday Adoration starts at 9:00 (website) or 8:30 (POLICY from 'after the 8:00 AM Mass').",
   "blocked_reason": null,
   "bulletins": [
@@ -652,9 +652,22 @@
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day: 9 AM Mass instead"
+      },
       "page": 3,
       "sources": [
         {
@@ -696,13 +709,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:22Z"
+      }
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Reposition at 3:00 PM"
+      },
       "page": 5,
       "sources": [
         {
@@ -766,7 +796,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:22Z"
+      }
     },
     {
       "id": "s17",
@@ -795,9 +829,22 @@
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-doylestown",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Penance Service"
+      },
       "page": 5,
       "sources": [
         {
@@ -839,7 +886,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:22Z"
+      }
     },
     {
       "id": "s19",

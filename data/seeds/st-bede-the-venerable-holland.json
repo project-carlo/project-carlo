@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-bede-the-venerable-holland",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:44:42Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-27T22:38:28Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@1676e752ef71",
+  "approved_at": "2026-11-28T00:59:39Z",
   "summary": "One church (St. Bede, Holland). Two image-only issues (Nov 8, Nov 15) print the same schedule box: Sat 5:30 PM vigil, Sun 7:30/9:30/11:00/12:30, Mon-Fri 6:30 and 9:00, Sat 8:30, Saturday confession 4-5 PM; the website matches. Dated: Dec 2 7 PM Advent Mass, Dec 16 7 PM Advent Confession. Open: whether the perpetual Adoration chapel ('adjacent to the Drexel Center') is on the grounds (lean include as 24h, code 9 PM-7 AM), and Dec 7/8 holy-day Masses from the undated standing line (lean leave out).",
   "blocked_reason": null,
   "bulletins": [
@@ -1006,9 +1006,25 @@
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "adoration",
+        "event_kind": "continuous",
+        "day_of_week": null,
+        "date": null,
+        "start_time": null,
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Saint Katharine Drexel Adoration Chapel",
+        "access": "code_after_hours",
+        "open_from": "07:00",
+        "open_until": "21:00"
+      },
       "page": 1,
       "sources": [
         {
@@ -1064,13 +1080,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:39Z"
+      }
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception vigil"
+      },
       "page": 1,
       "sources": [
         {
@@ -1117,14 +1150,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:39Z"
+      },
       "group": "holyday"
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
       "page": 1,
       "sources": [
         {
@@ -1166,14 +1216,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:39Z"
+      },
       "group": "holyday"
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bede-the-venerable-holland",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
       "page": 1,
       "sources": [
         {
@@ -1215,7 +1282,11 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@1676e752ef71",
+        "at": "2026-11-28T00:59:39Z"
+      },
       "group": "holyday"
     }
   ],
