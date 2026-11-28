@@ -45,7 +45,10 @@ import { LASTMOD_EXEMPT_ATTRIBUTE } from "@/lib/lastmod";
 
 /** Inline annotations on a schedule line — the bulletin page a time came
  *  from, and any qualifier on the slot. One size and one voice for all of
- *  them, so a schedule row doesn't carry three different italics. */
+ *  them, so a schedule row doesn't carry three different italics. Each
+ *  follows a real space, which with its margin makes the gap, so the page's
+ *  text reads "3 p.m. Benediction", not "3 p.m.Benediction", where it is
+ *  quoted without its styles, as in a search result's snippet. */
 const ANNOTATION_CLASS = "font-serif text-[0.9rem] italic";
 const ANNOTATION_LINK_CLASS =
   "text-rubric underline decoration-rubric/40 decoration-from-font underline-offset-[3px] transition-colors hover:text-rubric-deep hover:decoration-rubric-deep";
@@ -159,9 +162,12 @@ function SectionPageRef({
 function EventNote({ note }: { note: string | null }) {
   if (!note) return null;
   return (
-    <span className={`ml-2 ${ANNOTATION_CLASS} text-ink-faint`}>
-      {note}
-    </span>
+    <>
+      {" "}
+      <span className={`ml-1 ${ANNOTATION_CLASS} text-ink-faint`}>
+        {note}
+      </span>
+    </>
   );
 }
 
@@ -194,25 +200,31 @@ function PageRef({
   const title = `Open bulletin at page ${event.page_number}`;
   if (bulletinUrl) {
     return (
-      <a
-        href={`${bulletinUrl}#page=${event.page_number}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        data-track="bulletin_page"
-        title={title}
-        className={`ml-2.5 ${ANNOTATION_CLASS} ${ANNOTATION_LINK_CLASS}`}
-      >
-        {label}
-      </a>
+      <>
+        {" "}
+        <a
+          href={`${bulletinUrl}#page=${event.page_number}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-track="bulletin_page"
+          title={title}
+          className={`ml-1.5 ${ANNOTATION_CLASS} ${ANNOTATION_LINK_CLASS}`}
+        >
+          {label}
+        </a>
+      </>
     );
   }
   return (
-    <span
-      className={`ml-2.5 ${ANNOTATION_CLASS} text-ink-soft`}
-      title={title}
-    >
-      {label}
-    </span>
+    <>
+      {" "}
+      <span
+        className={`ml-1.5 ${ANNOTATION_CLASS} text-ink-soft`}
+        title={title}
+      >
+        {label}
+      </span>
+    </>
   );
 }
 
@@ -294,22 +306,28 @@ function ChapelPageRef({ page, bulletinUrl }: { page: number; bulletinUrl: strin
   const title = `Open bulletin at page ${page}`;
   if (!bulletinUrl) {
     return (
-      <span className={`ml-2.5 ${ANNOTATION_CLASS} text-ink-soft`} title={title}>
-        page {page}
-      </span>
+      <>
+        {" "}
+        <span className={`ml-1.5 ${ANNOTATION_CLASS} text-ink-soft`} title={title}>
+          page {page}
+        </span>
+      </>
     );
   }
   return (
-    <a
-      href={`${bulletinUrl}#page=${page}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      data-track="bulletin_page"
-      title={title}
-      className={`ml-2.5 ${ANNOTATION_CLASS} ${ANNOTATION_LINK_CLASS}`}
-    >
-      page {page}
-    </a>
+    <>
+      {" "}
+      <a
+        href={`${bulletinUrl}#page=${page}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        data-track="bulletin_page"
+        title={title}
+        className={`ml-1.5 ${ANNOTATION_CLASS} ${ANNOTATION_LINK_CLASS}`}
+      >
+        page {page}
+      </a>
+    </>
   );
 }
 
@@ -487,9 +505,15 @@ export function ChurchPageContent({
                               {dayEvents.map((event, idx) => (
                                 <span key={event.id}>
                                   {idx > 0 ? (
-                                    <span className="mx-2 text-ink-faint">
-                                      ·
-                                    </span>
+                                    <>
+                                      {/* No break before the dot: a wrapped
+                                          line ends on it rather than starting
+                                          with it. */}
+                                      {" "}
+                                      <span className="mx-1 text-ink-faint">
+                                        ·
+                                      </span>{" "}
+                                    </>
                                   ) : null}
                                   <span className="tabular-nums">
                                     {formatTimeValue(event)}

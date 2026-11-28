@@ -3,8 +3,8 @@ import type { ChurchDetail, ContinuousAdoration, EventSummary } from "@carlo/cor
 import type { CityLink } from "../lib/cities";
 import type { CityMapData } from "../lib/cityMapLayout";
 import { ChurchPageContent } from "../components/ChurchPageContent";
+import { buildChurchDescription } from "../lib/churchDescription";
 import {
-  buildChurchDescription,
   buildChurchTitle,
   churchBreadcrumbJsonLd,
   churchJsonLd,
@@ -40,9 +40,10 @@ export function StaticChurchPage({
   canonicalUrl,
   lastModified,
 }: StaticChurchPageProps) {
+  const description = buildChurchDescription(church, events, continuous);
   const jsonLd = [
     churchJsonLd(church, canonicalUrl),
-    churchWebPageJsonLd(church, canonicalUrl, lastModified),
+    churchWebPageJsonLd(church, canonicalUrl, lastModified, description),
     churchBreadcrumbJsonLd(church, city, canonicalUrl),
   ];
 
@@ -50,7 +51,7 @@ export function StaticChurchPage({
     <html lang="en">
       <StaticPageHead
         title={buildChurchTitle(church)}
-        description={buildChurchDescription(church)}
+        description={description}
         canonicalUrl={canonicalUrl}
         jsonLd={jsonLd}
         cssPath={cssPath}

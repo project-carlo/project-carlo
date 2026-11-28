@@ -8,7 +8,8 @@ import { dateMatchesPattern } from "./schedulePattern";
  * order.  Pure functions only; no DOM or React dependencies.
  */
 
-const EVENING_START_MINUTES = 16 * 60;
+/** A Saturday Mass starting at or after this (4 p.m.) is the Sunday vigil. */
+export const VIGIL_START_MINUTES = 16 * 60;
 // compareSchedule ranks Sunday 0, the Saturday vigil 1, Mon-Sat weekly events
 // 2-7, then these.
 const UNKNOWN_DAY_RANK = 8;
@@ -211,7 +212,7 @@ function scheduleRank(e: CompareInput): number {
   if (jsDay < 0) return UNKNOWN_DAY_RANK;
   const day = DAY_ORDER[jsDay];
   if (day === "sunday") return 0;
-  if (day === "saturday" && e.start_time >= EVENING_START_MINUTES) return 1;
+  if (day === "saturday" && e.start_time >= VIGIL_START_MINUTES) return 1;
   return jsDay + 1;
 }
 

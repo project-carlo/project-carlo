@@ -9,8 +9,8 @@ import {
   churchEventsQuery as churchEventsQueryOptions,
   churchQuery as churchQueryOptions,
 } from "@/lib/pageQueries";
+import { buildChurchDescription } from "@/lib/churchDescription";
 import {
-  buildChurchDescription,
   buildChurchTitle,
   canonicalForPath,
   churchPath,
@@ -45,7 +45,10 @@ export function ChurchPage() {
       : church
         ? buildChurchTitle(church)
         : "Church · Project Carlo",
-    description: !notFound && church ? buildChurchDescription(church) : undefined,
+    description:
+      !notFound && church
+        ? buildChurchDescription(church, events, churchQuery.data?.continuous ?? null)
+        : undefined,
     canonicalUrl:
       !notFound && church && churchSlug
         ? canonicalForPath(churchPath(churchSlug))
