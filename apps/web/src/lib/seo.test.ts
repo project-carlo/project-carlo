@@ -1,7 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { ChurchDetail } from "@carlo/core";
 import {
-  buildChurchDescription,
   buildChurchTitle,
   buildCityDescription,
   churchBreadcrumbJsonLd,
@@ -30,33 +29,12 @@ const church: ChurchDetail = {
   checked_on: null,
 };
 
-describe("buildChurchDescription", () => {
-  it("names the bulletin, or the page a parish with none posts its times on", () => {
-    expect(buildChurchDescription(church)).toBe(
-      "Mass, Confession, and Adoration times for St. Charles Borromeo in Rochester, NY, from the parish’s weekly bulletin.",
-    );
-    expect(
-      buildChurchDescription({
-        ...church,
-        schedule_source: "facebook",
-        source_url: "https://www.facebook.com/stcharles",
-        checked_on: "2026-11-16",
-      }),
-    ).toBe(
-      "Mass, Confession, and Adoration times for St. Charles Borromeo in Rochester, NY, from the parish’s Facebook page.",
-    );
-  });
-});
-
 describe("an Adoration chapel at its own address", () => {
   const chapel = { ...church, kind: "adoration_chapel" as const, name: "Adoration Chapel" };
 
-  it("is titled and described by its Adoration alone", () => {
+  it("is titled by its Adoration alone", () => {
     expect(buildChurchTitle(chapel)).toBe(
       "Adoration Chapel, Rochester · Adoration Times · Project Carlo",
-    );
-    expect(buildChurchDescription(chapel)).toBe(
-      "Adoration times for Adoration Chapel in Rochester, NY, from the parish’s weekly bulletin.",
     );
   });
 });

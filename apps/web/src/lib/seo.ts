@@ -7,7 +7,7 @@
 // @carlo/core's runtime imports.
 import type { ChurchBase, ChurchDetail } from "@carlo/core";
 import { cityPath, type City, type CityLink } from "./cities";
-import { CHURCH_LIST, SOURCE_NAMES, SOURCE_PHRASE, UNNAMED_CHURCH } from "../copy";
+import { CHURCH_LIST, SOURCE_PHRASE, UNNAMED_CHURCH } from "../copy";
 
 /** An Adoration chapel at its own address (core's `isAdorationChapel`): no Mass or Confession. */
 function isChapel(place: Pick<ChurchBase, "kind">): boolean {
@@ -70,20 +70,6 @@ export function buildChurchTitle(church: ChurchDetail): string {
   // An Adoration chapel at its own address has no Mass or Confession.
   const times = isChapel(church) ? "Adoration Times" : "Mass Times";
   return `${place ? `${name}, ${place}` : name} · ${times} · ${SITE_NAME}`;
-}
-
-/** SERP-snippet description for a church page (kept under ~155 chars). */
-export function buildChurchDescription(church: ChurchDetail): string {
-  const name = church.name?.trim() || "this church";
-  const loc = churchLocation(church);
-  const where = loc ? ` in ${loc}` : "";
-  const from = church.schedule_source
-    ? SOURCE_NAMES[church.schedule_source]
-    : "the parish’s weekly bulletin";
-  const services = isChapel(church)
-    ? "Adoration times"
-    : "Mass, Confession, and Adoration times";
-  return `${services} for ${name}${where}, from ${from}.`;
 }
 
 /** Canonical path of the prerendered all-churches index page. */
@@ -169,6 +155,7 @@ export function churchWebPageJsonLd(
   church: ChurchDetail,
   canonicalUrl: string,
   dateModified: string | null,
+  description: string,
 ): Record<string, unknown> {
   const node: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -176,7 +163,7 @@ export function churchWebPageJsonLd(
     "@id": `${canonicalUrl}#webpage`,
     url: canonicalUrl,
     name: buildChurchTitle(church),
-    description: buildChurchDescription(church),
+    description,
     about: { "@id": `${canonicalUrl}#church` },
     inLanguage: "en-US",
   };
