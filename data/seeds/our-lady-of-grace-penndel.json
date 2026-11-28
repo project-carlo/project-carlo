@@ -1,0 +1,1178 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-grace-penndel",
+  "status": "ready",
+  "as_of": "2026-11-15T16:43:21Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T01:49:13Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Our Lady of Grace, Penndel). Both image-only November issues print the same box: Sat 4 PM vigil, Sun 7:45 and 10 AM, Mon-Sat 8 AM, first-Friday 9 AM (Sept-June, replacing the 8 AM), Sat confession 2:30-3:30, and Wednesday Adoration 8:30-5 in the church. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "cc170735646877bf1c2329f25bf5617e0cb939078885867fbbc9d9826ecb3b48",
+      "fetched_at": "2026-11-15T16:43:21Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b865f15722644b0d6a4c7555ec46aa586c941a1a1f208a083910418c1da0088c",
+      "fetched_at": "2026-11-08T15:53:04Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "cc170735646877bf1c2329f25bf5617e0cb939078885867fbbc9d9826ecb3b48",
+      "bulletins": [
+        "cc170735646877bf1c2329f25bf5617e0cb939078885867fbbc9d9826ecb3b48",
+        "b865f15722644b0d6a4c7555ec46aa586c941a1a1f208a083910418c1da0088c"
+      ],
+      "cached": false,
+      "cost_usd": 0.001975,
+      "at": "2026-11-28T01:53:46.902584+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-church-penndel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc170735",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday Vigil 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b865f157",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday Vigil 4:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "cc170735646877bf1c2329f25bf5617e0cb939078885867fbbc9d9826ecb3b48",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil 4:00 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues; the intentions list Sat 4:00PM both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-church-penndel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc170735",
+          "page": 1,
+          "said": "Sunday Mornings 7:45 & 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b865f157",
+          "page": 1,
+          "said": "Sunday Mornings 7:45 & 10:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "cc170735646877bf1c2329f25bf5617e0cb939078885867fbbc9d9826ecb3b48",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Mornings 7:45 & 10:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-church-penndel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc170735",
+          "page": 1,
+          "said": "Sunday Mornings 7:45 & 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b865f157",
+          "page": 1,
+          "said": "Sunday Mornings 7:45 & 10:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "cc170735646877bf1c2329f25bf5617e0cb939078885867fbbc9d9826ecb3b48",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Mornings 7:45 & 10:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-church-penndel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc170735",
+          "page": 1,
+          "said": "DAILY MASS Monday – Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b865f157",
+          "page": 1,
+          "said": "DAILY MASS Monday – Saturday 8:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "cc170735646877bf1c2329f25bf5617e0cb939078885867fbbc9d9826ecb3b48",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday – Saturday 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the box of both issues; both weeks' intentions list 8:00AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-church-penndel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc170735",
+          "page": 1,
+          "said": "DAILY MASS Monday – Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b865f157",
+          "page": 1,
+          "said": "DAILY MASS Monday – Saturday 8:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "cc170735646877bf1c2329f25bf5617e0cb939078885867fbbc9d9826ecb3b48",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday – Saturday 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the box of both issues; both weeks' intentions list 8:00AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-church-penndel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc170735",
+          "page": 1,
+          "said": "DAILY MASS Monday – Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b865f157",
+          "page": 1,
+          "said": "DAILY MASS Monday – Saturday 8:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "cc170735646877bf1c2329f25bf5617e0cb939078885867fbbc9d9826ecb3b48",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday – Saturday 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the box of both issues; both weeks' intentions list 8:00AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-church-penndel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc170735",
+          "page": 1,
+          "said": "DAILY MASS Monday – Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b865f157",
+          "page": 1,
+          "said": "DAILY MASS Monday – Saturday 8:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "cc170735646877bf1c2329f25bf5617e0cb939078885867fbbc9d9826ecb3b48",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday – Saturday 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the box of both issues; both weeks' intentions list 8:00AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-church-penndel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc170735",
+          "page": 1,
+          "said": "DAILY MASS Monday – Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b865f157",
+          "page": 1,
+          "said": "DAILY MASS Monday – Saturday 8:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "cc170735646877bf1c2329f25bf5617e0cb939078885867fbbc9d9826ecb3b48",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday – Saturday 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the box of both issues; both weeks' intentions list Saturday 8:00AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-church-penndel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "third",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc170735",
+          "page": 1,
+          "said": "Monday – Saturday 8:00 AM / First Fridays, September - June: 9:00 AM* ... * Daily Mass on the First Friday of each month from September - June will take place at 9:00 AM, so that our School Students can join us."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b865f157",
+          "page": 1,
+          "said": "Monday – Saturday 8:00 AM / First Fridays, September - June: 9:00 AM* ... * Daily Mass on the First Friday of each month from September - June will take place at 9:00 AM, so that our School Students can join us."
+        },
+        {
+          "source": "c1",
+          "bulletin": "cc170735646877bf1c2329f25bf5617e0cb939078885867fbbc9d9826ecb3b48",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday – Saturday 8:00 AM. * Daily Mass on the First Friday of each month from September - June will take place at 9:00 AM”"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the footnote says the daily Mass itself moves to 9:00 AM on first Fridays September-June, so the 8:00 AM Friday Mass runs on the other Fridays all year (and on first Fridays only in July-August, next slot). Stated replacement, so C4 doesn't apply.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-church-penndel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 7,
+          "start_day": null,
+          "end_month": 8,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc170735",
+          "page": 1,
+          "said": "Monday – Saturday 8:00 AM / First Fridays, September - June: 9:00 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b865f157",
+          "page": 1,
+          "said": "Monday – Saturday 8:00 AM / First Fridays, September - June: 9:00 AM*"
+        }
+      ],
+      "rationale": "R1: outside September-June the footnote's move doesn't apply, so first Fridays in July-August keep the 8:00 AM daily Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-church-penndel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc170735",
+          "page": 1,
+          "said": "First Fridays, September - June: 9:00 AM* ... Daily Mass on the First Friday of each month from September - June will take place at 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b865f157",
+          "page": 1,
+          "said": "First Fridays, September - June: 9:00 AM* ... Daily Mass on the First Friday of each month from September - June will take place at 9:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "cc170735646877bf1c2329f25bf5617e0cb939078885867fbbc9d9826ecb3b48",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “First Fridays, September - June: 9:00 AM*. * Daily Mass on the First Friday of each month from September - June will take place at 9:00 AM”"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly rule 2: a named first-Friday slot in the schedule box of both issues, with its months as the season. Neither issue's week holds a first Friday (R11).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-church-penndel",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc170735",
+          "page": 1,
+          "said": "CONFESSIONS Saturdays 2:30 PM - 3:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b865f157",
+          "page": 1,
+          "said": "CONFESSIONS Saturdays 2:30 PM - 3:30 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "cc170735646877bf1c2329f25bf5617e0cb939078885867fbbc9d9826ecb3b48",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturdays 2:30 PM - 3:30 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-church-penndel",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc170735",
+          "page": 6,
+          "said": "Eucharistic Adoration is ongoing every Wednesday from 8:30 AM to 5:00 PM in Our Lady of Grace Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b865f157",
+          "page": 6,
+          "said": "Eucharistic Adoration is ongoing every Wednesday from 8:30 AM to 5:00 PM in Our Lady of Grace Church."
+        },
+        {
+          "source": "c1",
+          "bulletin": "cc170735646877bf1c2329f25bf5617e0cb939078885867fbbc9d9826ecb3b48",
+          "page": 6,
+          "said": "gpt-6-luna read the same: B1 p6 “Eucharistic Adoration is ongoing every Wednesday from 8:30 AM to 5:00 PM in Our Lady of Grace Church.”"
+        }
+      ],
+      "rationale": "R1: printed in both issues (p6) with clock times, in the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-church-penndel",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Installation Mass of the pastor"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc170735",
+          "page": 4,
+          "said": "You are invited to join us in prayer at the Installation Mass of Rev. William J. Monahan ... Saturday 21 November 2026 at 4:00 PM Our Lady of Grace Church"
+        }
+      ],
+      "rationale": "POLICY Weekly rule 7: a special occasion celebrated at the regular Saturday 4:00 PM vigil; only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc170735",
+          "page": 6,
+          "said": "PRAY THE ROSARY All are welcome! Monday - Saturday after the daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b865f157",
+          "page": 6,
+          "said": "PRAY THE ROSARY All are welcome! Monday - Saturday after the daily Mass"
+        }
+      ],
+      "rationale": "R24: the Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cc170735",
+          "page": 5,
+          "said": "Help is needed to distribute Holy Communion at Oxford (formerly Attleboro) Nursing Home on Thursdays at 11:00 AM"
+        }
+      ],
+      "rationale": "R24, R22: a Communion visit at a nursing home elsewhere, not a Mass at the parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "38a51f157688de3b597e52d4eb54fdee",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T01:53:46.902584+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "cc170735646877bf1c2329f25bf5617e0cb939078885867fbbc9d9826ecb3b48",
+        "fetched_at": "2026-11-15T16:43:21Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "b865f15722644b0d6a4c7555ec46aa586c941a1a1f208a083910418c1da0088c",
+        "fetched_at": "2026-11-08T15:53:04Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.001975,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "our-lady-of-grace-church-penndel",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil 4:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil 4:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "our-lady-of-grace-church-penndel",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:45",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Mornings 7:45 & 10:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Mornings 7:45 & 10:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "our-lady-of-grace-church-penndel",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Mornings 7:45 & 10:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Mornings 7:45 & 10:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "our-lady-of-grace-church-penndel",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday – Saturday 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday – Saturday 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "our-lady-of-grace-church-penndel",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday – Saturday 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday – Saturday 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "our-lady-of-grace-church-penndel",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday – Saturday 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday – Saturday 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "our-lady-of-grace-church-penndel",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday – Saturday 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday – Saturday 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "our-lady-of-grace-church-penndel",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday – Saturday 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday – Saturday 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "our-lady-of-grace-church-penndel",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [
+            "second",
+            "third",
+            "fourth",
+            "fifth"
+          ],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday – Saturday 8:00 AM. * Daily Mass on the First Friday of each month from September - June will take place at 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday – Saturday 8:00 AM. * Daily Mass on the First Friday of each month from September - June will take place at 9:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "our-lady-of-grace-church-penndel",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [
+            "first"
+          ],
+          "exclude_weeks": false,
+          "season": {
+            "start_month": 9,
+            "start_day": null,
+            "end_month": 6,
+            "end_day": null
+          },
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "First Fridays, September - June: 9:00 AM*. * Daily Mass on the First Friday of each month from September - June will take place at 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "First Fridays, September - June: 9:00 AM*. * Daily Mass on the First Friday of each month from September - June will take place at 9:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "our-lady-of-grace-church-penndel",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "14:30",
+          "end_time": "15:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays 2:30 PM - 3:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays 2:30 PM - 3:30 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "our-lady-of-grace-church-penndel",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "17:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Eucharistic Adoration is ongoing every Wednesday from 8:30 AM to 5:00 PM in Our Lady of Grace Church."
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "Eucharistic Adoration is ongoing every Wednesday from 8:30 AM to 5:00 PM in Our Lady of Grace Church."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "86512525bc33ab8ddf7f18b093836d14036acd56bcdf2f84b179d572ae60c239",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s10"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Fri 08:00 @our-lady-of-grace-church-penndel first season=7-8",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "cc170735",
+              "page": 1,
+              "said": "DAILY MASS Monday – Saturday 8:00 AM / First Fridays, September - June: 9:00 AM* ... * Daily Mass on the First Friday of each month from September - June will take place at 9:00 AM"
+            }
+          ],
+          "why": "R1, POLICY Weekly qualifiers (season): the box gives Mon-Sat 8:00 AM, and the footnote moves only the September-June first Fridays to 9:00, so first Fridays in July-August keep the 8:00 AM daily Mass; luna dropped the July-August remainder.",
+          "at": "2026-11-28T01:54:02Z"
+        }
+      }
+    ]
+  }
+}
