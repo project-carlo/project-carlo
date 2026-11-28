@@ -1,0 +1,1347 @@
+{
+  "schema_version": 1,
+  "parish_slug": "queen-of-the-universe-levittown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T01:32:30Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Mass, Saturday confession and Thursday Adoration times agree in both November issues (all image pages, rendered) and the website. Open: whether the Friday 3-4 PM Holy Hour of Rosary and Chaplet in the church chapel counts as Adoration.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+      "fetched_at": "2026-11-15T16:44:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1c607f994f2a769154f385d2e555ed468e724e336a887eae980113e19cf5664a",
+      "fetched_at": "2026-11-08T15:53:16Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+      "bulletins": [
+        "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+        "1c607f994f2a769154f385d2e555ed468e724e336a887eae980113e19cf5664a"
+      ],
+      "cached": false,
+      "cost_usd": 0.00184,
+      "at": "2026-11-28T01:37:28.480035+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-the-universe-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 1,
+          "said": "Saturday: Vigil Mass 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c607f99",
+          "page": 1,
+          "said": "Saturday: Vigil Mass 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 2,
+          "said": "Sat, Nov 21 4:00 p.m.VIGIL"
+        },
+        {
+          "source": "c1",
+          "bulletin": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday: Vigil Mass 4:00 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the Celebration of the Eucharist box of both issues read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-the-universe-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:30 am, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c607f99",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:30 am, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 2,
+          "said": "7:30 a.m. / 9:30 a.m. / 11:30 a.m. (Nov 15 and Nov 22)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30 am, 9:30 am, 11:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-the-universe-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:30 am, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c607f99",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:30 am, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 2,
+          "said": "7:30 a.m. / 9:30 a.m. / 11:30 a.m. (Nov 15 and Nov 22)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30 am, 9:30 am, 11:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-the-universe-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:30 am, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c607f99",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:30 am, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 2,
+          "said": "7:30 a.m. / 9:30 a.m. / 11:30 a.m. (Nov 15 and Nov 22)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30 am, 9:30 am, 11:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-the-universe-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 1,
+          "said": "1:00 pm Mass in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c607f99",
+          "page": 1,
+          "said": "1:00 pm Mass in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 6,
+          "said": "Horario de la misa en español: Domingo a la 1:00 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “1:00 pm Mass in Spanish”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the Spanish information box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-the-universe-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 1,
+          "said": "Weekday Mass Monday through Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c607f99",
+          "page": 1,
+          "said": "Weekday Mass Monday through Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 2,
+          "said": "Mon, Nov 16 ... Sat, Nov 21 8:30 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday through Saturday at 8:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; each weekday's intention lists 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-the-universe-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 1,
+          "said": "Weekday Mass Monday through Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c607f99",
+          "page": 1,
+          "said": "Weekday Mass Monday through Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 2,
+          "said": "Mon, Nov 16 ... Sat, Nov 21 8:30 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday through Saturday at 8:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; each weekday's intention lists 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-the-universe-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 1,
+          "said": "Weekday Mass Monday through Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c607f99",
+          "page": 1,
+          "said": "Weekday Mass Monday through Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 2,
+          "said": "Mon, Nov 16 ... Sat, Nov 21 8:30 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday through Saturday at 8:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; each weekday's intention lists 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-the-universe-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 1,
+          "said": "Weekday Mass Monday through Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c607f99",
+          "page": 1,
+          "said": "Weekday Mass Monday through Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 2,
+          "said": "Mon, Nov 16 ... Sat, Nov 21 8:30 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday through Saturday at 8:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; each weekday's intention lists 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-the-universe-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 1,
+          "said": "Weekday Mass Monday through Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c607f99",
+          "page": 1,
+          "said": "Weekday Mass Monday through Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 2,
+          "said": "Mon, Nov 16 ... Sat, Nov 21 8:30 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday through Saturday at 8:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; each weekday's intention lists 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-the-universe-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 1,
+          "said": "Weekday Mass Monday through Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c607f99",
+          "page": 1,
+          "said": "Weekday Mass Monday through Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 2,
+          "said": "Mon, Nov 16 ... Sat, Nov 21 8:30 a.m."
+        },
+        {
+          "source": "c1",
+          "bulletin": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday through Saturday at 8:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; each weekday's intention lists 8:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-the-universe-levittown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:45",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 1,
+          "said": "Celebration of Reconciliation Saturdays 2:45 pm to 3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c607f99",
+          "page": 1,
+          "said": "Celebration of Reconciliation Saturdays 2:45 pm to 3:45 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.quparish.com/location/",
+          "said": "Saturdays: 2:45pm - 3:45 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturdays 2:45 pm to 3:45 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-the-universe-levittown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Church chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 2,
+          "said": "The Blessed Sacrament is exposed in the Church chapel, every Thursday, from 9:00 am until 5:00 pm. All are welcome!"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c607f99",
+          "page": 2,
+          "said": "The Blessed Sacrament is exposed in the Church chapel, every Thursday, from 9:00 am until 5:00 pm. All are welcome!"
+        },
+        {
+          "source": "c1",
+          "bulletin": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “The Blessed Sacrament is exposed in the Church chapel, every Thursday, from 9:00 am until 5:00 pm. All are welcome!”"
+        }
+      ],
+      "rationale": "R1: printed in Prayer and Worship in both issues; the chapel is in the church (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-the-universe-levittown",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Children's Adoration in the Adoration Chapel at the back of the church"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 4,
+          "said": "YOUNG FAMILIES ADORATION OF THE BLESSED SACRAMENT November 19 - 6:30 pm Father Weber will lead a Children's Adoration event in the Adoration Chapel at the back of the church. All families are welcome to join."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c607f99",
+          "page": 4,
+          "said": "November 19 - 6:30 pm ... Children's Adoration event in the Adoration Chapel at the back of the church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+          "page": 4,
+          "said": "gpt-6-luna read the same: B1 p4 “November 19 - 6:30 pm Father Weber will lead a Children's Adoration event in the Adoration Chapel at the back of the church. All families are welcome to join.”"
+        }
+      ],
+      "rationale": "R1, R16: a dated Adoration on or after as_of, in the church's chapel, open to all families (POLICY: open unless limited); no end printed. Like st-maria-goretti-hatfield s15's Family Adoration, start only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 2,
+          "said": "Queen of the Universe Holy Hour in the Church Chapel Friday 3:00 p.m. to 4:00 p.m. Join us to pray the Rosary, the Divine Mercy Chaplet, and time for quiet reflection. All are welcome!"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c607f99",
+          "page": 2,
+          "said": "Queen of the Universe Holy Hour in the Church Chapel Friday 3:00 p.m. to 4:00 p.m. Join us to pray the Rosary, the Divine Mercy Chaplet, and time for quiet reflection. All are welcome!"
+        },
+        {
+          "source": "c1",
+          "bulletin": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+          "page": 2,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p2 “Holy Hour in the Church Chapel Friday 3:00 p.m. to 4:00 p.m.”"
+        }
+      ],
+      "rationale": "R30: POLICY counts a Holy Hour as Adoration unless told the Sacrament isn't exposed, and this one is in the Church Chapel where Thursday exposition is held, unlike annunciation-bvm-havertown s15's school-room rosary group (left out). Hard because its program is the Rosary and Chaplet and no exposition is mentioned. The website lists no Adoration.",
+      "question": "Count the Friday 3:00-4:00 PM Holy Hour in the Church Chapel (Rosary, Divine Mercy Chaplet, quiet reflection) as Adoration?",
+      "options": [
+        {
+          "label": "Fridays 3:00-4:00 PM",
+          "entry": {
+            "church_slug": "queen-of-the-universe-levittown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour, Church Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-the-universe-levittown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-11",
+        "start_time": "21:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Cathedral Basilica, Our Lady of Guadalupe"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "158d6e8b",
+          "page": 6,
+          "said": "Celebración Arquidiocesana Nuestra Señora de Guadalupe 11 de diciembre Catedral Basílica de los Santos Pedro y Pablo ... 9:00 P.M. Santa Misa con el Arzobispo"
+        }
+      ],
+      "rationale": "R22: an archdiocesan celebration at the Cathedral in Philadelphia, not at this parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "af5ba56e4d1dfbb22927c591d3c5a47d",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T01:37:28.480035+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "158d6e8bf719bd3e1091660366fdff067b48b373478335d86b3ec8ae621ed4e2",
+        "fetched_at": "2026-11-15T16:44:10Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "1c607f994f2a769154f385d2e555ed468e724e336a887eae980113e19cf5664a",
+        "fetched_at": "2026-11-08T15:53:16Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.00184,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "queen-of-the-universe-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday: Vigil Mass 4:00 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday: Vigil Mass 4:00 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "queen-of-the-universe-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30 am, 9:30 am, 11:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30 am, 9:30 am, 11:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "queen-of-the-universe-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30 am, 9:30 am, 11:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30 am, 9:30 am, 11:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "queen-of-the-universe-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30 am, 9:30 am, 11:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30 am, 9:30 am, 11:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "queen-of-the-universe-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "13:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spanish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "1:00 pm Mass in Spanish"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "1:00 pm Mass in Spanish"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "queen-of-the-universe-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday through Saturday at 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday through Saturday at 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "queen-of-the-universe-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday through Saturday at 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday through Saturday at 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "queen-of-the-universe-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday through Saturday at 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday through Saturday at 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "queen-of-the-universe-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday through Saturday at 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday through Saturday at 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "queen-of-the-universe-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday through Saturday at 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday through Saturday at 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "queen-of-the-universe-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday through Saturday at 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday through Saturday at 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "queen-of-the-universe-levittown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "14:45",
+          "end_time": "15:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays 2:45 pm to 3:45 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays 2:45 pm to 3:45 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "queen-of-the-universe-levittown",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "17:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Church chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "The Blessed Sacrament is exposed in the Church chapel, every Thursday, from 9:00 am until 5:00 pm. All are welcome!"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "The Blessed Sacrament is exposed in the Church chapel, every Thursday, from 9:00 am until 5:00 pm. All are welcome!"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "queen-of-the-universe-levittown",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "15:00",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Church Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Holy Hour in the Church Chapel Friday 3:00 p.m. to 4:00 p.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Holy Hour in the Church Chapel Friday 3:00 p.m. to 4:00 p.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "queen-of-the-universe-levittown",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-19",
+          "start_time": "18:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Children's Adoration in the Adoration Chapel at the back of the church",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "November 19 - 6:30 pm Father Weber will lead a Children's Adoration event in the Adoration Chapel at the back of the church. All families are welcome to join."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "fcceb945b0084b85fd82d73bee656d1af527434359376e378858ec4a47876ccc",
+    "differences": []
+  }
+}
