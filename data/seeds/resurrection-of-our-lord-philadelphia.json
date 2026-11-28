@@ -1,0 +1,1325 @@
+{
+  "schema_version": 1,
+  "parish_slug": "resurrection-of-our-lord-philadelphia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:15Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T04:11:03Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (2000 Shelmire Ave, at Castor & Vista). Both image-only November issues print the same Masses: Sat 4:30 PM, Sun 6:30/8:30/10:30 AM/12:00 PM, Mon-Fri 8:30 AM, matched by their intentions; neither prints confession or Adoration. Open, all from the website: a Portuguese 11 AM Sunday Mass (lean out), Saturday confession times on which the site contradicts itself, a Sunday 10 AM confession, and Wednesday 7:30-8:30 AM Exposition.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3db6b25a011c0870bf96429e929750676b6eca6651baffb7bca89a612a52dd3f",
+      "fetched_at": "2026-11-15T16:44:15Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ac0d2af1f2794e63ad8e6f99702264329183d071492b0d633947e20abec80599",
+      "fetched_at": "2026-11-08T15:53:18Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "3db6b25a011c0870bf96429e929750676b6eca6651baffb7bca89a612a52dd3f",
+      "bulletins": [
+        "3db6b25a011c0870bf96429e929750676b6eca6651baffb7bca89a612a52dd3f",
+        "ac0d2af1f2794e63ad8e6f99702264329183d071492b0d633947e20abec80599"
+      ],
+      "cached": false,
+      "cost_usd": 0.001854,
+      "at": "2026-11-28T04:16:24.451745+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 1,
+          "said": "Mass Schedule Saturday Evenings 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac0d2af1",
+          "page": 1,
+          "said": "Mass Schedule Saturday Evenings 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 2,
+          "said": "Saturday, November 21, 2026 4:30 PM John B. Picard"
+        },
+        {
+          "source": "c1",
+          "bulletin": "3db6b25a011c0870bf96429e929750676b6eca6651baffb7bca89a612a52dd3f",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Evenings 4:30 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 1,
+          "said": "Sunday 6:30, 8:30, 10:30 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac0d2af1",
+          "page": 1,
+          "said": "Sunday 6:30, 8:30, 10:30 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 6:30 AM ... 8:30 AM ... 10:30AM ... 12:00 Noon"
+        },
+        {
+          "source": "c1",
+          "bulletin": "3db6b25a011c0870bf96429e929750676b6eca6651baffb7bca89a612a52dd3f",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “6:30, 8:30, 10:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 1,
+          "said": "Sunday 6:30, 8:30, 10:30 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac0d2af1",
+          "page": 1,
+          "said": "Sunday 6:30, 8:30, 10:30 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 6:30 AM ... 8:30 AM ... 10:30AM ... 12:00 Noon"
+        },
+        {
+          "source": "c1",
+          "bulletin": "3db6b25a011c0870bf96429e929750676b6eca6651baffb7bca89a612a52dd3f",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “6:30, 8:30, 10:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 1,
+          "said": "Sunday 6:30, 8:30, 10:30 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac0d2af1",
+          "page": 1,
+          "said": "Sunday 6:30, 8:30, 10:30 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 6:30 AM ... 8:30 AM ... 10:30AM ... 12:00 Noon"
+        },
+        {
+          "source": "c1",
+          "bulletin": "3db6b25a011c0870bf96429e929750676b6eca6651baffb7bca89a612a52dd3f",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “6:30, 8:30, 10:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 1,
+          "said": "Sunday 6:30, 8:30, 10:30 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac0d2af1",
+          "page": 1,
+          "said": "Sunday 6:30, 8:30, 10:30 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 6:30 AM ... 8:30 AM ... 10:30AM ... 12:00 Noon"
+        },
+        {
+          "source": "c1",
+          "bulletin": "3db6b25a011c0870bf96429e929750676b6eca6651baffb7bca89a612a52dd3f",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “12:00 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac0d2af1",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 2,
+          "said": "Monday, November 16, 2026 8:30 AM ... Friday, November 20, 2026 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "3db6b25a011c0870bf96429e929750676b6eca6651baffb7bca89a612a52dd3f",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Friday 8:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac0d2af1",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 2,
+          "said": "Monday, November 16, 2026 8:30 AM ... Friday, November 20, 2026 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "3db6b25a011c0870bf96429e929750676b6eca6651baffb7bca89a612a52dd3f",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Friday 8:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac0d2af1",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 2,
+          "said": "Monday, November 16, 2026 8:30 AM ... Friday, November 20, 2026 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "3db6b25a011c0870bf96429e929750676b6eca6651baffb7bca89a612a52dd3f",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Friday 8:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac0d2af1",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 2,
+          "said": "Monday, November 16, 2026 8:30 AM ... Friday, November 20, 2026 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "3db6b25a011c0870bf96429e929750676b6eca6651baffb7bca89a612a52dd3f",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Friday 8:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac0d2af1",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 2,
+          "said": "Monday, November 16, 2026 8:30 AM ... Friday, November 20, 2026 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "3db6b25a011c0870bf96429e929750676b6eca6651baffb7bca89a612a52dd3f",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Friday 8:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/",
+          "said": "Sunday Masses 6:30, 8:30, 10:30 and 12:00 Noon (11:00am Mass in Portuguese Downstairs)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3db6b25a",
+          "page": 2,
+          "said": "Sunday intentions list only 6:30 AM, 8:30 AM, 10:30 AM, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac0d2af1",
+          "page": 2,
+          "said": "Sunday intentions list only 6:30 AM, 8:30 AM, 10:30 AM, 12:00 Noon"
+        }
+      ],
+      "rationale": "R6/R29: only the homepage gives it; the worship page's Sunday list (6:30, 8:30, 10:30, 12:00) omits it, as do both bulletins' schedule box and both weeks' intentions. Leaning per precedent st-joseph-collingdale s11: two bulletin listings saying nothing outweigh one website line. Hard because a Portuguese community's Mass may keep its own intentions.",
+      "question": "Add the website's Sunday 11:00 AM Portuguese Mass in the lower church?",
+      "options": [
+        {
+          "label": "Sundays 11:00 AM, Portuguese",
+          "entry": {
+            "church_slug": "resurrection-of-our-lord-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Portuguese; lower church"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/confession/",
+          "said": "Individual confessions are offered every Saturday afternoon from 3:30 to 4:15 p.m. in our upper church"
+        },
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/",
+          "said": "Confessions Saturday from 3:30-4:15pm, Sunday Mornings at 10am or anytime by appointment"
+        },
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/cherry-services/worship/",
+          "said": "Sacrament of Reconciliation (Confession) Saturdays: 3:00pm to 4:00pm"
+        }
+      ],
+      "rationale": "R6, R28/C8: neither bulletin prints any confession time, and the website disagrees with itself. Leaning to 3:30-4:15, which the dedicated confession page and the homepage both give and which ends before the 4:30 PM Mass; the worship page alone says 3:00-4:00. A wrong time is worse than a missing one (POLICY), hence the leave-out option.",
+      "question": "Saturday confession: 3:30-4:15 PM (homepage, confession page) or 3:00-4:00 PM (worship page)?",
+      "options": [
+        {
+          "label": "Saturdays 3:30-4:15 PM",
+          "entry": {
+            "church_slug": "resurrection-of-our-lord-philadelphia",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:30",
+            "end_time": "16:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Upper church"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Saturdays 3:00-4:00 PM",
+          "entry": {
+            "church_slug": "resurrection-of-our-lord-philadelphia",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/confession/",
+          "said": "every Sunday morning at 10:00am in our upper church"
+        },
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/",
+          "said": "Sunday Mornings at 10am"
+        },
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/cherry-services/worship/",
+          "said": "Saturdays: 3:00pm to 4:00pm (no Sunday time)"
+        }
+      ],
+      "rationale": "R6: the confession page and homepage give it; the worship page omits it and no bulletin prints confession. No end time is given; it runs toward the 10:30 AM Mass, so none is recorded (POLICY, Times). Leaning to include as a website time the bulletin lacks, as st-basil-the-great-kimberton s19; asked because the site is internally inconsistent on confession.",
+      "question": "Add the website's Sunday 10:00 AM confession in the upper church?",
+      "options": [
+        {
+          "label": "Sundays from 10:00 AM",
+          "entry": {
+            "church_slug": "resurrection-of-our-lord-philadelphia",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Upper church; before the 10:30 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/cherry-services/worship/",
+          "said": "Exposition & Benediction of the Blessed Sacrament: Wednesdays 7:30am to 8:30 am (Benediction prior to the start of daily mass)"
+        }
+      ],
+      "rationale": "R6: only the worship page gives it; it fits the bulletin's Mon-Fri 8:30 AM Mass (latest p1), and the page's Mass times match both bulletins. Leaning to include per precedents st-basil-the-great-kimberton s19 and nativity-of-our-lord-warminster s16 (website-only Adoration with matching Mass times). Hard because this same page disagrees with the confession page on Saturday confession, and no bulletin mentions any Adoration.",
+      "question": "Add the website's Wednesday Exposition & Benediction, 7:30-8:30 AM, before the 8:30 daily Mass?",
+      "options": [
+        {
+          "label": "Wednesdays 7:30-8:30 AM",
+          "entry": {
+            "church_slug": "resurrection-of-our-lord-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": "08:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-of-our-lord-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/cherry-services/worship/",
+          "said": "Blessed Sacrament Chapel: open Monday to Friday, 9am to 5:00pm (located at wheelchair ramp entrance on Shelmire Avenue)"
+        },
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/",
+          "said": "Chapel Hours May until Sept. (M-F) 9am until 7pm Chapel Hours Oct. until April (M-F) 9am until 5pm"
+        }
+      ],
+      "rationale": "R38: the site gives only the chapel's opening hours, under 'Prayer and Devotion', and never calls them Adoration; a chapel being open for prayer does not establish an Adoration schedule. No bulletin mentions the chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-of-our-lord-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/cherry-services/worship/",
+          "said": "Blessed Sacrament Chapel: open Monday to Friday, 9am to 5:00pm (located at wheelchair ramp entrance on Shelmire Avenue)"
+        },
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/",
+          "said": "Chapel Hours May until Sept. (M-F) 9am until 7pm Chapel Hours Oct. until April (M-F) 9am until 5pm"
+        }
+      ],
+      "rationale": "R38: the site gives only the chapel's opening hours, under 'Prayer and Devotion', and never calls them Adoration; a chapel being open for prayer does not establish an Adoration schedule. No bulletin mentions the chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-of-our-lord-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/cherry-services/worship/",
+          "said": "Blessed Sacrament Chapel: open Monday to Friday, 9am to 5:00pm (located at wheelchair ramp entrance on Shelmire Avenue)"
+        },
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/",
+          "said": "Chapel Hours May until Sept. (M-F) 9am until 7pm Chapel Hours Oct. until April (M-F) 9am until 5pm"
+        }
+      ],
+      "rationale": "R38: the site gives only the chapel's opening hours, under 'Prayer and Devotion', and never calls them Adoration; a chapel being open for prayer does not establish an Adoration schedule. No bulletin mentions the chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-of-our-lord-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/cherry-services/worship/",
+          "said": "Blessed Sacrament Chapel: open Monday to Friday, 9am to 5:00pm (located at wheelchair ramp entrance on Shelmire Avenue)"
+        },
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/",
+          "said": "Chapel Hours May until Sept. (M-F) 9am until 7pm Chapel Hours Oct. until April (M-F) 9am until 5pm"
+        }
+      ],
+      "rationale": "R38: the site gives only the chapel's opening hours, under 'Prayer and Devotion', and never calls them Adoration; a chapel being open for prayer does not establish an Adoration schedule. No bulletin mentions the chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-of-our-lord-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/cherry-services/worship/",
+          "said": "Blessed Sacrament Chapel: open Monday to Friday, 9am to 5:00pm (located at wheelchair ramp entrance on Shelmire Avenue)"
+        },
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/",
+          "said": "Chapel Hours May until Sept. (M-F) 9am until 7pm Chapel Hours Oct. until April (M-F) 9am until 5pm"
+        }
+      ],
+      "rationale": "R38: the site gives only the chapel's opening hours, under 'Prayer and Devotion', and never calls them Adoration; a chapel being open for prayer does not establish an Adoration schedule. No bulletin mentions the chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://resurrectphila.org/confession/",
+          "said": "Appointments may be made with any of the parish priests to receive the sacrament at times other than those regularly scheduled."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "783841b60f011a54a152426c15fabafd",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T04:16:24.451745+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "3db6b25a011c0870bf96429e929750676b6eca6651baffb7bca89a612a52dd3f",
+        "fetched_at": "2026-11-15T16:44:15Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "ac0d2af1f2794e63ad8e6f99702264329183d071492b0d633947e20abec80599",
+        "fetched_at": "2026-11-08T15:53:18Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.001854,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "resurrection-of-our-lord-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Evenings 4:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Evenings 4:30 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "resurrection-of-our-lord-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "6:30, 8:30, 10:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "6:30 AM, 8:30 AM, 10:30 AM, 12:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "resurrection-of-our-lord-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "6:30, 8:30, 10:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "6:30 AM, 8:30 AM, 10:30 AM, 12:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "resurrection-of-our-lord-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "6:30, 8:30, 10:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "6:30 AM, 8:30 AM, 10:30 AM, 12:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "resurrection-of-our-lord-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "12:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "6:30 AM, 8:30 AM, 10:30 AM, 12:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "resurrection-of-our-lord-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Friday 8:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Friday 8:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "resurrection-of-our-lord-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Friday 8:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Friday 8:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "resurrection-of-our-lord-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Friday 8:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Friday 8:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "resurrection-of-our-lord-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Friday 8:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Friday 8:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "resurrection-of-our-lord-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Friday 8:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Friday 8:30 AM"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "297a108b2656aa3adf4d4ff3fae037306508f0e00e63b3af9bf07e11967a8e30",
+    "differences": []
+  }
+}
