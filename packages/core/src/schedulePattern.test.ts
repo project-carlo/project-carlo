@@ -1,12 +1,15 @@
 import { describe, expect, it } from "vitest";
 import type { WeekOfMonth } from "./types";
 import {
+  comparePatterns,
   dateMatchesPattern,
   dateMatchesWeeks,
   dateInSeason,
+  describePatternBeyondLabel,
   describeSchedulePattern,
   patternKey,
   type SchedulePattern,
+  weekdayLabel,
 } from "./schedulePattern";
 
 /** The qualifiers as the snapshot's flat columns, for writing cases briefly. */
@@ -300,5 +303,108 @@ describe("describeSchedulePattern", () => {
         "Friday",
       ),
     ).toBe("First Friday of the month, October through June");
+  });
+});
+
+describe("weekdayLabel", () => {
+  it("is the weekday alone for a slot that keeps every week", () => {
+    expect(weekdayLabel(pattern(), "sunday")).toBe("Sunday");
+    expect(
+      weekdayLabel(pattern({ season_start_month: 10, season_end_month: 6 }), "Tuesday"),
+    ).toBe("Tuesday");
+  });
+
+  it("puts the week of the month before the weekday", () => {
+    expect(weekdayLabel(pattern({ weeks_of_month: ["fourth"] }), "Sunday")).toBe(
+      "4th Sunday",
+    );
+    expect(weekdayLabel(pattern({ weeks_of_month: ["last"] }), "Sunday")).toBe(
+      "Last Sunday",
+    );
+  });
+
+  it("lists several weeks in order, with the weekday plural", () => {
+    expect(
+      weekdayLabel(pattern({ weeks_of_month: ["third", "first"] }), "Friday"),
+    ).toBe("1st & 3rd Fridays");
+    expect(
+      weekdayLabel(
+        pattern({ weeks_of_month: ["first", "third", "last"] }),
+        "Friday",
+      ),
+    ).toBe("1st, 3rd & last Fridays");
+  });
+
+  it("leaves weeks skipped to the note", () => {
+    expect(
+      weekdayLabel(pattern({ weeks_of_month: ["last"], exclude_weeks: true }), "Sunday"),
+    ).toBe("Sunday");
+  });
+});
+
+describe("describePatternBeyondLabel", () => {
+  it("says nothing more when the label names the weeks", () => {
+    expect(
+      describePatternBeyondLabel(pattern({ weeks_of_month: ["fourth"] }), "Sunday"),
+    ).toBeNull();
+  });
+
+  it("keeps the season, and the weeks skipped", () => {
+    expect(
+      describePatternBeyondLabel(
+        pattern({
+          weeks_of_month: ["first"],
+          season_start_month: 10,
+          season_end_month: 6,
+        }),
+        "Friday",
+      ),
+    ).toBe("October through June");
+    expect(
+      describePatternBeyondLabel(
+        pattern({ weeks_of_month: ["last"], exclude_weeks: true }),
+        "Sunday",
+      ),
+    ).toBe("Every Sunday except the last");
+  });
+});
+
+describe("comparePatterns", () => {
+  function sorted(patterns: SchedulePattern[]): (string | null)[] {
+    return [...patterns]
+      .sort(comparePatterns)
+      .map((p) => describeSchedulePattern(p, "Sunday"));
+  }
+
+  it("puts the schedules that run most weeks first", () => {
+    expect(
+      sorted([
+        pattern({ weeks_of_month: ["fourth"] }),
+        pattern({ weeks_of_month: ["last"], exclude_weeks: true }),
+        pattern({ weeks_of_month: ["first", "third"] }),
+        pattern({ season_start_month: 10, season_end_month: 6 }),
+      ]),
+    ).toEqual([
+      "October through June",
+      "Every Sunday except the last",
+      "First and third Sundays of the month",
+      "Fourth Sunday of the month",
+    ]);
+  });
+
+  it("orders seasons by the month they begin, not as text", () => {
+    expect(
+      sorted([
+        pattern({ season_start_month: 10, season_end_month: 1 }),
+        pattern({ season_start_month: 2, season_end_month: 5 }),
+        pattern({ season_start_month: 6, season_start_day: 4, season_end_month: 9 }),
+        pattern({ season_start_month: 6, season_end_month: 9 }),
+      ]),
+    ).toEqual([
+      "February through May",
+      "June through September",
+      "June 4 through September",
+      "October through January",
+    ]);
   });
 });

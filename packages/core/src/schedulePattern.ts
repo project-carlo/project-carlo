@@ -16,8 +16,10 @@ import type { Season, WeekOfMonth } from "./types";
  * parish never printed.
  *
  * The descriptions mirror `describe_schedule_pattern` in
- * `src/pdf_extract/schedule/qualifiers.py`. Pure functions only, so the SPA
- * and the prerenderer read a schedule the same way.
+ * `src/pdf_extract/schedule/qualifiers.py`. The short row labels
+ * (`weekdayLabel`, `describePatternBeyondLabel`) are the church page's alone
+ * and have no Python twin. Pure functions only, so the SPA and the prerenderer
+ * read a schedule the same way.
  */
 
 export const WEEKS_OF_MONTH: readonly WeekOfMonth[] = [
@@ -152,8 +154,44 @@ export function patternKey(pattern: SchedulePattern): string {
   ].join(":");
 }
 
-function titleCaseWeek(week: WeekOfMonth): string {
-  return week.charAt(0).toUpperCase() + week.slice(1);
+/**
+ * Orders the schedules slots on one weekday keep, most often first: every week
+ * (for part of the year, or between dates), then every week but some, then by
+ * the first week of the month kept ("1st Sunday" before "4th Sunday"), then by
+ * when in the year the season or the dates begin.
+ */
+export function comparePatterns(a: SchedulePattern, b: SchedulePattern): number {
+  return (
+    frequencyRank(a) - frequencyRank(b) ||
+    seasonPosition(a.season, "start") - seasonPosition(b.season, "start") ||
+    seasonPosition(a.season, "end") - seasonPosition(b.season, "end") ||
+    (a.valid_from ?? "").localeCompare(b.valid_from ?? "") ||
+    (a.valid_until ?? "").localeCompare(b.valid_until ?? "") ||
+    patternKey(a).localeCompare(patternKey(b))
+  );
+}
+
+/** 0 for every week, 1 for every week but some, then 2 + the first week kept. */
+function frequencyRank(pattern: SchedulePattern): number {
+  if (pattern.weeks_of_month.length === 0) return 0;
+  if (pattern.exclude_weeks) return 1;
+  return 2 + Math.min(
+    ...pattern.weeks_of_month.map((week) => WEEKS_OF_MONTH.indexOf(week)),
+  );
+}
+
+/** A season boundary as month * 100 + day; 0 for all year. */
+function seasonPosition(season: Season | null, edge: "start" | "end"): number {
+  if (!season) return 0;
+  return edge === "start"
+    ? season.start_month * 100 + (season.start_day ?? 1)
+    : season.end_month * 100 +
+        (season.end_day ?? DAYS_IN_MONTH[season.end_month - 1]);
+}
+
+/** "sunday" or "SUNDAY" as "Sunday"; "first" as "First". */
+function capitalize(word: string): string {
+  return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
 }
 
 function joinWithAnd(parts: string[]): string {
@@ -178,17 +216,15 @@ export function describeWeeksOfMonth(
   const ordered = WEEKS_OF_MONTH.filter((week) => weeks.includes(week));
   const day = dayOfWeek?.trim();
   if (exclude) {
-    const every = day
-      ? day.charAt(0).toUpperCase() + day.slice(1).toLowerCase()
-      : "week";
+    const every = day ? capitalize(day) : "week";
     return `Every ${every} except the ${joinWithAnd(ordered)}`;
   }
   if (!day) {
-    return `${joinWithAnd(ordered.map(titleCaseWeek))} week of the month`;
+    return `${joinWithAnd(ordered.map(capitalize))} week of the month`;
   }
-  const dayLabel = day.charAt(0).toUpperCase() + day.slice(1).toLowerCase();
+  const dayLabel = capitalize(day);
   const ordinals = ordered.map((week, index) =>
-    index === 0 ? titleCaseWeek(week) : week,
+    index === 0 ? capitalize(week) : week,
   );
   const plural = ordered.length > 1 ? "s" : "";
   return `${joinWithAnd(ordinals)} ${dayLabel}${plural} of the month`;
@@ -226,12 +262,65 @@ export function describeSchedulePattern(
   pattern: SchedulePattern,
   dayOfWeek: string | null,
 ): string | null {
+  return describePatternParts(pattern, dayOfWeek, true);
+}
+
+const SHORT_WEEKS: Record<WeekOfMonth, string> = {
+  first: "1st",
+  second: "2nd",
+  third: "3rd",
+  fourth: "4th",
+  fifth: "5th",
+  last: "last",
+};
+
+/**
+ * The weekday a slot falls on, narrowed to the weeks of the month it keeps,
+ * short enough to head a schedule row: "4th Sunday", "1st & 3rd Fridays",
+ * "Last Sunday". Just the weekday when the slot keeps every week, or every
+ * week but some, which its note words instead.
+ */
+export function weekdayLabel(
+  pattern: SchedulePattern,
+  dayOfWeek: string,
+): string {
+  const day = capitalize(dayOfWeek);
+  if (pattern.weeks_of_month.length === 0 || pattern.exclude_weeks) return day;
+  const ordered = WEEKS_OF_MONTH.filter((week) =>
+    pattern.weeks_of_month.includes(week),
+  ).map((week) => SHORT_WEEKS[week]);
+  const weeks =
+    ordered.length === 1
+      ? ordered[0]
+      : `${ordered.slice(0, -1).join(", ")} & ${ordered[ordered.length - 1]}`;
+  const plural = ordered.length > 1 ? "s" : "";
+  return `${capitalize(weeks)} ${day}${plural}`;
+}
+
+/**
+ * What `weekdayLabel` leaves for a row's note to say: weeks skipped, the
+ * season, the dates the slot runs between. Null when the label says it all.
+ */
+export function describePatternBeyondLabel(
+  pattern: SchedulePattern,
+  dayOfWeek: string,
+): string | null {
+  return describePatternParts(pattern, dayOfWeek, pattern.exclude_weeks ?? false);
+}
+
+function describePatternParts(
+  pattern: SchedulePattern,
+  dayOfWeek: string | null,
+  withWeeks: boolean,
+): string | null {
   const parts = [
-    describeWeeksOfMonth(
-      pattern.weeks_of_month,
-      dayOfWeek,
-      pattern.exclude_weeks,
-    ),
+    withWeeks
+      ? describeWeeksOfMonth(
+          pattern.weeks_of_month,
+          dayOfWeek,
+          pattern.exclude_weeks,
+        )
+      : null,
     describeSeason(pattern.season),
     pattern.valid_from ? `From ${formatValidityDate(pattern.valid_from)}` : null,
     pattern.valid_until ? `Through ${formatValidityDate(pattern.valid_until)}` : null,
