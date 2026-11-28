@@ -1,0 +1,1251 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-consolation-philadelphia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:42:51Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T03:32:07Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Tacony). Both November issues print the same schedule box: Sat 8 AM and 5 PM, Sun 8, 10:15, 11:30 (Spanish) and 1:30 PM (Latin Tridentine), Wed 7 PM Spanish, Saturday confession 4-4:45 PM (website agrees). Open: the weekday 8 AM Masses (Mon, Tue, Thu, Fri) are 'In Convent Chapel', whose address no source gives; leaning to place them at the church per ss-philip-and-james-exton s15. No Adoration is printed.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "908cc63bebd10d25e98a0691e291180faba9b75910334fed464fec9496e47488",
+      "fetched_at": "2026-11-15T16:42:51Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "799ea1d14b89dbe341c5ced9684a1a24e5724cccb229db9c7ac90c68e3e5c843",
+      "fetched_at": "2026-11-08T15:53:01Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "908cc63bebd10d25e98a0691e291180faba9b75910334fed464fec9496e47488",
+      "bulletins": [
+        "908cc63bebd10d25e98a0691e291180faba9b75910334fed464fec9496e47488",
+        "799ea1d14b89dbe341c5ced9684a1a24e5724cccb229db9c7ac90c68e3e5c843"
+      ],
+      "cached": false,
+      "cost_usd": 0.002939,
+      "at": "2026-11-28T03:39:05.162825+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 1,
+          "said": "Mass Schedule: SATURDAY 8 am Vigil Mass 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 1,
+          "said": "Mass Schedule: SATURDAY 8 am Vigil Mass 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 3,
+          "said": "SATURDAY, NOVEMBER 14 ... 5:pm - Thomas Gerard"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 3,
+          "said": "SATURDAY, NOVEMBER 14 ... 5:pm - Thomas Gerard"
+        },
+        {
+          "source": "c1",
+          "bulletin": "908cc63bebd10d25e98a0691e291180faba9b75910334fed464fec9496e47488",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Vigil Mass   5pm”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues read; both weeks' intentions list a Saturday 5 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 1,
+          "said": "Mass Schedule: SATURDAY 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 1,
+          "said": "Mass Schedule: SATURDAY 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 3,
+          "said": "SATURDAY, NOVEMBER 21 8::am - For the forgotten Souls in Purgatory"
+        },
+        {
+          "source": "c1",
+          "bulletin": "908cc63bebd10d25e98a0691e291180faba9b75910334fed464fec9496e47488",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “SATURDAY 8 am”"
+        }
+      ],
+      "rationale": "R1: the p1 box prints Saturday 8 am under its own SATURDAY heading, apart from the 'Weekdays- & Holiday 8am In Convent Chapel' line, so it is placed at the church with no chapel note; both weeks' intentions list it and the Miraculous Medal devotions follow it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 1,
+          "said": "SUNDAYS 8 am 10:15 am,"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 1,
+          "said": "SUNDAYS 8 am 10:15 am,"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 3,
+          "said": "SUNDAY, NOV. 22 8:am - Marie Gutekunst ... 10:15am - Matgo Huff"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 3,
+          "said": "SUNDAY, NOV. 22 8:am - Marie Gutekunst ... 10:15am - Matgo Huff"
+        },
+        {
+          "source": "c1",
+          "bulletin": "908cc63bebd10d25e98a0691e291180faba9b75910334fed464fec9496e47488",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “SUNDAYS        8 am 10:15 am,”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 1,
+          "said": "SUNDAYS 8 am 10:15 am,"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 1,
+          "said": "SUNDAYS 8 am 10:15 am,"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 3,
+          "said": "SUNDAY, NOV. 22 8:am - Marie Gutekunst ... 10:15am - Matgo Huff"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 3,
+          "said": "SUNDAY, NOV. 22 8:am - Marie Gutekunst ... 10:15am - Matgo Huff"
+        },
+        {
+          "source": "c1",
+          "bulletin": "908cc63bebd10d25e98a0691e291180faba9b75910334fed464fec9496e47488",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “SUNDAYS        8 am 10:15 am,”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 1,
+          "said": "Spanish Mass: 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 1,
+          "said": "Spanish Mass: 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 3,
+          "said": "11:30am - Por el descanso de Juan E. Torres"
+        },
+        {
+          "source": "c1",
+          "bulletin": "908cc63bebd10d25e98a0691e291180faba9b75910334fed464fec9496e47488",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Spanish Mass: 11:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin (Tridentine) Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 1,
+          "said": "Latin Tridentine Mass: 1:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 1,
+          "said": "Latin Tridentine Mass: 1:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 3,
+          "said": "1:30pm - For the forgotten Souls in Purgatory"
+        },
+        {
+          "source": "c1",
+          "bulletin": "908cc63bebd10d25e98a0691e291180faba9b75910334fed464fec9496e47488",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Latin Tridentine Mass: 1:30 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 1,
+          "said": "Wednesday - 8am - No Mass 6:30pm Rosary 7pm - Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 1,
+          "said": "Wednesday - 8am - No Mass 6:30pm Rosary 7pm - Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 3,
+          "said": "WEDNESDAY, NOVEMBER 18 ... 7:00pm - Por la familia Holguin Pena"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 3,
+          "said": "WEDNESDAY, NOVEMBER 11 ... 7:00pm - Para todas las Almas en Purgatorio"
+        },
+        {
+          "source": "website",
+          "url": "https://olctacony.com/",
+          "said": "Please join us each Wednesday evening at 6:30pm in the church to pray the Holy Rosary"
+        },
+        {
+          "source": "c1",
+          "bulletin": "908cc63bebd10d25e98a0691e291180faba9b75910334fed464fec9496e47488",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “7pm - Spanish”"
+        }
+      ],
+      "rationale": "R1: the p1 box gives Wednesday's 7 PM Spanish Mass on its own line, after the 6:30 Rosary that the homepage places in the church; both weeks' intentions list it. It is not under the Convent Chapel line, so no chapel note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 1,
+          "said": "CONFESSIONS Saturday: 4 pm - 4:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 1,
+          "said": "CONFESSIONS Saturday: 4 pm - 4:45 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://olctacony.com/sacraments/sacrament-of-penance-reconciliation/",
+          "said": "Confessions are offered at Our Lady of Consolation Parish Every Saturday between 4:00 pm and 4:45 pm."
+        },
+        {
+          "source": "c1",
+          "bulletin": "908cc63bebd10d25e98a0691e291180faba9b75910334fed464fec9496e47488",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday: 4 pm - 4:45 pm”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both issues; the website's confession page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 1,
+          "said": "Weekdays- & Holiday 8am In Convent Chapel / Wednesday - 8am - No Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 1,
+          "said": "Weekdays- & Holiday 8am In Convent Chapel / Wednesday - 8am - No Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 3,
+          "said": "MONDY, NOVEMBER 16 8:am - Jeanne Murray ... TUESDAY, NOVEMBER 17 8:am ... THURSDAY, NOVEMBER 19 8:am ... FRIDAY, NOVEMBER 20 8:am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 2,
+          "said": "OLC CONVENT CAMPAIGN: ... the 2nd floor of the convent to create more rooms for our PREP students ... a Tree of Life in the Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "908cc63bebd10d25e98a0691e291180faba9b75910334fed464fec9496e47488",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Weekdays- & Holiday 8am In Convent Chapel\nWednesday - 8am - No Mass”"
+        }
+      ],
+      "rationale": "R32: the p1 schedule box puts weekday Masses 'In Convent Chapel' and no page gives the convent's address; the church list has only the church at 7051 Tulip St. The convent is the parish's own building (PREP rooms, the shrine in front of it, p2), and both weeks' intentions list 8 AM Mon, Tue, Thu and Fri (Wednesday has 'No Mass'). The website names no convent address. Leaning per precedent ss-philip-and-james-exton s15 (and sacred-heart-havertown s13, st-john-the-baptist-ottsville s16): a chapel in the parish's own schedule box with nothing placing it elsewhere goes at the one church. Unlike st-thomas-aquinas-croydon s15, no separate address is printed.",
+      "question": "Is the Convent Chapel, where the weekday 8 AM Masses are said, on the church's grounds, so they go at Our Lady of Consolation Church?",
+      "options": [
+        {
+          "label": "Mon, Tue, Thu, Fri 8:00 AM at the church, in the Convent Chapel",
+          "entry": {
+            "church_slug": "our-lady-of-consolation-church-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "convent"
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 1,
+          "said": "Weekdays- & Holiday 8am In Convent Chapel / Wednesday - 8am - No Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 1,
+          "said": "Weekdays- & Holiday 8am In Convent Chapel / Wednesday - 8am - No Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 3,
+          "said": "MONDY, NOVEMBER 16 8:am - Jeanne Murray ... TUESDAY, NOVEMBER 17 8:am ... THURSDAY, NOVEMBER 19 8:am ... FRIDAY, NOVEMBER 20 8:am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 2,
+          "said": "OLC CONVENT CAMPAIGN: ... the 2nd floor of the convent to create more rooms for our PREP students ... a Tree of Life in the Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "908cc63bebd10d25e98a0691e291180faba9b75910334fed464fec9496e47488",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Weekdays- & Holiday 8am In Convent Chapel\nWednesday - 8am - No Mass”"
+        }
+      ],
+      "rationale": "R32: the p1 schedule box puts weekday Masses 'In Convent Chapel' and no page gives the convent's address; the church list has only the church at 7051 Tulip St. The convent is the parish's own building (PREP rooms, the shrine in front of it, p2), and both weeks' intentions list 8 AM Mon, Tue, Thu and Fri (Wednesday has 'No Mass'). The website names no convent address. Leaning per precedent ss-philip-and-james-exton s15 (and sacred-heart-havertown s13, st-john-the-baptist-ottsville s16): a chapel in the parish's own schedule box with nothing placing it elsewhere goes at the one church. Unlike st-thomas-aquinas-croydon s15, no separate address is printed.",
+      "question": "Is the Convent Chapel, where the weekday 8 AM Masses are said, on the church's grounds, so they go at Our Lady of Consolation Church?",
+      "options": [
+        {
+          "label": "Mon, Tue, Thu, Fri 8:00 AM at the church, in the Convent Chapel",
+          "entry": {
+            "church_slug": "our-lady-of-consolation-church-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "convent"
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 1,
+          "said": "Weekdays- & Holiday 8am In Convent Chapel / Wednesday - 8am - No Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 1,
+          "said": "Weekdays- & Holiday 8am In Convent Chapel / Wednesday - 8am - No Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 3,
+          "said": "MONDY, NOVEMBER 16 8:am - Jeanne Murray ... TUESDAY, NOVEMBER 17 8:am ... THURSDAY, NOVEMBER 19 8:am ... FRIDAY, NOVEMBER 20 8:am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 2,
+          "said": "OLC CONVENT CAMPAIGN: ... the 2nd floor of the convent to create more rooms for our PREP students ... a Tree of Life in the Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "908cc63bebd10d25e98a0691e291180faba9b75910334fed464fec9496e47488",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Weekdays- & Holiday 8am In Convent Chapel\nWednesday - 8am - No Mass”"
+        }
+      ],
+      "rationale": "R32: the p1 schedule box puts weekday Masses 'In Convent Chapel' and no page gives the convent's address; the church list has only the church at 7051 Tulip St. The convent is the parish's own building (PREP rooms, the shrine in front of it, p2), and both weeks' intentions list 8 AM Mon, Tue, Thu and Fri (Wednesday has 'No Mass'). The website names no convent address. Leaning per precedent ss-philip-and-james-exton s15 (and sacred-heart-havertown s13, st-john-the-baptist-ottsville s16): a chapel in the parish's own schedule box with nothing placing it elsewhere goes at the one church. Unlike st-thomas-aquinas-croydon s15, no separate address is printed.",
+      "question": "Is the Convent Chapel, where the weekday 8 AM Masses are said, on the church's grounds, so they go at Our Lady of Consolation Church?",
+      "options": [
+        {
+          "label": "Mon, Tue, Thu, Fri 8:00 AM at the church, in the Convent Chapel",
+          "entry": {
+            "church_slug": "our-lady-of-consolation-church-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "convent"
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 1,
+          "said": "Weekdays- & Holiday 8am In Convent Chapel / Wednesday - 8am - No Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 1,
+          "said": "Weekdays- & Holiday 8am In Convent Chapel / Wednesday - 8am - No Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 3,
+          "said": "MONDY, NOVEMBER 16 8:am - Jeanne Murray ... TUESDAY, NOVEMBER 17 8:am ... THURSDAY, NOVEMBER 19 8:am ... FRIDAY, NOVEMBER 20 8:am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 2,
+          "said": "OLC CONVENT CAMPAIGN: ... the 2nd floor of the convent to create more rooms for our PREP students ... a Tree of Life in the Chapel"
+        },
+        {
+          "source": "c1",
+          "bulletin": "908cc63bebd10d25e98a0691e291180faba9b75910334fed464fec9496e47488",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Weekdays- & Holiday 8am In Convent Chapel\nWednesday - 8am - No Mass”"
+        }
+      ],
+      "rationale": "R32: the p1 schedule box puts weekday Masses 'In Convent Chapel' and no page gives the convent's address; the church list has only the church at 7051 Tulip St. The convent is the parish's own building (PREP rooms, the shrine in front of it, p2), and both weeks' intentions list 8 AM Mon, Tue, Thu and Fri (Wednesday has 'No Mass'). The website names no convent address. Leaning per precedent ss-philip-and-james-exton s15 (and sacred-heart-havertown s13, st-john-the-baptist-ottsville s16): a chapel in the parish's own schedule box with nothing placing it elsewhere goes at the one church. Unlike st-thomas-aquinas-croydon s15, no separate address is printed.",
+      "question": "Is the Convent Chapel, where the weekday 8 AM Masses are said, on the church's grounds, so they go at Our Lady of Consolation Church?",
+      "options": [
+        {
+          "label": "Mon, Tue, Thu, Fri 8:00 AM at the church, in the Convent Chapel",
+          "entry": {
+            "church_slug": "our-lady-of-consolation-church-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "convent"
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-consolation-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 1,
+          "said": "Wednesday - 8am - No Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 1,
+          "said": "Wednesday - 8am - No Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 3,
+          "said": "WEDNESDAY, NOVEMBER 18 8:00am - Pro Popolo NO Mass"
+        }
+      ],
+      "rationale": "R24: the box and both weeks' intentions say there is no 8 AM Mass on Wednesday (the Pro Populo intention is listed as 'NO Mass'); recorded so a reviewer sees it was considered.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 1,
+          "said": "6:30pm Rosary; Miraculous Medal Devotions: - Novena Prayers -- Saturday after 8 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "799ea1d1",
+          "page": 1,
+          "said": "6:30pm Rosary; Miraculous Medal Devotions: - Novena Prayers -- Saturday after 8 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "908cc63b",
+          "page": 5,
+          "said": "ORACION EN ESPANOL El primer lunes de cada mes en el convento con Deacono Felipe a la 7 de la tarde."
+        }
+      ],
+      "rationale": "R24: the Wednesday Rosary, the Miraculous Medal novena and the first-Monday Spanish prayer group are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "8f33d7189115ae27d14aa773286d7e6a",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T03:39:05.162825+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "908cc63bebd10d25e98a0691e291180faba9b75910334fed464fec9496e47488",
+        "fetched_at": "2026-11-15T16:42:51Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "799ea1d14b89dbe341c5ced9684a1a24e5724cccb229db9c7ac90c68e3e5c843",
+        "fetched_at": "2026-11-08T15:53:01Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002939,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": true,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "our-lady-of-consolation-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "SATURDAY 8 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "SATURDAY, NOVEMBER 7\n8::am - For All Souls"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "our-lady-of-consolation-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Vigil Mass   5pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "SATURDAY, NOVEMBER 7\n5:pm - Rev. Anthony Maio"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "our-lady-of-consolation-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "SUNDAYS        8 am 10:15 am,"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "SUNDAY, NOVEMBER 8\n8am - Joseph Iannacone"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "our-lady-of-consolation-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "SUNDAYS        8 am 10:15 am,"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "1015am - Vince & Nellie Salandra"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "our-lady-of-consolation-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spanish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Spanish Mass: 11:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Spanish Mass: 11:30am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "our-lady-of-consolation-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "13:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Latin Tridentine",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Latin Tridentine Mass: 1:30 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Latin Tridentine Mass: 1:30 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "our-lady-of-consolation-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Convent Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays- & Holiday 8am In Convent Chapel\nWednesday - 8am - No Mass"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays- & Holiday8am In Convent Chapel\nWednesday - 8am - NoMass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "our-lady-of-consolation-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Convent Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays- & Holiday 8am In Convent Chapel\nWednesday - 8am - No Mass"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays- & Holiday8am In Convent Chapel\nWednesday - 8am - NoMass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "our-lady-of-consolation-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Convent Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays- & Holiday 8am In Convent Chapel\nWednesday - 8am - No Mass"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays- & Holiday8am In Convent Chapel\nWednesday - 8am - NoMass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "our-lady-of-consolation-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Convent Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays- & Holiday 8am In Convent Chapel\nWednesday - 8am - No Mass"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays- & Holiday8am In Convent Chapel\nWednesday - 8am - NoMass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "our-lady-of-consolation-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spanish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "7pm - Spanish"
+          },
+          {
+            "bulletin": "B2",
+            "page": 3,
+            "quote": "7:00pm - Para todas las Almas en Purgatorio"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "our-lady-of-consolation-church-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": "16:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday: 4 pm - 4:45 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday: 4 pm - 4:45 pm"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "f6f3a41adf019f16d4c043699e4bbe21240f6e32624cb9dba5e8549a69066b2a",
+    "differences": []
+  }
+}
