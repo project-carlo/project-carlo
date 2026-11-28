@@ -1,0 +1,1051 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-thomas-aquinas-croydon",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:47:03Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T02:08:28Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One listed church (601 Bristol Pike). Weekend Masses Sat 4:30, Sun 9 and 11, and Saturday 3:30-4:00 PM confession agree in both November issues and on the current website. The Mon-Fri 8:30 AM Masses are in a chapel at 126 Walnut Ave. that the church list lacks, so they are excluded and the chapel is listed under church_list_issues. Open: Dec 8 holy-day Masses (12 and 7 PM leaning include; 8:30 AM leaning out for its place) and website Christmas Masses.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "04958ef9fa3054d08a64305bf3002732f3fd2df750fb007ce9843094eba8a63f",
+      "fetched_at": "2026-11-15T16:47:03Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "790ffb0904556b6b236e4d014d4ad48020fca630f544e88d2201fc1ebb9294eb",
+      "fetched_at": "2026-11-08T15:55:28Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "04958ef9fa3054d08a64305bf3002732f3fd2df750fb007ce9843094eba8a63f",
+      "bulletins": [
+        "04958ef9fa3054d08a64305bf3002732f3fd2df750fb007ce9843094eba8a63f",
+        "790ffb0904556b6b236e4d014d4ad48020fca630f544e88d2201fc1ebb9294eb"
+      ],
+      "cached": false,
+      "cost_usd": 0.001105,
+      "at": "2026-11-28T02:16:20.494268+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-church-croydon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday Vigil: 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "790ffb09",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday Vigil: 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 2,
+          "said": "Saturday November 21, 2026 4:30 PM Joan Rue req by Jensen Family"
+        },
+        {
+          "source": "c1",
+          "bulletin": "04958ef9fa3054d08a64305bf3002732f3fd2df750fb007ce9843094eba8a63f",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil: 4:30 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues and in both weeks' intentions; the website gives Saturday 4:30 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-church-croydon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 1,
+          "said": "Sundays: 9:00 AM and 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "790ffb09",
+          "page": 1,
+          "said": "Sundays: 9:00 AM and 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 2,
+          "said": "Sunday November 22, 2026 9:00 AM Philip Rothsching ... 11:00 AM Robert Sobusiak"
+        },
+        {
+          "source": "c1",
+          "bulletin": "04958ef9fa3054d08a64305bf3002732f3fd2df750fb007ce9843094eba8a63f",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sundays: 9:00 AM and 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues and in both weeks' intentions; the website matches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-church-croydon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 1,
+          "said": "Sundays: 9:00 AM and 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "790ffb09",
+          "page": 1,
+          "said": "Sundays: 9:00 AM and 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 2,
+          "said": "Sunday November 22, 2026 9:00 AM Philip Rothsching ... 11:00 AM Robert Sobusiak"
+        },
+        {
+          "source": "c1",
+          "bulletin": "04958ef9fa3054d08a64305bf3002732f3fd2df750fb007ce9843094eba8a63f",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sundays: 9:00 AM and 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues and in both weeks' intentions; the website matches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-church-croydon",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE Saturdays: 3:30 PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "790ffb09",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE Saturdays: 3:30 PM or by appointment"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staq.org/mass-and-confession-times",
+          "said": "Confession Times Saturday : 3:30 PM to 4:00 PM or by appointment",
+          "schedule_check": {
+            "checked_at": "2026-11-28T02:14:28Z",
+            "current_because": "Checked 2026-11-28: the site lists 2026 events (Nov 7 Cash Bash, Dec 27 2026 50/50 drawing) and its Mass times match both November bulletins exactly.",
+            "bulletin": "04958ef9",
+            "fits_because": "The bulletin box prints the same Saturday 3:30 PM start with no end; the site supplies only the 4:00 PM end, before the 4:30 PM Vigil (R6: a time the bulletin lacks)."
+          }
+        }
+      ],
+      "rationale": "R1, R6: both issues' box prints Saturdays 3:30 PM; the current website, which matches the bulletin's Masses, gives the end 4:00 PM. One listed church; nothing places it in the chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 1,
+          "said": "Saturdays: 3:30 PM or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-church-croydon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel at 126 Walnut Ave."
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 1,
+          "said": "Monday - Friday: 8:30 AM (Chapel at 126 Walnut Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "790ffb09",
+          "page": 1,
+          "said": "Monday - Friday: 8:30 AM (Chapel at 126 Walnut Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 2,
+          "said": "Monday November 16, 2026 8:30 AM ... Friday November 20, 2026 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staq.org/",
+          "said": "Mon Fri 8:30 AM English In the Chapel"
+        }
+      ],
+      "rationale": "R23: the weekday Masses are in a chapel with its own address, 126 Walnut Ave., which data/churches.csv lacks (it lists only the church at 601 Bristol Pike). No bulletin or website page says the chapel is on the church's grounds, so POLICY (Churches and chapels) leaves it out while its location is unclear; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-church-croydon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel at 126 Walnut Ave."
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 1,
+          "said": "Monday - Friday: 8:30 AM (Chapel at 126 Walnut Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "790ffb09",
+          "page": 1,
+          "said": "Monday - Friday: 8:30 AM (Chapel at 126 Walnut Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 2,
+          "said": "Monday November 16, 2026 8:30 AM ... Friday November 20, 2026 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staq.org/",
+          "said": "Mon Fri 8:30 AM English In the Chapel"
+        }
+      ],
+      "rationale": "R23: the weekday Masses are in a chapel with its own address, 126 Walnut Ave., which data/churches.csv lacks (it lists only the church at 601 Bristol Pike). No bulletin or website page says the chapel is on the church's grounds, so POLICY (Churches and chapels) leaves it out while its location is unclear; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-church-croydon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel at 126 Walnut Ave."
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 1,
+          "said": "Monday - Friday: 8:30 AM (Chapel at 126 Walnut Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "790ffb09",
+          "page": 1,
+          "said": "Monday - Friday: 8:30 AM (Chapel at 126 Walnut Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 2,
+          "said": "Monday November 16, 2026 8:30 AM ... Friday November 20, 2026 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staq.org/",
+          "said": "Mon Fri 8:30 AM English In the Chapel"
+        }
+      ],
+      "rationale": "R23: the weekday Masses are in a chapel with its own address, 126 Walnut Ave., which data/churches.csv lacks (it lists only the church at 601 Bristol Pike). No bulletin or website page says the chapel is on the church's grounds, so POLICY (Churches and chapels) leaves it out while its location is unclear; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-church-croydon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel at 126 Walnut Ave."
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 1,
+          "said": "Monday - Friday: 8:30 AM (Chapel at 126 Walnut Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "790ffb09",
+          "page": 1,
+          "said": "Monday - Friday: 8:30 AM (Chapel at 126 Walnut Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 2,
+          "said": "Monday November 16, 2026 8:30 AM ... Friday November 20, 2026 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staq.org/",
+          "said": "Mon Fri 8:30 AM English In the Chapel"
+        }
+      ],
+      "rationale": "R23: the weekday Masses are in a chapel with its own address, 126 Walnut Ave., which data/churches.csv lacks (it lists only the church at 601 Bristol Pike). No bulletin or website page says the chapel is on the church's grounds, so POLICY (Churches and chapels) leaves it out while its location is unclear; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-church-croydon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel at 126 Walnut Ave."
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 1,
+          "said": "Monday - Friday: 8:30 AM (Chapel at 126 Walnut Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "790ffb09",
+          "page": 1,
+          "said": "Monday - Friday: 8:30 AM (Chapel at 126 Walnut Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 2,
+          "said": "Monday November 16, 2026 8:30 AM ... Friday November 20, 2026 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staq.org/",
+          "said": "Mon Fri 8:30 AM English In the Chapel"
+        }
+      ],
+      "rationale": "R23: the weekday Masses are in a chapel with its own address, 126 Walnut Ave., which data/churches.csv lacks (it lists only the church at 601 Bristol Pike). No bulletin or website page says the chapel is on the church's grounds, so POLICY (Churches and chapels) leaves it out while its location is unclear; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-church-croydon",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel; Lent only; Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: Mondays 9:00 AM -3:30PM with Benediction at 3:30 PM (Chapel) During Lent"
+        },
+        {
+          "source": "agent",
+          "bulletin": "790ffb09",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: Mondays 9:00 AM -3:30PM with Benediction at 3:30 PM (Chapel) During Lent"
+        }
+      ],
+      "rationale": "R33, R23: offered only during Lent, a season whose dates move every year and can't be written as months, and in the Walnut Ave. chapel the church list lacks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 1,
+          "said": "Rosary: Weekdays before 8:30 AM Mass (Chapel)"
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 1,
+          "said": "Holydays: 8:30 AM, 12 Noon and 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "790ffb09",
+          "page": 1,
+          "said": "Holydays: 8:30 AM, 12 Noon and 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staq.org/mass-and-confession-times",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 8:30 AM 12:00 PM 7:00 PM"
+        }
+      ],
+      "rationale": "R6, R30: the bulletin's standing holy-day line has no date, but the current website's Upcoming Holy Days block dates it to December 8 with exactly the same times (the site lists 2026 events through Dec 27, 2026). Leaning per precedent st-matthias-bala-cynwyd s17 and our-lady-of-consolation-parkesburg s12. Hard because no read bulletin prints December 8 itself and neither source names the place; with one listed church, the noon and evening Masses are most likely in the church.",
+      "question": "Add the Immaculate Conception Masses on Tue Dec 8 at 12:00 PM and 7:00 PM at the church?",
+      "options": [
+        {
+          "label": "Dec 8 12:00 PM and 7:00 PM",
+          "entry": {
+            "church_slug": "st-thomas-aquinas-church-croydon",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "dec8"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 1,
+          "said": "Holydays: 8:30 AM, 12 Noon and 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "790ffb09",
+          "page": 1,
+          "said": "Holydays: 8:30 AM, 12 Noon and 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staq.org/mass-and-confession-times",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 8:30 AM 12:00 PM 7:00 PM"
+        }
+      ],
+      "rationale": "R6, R30: the bulletin's standing holy-day line has no date, but the current website's Upcoming Holy Days block dates it to December 8 with exactly the same times (the site lists 2026 events through Dec 27, 2026). Leaning per precedent st-matthias-bala-cynwyd s17 and our-lady-of-consolation-parkesburg s12. Hard because no read bulletin prints December 8 itself and neither source names the place; with one listed church, the noon and evening Masses are most likely in the church.",
+      "question": "Add the Immaculate Conception Masses on Tue Dec 8 at 12:00 PM and 7:00 PM at the church?",
+      "options": [
+        {
+          "label": "Dec 8 12:00 PM and 7:00 PM",
+          "entry": {
+            "church_slug": "st-thomas-aquinas-church-croydon",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "dec8"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04958ef9",
+          "page": 1,
+          "said": "Holydays: 8:30 AM, 12 Noon and 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "790ffb09",
+          "page": 1,
+          "said": "Holydays: 8:30 AM, 12 Noon and 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staq.org/mass-and-confession-times",
+          "said": "Immaculate Conception December 8 : 8:30 AM 12:00 PM 7:00 PM"
+        }
+      ],
+      "rationale": "R32: 8:30 AM is the weekday Mass time, and weekday Masses are in the chapel at 126 Walnut Ave. (p1), which the church list lacks; neither source names the holy-day Mass's place (the website marks its Christmas Masses 'In the Church' but not these). A wrong place is worse than a missing time (POLICY).",
+      "question": "Add the Immaculate Conception 8:30 AM Mass on Tue Dec 8 at the church, or is it in the Walnut Ave. chapel?",
+      "options": [
+        {
+          "label": "Dec 8 8:30 AM at the church",
+          "entry": {
+            "church_slug": "st-thomas-aquinas-church-croydon",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.staq.org/mass-and-confession-times",
+          "said": "Nativity of Our Lord Jesus Christ December 24 : 4:30 PM In the Church 7:00 PM In the Church December 25 : 10:00 AM In the Church"
+        }
+      ],
+      "rationale": "R6, R30: no read bulletin prints Christmas times. The website's Upcoming Holy Days block is current (the site lists 2026 events through Dec 27, 2026, and its Dec 8 times match the bulletin's holy-day line exactly) and places these Masses 'In the Church'. Leaning per precedent st-margaret-narberth s28. Hard because the block prints no year; unlike st-joseph-coatesville s45, nothing contradicts it.",
+      "question": "Add the website's Christmas Masses (Dec 24 4:30 and 7:00 PM, Dec 25 10:00 AM, in the church)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-thomas-aquinas-church-croydon",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Eve"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.staq.org/mass-and-confession-times",
+          "said": "Nativity of Our Lord Jesus Christ December 24 : 4:30 PM In the Church 7:00 PM In the Church December 25 : 10:00 AM In the Church"
+        }
+      ],
+      "rationale": "R6, R30: no read bulletin prints Christmas times. The website's Upcoming Holy Days block is current (the site lists 2026 events through Dec 27, 2026, and its Dec 8 times match the bulletin's holy-day line exactly) and places these Masses 'In the Church'. Leaning per precedent st-margaret-narberth s28. Hard because the block prints no year; unlike st-joseph-coatesville s45, nothing contradicts it.",
+      "question": "Add the website's Christmas Masses (Dec 24 4:30 and 7:00 PM, Dec 25 10:00 AM, in the church)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-thomas-aquinas-church-croydon",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Eve"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.staq.org/mass-and-confession-times",
+          "said": "December 25 : 10:00 AM In the Church"
+        }
+      ],
+      "rationale": "R6, R30: no read bulletin prints Christmas times. The website's Upcoming Holy Days block is current (the site lists 2026 events through Dec 27, 2026, and its Dec 8 times match the bulletin's holy-day line exactly) and places these Masses 'In the Church'. Leaning per precedent st-margaret-narberth s28. Hard because the block prints no year; unlike st-joseph-coatesville s45, nothing contradicts it.",
+      "question": "Add the website's Christmas Masses (Dec 24 4:30 and 7:00 PM, Dec 25 10:00 AM, in the church)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-thomas-aquinas-church-croydon",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Day"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "christmas"
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Chapel at 126 Walnut Ave., Croydon (St. Thomas Aquinas Parish weekday chapel)",
+      "said": "Monday - Friday: 8:30 AM (Chapel at 126 Walnut Ave.); Lenten Monday Adoration 9:00 AM-3:30 PM (Chapel)",
+      "bulletin": "04958ef9",
+      "page": 1
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "5696a548986398a84bd192124e1952f4",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T02:16:20.494268+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "04958ef9fa3054d08a64305bf3002732f3fd2df750fb007ce9843094eba8a63f",
+        "fetched_at": "2026-11-15T16:47:03Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "790ffb0904556b6b236e4d014d4ad48020fca630f544e88d2201fc1ebb9294eb",
+        "fetched_at": "2026-11-08T15:55:28Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.001105,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": true,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-thomas-aquinas-church-croydon",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil: 4:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil: 4:30 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-thomas-aquinas-church-croydon",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sundays: 9:00 AM and 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sundays: 9:00 AM and 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-thomas-aquinas-church-croydon",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sundays: 9:00 AM and 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sundays: 9:00 AM and 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-thomas-aquinas-church-croydon",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays: 3:30 PM or by appointment"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays: 3:30 PM or by appointment"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "dc7f46a8d448010ac8e19f8793fd326ad5c4094ac787403b306fab5cf8bd1bab",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "differs",
+        "fields": [
+          "end time"
+        ],
+        "opinion": [
+          "o4"
+        ],
+        "slots": [
+          "s4"
+        ],
+        "opinion_said": "confession Sat 15:30 @st-thomas-aquinas-church-croydon",
+        "seed_said": "confession Sat 15:30-16:00 @st-thomas-aquinas-church-croydon",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      }
+    ]
+  }
+}
