@@ -1,0 +1,1704 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-charles-borromeo-bensalem",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:51Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T01:54:48Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Our Lady of Fatima worship site name is only the parish's subtitle). Both November issues print the same box: Sat 8 AM, 5 PM, 7 PM Spanish; Sun 7:30, 10, 12 Spanish; Mon-Fri 6:45; confession Mon 6:30-7 PM and Sat 8:30-9 AM, 4-4:45 PM. Dated: Nov 16 Mass of Remembrance, Thanksgiving 9 AM, Fri Nov 27 Mass moved to 8 AM. Open: Wednesday Adoration start (bulletin 7:30 vs website 8:30) and whether Thanksgiving's 6:45 AM is cancelled.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+      "fetched_at": "2026-11-15T16:44:51Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "8f1f22dc1714f7330d20fe732db9cab84498600d979dd704121f782d66f8af15",
+      "fetched_at": "2026-11-08T15:53:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+      "bulletins": [
+        "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+        "8f1f22dc1714f7330d20fe732db9cab84498600d979dd704121f782d66f8af15"
+      ],
+      "cached": false,
+      "cost_usd": 0.002772,
+      "at": "2026-11-28T02:00:00.813584+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "Saturday Mass/Misa de Sábado 8:00 AM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 1,
+          "said": "Saturday Mass/Misa de Sábado 8:00 AM English"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Mass/Misa de Sábado 8:00 AM English”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the p3 intentions list Sat 8:00 AM both Saturdays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "5:00 PM English (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 1,
+          "said": "5:00 PM English (Vigil)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “5:00 PM English (Vigil)”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "7:00 PM Spanish/Español (Vigilia)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 1,
+          "said": "7:00 PM Spanish/Español (Vigilia)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “7:00 PM Spanish/Español (Vigilia)”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "Sunday Mass/Misa de Domingo 7:30 AM &10:00 AM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 1,
+          "said": "Sunday Mass/Misa de Domingo 7:30 AM &10:00 AM English"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Mass/Misa de Domingo 7:30 AM &10:00 AM English”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "Sunday Mass/Misa de Domingo 7:30 AM &10:00 AM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 1,
+          "said": "Sunday Mass/Misa de Domingo 7:30 AM &10:00 AM English"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Mass/Misa de Domingo 7:30 AM &10:00 AM English”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "12:00 PM Spanish/Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 1,
+          "said": "12:00 PM Spanish/Español"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “12:00 PM Spanish/Español”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 1,
+          "said": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday/Lunes - Friday/Viernes 6:45 AM English”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the p3 intentions list 6:45 AM Mon-Fri Nov 16-20.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 1,
+          "said": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday/Lunes - Friday/Viernes 6:45 AM English”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the p3 intentions list 6:45 AM Mon-Fri Nov 16-20.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 1,
+          "said": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday/Lunes - Friday/Viernes 6:45 AM English”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the p3 intentions list 6:45 AM Mon-Fri Nov 16-20.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 1,
+          "said": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday/Lunes - Friday/Viernes 6:45 AM English”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the p3 intentions list 6:45 AM Mon-Fri Nov 16-20.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 1,
+          "said": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday/Lunes - Friday/Viernes 6:45 AM English”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both issues read; the p3 intentions list 6:45 AM Mon-Fri Nov 16-20.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "Confession Schedule / Horario de Confesión Monday/Lunes: 6:30 PM -7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 1,
+          "said": "Monday/Lunes: 6:30 PM -7:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday/Lunes: 6:30 PM -7:00 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 confession schedule of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "Saturday/Sábado: 8:30 - 9:00 AM & 4:00 - 4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 1,
+          "said": "Saturday/Sábado: 8:30 - 9:00 AM & 4:00 - 4:45 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday/Sábado: 8:30 - 9:00 AM & 4:00 - 4:45 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 confession schedule of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "Saturday/Sábado: 8:30 - 9:00 AM & 4:00 - 4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 1,
+          "said": "Saturday/Sábado: 8:30 - 9:00 AM & 4:00 - 4:45 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday/Sábado: 8:30 - 9:00 AM & 4:00 - 4:45 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 confession schedule of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "Adoration/Adoración Wednesday/Miércoles: 7:30 AM - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 4,
+          "said": "St. Charles has Adoration of the Blessed Sacrament every Wednesday from 7:30 a.m. to 8:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 1,
+          "said": "Adoration/Adoración Wednesday/Miércoles: 7:30 AM - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 4,
+          "said": "Adoration of the Blessed Sacrament every Wednesday from 7:30 a.m. to 8:00p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcharlesbensalem.org/",
+          "said": "Adoration: Wednesday 8:30 AM - 8:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Adoration/Adoración Wednesday/Miércoles: 7:30 AM - 8:00 PM”"
+        }
+      ],
+      "rationale": "R28/C8: the bulletin's box and its adorers notice (p1, p4, both issues) give 7:30 AM; the homepage, whose Mass times otherwise match exactly, gives 8:30 AM. Leaning to the bulletin as presentation-bvm-cheltenham s10 and st-thomas-the-apostle-glen-mills s13 did: four current bulletin printings against one website line. Hard because 7:30 is only 45 minutes after the 6:45 Mass starts, and the site was read later (Nov 28).",
+      "question": "Wednesday Adoration: bulletin 7:30 AM-8:00 PM or website 8:30 AM-8:00 PM?",
+      "options": [
+        {
+          "label": "Wed 7:30 AM-8:00 PM (bulletin)",
+          "entry": {
+            "church_slug": "st-charles-borromeo-church-bensalem",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Wed 8:30 AM-8:00 PM (website)",
+          "entry": {
+            "church_slug": "st-charles-borromeo-church-bensalem",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-16",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance (bilingual)"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 7,
+          "said": "MASS OF REMEMBRANCE (BILINGUAL) ... Monday, Nov. 16, 7:00 p.m. ... Light refreshments will be served in the cafeteria after Mass. All are welcome!"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “MASS OF REMEMBRANCE (BILINGUAL) Monday, Nov. 16, 7:00 p.m.”"
+        }
+      ],
+      "rationale": "R1, R16, POLICY (Weekly or dated rule 7): a dated special Mass outside the weekly schedule, after as_of, at the parish's one church; 'All are welcome' makes it open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Mass and Food Blessing (bilingual)"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 7,
+          "said": "Thanksgiving Mass and Food Blessing THURSDAY 26 NOVEMBER 9:00 AM MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 10,
+          "said": "Misa de Acción de Gracias y Bendición de Alimentos JUEVES 26 NOVIEMBRE 9:00 AM MISA (BILINGÜE)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f1f22dc",
+          "page": 7,
+          "said": "Thanksgiving Mass and Food Blessing ... 9:00 AM MASS"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 10,
+          "said": "gpt-6-luna read the same: B1 p10 “JUEVES 26 NOVIEMBRE 9:00 AM MISA (BILINGÜE)”"
+        }
+      ],
+      "rationale": "R1, POLICY (Weekly or dated rule 7): a holiday Mass at a time outside the weekly schedule, dated Nov 26.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Moved to 8:00 AM"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 7,
+          "said": "Daily Mass on Friday November 27 is 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 10,
+          "said": "LA MISA DEL VIERNES 27 DE NOVIEMBRE ES A LAS 8:00 AM (INGLÉS)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “Daily Mass on Friday November 27 is 8:00 AM”"
+        }
+      ],
+      "rationale": "R1, R16, POLICY (Weekly or dated): the Friday daily Mass is moved from 6:45 to 8:00 AM that day; a moved Mass is a cancellation of the usual time plus the new one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Daily Mass moved from 6:45 AM"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 7,
+          "said": "Daily Mass on Friday November 27 is 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 10,
+          "said": "LA MISA DEL VIERNES 27 DE NOVIEMBRE ES A LAS 8:00 AM (INGLÉS)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “Daily Mass on Friday November 27 is 8:00 AM”"
+        }
+      ],
+      "rationale": "R1, R16: the moved Friday Mass at its new time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 7,
+          "said": "Thanksgiving Mass and Food Blessing THURSDAY 26 NOVEMBER 9:00 AM MASS Daily Mass on Friday November 27 is 8:00 AM"
+        }
+      ],
+      "rationale": "R17 records a cancellation only when stated; 'cancelled' isn't printed. Leaning per precedent our-lady-of-mount-carmel-doylestown s15 and our-mother-of-good-counsel-bryn-mawr s21: the notice gives the day's Mass and, in the same box, tells readers the next day's daily Mass time, so the 9 AM reads as Thursday's daily Mass. Against: st-joseph-warrington s13 left the weekday slot alone.",
+      "question": "Thanksgiving, Thu Nov 26: record the weekly 6:45 AM Mass as cancelled, since the Thanksgiving notice gives a 9 AM Mass?",
+      "options": [
+        {
+          "label": "Record the cancellation",
+          "entry": {
+            "church_slug": "st-charles-borromeo-church-bensalem",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "06:45",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving: 9:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave the 6:45 AM alone",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "Miraculous Medal Novena/ Novena de la Medalla Milagrosa Saturday/Sábado: 8:30 AM"
+        }
+      ],
+      "rationale": "R24: a novena is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7413e066",
+          "page": 1,
+          "said": "Church Open for Private Prayer/ Iglesia Abierta para Oración Privada Monday - Thursday 6:00 AM - 8:00 PM; Friday 6:00 AM -7:00 PM; Saturday 7:00 AM -5:00 PM"
+        }
+      ],
+      "rationale": "R38: the church being open for private prayer is not an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "b61bce08d2844a62c18b98f8ddab2308",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T02:00:00.813584+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "7413e0662df2980a06fc09d2e952f939e1964d5bcc2a3e8c8105c0e2eb942a2a",
+        "fetched_at": "2026-11-15T16:44:51Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "8f1f22dc1714f7330d20fe732db9cab84498600d979dd704121f782d66f8af15",
+        "fetched_at": "2026-11-08T15:53:46Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002772,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Mass/Misa de Sábado 8:00 AM English"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Mass/Misa de Sábado 8:00 AM English"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "5:00 PM English (Vigil)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "5:00 PM English (Vigil)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spanish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "7:00 PM Spanish/Español (Vigilia)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "7:00 PM Spanish/Español (Vigilia)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Mass/Misa de Domingo 7:30 AM &10:00 AM English"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Mass/Misa de Domingo 7:30 AM &10:00 AM English"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Mass/Misa de Domingo 7:30 AM &10:00 AM English"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Mass/Misa de Domingo 7:30 AM &10:00 AM English"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spanish",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "12:00 PM Spanish/Español"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "12:00 PM Spanish/Español"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "06:45",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "06:45",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "06:45",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "06:45",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "06:45",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday/Lunes - Friday/Viernes 6:45 AM English"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "18:30",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday/Lunes: 6:30 PM -7:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday/Lunes: 6:30 PM -7:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "09:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday/Sábado: 8:30 - 9:00 AM & 4:00 - 4:45 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday/Sábado: 8:30 - 9:00 AM & 4:00 - 4:45 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": "16:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday/Sábado: 8:30 - 9:00 AM & 4:00 - 4:45 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday/Sábado: 8:30 - 9:00 AM & 4:00 - 4:45 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Adoration/Adoración Wednesday/Miércoles: 7:30 AM - 8:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Adoration/Adoración Wednesday/Miércoles: 7:30 AM - 8:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 4,
+            "quote": "St. Charles has Adoration of the Blessed Sacrament every Wednesday from 7:30 a.m. to 8:00p.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 4,
+            "quote": "St. Charles has Adoration of the Blessed Sacrament every Wednesday from 7:30 a.m. to 8:00p.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-16",
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Bilingual Mass of Remembrance",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "MASS OF REMEMBRANCE (BILINGUAL) Monday, Nov. 16, 7:00 p.m."
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "MASS OF REMEMBRANCE (BILINGUAL) Monday, Nov. 16, 7:00 p.m."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o18",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Bilingual Thanksgiving Mass and food blessing",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 10,
+            "quote": "JUEVES 26 NOVIEMBRE 9:00 AM MISA (BILINGÜE)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "JUEVES 26 NOVIEMBRE 9:00 AM MISA (BILINGÜE)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o19",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-27",
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "English",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "Daily Mass on Friday November 27 is 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "Daily Mass on Friday November 27 is 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o20",
+        "entry": {
+          "church_slug": "st-charles-borromeo-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-27",
+          "start_time": "06:45",
+          "end_time": null,
+          "cancelled": true,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "Daily Mass on Friday November 27 is 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 7,
+            "quote": "Daily Mass on Friday November 27 is 8:00 AM"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "d8a51e74434bb7e7500c8aaa98ada4a3e655821e5113a71ff5bb8fced1383aec",
+    "differences": []
+  }
+}
