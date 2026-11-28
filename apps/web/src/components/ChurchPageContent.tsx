@@ -6,23 +6,17 @@ import {
   continuousAccessLine,
   continuousTimes,
   DAY_ORDER,
-  describePatternBeyondLabel,
   EVERY_DAY,
   EVENT_TYPE_LABELS,
   EVENT_TYPE_ORDER,
   type EventSummary,
-  type EventType,
   formatAddress,
   formatEventDate,
   formatLongDate,
   formatLongMonthDay,
   formatMonthDay,
   formatTimeRange,
-  isPlainWeekly,
-  patternKey,
   titleCase,
-  weekdayLabel,
-  WEEKS_OF_MONTH,
 } from "@carlo/core";
 import {
   CHURCH_LIST,
@@ -36,6 +30,10 @@ import {
   MapPinIcon,
   PencilIcon,
 } from "@/components/icons";
+import {
+  collectSectionEvents,
+  partitionEventsByType,
+} from "@/components/churchSchedule";
 import { FeedbackTrigger } from "@/components/FeedbackTrigger";
 import { Fleuron } from "@/components/Fleuron";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
@@ -54,126 +52,8 @@ const ANNOTATION_CLASS = "font-serif text-[0.9rem] italic";
 const ANNOTATION_LINK_CLASS =
   "text-rubric underline decoration-rubric/40 decoration-from-font underline-offset-[3px] transition-colors hover:text-rubric-deep hover:decoration-rubric-deep";
 
-interface EventsByType {
-  /** Slots that run every week of the year, by weekday. */
-  weeklyByDay: Record<string, EventSummary[]>;
-  /** Weekly slots that keep only some weeks, or part of the year. */
-  patterned: PatternedRow[];
-  specificDate: EventSummary[];
-}
-
-/**
- * The slots on one weekday that share one schedule beyond it ("4th Sunday",
- * "Tuesday, October through June"), as a row of their own under the
- * every-week rows.
- *
- * The church page lists a slot whether or not it is running today (someone
- * looking up a parish wants its whole schedule). A slot set among the
- * every-week times of its day, with its qualifier in a note, read as one more
- * time every week: the 4th-Sunday Mass between the Sunday 12 and 5 read as a
- * Sunday 1:30. On a row of its own, its label says when it runs, and the
- * note says what the label can't, such as the months it runs, which tells a
- * reader why the map did not show it today.
- */
-interface PatternedRow {
-  key: string;
-  label: string;
-  qualifier: string | null;
-  events: EventSummary[];
-  dayIndex: number;
-  weekIndex: number;
-}
-
-function partitionEventsByType(
-  events: EventSummary[],
-): Record<EventType, EventsByType> {
-  const result: Record<EventType, EventsByType> = {
-    mass: { weeklyByDay: {}, patterned: [], specificDate: [] },
-    confession: { weeklyByDay: {}, patterned: [], specificDate: [] },
-    adoration: { weeklyByDay: {}, patterned: [], specificDate: [] },
-  };
-
-  for (const type of EVENT_TYPE_ORDER) {
-    for (const d of DAY_ORDER) {
-      result[type].weeklyByDay[d] = [];
-    }
-  }
-
-  const patternedByKey: Record<EventType, Map<string, PatternedRow>> = {
-    mass: new Map(),
-    confession: new Map(),
-    adoration: new Map(),
-  };
-
-  for (const e of events) {
-    const typeData = result[e.type];
-    if (e.kind === "weekly" && e.day_of_week) {
-      const day = e.day_of_week.toLowerCase();
-      if (!(day in typeData.weeklyByDay)) continue;
-      if (isPlainWeekly(e)) {
-        typeData.weeklyByDay[day].push(e);
-        continue;
-      }
-      const key = `${day}:${patternKey(e)}`;
-      const rows = patternedByKey[e.type];
-      let row = rows.get(key);
-      if (!row) {
-        row = {
-          key,
-          label: weekdayLabel(e, day),
-          qualifier: describePatternBeyondLabel(e, day),
-          events: [],
-          dayIndex: (DAY_ORDER as readonly string[]).indexOf(day),
-          weekIndex: e.exclude_weeks
-            ? WEEKS_OF_MONTH.length
-            : Math.min(
-                ...e.weeks_of_month.map((week) => WEEKS_OF_MONTH.indexOf(week)),
-                WEEKS_OF_MONTH.length,
-              ),
-        };
-        rows.set(key, row);
-      }
-      row.events.push(e);
-    } else {
-      typeData.specificDate.push(e);
-    }
-  }
-
-  for (const type of EVENT_TYPE_ORDER) {
-    const typeData = result[type];
-    for (const day of DAY_ORDER) {
-      typeData.weeklyByDay[day].sort((a, b) => a.start_time - b.start_time);
-    }
-    typeData.patterned = [...patternedByKey[type].values()].sort(
-      (a, b) =>
-        a.dayIndex - b.dayIndex ||
-        a.weekIndex - b.weekIndex ||
-        a.key.localeCompare(b.key),
-    );
-    for (const row of typeData.patterned) {
-      row.events.sort((a, b) => a.start_time - b.start_time);
-    }
-    typeData.specificDate.sort((a, b) =>
-      (a.date ?? "").localeCompare(b.date ?? ""),
-    );
-  }
-
-  return result;
-}
-
 function formatTimeValue(event: EventSummary): string {
   return formatTimeRange(event.start_time, event.end_time);
-}
-
-function collectSectionEvents(section: EventsByType): EventSummary[] {
-  const all: EventSummary[] = [];
-  for (const day of DAY_ORDER) {
-    const list = section.weeklyByDay[day];
-    if (list) all.push(...list);
-  }
-  for (const row of section.patterned) all.push(...row.events);
-  all.push(...section.specificDate);
-  return all;
 }
 
 function mostCommonPageNumber(events: EventSummary[]): number | null {

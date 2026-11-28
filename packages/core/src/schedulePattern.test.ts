@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { WeekOfMonth } from "./types";
 import {
+  comparePatterns,
   dateMatchesPattern,
   dateMatchesWeeks,
   dateInSeason,
@@ -365,5 +366,45 @@ describe("describePatternBeyondLabel", () => {
         "Sunday",
       ),
     ).toBe("Every Sunday except the last");
+  });
+});
+
+describe("comparePatterns", () => {
+  function sorted(patterns: SchedulePattern[]): (string | null)[] {
+    return [...patterns]
+      .sort(comparePatterns)
+      .map((p) => describeSchedulePattern(p, "Sunday"));
+  }
+
+  it("puts the schedules that run most weeks first", () => {
+    expect(
+      sorted([
+        pattern({ weeks_of_month: ["fourth"] }),
+        pattern({ weeks_of_month: ["last"], exclude_weeks: true }),
+        pattern({ weeks_of_month: ["first", "third"] }),
+        pattern({ season_start_month: 10, season_end_month: 6 }),
+      ]),
+    ).toEqual([
+      "October through June",
+      "Every Sunday except the last",
+      "First and third Sundays of the month",
+      "Fourth Sunday of the month",
+    ]);
+  });
+
+  it("orders seasons by the month they begin, not as text", () => {
+    expect(
+      sorted([
+        pattern({ season_start_month: 10, season_end_month: 1 }),
+        pattern({ season_start_month: 2, season_end_month: 5 }),
+        pattern({ season_start_month: 6, season_start_day: 4, season_end_month: 9 }),
+        pattern({ season_start_month: 6, season_end_month: 9 }),
+      ]),
+    ).toEqual([
+      "February through May",
+      "June through September",
+      "June 4 through September",
+      "October through January",
+    ]);
   });
 });
