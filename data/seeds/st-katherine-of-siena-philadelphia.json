@@ -1,0 +1,2649 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-katherine-of-siena-philadelphia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:08Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T04:22:59Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday, confession and daily Adoration Chapel times agree in both November issues and on the website, which places the chapel on the rectory porch facing the church. Christmas and Jan 1 Masses come from the parish's current Seasonal Mass Times page. Open: the Dec 15 penance service and whether the box's generic Holy Days line adds 12 PM and 7 PM Masses on Tue Dec 8.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+      "fetched_at": "2026-11-15T16:46:08Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1eebced3a9d25cc6a841977e20867e29cbf5d1ee9b7e938fd63e2e1546056c55",
+      "fetched_at": "2026-11-08T15:54:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+      "bulletins": [
+        "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+        "1eebced3a9d25cc6a841977e20867e29cbf5d1ee9b7e938fd63e2e1546056c55"
+      ],
+      "cached": false,
+      "cost_usd": 0.002251,
+      "at": "2026-11-28T04:29:22.432783+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Mass intentions Mon Nov 16-Fri Nov 20 6:30am, 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mon to Fri: 6:30am, 8am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues, with intentions at both times every weekday; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Mass intentions Mon Nov 16-Fri Nov 20 6:30am, 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mon to Fri: 6:30am, 8am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues, with intentions at both times every weekday; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Mass intentions Mon Nov 16-Fri Nov 20 6:30am, 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mon to Fri: 6:30am, 8am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues, with intentions at both times every weekday; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Mass intentions Mon Nov 16-Fri Nov 20 6:30am, 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mon to Fri: 6:30am, 8am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues, with intentions at both times every weekday; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Mass intentions Mon Nov 16-Fri Nov 20 6:30am, 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mon to Fri: 6:30am, 8am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues, with intentions at both times every weekday; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Mass intentions Mon Nov 16-Fri Nov 20 6:30am, 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mon to Fri: 6:30am, 8am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues, with intentions at both times every weekday; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Mass intentions Mon Nov 16-Fri Nov 20 6:30am, 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mon to Fri: 6:30am, 8am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues, with intentions at both times every weekday; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Mass intentions Mon Nov 16-Fri Nov 20 6:30am, 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mon to Fri: 6:30am, 8am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues, with intentions at both times every weekday; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Mass intentions Mon Nov 16-Fri Nov 20 6:30am, 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mon to Fri: 6:30am, 8am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues, with intentions at both times every weekday; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Daily Masses Mon to Fri: 6:30am, 8am; Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Mass intentions Mon Nov 16-Fri Nov 20 6:30am, 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Mon to Fri: 6:30am, 8am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues, with intentions at both times every weekday; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Daily Masses ... Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Daily Masses ... Sat: 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "SATURDAY, Nov 21 8:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sat: 8am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Sunday Masses Sat (Vigil Mass): 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Sunday Masses Sat (Vigil Mass): 5:00pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sat (Vigil Mass): 5:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Sun: 6:30am, 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Sun: 6:30am, 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sun: 6:30am, 8:00am, 10:00am, 12:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Sun: 6:30am, 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Sun: 6:30am, 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sun: 6:30am, 8:00am, 10:00am, 12:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Sun: 6:30am, 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Sun: 6:30am, 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sun: 6:30am, 8:00am, 10:00am, 12:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Sun: 6:30am, 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Sun: 6:30am, 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sun: 6:30am, 8:00am, 10:00am, 12:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Confessions Saturdays: 10:00 - 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Confessions Saturdays: 10:00 - 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "RECONCILIATION Every Saturday: 10-11am."
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturdays: 10:00 - 11:00am”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and Sacraments column of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:20",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "First Friday: 7:20 -7:50am (before 8AM Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "First Friday: 7:20 -7:50am (before 8AM Mass)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “First Friday: 7:20 -7:50am (before 8AM Mass)”"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly rule 2: named First Friday slot printed in both issues' box with its clock times; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "To schedule: call 215.637.7548"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Confession by appointment: call 215.637.7548"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (rectory side porch, facing the church)"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stkatherineofsiena.org/about-st-katherine/adoration-chapel",
+          "said": "The chapel is open Sunday through Saturday from 7 AM to 7 PM (Saturdays till 6PM). ... The chapel is located on the side porch of the rectory, facing the church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm”"
+        }
+      ],
+      "rationale": "R1, R38: both issues print daily exposition in the Adoration Chapel; the website confirms Sunday is included and places the chapel on the rectory porch facing the church, on the church's grounds (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (rectory side porch, facing the church)"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stkatherineofsiena.org/about-st-katherine/adoration-chapel",
+          "said": "The chapel is open Sunday through Saturday from 7 AM to 7 PM (Saturdays till 6PM). ... The chapel is located on the side porch of the rectory, facing the church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm”"
+        }
+      ],
+      "rationale": "R1, R38: both issues print daily exposition in the Adoration Chapel; the website confirms Sunday is included and places the chapel on the rectory porch facing the church, on the church's grounds (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (rectory side porch, facing the church)"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stkatherineofsiena.org/about-st-katherine/adoration-chapel",
+          "said": "The chapel is open Sunday through Saturday from 7 AM to 7 PM (Saturdays till 6PM). ... The chapel is located on the side porch of the rectory, facing the church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm”"
+        }
+      ],
+      "rationale": "R1, R38: both issues print daily exposition in the Adoration Chapel; the website confirms Sunday is included and places the chapel on the rectory porch facing the church, on the church's grounds (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (rectory side porch, facing the church)"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stkatherineofsiena.org/about-st-katherine/adoration-chapel",
+          "said": "The chapel is open Sunday through Saturday from 7 AM to 7 PM (Saturdays till 6PM). ... The chapel is located on the side porch of the rectory, facing the church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm”"
+        }
+      ],
+      "rationale": "R1, R38: both issues print daily exposition in the Adoration Chapel; the website confirms Sunday is included and places the chapel on the rectory porch facing the church, on the church's grounds (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (rectory side porch, facing the church)"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stkatherineofsiena.org/about-st-katherine/adoration-chapel",
+          "said": "The chapel is open Sunday through Saturday from 7 AM to 7 PM (Saturdays till 6PM). ... The chapel is located on the side porch of the rectory, facing the church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm”"
+        }
+      ],
+      "rationale": "R1, R38: both issues print daily exposition in the Adoration Chapel; the website confirms Sunday is included and places the chapel on the rectory porch facing the church, on the church's grounds (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (rectory side porch, facing the church)"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stkatherineofsiena.org/about-st-katherine/adoration-chapel",
+          "said": "The chapel is open Sunday through Saturday from 7 AM to 7 PM (Saturdays till 6PM). ... The chapel is located on the side porch of the rectory, facing the church"
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm”"
+        }
+      ],
+      "rationale": "R1, R38: both issues print daily exposition in the Adoration Chapel; the website confirms Sunday is included and places the chapel on the rectory porch facing the church, on the church's grounds (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (rectory side porch, facing the church)"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 2,
+          "said": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stkatherineofsiena.org/about-st-katherine/adoration-chapel",
+          "said": "The chapel is open Sunday through Saturday from 7 AM to 7 PM (Saturdays till 6PM)."
+        },
+        {
+          "source": "c1",
+          "bulletin": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm”"
+        }
+      ],
+      "rationale": "R1, R38: as the other days; Saturday ends at 6 PM in both issues and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Holy Days 6:30am, 8:00am, 12:00pm & 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Holy Days 6:30am, 8:00am, 12:00pm & 7:00pm"
+        }
+      ],
+      "rationale": "Leaning per precedent st-isaac-jogues-wayne s27: the Holy Days line is the standing box, with no year or dated notice tying it to Dec 8 (unlike our-lady-of-consolation-parkesburg s12). The parish's current Seasonal Mass Times page lists December events but not Dec 8. Dec 8, 2026 is a Tuesday, so 6:30 and 8 AM are the weekly slots anyway. Hard because Dec 8 is a holy day of obligation and the times may well be right.",
+      "question": "Add Immaculate Conception Masses on Tue Dec 8 at 12:00 PM and 7:00 PM from the box's Holy Days line?",
+      "options": [
+        {
+          "label": "Dec 8 12 PM and 7 PM",
+          "entry": {
+            "church_slug": "st-katherine-of-siena-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "dec8"
+    },
+    {
+      "id": "s28",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f2e2f8ba",
+          "page": 1,
+          "said": "Holy Days 6:30am, 8:00am, 12:00pm & 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1eebced3",
+          "page": 1,
+          "said": "Holy Days 6:30am, 8:00am, 12:00pm & 7:00pm"
+        }
+      ],
+      "rationale": "Leaning per precedent st-isaac-jogues-wayne s27: the Holy Days line is the standing box, with no year or dated notice tying it to Dec 8 (unlike our-lady-of-consolation-parkesburg s12). The parish's current Seasonal Mass Times page lists December events but not Dec 8. Dec 8, 2026 is a Tuesday, so 6:30 and 8 AM are the weekly slots anyway. Hard because Dec 8 is a holy day of obligation and the times may well be right.",
+      "question": "Add Immaculate Conception Masses on Tue Dec 8 at 12:00 PM and 7:00 PM from the box's Holy Days line?",
+      "options": [
+        {
+          "label": "Dec 8 12 PM and 7 PM",
+          "entry": {
+            "church_slug": "st-katherine-of-siena-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "dec8"
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Children & Family Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stkatherineofsiena.org/news-events/seasonal-mass-times",
+          "said": "christmas eve masses Thursday, December 24th 4pm Children & Family Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-28T04:26:59Z",
+            "current_because": "Seasonal Mass Times page read 2026-11-27; it prints this year's weekdays (Thursday, December 24th; Friday, December 25th; Friday, January 1st, 2027) and the homepage lists Dec 2026 events, so it is this year's schedule.",
+            "bulletin": "f2e2f8ba",
+            "fits_because": "f2e2f8ba p1 box says 'Schedule may vary on Christmas and New Year's Day'; the page's Mass times otherwise match the box (weekday 6:30/8, Sunday 6:30/8/10/12, Sat 5 PM)."
+          }
+        }
+      ],
+      "rationale": "R6, POLICY Weekly rule 7: Christmas Masses dated on the parish's current Seasonal Mass Times page; no read bulletin prints Christmas yet. Decided like st-margaret-narberth s28 (and, unlike st-joseph-coatesville s45, nothing contradicts the page).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Choir Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stkatherineofsiena.org/news-events/seasonal-mass-times",
+          "said": "Thursday, December 24th ... 6pm Choir Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-28T04:26:59Z",
+            "current_because": "Seasonal Mass Times page read 2026-11-27; it prints this year's weekdays (Thursday, December 24th; Friday, December 25th; Friday, January 1st, 2027) and the homepage lists Dec 2026 events, so it is this year's schedule.",
+            "bulletin": "f2e2f8ba",
+            "fits_because": "f2e2f8ba p1 box says 'Schedule may vary on Christmas and New Year's Day'; the page's Mass times otherwise match the box (weekday 6:30/8, Sunday 6:30/8/10/12, Sat 5 PM)."
+          }
+        }
+      ],
+      "rationale": "R6: as the 4 PM Christmas Eve Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "00:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Midnight Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stkatherineofsiena.org/news-events/seasonal-mass-times",
+          "said": "12am Midnight Mass (Dec 25th)",
+          "schedule_check": {
+            "checked_at": "2026-11-28T04:26:59Z",
+            "current_because": "Seasonal Mass Times page read 2026-11-27; it prints this year's weekdays (Thursday, December 24th; Friday, December 25th; Friday, January 1st, 2027) and the homepage lists Dec 2026 events, so it is this year's schedule.",
+            "bulletin": "f2e2f8ba",
+            "fits_because": "f2e2f8ba p1 box says 'Schedule may vary on Christmas and New Year's Day'; the page's Mass times otherwise match the box (weekday 6:30/8, Sunday 6:30/8/10/12, Sat 5 PM)."
+          }
+        }
+      ],
+      "rationale": "R6: as the 4 PM Christmas Eve Mass; the page dates it Dec 25.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stkatherineofsiena.org/news-events/seasonal-mass-times",
+          "said": "christmas day masses Friday, December 25th 6:30am, 8am, 10am, and 12pm",
+          "schedule_check": {
+            "checked_at": "2026-11-28T04:26:59Z",
+            "current_because": "Seasonal Mass Times page read 2026-11-27; it prints this year's weekdays (Thursday, December 24th; Friday, December 25th; Friday, January 1st, 2027) and the homepage lists Dec 2026 events, so it is this year's schedule.",
+            "bulletin": "f2e2f8ba",
+            "fits_because": "f2e2f8ba p1 box says 'Schedule may vary on Christmas and New Year's Day'; the page's Mass times otherwise match the box (weekday 6:30/8, Sunday 6:30/8/10/12, Sat 5 PM)."
+          }
+        }
+      ],
+      "rationale": "R6: Christmas Day Masses outside the weekly Friday schedule; the 6:30 and 8 AM are the weekly Friday slots (POLICY Weekly rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stkatherineofsiena.org/news-events/seasonal-mass-times",
+          "said": "christmas day masses Friday, December 25th 6:30am, 8am, 10am, and 12pm",
+          "schedule_check": {
+            "checked_at": "2026-11-28T04:26:59Z",
+            "current_because": "Seasonal Mass Times page read 2026-11-27; it prints this year's weekdays (Thursday, December 24th; Friday, December 25th; Friday, January 1st, 2027) and the homepage lists Dec 2026 events, so it is this year's schedule.",
+            "bulletin": "f2e2f8ba",
+            "fits_because": "f2e2f8ba p1 box says 'Schedule may vary on Christmas and New Year's Day'; the page's Mass times otherwise match the box (weekday 6:30/8, Sunday 6:30/8/10/12, Sat 5 PM)."
+          }
+        }
+      ],
+      "rationale": "R6: Christmas Day Masses outside the weekly Friday schedule; the 6:30 and 8 AM are the weekly Friday slots (POLICY Weekly rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-26",
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stkatherineofsiena.org/news-events/seasonal-mass-times",
+          "said": "saturday, december 26th 6:30am and 8am",
+          "schedule_check": {
+            "checked_at": "2026-11-28T04:26:59Z",
+            "current_because": "Seasonal Mass Times page read 2026-11-27; it prints this year's weekdays (Thursday, December 24th; Friday, December 25th; Friday, January 1st, 2027) and the homepage lists Dec 2026 events, so it is this year's schedule.",
+            "bulletin": "f2e2f8ba",
+            "fits_because": "f2e2f8ba p1 box says 'Schedule may vary on Christmas and New Year's Day'; the page's Mass times otherwise match the box (weekday 6:30/8, Sunday 6:30/8/10/12, Sat 5 PM)."
+          }
+        }
+      ],
+      "rationale": "R6: an extra 6:30 AM Mass on Saturday Dec 26; the 8 AM is the weekly Saturday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katherine-of-siena-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Solemnity of Mary, Mother of God"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stkatherineofsiena.org/news-events/seasonal-mass-times",
+          "said": "the solemnity of mary, the mother of god Friday, January 1st, 2027 6:30am, 8am, 12pm",
+          "schedule_check": {
+            "checked_at": "2026-11-28T04:26:59Z",
+            "current_because": "Seasonal Mass Times page read 2026-11-27; it prints this year's weekdays (Thursday, December 24th; Friday, December 25th; Friday, January 1st, 2027) and the homepage lists Dec 2026 events, so it is this year's schedule.",
+            "bulletin": "f2e2f8ba",
+            "fits_because": "f2e2f8ba p1 box says 'Schedule may vary on Christmas and New Year's Day'; the page's Mass times otherwise match the box (weekday 6:30/8, Sunday 6:30/8/10/12, Sat 5 PM)."
+          }
+        }
+      ],
+      "rationale": "R6: the holy day's 12 PM Mass; 6:30 and 8 AM are the weekly Friday slots. The page gives no 7 PM, which fits the box's 'Schedule may vary on ... New Year's Day'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stkatherineofsiena.org/news-events/seasonal-mass-times",
+          "said": "advent penance service Tuesday, December 15th, 7pm many confessors available"
+        }
+      ],
+      "rationale": "Leaning per precedent st-aloysius-pottstown s17: a penance service is a celebration of the sacrament and starts at the printed time; 'many confessors available'. No end recorded. Website-only: the Seasonal Mass Times page is this year's (Thursday, December 24th; January 1st, 2027) and no read bulletin covers December.",
+      "question": "Add the Advent penance service, Tue Dec 15, 7:00 PM, as a confession?",
+      "options": [
+        {
+          "label": "Confession Dec 15 7:00 PM",
+          "entry": {
+            "church_slug": "st-katherine-of-siena-philadelphia",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-15",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Advent penance service"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "64bc776eb12e3396a45bdf3ef1d579a0",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T04:29:22.432783+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "f2e2f8ba7a2a8168f50dd0cf80eb04ef741664a841fed75ab94759a7385fc941",
+        "fetched_at": "2026-11-15T16:46:08Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "1eebced3a9d25cc6a841977e20867e29cbf5d1ee9b7e938fd63e2e1546056c55",
+        "fetched_at": "2026-11-08T15:54:46Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002251,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Mon to Fri: 6:30am, 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sat: 8am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sat: 8am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sat (Vigil Mass): 5:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sat (Vigil Mass): 5:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sun: 6:30am, 8:00am, 10:00am, 12:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sun: 6:30am, 8:00am, 10:00am, 12:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sun: 6:30am, 8:00am, 10:00am, 12:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sun: 6:30am, 8:00am, 10:00am, 12:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sun: 6:30am, 8:00am, 10:00am, 12:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sun: 6:30am, 8:00am, 10:00am, 12:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sun: 6:30am, 8:00am, 10:00am, 12:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sun: 6:30am, 8:00am, 10:00am, 12:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": "11:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays: 10:00 - 11:00am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays: 10:00 - 11:00am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o18",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "07:20",
+          "end_time": "07:50",
+          "cancelled": false,
+          "weeks_of_month": [
+            "first"
+          ],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "before the 8:00 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "First Friday: 7:20 -7:50am (before 8AM Mass)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "First Friday: 7:20 -7:50am (before 8AM Mass)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o19",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o20",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o21",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o22",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o23",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o24",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": "19:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o25",
+        "entry": {
+          "church_slug": "st-katherine-of-siena-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": "18:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Exposition of the Blessed Sacrament daily in the Adoration Chapel from 7am - 7pm Except Sat: 7am-6pm"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "fd3d8621b89f108a5bbdcca53995e56a7a455909bf512be4ff68cad854553578",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s29"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-12-24 16:00 @st-katherine-of-siena-philadelphia",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s30"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-12-24 18:00 @st-katherine-of-siena-philadelphia",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d3",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s31"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-12-25 00:00 @st-katherine-of-siena-philadelphia",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d4",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s32"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-12-25 10:00 @st-katherine-of-siena-philadelphia",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d5",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s33"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-12-25 12:00 @st-katherine-of-siena-philadelphia",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d6",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s34"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-12-26 06:30 @st-katherine-of-siena-philadelphia",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d7",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s35"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2027-01-01 12:00 @st-katherine-of-siena-philadelphia",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      }
+    ]
+  }
+}
