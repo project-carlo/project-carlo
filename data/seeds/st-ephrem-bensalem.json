@@ -1,0 +1,1890 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-ephrem-bensalem",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:45:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T02:00:15Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both November issues (image-only) print the same Mass, confession and Adoration schedule, matching the website homepage. Open: Tuesday Adoration in the convent ends at 7:45 PM (box and calendar) or 8:00 PM (flyer). The website's January 2026 'one daily Mass' change page is contradicted by current bulletins and left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+      "fetched_at": "2026-11-15T16:45:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3b8e6eaeca7ffe4a57ebdf6d432e2853aeedd97907add12eb6028e91bdb82ee3",
+      "fetched_at": "2026-11-08T15:54:03Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+      "bulletins": [
+        "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+        "3b8e6eaeca7ffe4a57ebdf6d432e2853aeedd97907add12eb6028e91bdb82ee3"
+      ],
+      "cached": false,
+      "cost_usd": 0.003243,
+      "at": "2026-11-28T02:08:11.714363+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Vigil: Saturday 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Vigil: Saturday 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 2,
+          "said": "Saturday, November 21st ... 5:00 St. Ephrem Parish Family"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Vigil: Saturday 5:00PM (available on our YouTube feed after 7:00pm Saturday evening.)”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and in the Nov 21 intentions; website homepage 'Saturday 8:30 AM, 5:00 PM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 2,
+          "said": "Sunday, November 22nd ... 7:30 / 9:00 / 10:30 / 12 noon / 4:00"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and both weeks' intentions; the website homepage gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 2,
+          "said": "Sunday, November 22nd ... 7:30 / 9:00 / 10:30 / 12 noon / 4:00"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and both weeks' intentions; the website homepage gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 2,
+          "said": "Sunday, November 22nd ... 7:30 / 9:00 / 10:30 / 12 noon / 4:00"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and both weeks' intentions; the website homepage gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 2,
+          "said": "Sunday, November 22nd ... 7:30 / 9:00 / 10:30 / 12 noon / 4:00"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and both weeks' intentions; the website homepage gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 2,
+          "said": "Sunday, November 22nd ... 7:30 / 9:00 / 10:30 / 12 noon / 4:00"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues and both weeks' intentions; the website homepage gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Monday & Saturday: 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Monday & Saturday: 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 2,
+          "said": "Monday, November 16th 8:30 William McLain"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday & Saturday: 8:30AM”"
+        }
+      ],
+      "rationale": "R1: box of both issues; the Monday intentions list only 8:30, as does the website homepage.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Monday & Saturday: 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Monday & Saturday: 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 2,
+          "said": "Saturday, November 21st 8:30 Ella Mae Chancler"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday & Saturday: 8:30AM”"
+        }
+      ],
+      "rationale": "R1: box of both issues and the Saturday intentions; website homepage 'Saturday 8:30 AM, 5:00 PM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 2,
+          "said": "Tuesday, November 17th 7:00 ... 8:30 (same for Wed 18th, Thu 19th, Fri 20th)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 2,
+          "said": "Tuesday, November 10th 7:00 ... 8:30 (same Wed-Fri)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday through Friday: 7:00AM & 8:30AM”"
+        }
+      ],
+      "rationale": "R1, R35: the box of both issues and both weeks' intentions list 7:00 and 8:30 Tue-Fri; the website homepage gives 'Tuesday – Friday 7:00 AM, 8:30 AM'. The website's older '2026 Weekly Mass Schedule Changes' page (one daily Mass from Jan 2) is contradicted by every current source (see the Monday 7 AM exclusion).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 2,
+          "said": "Tuesday, November 17th 7:00 ... 8:30 (same for Wed 18th, Thu 19th, Fri 20th)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 2,
+          "said": "Tuesday, November 10th 7:00 ... 8:30 (same Wed-Fri)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday through Friday: 7:00AM & 8:30AM”"
+        }
+      ],
+      "rationale": "R1, R35: the box of both issues and both weeks' intentions list 7:00 and 8:30 Tue-Fri; the website homepage gives 'Tuesday – Friday 7:00 AM, 8:30 AM'. The website's older '2026 Weekly Mass Schedule Changes' page (one daily Mass from Jan 2) is contradicted by every current source (see the Monday 7 AM exclusion).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 2,
+          "said": "Tuesday, November 17th 7:00 ... 8:30 (same for Wed 18th, Thu 19th, Fri 20th)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 2,
+          "said": "Tuesday, November 10th 7:00 ... 8:30 (same Wed-Fri)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday through Friday: 7:00AM & 8:30AM”"
+        }
+      ],
+      "rationale": "R1, R35: the box of both issues and both weeks' intentions list 7:00 and 8:30 Tue-Fri; the website homepage gives 'Tuesday – Friday 7:00 AM, 8:30 AM'. The website's older '2026 Weekly Mass Schedule Changes' page (one daily Mass from Jan 2) is contradicted by every current source (see the Monday 7 AM exclusion).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 2,
+          "said": "Tuesday, November 17th 7:00 ... 8:30 (same for Wed 18th, Thu 19th, Fri 20th)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 2,
+          "said": "Tuesday, November 10th 7:00 ... 8:30 (same Wed-Fri)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday through Friday: 7:00AM & 8:30AM”"
+        }
+      ],
+      "rationale": "R1, R35: the box of both issues and both weeks' intentions list 7:00 and 8:30 Tue-Fri; the website homepage gives 'Tuesday – Friday 7:00 AM, 8:30 AM'. The website's older '2026 Weekly Mass Schedule Changes' page (one daily Mass from Jan 2) is contradicted by every current source (see the Monday 7 AM exclusion).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 2,
+          "said": "Tuesday, November 17th 7:00 ... 8:30 (same for Wed 18th, Thu 19th, Fri 20th)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 2,
+          "said": "Tuesday, November 10th 7:00 ... 8:30 (same Wed-Fri)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday through Friday: 7:00AM & 8:30AM”"
+        }
+      ],
+      "rationale": "R1, R35: the box of both issues and both weeks' intentions list 7:00 and 8:30 Tue-Fri; the website homepage gives 'Tuesday – Friday 7:00 AM, 8:30 AM'. The website's older '2026 Weekly Mass Schedule Changes' page (one daily Mass from Jan 2) is contradicted by every current source (see the Monday 7 AM exclusion).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 2,
+          "said": "Tuesday, November 17th 7:00 ... 8:30 (same for Wed 18th, Thu 19th, Fri 20th)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 2,
+          "said": "Tuesday, November 10th 7:00 ... 8:30 (same Wed-Fri)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday through Friday: 7:00AM & 8:30AM”"
+        }
+      ],
+      "rationale": "R1, R35: the box of both issues and both weeks' intentions list 7:00 and 8:30 Tue-Fri; the website homepage gives 'Tuesday – Friday 7:00 AM, 8:30 AM'. The website's older '2026 Weekly Mass Schedule Changes' page (one daily Mass from Jan 2) is contradicted by every current source (see the Monday 7 AM exclusion).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 2,
+          "said": "Tuesday, November 17th 7:00 ... 8:30 (same for Wed 18th, Thu 19th, Fri 20th)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 2,
+          "said": "Tuesday, November 10th 7:00 ... 8:30 (same Wed-Fri)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday through Friday: 7:00AM & 8:30AM”"
+        }
+      ],
+      "rationale": "R1, R35: the box of both issues and both weeks' intentions list 7:00 and 8:30 Tue-Fri; the website homepage gives 'Tuesday – Friday 7:00 AM, 8:30 AM'. The website's older '2026 Weekly Mass Schedule Changes' page (one daily Mass from Jan 2) is contradicted by every current source (see the Monday 7 AM exclusion).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 2,
+          "said": "Tuesday, November 17th 7:00 ... 8:30 (same for Wed 18th, Thu 19th, Fri 20th)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 2,
+          "said": "Tuesday, November 10th 7:00 ... 8:30 (same Wed-Fri)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesday through Friday: 7:00AM & 8:30AM”"
+        }
+      ],
+      "rationale": "R1, R35: the box of both issues and both weeks' intentions list 7:00 and 8:30 Tue-Fri; the website homepage gives 'Tuesday – Friday 7:00 AM, 8:30 AM'. The website's older '2026 Weekly Mass Schedule Changes' page (one daily Mass from Jan 2) is contradicted by every current source (see the Monday 7 AM exclusion).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Confessions: Saturday afternoon: 4:00PM to 4:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Confessions: Saturday afternoon: 4:00PM to 4:45PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Confessions: Saturday afternoon: 4:00PM to 4:45PM; Wednesday after the 8:30AM Mass or by appointment with a priest at the rectory.”"
+        }
+      ],
+      "rationale": "R1: box of both issues; website homepage 'Saturday 4:00 – 4:45 PM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Wednesday after the 8:30AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Wednesday after the 8:30AM Mass"
+        },
+        {
+          "source": "website",
+          "url": "http://www.stephrem.com/",
+          "said": "Holy Week 2026 Schedule Confessions Every Wednesday – 9:00am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Confessions: Saturday afternoon: 4:00PM to 4:45PM; Wednesday after the 8:30AM Mass or by appointment with a priest at the rectory.”"
+        }
+      ],
+      "rationale": "R10: after a weekday Mass is 30 minutes after it starts, 9:00 AM; no end printed. The website's 'Confessions Every Wednesday – 9:00am' agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Eucharistic Adoration: Tuesdays beginning at 9:00AM & concluding with Night Prayer at 7:45PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Eucharistic Adoration: Tuesdays beginning at 9:00AM & concluding with Night Prayer at 7:45PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 3,
+          "said": "Tuesday 11/17/26 Adoration 9 AM to 7:45 Convent"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 3,
+          "said": "Tuesday 11/10/26 Adoration 9 AM to 7:45 Convent"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 3,
+          "said": "EUCHARISTIC ADORATION EVERY TUESDAY FROM 9:00AM-8:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 3,
+          "said": "EUCHARISTIC ADORATION EVERY TUESDAY FROM 9:00AM-8:00PM"
+        },
+        {
+          "source": "website",
+          "url": "http://www.stephrem.com/parish-history/",
+          "said": "Now the completed parish property included the Church, School, Rectory and Convent."
+        },
+        {
+          "source": "c1",
+          "bulletin": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Eucharistic Adoration: Tuesdays beginning at 9:00AM & concluding with Night Prayer at 7:45PM.”"
+        }
+      ],
+      "rationale": "C8: the schedule box and the weekly calendar of both issues end it at 7:45 PM with Night Prayer; the flyer on p3 says 8:00 PM. Leaning 7:45: two service-specific listings against one, as in st-thomas-the-apostle-glen-mills s13 and st-laurence-upper-darby s17. Place: the calendar puts it in the Convent, which the parish history places on the parish property with the church (POLICY: a chapel on the same grounds belongs to the church); the parish's own box lists it as its public Adoration. No exposition word is printed, though the flyer shows a monstrance; none claimed beyond 'Adoration' (R38).",
+      "question": "Tuesday Adoration in the convent: end at 7:45 PM (Night Prayer) or 8:00 PM?",
+      "options": [
+        {
+          "label": "Tue 9:00 AM-7:45 PM",
+          "entry": {
+            "church_slug": "st-ephrem-church-bensalem",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "19:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the convent; concludes with Night Prayer"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Tue 9:00 AM-8:00 PM",
+          "entry": {
+            "church_slug": "st-ephrem-church-bensalem",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the convent"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 11,
+          "start_day": null,
+          "end_month": 12,
+          "end_day": null
+        },
+        "note": "Advent weekday Mass per the 2026 changes page"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "http://www.stephrem.com/2026-weekly-mass-schedule-changes/",
+          "said": "We will have 2 daily Masses during the seasons of Advent & Lent! Monday-Friday – 7:00am & 8:30am Masses ONLY during Advent & Lent"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Monday & Saturday: 8:30AM Tuesday through Friday: 7:00AM & 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 1,
+          "said": "Monday & Saturday: 8:30AM Tuesday through Friday: 7:00AM & 8:30AM"
+        }
+      ],
+      "rationale": "R6: the page announced a January 2026 schedule (one daily Mass; Tue/Wed 8:30 only) that the November Ordinary-Time bulletins and intentions contradict (Tue-Fri 7:00 and 8:30), and the homepage gives Monday 8:30 only, so it is an earlier period's announcement. Its Advent Monday 7 AM is not trusted; Advent's dates also can't be written as months (R33). December bulletins will show any Advent change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-13",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Remembrance Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b8e6eae",
+          "page": 5,
+          "said": "Help Needed... for the Remembrance Mass December 13th at 4 PM"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the occasion is celebrated at the regular Sunday 4:00 PM Mass, which is already weekly; no separate slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 1,
+          "said": "Wednesday after the 8:30AM Mass or by appointment with a priest at the rectory."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57495abf",
+          "page": 7,
+          "said": "YOUNG ADULT MASS ... SATURDAY, Nov 28th 5PM ... SKS; Czestochowa Young Adult's ... Vigil Mass at 5:00 pm in the lower church ... Doylestown"
+        }
+      ],
+      "rationale": "R22: events at other parishes (St. Katharine of Siena; National Shrine of Our Lady of Czestochowa) on the Around the Archdiocese pages.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "c20cf79bdc6629d83a0b93d00f62905f",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T02:08:11.714363+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "57495abf29bb7377d3067eb5b05140bbb0bd45ba1fcae3d614811a043f6fc156",
+        "fetched_at": "2026-11-15T16:45:10Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "3b8e6eaeca7ffe4a57ebdf6d432e2853aeedd97907add12eb6028e91bdb82ee3",
+        "fetched_at": "2026-11-08T15:54:03Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.003243,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Vigil: Saturday 5:00PM (available on our YouTube feed after 7:00pm Saturday evening.)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Vigil: Saturday 5:00PM (available on our YouTube feed after 7:00pm Saturday evening.)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:00AM, 10:30AM, 12:00 Noon, 4:00PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday & Saturday: 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday & Saturday: 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday & Saturday: 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday & Saturday: 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday through Friday: 7:00AM & 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday through Friday: 7:00AM & 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday through Friday: 7:00AM & 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday through Friday: 7:00AM & 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday through Friday: 7:00AM & 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday through Friday: 7:00AM & 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday through Friday: 7:00AM & 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday through Friday: 7:00AM & 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday through Friday: 7:00AM & 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday through Friday: 7:00AM & 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday through Friday: 7:00AM & 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday through Friday: 7:00AM & 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday through Friday: 7:00AM & 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday through Friday: 7:00AM & 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesday through Friday: 7:00AM & 8:30AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesday through Friday: 7:00AM & 8:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": "16:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Confessions: Saturday afternoon: 4:00PM to 4:45PM; Wednesday after the 8:30AM Mass or by appointment with a priest at the rectory."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Confessions: Saturday afternoon: 4:00PM to 4:45PM; Wednesday after the 8:30AM Mass or by appointment with a priest at the rectory."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o18",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "After the 8:30 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Confessions: Saturday afternoon: 4:00PM to 4:45PM; Wednesday after the 8:30AM Mass or by appointment with a priest at the rectory."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Confessions: Saturday afternoon: 4:00PM to 4:45PM; Wednesday after the 8:30AM Mass or by appointment with a priest at the rectory."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o19",
+        "entry": {
+          "church_slug": "st-ephrem-church-bensalem",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "19:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Convent",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Tuesdays beginning at 9:00AM & concluding with Night Prayer at 7:45PM."
+          },
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Adoration 9 AM to 7:45 Convent"
+          },
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "EUCHARISTIC ADORATION EVERY TUESDAY FROM 9:00AM-8:00PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Eucharistic Adoration: Tuesdays beginning at 9:00AM & concluding with Night Prayer at 7:45PM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Adoration 9 AM to 7:45 Convent"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "EUCHARISTIC ADORATION EVERY TUESDAY FROM 9:00AM-8:00PM"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "ac9dd8fed6c9cefb2fb600679d15a8a20421a7945c75dd4e8b87c7d4424ebb09",
+    "differences": []
+  }
+}
