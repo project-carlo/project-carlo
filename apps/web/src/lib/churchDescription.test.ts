@@ -29,6 +29,7 @@ const church: ChurchDetail = {
 };
 
 const WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday"];
+const DAY_NAMES = ["sunday", ...WEEKDAYS, "saturday"];
 
 let nextId = 1;
 
@@ -88,7 +89,7 @@ describe("buildChurchDescription", () => {
       weekly("adoration", "friday", "9:00", "17:00"),
     ];
     expect(buildChurchDescription(church, events)).toBe(
-      "Mass: Sun 8:30 & 11 a.m.; Tue – Fri 8 a.m.; Sat 4 p.m. Confession: Sat 3 – 3:45 p.m. Adoration: Fri 9 a.m. – 5 p.m. Weekly times for St. Charles Borromeo.",
+      "Mass: Sat 4 p.m.; Sun 8:30 & 11 a.m.; Tue – Fri 8 a.m. Confession: Sat 3 – 3:45 p.m. Adoration: Fri 9 a.m. – 5 p.m. Weekly times for St. Charles Borromeo.",
     );
   });
 
@@ -112,12 +113,12 @@ describe("buildChurchDescription", () => {
     ];
     const description = buildChurchDescription(fatima, events);
     expect(description).toBe(
-      "Mass: Sun 9 a.m., 12 & 5 p.m.; Mon – Fri 11:30 a.m. & 4 p.m.; Sat 8, 11:30 a.m. & 4 p.m. Confession & Adoration times for Our Lady of Fatima Shrine.",
+      "Mass: Sat 4 p.m.; Sun 9 a.m., 12 & 5 p.m.; Mon – Fri 11:30 a.m. & 4 p.m.; Sat 8 & 11:30 a.m. Confession & Adoration times for Our Lady of Fatima Shrine.",
     );
     expect(description.length).toBeLessThanOrEqual(DESCRIPTION_MAX_LENGTH);
   });
 
-  it("cuts the Mass times to Sunday's before giving up on them", () => {
+  it("cuts the Mass times to the weekend's before giving up on them", () => {
     const events = [
       weekly("mass", "sunday", "7:30"),
       weekly("mass", "sunday", "9:00"),
@@ -129,11 +130,11 @@ describe("buildChurchDescription", () => {
       weekly("confession", "saturday", "15:00", "16:00"),
     ];
     expect(buildChurchDescription(church, events)).toBe(
-      "Mass: Sun 7:30, 9, 10:30 a.m. & 12 p.m. Confession times for St. Charles Borromeo in Rochester, NY.",
+      "Mass: Sat 4:30 p.m.; Sun 7:30, 9, 10:30 a.m. & 12 p.m. Confession times for St. Charles Borromeo in Rochester, NY.",
     );
   });
 
-  it("puts days with the same times together, though not Sunday", () => {
+  it("leads Mass with the Saturday vigil and Sunday, a Saturday morning going with the weekdays", () => {
     const events = [
       weekly("mass", "sunday", "8:00"),
       ...["monday", "wednesday", "friday"].map((day) => weekly("mass", day, "8:00")),
@@ -142,7 +143,7 @@ describe("buildChurchDescription", () => {
       weekly("mass", "saturday", "16:00"),
     ];
     expect(buildChurchDescription(church, events)).toBe(
-      "Mass: Sun 8 a.m.; Mon, Wed & Fri 8 a.m.; Tue & Thu 12:05 p.m.; Sat 8 a.m. & 4 p.m. Weekly times for St. Charles Borromeo in Rochester, NY.",
+      "Mass: Sat 4 p.m.; Sun 8 a.m.; Mon, Wed, Fri & Sat 8 a.m.; Tue & Thu 12:05 p.m. Weekly times for St. Charles Borromeo in Rochester, NY.",
     );
   });
 
@@ -163,6 +164,78 @@ describe("buildChurchDescription", () => {
     ];
     expect(buildChurchDescription(church, events)).toBe(
       "Mass: Sun 10 a.m. Weekly times for St. Charles Borromeo in Rochester, NY.",
+    );
+  });
+
+  it("names Adoration, then Confession instead, before naming both", () => {
+    const masses = [
+      weekly("mass", "saturday", "17:00"),
+      weekly("mass", "sunday", "8:00"),
+      weekly("mass", "sunday", "10:30"),
+      ...WEEKDAYS.map((day) => weekly("mass", day, "7:30")),
+    ];
+    const longAdoration = [
+      weekly("adoration", "tuesday", "9:00", "12:00"),
+      weekly("adoration", "thursday", "13:00", "19:00"),
+    ];
+    expect(
+      buildChurchDescription(church, [
+        ...masses,
+        weekly("confession", "saturday", "15:30", "16:30"),
+        ...longAdoration,
+      ]),
+    ).toBe(
+      "Mass: Sat 5 p.m.; Sun 8 & 10:30 a.m.; Mon – Fri 7:30 a.m. Confession: Sat 3:30 – 4:30 p.m. Adoration times for St. Charles Borromeo in Rochester, NY.",
+    );
+    expect(
+      buildChurchDescription(church, [
+        ...masses,
+        weekly("confession", "tuesday", "18:00", "19:00"),
+        weekly("confession", "wednesday", "11:00", "11:45"),
+        weekly("confession", "saturday", "15:30", "16:30"),
+        weekly("adoration", "friday", "9:00", "17:00"),
+      ]),
+    ).toBe(
+      "Mass: Sat 5 p.m.; Sun 8 & 10:30 a.m.; Mon – Fri 7:30 a.m. Adoration: Fri 9 a.m. – 5 p.m. Confession times for St. Charles Borromeo in Rochester, NY.",
+    );
+  });
+
+  it("puts Sunday with the other days outside Mass, and all seven as every day", () => {
+    const events = [
+      weekly("mass", "sunday", "19:00"),
+      ...["sunday", "wednesday", "thursday"].map((day) => weekly("confession", day, "18:00")),
+      ...DAY_NAMES.map((day) => weekly("adoration", day, "7:00", "19:00")),
+    ];
+    expect(buildChurchDescription(church, events)).toBe(
+      "Mass: Sun 7 p.m. Confession: Sun, Wed & Thu 6 p.m. Adoration: every day 7 a.m. – 7 p.m. Weekly times for St. Charles Borromeo in Rochester, NY.",
+    );
+  });
+
+  it("lists the slots in effect today, dated or seasonal, and not the others", () => {
+    // Friday, November 27, 2026.
+    const today = new Date(2026, 10, 27);
+    const winter = { start_month: 10, start_day: null, end_month: 4, end_day: null };
+    const summer = { start_month: 5, start_day: null, end_month: 9, end_day: null };
+    const events = [
+      weekly("mass", "sunday", "10:30", null, { valid_from: "2026-11-16" }),
+      weekly("mass", "sunday", "9:00", null, { valid_until: "2026-11-15" }),
+      weekly("mass", "sunday", "12:00", null, { valid_from: "2027-01-01" }),
+      weekly("mass", "saturday", "16:00", null, { season: winter }),
+      weekly("mass", "saturday", "17:00", null, { season: summer }),
+    ];
+    expect(buildChurchDescription(church, events, null, today)).toBe(
+      "Mass: Sat 4 p.m.; Sun 10:30 a.m. Weekly times for St. Charles Borromeo in Rochester, NY.",
+    );
+    // A schedule that has yet to begin is not yet the church’s.
+    expect(
+      buildChurchDescription(
+        church,
+        [weekly("mass", "sunday", "10:30", null, { valid_from: "2027-01-01" })],
+        null,
+        today,
+      ),
+    ).toBe(
+      "Mass, Confession, and Adoration times for St. Charles Borromeo in Rochester, NY, from the parish’s weekly bulletin.",
     );
   });
 

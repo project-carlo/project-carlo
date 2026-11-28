@@ -506,7 +506,10 @@ export function ChurchPageContent({
                                 <span key={event.id}>
                                   {idx > 0 ? (
                                     <>
-                                      {" "}
+                                      {/* No break before the dot: a wrapped
+                                          line ends on it rather than starting
+                                          with it. */}
+                                      {" "}
                                       <span className="mx-1 text-ink-faint">
                                         ·
                                       </span>{" "}
