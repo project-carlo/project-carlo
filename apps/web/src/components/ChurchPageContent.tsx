@@ -6,6 +6,7 @@ import {
   continuousAccessLine,
   continuousTimes,
   DAY_ORDER,
+  describePatternBeyondLabel,
   EVERY_DAY,
   EVENT_TYPE_LABELS,
   EVENT_TYPE_ORDER,
@@ -17,8 +18,11 @@ import {
   formatLongMonthDay,
   formatMonthDay,
   formatTimeRange,
-  slotQualifier,
+  isPlainWeekly,
+  patternKey,
   titleCase,
+  weekdayLabel,
+  WEEKS_OF_MONTH,
 } from "@carlo/core";
 import {
   CHURCH_LIST,
@@ -51,17 +55,42 @@ const ANNOTATION_LINK_CLASS =
   "text-rubric underline decoration-rubric/40 decoration-from-font underline-offset-[3px] transition-colors hover:text-rubric-deep hover:decoration-rubric-deep";
 
 interface EventsByType {
+  /** Slots that run every week of the year, by weekday. */
   weeklyByDay: Record<string, EventSummary[]>;
+  /** Weekly slots that keep only some weeks, or part of the year. */
+  patterned: PatternedRow[];
   specificDate: EventSummary[];
+}
+
+/**
+ * The slots on one weekday that share one schedule beyond it ("4th Sunday",
+ * "Tuesday, October through June"), as a row of their own under the
+ * every-week rows.
+ *
+ * The church page lists a slot whether or not it is running today (someone
+ * looking up a parish wants its whole schedule). A slot set among the
+ * every-week times of its day, with its qualifier in a note, read as one more
+ * time every week: the 4th-Sunday Mass between the Sunday 12 and 5 read as a
+ * Sunday 1:30. On a row of its own, its label says when it runs, and the
+ * note says what the label can't, such as the months it runs, which tells a
+ * reader why the map did not show it today.
+ */
+interface PatternedRow {
+  key: string;
+  label: string;
+  qualifier: string | null;
+  events: EventSummary[];
+  dayIndex: number;
+  weekIndex: number;
 }
 
 function partitionEventsByType(
   events: EventSummary[],
 ): Record<EventType, EventsByType> {
   const result: Record<EventType, EventsByType> = {
-    mass: { weeklyByDay: {}, specificDate: [] },
-    confession: { weeklyByDay: {}, specificDate: [] },
-    adoration: { weeklyByDay: {}, specificDate: [] },
+    mass: { weeklyByDay: {}, patterned: [], specificDate: [] },
+    confession: { weeklyByDay: {}, patterned: [], specificDate: [] },
+    adoration: { weeklyByDay: {}, patterned: [], specificDate: [] },
   };
 
   for (const type of EVENT_TYPE_ORDER) {
@@ -70,13 +99,41 @@ function partitionEventsByType(
     }
   }
 
+  const patternedByKey: Record<EventType, Map<string, PatternedRow>> = {
+    mass: new Map(),
+    confession: new Map(),
+    adoration: new Map(),
+  };
+
   for (const e of events) {
     const typeData = result[e.type];
     if (e.kind === "weekly" && e.day_of_week) {
       const day = e.day_of_week.toLowerCase();
-      if (day in typeData.weeklyByDay) {
+      if (!(day in typeData.weeklyByDay)) continue;
+      if (isPlainWeekly(e)) {
         typeData.weeklyByDay[day].push(e);
+        continue;
       }
+      const key = `${day}:${patternKey(e)}`;
+      const rows = patternedByKey[e.type];
+      let row = rows.get(key);
+      if (!row) {
+        row = {
+          key,
+          label: weekdayLabel(e, day),
+          qualifier: describePatternBeyondLabel(e, day),
+          events: [],
+          dayIndex: (DAY_ORDER as readonly string[]).indexOf(day),
+          weekIndex: e.exclude_weeks
+            ? WEEKS_OF_MONTH.length
+            : Math.min(
+                ...e.weeks_of_month.map((week) => WEEKS_OF_MONTH.indexOf(week)),
+                WEEKS_OF_MONTH.length,
+              ),
+        };
+        rows.set(key, row);
+      }
+      row.events.push(e);
     } else {
       typeData.specificDate.push(e);
     }
@@ -86,6 +143,15 @@ function partitionEventsByType(
     const typeData = result[type];
     for (const day of DAY_ORDER) {
       typeData.weeklyByDay[day].sort((a, b) => a.start_time - b.start_time);
+    }
+    typeData.patterned = [...patternedByKey[type].values()].sort(
+      (a, b) =>
+        a.dayIndex - b.dayIndex ||
+        a.weekIndex - b.weekIndex ||
+        a.key.localeCompare(b.key),
+    );
+    for (const row of typeData.patterned) {
+      row.events.sort((a, b) => a.start_time - b.start_time);
     }
     typeData.specificDate.sort((a, b) =>
       (a.date ?? "").localeCompare(b.date ?? ""),
@@ -105,6 +171,7 @@ function collectSectionEvents(section: EventsByType): EventSummary[] {
     const list = section.weeklyByDay[day];
     if (list) all.push(...list);
   }
+  for (const row of section.patterned) all.push(...row.events);
   all.push(...section.specificDate);
   return all;
 }
@@ -165,23 +232,6 @@ function EventNote({ note }: { note: string | null }) {
   );
 }
 
-/**
- * What qualifies this time beyond its weekday: when the slot only runs part of
- * the year or only on certain weeks of the month, plus whatever the bulletin
- * added.
- *
- * The church page lists a slot whether or not it is running today (someone
- * looking up a parish wants its whole schedule), so the qualifier is what tells
- * them the October-to-June confession slot they can see here is not on offer in
- * September, and why the map did not show it.
- */
-function eventQualifier(event: EventSummary): string | null {
-  const parts = [slotQualifier(event), event.note].filter(
-    (part): part is string => Boolean(part),
-  );
-  return parts.length > 0 ? parts.join(" · ") : null;
-}
-
 function PageRef({
   event,
   bulletinUrl,
@@ -214,6 +264,29 @@ function PageRef({
       {label}
     </span>
   );
+}
+
+/** One row's times, dot-separated, each with its note and its bulletin page
+ *  when that isn't the section's. */
+function SlotTimes({
+  events,
+  sectionPage,
+  bulletinUrl,
+}: {
+  events: EventSummary[];
+  sectionPage: number | null;
+  bulletinUrl: string | null;
+}) {
+  return events.map((event, idx) => (
+    <span key={event.id}>
+      {idx > 0 ? <span className="mx-2 text-ink-faint">·</span> : null}
+      <span className="tabular-nums">{formatTimeValue(event)}</span>
+      <EventNote note={event.note} />
+      {event.page_number !== sectionPage ? (
+        <PageRef event={event} bulletinUrl={bulletinUrl} />
+      ) : null}
+    </span>
+  ));
 }
 
 /**
@@ -437,12 +510,16 @@ export function ChurchPageContent({
             <div className="rise-in space-y-12" style={{ animationDelay: "80ms" }}>
               {EVENT_TYPE_ORDER.map((eventType) => {
                 const section = byType[eventType];
-                const { weeklyByDay, specificDate } = section;
+                const { weeklyByDay, patterned, specificDate } = section;
                 const hasWeekly = DAY_ORDER.some(
                   (d) => (weeklyByDay[d]?.length ?? 0) > 0,
                 );
                 const chapel = eventType === "adoration" ? continuous : null;
-                const hasAny = hasWeekly || specificDate.length > 0 || chapel !== null;
+                const hasAny =
+                  hasWeekly ||
+                  patterned.length > 0 ||
+                  specificDate.length > 0 ||
+                  chapel !== null;
                 if (!hasAny) return null;
 
                 const sectionEvents = collectSectionEvents(section);
@@ -484,29 +561,41 @@ export function ChurchPageContent({
                               {titleCase(day)}
                             </dt>
                             <dd className="font-serif text-[1.05rem] leading-snug text-ink">
-                              {dayEvents.map((event, idx) => (
-                                <span key={event.id}>
-                                  {idx > 0 ? (
-                                    <span className="mx-2 text-ink-faint">
-                                      ·
-                                    </span>
-                                  ) : null}
-                                  <span className="tabular-nums">
-                                    {formatTimeValue(event)}
-                                  </span>
-                                  <EventNote note={eventQualifier(event)} />
-                                  {event.page_number !== sectionPage ? (
-                                    <PageRef
-                                      event={event}
-                                      bulletinUrl={church.bulletin_url}
-                                    />
-                                  ) : null}
-                                </span>
-                              ))}
+                              <SlotTimes
+                                events={dayEvents}
+                                sectionPage={sectionPage}
+                                bulletinUrl={church.bulletin_url}
+                              />
                             </dd>
                           </div>
                         );
                       })}
+
+                      {patterned.map((row) => (
+                        <div
+                          key={row.key}
+                          className="grid grid-cols-[6rem_1fr] items-baseline gap-4 py-2.5"
+                        >
+                          {/* In the one-off rows' red, so every row that
+                              doesn't come round each week reads apart from
+                              the plain weekday rows above. */}
+                          <dt className="smallcaps text-[0.875rem] leading-tight text-rubric">
+                            {row.label}
+                          </dt>
+                          <dd className="font-serif text-[1.05rem] leading-snug text-ink">
+                            <SlotTimes
+                              events={row.events}
+                              sectionPage={sectionPage}
+                              bulletinUrl={church.bulletin_url}
+                            />
+                            {row.qualifier ? (
+                              <span className={`block ${ANNOTATION_CLASS} text-ink-faint`}>
+                                {row.qualifier}
+                              </span>
+                            ) : null}
+                          </dd>
+                        </div>
+                      ))}
 
                       {specificDate.length > 0 ? (
                         <>
@@ -537,7 +626,7 @@ export function ChurchPageContent({
                                 <span className="tabular-nums">
                                   {formatTimeValue(event)}
                                 </span>
-                                <EventNote note={eventQualifier(event)} />
+                                <EventNote note={event.note} />
                                 {event.page_number !== sectionPage ? (
                                   <PageRef
                                     event={event}

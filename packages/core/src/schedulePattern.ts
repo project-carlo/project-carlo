@@ -226,12 +226,65 @@ export function describeSchedulePattern(
   pattern: SchedulePattern,
   dayOfWeek: string | null,
 ): string | null {
+  return describePatternParts(pattern, dayOfWeek, true);
+}
+
+const SHORT_WEEKS: Record<WeekOfMonth, string> = {
+  first: "1st",
+  second: "2nd",
+  third: "3rd",
+  fourth: "4th",
+  fifth: "5th",
+  last: "last",
+};
+
+/**
+ * The weekday a slot falls on, narrowed to the weeks of the month it keeps,
+ * short enough to head a schedule row: "4th Sunday", "1st & 3rd Fridays",
+ * "Last Sunday". Just the weekday when the slot keeps every week, or every
+ * week but some, which its note words instead.
+ */
+export function weekdayLabel(
+  pattern: SchedulePattern,
+  dayOfWeek: string,
+): string {
+  const day = dayOfWeek.charAt(0).toUpperCase() + dayOfWeek.slice(1).toLowerCase();
+  if (pattern.weeks_of_month.length === 0 || pattern.exclude_weeks) return day;
+  const ordered = WEEKS_OF_MONTH.filter((week) =>
+    pattern.weeks_of_month.includes(week),
+  ).map((week) => SHORT_WEEKS[week]);
+  const weeks =
+    ordered.length === 1
+      ? ordered[0]
+      : `${ordered.slice(0, -1).join(", ")} & ${ordered[ordered.length - 1]}`;
+  const plural = ordered.length > 1 ? "s" : "";
+  return `${weeks.charAt(0).toUpperCase()}${weeks.slice(1)} ${day}${plural}`;
+}
+
+/**
+ * What `weekdayLabel` leaves for a row's note to say: weeks skipped, the
+ * season, the dates the slot runs between. Null when the label says it all.
+ */
+export function describePatternBeyondLabel(
+  pattern: SchedulePattern,
+  dayOfWeek: string,
+): string | null {
+  return describePatternParts(pattern, dayOfWeek, pattern.exclude_weeks ?? false);
+}
+
+function describePatternParts(
+  pattern: SchedulePattern,
+  dayOfWeek: string | null,
+  withWeeks: boolean,
+): string | null {
   const parts = [
-    describeWeeksOfMonth(
-      pattern.weeks_of_month,
-      dayOfWeek,
-      pattern.exclude_weeks,
-    ),
+    withWeeks
+      ? describeWeeksOfMonth(
+          pattern.weeks_of_month,
+          dayOfWeek,
+          pattern.exclude_weeks,
+        )
+      : null,
     describeSeason(pattern.season),
     pattern.valid_from ? `From ${formatValidityDate(pattern.valid_from)}` : null,
     pattern.valid_until ? `Through ${formatValidityDate(pattern.valid_until)}` : null,
