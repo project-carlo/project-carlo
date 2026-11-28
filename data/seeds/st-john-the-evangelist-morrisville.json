@@ -1,0 +1,1833 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-the-evangelist-morrisville",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:45:58Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T01:24:30Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday and Confession times agree in both issues (image-only, read by render) and on stjohnpa.org. Weekday Adoration Mon-Fri 8:30 AM-8:00 PM is settled from 'after daily Mass, until 8:00 PM'. Open: Sunday Adoration's start (the line says 'after daily Mass') and Saturday Adoration ('until Vigil Mass', no start).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+      "fetched_at": "2026-11-15T16:45:58Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "543d7d4a71b50bb063c25ae998cb17015dc49b048c7d038d660f4780e9e0384d",
+      "fetched_at": "2026-11-08T15:54:36Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+      "bulletins": [
+        "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+        "543d7d4a71b50bb063c25ae998cb17015dc49b048c7d038d660f4780e9e0384d"
+      ],
+      "cached": false,
+      "cost_usd": 0.002427,
+      "at": "2026-11-28T01:30:21.498956+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "Sunday Vigil Mass: Saturday 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "Sunday Vigil Mass: Saturday 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 6,
+          "said": "Saturday, November 21 ... 4:00 PM Mom and Dad Whitesell"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Vigil Mass: Saturday 4:00 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read and in the Nov 15 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 6,
+          "said": "Sunday, November 15 ... 7:30 AM ... 9:30 AM ... 11:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30, 9:30 and 11:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 6,
+          "said": "Sunday, November 15 ... 7:30 AM ... 9:30 AM ... 11:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30, 9:30 and 11:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 6,
+          "said": "Sunday, November 15 ... 7:30 AM ... 9:30 AM ... 11:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30, 9:30 and 11:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 6,
+          "said": "Monday, November 16 ... 8:00 AM (each day Nov 16-21)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays Monday - Saturday 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read; each weekday's intention lists 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 6,
+          "said": "Monday, November 16 ... 8:00 AM (each day Nov 16-21)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays Monday - Saturday 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read; each weekday's intention lists 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 6,
+          "said": "Monday, November 16 ... 8:00 AM (each day Nov 16-21)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays Monday - Saturday 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read; each weekday's intention lists 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 6,
+          "said": "Monday, November 16 ... 8:00 AM (each day Nov 16-21)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays Monday - Saturday 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read; each weekday's intention lists 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 6,
+          "said": "Monday, November 16 ... 8:00 AM (each day Nov 16-21)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays Monday - Saturday 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read; each weekday's intention lists 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "Weekdays Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 6,
+          "said": "Monday, November 16 ... 8:00 AM (each day Nov 16-21)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays Monday - Saturday 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues read; each weekday's intention lists 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:45",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "THE SACRAMENT OF CONFESSION Saturdays: 2:45 PM - 3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "THE SACRAMENT OF CONFESSION Saturdays: 2:45 PM - 3:45 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturdays: 2:45 PM - 3:45 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "Tuesdays: 8:30 AM - 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "Tuesdays: 8:30 AM - 9:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://stjohnpa.org/penance/",
+          "said": "on Tuesdays from 8:30 -9:00am in the Chapel after daily Mass."
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Tuesdays: 8:30 AM - 9:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Sunday through Friday– after daily Mass, until 8:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Sunday through Friday– after daily Mass, until 8:00 PM."
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday through Friday—after daily Mass, until 8:00 PM.”"
+        }
+      ],
+      "rationale": "R1, R10: the box of both issues times it after the 8:00 AM weekday Mass, which POLICY puts at 8:30 AM, until the printed 8:00 PM. The parish has one church; no place is printed, so no chapel is named and no exposition is claimed beyond 'Adoration of the Blessed Sacrament'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Sunday through Friday– after daily Mass, until 8:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Sunday through Friday– after daily Mass, until 8:00 PM."
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday through Friday—after daily Mass, until 8:00 PM.”"
+        }
+      ],
+      "rationale": "R1, R10: the box of both issues times it after the 8:00 AM weekday Mass, which POLICY puts at 8:30 AM, until the printed 8:00 PM. The parish has one church; no place is printed, so no chapel is named and no exposition is claimed beyond 'Adoration of the Blessed Sacrament'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Sunday through Friday– after daily Mass, until 8:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Sunday through Friday– after daily Mass, until 8:00 PM."
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday through Friday—after daily Mass, until 8:00 PM.”"
+        }
+      ],
+      "rationale": "R1, R10: the box of both issues times it after the 8:00 AM weekday Mass, which POLICY puts at 8:30 AM, until the printed 8:00 PM. The parish has one church; no place is printed, so no chapel is named and no exposition is claimed beyond 'Adoration of the Blessed Sacrament'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Sunday through Friday– after daily Mass, until 8:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Sunday through Friday– after daily Mass, until 8:00 PM."
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday through Friday—after daily Mass, until 8:00 PM.”"
+        }
+      ],
+      "rationale": "R1, R10: the box of both issues times it after the 8:00 AM weekday Mass, which POLICY puts at 8:30 AM, until the printed 8:00 PM. The parish has one church; no place is printed, so no chapel is named and no exposition is claimed beyond 'Adoration of the Blessed Sacrament'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Sunday through Friday– after daily Mass, until 8:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Sunday through Friday– after daily Mass, until 8:00 PM."
+        },
+        {
+          "source": "c1",
+          "bulletin": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday through Friday—after daily Mass, until 8:00 PM.”"
+        }
+      ],
+      "rationale": "R1, R10: the box of both issues times it after the 8:00 AM weekday Mass, which POLICY puts at 8:30 AM, until the printed 8:00 PM. The parish has one church; no place is printed, so no chapel is named and no exposition is claimed beyond 'Adoration of the Blessed Sacrament'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "Sunday through Friday– after daily Mass, until 8:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "Sunday through Friday– after daily Mass, until 8:00 PM."
+        }
+      ],
+      "rationale": "R30: 'after daily Mass' can't apply to Sunday, which has only the 7:30, 9:30 and 11:30 AM Masses. The website names no Adoration. Leaning to the start after the last Sunday Mass (POLICY: one hour after a weekend Mass), since any reading of 'after Mass, until 8:00 PM' covers 12:30-8:00 PM; 8:30 AM would claim Adoration during the later Masses.",
+      "question": "Sunday Adoration: the box says 'Sunday through Friday– after daily Mass, until 8:00 PM', but Sunday has no daily Mass. Which start?",
+      "options": [
+        {
+          "label": "Sun 12:30-8:00 PM (after the last Mass)",
+          "entry": {
+            "church_slug": "st-john-the-evangelist-morrisville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 11:30 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Sun 8:30 AM-8:00 PM (after the first Mass)",
+          "entry": {
+            "church_slug": "st-john-the-evangelist-morrisville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:30 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "Sunday through Friday– after daily Mass, until 8:00 PM. Saturday—until Vigil Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "Sunday through Friday– after daily Mass, until 8:00 PM. Saturday—until Vigil Mass."
+        }
+      ],
+      "rationale": "R30: the start comes only by reading the line's 'after daily Mass' as carrying over to Saturday (8:00 AM Mass, so 8:30 per R10); the Miraculous Medal Novena also follows that Mass ('Saturdays, following 8:00 AM Mass'). The end runs until a Mass with no clock time, so POLICY records no end_time; Saturday confession (2:45-3:45 PM) suggests it may end before 4:00. gpt-6-luna read 8:30 AM-4:00 PM, quoting 'Saturday—after daily Mass—until Vigil Mass', but both issues' p1 (re-read at 300 dpi) print only 'Saturday—until Vigil Mass.' Leaning to include from 8:30 with no end.",
+      "question": "Saturday Adoration: the box says 'Saturday—until Vigil Mass', with no start. Add it from 8:30 AM (after the 8:00 AM Mass)?",
+      "options": [
+        {
+          "label": "Sat from 8:30 AM, no end",
+          "entry": {
+            "church_slug": "st-john-the-evangelist-morrisville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Until the 4:00 PM Vigil Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Sat 8:30 AM-4:00 PM",
+          "entry": {
+            "church_slug": "st-john-the-evangelist-morrisville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "Holy Day Vigil—5:30 PM / Holy Day—8:00 AM and 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "Holy Day Vigil—5:30 PM / Holy Day—8:00 AM and 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://stjohnpa.org/",
+          "said": "Holy Days: 5:30 PM Vigil and 8:00 AM, 7:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line names no date, so no Dec 7/8 Masses are projected from it (as st-isaac-jogues-wayne s27 left out an undated standing box). No read issue prints this year's Immaculate Conception times; update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-morrisville",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-23",
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "PREP grades 3-7 confessions"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 3,
+          "said": "On Monday, 11/23/26, all 3rd to 7th graders will report to the Church at 5:15pm for Confessions."
+        }
+      ],
+      "rationale": "R25, POLICY (closed to a group): confessions for the religious-education classes, not a time open to all penitents, as st-luke-the-evangelist-glenside s25 and st-agnes-west-chester s24 left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4a70934",
+          "page": 1,
+          "said": "Other times by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "543d7d4a",
+          "page": 1,
+          "said": "Other times by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "e9190885abb2620820aec4dc53ab1e12",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T01:30:21.498956+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "a4a70934930cd33fc0b362153e95941f08df8d6fc3b70a88ae3c4fc0efc01e16",
+        "fetched_at": "2026-11-15T16:45:58Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "543d7d4a71b50bb063c25ae998cb17015dc49b048c7d038d660f4780e9e0384d",
+        "fetched_at": "2026-11-08T15:54:36Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002427,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30, 9:30 and 11:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30, 9:30 and 11:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30, 9:30 and 11:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30, 9:30 and 11:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30, 9:30 and 11:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30, 9:30 and 11:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays Monday - Saturday 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays Monday - Saturday 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays Monday - Saturday 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays Monday - Saturday 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays Monday - Saturday 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays Monday - Saturday 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays Monday - Saturday 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays Monday - Saturday 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays Monday - Saturday 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays Monday - Saturday 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays Monday - Saturday 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays Monday - Saturday 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Vigil Mass: Saturday 4:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Vigil Mass: Saturday 4:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "14:45",
+          "end_time": "15:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays: 2:45 PM - 3:45 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays: 2:45 PM - 3:45 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "09:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Tuesdays: 8:30 AM - 9:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Tuesdays: 8:30 AM - 9:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "After the 7:30 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday through Friday—after daily Mass, until 8:00 PM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday through Friday—after daily Mass, until 8:00 PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "After the 8:00 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday through Friday—after daily Mass, until 8:00 PM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday through Friday—after daily Mass, until 8:00 PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "After the 8:00 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday through Friday—after daily Mass, until 8:00 PM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday through Friday—after daily Mass, until 8:00 PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "After the 8:00 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday through Friday—after daily Mass, until 8:00 PM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday through Friday—after daily Mass, until 8:00 PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "After the 8:00 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday through Friday—after daily Mass, until 8:00 PM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday through Friday—after daily Mass, until 8:00 PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o18",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "After the 8:00 AM Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday through Friday—after daily Mass, until 8:00 PM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday through Friday—after daily Mass, until 8:00 PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o19",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "After the 8:00 AM Mass; until the Vigil Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday—after daily Mass—until Vigil Mass."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday—after daily Mass—until Vigil Mass."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o20",
+        "entry": {
+          "church_slug": "st-john-the-evangelist-morrisville",
+          "event_type": "confession",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-23",
+          "start_time": "17:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "On Monday, 11/23/26, all 3rd to 7th graders will report to the Church at 5:15pm for Confessions."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "70ecb3fd578b5f797d04eab83af580158871e10148e5a150e2e08be33e8f8817",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o13"
+        ],
+        "slots": [
+          "s18"
+        ],
+        "opinion_said": "adoration Sun 08:30-20:00 @st-john-the-evangelist-morrisville",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "excluded",
+        "fields": [],
+        "opinion": [
+          "o20"
+        ],
+        "slots": [
+          "s21"
+        ],
+        "opinion_said": "confession 2026-11-23 17:15 @st-john-the-evangelist-morrisville",
+        "seed_said": "confession 2026-11-23 17:15 @st-john-the-evangelist-morrisville",
+        "resolution": {
+          "how": "auto",
+          "reason": "policy-exclusion"
+        }
+      },
+      {
+        "id": "d3",
+        "kind": "missing",
+        "fields": [],
+        "opinion": [
+          "o19"
+        ],
+        "slots": [],
+        "opinion_said": "adoration Sat 08:30-16:00 @st-john-the-evangelist-morrisville",
+        "seed_said": "-",
+        "resolution": {
+          "how": "changed"
+        }
+      },
+      {
+        "id": "d4",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o19"
+        ],
+        "slots": [
+          "s19"
+        ],
+        "opinion_said": "adoration Sat 08:30-16:00 @st-john-the-evangelist-morrisville",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      }
+    ]
+  }
+}
