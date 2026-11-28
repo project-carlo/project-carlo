@@ -1,0 +1,1491 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-michael-the-archangel-levittown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:32Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T01:42:31Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (66 Levittown Parkway); both November issues are image-only and agree. Weekend Masses Sat 4:30 PM, Sun 8/10/12; Sat confession 3-4 PM; the announced Nov 28 change to a 4:00 PM vigil and 2:30-3:30 confession is left out per R20 (the website already shows it). Open: whether 'the Chapel' (daily Masses, Friday Adoration) is at the church, and whether the new holy-day schedule applies to Dec 8 and Jan 1.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+      "fetched_at": "2026-11-15T16:46:32Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "0302643b49561522ad20c8ccfe29ea52c13293f9c5688061d1211fb454d0c65f",
+      "fetched_at": "2026-11-08T15:55:05Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+      "bulletins": [
+        "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+        "0302643b49561522ad20c8ccfe29ea52c13293f9c5688061d1211fb454d0c65f"
+      ],
+      "cached": false,
+      "cost_usd": 0.002272,
+      "at": "2026-11-28T01:48:58.543231+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 3,
+          "said": "Sunday Masses REMAIN 8 AM, 10 AM, and 12 Noon."
+        },
+        {
+          "source": "c1",
+          "bulletin": "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:00 am, 10:00 am, 12 Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in both weeks' intentions (p2); the Advent notice (p3) says they remain.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 3,
+          "said": "Sunday Masses REMAIN 8 AM, 10 AM, and 12 Noon."
+        },
+        {
+          "source": "c1",
+          "bulletin": "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:00 am, 10:00 am, 12 Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in both weeks' intentions (p2); the Advent notice (p3) says they remain.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 3,
+          "said": "Sunday Masses REMAIN 8 AM, 10 AM, and 12 Noon."
+        },
+        {
+          "source": "c1",
+          "bulletin": "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 8:00 am, 10:00 am, 12 Noon”"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both issues and in both weeks' intentions (p2); the Advent notice (p3) says they remain.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 1,
+          "said": "Saturday Vigil Mass: 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 1,
+          "said": "Saturday Vigil Mass: 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 2,
+          "said": "SATURDAY, November 21 ... 4:30 pm Mass for the People of the Parish"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil Mass: 4:30 pm”"
+        }
+      ],
+      "rationale": "R1, R20: the schedule box of both issues prints 4:30. The p3 notice moves it to 4:00 PM from Sat Nov 28 (First Sunday of Advent); R20 keeps the current time and leaves the future one out. The website (read Nov 28) already shows 4:00, so update mode should pick the change up from the Nov 22/29 issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 3,
+          "said": "Starting with the new liturgical year - the First Sunday of Advent (Saturday, November 28th) - The Vigil Masses on Saturday go from 4:30 PM to 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 5,
+          "said": "Saturday 11/28 4:00 Mass"
+        }
+      ],
+      "rationale": "R20: a change announced for Nov 28, after as_of (Nov 15); left out until update mode reads the issues that show it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 1,
+          "said": "Reconciliation (Confession, Penance) - Saturday: 3:00 - 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 1,
+          "said": "Reconciliation (Confession, Penance) - Saturday: 3:00 - 4:00 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Reconciliation (Confession, Penance) - Saturday: 3:00 - 4:00 pm”"
+        }
+      ],
+      "rationale": "R1, R20: printed in both issues' schedule box. The p3 notice moves confessions to 2:30-3:30 PM from Nov 28; R20 keeps the current time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 3,
+          "said": "with Confessions times moving to 2:30 PM to 3:30 PM"
+        }
+      ],
+      "rationale": "R20: a change announced for Nov 28, after as_of; left out until update mode reads the issues that show it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 1,
+          "said": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 1,
+          "said": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 3,
+          "said": "The daily Mass schedule will be in Saint Michael the Archangel Chapel. No Mass on Monday. Masses offered during the rest of the week at 8AM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 2,
+          "said": "TUESDAY, November 17 8:00 am ... SATURDAY, November 21 8:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel”"
+        }
+      ],
+      "rationale": "POLICY, Churches and chapels; leaning per precedent ss-philip-and-james-exton s15 and our-lady-of-fatima-secane s11: the 8 AM Masses are printed 'in the Chapel' inside the church's own p1 schedule box, both weeks' intentions list them, and the parish has one church (66 Levittown Parkway). The website lists 'Tuesday - Saturday 8:00 a.m.' with the church's other Masses. Hard because no page gives the chapel's address.",
+      "question": "Is the parish's Chapel (Saint Michael the Archangel Chapel) at the church, so its daily Masses and Friday Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-michael-the-archangel-levittown",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 1,
+          "said": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 1,
+          "said": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 3,
+          "said": "The daily Mass schedule will be in Saint Michael the Archangel Chapel. No Mass on Monday. Masses offered during the rest of the week at 8AM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 2,
+          "said": "TUESDAY, November 17 8:00 am ... SATURDAY, November 21 8:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel”"
+        }
+      ],
+      "rationale": "POLICY, Churches and chapels; leaning per precedent ss-philip-and-james-exton s15 and our-lady-of-fatima-secane s11: the 8 AM Masses are printed 'in the Chapel' inside the church's own p1 schedule box, both weeks' intentions list them, and the parish has one church (66 Levittown Parkway). The website lists 'Tuesday - Saturday 8:00 a.m.' with the church's other Masses. Hard because no page gives the chapel's address.",
+      "question": "Is the parish's Chapel (Saint Michael the Archangel Chapel) at the church, so its daily Masses and Friday Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-michael-the-archangel-levittown",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 1,
+          "said": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 1,
+          "said": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 3,
+          "said": "The daily Mass schedule will be in Saint Michael the Archangel Chapel. No Mass on Monday. Masses offered during the rest of the week at 8AM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 2,
+          "said": "TUESDAY, November 17 8:00 am ... SATURDAY, November 21 8:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel”"
+        }
+      ],
+      "rationale": "POLICY, Churches and chapels; leaning per precedent ss-philip-and-james-exton s15 and our-lady-of-fatima-secane s11: the 8 AM Masses are printed 'in the Chapel' inside the church's own p1 schedule box, both weeks' intentions list them, and the parish has one church (66 Levittown Parkway). The website lists 'Tuesday - Saturday 8:00 a.m.' with the church's other Masses. Hard because no page gives the chapel's address.",
+      "question": "Is the parish's Chapel (Saint Michael the Archangel Chapel) at the church, so its daily Masses and Friday Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-michael-the-archangel-levittown",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 1,
+          "said": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 1,
+          "said": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 3,
+          "said": "The daily Mass schedule will be in Saint Michael the Archangel Chapel. No Mass on Monday. Masses offered during the rest of the week at 8AM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 2,
+          "said": "TUESDAY, November 17 8:00 am ... SATURDAY, November 21 8:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel”"
+        }
+      ],
+      "rationale": "POLICY, Churches and chapels; leaning per precedent ss-philip-and-james-exton s15 and our-lady-of-fatima-secane s11: the 8 AM Masses are printed 'in the Chapel' inside the church's own p1 schedule box, both weeks' intentions list them, and the parish has one church (66 Levittown Parkway). The website lists 'Tuesday - Saturday 8:00 a.m.' with the church's other Masses. Hard because no page gives the chapel's address.",
+      "question": "Is the parish's Chapel (Saint Michael the Archangel Chapel) at the church, so its daily Masses and Friday Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-michael-the-archangel-levittown",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 1,
+          "said": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 1,
+          "said": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 3,
+          "said": "The daily Mass schedule will be in Saint Michael the Archangel Chapel. No Mass on Monday. Masses offered during the rest of the week at 8AM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 2,
+          "said": "TUESDAY, November 17 8:00 am ... SATURDAY, November 21 8:00 am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel”"
+        }
+      ],
+      "rationale": "POLICY, Churches and chapels; leaning per precedent ss-philip-and-james-exton s15 and our-lady-of-fatima-secane s11: the 8 AM Masses are printed 'in the Chapel' inside the church's own p1 schedule box, both weeks' intentions list them, and the parish has one church (66 Levittown Parkway). The website lists 'Tuesday - Saturday 8:00 a.m.' with the church's other Masses. Hard because no page gives the chapel's address.",
+      "question": "Is the parish's Chapel (Saint Michael the Archangel Chapel) at the church, so its daily Masses and Friday Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-michael-the-archangel-levittown",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 1,
+          "said": "Adoration: Every Friday from 8:30 to 6:00pm in the Chapel (September - June)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 1,
+          "said": "Adoration: Every Friday from 8:30 to 6:00pm in the Chapel (September - June)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 6,
+          "said": "Adoration of the Blessed Sacrament on Fridays after 8:00 am Mass until 6:00 pm in the Chapel."
+        },
+        {
+          "source": "c1",
+          "bulletin": "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Adoration: Every Friday from 8:30 to 6:00pm in the Chapel (September - June)”"
+        }
+      ],
+      "rationale": "POLICY, Churches and chapels; leaning per precedent ss-philip-and-james-exton s15: printed in the church's own p1 box (and p6), one church. Times and season as printed (8:30 also fits 30 min after the 8:00 weekday Mass, R10). Hard because no page gives the chapel's address.",
+      "question": "Is the parish's Chapel (Saint Michael the Archangel Chapel) at the church, so its daily Masses and Friday Adoration go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-michael-the-archangel-levittown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": "In the chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 5,
+          "said": "Thursday - Thanksgiving 11/26 9:00 Mass - Father Dalin"
+        },
+        {
+          "source": "c1",
+          "bulletin": "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+          "page": 5,
+          "said": "gpt-6-luna read the same: B1 p5 “Thursday - Thanksgiving 11/26 9:00 Mass - Father Dalin”"
+        }
+      ],
+      "rationale": "R1, R16, POLICY Weekly or dated rule 7: a holiday Mass outside the weekly schedule, dated on or after as_of. R17: the weekly Thursday 8:00 AM is left alone since nothing says it is cancelled (as st-joseph-warrington s13).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Eve, Solemnity of Mary"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 3,
+          "said": "New Year's Eve Vigil Mass for the Solemnity of Our Lady will take place at 4:00 PM (No Music)."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 3,
+          "said": "New Year's Eve Vigil Mass for the Solemnity of Our Lady will take place at 4:00 PM (No Music)."
+        },
+        {
+          "source": "c1",
+          "bulletin": "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “New Year’s Eve Vigil Mass for the Solemnity of Our Lady will take place at 4:00 PM (No Music).”"
+        }
+      ],
+      "rationale": "R1, R16: New Year's Eve pins the date (Dec 31); printed in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 3,
+          "said": "The Mass schedule for Holy Days of Obligations, also in the new liturgical year, will be 7:00 PM Vigil Mass (No Music), 8 AM and 12 Noon (Music). NO EVENING MASS ON THE DAY ITSELF."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 3,
+          "said": "The Mass schedule for Holy Days of Obligations, also in the new liturgical year, will be 7:00 PM Vigil Mass (No Music), 8 AM and 12 Noon (Music). NO EVENING MASS ON THE DAY ITSELF."
+        },
+        {
+          "source": "website",
+          "url": "https://stmichaellvt.com/schedule/",
+          "said": "Holy Day Masses Vigil 7:00pm. 8:00am 12 noon"
+        }
+      ],
+      "rationale": "Leaning per precedent our-lady-of-consolation-parkesburg s12: a current notice (both issues, p3) ties the holy-day schedule to the new liturgical year (from Nov 29), whose first holy day is Tue Dec 8, so its vigil is Mon Dec 7. The website's schedule page gives the same times. Hard because 'December 8' itself is never printed (unlike the dated New Year's Eve line).",
+      "question": "Apply the new holy-day schedule (7:00 PM vigil; 8 AM and 12 Noon on the day) to Dec 8 and Jan 1?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-michael-the-archangel-levittown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Vigil, Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 3,
+          "said": "will be 7:00 PM Vigil Mass (No Music), 8 AM and 12 Noon (Music). NO EVENING MASS ON THE DAY ITSELF."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 3,
+          "said": "will be 7:00 PM Vigil Mass (No Music), 8 AM and 12 Noon (Music). NO EVENING MASS ON THE DAY ITSELF."
+        },
+        {
+          "source": "website",
+          "url": "https://stmichaellvt.com/schedule/",
+          "said": "Holy Day Masses Vigil 7:00pm. 8:00am 12 noon"
+        }
+      ],
+      "rationale": "Leaning per precedent our-lady-of-consolation-parkesburg s12: the notice applies to the new liturgical year, whose first holy day is Tue Dec 8; the 8 AM is the weekly Tuesday Mass. Hard because the date is never printed.",
+      "question": "Apply the new holy-day schedule (7:00 PM vigil; 8 AM and 12 Noon on the day) to Dec 8 and Jan 1?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-michael-the-archangel-levittown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 3,
+          "said": "8 AM and 12 Noon (Music) ... New Year's Eve Vigil Mass for the Solemnity of Our Lady will take place at 4:00 PM (No Music)."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0302643b",
+          "page": 3,
+          "said": "8 AM and 12 Noon (Music) ... New Year's Eve Vigil Mass for the Solemnity of Our Lady will take place at 4:00 PM (No Music)."
+        }
+      ],
+      "rationale": "Leaning per precedent our-lady-of-consolation-parkesburg s12: the same notice names the Solemnity of Our Lady (Fri Jan 1, 2027) as a holy day, with its own 4:00 PM vigil; the day itself takes the 8 AM (the weekly Friday Mass) and 12 Noon. Hard because Jan 1's daytime times are inferred from the general line.",
+      "question": "Apply the new holy-day schedule (7:00 PM vigil; 8 AM and 12 Noon on the day) to Dec 8 and Jan 1?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-michael-the-archangel-levittown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2027-01-01",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Solemnity of Mary"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1aecdb",
+          "page": 1,
+          "said": "The Sacrament of Baptism is celebrated on the first four Sundays of each month at 1 pm"
+        }
+      ],
+      "rationale": "R24: not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "3f0abb54b592ad1f19187ae97b024341",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T01:48:58.543231+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "1f1aecdb2ca4bdbab4ac792f786b3a0bb7f3f259a524f16df3f025215193b2ab",
+        "fetched_at": "2026-11-15T16:46:32Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "0302643b49561522ad20c8ccfe29ea52c13293f9c5688061d1211fb454d0c65f",
+        "fetched_at": "2026-11-08T15:55:05Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002272,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-michael-the-archangel-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-michael-the-archangel-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-michael-the-archangel-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-michael-the-archangel-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-michael-the-archangel-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Masses Tuesday thru Saturday 8:00 am Celebrated in the Chapel"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-michael-the-archangel-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil Mass: 4:30 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil Mass: 4:30 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-michael-the-archangel-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:00 am, 10:00 am, 12 Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:00 am, 10:00 am, 12 Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-michael-the-archangel-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:00 am, 10:00 am, 12 Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:00 am, 10:00 am, 12 Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-michael-the-archangel-levittown",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 8:00 am, 10:00 am, 12 Noon"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 8:00 am, 10:00 am, 12 Noon"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-michael-the-archangel-levittown",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:00",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Reconciliation (Confession, Penance) - Saturday: 3:00 - 4:00 pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Reconciliation (Confession, Penance) - Saturday: 3:00 - 4:00 pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-michael-the-archangel-levittown",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": "18:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": {
+            "start_month": 9,
+            "start_day": null,
+            "end_month": 6,
+            "end_day": null
+          },
+          "note": "Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Adoration: Every Friday from 8:30 to 6:00pm in the Chapel (September - June)"
+          },
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Adoration of the Blessed Sacrament on Fridays after 8:00 am Mass until 6:00 pm in the Chapel."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Adoration: Every Friday from 8:30 to 6:00pm in the Chapel (September - June)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 6,
+            "quote": "Adoration of the Blessed Sacrament on Fridays after 8:00 am Mass until 6:00 pm in the Chapel."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-michael-the-archangel-levittown",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Thanksgiving",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "Thursday - Thanksgiving 11/26 9:00 Mass - Father Dalin"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-michael-the-archangel-levittown",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-31",
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Solemnity of Our Lady",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "New Year’s Eve Vigil Mass for the Solemnity of Our Lady will take place at 4:00 PM (No Music)."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "4468adb12c00534fd338d7c313304a64bc1169a238963b9807ed7bc11a2fa6c1",
+    "differences": []
+  }
+}
