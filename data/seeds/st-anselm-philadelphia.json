@@ -1,0 +1,1369 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anselm-philadelphia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:44:33Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T03:59:41Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Anselm, Dunks Ferry Road). Mass and church confession times agree in both November issues' schedule box, the intentions and the website. Open: whether the Spirituality Center Chapel (no address printed) is at the church, for the Saturday 7-8 PM Holy Hour with its 7:15-7:45 confessions and the Monday 9:00-6:30 Adoration, and whether that Adoration's 'school year' limit can be written.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+      "fetched_at": "2026-11-15T16:44:33Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9d42cda47f802506c7c1d1a94980fbe07868b80ab94033fb5c7c0ed2ac66df4f",
+      "fetched_at": "2026-11-08T22:01:40Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+      "bulletins": [
+        "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+        "9d42cda47f802506c7c1d1a94980fbe07868b80ab94033fb5c7c0ed2ac66df4f"
+      ],
+      "cached": false,
+      "cost_usd": 0.003673,
+      "at": "2026-11-28T04:05:28.373042+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anselm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 1,
+          "said": "Saturday Vigil ---- 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d42cda4",
+          "page": 1,
+          "said": "Saturday Vigil ---- 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 6,
+          "said": "SATURDAY, NOVEMBER 21 ... 4:30PM Carl Hiller III"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil ---------------------------------------------4:30 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anselm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 1,
+          "said": "Sunday ---- 8:00 AM, 10:00 AM & 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d42cda4",
+          "page": 1,
+          "said": "Sunday ---- 8:00 AM, 10:00 AM & 12:00 NOON"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday----------------- 8:00 AM, 10:00 AM & 12:00 NOON”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues; the intentions list 8:00AM, 10:00AM, 12NOON each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anselm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 1,
+          "said": "Sunday ---- 8:00 AM, 10:00 AM & 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d42cda4",
+          "page": 1,
+          "said": "Sunday ---- 8:00 AM, 10:00 AM & 12:00 NOON"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday----------------- 8:00 AM, 10:00 AM & 12:00 NOON”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues; the intentions list 8:00AM, 10:00AM, 12NOON each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anselm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 1,
+          "said": "Sunday ---- 8:00 AM, 10:00 AM & 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d42cda4",
+          "page": 1,
+          "said": "Sunday ---- 8:00 AM, 10:00 AM & 12:00 NOON"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday----------------- 8:00 AM, 10:00 AM & 12:00 NOON”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues; the intentions list 8:00AM, 10:00AM, 12NOON each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anselm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 1,
+          "said": "Monday thru Friday---- 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d42cda4",
+          "page": 1,
+          "said": "Monday thru Friday---- 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday thru Friday------------------------------------ 8:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues; each weekday's intention is at 8:30AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anselm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 1,
+          "said": "Monday thru Friday---- 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d42cda4",
+          "page": 1,
+          "said": "Monday thru Friday---- 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday thru Friday------------------------------------ 8:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues; each weekday's intention is at 8:30AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anselm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 1,
+          "said": "Monday thru Friday---- 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d42cda4",
+          "page": 1,
+          "said": "Monday thru Friday---- 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday thru Friday------------------------------------ 8:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues; each weekday's intention is at 8:30AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anselm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 1,
+          "said": "Monday thru Friday---- 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d42cda4",
+          "page": 1,
+          "said": "Monday thru Friday---- 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday thru Friday------------------------------------ 8:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues; each weekday's intention is at 8:30AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anselm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 1,
+          "said": "Monday thru Friday---- 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d42cda4",
+          "page": 1,
+          "said": "Monday thru Friday---- 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday thru Friday------------------------------------ 8:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues; each weekday's intention is at 8:30AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anselm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 1,
+          "said": "Weekday ... Saturday ---- 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d42cda4",
+          "page": 1,
+          "said": "Weekday ... Saturday ---- 8:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday -------------------------------------------------- 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both issues; the Nov 21 intention is at 8:00AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anselm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE Saturday ---- 3:30 PM - 4:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d42cda4",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE Saturday ---- 3:30 PM - 4:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 7,
+          "said": "3:30PM – 4:15PM – CONFESSIONS – CHURCH"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday ------------------------------------ 3:30 PM - 4:15 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the confession schedule box of both issues and the weekly calendar, in church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anselm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": "09:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 1,
+          "said": "Sunday ---- 9:15 AM - 9:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d42cda4",
+          "page": 1,
+          "said": "Sunday ---- 9:15 AM - 9:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 7,
+          "said": "9:15AM – 9:45AM – CONFESSIONS – CHURCH"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday--------------------------------------- 9:15 AM - 9:45 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the confession schedule box of both issues and the weekly calendar, in church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 9,
+          "said": "SATURDAY NIGHT HOLY HOUR All are invited to our weekly Holy Hour each Saturday from 7 – 8pm in the Spirituality Center Chapel ... begin with an Adoration Hymn, and conclude with Scripture Reading, Homily and Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 7,
+          "said": "7PM – 8PM – HOLY HOUR – SPIRITUALITY CENTER (CONFESSION 7:15PM – 7:45PM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d42cda4",
+          "page": 7,
+          "said": "7PM – 8PM – HOLY HOUR – SPIRITUALITY CENTER (CONFESSION 7:15PM – 7:45PM)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stanselmparish.com/",
+          "said": "Saturday : ... 7:15 PM to 7:45 PM in the Spirituality Center"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+          "page": 9,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p9 “All are invited to our weekly Holy Hour each Saturday from 7 – 8pm in the Spirituality Center Chapel. The Holy Hour is open to all ages and will begin with an Adoration Hymn, and conclude with Scripture Reading, Homily and Benediction.”"
+        }
+      ],
+      "rationale": "R32 (leaning per precedent ss-philip-and-james-exton s15, sacred-heart-havertown s13): no page gives the Spirituality Center's address, but the parish's own box and calendar list it with the church's times, p9 says to 'enter near the entrance closest to the Chapel in the Spirituality Center', and the website lists its confession beside the church's under the one Dunks Ferry Road address. One church. A Holy Hour with Benediction is Adoration (POLICY).",
+      "question": "Is the Spirituality Center Chapel at St. Anselm Church, so the Saturday 7-8 PM Holy Hour and its 7:15-7:45 PM confessions go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the Spirituality Center Chapel",
+          "entry": {
+            "church_slug": "st-anselm-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spirituality Center Chapel; Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "spirituality-center"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 1,
+          "said": "Saturday (during Holy Hour) ---- 7:15 PM - 7:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d42cda4",
+          "page": 1,
+          "said": "Saturday (during Holy Hour) ---- 7:15 PM - 7:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 9,
+          "said": "Confessions will be heard from 7:15 – 7:45pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stanselmparish.com/",
+          "said": "7:15 PM to 7:45 PM in the Spirituality Center"
+        },
+        {
+          "source": "c1",
+          "bulletin": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Saturday (during Holy Hour) ---------- 7:15 PM - 7:45 PM”"
+        }
+      ],
+      "rationale": "R32 (leaning per precedent ss-philip-and-james-exton s15): same chapel question as the Holy Hour; the confession has its own clock times in the parish's confession schedule box of both issues and on the website.",
+      "question": "Is the Spirituality Center Chapel at St. Anselm Church, so the Saturday 7-8 PM Holy Hour and its 7:15-7:45 PM confessions go there?",
+      "options": [
+        {
+          "label": "Include at the church, in the Spirituality Center Chapel",
+          "entry": {
+            "church_slug": "st-anselm-philadelphia",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "19:15",
+            "end_time": "19:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spirituality Center Chapel; during the Holy Hour"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "spirituality-center"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 9,
+          "said": "Adoration on Mondays from 9:00 AM to 6:30 PM!!! All day Adoration of the Blessed Sacrament will take place on Mondays during the school year in the Spirituality Center Chapel. We will pray the Rosary at 6 PM followed by Benediction."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d42cda4",
+          "page": 9,
+          "said": "Adoration on Mondays from 9:00 AM to 6:30 PM!!! All day Adoration of the Blessed Sacrament will take place on Mondays during the school year in the Spirituality Center Chapel. We will pray the Rosary at 6 PM followed by Benediction."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c91cd8c",
+          "page": 7,
+          "said": "9AM – 6PM – ADORATION – CHAPEL ... 6PM – ROSARY & BENEDICTION – CHAPEL"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d42cda4",
+          "page": 7,
+          "said": "9AM – 6PM – ADORATION – CHAPEL ... 6PM – ROSARY & BENEDICTION – CHAPEL"
+        }
+      ],
+      "rationale": "Two open points. Place: as the Saturday Holy Hour, leaning include at the church per precedent ss-philip-and-james-exton s15. Season: 'during the school year' names no months, so leaning year-round per precedent st-rose-of-lima-north-wales s10 (R15/R33: no season invented; update mode reads summer issues). End 6:30 PM from p9's clock time; the calendar's 6PM Adoration plus 6PM Rosary & Benediction fits it. Not on the website.",
+      "question": "Add Monday Adoration 9:00 AM-6:30 PM in the Spirituality Center Chapel, which p9 says runs 'during the school year' (no months given)?",
+      "options": [
+        {
+          "label": "Mondays 9:00 AM-6:30 PM, year-round",
+          "entry": {
+            "church_slug": "st-anselm-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "18:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spirituality Center Chapel; Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mondays 9:00 AM-6:30 PM, September-June",
+          "entry": {
+            "church_slug": "st-anselm-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "18:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": "Spirituality Center Chapel; Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "07dbcced05500ebea5dbb89572921244",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T04:05:28.373042+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "8c91cd8c2e7968d340ae0f67c16a6132ff2e47b4fe9e3a789b403c6eaea02f27",
+        "fetched_at": "2026-11-15T16:44:33Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "9d42cda47f802506c7c1d1a94980fbe07868b80ab94033fb5c7c0ed2ac66df4f",
+        "fetched_at": "2026-11-08T22:01:40Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.003673,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-anselm-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil ---------------------------------------------4:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil ---------------------------------------------4:30 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-anselm-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday----------------- 8:00 AM, 10:00 AM & 12:00 NOON"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday----------------- 8:00 AM, 10:00 AM & 12:00 NOON"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-anselm-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday----------------- 8:00 AM, 10:00 AM & 12:00 NOON"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday----------------- 8:00 AM, 10:00 AM & 12:00 NOON"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-anselm-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday----------------- 8:00 AM, 10:00 AM & 12:00 NOON"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday----------------- 8:00 AM, 10:00 AM & 12:00 NOON"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-anselm-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday thru Friday------------------------------------ 8:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday thru Friday------------------------------------ 8:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-anselm-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday thru Friday------------------------------------ 8:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday thru Friday------------------------------------ 8:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-anselm-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday thru Friday------------------------------------ 8:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday thru Friday------------------------------------ 8:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-anselm-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday thru Friday------------------------------------ 8:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday thru Friday------------------------------------ 8:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-anselm-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday thru Friday------------------------------------ 8:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday thru Friday------------------------------------ 8:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-anselm-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday -------------------------------------------------- 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday -------------------------------------------------- 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-anselm-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:30",
+          "end_time": "16:15",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday ------------------------------------ 3:30 PM - 4:15 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday ------------------------------------ 3:30 PM - 4:15 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-anselm-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "19:15",
+          "end_time": "19:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "During Holy Hour",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday (during Holy Hour) ---------- 7:15 PM - 7:45 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday (during Holy Hour) ---------- 7:15 PM - 7:45 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-anselm-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:15",
+          "end_time": "09:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday--------------------------------------- 9:15 AM - 9:45 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday--------------------------------------- 9:15 AM - 9:45 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-anselm-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "19:00",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spirituality Center Chapel; Benediction",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "All are invited to our weekly Holy Hour each Saturday from 7 – 8pm in the Spirituality Center Chapel. The Holy Hour is open to all ages and will begin with an Adoration Hymn, and conclude with Scripture Reading, Homily and Benediction."
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "All are invited to our weekly Holy Hour each Saturday from 7 – 8pm in the Spirituality Center Chapel. The Holy Hour is open to all ages and will begin with an Adoration Hymn, and conclude with Scripture Reading, Homily and Benediction."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-anselm-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-16",
+          "start_time": "09:00",
+          "end_time": "18:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Spirituality Center Chapel; Benediction",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "…9AM – 6PM – ADORATION – CHAPEL\n…6PM – ROSARY & BENEDICTION – CHAPEL"
+          },
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "Spend time with our Lord in Adoration on Mondays from 9:00 AM to 6:30 PM!!! All day Adoration of the Blessed Sacrament will take place on Mondays during the school year in the Spirituality Center Chapel. We will pray the Rosary at 6 PM followed by Benediction. Enter near the entrance closest to the Chapel in the Spirituality Center. Please prayerfully consider taking a particular hour on a weekly basis so that we have someone visiting and covering every hour of Adoration."
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "Spend time with our Lord in Adoration on Mondays from 9:00 AM to 6:30 PM!!! All day Adoration of the Blessed Sacrament will take place on Mondays during the school year in the Spirituality Center Chapel. We will pray the Rosary at 6 PM followed by Benediction. Enter near the entrance closest to the Chapel in the Spirituality Center. Please prayerfully consider taking a particular hour on a weekly basis so that we have someone visiting and covering every hour of Adoration."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "b6cb9a45527c88a2c76670f2260955aea5e71ee190bdceb27fda026c8489422c",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "missing",
+        "fields": [],
+        "opinion": [
+          "o15"
+        ],
+        "slots": [],
+        "opinion_said": "adoration 2026-11-16 09:00-18:30 @st-anselm-philadelphia",
+        "seed_said": "-",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "8c91cd8c",
+              "page": 9,
+              "said": "Adoration on Mondays from 9:00 AM to 6:30 PM!!! All day Adoration of the Blessed Sacrament will take place on Mondays during the school year in the Spirituality Center Chapel"
+            }
+          ],
+          "why": "POLICY, Weekly or dated rule 6: the Nov 16 calendar line (p7) is one week of the weekly Monday 9:00 AM-6:30 PM Adoration that p9 of both issues prints, and that is already in s15's question (leaning include) with the same times; a dated duplicate is not recorded. Nov 16 has also passed.",
+          "at": "2026-11-28T04:05:46Z"
+        }
+      }
+    ]
+  }
+}
