@@ -1,0 +1,1729 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-dominic-philadelphia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:45:04Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T03:39:21Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both November issues print the same schedule box (Sat 9:00 AM & 4:30 PM, Sun 8:30 & 10:30 AM, weekdays 8:15 AM, Sat confession 3:30-4:00 PM), confirmed by the intentions; the website is partly stale (8:00 weekday Mass, chapel 8-7). Open: whether the Adoration Chapel is at the church (Mon-Sat 8:15 AM-4 PM) and how to record its Sunday hours.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+      "fetched_at": "2026-11-15T16:45:04Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "bcb41af8cd14517a719ddf442e643147c0b33b6b5d6ca7cd1f790b65bd617c5e",
+      "fetched_at": "2026-11-08T15:53:56Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+      "bulletins": [
+        "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+        "bcb41af8cd14517a719ddf442e643147c0b33b6b5d6ca7cd1f790b65bd617c5e"
+      ],
+      "cached": false,
+      "cost_usd": 0.00278,
+      "at": "2026-11-28T03:44:15.196818+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dominic-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "MASSES Saturday: 9:00 AM & 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "MASSES Saturday: 9:00 AM & 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 2,
+          "said": "SATURDAY~ ... 4:30 PM ANTHONY SERMARINI"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday: 9:00 AM & 4:30 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dominic-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "MASSES Saturday: 9:00 AM & 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "MASSES Saturday: 9:00 AM & 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 2,
+          "said": "SATURDAY~ ... 9:00 AM CATHOLIC DAUGHTERS DECEASED MEMBERS"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday: 9:00 AM & 4:30 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dominic-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "Sunday: 8:30 AM & 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "Sunday: 8:30 AM & 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 2,
+          "said": "SUNDAY~ 8:30 AM FRED CURLEY 10:30 AM THOMAS DIASIO"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday:    8:30 AM & 10:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dominic-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "Sunday: 8:30 AM & 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "Sunday: 8:30 AM & 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 2,
+          "said": "SUNDAY~ 8:30 AM FRED CURLEY 10:30 AM THOMAS DIASIO"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday:    8:30 AM & 10:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dominic-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "Weekdays: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "Weekdays: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 2,
+          "said": "MONDAY~ ... 8:15 AM DUKE WING (8:15 AM each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: 8:15 AM”"
+        }
+      ],
+      "rationale": "R1: both issues' box and both weeks' intentions give 8:15 AM Monday-Friday. The website's 'Weekdays: 8:00 AM (Chapel)' is stale (R6, R7: its adoration hours also disagree with both bulletins); the bulletin is the weekly-edited source, as in annunciation-bvm-havertown s9.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dominic-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "Weekdays: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "Weekdays: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 2,
+          "said": "MONDAY~ ... 8:15 AM DUKE WING (8:15 AM each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: 8:15 AM”"
+        }
+      ],
+      "rationale": "R1: both issues' box and both weeks' intentions give 8:15 AM Monday-Friday. The website's 'Weekdays: 8:00 AM (Chapel)' is stale (R6, R7: its adoration hours also disagree with both bulletins); the bulletin is the weekly-edited source, as in annunciation-bvm-havertown s9.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dominic-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "Weekdays: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "Weekdays: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 2,
+          "said": "MONDAY~ ... 8:15 AM DUKE WING (8:15 AM each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: 8:15 AM”"
+        }
+      ],
+      "rationale": "R1: both issues' box and both weeks' intentions give 8:15 AM Monday-Friday. The website's 'Weekdays: 8:00 AM (Chapel)' is stale (R6, R7: its adoration hours also disagree with both bulletins); the bulletin is the weekly-edited source, as in annunciation-bvm-havertown s9.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dominic-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "Weekdays: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "Weekdays: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 2,
+          "said": "MONDAY~ ... 8:15 AM DUKE WING (8:15 AM each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: 8:15 AM”"
+        }
+      ],
+      "rationale": "R1: both issues' box and both weeks' intentions give 8:15 AM Monday-Friday. The website's 'Weekdays: 8:00 AM (Chapel)' is stale (R6, R7: its adoration hours also disagree with both bulletins); the bulletin is the weekly-edited source, as in annunciation-bvm-havertown s9.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dominic-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "Weekdays: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "Weekdays: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 2,
+          "said": "MONDAY~ ... 8:15 AM DUKE WING (8:15 AM each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekdays: 8:15 AM”"
+        }
+      ],
+      "rationale": "R1: both issues' box and both weeks' intentions give 8:15 AM Monday-Friday. The website's 'Weekdays: 8:00 AM (Chapel)' is stale (R6, R7: its adoration hours also disagree with both bulletins); the bulletin is the weekly-edited source, as in annunciation-bvm-havertown s9.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dominic-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "CONFESSIONS Saturday 3:30 to 4:00 PM and by appointment at the Rectory."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "CONFESSIONS Saturday 3:30 to 4:00 PM and by appointment at the Rectory."
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday 3:30 to 4:00 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "and by appointment at the Rectory."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "Vigil of Holy Days: 4:30 PM / Holy Days: 8:15 AM & 7:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: the standing holy-day line names no date and no read issue prints a dated notice for Dec 8 or Jan 1, so no date can be pinned; left out as in st-isaac-jogues-wayne s27 (unlike our-lady-of-consolation-parkesburg s12, which had a dated notice). The weekly Tuesday 8:15 AM slot covers Dec 8 morning. Update mode will read December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-dominic-church-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Forty Hours closing"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 2,
+          "said": "Forty Hours Schedule ... Sunday, November 15th, closing 8:30 AM to 10:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday, November 15th, closing 8:30 AM to 10:30 AM”"
+        }
+      ],
+      "rationale": "R1, R16: dated Forty Hours Adoration on as_of's date (Nov 15), printed in the newest issue; the Nov 13-14 days are before as_of and left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "Rosary Recited Daily After Morning Mass"
+        }
+      ],
+      "rationale": "R24: a Rosary (and the website's Miraculous Medal Novena) is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday's after the last Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday's after the last Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 3,
+          "said": "ALTAR CANDLES IN OUR BLESSED SACRAMENT CHAPEL"
+        },
+        {
+          "source": "website",
+          "url": "https://saintdominicparish.org/",
+          "said": "Adoration Chapel Open 8:00 AM to 7:00 PM daily (except during Mass times) Closed on Sunday after the last Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times.”"
+        }
+      ],
+      "rationale": "R38, R32: the parish's own box gives the chapel's daily hours; the parish has one church and nothing places the chapel elsewhere, but no page gives its address (leaning per precedent ss-philip-and-james-exton s15, sacred-heart-havertown s13, st-pius-x-broomall s25). Bulletin hours (both issues) taken over the website's 8:00 AM-7:00 PM, which also has a stale 8:00 weekday Mass (annunciation-bvm-havertown s9). No exposition claimed (R38); 'closed during Mass' kept in the note.",
+      "question": "Is the Adoration Chapel (Blessed Sacrament Chapel) at St. Dominic Church, so its hours Mon-Sat 8:15 AM-4:00 PM go there?",
+      "options": [
+        {
+          "label": "Mon-Sat 8:15 AM-4:00 PM at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-dominic-church-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:15",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel; closed during Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday's after the last Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday's after the last Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 3,
+          "said": "ALTAR CANDLES IN OUR BLESSED SACRAMENT CHAPEL"
+        },
+        {
+          "source": "website",
+          "url": "https://saintdominicparish.org/",
+          "said": "Adoration Chapel Open 8:00 AM to 7:00 PM daily (except during Mass times) Closed on Sunday after the last Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times.”"
+        }
+      ],
+      "rationale": "R38, R32: the parish's own box gives the chapel's daily hours; the parish has one church and nothing places the chapel elsewhere, but no page gives its address (leaning per precedent ss-philip-and-james-exton s15, sacred-heart-havertown s13, st-pius-x-broomall s25). Bulletin hours (both issues) taken over the website's 8:00 AM-7:00 PM, which also has a stale 8:00 weekday Mass (annunciation-bvm-havertown s9). No exposition claimed (R38); 'closed during Mass' kept in the note.",
+      "question": "Is the Adoration Chapel (Blessed Sacrament Chapel) at St. Dominic Church, so its hours Mon-Sat 8:15 AM-4:00 PM go there?",
+      "options": [
+        {
+          "label": "Mon-Sat 8:15 AM-4:00 PM at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-dominic-church-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:15",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel; closed during Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday's after the last Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday's after the last Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 3,
+          "said": "ALTAR CANDLES IN OUR BLESSED SACRAMENT CHAPEL"
+        },
+        {
+          "source": "website",
+          "url": "https://saintdominicparish.org/",
+          "said": "Adoration Chapel Open 8:00 AM to 7:00 PM daily (except during Mass times) Closed on Sunday after the last Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times.”"
+        }
+      ],
+      "rationale": "R38, R32: the parish's own box gives the chapel's daily hours; the parish has one church and nothing places the chapel elsewhere, but no page gives its address (leaning per precedent ss-philip-and-james-exton s15, sacred-heart-havertown s13, st-pius-x-broomall s25). Bulletin hours (both issues) taken over the website's 8:00 AM-7:00 PM, which also has a stale 8:00 weekday Mass (annunciation-bvm-havertown s9). No exposition claimed (R38); 'closed during Mass' kept in the note.",
+      "question": "Is the Adoration Chapel (Blessed Sacrament Chapel) at St. Dominic Church, so its hours Mon-Sat 8:15 AM-4:00 PM go there?",
+      "options": [
+        {
+          "label": "Mon-Sat 8:15 AM-4:00 PM at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-dominic-church-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:15",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel; closed during Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday's after the last Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday's after the last Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 3,
+          "said": "ALTAR CANDLES IN OUR BLESSED SACRAMENT CHAPEL"
+        },
+        {
+          "source": "website",
+          "url": "https://saintdominicparish.org/",
+          "said": "Adoration Chapel Open 8:00 AM to 7:00 PM daily (except during Mass times) Closed on Sunday after the last Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times.”"
+        }
+      ],
+      "rationale": "R38, R32: the parish's own box gives the chapel's daily hours; the parish has one church and nothing places the chapel elsewhere, but no page gives its address (leaning per precedent ss-philip-and-james-exton s15, sacred-heart-havertown s13, st-pius-x-broomall s25). Bulletin hours (both issues) taken over the website's 8:00 AM-7:00 PM, which also has a stale 8:00 weekday Mass (annunciation-bvm-havertown s9). No exposition claimed (R38); 'closed during Mass' kept in the note.",
+      "question": "Is the Adoration Chapel (Blessed Sacrament Chapel) at St. Dominic Church, so its hours Mon-Sat 8:15 AM-4:00 PM go there?",
+      "options": [
+        {
+          "label": "Mon-Sat 8:15 AM-4:00 PM at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-dominic-church-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:15",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel; closed during Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday's after the last Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday's after the last Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 3,
+          "said": "ALTAR CANDLES IN OUR BLESSED SACRAMENT CHAPEL"
+        },
+        {
+          "source": "website",
+          "url": "https://saintdominicparish.org/",
+          "said": "Adoration Chapel Open 8:00 AM to 7:00 PM daily (except during Mass times) Closed on Sunday after the last Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times.”"
+        }
+      ],
+      "rationale": "R38, R32: the parish's own box gives the chapel's daily hours; the parish has one church and nothing places the chapel elsewhere, but no page gives its address (leaning per precedent ss-philip-and-james-exton s15, sacred-heart-havertown s13, st-pius-x-broomall s25). Bulletin hours (both issues) taken over the website's 8:00 AM-7:00 PM, which also has a stale 8:00 weekday Mass (annunciation-bvm-havertown s9). No exposition claimed (R38); 'closed during Mass' kept in the note.",
+      "question": "Is the Adoration Chapel (Blessed Sacrament Chapel) at St. Dominic Church, so its hours Mon-Sat 8:15 AM-4:00 PM go there?",
+      "options": [
+        {
+          "label": "Mon-Sat 8:15 AM-4:00 PM at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-dominic-church-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:15",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel; closed during Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday's after the last Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday's after the last Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 3,
+          "said": "ALTAR CANDLES IN OUR BLESSED SACRAMENT CHAPEL"
+        },
+        {
+          "source": "website",
+          "url": "https://saintdominicparish.org/",
+          "said": "Adoration Chapel Open 8:00 AM to 7:00 PM daily (except during Mass times) Closed on Sunday after the last Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times.”"
+        }
+      ],
+      "rationale": "R38, R32: the parish's own box gives the chapel's daily hours; the parish has one church and nothing places the chapel elsewhere, but no page gives its address (leaning per precedent ss-philip-and-james-exton s15, sacred-heart-havertown s13, st-pius-x-broomall s25). Bulletin hours (both issues) taken over the website's 8:00 AM-7:00 PM, which also has a stale 8:00 weekday Mass (annunciation-bvm-havertown s9). No exposition claimed (R38); 'closed during Mass' kept in the note.",
+      "question": "Is the Adoration Chapel (Blessed Sacrament Chapel) at St. Dominic Church, so its hours Mon-Sat 8:15 AM-4:00 PM go there?",
+      "options": [
+        {
+          "label": "Mon-Sat 8:15 AM-4:00 PM at the church, in the chapel",
+          "entry": {
+            "church_slug": "st-dominic-church-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:15",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel; closed during Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b6d3b220",
+          "page": 1,
+          "said": "Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday's after the last Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb41af8",
+          "page": 1,
+          "said": "Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday's after the last Mass."
+        },
+        {
+          "source": "c1",
+          "bulletin": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday’s after the last Mass.”"
+        }
+      ],
+      "rationale": "R30, R32: same chapel location question as group chapel; Sunday closes 'after the last Mass' (10:30 AM) with no clock time, so no end is recorded rather than POLICY's 'after a weekend Mass' hour (11:30), which is meant for starts. Hard because between 8:30 and ~11:30 the chapel is closed for the two Masses, leaving little open time.",
+      "question": "Sunday Adoration Chapel: open from 8:15 AM until after the last Mass. Record Sun from 8:15 AM with no end?",
+      "options": [
+        {
+          "label": "Sun from 8:15 AM, no end",
+          "entry": {
+            "church_slug": "st-dominic-church-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel; closed during Mass and after the last Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Sun 8:15-11:30 AM",
+          "entry": {
+            "church_slug": "st-dominic-church-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:15",
+            "end_time": "11:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel; closed during Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "ab3a37f262ebd93f43b40085ae70e9d9",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T03:44:15.196818+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "b6d3b220e2000f2728100ae1593af9129663880dd1f93be2aded2b8da8bc048a",
+        "fetched_at": "2026-11-15T16:45:04Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "bcb41af8cd14517a719ddf442e643147c0b33b6b5d6ca7cd1f790b65bd617c5e",
+        "fetched_at": "2026-11-08T15:53:56Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.00278,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday: 9:00 AM & 4:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday: 9:00 AM & 4:30 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday: 9:00 AM & 4:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday: 9:00 AM & 4:30 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday:    8:30 AM & 10:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday:    8:30 AM & 10:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday:    8:30 AM & 10:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday:    8:30 AM & 10:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: 8:15 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: 8:15 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: 8:15 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: 8:15 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: 8:15 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: 8:15 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: 8:15 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: 8:15 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekdays: 8:15 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekdays: 8:15 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:30",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday 3:30 to 4:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday 3:30 to 4:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday’s after the last Mass."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "ADORATION CHAPEL Open 8:15 AM to 4:00 PM daily; except during Mass times. Closed Sunday’s after the last Mass."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o18",
+        "entry": {
+          "church_slug": "st-dominic-church-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-15",
+          "start_time": "08:30",
+          "end_time": "10:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Forty Hours closing",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday, November 15th, closing 8:30 AM to 10:30 AM"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "25d20889ff1a9782bd8dc6e938d8ceed388bcaae2c47c03c3998a1d4c0dca2fb",
+    "differences": []
+  }
+}
