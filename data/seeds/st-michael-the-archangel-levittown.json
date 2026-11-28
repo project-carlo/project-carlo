@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-michael-the-archangel-levittown",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:46:32Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-28T01:42:31Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@251788db03ff",
+  "approved_at": "2026-11-28T03:14:09Z",
   "summary": "One church (66 Levittown Parkway); both November issues are image-only and agree. Weekend Masses Sat 4:30 PM, Sun 8/10/12; Sat confession 3-4 PM; the announced Nov 28 change to a 4:00 PM vigil and 2:30-3:30 confession is left out per R20 (the website already shows it). Open: whether 'the Chapel' (daily Masses, Friday Adoration) is at the church, and whether the new holy-day schedule applies to Dec 8 and Jan 1.",
   "blocked_reason": null,
   "bulletins": [
@@ -356,9 +356,22 @@
     },
     {
       "id": "s8",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -418,14 +431,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@251788db03ff",
+        "at": "2026-11-28T03:14:09Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -485,14 +515,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@251788db03ff",
+        "at": "2026-11-28T03:14:09Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -552,14 +599,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@251788db03ff",
+        "at": "2026-11-28T03:14:09Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -619,14 +683,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@251788db03ff",
+        "at": "2026-11-28T03:14:09Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -686,14 +767,36 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@251788db03ff",
+        "at": "2026-11-28T03:14:09Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "In the chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -752,7 +855,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@251788db03ff",
+        "at": "2026-11-28T03:14:09Z"
+      },
       "group": "chapel"
     },
     {
@@ -839,9 +946,22 @@
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil, Immaculate Conception"
+      },
       "page": 3,
       "sources": [
         {
@@ -888,14 +1008,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@251788db03ff",
+        "at": "2026-11-28T03:14:09Z"
+      },
       "group": "holyday"
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
       "page": 3,
       "sources": [
         {
@@ -942,14 +1079,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@251788db03ff",
+        "at": "2026-11-28T03:14:09Z"
+      },
       "group": "holyday"
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-levittown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Solemnity of Mary"
+      },
       "page": 3,
       "sources": [
         {
@@ -991,7 +1145,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@251788db03ff",
+        "at": "2026-11-28T03:14:09Z"
+      },
       "group": "holyday"
     },
     {

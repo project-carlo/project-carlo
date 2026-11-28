@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-martin-of-tours-new-hope",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:46:19Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-28T01:14:09Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@251788db03ff",
+  "approved_at": "2026-11-28T03:13:57Z",
   "summary": "One church (St. Martin of Tours, New Hope). Both image-only issues (Nov 8, Nov 15) print the same Mass box, matched by the intentions and website: Mon/Wed/Fri 9 AM, Tue 7 PM, Sat 9 AM and 4:30 PM, Sun 8:30 and 11 AM; plus a Dec 8 9 AM holy-day Mass. Confession is a half hour before each weekend Mass; open: whether that covers Saturday 9 AM, and whether the Monday Exposition chapel is at the church.",
   "blocked_reason": null,
   "bulletins": [
@@ -661,9 +661,22 @@
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-new-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9:00 AM Mass"
+      },
       "page": 2,
       "sources": [
         {
@@ -723,13 +736,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@251788db03ff",
+        "at": "2026-11-28T03:13:57Z"
+      }
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-new-hope",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel; after the 9:00 AM Mass"
+      },
       "page": 2,
       "sources": [
         {
@@ -777,7 +807,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@251788db03ff",
+        "at": "2026-11-28T03:13:57Z"
+      }
     },
     {
       "id": "s16",

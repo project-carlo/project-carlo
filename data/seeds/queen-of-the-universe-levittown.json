@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "queen-of-the-universe-levittown",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:44:10Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-28T01:32:30Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@251788db03ff",
+  "approved_at": "2026-11-28T03:14:05Z",
   "summary": "One church. Mass, Saturday confession and Thursday Adoration times agree in both November issues (all image pages, rendered) and the website. Open: whether the Friday 3-4 PM Holy Hour of Rosary and Chaplet in the church chapel counts as Adoration.",
   "blocked_reason": null,
   "bulletins": [
@@ -729,9 +729,22 @@
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-the-universe-levittown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour, Church Chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -779,7 +792,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@251788db03ff",
+        "at": "2026-11-28T03:14:05Z"
+      }
     },
     {
       "id": "s16",

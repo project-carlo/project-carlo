@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-trinity-morrisville",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:40:53Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T23:51:16Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@251788db03ff",
+  "approved_at": "2026-11-28T03:13:59Z",
   "summary": "One church, Holy Trinity, Morrisville. Masses (daily, Tue/Thu evening, Saturday vigil, three Sunday) and Saturday confession agree in both November bulletins read (Nov 8, Nov 15). Open: Tuesday Exposition end time, 7:00 PM in the schedule box vs 6:45 PM in each week's Mass list. Generic holy-day times are left out (no dates).",
   "blocked_reason": null,
   "bulletins": [
@@ -481,9 +481,22 @@
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-morrisville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -554,7 +567,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@251788db03ff",
+        "at": "2026-11-28T03:13:59Z"
+      }
     },
     {
       "id": "s13",

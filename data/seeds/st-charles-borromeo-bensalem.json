@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-charles-borromeo-bensalem",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:44:51Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-28T01:54:48Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@251788db03ff",
+  "approved_at": "2026-11-28T03:14:13Z",
   "summary": "One church (Our Lady of Fatima worship site name is only the parish's subtitle). Both November issues print the same box: Sat 8 AM, 5 PM, 7 PM Spanish; Sun 7:30, 10, 12 Spanish; Mon-Fri 6:45; confession Mon 6:30-7 PM and Sat 8:30-9 AM, 4-4:45 PM. Dated: Nov 16 Mass of Remembrance, Thanksgiving 9 AM, Fri Nov 27 Mass moved to 8 AM. Open: Wednesday Adoration start (bulletin 7:30 vs website 8:30) and whether Thanksgiving's 6:45 AM is cancelled.",
   "blocked_reason": null,
   "bulletins": [
@@ -658,9 +658,22 @@
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -742,7 +755,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@251788db03ff",
+        "at": "2026-11-28T03:14:13Z"
+      }
     },
     {
       "id": "s16",
@@ -922,9 +939,22 @@
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-church-bensalem",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving: 9:00 AM Mass"
+      },
       "page": 7,
       "sources": [
         {
@@ -960,7 +990,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@251788db03ff",
+        "at": "2026-11-28T03:14:13Z"
+      }
     },
     {
       "id": "s21",

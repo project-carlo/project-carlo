@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-ephrem-bensalem",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:45:10Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-28T02:00:15Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@251788db03ff",
+  "approved_at": "2026-11-28T03:14:15Z",
   "summary": "One church. Both November issues (image-only) print the same Mass, confession and Adoration schedule, matching the website homepage. Open: Tuesday Adoration in the convent ends at 7:45 PM (box and calendar) or 8:00 PM (flyer). The website's January 2026 'one daily Mass' change page is contradicted by current bulletins and left out.",
   "blocked_reason": null,
   "bulletins": [
@@ -983,9 +983,22 @@
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ephrem-church-bensalem",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the convent; concludes with Night Prayer"
+      },
       "page": 1,
       "sources": [
         {
@@ -1079,7 +1092,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@251788db03ff",
+        "at": "2026-11-28T03:14:15Z"
+      }
     },
     {
       "id": "s20",
