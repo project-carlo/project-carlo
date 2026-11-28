@@ -1,0 +1,1443 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-timothy-philadelphia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:47:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T03:28:10Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: St. Timothy (Sat 4 PM, Sun 8 and 11:30, Tue-Sat 8:30 AM, Chinese Mass first Sundays 3 PM, Sat confession 3-3:45) and St. Bartholomew (Sun 10 AM, Advent Holy Hours Mondays Nov 30-Dec 21 at 7 PM). Both November issues and the website agree. Open: whether the Wednesday exposition in the Parish Life Center (former convent on the Levick St. block) goes at St. Timothy Church.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+      "fetched_at": "2026-11-15T16:47:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6af784d353f9fe2f4aee647d78eb672bea834694169be0b8cc186077767aafd7",
+      "fetched_at": "2026-11-08T15:55:32Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+      "bulletins": [
+        "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+        "6af784d353f9fe2f4aee647d78eb672bea834694169be0b8cc186077767aafd7"
+      ],
+      "cached": false,
+      "cost_usd": 0.006138,
+      "at": "2026-11-28T03:31:52.147841+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Upper Church"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 2,
+          "said": "Saint Timothy: 4:00 pm Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af784d3",
+          "page": 2,
+          "said": "Saint Timothy: 4:00 pm Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 4,
+          "said": "Saturday, Nov. 21st ... 4:00 pm Nancy Hamski"
+        },
+        {
+          "source": "website",
+          "url": "https://www.st-tims.org/",
+          "said": "Mass & Confession Location Update Starting September 26th–27th:Upper Church: Confessions, Saturday 4:00 PM Vigil, & Sunday 8:00 AM / 11:30 AM MassesLower Church: Daily Mass (Tues–Sat) at 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saint Timothy: 4:00 pm Vigil Mass”"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass box of both issues and in the intentions; the website's location notice puts the Vigil in the Upper Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Upper Church"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 2,
+          "said": "Saint Timothy: ... Sunday: 8:00 am and 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af784d3",
+          "page": 2,
+          "said": "Saint Timothy: ... Sunday: 8:00 am and 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 4,
+          "said": "Sunday, Nov. 22nd ... 8:00 am Joseph J. Berthcsi / 11:30 am Kate Curran"
+        },
+        {
+          "source": "website",
+          "url": "https://www.st-tims.org/",
+          "said": "Mass & Confession Location Update Starting September 26th–27th:Upper Church: Confessions, Saturday 4:00 PM Vigil, & Sunday 8:00 AM / 11:30 AM MassesLower Church: Daily Mass (Tues–Sat) at 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday: 8:00 am and 11:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Upper Church"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 2,
+          "said": "Saint Timothy: ... Sunday: 8:00 am and 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af784d3",
+          "page": 2,
+          "said": "Saint Timothy: ... Sunday: 8:00 am and 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 4,
+          "said": "Sunday, Nov. 22nd ... 8:00 am Joseph J. Berthcsi / 11:30 am Kate Curran"
+        },
+        {
+          "source": "website",
+          "url": "https://www.st-tims.org/",
+          "said": "Mass & Confession Location Update Starting September 26th–27th:Upper Church: Confessions, Saturday 4:00 PM Vigil, & Sunday 8:00 AM / 11:30 AM MassesLower Church: Daily Mass (Tues–Sat) at 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Sunday: 8:00 am and 11:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass box of both issues and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 2,
+          "said": "St. Bartholomew: Sunday: 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af784d3",
+          "page": 2,
+          "said": "St. Bartholomew: Sunday: 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 4,
+          "said": "Mass Intentions - Saint Bartholomew ... Sunday, November 22nd 10:00 am Louis Steffler"
+        },
+        {
+          "source": "c1",
+          "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “St. Bartholomew: Sunday: 10:00 am”"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass box of both issues and in St. Bartholomew's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 2,
+          "said": "DAILY MASS Saint Timothy: Tuesday to Saturday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af784d3",
+          "page": 2,
+          "said": "DAILY MASS Saint Timothy: Tuesday to Saturday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 4,
+          "said": "Tuesday, Nov. 17th ... 8:30 am James Ritter (and an 8:30 am intention each day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.st-tims.org/",
+          "said": "Mass & Confession Location Update Starting September 26th–27th:Upper Church: Confessions, Saturday 4:00 PM Vigil, & Sunday 8:00 AM / 11:30 AM MassesLower Church: Daily Mass (Tues–Sat) at 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saint Timothy: Tuesday to Saturday: 8:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the daily Mass box of both issues; the intentions list 8:30 am Tuesday to Saturday, and the calendar marks Monday 'No Daily Mass'. The website's location notice puts daily Mass in the Lower Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 2,
+          "said": "DAILY MASS Saint Timothy: Tuesday to Saturday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af784d3",
+          "page": 2,
+          "said": "DAILY MASS Saint Timothy: Tuesday to Saturday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 4,
+          "said": "Tuesday, Nov. 17th ... 8:30 am James Ritter (and an 8:30 am intention each day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.st-tims.org/",
+          "said": "Mass & Confession Location Update Starting September 26th–27th:Upper Church: Confessions, Saturday 4:00 PM Vigil, & Sunday 8:00 AM / 11:30 AM MassesLower Church: Daily Mass (Tues–Sat) at 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saint Timothy: Tuesday to Saturday: 8:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the daily Mass box of both issues; the intentions list 8:30 am Tuesday to Saturday, and the calendar marks Monday 'No Daily Mass'. The website's location notice puts daily Mass in the Lower Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 2,
+          "said": "DAILY MASS Saint Timothy: Tuesday to Saturday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af784d3",
+          "page": 2,
+          "said": "DAILY MASS Saint Timothy: Tuesday to Saturday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 4,
+          "said": "Tuesday, Nov. 17th ... 8:30 am James Ritter (and an 8:30 am intention each day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.st-tims.org/",
+          "said": "Mass & Confession Location Update Starting September 26th–27th:Upper Church: Confessions, Saturday 4:00 PM Vigil, & Sunday 8:00 AM / 11:30 AM MassesLower Church: Daily Mass (Tues–Sat) at 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saint Timothy: Tuesday to Saturday: 8:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the daily Mass box of both issues; the intentions list 8:30 am Tuesday to Saturday, and the calendar marks Monday 'No Daily Mass'. The website's location notice puts daily Mass in the Lower Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 2,
+          "said": "DAILY MASS Saint Timothy: Tuesday to Saturday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af784d3",
+          "page": 2,
+          "said": "DAILY MASS Saint Timothy: Tuesday to Saturday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 4,
+          "said": "Tuesday, Nov. 17th ... 8:30 am James Ritter (and an 8:30 am intention each day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.st-tims.org/",
+          "said": "Mass & Confession Location Update Starting September 26th–27th:Upper Church: Confessions, Saturday 4:00 PM Vigil, & Sunday 8:00 AM / 11:30 AM MassesLower Church: Daily Mass (Tues–Sat) at 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saint Timothy: Tuesday to Saturday: 8:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the daily Mass box of both issues; the intentions list 8:30 am Tuesday to Saturday, and the calendar marks Monday 'No Daily Mass'. The website's location notice puts daily Mass in the Lower Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 2,
+          "said": "DAILY MASS Saint Timothy: Tuesday to Saturday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af784d3",
+          "page": 2,
+          "said": "DAILY MASS Saint Timothy: Tuesday to Saturday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 4,
+          "said": "Tuesday, Nov. 17th ... 8:30 am James Ritter (and an 8:30 am intention each day through Saturday, Nov. 21)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.st-tims.org/",
+          "said": "Mass & Confession Location Update Starting September 26th–27th:Upper Church: Confessions, Saturday 4:00 PM Vigil, & Sunday 8:00 AM / 11:30 AM MassesLower Church: Daily Mass (Tues–Sat) at 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Saint Timothy: Tuesday to Saturday: 8:30 am”"
+        }
+      ],
+      "rationale": "R1: printed in the daily Mass box of both issues; the intentions list 8:30 am Tuesday to Saturday, and the calendar marks Monday 'No Daily Mass'. The website's location notice puts daily Mass in the Lower Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In Chinese"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 2,
+          "said": "Chinese Mass at 3 pm on the 1st Sunday of the month."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af784d3",
+          "page": 2,
+          "said": "Chinese Mass at 3 pm on the 1st Sunday of the month."
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 9,
+          "said": "CHINESE MASS and DEVOTIONS at ST. TIMOTHY'S CHURCH When: 3:00 pm on Sunday, December 6th ... Mass and Devotions on the first Sunday of each month a 3 pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Chinese Mass at 3 pm on the 1st Sunday of the month.”"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: the newest issue's box names the first Sunday; weekly with weeks_of_month, not dated, even though p9 also gives Dec 6.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Upper Church"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 2,
+          "said": "Confessions are heard every Saturday from 3:00 to 3:45pm in St. Timothy's upper church, or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af784d3",
+          "page": 2,
+          "said": "Confessions are heard every Saturday from 3:00 to 3:45pm in St. Timothy's upper church, or by appointment."
+        },
+        {
+          "source": "c1",
+          "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+          "page": 2,
+          "said": "gpt-6-luna read the same: B1 p2 “Confessions are heard every Saturday from 3:00 to 3:45pm in St. Timothy’s upper church”"
+        }
+      ],
+      "rationale": "R1: printed in the sacraments column of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 2,
+          "said": "or by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-church-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-30",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Holy Hour"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 7,
+          "said": "ADVENT HOLY HOUR at ST. BARTHOLOMEW CHURCH 7pm Monday, November 30th Monday, December 7th Monday, December 14 and Monday, December 21st"
+        },
+        {
+          "source": "c1",
+          "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “ADVENT HOLY HOUR at ST. BARTHOLOMEW CHURCH 7pm Monday, November 30th”"
+        }
+      ],
+      "rationale": "R1, POLICY (a Holy Hour is Adoration; Weekly or dated rule 3): four printed dates at a listed church, all after as_of. No end time is printed, so none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-church-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Holy Hour"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 7,
+          "said": "ADVENT HOLY HOUR at ST. BARTHOLOMEW CHURCH 7pm Monday, November 30th Monday, December 7th Monday, December 14 and Monday, December 21st"
+        },
+        {
+          "source": "c1",
+          "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “ADVENT HOLY HOUR at ST. BARTHOLOMEW CHURCH 7pm Monday, December 7th”"
+        }
+      ],
+      "rationale": "R1, POLICY (a Holy Hour is Adoration; Weekly or dated rule 3): four printed dates at a listed church, all after as_of. No end time is printed, so none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-church-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-14",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Holy Hour"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 7,
+          "said": "ADVENT HOLY HOUR at ST. BARTHOLOMEW CHURCH 7pm Monday, November 30th Monday, December 7th Monday, December 14 and Monday, December 21st"
+        },
+        {
+          "source": "c1",
+          "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “ADVENT HOLY HOUR at ST. BARTHOLOMEW CHURCH 7pm Monday, December 14th”"
+        }
+      ],
+      "rationale": "R1, POLICY (a Holy Hour is Adoration; Weekly or dated rule 3): four printed dates at a listed church, all after as_of. No end time is printed, so none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-church-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-21",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Holy Hour"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 7,
+          "said": "ADVENT HOLY HOUR at ST. BARTHOLOMEW CHURCH 7pm Monday, November 30th Monday, December 7th Monday, December 14 and Monday, December 21st"
+        },
+        {
+          "source": "c1",
+          "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “ADVENT HOLY HOUR at ST. BARTHOLOMEW CHURCH 7pm Monday, December 21st”"
+        }
+      ],
+      "rationale": "R1, POLICY (a Holy Hour is Adoration; Weekly or dated rule 3): four printed dates at a listed church, all after as_of. No end time is printed, so none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 2,
+          "said": "Mass on the Holy Day of Obligation: 8:30 am, (10:00 am BTRCS, when in session) and 6:00 pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing Holy Day line with no date; no read issue dates the Immaculate Conception (Dec 8), so no dated Masses are projected from it (as st-isaac-jogues-wayne s27). The 10:00 am is also a school (BTRCS) Mass. Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 5,
+          "said": "BEGINNING NOV. 11th Exposition of the Most Blessed Sacrament Wednesdays, 9:30 am to 6:00 pm followed by Benediction 6:00 pm to 6:30 pm in the Parish Life Center Enter on Levick Street"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af784d3",
+          "page": 5,
+          "said": "BEGINNING NOV. 11th Exposition of the Most Blessed Sacrament Wednesdays, 9:30 am to 6:00 pm followed by Benediction 6:00 pm to 6:30 pm in the Parish Life Center Enter on Levick Street"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 2,
+          "said": "PARISH LIFE CENTER St. Bartholomew & St. Timothy Parish Office 3001-3033 Levick Street"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 5,
+          "said": "Parish Life Center (the former Convent)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f2f7cf",
+          "page": 4,
+          "said": "calendar, Wednesday: Exposition Benediction PLC"
+        },
+        {
+          "source": "c1",
+          "bulletin": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+          "page": 5,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p5 “Exposition of the Most Blessed Sacrament Wednesdays, 9:30 am to 6:00 pm followed by Benediction 6:00 pm to 6:30 pm in the Parish Life Center”"
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: exposition is clearly stated and current (began Nov 11, also on the p4 calendar), but it is held in the Parish Life Center, the former convent, not the church. Its address 3001-3033 Levick St. includes St. Timothy Church's 3001 Levick St., so it reads as the same grounds; leaning include as ss-philip-and-james-exton s15 and st-frances-cabrini-fairless-hills s19 (an on-campus chapel building). Hard because POLICY names a convent chapel among separate chapels, and no page says the PLC is beside the church. Benediction 6:00-6:30 closes the period, so it ends 6:30 PM with note Benediction (POLICY).",
+      "question": "Is the Parish Life Center (former convent, 3001-3033 Levick St.) on St. Timothy Church's grounds, so its Wednesday Exposition 9:30 AM-6:30 PM goes at St. Timothy Church?",
+      "options": [
+        {
+          "label": "Wednesdays 9:30 AM-6:30 PM at St. Timothy, in the Parish Life Center",
+          "entry": {
+            "church_slug": "st-timothy-church-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "18:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Parish Life Center; Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "plc"
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "dabae7eea612d9d4566bb56b019e3ce9",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T03:31:52.147841+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "88f2f7cf278ac232ee40ae83d7d77e920681c449d4442f0438efb0dfef472788",
+        "fetched_at": "2026-11-15T16:47:10Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "6af784d353f9fe2f4aee647d78eb672bea834694169be0b8cc186077767aafd7",
+        "fetched_at": "2026-11-08T15:55:32Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.006138,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-timothy-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saint Timothy: Tuesday to Saturday: 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saint Timothy: Tuesday to Saturday: 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-timothy-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saint Timothy: Tuesday to Saturday: 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saint Timothy: Tuesday to Saturday: 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-timothy-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saint Timothy: Tuesday to Saturday: 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saint Timothy: Tuesday to Saturday: 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-timothy-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saint Timothy: Tuesday to Saturday: 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saint Timothy: Tuesday to Saturday: 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-timothy-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saint Timothy: Tuesday to Saturday: 8:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saint Timothy: Tuesday to Saturday: 8:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-timothy-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Saint Timothy: 4:00 pm Vigil Mass"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Saint Timothy: 4:00 pm Vigil Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-timothy-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday: 8:00 am and 11:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Sunday: 8:00 am and 11:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-timothy-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Sunday: 8:00 am and 11:30 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Sunday: 8:00 am and 11:30 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-bartholomew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "St. Bartholomew: Sunday: 10:00 am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "St. Bartholomew: Sunday: 10:00 am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-timothy-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "15:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [
+            "first"
+          ],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Chinese",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Chinese Mass at 3 pm on the 1st Sunday of the month."
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Chinese Mass at 3 pm on the 1st Sunday of the month."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-timothy-church-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:00",
+          "end_time": "15:45",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Upper church",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 2,
+            "quote": "Confessions are heard every Saturday from 3:00 to 3:45pm in St. Timothy’s upper church"
+          },
+          {
+            "bulletin": "B2",
+            "page": 2,
+            "quote": "Confessions are heard every Saturday from 3:00 to 3:45pm in St. Timothy’s upper church"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-timothy-church-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": "18:30",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Parish Life Center; Benediction",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 5,
+            "quote": "Exposition of the Most Blessed Sacrament Wednesdays, 9:30 am to 6:00 pm followed by Benediction 6:00 pm to 6:30 pm in the Parish Life Center"
+          },
+          {
+            "bulletin": "B2",
+            "page": 5,
+            "quote": "Exposition of the Most Blessed Sacrament Wednesdays, 9:30 am to 6:00 pm followed by Benediction 6:00 pm to 6:30 pm in the Parish Life Center"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-bartholomew-church-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-30",
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Advent Holy Hour",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "ADVENT HOLY HOUR at ST. BARTHOLOMEW CHURCH 7pm Monday, November 30th"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-bartholomew-church-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-07",
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Advent Holy Hour",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "ADVENT HOLY HOUR at ST. BARTHOLOMEW CHURCH 7pm Monday, December 7th"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-bartholomew-church-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-14",
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Advent Holy Hour",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "ADVENT HOLY HOUR at ST. BARTHOLOMEW CHURCH 7pm Monday, December 14th"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "st-bartholomew-church-philadelphia",
+          "event_type": "adoration",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-12-21",
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Advent Holy Hour",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "ADVENT HOLY HOUR at ST. BARTHOLOMEW CHURCH 7pm Monday, December 21st"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "1a2007a605caa906b7ee1beb10d1c2d7e266baede3d4b6a7a28c0ea3084a9190",
+    "differences": []
+  }
+}
