@@ -1,0 +1,1037 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-jerome-philadelphia",
+  "status": "ready",
+  "as_of": "2026-11-15T16:45:48Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T03:44:32Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both November issues (Nov 8, Nov 15) print the same box: Sat 4:30 PM vigil, Sun 7:30/9:30/11:00 AM, Mon-Fri 8:00 AM, Sat confession 3:30-4:15 PM, all confirmed by the intentions. No Adoration is printed; the undated standing holy-day line is left out (POLICY, Dates). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d19918b32d91e25d18648995312c2fbffbe61f8f17a436ca562ad76c89798b13",
+      "fetched_at": "2026-11-15T16:45:48Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c5d04e7e23f69408da62b045b63e44fba0479c25b9056bc8572f63f0ac6a6064",
+      "fetched_at": "2026-11-08T15:54:28Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "d19918b32d91e25d18648995312c2fbffbe61f8f17a436ca562ad76c89798b13",
+      "bulletins": [
+        "d19918b32d91e25d18648995312c2fbffbe61f8f17a436ca562ad76c89798b13",
+        "c5d04e7e23f69408da62b045b63e44fba0479c25b9056bc8572f63f0ac6a6064"
+      ],
+      "cached": false,
+      "cost_usd": 0.002149,
+      "at": "2026-11-28T03:47:30.210914+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jerome-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 1,
+          "said": "Saturday Vigil Mass: 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 1,
+          "said": "Saturday Vigil Mass: 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 2,
+          "said": "Saturday, November 21, 2026 4:30 PM Anthony Bugieda"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 2,
+          "said": "Saturday, November 21, 2026 4:30 PM Anthony Bugieda"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d19918b32d91e25d18648995312c2fbffbe61f8f17a436ca562ad76c89798b13",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Vigil Mass: 4:30 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; every Saturday in both weeks' intentions has 4:30 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jerome-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 1,
+          "said": "Sunday Mass: 7:30, 9:30 & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 1,
+          "said": "Sunday Mass: 7:30, 9:30 & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 7:30 AM ... 9:30 AM ... 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 7:30 AM ... 9:30 AM ... 11:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d19918b32d91e25d18648995312c2fbffbe61f8f17a436ca562ad76c89798b13",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Mass: 7:30, 9:30 & 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jerome-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 1,
+          "said": "Sunday Mass: 7:30, 9:30 & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 1,
+          "said": "Sunday Mass: 7:30, 9:30 & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 7:30 AM ... 9:30 AM ... 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 7:30 AM ... 9:30 AM ... 11:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d19918b32d91e25d18648995312c2fbffbe61f8f17a436ca562ad76c89798b13",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Mass: 7:30, 9:30 & 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jerome-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 1,
+          "said": "Sunday Mass: 7:30, 9:30 & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 1,
+          "said": "Sunday Mass: 7:30, 9:30 & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 7:30 AM ... 9:30 AM ... 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 7:30 AM ... 9:30 AM ... 11:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d19918b32d91e25d18648995312c2fbffbe61f8f17a436ca562ad76c89798b13",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday Mass: 7:30, 9:30 & 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jerome-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 1,
+          "said": "Weekday Mass: Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 1,
+          "said": "Weekday Mass: Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 2,
+          "said": "Monday ... Friday 8:00 AM (intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 2,
+          "said": "Monday ... Friday 8:00 AM (intentions each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d19918b32d91e25d18648995312c2fbffbe61f8f17a436ca562ad76c89798b13",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass: Mon-Fri 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:00 AM Monday to Friday. The Thanksgiving Day Mass at 8:00am (p3) is the regular Thursday slot, so it is not recorded separately (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jerome-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 1,
+          "said": "Weekday Mass: Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 1,
+          "said": "Weekday Mass: Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 2,
+          "said": "Monday ... Friday 8:00 AM (intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 2,
+          "said": "Monday ... Friday 8:00 AM (intentions each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d19918b32d91e25d18648995312c2fbffbe61f8f17a436ca562ad76c89798b13",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass: Mon-Fri 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:00 AM Monday to Friday. The Thanksgiving Day Mass at 8:00am (p3) is the regular Thursday slot, so it is not recorded separately (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jerome-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 1,
+          "said": "Weekday Mass: Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 1,
+          "said": "Weekday Mass: Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 2,
+          "said": "Monday ... Friday 8:00 AM (intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 2,
+          "said": "Monday ... Friday 8:00 AM (intentions each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d19918b32d91e25d18648995312c2fbffbe61f8f17a436ca562ad76c89798b13",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass: Mon-Fri 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:00 AM Monday to Friday. The Thanksgiving Day Mass at 8:00am (p3) is the regular Thursday slot, so it is not recorded separately (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jerome-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 1,
+          "said": "Weekday Mass: Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 1,
+          "said": "Weekday Mass: Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 2,
+          "said": "Monday ... Friday 8:00 AM (intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 2,
+          "said": "Monday ... Friday 8:00 AM (intentions each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d19918b32d91e25d18648995312c2fbffbe61f8f17a436ca562ad76c89798b13",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass: Mon-Fri 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:00 AM Monday to Friday. The Thanksgiving Day Mass at 8:00am (p3) is the regular Thursday slot, so it is not recorded separately (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jerome-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 1,
+          "said": "Weekday Mass: Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 1,
+          "said": "Weekday Mass: Mon-Fri 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 2,
+          "said": "Monday ... Friday 8:00 AM (intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 2,
+          "said": "Monday ... Friday 8:00 AM (intentions each weekday)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "d19918b32d91e25d18648995312c2fbffbe61f8f17a436ca562ad76c89798b13",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Weekday Mass: Mon-Fri 8:00 AM”"
+        }
+      ],
+      "rationale": "R1: schedule box of both issues; both weeks' intentions list 8:00 AM Monday to Friday. The Thanksgiving Day Mass at 8:00am (p3) is the regular Thursday slot, so it is not recorded separately (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jerome-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 1,
+          "said": "Confessions: Sat. 3:30 – 4:15 PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 1,
+          "said": "Confessions: Sat. 3:30 – 4:15 PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 2,
+          "said": "Reconciliation (Sacrament of Penance) - Every Saturday from 3:30 pm to 4:15 pm or any time by calling the rectory."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 2,
+          "said": "Reconciliation (Sacrament of Penance) - Every Saturday from 3:30 pm to 4:15 pm or any time by calling the rectory."
+        },
+        {
+          "source": "c1",
+          "bulletin": "d19918b32d91e25d18648995312c2fbffbe61f8f17a436ca562ad76c89798b13",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Confessions: Sat. 3:30 – 4:15 PM or by appointment”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the sacraments column of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 2,
+          "said": "or any time by calling the rectory"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 1,
+          "said": "Holy Day Mass: 8:00 AM, Noon and 7:00 PM (except Jan. 1)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c5d04e7e",
+          "page": 1,
+          "said": "Holy Day Mass: 8:00 AM, Noon and 7:00 PM (except Jan. 1)"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line in the year-round box names no date, and no read issue gives a dated notice for Dec 8 or another holy day, so no date is pinned down; decided like st-isaac-jogues-wayne s27 (undated Christmas box left out), unlike our-lady-of-consolation-parkesburg s12. December issues will print this year's holy-day Masses for update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d19918b3",
+          "page": 6,
+          "said": "For Veterans Day, our school community gathered for Holy Hour led by Fr. Izzo"
+        }
+      ],
+      "rationale": "R16, R24: a past school Holy Hour (Nov 11) reported after the fact; not a schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "11feb7a6b4a42241fb59e6623a7ff9e4",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T03:47:30.210914+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "d19918b32d91e25d18648995312c2fbffbe61f8f17a436ca562ad76c89798b13",
+        "fetched_at": "2026-11-15T16:45:48Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "c5d04e7e23f69408da62b045b63e44fba0479c25b9056bc8572f63f0ac6a6064",
+        "fetched_at": "2026-11-08T15:54:28Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002149,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-jerome-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Vigil Mass: 4:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Vigil Mass: 4:30 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-jerome-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Mass: 7:30, 9:30 & 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Mass: 7:30, 9:30 & 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-jerome-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Mass: 7:30, 9:30 & 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Mass: 7:30, 9:30 & 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-jerome-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday Mass: 7:30, 9:30 & 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday Mass: 7:30, 9:30 & 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-jerome-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass: Mon-Fri 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass: Mon-Fri 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-jerome-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass: Mon-Fri 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass: Mon-Fri 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-jerome-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass: Mon-Fri 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass: Mon-Fri 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-jerome-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass: Mon-Fri 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass: Mon-Fri 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-jerome-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Weekday Mass: Mon-Fri 8:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Weekday Mass: Mon-Fri 8:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-jerome-church-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:30",
+          "end_time": "16:15",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Confessions: Sat. 3:30 – 4:15 PM or by appointment"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Confessions: Sat. 3:30 – 4:15 PM or by appointment"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "e952a57dadc1a4097bf3671929b1bcaa9c32c569621ef0824783a24877a07c25",
+    "differences": []
+  }
+}
