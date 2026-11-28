@@ -1,0 +1,2691 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-matthew-philadelphia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:46:31Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T03:19:55Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Upper and Lower Church). Weekend, weekday and confession times agree in both November issues' p1 box and on the website; the 6:30 AM weekday Mass is September-June. Advent Holy Hours, the Dec 21 penance evening and Christmas Masses come from the parish's Advent 2026 page. Open: Thanksgiving weekday cancellations (lean record) and the undated Holy Days line for Dec 8 and Jan 1 (lean leave out).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b4bf214e1903e16b0788a83a17e6dea3e38c25dc49e21d9e2ef47b5d8368644b",
+      "fetched_at": "2026-11-15T16:46:31Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "28ecf91ec2a65388ae0aa31176ab56ce386203393834cfd7ac6246263acedbfb",
+      "fetched_at": "2026-11-08T15:55:04Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "b4bf214e1903e16b0788a83a17e6dea3e38c25dc49e21d9e2ef47b5d8368644b",
+      "bulletins": [
+        "b4bf214e1903e16b0788a83a17e6dea3e38c25dc49e21d9e2ef47b5d8368644b",
+        "28ecf91ec2a65388ae0aa31176ab56ce386203393834cfd7ac6246263acedbfb"
+      ],
+      "cached": false,
+      "cost_usd": 0.002829,
+      "at": "2026-11-28T03:26:30.316959+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Upper Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Saturdays: Vigil Mass 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Saturdays: Vigil Mass 4:30pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Saturday 4:30 PM (UC)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4bf214e1903e16b0788a83a17e6dea3e38c25dc49e21d9e2ef47b5d8368644b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturdays: Vigil Mass 4:30pm”"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of both issues; the website places it in the Upper Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Upper Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Sunday 7:00 AM, 9:00 AM, *11:00 AM , 7:00 PM (UC)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4bf214e1903e16b0788a83a17e6dea3e38c25dc49e21d9e2ef47b5d8368644b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of both issues; the website places them in the Upper Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Upper Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Sunday 7:00 AM, 9:00 AM, *11:00 AM , 7:00 PM (UC)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4bf214e1903e16b0788a83a17e6dea3e38c25dc49e21d9e2ef47b5d8368644b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of both issues; the website places them in the Upper Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Upper Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Sunday 7:00 AM, 9:00 AM, *11:00 AM , 7:00 PM (UC)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4bf214e1903e16b0788a83a17e6dea3e38c25dc49e21d9e2ef47b5d8368644b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of both issues; the website places them in the Upper Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Upper Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Sunday 7:00 AM, 9:00 AM, *11:00 AM , 7:00 PM (UC)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4bf214e1903e16b0788a83a17e6dea3e38c25dc49e21d9e2ef47b5d8368644b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm”"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of both issues; the website places them in the Upper Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am (July and August only 8:30am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am (July and August only 8:30am)"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Monday to Friday 6:30 AM and 8:30 AM (LC)"
+        }
+      ],
+      "rationale": "R1: Weekday Masses box of both issues; its 'July and August only 8:30am' is kept as a September-June season (POLICY, Weekly qualifiers). Both weeks' intentions (p2) list 6:30 Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am (July and August only 8:30am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am (July and August only 8:30am)"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Monday to Friday 6:30 AM and 8:30 AM (LC)"
+        }
+      ],
+      "rationale": "R1: Weekday Masses box of both issues; its 'July and August only 8:30am' is kept as a September-June season (POLICY, Weekly qualifiers). Both weeks' intentions (p2) list 6:30 Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am (July and August only 8:30am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am (July and August only 8:30am)"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Monday to Friday 6:30 AM and 8:30 AM (LC)"
+        }
+      ],
+      "rationale": "R1: Weekday Masses box of both issues; its 'July and August only 8:30am' is kept as a September-June season (POLICY, Weekly qualifiers). Both weeks' intentions (p2) list 6:30 Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am (July and August only 8:30am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am (July and August only 8:30am)"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Monday to Friday 6:30 AM and 8:30 AM (LC)"
+        }
+      ],
+      "rationale": "R1: Weekday Masses box of both issues; its 'July and August only 8:30am' is kept as a September-June season (POLICY, Weekly qualifiers). Both weeks' intentions (p2) list 6:30 Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am (July and August only 8:30am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am (July and August only 8:30am)"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Monday to Friday 6:30 AM and 8:30 AM (LC)"
+        }
+      ],
+      "rationale": "R1: Weekday Masses box of both issues; its 'July and August only 8:30am' is kept as a September-June season (POLICY, Weekly qualifiers). Both weeks' intentions (p2) list 6:30 Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am ... Saturday: 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am ... Saturday: 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Saturday 8:30 AM (LC)"
+        }
+      ],
+      "rationale": "R1: Weekday Masses box of both issues and both weeks' intentions (p2); website places weekday Masses in the Lower Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am ... Saturday: 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am ... Saturday: 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Saturday 8:30 AM (LC)"
+        }
+      ],
+      "rationale": "R1: Weekday Masses box of both issues and both weeks' intentions (p2); website places weekday Masses in the Lower Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am ... Saturday: 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am ... Saturday: 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Saturday 8:30 AM (LC)"
+        }
+      ],
+      "rationale": "R1: Weekday Masses box of both issues and both weeks' intentions (p2); website places weekday Masses in the Lower Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am ... Saturday: 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am ... Saturday: 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Saturday 8:30 AM (LC)"
+        }
+      ],
+      "rationale": "R1: Weekday Masses box of both issues and both weeks' intentions (p2); website places weekday Masses in the Lower Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am ... Saturday: 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am ... Saturday: 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Saturday 8:30 AM (LC)"
+        }
+      ],
+      "rationale": "R1: Weekday Masses box of both issues and both weeks' intentions (p2); website places weekday Masses in the Lower Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am ... Saturday: 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Monday- Friday: 6:30am & 8:30am ... Saturday: 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Saturday 8:30 AM (LC)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4bf214e1903e16b0788a83a17e6dea3e38c25dc49e21d9e2ef47b5d8368644b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday: 8:30am”"
+        }
+      ],
+      "rationale": "R1: Weekday Masses box of both issues and both weeks' intentions (p2); website places weekday Masses in the Lower Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": "08:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Saturdays: 7:45-8:15am, and 3:00-4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Saturdays: 7:45-8:15am, and 3:00-4:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Saturday 7:45-8:15 AM (LC)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4bf214e1903e16b0788a83a17e6dea3e38c25dc49e21d9e2ef47b5d8368644b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturdays: 7:45-8:15am, and 3:00-4:00pm”"
+        }
+      ],
+      "rationale": "R1: Confessions box of both issues; the website agrees and places it in the Lower Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Upper Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Saturdays: 7:45-8:15am, and 3:00-4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Saturdays: 7:45-8:15am, and 3:00-4:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/",
+          "said": "Saturday 3:00-4:00 PM (UC)"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4bf214e1903e16b0788a83a17e6dea3e38c25dc49e21d9e2ef47b5d8368644b",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturdays: 7:45-8:15am, and 3:00-4:00pm”"
+        }
+      ],
+      "rationale": "R1: Confessions box of both issues; the website agrees and places it in the Upper Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 3,
+          "said": "Join us for Thanksgiving Mass on Thursday, November 26th at 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 3,
+          "said": "THANKSGIVING MASS Thursday, November 26th 9:00AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "b4bf214e1903e16b0788a83a17e6dea3e38c25dc49e21d9e2ef47b5d8368644b",
+          "page": 3,
+          "said": "gpt-6-luna read the same: B1 p3 “Join us for Thanksgiving Mass on Thursday, November 26th at 9am.”"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass in both issues (announcement and flyer), on or after as_of (POLICY rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Holidays: 9:00am (Thanksgiving, Memorial Day, Fourth of July, Labor Day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 3,
+          "said": "Join us for Thanksgiving Mass on Thursday, November 26th at 9am."
+        }
+      ],
+      "rationale": "R17 wants a stated cancellation; 'cancelled' isn't printed, but the box's standing Holidays line gives the holiday's one Mass time. Leaning per precedent our-lady-help-of-christians-abington s19 and our-lady-of-mount-carmel-doylestown s15, which recorded such holiday schedules as replacing the weekday Masses.",
+      "question": "Record the Thursday Nov 26 6:30 and 8:30 AM weekday Masses as cancelled, since the holiday schedule gives one 9:00 AM Mass?",
+      "options": [
+        {
+          "label": "Record the cancellations",
+          "entry": {
+            "church_slug": "st-matthew-church-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave the weekday slots alone",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "thanksgiving"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Holidays: 9:00am (Thanksgiving, Memorial Day, Fourth of July, Labor Day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 3,
+          "said": "Join us for Thanksgiving Mass on Thursday, November 26th at 9am."
+        }
+      ],
+      "rationale": "R17 wants a stated cancellation; 'cancelled' isn't printed, but the box's standing Holidays line gives the holiday's one Mass time. Leaning per precedent our-lady-help-of-christians-abington s19 and our-lady-of-mount-carmel-doylestown s15, which recorded such holiday schedules as replacing the weekday Masses.",
+      "question": "Record the Thursday Nov 26 6:30 and 8:30 AM weekday Masses as cancelled, since the holiday schedule gives one 9:00 AM Mass?",
+      "options": [
+        {
+          "label": "Record the cancellations",
+          "entry": {
+            "church_slug": "st-matthew-church-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave the weekday slots alone",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "thanksgiving"
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 5,
+          "said": "Philly Adoration for Vocations Throughout the Archdiocese Every Thursday from 9:00am to 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 5,
+          "said": "Philly Adoration for Vocations Throughout the Archdiocese Every Thursday from 9:00am to 4:00pm"
+        }
+      ],
+      "rationale": "POLICY, Churches and chapels; R22: an archdiocesan notice that names no church; nothing says it is held at St. Matthew, and the website lists no Adoration. Leave out when it is unclear where it is.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Holy Hour, Upper Church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/advent-2026-adult-faith-formation-and-holy-hours/",
+          "said": "On Wednesdays in Advent (Dec. 2, Dec. 9, Dec. 16, Dec. 23) we will make a Holy Hour in the Upper Church ... Holy Hour in the Upper Church at 7:00 pm",
+          "schedule_check": {
+            "checked_at": "2026-11-28T03:23:24Z",
+            "current_because": "Titled Advent 2026; its weekdays match 2026 (Mon 11/30, Wed 12/2, Fri 12/25) and its footer schedule matches the Nov 15 bulletin box exactly",
+            "bulletin": "b4bf214e",
+            "fits_because": "The Nov 15 bulletin (b4bf214e) covers mid-November and prints no Advent or Christmas times; the page adds dated Advent services at the parish one church"
+          }
+        }
+      ],
+      "rationale": "R6, R16; POLICY, What to extract: the parish's own Advent 2026 page dates each Holy Hour at 7:00 pm; a Holy Hour is Adoration unless the Sacrament is said not to be exposed, and it lasts an hour. No read bulletin covers Advent.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-09",
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Holy Hour, Upper Church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/advent-2026-adult-faith-formation-and-holy-hours/",
+          "said": "On Wednesdays in Advent (Dec. 2, Dec. 9, Dec. 16, Dec. 23) we will make a Holy Hour in the Upper Church ... Holy Hour in the Upper Church at 7:00 pm",
+          "schedule_check": {
+            "checked_at": "2026-11-28T03:23:24Z",
+            "current_because": "Titled Advent 2026; its weekdays match 2026 (Mon 11/30, Wed 12/2, Fri 12/25) and its footer schedule matches the Nov 15 bulletin box exactly",
+            "bulletin": "b4bf214e",
+            "fits_because": "The Nov 15 bulletin (b4bf214e) covers mid-November and prints no Advent or Christmas times; the page adds dated Advent services at the parish one church"
+          }
+        }
+      ],
+      "rationale": "R6, R16; POLICY, What to extract: the parish's own Advent 2026 page dates each Holy Hour at 7:00 pm; a Holy Hour is Adoration unless the Sacrament is said not to be exposed, and it lasts an hour. No read bulletin covers Advent.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-16",
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Holy Hour, Upper Church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/advent-2026-adult-faith-formation-and-holy-hours/",
+          "said": "On Wednesdays in Advent (Dec. 2, Dec. 9, Dec. 16, Dec. 23) we will make a Holy Hour in the Upper Church ... Holy Hour in the Upper Church at 7:00 pm",
+          "schedule_check": {
+            "checked_at": "2026-11-28T03:23:24Z",
+            "current_because": "Titled Advent 2026; its weekdays match 2026 (Mon 11/30, Wed 12/2, Fri 12/25) and its footer schedule matches the Nov 15 bulletin box exactly",
+            "bulletin": "b4bf214e",
+            "fits_because": "The Nov 15 bulletin (b4bf214e) covers mid-November and prints no Advent or Christmas times; the page adds dated Advent services at the parish one church"
+          }
+        }
+      ],
+      "rationale": "R6, R16; POLICY, What to extract: the parish's own Advent 2026 page dates each Holy Hour at 7:00 pm; a Holy Hour is Adoration unless the Sacrament is said not to be exposed, and it lasts an hour. No read bulletin covers Advent.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-23",
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Holy Hour, Upper Church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/advent-2026-adult-faith-formation-and-holy-hours/",
+          "said": "On Wednesdays in Advent (Dec. 2, Dec. 9, Dec. 16, Dec. 23) we will make a Holy Hour in the Upper Church ... Holy Hour in the Upper Church at 7:00 pm",
+          "schedule_check": {
+            "checked_at": "2026-11-28T03:23:24Z",
+            "current_because": "Titled Advent 2026; its weekdays match 2026 (Mon 11/30, Wed 12/2, Fri 12/25) and its footer schedule matches the Nov 15 bulletin box exactly",
+            "bulletin": "b4bf214e",
+            "fits_because": "The Nov 15 bulletin (b4bf214e) covers mid-November and prints no Advent or Christmas times; the page adds dated Advent services at the parish one church"
+          }
+        }
+      ],
+      "rationale": "R6, R16; POLICY, What to extract: the parish's own Advent 2026 page dates each Holy Hour at 7:00 pm; a Holy Hour is Adoration unless the Sacrament is said not to be exposed, and it lasts an hour. No read bulletin covers Advent.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-21",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent penance evening, Upper and Lower Church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/advent-2026-adult-faith-formation-and-holy-hours/",
+          "said": "Parish Confessions begin in the Upper and Lower Church at 7:00 pm.",
+          "schedule_check": {
+            "checked_at": "2026-11-28T03:23:24Z",
+            "current_because": "Titled Advent 2026; its weekdays match 2026 (Mon 11/30, Wed 12/2, Fri 12/25) and its footer schedule matches the Nov 15 bulletin box exactly",
+            "bulletin": "b4bf214e",
+            "fits_because": "The Nov 15 bulletin (b4bf214e) covers mid-November and prints no Advent or Christmas times; the page adds dated Advent services at the parish one church"
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's Advent 2026 page dates parish confessions on Mon Dec 21 at 7:00 pm, after a 6:30 gathering, so they start at the printed time (as st-aloysius-pottstown s17); no end printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve; Upper Church (choir) and Lower Church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/advent-2026-adult-faith-formation-and-holy-hours/",
+          "said": "Christmas Vigil Masses 4:30 UC with choir 4:30 LC 9:00 UC with ensemble",
+          "schedule_check": {
+            "checked_at": "2026-11-28T03:23:24Z",
+            "current_because": "Titled Advent 2026; its weekdays match 2026 (Mon 11/30, Wed 12/2, Fri 12/25) and its footer schedule matches the Nov 15 bulletin box exactly",
+            "bulletin": "b4bf214e",
+            "fits_because": "The Nov 15 bulletin (b4bf214e) covers mid-November and prints no Advent or Christmas times; the page adds dated Advent services at the parish one church"
+          }
+        }
+      ],
+      "rationale": "R6, R16; POLICY rule 7: this year's Advent 2026 page gives the Christmas Vigil Masses (as nativity-bvm-media s20 used a current Advent page). Two Masses at 4:30 in the one church make one slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "21:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve; Upper Church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/advent-2026-adult-faith-formation-and-holy-hours/",
+          "said": "Christmas Vigil Masses 4:30 UC with choir 4:30 LC 9:00 UC with ensemble",
+          "schedule_check": {
+            "checked_at": "2026-11-28T03:23:24Z",
+            "current_because": "Titled Advent 2026; its weekdays match 2026 (Mon 11/30, Wed 12/2, Fri 12/25) and its footer schedule matches the Nov 15 bulletin box exactly",
+            "bulletin": "b4bf214e",
+            "fits_because": "The Nov 15 bulletin (b4bf214e) covers mid-November and prints no Advent or Christmas times; the page adds dated Advent services at the parish one church"
+          }
+        }
+      ],
+      "rationale": "R6, R16; POLICY rule 7: this year's Advent 2026 page gives the Christmas Vigil Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/advent-2026-adult-faith-formation-and-holy-hours/",
+          "said": "Friday 12/25 ... Christmas Day Masses 8:00 am 11:00 am",
+          "schedule_check": {
+            "checked_at": "2026-11-28T03:23:24Z",
+            "current_because": "Titled Advent 2026; its weekdays match 2026 (Mon 11/30, Wed 12/2, Fri 12/25) and its footer schedule matches the Nov 15 bulletin box exactly",
+            "bulletin": "b4bf214e",
+            "fits_because": "The Nov 15 bulletin (b4bf214e) covers mid-November and prints no Advent or Christmas times; the page adds dated Advent services at the parish one church"
+          }
+        }
+      ],
+      "rationale": "R6, R16; POLICY rule 7: this year's Advent 2026 page gives the Christmas Day Masses. The weekly Friday 6:30 and 8:30 slots are left alone (R17; as st-margaret-narberth s28).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stmattsparish.com/advent-2026-adult-faith-formation-and-holy-hours/",
+          "said": "Friday 12/25 ... Christmas Day Masses 8:00 am 11:00 am",
+          "schedule_check": {
+            "checked_at": "2026-11-28T03:23:24Z",
+            "current_because": "Titled Advent 2026; its weekdays match 2026 (Mon 11/30, Wed 12/2, Fri 12/25) and its footer schedule matches the Nov 15 bulletin box exactly",
+            "bulletin": "b4bf214e",
+            "fits_because": "The Nov 15 bulletin (b4bf214e) covers mid-November and prints no Advent or Christmas times; the page adds dated Advent services at the parish one church"
+          }
+        }
+      ],
+      "rationale": "R6, R16; POLICY rule 7: this year's Advent 2026 page gives the Christmas Day Masses. The weekly Friday 6:30 and 8:30 slots are left alone (R17; as st-margaret-narberth s28).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Holy Days: Vigil Mass: 4:30pm; On the Holy Day: 7:00am, 10:00am, 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Holy Days: Vigil Mass: 4:30pm; On the Holy Day: 7:00am, 10:00am, 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: the line is in the year-round Special Schedule box with no year or dated notice, and the parish's Advent 2026 page, which dates Christmas, lists nothing for Dec 8. Leaning per precedent st-isaac-jogues-wayne s27 (undated box left out; December issues will print this year's times). Hard because Dec 8 (Tue) and Jan 1 (Fri) are fixed and the times may well be right.",
+      "question": "Apply the box's standing Holy Days line (vigil 4:30 PM; on the day 7:00, 10:00 AM, 7:00 PM) to Dec 8 and Jan 1?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-matthew-church-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception vigil"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s33",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Holy Days: Vigil Mass: 4:30pm; On the Holy Day: 7:00am, 10:00am, 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Holy Days: Vigil Mass: 4:30pm; On the Holy Day: 7:00am, 10:00am, 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: the line is in the year-round Special Schedule box with no year or dated notice, and the parish's Advent 2026 page, which dates Christmas, lists nothing for Dec 8. Leaning per precedent st-isaac-jogues-wayne s27 (undated box left out; December issues will print this year's times). Hard because Dec 8 (Tue) and Jan 1 (Fri) are fixed and the times may well be right.",
+      "question": "Apply the box's standing Holy Days line (vigil 4:30 PM; on the day 7:00, 10:00 AM, 7:00 PM) to Dec 8 and Jan 1?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-matthew-church-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s34",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Holy Days: Vigil Mass: 4:30pm; On the Holy Day: 7:00am, 10:00am, 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Holy Days: Vigil Mass: 4:30pm; On the Holy Day: 7:00am, 10:00am, 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: the line is in the year-round Special Schedule box with no year or dated notice, and the parish's Advent 2026 page, which dates Christmas, lists nothing for Dec 8. Leaning per precedent st-isaac-jogues-wayne s27 (undated box left out; December issues will print this year's times). Hard because Dec 8 (Tue) and Jan 1 (Fri) are fixed and the times may well be right.",
+      "question": "Apply the box's standing Holy Days line (vigil 4:30 PM; on the day 7:00, 10:00 AM, 7:00 PM) to Dec 8 and Jan 1?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-matthew-church-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s35",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Holy Days: Vigil Mass: 4:30pm; On the Holy Day: 7:00am, 10:00am, 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Holy Days: Vigil Mass: 4:30pm; On the Holy Day: 7:00am, 10:00am, 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: the line is in the year-round Special Schedule box with no year or dated notice, and the parish's Advent 2026 page, which dates Christmas, lists nothing for Dec 8. Leaning per precedent st-isaac-jogues-wayne s27 (undated box left out; December issues will print this year's times). Hard because Dec 8 (Tue) and Jan 1 (Fri) are fixed and the times may well be right.",
+      "question": "Apply the box's standing Holy Days line (vigil 4:30 PM; on the day 7:00, 10:00 AM, 7:00 PM) to Dec 8 and Jan 1?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-matthew-church-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s36",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Holy Days: Vigil Mass: 4:30pm; On the Holy Day: 7:00am, 10:00am, 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Holy Days: Vigil Mass: 4:30pm; On the Holy Day: 7:00am, 10:00am, 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: the line is in the year-round Special Schedule box with no year or dated notice, and the parish's Advent 2026 page, which dates Christmas, lists nothing for Dec 8. Leaning per precedent st-isaac-jogues-wayne s27 (undated box left out; December issues will print this year's times). Hard because Dec 8 (Tue) and Jan 1 (Fri) are fixed and the times may well be right.",
+      "question": "Apply the box's standing Holy Days line (vigil 4:30 PM; on the day 7:00, 10:00 AM, 7:00 PM) to Dec 8 and Jan 1?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-matthew-church-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-31",
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mary, Mother of God vigil"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s37",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Holy Days: Vigil Mass: 4:30pm; On the Holy Day: 7:00am, 10:00am, 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Holy Days: Vigil Mass: 4:30pm; On the Holy Day: 7:00am, 10:00am, 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: the line is in the year-round Special Schedule box with no year or dated notice, and the parish's Advent 2026 page, which dates Christmas, lists nothing for Dec 8. Leaning per precedent st-isaac-jogues-wayne s27 (undated box left out; December issues will print this year's times). Hard because Dec 8 (Tue) and Jan 1 (Fri) are fixed and the times may well be right.",
+      "question": "Apply the box's standing Holy Days line (vigil 4:30 PM; on the day 7:00, 10:00 AM, 7:00 PM) to Dec 8 and Jan 1?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-matthew-church-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2027-01-01",
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mary, Mother of God"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s38",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Holy Days: Vigil Mass: 4:30pm; On the Holy Day: 7:00am, 10:00am, 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Holy Days: Vigil Mass: 4:30pm; On the Holy Day: 7:00am, 10:00am, 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: the line is in the year-round Special Schedule box with no year or dated notice, and the parish's Advent 2026 page, which dates Christmas, lists nothing for Dec 8. Leaning per precedent st-isaac-jogues-wayne s27 (undated box left out; December issues will print this year's times). Hard because Dec 8 (Tue) and Jan 1 (Fri) are fixed and the times may well be right.",
+      "question": "Apply the box's standing Holy Days line (vigil 4:30 PM; on the day 7:00, 10:00 AM, 7:00 PM) to Dec 8 and Jan 1?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-matthew-church-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2027-01-01",
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mary, Mother of God"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    },
+    {
+      "id": "s39",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4bf214e",
+          "page": 1,
+          "said": "Holy Days: Vigil Mass: 4:30pm; On the Holy Day: 7:00am, 10:00am, 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28ecf91e",
+          "page": 1,
+          "said": "Holy Days: Vigil Mass: 4:30pm; On the Holy Day: 7:00am, 10:00am, 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: the line is in the year-round Special Schedule box with no year or dated notice, and the parish's Advent 2026 page, which dates Christmas, lists nothing for Dec 8. Leaning per precedent st-isaac-jogues-wayne s27 (undated box left out; December issues will print this year's times). Hard because Dec 8 (Tue) and Jan 1 (Fri) are fixed and the times may well be right.",
+      "question": "Apply the box's standing Holy Days line (vigil 4:30 PM; on the day 7:00, 10:00 AM, 7:00 PM) to Dec 8 and Jan 1?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-matthew-church-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2027-01-01",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mary, Mother of God"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "holydays"
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "9fc1633e2c21741826f403e285ffe06e",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T03:26:30.316959+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "b4bf214e1903e16b0788a83a17e6dea3e38c25dc49e21d9e2ef47b5d8368644b",
+        "fetched_at": "2026-11-15T16:46:31Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "28ecf91ec2a65388ae0aa31176ab56ce386203393834cfd7ac6246263acedbfb",
+        "fetched_at": "2026-11-08T15:55:04Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002829,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays: Vigil Mass 4:30pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays: Vigil Mass 4:30pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "19:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sundays: 7:00am, 9:00am, 11:00am (Live streamed on our Facebook page), and 7:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "06:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": {
+            "start_month": 7,
+            "start_day": null,
+            "end_month": 8,
+            "end_day": null
+          },
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": {
+            "start_month": 7,
+            "start_day": null,
+            "end_month": 8,
+            "end_day": null
+          },
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": {
+            "start_month": 7,
+            "start_day": null,
+            "end_month": 8,
+            "end_day": null
+          },
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": {
+            "start_month": 7,
+            "start_day": null,
+            "end_month": 8,
+            "end_day": null
+          },
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": {
+            "start_month": 7,
+            "start_day": null,
+            "end_month": 8,
+            "end_day": null
+          },
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Friday: 6:30am & 8:30am (July and August only 8:30am)"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday: 8:30am"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday: 8:30am"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "07:45",
+          "end_time": "08:15",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays: 7:45-8:15am, and 3:00-4:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays: 7:45-8:15am, and 3:00-4:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o18",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "15:00",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays: 7:45-8:15am, and 3:00-4:00pm"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays: 7:45-8:15am, and 3:00-4:00pm"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o19",
+        "entry": {
+          "church_slug": "st-matthew-church-philadelphia",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Thanksgiving Mass",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 3,
+            "quote": "Join us for Thanksgiving Mass on Thursday, November 26th at 9am."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "19fd5a4fee45c856ae13efbd4a6f3cecaf20524389ed978a2457cb245da7274b",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "differs",
+        "fields": [
+          "weeks/season"
+        ],
+        "opinion": [
+          "o6",
+          "o7",
+          "o8",
+          "o9",
+          "o10"
+        ],
+        "slots": [
+          "s6",
+          "s7",
+          "s8",
+          "s9",
+          "s10"
+        ],
+        "opinion_said": "mass Mon,Tue,Wed,Thu,Fri 06:30 @st-matthew-church-philadelphia",
+        "seed_said": "mass Mon,Tue,Wed,Thu,Fri 06:30 @st-matthew-church-philadelphia season=9-6",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "b4bf214e",
+              "page": 1,
+              "said": "Monday- Friday: 6:30am & 8:30am (July and August only 8:30am)"
+            }
+          ],
+          "why": "R1; POLICY, Weekly qualifiers: in July and August only the 8:30 is said, so the 6:30 runs September-June (season=9-6); the same box in 28ecf91e p1.",
+          "at": "2026-11-28T03:26:50Z"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "differs",
+        "fields": [
+          "weeks/season"
+        ],
+        "opinion": [
+          "o11",
+          "o12",
+          "o13",
+          "o14",
+          "o15"
+        ],
+        "slots": [
+          "s11",
+          "s12",
+          "s13",
+          "s14",
+          "s15"
+        ],
+        "opinion_said": "mass Mon,Tue,Wed,Thu,Fri 08:30 @st-matthew-church-philadelphia season=7-8",
+        "seed_said": "mass Mon,Tue,Wed,Thu,Fri 08:30 @st-matthew-church-philadelphia",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "b4bf214e",
+              "page": 1,
+              "said": "Monday- Friday: 6:30am & 8:30am (July and August only 8:30am)"
+            }
+          ],
+          "why": "R1: the 8:30 is said all year (both Masses Sept-June, 'only 8:30am' in July-August); both weeks' November intentions (p2) list it, so it isn't limited to July-August.",
+          "at": "2026-11-28T03:26:53Z"
+        }
+      },
+      {
+        "id": "d3",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s23"
+        ],
+        "opinion_said": "-",
+        "seed_said": "adoration 2026-12-02 19:00-20:00 @st-matthew-church-philadelphia",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d4",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s24"
+        ],
+        "opinion_said": "-",
+        "seed_said": "adoration 2026-12-09 19:00-20:00 @st-matthew-church-philadelphia",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d5",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s25"
+        ],
+        "opinion_said": "-",
+        "seed_said": "adoration 2026-12-16 19:00-20:00 @st-matthew-church-philadelphia",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d6",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s26"
+        ],
+        "opinion_said": "-",
+        "seed_said": "adoration 2026-12-23 19:00-20:00 @st-matthew-church-philadelphia",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d7",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s27"
+        ],
+        "opinion_said": "-",
+        "seed_said": "confession 2026-12-21 19:00 @st-matthew-church-philadelphia",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d8",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s28"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-12-24 16:30 @st-matthew-church-philadelphia",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d9",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s29"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-12-24 21:00 @st-matthew-church-philadelphia",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d10",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s30"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-12-25 08:00 @st-matthew-church-philadelphia",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      },
+      {
+        "id": "d11",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s31"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-12-25 11:00 @st-matthew-church-philadelphia",
+        "resolution": {
+          "how": "auto",
+          "reason": "website"
+        }
+      }
+    ]
+  }
+}
