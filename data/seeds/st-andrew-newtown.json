@@ -1,0 +1,1399 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-andrew-newtown",
+  "status": "ready",
+  "as_of": "2026-11-15T16:44:31Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T01:00:04Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Andrew, Swamp Road). Both November issues print the same schedule box: daily 7 and 9 AM, Sat 9 AM & 5 PM, Sun 6:45-Noon, confession Tue 6:30-7 and Sat 4-4:45, Tuesday Adoration after the 9 AM Mass to 6 PM. Dated: the Nov 15-17 Forty Hours (exposition from 1 PM Nov 15, Benediction 6:30 PM Nov 16-17) and the Nov 17 confession cancellation. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "36ea702c834a300f79794ef1891c69a45644eaef750dd5434befd3b08f080353",
+      "fetched_at": "2026-11-15T16:44:31Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9c8a0e017cf3339ee8c5e15e72883ce47a517427309cc0326ba74acb8345941d",
+      "fetched_at": "2026-11-08T15:53:32Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "36ea702c834a300f79794ef1891c69a45644eaef750dd5434befd3b08f080353",
+      "bulletins": [
+        "36ea702c834a300f79794ef1891c69a45644eaef750dd5434befd3b08f080353",
+        "9c8a0e017cf3339ee8c5e15e72883ce47a517427309cc0326ba74acb8345941d"
+      ],
+      "cached": false,
+      "cost_usd": 0.003206,
+      "at": "2026-11-28T01:04:41.682350+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues prints daily 7:00 and 9:00 AM, and both weeks' intentions (p3) list them Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues prints daily 7:00 and 9:00 AM, and both weeks' intentions (p3) list them Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues prints daily 7:00 and 9:00 AM, and both weeks' intentions (p3) list them Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues prints daily 7:00 and 9:00 AM, and both weeks' intentions (p3) list them Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues prints daily 7:00 and 9:00 AM, and both weeks' intentions (p3) list them Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues prints daily 7:00 and 9:00 AM, and both weeks' intentions (p3) list them Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues prints daily 7:00 and 9:00 AM, and both weeks' intentions (p3) list them Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues prints daily 7:00 and 9:00 AM, and both weeks' intentions (p3) list them Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues prints daily 7:00 and 9:00 AM, and both weeks' intentions (p3) list them Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "MASS TIMES DAILY 7:00 & 9:00am"
+        }
+      ],
+      "rationale": "R1: the schedule box of both issues prints daily 7:00 and 9:00 AM, and both weeks' intentions (p3) list them Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "SATURDAY 9:00am & 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "SATURDAY 9:00am & 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the Nov 21 intentions (36ea702c p3) list 9:00am and 5:00pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "SATURDAY 9:00am & 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "SATURDAY 9:00am & 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues; the Nov 21 intentions (36ea702c p3) list 9:00am and 5:00pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "SUNDAY 6:45, 7:45, 9:00, 10:30am & Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "SUNDAY 6:45, 7:45, 9:00, 10:30am & Noon"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' Sunday intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "SUNDAY 6:45, 7:45, 9:00, 10:30am & Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "SUNDAY 6:45, 7:45, 9:00, 10:30am & Noon"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' Sunday intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "SUNDAY 6:45, 7:45, 9:00, 10:30am & Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "SUNDAY 6:45, 7:45, 9:00, 10:30am & Noon"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' Sunday intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "SUNDAY 6:45, 7:45, 9:00, 10:30am & Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "SUNDAY 6:45, 7:45, 9:00, 10:30am & Noon"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' Sunday intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "SUNDAY 6:45, 7:45, 9:00, 10:30am & Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "SUNDAY 6:45, 7:45, 9:00, 10:30am & Noon"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' Sunday intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "RECONCILIATION TUESDAY: 6:30-7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "RECONCILIATION TUESDAY: 6:30-7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "RECONCILIATION SATURDAY: 4:00-4:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "RECONCILIATION SATURDAY: 4:00-4:45pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION TUESDAY after 9:00am Mass until 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION TUESDAY after 9:00am Mass until 6:00pm"
+        }
+      ],
+      "rationale": "R1, R10: both issues' box; 'after' a weekday Mass starts 30 minutes after it (POLICY, Times), ending at the printed 6:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Forty Hours closing"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 3,
+          "said": "There will be NO CONFESSIONS on Tuesday, November 17th, due to our 40 Hours closing ceremony."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 3,
+          "said": "There will be NO CONFESSIONS on Tuesday, November 17th, due to our 40 Hours closing ceremony."
+        }
+      ],
+      "rationale": "R1, R16, R18: both issues cancel one date of the weekly Tuesday confession; Nov 17 is after as_of's date (Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Forty Hours Devotion; continuous exposition after the Noon Mass"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 8,
+          "said": "FORTY HOURS DEVOTION ... NOVEMBER 15-17 ... Sunday, November 15 Continuous Exposition after the Noon Mass; Liturgy of the Word and Homily with Benediction, 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 7,
+          "said": "Sunday, November 15 Continuous Exposition after the Noon Mass"
+        }
+      ],
+      "rationale": "R1, R10, R16: a dated exposition on as_of's own date; 'after' the Sunday Noon Mass is 1:00 PM (POLICY, Times). No end is recorded: the continuous exposition's hours through Nov 17 aren't printed, so none is copied onto it. The 6:30 PM Benediction falls inside it (R37).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-16",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Forty Hours: Liturgy of the Word and Homily with Benediction"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 8,
+          "said": "Monday & Tuesday, November 16 & 17 Liturgy of the Word and Homily with Benediction, 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 7,
+          "said": "Monday & Tuesday, November 16 & 17 Liturgy of the Word and Homily with Benediction, 6:30pm"
+        }
+      ],
+      "rationale": "R1, POLICY (Benediction implies Adoration): dated Benediction at 6:30 PM on each day, both on or after as_of's date. The Forty Hours' overnight exposition is left out: no hours are printed (as our-lady-of-consolation-parkesburg s13 left out unprinted 40 Hours hours).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Forty Hours: Liturgy of the Word and Homily with Benediction"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 8,
+          "said": "Monday & Tuesday, November 16 & 17 Liturgy of the Word and Homily with Benediction, 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 7,
+          "said": "Monday & Tuesday, November 16 & 17 Liturgy of the Word and Homily with Benediction, 6:30pm"
+        }
+      ],
+      "rationale": "R1, POLICY (Benediction implies Adoration): dated Benediction at 6:30 PM on each day, both on or after as_of's date. The Forty Hours' overnight exposition is left out: no hours are printed (as our-lady-of-consolation-parkesburg s13 left out unprinted 40 Hours hours).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-newtown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-14",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "moved for Confirmation"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 3,
+          "said": "NOTICE The Morning Mass on November 14th will occur at 8:00am. This change is to accommodate Confirmation."
+        }
+      ],
+      "rationale": "R16: a dated change before as_of; the weekly Saturday 9:00 AM stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36ea702c",
+          "page": 2,
+          "said": "HOLY DAY 5:30pm Vigil 7:00 & 9:00am; 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c8a0e01",
+          "page": 2,
+          "said": "HOLY DAY 5:30pm Vigil 7:00 & 9:00am; 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no date; no read issue names a holy day (Dec 8 isn't printed), as st-isaac-jogues-wayne s27 left out an undated standing box. Update mode will read the December issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "47674c3d759384f0db3dbdc8011b128c",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T01:04:41.682350+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "36ea702c834a300f79794ef1891c69a45644eaef750dd5434befd3b08f080353",
+        "fetched_at": "2026-11-15T16:44:31Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "9c8a0e017cf3339ee8c5e15e72883ce47a517427309cc0326ba74acb8345941d",
+        "fetched_at": "2026-11-08T15:53:32Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.003206,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": true,
+    "entries": [],
+    "entries_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s1",
+          "s3",
+          "s5",
+          "s7",
+          "s9"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Mon,Tue,Wed,Thu,Fri 07:00 @st-andrew-newtown",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "36ea702c",
+              "page": 2,
+              "said": "MASS TIMES DAILY 7:00 & 9:00am"
+            }
+          ],
+          "why": "R1: both issues' schedule box (p2) prints it and the Mon-Fri intentions (p3) list 7:00am each day. gpt-6-luna recorded no entries from these image-only issues, so its silence is not a reading against it.",
+          "at": "2026-11-28T01:05:11Z"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s2",
+          "s4",
+          "s6",
+          "s8",
+          "s10",
+          "s11",
+          "s15"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Mon,Tue,Wed,Thu,Fri,Sat,Sun 09:00 @st-andrew-newtown",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "36ea702c",
+              "page": 2,
+              "said": "DAILY 7:00 & 9:00am SATURDAY 9:00am & 5:00pm SUNDAY 6:45, 7:45, 9:00, 10:30am & Noon"
+            }
+          ],
+          "why": "R1: both issues' schedule box prints 9:00 daily, Saturday and Sunday; the p3 intentions list each. gpt-6-luna recorded no entries from these image-only issues, so its silence is not a reading against it.",
+          "at": "2026-11-28T01:05:15Z"
+        }
+      },
+      {
+        "id": "d3",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s12"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Sat 17:00 @st-andrew-newtown",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "36ea702c",
+              "page": 2,
+              "said": "SATURDAY 9:00am & 5:00pm"
+            }
+          ],
+          "why": "R1: both issues' box; p3 intentions list Saturday 5:00pm. gpt-6-luna recorded no entries from these image-only issues, so its silence is not a reading against it.",
+          "at": "2026-11-28T01:05:19Z"
+        }
+      },
+      {
+        "id": "d4",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s13"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Sun 06:45 @st-andrew-newtown",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "36ea702c",
+              "page": 2,
+              "said": "SUNDAY 6:45, 7:45, 9:00, 10:30am & Noon"
+            }
+          ],
+          "why": "R1: both issues' box; p3 Sunday intentions list 6:45am. gpt-6-luna recorded no entries from these image-only issues, so its silence is not a reading against it.",
+          "at": "2026-11-28T01:05:23Z"
+        }
+      },
+      {
+        "id": "d5",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s14"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Sun 07:45 @st-andrew-newtown",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "36ea702c",
+              "page": 2,
+              "said": "SUNDAY 6:45, 7:45, 9:00, 10:30am & Noon"
+            }
+          ],
+          "why": "R1: both issues' box; p3 Sunday intentions list 7:45am. gpt-6-luna recorded no entries from these image-only issues, so its silence is not a reading against it.",
+          "at": "2026-11-28T01:05:26Z"
+        }
+      },
+      {
+        "id": "d6",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s16"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Sun 10:30 @st-andrew-newtown",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "36ea702c",
+              "page": 2,
+              "said": "SUNDAY 6:45, 7:45, 9:00, 10:30am & Noon"
+            }
+          ],
+          "why": "R1: both issues' box; p3 Sunday intentions list 10:30am. gpt-6-luna recorded no entries from these image-only issues, so its silence is not a reading against it.",
+          "at": "2026-11-28T01:05:30Z"
+        }
+      },
+      {
+        "id": "d7",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s17"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass Sun 12:00 @st-andrew-newtown",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "36ea702c",
+              "page": 2,
+              "said": "SUNDAY 6:45, 7:45, 9:00, 10:30am & Noon"
+            }
+          ],
+          "why": "R1: both issues' box; p3 Sunday intentions list 12:00pm. gpt-6-luna recorded no entries from these image-only issues, so its silence is not a reading against it.",
+          "at": "2026-11-28T01:05:34Z"
+        }
+      },
+      {
+        "id": "d8",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s18"
+        ],
+        "opinion_said": "-",
+        "seed_said": "confession Tue 18:30-19:00 @st-andrew-newtown",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "36ea702c",
+              "page": 2,
+              "said": "RECONCILIATION TUESDAY: 6:30-7:00pm"
+            }
+          ],
+          "why": "R1: printed in both issues' schedule box. gpt-6-luna recorded no entries from these image-only issues, so its silence is not a reading against it.",
+          "at": "2026-11-28T01:05:38Z"
+        }
+      },
+      {
+        "id": "d9",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s19"
+        ],
+        "opinion_said": "-",
+        "seed_said": "confession Sat 16:00-16:45 @st-andrew-newtown",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "36ea702c",
+              "page": 2,
+              "said": "RECONCILIATION SATURDAY: 4:00-4:45pm"
+            }
+          ],
+          "why": "R1: printed in both issues' schedule box. gpt-6-luna recorded no entries from these image-only issues, so its silence is not a reading against it.",
+          "at": "2026-11-28T01:05:42Z"
+        }
+      },
+      {
+        "id": "d10",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s20"
+        ],
+        "opinion_said": "-",
+        "seed_said": "adoration Tue 09:30-18:00 @st-andrew-newtown",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "36ea702c",
+              "page": 2,
+              "said": "EUCHARISTIC ADORATION TUESDAY after 9:00am Mass until 6:00pm"
+            }
+          ],
+          "why": "R1, R10: both issues' box; after a weekday Mass is 30 minutes after it. gpt-6-luna recorded no entries from these image-only issues, so its silence is not a reading against it.",
+          "at": "2026-11-28T01:05:46Z"
+        }
+      },
+      {
+        "id": "d11",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s21"
+        ],
+        "opinion_said": "-",
+        "seed_said": "confession 2026-11-17 18:30-19:00 cancelled @st-andrew-newtown",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "36ea702c",
+              "page": 3,
+              "said": "There will be NO CONFESSIONS on Tuesday, November 17th, due to our 40 Hours closing ceremony."
+            }
+          ],
+          "why": "R1, R16: both issues (p3) cancel that date of the weekly Tuesday confession. gpt-6-luna recorded no entries from these image-only issues, so its silence is not a reading against it.",
+          "at": "2026-11-28T01:05:50Z"
+        }
+      },
+      {
+        "id": "d12",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s22"
+        ],
+        "opinion_said": "-",
+        "seed_said": "adoration 2026-11-15 13:00 @st-andrew-newtown",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "36ea702c",
+              "page": 8,
+              "said": "Sunday, November 15 Continuous Exposition after the Noon Mass"
+            }
+          ],
+          "why": "R1, R10, R16: dated exposition on as_of's date, 1 hour after the Sunday Noon Mass, no end printed. gpt-6-luna recorded no entries from these image-only issues, so its silence is not a reading against it.",
+          "at": "2026-11-28T01:05:54Z"
+        }
+      },
+      {
+        "id": "d13",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s23"
+        ],
+        "opinion_said": "-",
+        "seed_said": "adoration 2026-11-16 18:30 @st-andrew-newtown",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "36ea702c",
+              "page": 8,
+              "said": "Monday & Tuesday, November 16 & 17 Liturgy of the Word and Homily with Benediction, 6:30pm"
+            }
+          ],
+          "why": "R1, POLICY (Benediction implies Adoration): dated Benediction Nov 16. gpt-6-luna recorded no entries from these image-only issues, so its silence is not a reading against it.",
+          "at": "2026-11-28T01:05:58Z"
+        }
+      },
+      {
+        "id": "d14",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s24"
+        ],
+        "opinion_said": "-",
+        "seed_said": "adoration 2026-11-17 18:30 @st-andrew-newtown",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "36ea702c",
+              "page": 8,
+              "said": "Monday & Tuesday, November 16 & 17 Liturgy of the Word and Homily with Benediction, 6:30pm"
+            }
+          ],
+          "why": "R1, POLICY (Benediction implies Adoration): dated Benediction Nov 17. gpt-6-luna recorded no entries from these image-only issues, so its silence is not a reading against it.",
+          "at": "2026-11-28T01:06:02Z"
+        }
+      }
+    ]
+  }
+}
