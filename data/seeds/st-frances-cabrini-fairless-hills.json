@@ -1,0 +1,1876 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-frances-cabrini-fairless-hills",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:45:17Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T01:19:12Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both November issues (image-only) and the website give the same schedule: Sat 5:30 PM vigil, Sun 7/9/11 AM, Mon-Sat 9:30 AM, Sat confession 4:15-5:15 PM. Open: whether the St. Joseph Chapel in the Parish Center (2 Goble Court, around the corner) counts as the church's grounds for its daily Adoration hours. The standing holy-day line is left out with no dated notice.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+      "fetched_at": "2026-11-15T16:45:17Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2e7908e53633d348a8121741b66f48c6fd666e176f8306259f2864db4ed1edeb",
+      "fetched_at": "2026-11-08T15:54:06Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+      "bulletins": [
+        "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+        "2e7908e53633d348a8121741b66f48c6fd666e176f8306259f2864db4ed1edeb"
+      ],
+      "cached": false,
+      "cost_usd": 0.001905,
+      "at": "2026-11-28T01:24:16.205755+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Saturday Evening Vigil: 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Saturday Evening Vigil: 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 2,
+          "said": "Saturday, November 21, 2026 The 5:30 PM Mass"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday Evening Vigil: 5:30 PM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00 & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00 & 11:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:00, 9:00 & 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00 & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00 & 11:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:00, 9:00 & 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00 & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00 & 11:00 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:00, 9:00 & 11:00 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both issues read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Monday - Saturday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Monday - Saturday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 2,
+          "said": "MONDAY 9:30 AM ... SATURDAY 9:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 9:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Monday - Saturday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Monday - Saturday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 2,
+          "said": "MONDAY 9:30 AM ... SATURDAY 9:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 9:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Monday - Saturday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Monday - Saturday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 2,
+          "said": "MONDAY 9:30 AM ... SATURDAY 9:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 9:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Monday - Saturday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Monday - Saturday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 2,
+          "said": "MONDAY 9:30 AM ... SATURDAY 9:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 9:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Monday - Saturday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Monday - Saturday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 2,
+          "said": "MONDAY 9:30 AM ... SATURDAY 9:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 9:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Monday - Saturday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Monday - Saturday: 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 2,
+          "said": "MONDAY 9:30 AM ... SATURDAY 9:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Monday - Saturday: 9:30 AM”"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both issues read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturday: 4:15-5:15 PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturday: 4:15-5:15 PM or by appointment"
+        },
+        {
+          "source": "website",
+          "url": "https://saintfrancescabrini.net/sacraments/",
+          "said": "Confessions are heard every Saturday from 4:15 PM to 5:15 PM, or by appointment through the Rectory office."
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday: 4:15-5:15 PM or by appointment”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Holy Days: 6:30 AM, 12:00 Noon, 7:00 PM (except January 1st which follows a Sunday Mass schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Holy Days: 6:30 AM, 12:00 Noon, 7:00 PM (except January 1st which follows a Sunday Mass schedule)"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no dated notice; dates are not projected from it (as st-isaac-jogues-wayne s27). December issues will print Dec 8 for update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Holy Days: 6:30 AM, 12:00 Noon, 7:00 PM (except January 1st which follows a Sunday Mass schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Holy Days: 6:30 AM, 12:00 Noon, 7:00 PM (except January 1st which follows a Sunday Mass schedule)"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no dated notice; dates are not projected from it (as st-isaac-jogues-wayne s27). December issues will print Dec 8 for update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Holy Days: 6:30 AM, 12:00 Noon, 7:00 PM (except January 1st which follows a Sunday Mass schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Holy Days: 6:30 AM, 12:00 Noon, 7:00 PM (except January 1st which follows a Sunday Mass schedule)"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no dated notice; dates are not projected from it (as st-isaac-jogues-wayne s27). December issues will print Dec 8 for update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Holy Days: 6:30 AM, 12:00 Noon, 7:00 PM (except January 1st which follows a Sunday Mass schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Holy Days: 6:30 AM, 12:00 Noon, 7:00 PM (except January 1st which follows a Sunday Mass schedule)"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no dated notice; dates are not projected from it (as st-isaac-jogues-wayne s27). December issues will print Dec 8 for update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Holy Days: 6:30 AM, 12:00 Noon, 7:00 PM (except January 1st which follows a Sunday Mass schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Holy Days: 6:30 AM, 12:00 Noon, 7:00 PM (except January 1st which follows a Sunday Mass schedule)"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no dated notice; dates are not projected from it (as st-isaac-jogues-wayne s27). December issues will print Dec 8 for update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-fairless-hills",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Holy Days: 6:30 AM, 12:00 Noon, 7:00 PM (except January 1st which follows a Sunday Mass schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Holy Days: 6:30 AM, 12:00 Noon, 7:00 PM (except January 1st which follows a Sunday Mass schedule)"
+        }
+      ],
+      "rationale": "POLICY, Dates: a standing holy-day line with no dated notice; dates are not projected from it (as st-isaac-jogues-wayne s27). December issues will print Dec 8 for update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://saintfrancescabrini.net/daily-adoration/",
+          "said": "Our St. Joseph Chapel, which is located on 2 Goble Court, Fairless Hills PA 19030, just around the corner from our church, is open at the following times: Monday through Saturday from 8:00 AM to 8:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM”"
+        }
+      ],
+      "rationale": "R32/R38: printed in the parish's own schedule box (both issues), and the website and box agree on the hours. Leaning include, as ss-philip-and-james-exton s15: the chapel is in the parish's Parish Center 'just around the corner' and the Little Church children go there from the 11 a.m. Mass (latest p6), so it reads as the parish campus. Hard because it has its own street address, which the church list lacks, and POLICY leaves out a chapel one must drive to. No exposition claimed (R38). If left out, list it as a church-list issue (R23).",
+      "question": "Is the St. Joseph Chapel (Parish Center, 2 Goble Court, 'just around the corner from our church') on the church's grounds, so its daily Adoration hours (Mon-Sat 8 AM-8 PM, Sun 12:30-8 PM) go at St. Frances Cabrini Church?",
+      "options": [
+        {
+          "label": "Include at the church, in St. Joseph Chapel",
+          "entry": {
+            "church_slug": "st-frances-cabrini-fairless-hills",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph Chapel, Parish Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://saintfrancescabrini.net/daily-adoration/",
+          "said": "Our St. Joseph Chapel, which is located on 2 Goble Court, Fairless Hills PA 19030, just around the corner from our church, is open at the following times: Monday through Saturday from 8:00 AM to 8:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM”"
+        }
+      ],
+      "rationale": "R32/R38: printed in the parish's own schedule box (both issues), and the website and box agree on the hours. Leaning include, as ss-philip-and-james-exton s15: the chapel is in the parish's Parish Center 'just around the corner' and the Little Church children go there from the 11 a.m. Mass (latest p6), so it reads as the parish campus. Hard because it has its own street address, which the church list lacks, and POLICY leaves out a chapel one must drive to. No exposition claimed (R38). If left out, list it as a church-list issue (R23).",
+      "question": "Is the St. Joseph Chapel (Parish Center, 2 Goble Court, 'just around the corner from our church') on the church's grounds, so its daily Adoration hours (Mon-Sat 8 AM-8 PM, Sun 12:30-8 PM) go at St. Frances Cabrini Church?",
+      "options": [
+        {
+          "label": "Include at the church, in St. Joseph Chapel",
+          "entry": {
+            "church_slug": "st-frances-cabrini-fairless-hills",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph Chapel, Parish Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://saintfrancescabrini.net/daily-adoration/",
+          "said": "Our St. Joseph Chapel, which is located on 2 Goble Court, Fairless Hills PA 19030, just around the corner from our church, is open at the following times: Monday through Saturday from 8:00 AM to 8:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM”"
+        }
+      ],
+      "rationale": "R32/R38: printed in the parish's own schedule box (both issues), and the website and box agree on the hours. Leaning include, as ss-philip-and-james-exton s15: the chapel is in the parish's Parish Center 'just around the corner' and the Little Church children go there from the 11 a.m. Mass (latest p6), so it reads as the parish campus. Hard because it has its own street address, which the church list lacks, and POLICY leaves out a chapel one must drive to. No exposition claimed (R38). If left out, list it as a church-list issue (R23).",
+      "question": "Is the St. Joseph Chapel (Parish Center, 2 Goble Court, 'just around the corner from our church') on the church's grounds, so its daily Adoration hours (Mon-Sat 8 AM-8 PM, Sun 12:30-8 PM) go at St. Frances Cabrini Church?",
+      "options": [
+        {
+          "label": "Include at the church, in St. Joseph Chapel",
+          "entry": {
+            "church_slug": "st-frances-cabrini-fairless-hills",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph Chapel, Parish Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://saintfrancescabrini.net/daily-adoration/",
+          "said": "Our St. Joseph Chapel, which is located on 2 Goble Court, Fairless Hills PA 19030, just around the corner from our church, is open at the following times: Monday through Saturday from 8:00 AM to 8:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM”"
+        }
+      ],
+      "rationale": "R32/R38: printed in the parish's own schedule box (both issues), and the website and box agree on the hours. Leaning include, as ss-philip-and-james-exton s15: the chapel is in the parish's Parish Center 'just around the corner' and the Little Church children go there from the 11 a.m. Mass (latest p6), so it reads as the parish campus. Hard because it has its own street address, which the church list lacks, and POLICY leaves out a chapel one must drive to. No exposition claimed (R38). If left out, list it as a church-list issue (R23).",
+      "question": "Is the St. Joseph Chapel (Parish Center, 2 Goble Court, 'just around the corner from our church') on the church's grounds, so its daily Adoration hours (Mon-Sat 8 AM-8 PM, Sun 12:30-8 PM) go at St. Frances Cabrini Church?",
+      "options": [
+        {
+          "label": "Include at the church, in St. Joseph Chapel",
+          "entry": {
+            "church_slug": "st-frances-cabrini-fairless-hills",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph Chapel, Parish Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://saintfrancescabrini.net/daily-adoration/",
+          "said": "Our St. Joseph Chapel, which is located on 2 Goble Court, Fairless Hills PA 19030, just around the corner from our church, is open at the following times: Monday through Saturday from 8:00 AM to 8:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM”"
+        }
+      ],
+      "rationale": "R32/R38: printed in the parish's own schedule box (both issues), and the website and box agree on the hours. Leaning include, as ss-philip-and-james-exton s15: the chapel is in the parish's Parish Center 'just around the corner' and the Little Church children go there from the 11 a.m. Mass (latest p6), so it reads as the parish campus. Hard because it has its own street address, which the church list lacks, and POLICY leaves out a chapel one must drive to. No exposition claimed (R38). If left out, list it as a church-list issue (R23).",
+      "question": "Is the St. Joseph Chapel (Parish Center, 2 Goble Court, 'just around the corner from our church') on the church's grounds, so its daily Adoration hours (Mon-Sat 8 AM-8 PM, Sun 12:30-8 PM) go at St. Frances Cabrini Church?",
+      "options": [
+        {
+          "label": "Include at the church, in St. Joseph Chapel",
+          "entry": {
+            "church_slug": "st-frances-cabrini-fairless-hills",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph Chapel, Parish Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://saintfrancescabrini.net/daily-adoration/",
+          "said": "Our St. Joseph Chapel, which is located on 2 Goble Court, Fairless Hills PA 19030, just around the corner from our church, is open at the following times: Monday through Saturday from 8:00 AM to 8:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM”"
+        }
+      ],
+      "rationale": "R32/R38: printed in the parish's own schedule box (both issues), and the website and box agree on the hours. Leaning include, as ss-philip-and-james-exton s15: the chapel is in the parish's Parish Center 'just around the corner' and the Little Church children go there from the 11 a.m. Mass (latest p6), so it reads as the parish campus. Hard because it has its own street address, which the church list lacks, and POLICY leaves out a chapel one must drive to. No exposition claimed (R38). If left out, list it as a church-list issue (R23).",
+      "question": "Is the St. Joseph Chapel (Parish Center, 2 Goble Court, 'just around the corner from our church') on the church's grounds, so its daily Adoration hours (Mon-Sat 8 AM-8 PM, Sun 12:30-8 PM) go at St. Frances Cabrini Church?",
+      "options": [
+        {
+          "label": "Include at the church, in St. Joseph Chapel",
+          "entry": {
+            "church_slug": "st-frances-cabrini-fairless-hills",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph Chapel, Parish Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efe380e9",
+          "page": 1,
+          "said": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Sunday: 12:30 PM - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e7908e5",
+          "page": 1,
+          "said": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Sunday: 12:30 PM - 8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://saintfrancescabrini.net/daily-adoration/",
+          "said": "Sunday from 12:30 PM to 8:00 PM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Sunday: 12:30 PM - 8:00 PM”"
+        }
+      ],
+      "rationale": "R32/R38: printed in the parish's own schedule box (both issues), and the website and box agree on the hours. Leaning include, as ss-philip-and-james-exton s15: the chapel is in the parish's Parish Center 'just around the corner' and the Little Church children go there from the 11 a.m. Mass (latest p6), so it reads as the parish campus. Hard because it has its own street address, which the church list lacks, and POLICY leaves out a chapel one must drive to. No exposition claimed (R38). If left out, list it as a church-list issue (R23).",
+      "question": "Is the St. Joseph Chapel (Parish Center, 2 Goble Court, 'just around the corner from our church') on the church's grounds, so its daily Adoration hours (Mon-Sat 8 AM-8 PM, Sun 12:30-8 PM) go at St. Frances Cabrini Church?",
+      "options": [
+        {
+          "label": "Include at the church, in St. Joseph Chapel",
+          "entry": {
+            "church_slug": "st-frances-cabrini-fairless-hills",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph Chapel, Parish Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "2a64aab7bb637cf69dd376e51c023447",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T01:24:16.205755+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "efe380e945ca0e996861870d4012a565b77329f310367691fe797feb345d63b7",
+        "fetched_at": "2026-11-15T16:45:17Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "2e7908e53633d348a8121741b66f48c6fd666e176f8306259f2864db4ed1edeb",
+        "fetched_at": "2026-11-08T15:54:06Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.001905,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday Evening Vigil: 5:30 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday Evening Vigil: 5:30 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:00, 9:00 & 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:00, 9:00 & 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:00, 9:00 & 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:00, 9:00 & 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:00, 9:00 & 11:00 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:00, 9:00 & 11:00 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:30 AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Monday - Saturday: 9:30 AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:15",
+          "end_time": "17:15",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday: 4:15-5:15 PM or by appointment"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday: 4:15-5:15 PM or by appointment"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Joseph Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Joseph Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Joseph Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Joseph Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Joseph Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "08:00",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Joseph Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Monday - Saturday: 8:00 AM - 8:00 PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o18",
+        "entry": {
+          "church_slug": "st-frances-cabrini-fairless-hills",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "12:30",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Saint Joseph Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Sunday: 12:30 PM - 8:00 PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily Adoration of the Blessed Sacrament Saint Joseph Chapel Sunday: 12:30 PM - 8:00 PM"
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "2d86ee23b172698175e6280e1c7fb134372f7461793c92b75780b93580a130ae",
+    "differences": []
+  }
+}
