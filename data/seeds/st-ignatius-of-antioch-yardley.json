@@ -1,0 +1,2032 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-ignatius-of-antioch-yardley",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:45:44Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-28T01:07:01Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday, Saturday confession and Adoration Chapel hours agree in both November issues (image-only). Open: the Sunday 6 PM's Sept-May season (website), the Nov 26 7 AM cancellation, the Nov 21 Advent Reflection Mass, the misdated Nov 16 confession and the chapel's location. The website says daily Mass moves to 9 AM from Nov 26; kept at 7 AM under R20.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+      "fetched_at": "2026-11-15T16:45:44Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9f98c7b7548ac46a9855ccad12dd9b9d33edcbb6085a762f9809e00ba6d250e9",
+      "fetched_at": "2026-11-08T15:54:24Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "c1",
+      "kind": "opinion",
+      "model": "gpt-6-luna",
+      "classifier_version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+      "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+      "bulletins": [
+        "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+        "9f98c7b7548ac46a9855ccad12dd9b9d33edcbb6085a762f9809e00ba6d250e9"
+      ],
+      "cached": false,
+      "cost_usd": 0.002761,
+      "at": "2026-11-28T01:12:48.362192+00:00"
+    }
+  ],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ignatius-of-antioch-yardley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "SCHEDULE OF MASSES Saturday: 5:15PM Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "SCHEDULE OF MASSES Saturday: 5:15PM Vigil Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "Saturday Vigil: 5:15pm"
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturday: 5:15PM Vigil Mass”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in the Nov 14/21 intentions (p2); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ignatius-of-antioch-yardley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "Sunday: 7:30am, 9:30am* and 11:30am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' Sunday intentions (p2); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ignatius-of-antioch-yardley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "Sunday: 7:30am, 9:30am* and 11:30am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' Sunday intentions (p2); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ignatius-of-antioch-yardley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "Sunday: 7:30am, 9:30am* and 11:30am"
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM”"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both issues and in both weeks' Sunday intentions (p2); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "6pm Sunday Mass(Celebrated only the 2nd Sunday in September through the 3rd Sunday in May)"
+        }
+      ],
+      "rationale": "R6: the bulletin box prints the 6 PM with no season; a November issue can't show a summer break, so the website's season is a missing mention, not a conflict. Leaning per precedent st-genevieve-flourtown s15 and st-maria-goretti-hatfield s11. Sept 8-May 21 is exact: the first Sunday on or after Sept 8 is always the 2nd, and the last Sunday on or before May 21 is always the 3rd. The homepage is current (it announces the Nov 26 Mass time change) and its other times match the box.",
+      "question": "Limit the Sunday 6:00 PM Mass to the 2nd Sunday of September through the 3rd Sunday of May, as the website says?",
+      "options": [
+        {
+          "label": "Sundays 6 PM, Sept 8-May 21",
+          "entry": {
+            "church_slug": "st-ignatius-of-antioch-yardley",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": 8,
+              "end_month": 5,
+              "end_day": 21
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Every Sunday 6 PM",
+          "entry": {
+            "church_slug": "st-ignatius-of-antioch-yardley",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ignatius-of-antioch-yardley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "Daily, Monday to Friday: 7:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "Daily, Monday to Friday: 7:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 2,
+          "said": "Monday-Friday November 16-20, 7:00AM intentions"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "We will be moving our daily mass back to 9am beginning on Thanksgiving, Thursday November 26th."
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily, Monday to Friday: 7:00AM”"
+        }
+      ],
+      "rationale": "R1, R20: both issues' box and intentions print the 7:00 AM weekday Mass. The homepage announces it moves back to 9 AM from Thu Nov 26 (roof project ending); R20 keeps the current schedule and leaves the later one for update mode, which will read the issues that print it. Advisory flag raised.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ignatius-of-antioch-yardley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "Daily, Monday to Friday: 7:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "Daily, Monday to Friday: 7:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 2,
+          "said": "Monday-Friday November 16-20, 7:00AM intentions"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "We will be moving our daily mass back to 9am beginning on Thanksgiving, Thursday November 26th."
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily, Monday to Friday: 7:00AM”"
+        }
+      ],
+      "rationale": "R1, R20: both issues' box and intentions print the 7:00 AM weekday Mass. The homepage announces it moves back to 9 AM from Thu Nov 26 (roof project ending); R20 keeps the current schedule and leaves the later one for update mode, which will read the issues that print it. Advisory flag raised.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ignatius-of-antioch-yardley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "Daily, Monday to Friday: 7:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "Daily, Monday to Friday: 7:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 2,
+          "said": "Monday-Friday November 16-20, 7:00AM intentions"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "We will be moving our daily mass back to 9am beginning on Thanksgiving, Thursday November 26th."
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily, Monday to Friday: 7:00AM”"
+        }
+      ],
+      "rationale": "R1, R20: both issues' box and intentions print the 7:00 AM weekday Mass. The homepage announces it moves back to 9 AM from Thu Nov 26 (roof project ending); R20 keeps the current schedule and leaves the later one for update mode, which will read the issues that print it. Advisory flag raised.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ignatius-of-antioch-yardley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "Daily, Monday to Friday: 7:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "Daily, Monday to Friday: 7:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 2,
+          "said": "Monday-Friday November 16-20, 7:00AM intentions"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "We will be moving our daily mass back to 9am beginning on Thanksgiving, Thursday November 26th."
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily, Monday to Friday: 7:00AM”"
+        }
+      ],
+      "rationale": "R1, R20: both issues' box and intentions print the 7:00 AM weekday Mass. The homepage announces it moves back to 9 AM from Thu Nov 26 (roof project ending); R20 keeps the current schedule and leaves the later one for update mode, which will read the issues that print it. Advisory flag raised.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ignatius-of-antioch-yardley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "Daily, Monday to Friday: 7:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "Daily, Monday to Friday: 7:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 2,
+          "said": "Monday-Friday November 16-20, 7:00AM intentions"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "We will be moving our daily mass back to 9am beginning on Thanksgiving, Thursday November 26th."
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Daily, Monday to Friday: 7:00AM”"
+        }
+      ],
+      "rationale": "R1, R20: both issues' box and intentions print the 7:00 AM weekday Mass. The homepage announces it moves back to 9 AM from Thu Nov 26 (roof project ending); R20 keeps the current schedule and leaves the later one for update mode, which will read the issues that print it. Advisory flag raised.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ignatius-of-antioch-yardley",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 7,
+          "said": "9AM Mass on Thanksgiving Day"
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 7,
+          "said": "gpt-6-luna read the same: B1 p7 “9AM Mass on Thanksgiving Day”"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 7: a holiday Mass outside the weekly schedule is dated; the date is after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 7,
+          "said": "9AM Mass on Thanksgiving Day"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "We will be moving our daily mass back to 9am beginning on Thanksgiving, Thursday November 26th."
+        }
+      ],
+      "rationale": "R17 wants a stated cancellation, which the bulletin lacks; but the parish's own current homepage says the daily Mass moves to 9 AM starting that very day, so the 7 AM will not happen. Leaning as our-lady-of-mount-carmel-doylestown s15 recorded a Thanksgiving cancellation; against st-joseph-warrington s13, where nothing offered one.",
+      "question": "Record the Thu Nov 26 7:00 AM weekday Mass as cancelled (the Thanksgiving Mass is 9 AM and the website moves daily Mass to 9 AM from that day)?",
+      "options": [
+        {
+          "label": "Record the cancellation",
+          "entry": {
+            "church_slug": "st-ignatius-of-antioch-yardley",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving Day"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ignatius-of-antioch-yardley",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-01",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Gift-Giving Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 6,
+          "said": "Advent Gift-Giving Mass Tuesday, December 1st, at 7:00 p.m. Our parish will celebrate ... Please come to celebrate Mass with an unwrapped Christmas gift"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 7: a dated parish Mass outside the weekly schedule that invites everyone; refreshments follow in the church basement, so it is at the one church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 6,
+          "said": "The Parish Faith Formation Program will be hosting an Advent Reflection on November 21st. Mass at 8:30 AM, Continental Breakfast in the Auditorium followed by a talk beginning at 9:30 AM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 9,
+          "said": "ADVENT RETREAT ... November 21st. Mass at 8:30 AM"
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 6,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p6 “Mass at 8:30 AM, Continental Breakfast in the Auditorium followed by a talk beginning at 9:30 AM.”"
+        }
+      ],
+      "rationale": "POLICY: a Mass is open unless the bulletin limits it, and nothing limits this one or asks for registration (unlike st-agnes-west-chester s24). Leaning per precedent st-joseph-spring-city s21 (a program's Mass at the one church). Hard because the Sat Nov 21 intentions (latest p2) list only 5:15 PM, and the older issue calls it a retreat. No church is named; the parish has one.",
+      "question": "Add the Advent Reflection Mass, Sat Nov 21, 8:30 AM?",
+      "options": [
+        {
+          "label": "Nov 21 8:30 AM",
+          "entry": {
+            "church_slug": "st-ignatius-of-antioch-yardley",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-21",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Advent Reflection"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ignatius-of-antioch-yardley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturdays: 4:00 to 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturdays: 4:00 to 5:00PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "Reconciliation Saturday: 4:00 pm until 5:00 pm."
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 1,
+          "said": "gpt-6-luna read the same: B1 p1 “Saturdays: 4:00 to 5:00PM”"
+        }
+      ],
+      "rationale": "R1: printed in both issues' box; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "Confessions will also be heard upon request. Please call the rectory to make an appointment."
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 9,
+          "said": "We will be offering an extra opportunity to receive the Sacrament of Reconciliation on Tuesday, November 16th at 6:45PM in the church."
+        }
+      ],
+      "rationale": "R31/R30: the weekday and date disagree, so POLICY, Dates says not to guess; a wrong day is worse than a missing one (POLICY). The older issue doesn't print it. Both days have passed, so little rides on it.",
+      "question": "Add the extra Reconciliation printed for 'Tuesday, November 16th at 6:45PM in the church' (Nov 16, 2026 is a Monday)?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Mon Nov 16 6:45 PM",
+          "entry": {
+            "church_slug": "st-ignatius-of-antioch-yardley",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-16",
+            "start_time": "18:45",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Tue Nov 17 6:45 PM",
+          "entry": {
+            "church_slug": "st-ignatius-of-antioch-yardley",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-17",
+            "start_time": "18:45",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null,
+      "group": "nov16"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "ADORATION CHAPEL Adoration Hours : Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "ADORATION CHAPEL Adoration Hours : Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 9,
+          "said": "The Adoration Chapel is open: Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "Our Adoration Chapel located in the Antioch Center (the old Rectory building), is open and available twenty-four hours every day. Exposition will be held Monday thru Friday from 10 am to 8 pm."
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM.”"
+        }
+      ],
+      "rationale": "Leaning per precedent ss-philip-and-james-exton s15: the parish's own box gives the chapel's hours, and the website places it in the Antioch Center, the old rectory, which the bulletin uses for parish meetings at 999 Reading Ave; no address is printed. Hours follow both current bulletins (R38, no exposition claimed); the website's '24 hours every day' and 'Exposition Mon-Fri 10-8' are older (the bulletin's 'Adoration Hours' and the call-in line for closings say the chapel is no longer perpetual), so R46 doesn't apply. Mon 10 AM to Wed 9 PM runs through the nights, written as Mon 10:00-23:59, Tue 00:00-23:59, Wed 00:00-21:00.",
+      "question": "Is the Adoration Chapel (Antioch Center, the old rectory) at the church, so its bulletin hours (Mon 10 AM to Wed 9 PM, Thu 9 AM-midnight, Fri 10 AM-8 PM, Sat 10 AM-4 PM) go there?",
+      "options": [
+        {
+          "label": "Bulletin hours at the church, in the Adoration Chapel",
+          "entry": {
+            "church_slug": "st-ignatius-of-antioch-yardley",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel, Antioch Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "ADORATION CHAPEL Adoration Hours : Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "ADORATION CHAPEL Adoration Hours : Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 9,
+          "said": "The Adoration Chapel is open: Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "Our Adoration Chapel located in the Antioch Center (the old Rectory building), is open and available twenty-four hours every day. Exposition will be held Monday thru Friday from 10 am to 8 pm."
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM.”"
+        }
+      ],
+      "rationale": "Leaning per precedent ss-philip-and-james-exton s15: the parish's own box gives the chapel's hours, and the website places it in the Antioch Center, the old rectory, which the bulletin uses for parish meetings at 999 Reading Ave; no address is printed. Hours follow both current bulletins (R38, no exposition claimed); the website's '24 hours every day' and 'Exposition Mon-Fri 10-8' are older (the bulletin's 'Adoration Hours' and the call-in line for closings say the chapel is no longer perpetual), so R46 doesn't apply. Mon 10 AM to Wed 9 PM runs through the nights, written as Mon 10:00-23:59, Tue 00:00-23:59, Wed 00:00-21:00.",
+      "question": "Is the Adoration Chapel (Antioch Center, the old rectory) at the church, so its bulletin hours (Mon 10 AM to Wed 9 PM, Thu 9 AM-midnight, Fri 10 AM-8 PM, Sat 10 AM-4 PM) go there?",
+      "options": [
+        {
+          "label": "Bulletin hours at the church, in the Adoration Chapel",
+          "entry": {
+            "church_slug": "st-ignatius-of-antioch-yardley",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel, Antioch Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "ADORATION CHAPEL Adoration Hours : Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "ADORATION CHAPEL Adoration Hours : Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 9,
+          "said": "The Adoration Chapel is open: Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "Our Adoration Chapel located in the Antioch Center (the old Rectory building), is open and available twenty-four hours every day. Exposition will be held Monday thru Friday from 10 am to 8 pm."
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM.”"
+        }
+      ],
+      "rationale": "Leaning per precedent ss-philip-and-james-exton s15: the parish's own box gives the chapel's hours, and the website places it in the Antioch Center, the old rectory, which the bulletin uses for parish meetings at 999 Reading Ave; no address is printed. Hours follow both current bulletins (R38, no exposition claimed); the website's '24 hours every day' and 'Exposition Mon-Fri 10-8' are older (the bulletin's 'Adoration Hours' and the call-in line for closings say the chapel is no longer perpetual), so R46 doesn't apply. Mon 10 AM to Wed 9 PM runs through the nights, written as Mon 10:00-23:59, Tue 00:00-23:59, Wed 00:00-21:00.",
+      "question": "Is the Adoration Chapel (Antioch Center, the old rectory) at the church, so its bulletin hours (Mon 10 AM to Wed 9 PM, Thu 9 AM-midnight, Fri 10 AM-8 PM, Sat 10 AM-4 PM) go there?",
+      "options": [
+        {
+          "label": "Bulletin hours at the church, in the Adoration Chapel",
+          "entry": {
+            "church_slug": "st-ignatius-of-antioch-yardley",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel, Antioch Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "ADORATION CHAPEL Adoration Hours : Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "ADORATION CHAPEL Adoration Hours : Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 9,
+          "said": "The Adoration Chapel is open: Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "Our Adoration Chapel located in the Antioch Center (the old Rectory building), is open and available twenty-four hours every day. Exposition will be held Monday thru Friday from 10 am to 8 pm."
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM.”"
+        }
+      ],
+      "rationale": "Leaning per precedent ss-philip-and-james-exton s15: the parish's own box gives the chapel's hours, and the website places it in the Antioch Center, the old rectory, which the bulletin uses for parish meetings at 999 Reading Ave; no address is printed. Hours follow both current bulletins (R38, no exposition claimed); the website's '24 hours every day' and 'Exposition Mon-Fri 10-8' are older (the bulletin's 'Adoration Hours' and the call-in line for closings say the chapel is no longer perpetual), so R46 doesn't apply. Mon 10 AM to Wed 9 PM runs through the nights, written as Mon 10:00-23:59, Tue 00:00-23:59, Wed 00:00-21:00.",
+      "question": "Is the Adoration Chapel (Antioch Center, the old rectory) at the church, so its bulletin hours (Mon 10 AM to Wed 9 PM, Thu 9 AM-midnight, Fri 10 AM-8 PM, Sat 10 AM-4 PM) go there?",
+      "options": [
+        {
+          "label": "Bulletin hours at the church, in the Adoration Chapel",
+          "entry": {
+            "church_slug": "st-ignatius-of-antioch-yardley",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel, Antioch Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "ADORATION CHAPEL Adoration Hours : Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "ADORATION CHAPEL Adoration Hours : Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 9,
+          "said": "The Adoration Chapel is open: Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "Our Adoration Chapel located in the Antioch Center (the old Rectory building), is open and available twenty-four hours every day. Exposition will be held Monday thru Friday from 10 am to 8 pm."
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM.”"
+        }
+      ],
+      "rationale": "Leaning per precedent ss-philip-and-james-exton s15: the parish's own box gives the chapel's hours, and the website places it in the Antioch Center, the old rectory, which the bulletin uses for parish meetings at 999 Reading Ave; no address is printed. Hours follow both current bulletins (R38, no exposition claimed); the website's '24 hours every day' and 'Exposition Mon-Fri 10-8' are older (the bulletin's 'Adoration Hours' and the call-in line for closings say the chapel is no longer perpetual), so R46 doesn't apply. Mon 10 AM to Wed 9 PM runs through the nights, written as Mon 10:00-23:59, Tue 00:00-23:59, Wed 00:00-21:00.",
+      "question": "Is the Adoration Chapel (Antioch Center, the old rectory) at the church, so its bulletin hours (Mon 10 AM to Wed 9 PM, Thu 9 AM-midnight, Fri 10 AM-8 PM, Sat 10 AM-4 PM) go there?",
+      "options": [
+        {
+          "label": "Bulletin hours at the church, in the Adoration Chapel",
+          "entry": {
+            "church_slug": "st-ignatius-of-antioch-yardley",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel, Antioch Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 1,
+          "said": "ADORATION CHAPEL Adoration Hours : Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f98c7b7",
+          "page": 1,
+          "said": "ADORATION CHAPEL Adoration Hours : Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "264f7383",
+          "page": 9,
+          "said": "The Adoration Chapel is open: Monday, 10 AM until Wednesday 9 PM, Thursday 9am until 12 midnight, Friday 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stignatius.church/findex.html",
+          "said": "Our Adoration Chapel located in the Antioch Center (the old Rectory building), is open and available twenty-four hours every day. Exposition will be held Monday thru Friday from 10 am to 8 pm."
+        },
+        {
+          "source": "c1",
+          "bulletin": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+          "page": 1,
+          "said": "gpt-6-luna read the same as the leaning option: B1 p1 “Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM.”"
+        }
+      ],
+      "rationale": "Leaning per precedent ss-philip-and-james-exton s15: the parish's own box gives the chapel's hours, and the website places it in the Antioch Center, the old rectory, which the bulletin uses for parish meetings at 999 Reading Ave; no address is printed. Hours follow both current bulletins (R38, no exposition claimed); the website's '24 hours every day' and 'Exposition Mon-Fri 10-8' are older (the bulletin's 'Adoration Hours' and the call-in line for closings say the chapel is no longer perpetual), so R46 doesn't apply. Mon 10 AM to Wed 9 PM runs through the nights, written as Mon 10:00-23:59, Tue 00:00-23:59, Wed 00:00-21:00.",
+      "question": "Is the Adoration Chapel (Antioch Center, the old rectory) at the church, so its bulletin hours (Mon 10 AM to Wed 9 PM, Thu 9 AM-midnight, Fri 10 AM-8 PM, Sat 10 AM-4 PM) go there?",
+      "options": [
+        {
+          "label": "Bulletin hours at the church, in the Adoration Chapel",
+          "entry": {
+            "church_slug": "st-ignatius-of-antioch-yardley",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel, Antioch Center"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    }
+  ],
+  "second_opinion": {
+    "model": "gpt-6-luna",
+    "version": "gpt-6-luna+seed-opinion-aed266a5043e+{\"file_detail\":\"low\",\"reasoning_effort\":\"high\",\"strict\":true}",
+    "call": "c1",
+    "request_key": "3bd8e09eafd8113d45593b90758e2600",
+    "today": "2026-11-15",
+    "revealed_at": "2026-11-28T01:12:48.362192+00:00",
+    "bulletins": [
+      {
+        "label": "B1",
+        "content_hash": "264f7383e8091717646bac4521497f79387a34d834f9cc480d5461ed46a5f3cb",
+        "fetched_at": "2026-11-15T16:45:44Z",
+        "published_date": null
+      },
+      {
+        "label": "B2",
+        "content_hash": "9f98c7b7548ac46a9855ccad12dd9b9d33edcbb6085a762f9809e00ba6d250e9",
+        "fetched_at": "2026-11-08T15:54:24Z",
+        "published_date": null
+      }
+    ],
+    "cost_usd": 0.002761,
+    "reads": [
+      {
+        "bulletin": "B1",
+        "published_date": "2026-11-15",
+        "wrong_bulletin": false
+      },
+      {
+        "bulletin": "B2",
+        "published_date": "2026-11-08",
+        "wrong_bulletin": false
+      }
+    ],
+    "church_list_needs_review": false,
+    "entries": [
+      {
+        "id": "o1",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "17:15",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturday: 5:15PM Vigil Mass"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturday: 5:15PM Vigil Mass"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o2",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "07:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o3",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "09:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o4",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "11:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o5",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Sunday",
+          "date": null,
+          "start_time": "18:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Sunday: 7:30AM, 9:30AM, 11:30AM and 6PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o6",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily, Monday to Friday: 7:00AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily, Monday to Friday: 7:00AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o7",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily, Monday to Friday: 7:00AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily, Monday to Friday: 7:00AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o8",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily, Monday to Friday: 7:00AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily, Monday to Friday: 7:00AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o9",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily, Monday to Friday: 7:00AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily, Monday to Friday: 7:00AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o10",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "07:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Daily, Monday to Friday: 7:00AM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Daily, Monday to Friday: 7:00AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o11",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "confession",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "16:00",
+          "end_time": "17:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": null,
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Saturdays: 4:00 to 5:00PM"
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Saturdays: 4:00 to 5:00PM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o12",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Monday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o13",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Tuesday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o14",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Wednesday",
+          "date": null,
+          "start_time": "00:00",
+          "end_time": "21:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o15",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Thursday",
+          "date": null,
+          "start_time": "09:00",
+          "end_time": "23:59",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o16",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": "20:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o17",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "adoration",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "date": null,
+          "start_time": "10:00",
+          "end_time": "16:00",
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Adoration Chapel",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 1,
+            "quote": "Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 1,
+            "quote": "Adoration Hours : Monday, 10 AM until Wednes-day 9 PM, Thursday 9am until 12 midnight, Fri-day 10 AM until 8 PM, Saturday, 10 AM until 4 PM."
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o18",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-21",
+          "start_time": "08:30",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Advent reflection",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 6,
+            "quote": "Mass at 8:30 AM, Continental Breakfast in the Auditorium followed by a talk beginning at 9:30 AM."
+          },
+          {
+            "bulletin": "B2",
+            "page": 9,
+            "quote": "Mass at 8:30 AM, Continental Breakfast in the Auditorium followed by a talk beginning at 9:30AM"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o19",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-26",
+          "start_time": "09:00",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Thanksgiving Day",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 7,
+            "quote": "9AM Mass on Thanksgiving Day"
+          }
+        ],
+        "problems": []
+      },
+      {
+        "id": "o20",
+        "entry": {
+          "church_slug": "st-ignatius-of-antioch-yardley",
+          "event_type": "confession",
+          "event_kind": "specific_date",
+          "day_of_week": null,
+          "date": "2026-11-16",
+          "start_time": "18:45",
+          "end_time": null,
+          "cancelled": false,
+          "weeks_of_month": [],
+          "exclude_weeks": false,
+          "season": null,
+          "note": "Additional Reconciliation",
+          "access": null,
+          "open_from": null,
+          "open_until": null
+        },
+        "evidence": [
+          {
+            "bulletin": "B1",
+            "page": 9,
+            "quote": "We will be offering an extra opportunity to receive the Sacrament of Reconciliation on Tuesday, November 16th at 6:45PM in the church."
+          }
+        ],
+        "problems": []
+      }
+    ],
+    "entries_sha256": "46b1e4fd44b0994c7ce93ca0456d3d1239e47ab3087cdf915635714a05520d23",
+    "differences": [
+      {
+        "id": "d1",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o5"
+        ],
+        "slots": [
+          "s5"
+        ],
+        "opinion_said": "mass Sun 18:00 @st-ignatius-of-antioch-yardley",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      },
+      {
+        "id": "d2",
+        "kind": "question",
+        "fields": [],
+        "opinion": [
+          "o20"
+        ],
+        "slots": [
+          "s17"
+        ],
+        "opinion_said": "confession 2026-11-16 18:45 @st-ignatius-of-antioch-yardley",
+        "seed_said": "-",
+        "resolution": {
+          "how": "asked"
+        }
+      },
+      {
+        "id": "d3",
+        "kind": "extra",
+        "fields": [],
+        "opinion": [],
+        "slots": [
+          "s13"
+        ],
+        "opinion_said": "-",
+        "seed_said": "mass 2026-12-01 19:00 @st-ignatius-of-antioch-yardley",
+        "resolution": {
+          "how": "kept",
+          "src": [
+            {
+              "source": "agent",
+              "bulletin": "264f7383",
+              "page": 6,
+              "said": "Advent Gift-Giving Mass Tuesday, December 1st, at 7:00 p.m. Our parish will celebrate our annual Advent Gift - Giving Mass for the children of Sacred Heart Parish in Camden and St. Laurence Church in Upper Darby. Please come to celebrate Mass ... There will be light refreshments for all after Mass in the Church basement."
+            }
+          ],
+          "why": "R1, POLICY Weekly or dated rule 7: 'Our parish will celebrate' and refreshments in the church basement put this dated Mass at the parish's one church; the two named parishes are the gift recipients, not the venue, and 'Please come' invites everyone.",
+          "at": "2026-11-28T01:13:05Z"
+        }
+      }
+    ]
+  }
+}
